@@ -1,0 +1,208 @@
+# Product Image Audit
+
+- Products audited: 1089
+- Products with exact local imagery: 683
+- Products still using placeholder: 406
+- Preference Floors products imported or refreshed: 232
+
+## Placeholder image products
+- Artisan Black Maquina — /products/artisan-black-maquina/
+- Artisan Calacatta — /products/artisan-calacatta/
+- Artisan Casper White — /products/artisan-casper-white/
+- Artisan Crema Marfil — /products/artisan-crema-marfil/
+- Artisan Dover Grey — /products/artisan-dover-grey/
+- Artisan Grigio — /products/artisan-grigio/
+- Artisan Jasper Grey — /products/artisan-jasper-grey/
+- Artisan Madison — /products/artisan-madison/
+- Artisan Monaco Brown — /products/artisan-monaco-brown/
+- Artisan Pietra Grey — /products/artisan-pietra-grey/
+- Artisan Valley Beige — /products/artisan-valley-beige/
+- Artisan Volcano — /products/artisan-volcano/
+- Aspire Barn Oak — /products/aspire-barn-oak/
+- Aspire Buckskin — /products/aspire-buckskin/
+- Aspire Coastal Blackbutt — /products/aspire-coastal-blackbutt/
+- Aspire Crystal Lake — /products/aspire-crystal-lake/
+- Aspire Homestead — /products/aspire-homstead/
+- Aspire New England Blackbutt — /products/aspire-new-england-blackbutt/
+- Aspire NSW Spotted Gum — /products/aspire-nsw-spotted-gum/
+- Aspire Pale Gorge — /products/aspire-pale-gorge/
+- Aspire QLD Spotted Gum — /products/aspire-qld-spotted-gum/
+- Aspire Silver Moon — /products/aspire-silver-moon/
+- Aspire Tempest — /products/aspire-tempest/
+- Aspire Tumbleweed — /products/aspire-tumbleweed/
+- Aspire Twilight Mist — /products/aspire-twilight-mist/
+- Aspire Warm Spring — /products/aspire-warm-spring/
+- ETF Hybrid SPC 9mm Dexter Oak — /products/etf-hybrid-spc-9mm-dexter-oak/
+- ETF Hybrid SPC 9mm Driftwood — /products/etf-hybrid-spc-9mm-driftwood/
+- ETF Hybrid SPC 9mm Grey Oak — /products/etf-hybrid-spc-9mm-grey-oak/
+- ETF Hybrid SPC 9mm Helena Oak — /products/etf-hybrid-spc-9mm-helena-oak/
+- ETF Hybrid SPC 9mm New Zealand Blackbutt — /products/etf-hybrid-spc-9mm-new-zealand-blackbutt/
+- ETF Hybrid SPC 9mm Oslo Oak Grey — /products/etf-hybrid-spc-9mm-oslo-oak-grey/
+- ETF Hybrid SPC 9mm Spotted Gum — /products/etf-hybrid-spc-9mm-spotted-gum/
+- Brushbox — /products/brushbox/
+- Easi Plank Antique — /products/easi-plank-antique/
+- Easi Plank Blackbutt — /products/easi-plank-blackbutt/
+- Easi Plank Brown Stone — /products/easi-plank-brown-stone/
+- Easi Plank Ironwood — /products/easi-plank-ironwood/
+- Easi Plank Jarrah — /products/easi-plank-jarrah/
+- Easi Plank Maize — /products/easi-plank-maize/
+- Easi Plank Pewter — /products/easi-plank-pewter/
+- Easi Plank Porcelain — /products/easi-plank-porcelain/
+- Easi Plank Red Stone — /products/easi-plank-red-stone/
+- Easi Plank Silver Grey — /products/easi-plank-silver-grey/
+- Easi Plank Smoked Spotted Gum — /products/easi-plank-smoked-spotted-gum/
+- Easi Plank Spotted Gum — /products/easi-plank-spotted-gum/
+- Easi Plank Washed Coral — /products/easi-plank-washed-coral/
+- Easi Plank Wheat — /products/easi-plank-wheat/
+- Grandoak Age Carbonised Oak — /products/grandoak-age-carbonised-oak/
+- Grandoak Arctic Oak — /products/grandoak-arctic-oak/
+- Grandoak Balinese Oak — /products/grandoak-baliness-oak/
+- Grandoak Black Forest — /products/grandoak-black-forest/
+- Grandoak Black Opal — /products/grandoak-black-opal/
+- Grandoak Burnt Oak — /products/grandoak-burnt-oak/
+- Grandoak Canyon Oak — /products/grandoak-canyon-oak/
+- Grandoak Desert Oak — /products/grandoak-desert-oak/
+- Grandoak Driftwood — /products/grandoak-driftwood/
+- Grandoak European Oak — /products/grandoak-european-oak/
+- Grandoak French Grey — /products/grandoak-french-grey/
+- Grandoak Ghost White — /products/grandoak-ghost-white/
+- Grandoak Gunsynd Oak — /products/grandoak-gunsynd-oak/
+- Grandoak Limed Oak — /products/grandoak-limed-oak/
+- Grandoak Milano Oak — /products/grandoak-milano-oak/
+- Grandoak Mink Grey — /products/grandoak-mink-grey/
+- Grandoak Moroccan Oak — /products/grandoak-moroccan-oak/
+- Grandoak Natural Oak — /products/grandoak-natural-oak/
+- Grandoak Persian Oak — /products/grandoak-persian-oak/
+- Grandoak Trio Smoked Oak — /products/grandoak-trio-smoked-oak/
+- Grandoak Uluru Oak — /products/grandoak-uluru-oak/
+- Grandoak White Smoked Oak — /products/grandoak-white-smoked-oak/
+- Jatoba Brazilian Cherry — /products/jatoba-brazilian-cherry/
+- Kempas Natural — /products/kempas-natural/
+- Kempas Red Stain — /products/kempas-red-stain/
+- Kerangi King Teak — /products/kerangi-king-teak/
+- Red River Gum — /products/red-river-gum/
+- Hydroplank Bronx — /products/hydroplank-bronx/
+- Hydroplank Brooklyn — /products/hydroplank-brooklyn/
+- Hydroplank Chelsea — /products/hydroplank-chelsea/
+- Hydroplank Coney Island — /products/hydroplank-cooney-island/
+- Hydroplank Hamptons — /products/hydroplank-hamptons/
+- Hydroplank Harlem — /products/hydroplank-harlem/
+- Hydroplank Midtown — /products/hydroplank-midtown/
+- Hydroplank Queens — /products/hydroplank-queens/
+- Hydroplank Soho — /products/hydroplank-soho/
+- Hydroplank Staten Island — /products/hydroplank-straten-island/
+- Kronoswiss Aquastop Bourbon Oak — /products/kronswiss-aquastop-bourbon-oak/
+- Kronoswiss Aquastop Brooklyn Oak — /products/kronswiss-aquastop-brooklyn-oak/
+- Kronoswiss Aquastop Dublin — /products/kronswiss-aquastop-dublin/
+- Kronoswiss Aquastop Limed Oak — /products/kronswiss-aquastop-limed-oak/
+- Kronoswiss Aquastop Lugano Oak — /products/kronswiss-aquastop-lugano-oak/
+- Kronoswiss Aquastop Majestic Walnut — /products/kronswiss-aquastop-majestic-walnut/
+- Kronoswiss Aquastop Manhattan Oak — /products/kronswiss-aquastop-manhattan-oak/
+- Kronoswiss Aquastop Montreux — /products/kronswiss-aquastop-montreux/
+- Kronoswiss Aquastop Natural Oak Classic — /products/kronswiss-aquastop-natural-oak-classic/
+- Kronoswiss Aquastop Natural Oak Grey — /products/kronswiss-aquastop-natural-oak-grey/
+- Kronoswiss Aquastop Platinum — /products/kronswiss-aquastop-platinum/
+- Kronoswiss Aquastop Strassbourg — /products/kronswiss-aquastop-strassbourg/
+- Luxury Hybrid Athens — /products/luxury-hybrid-athens/
+- Luxury Hybrid Barcelona — /products/luxury-hybrid-barcelona/
+- Luxury Hybrid Blackbutt — /products/luxury-hybrid-blackbutt/
+- Luxury Hybrid Florence — /products/luxury-hybrid-florence/
+- Luxury Hybrid Hamburg — /products/luxury-hybrid-hamburg/
+- Luxury Hybrid Kande Oak — /products/luxury-hybrid-kande-oak/
+- Luxury Hybrid London — /products/luxury-hybrid-london/
+- Luxury Hybrid Madrid — /products/luxury-hybrid-madrio/
+- Luxury Hybrid Milan — /products/luxury-hybrid-milan/
+- Luxury Hybrid Moscow — /products/luxury-hybrid-moscow/
+- Luxury Hybrid Munich — /products/luxury-hybrid-munich/
+- Luxury Hybrid Oslo — /products/luxury-hybrid-oslo/
+- Luxury Hybrid Paris — /products/luxury-hybrid-paris/
+- Luxury Hybrid Spotted Gum — /products/luxury-hybrid-spotted-gum/
+- Luxury Hybrid Venice — /products/luxury-hybrid-vennice/
+- Luxury Hybrid Vienna — /products/luxury-hybrid-vienna/
+- Ornato Como — /products/ornato-como/
+- Ornato Florence — /products/ornato-florence/
+- Ornato Latina — /products/ornato-latina/
+- Ornato Le Mans — /products/ornato-le-mans/
+- Ornato Milan — /products/ornato-milan/
+- Ornato Morlaix — /products/ornato-morlaix/
+- Ornato Pau — /products/ornato-pau/
+- Ornato Rome — /products/ornato-rome/
+- Ornato Sienna — /products/ornato-sienna/
+- Ornato Tivoli — /products/ornato-tivoli/
+- Ornato Tuscany — /products/ornato-tuscany/
+- Ornato Umbrina — /products/ornato-umbrina/
+- Ornato Verneto — /products/ornato-verneto/
+- Ornato Verona — /products/ornato-verona/
+- Ornato Vichy — /products/ornato-vichy/
+- Ornato Vittoria — /products/ornato-vittoria/
+- Ornato Hybrid Coastal Blackbutt — /products/ornato-hybrid-coastal-blackbutt/
+- Ornato Hybrid Cotton Oak — /products/ornato-hybrid-cotton-oak/
+- Ornato Hybrid Ebony — /products/ornato-hybrid-ebony/
+- Ornato Hybrid Oak Atlanta — /products/ornato-hybrid-oak-atlanta/
+- Ornato Hybrid Oak Saffron — /products/ornato-hybrid-oak-saffron/
+- Ornato Hybrid Oak Sofia — /products/ornato-hybrid-oak-sofia/
+- Ornato Hybrid Oak Titanium — /products/ornato-hybrid-oak-titanium/
+- Ornato Hybrid Pearl Grey — /products/ornato-hybrid-pearl-grey/
+- Ornato Hybrid Royal Oak — /products/ornato-hybrid-royal-oak/
+- Ornato Hybrid Seashell White — /products/ornato-hybrid-seashell-white/
+- Ornato Hybrid Spotted Gum — /products/ornato-hybrid-spotted-gum/
+- Ornato Hybrid Walnut Brown — /products/ornato-hybrid-walnut-brown/
+- Stone Floor Antique — /products/stone-floor-antique/
+- Stone Floor Bianco White — /products/stone-floor-bianco-white/
+- Stone Floor Blackbutt — /products/stone-floor-blackbutt/
+- Stone Floor Charcoal — /products/stone-floor-charcoal/
+- Stone Floor Charcoal 2 — /products/stone-floor-charcoal-2/
+- Stone Floor Crema — /products/stone-floor-crema/
+- Stone Floor Grigio — /products/stone-floor-grigio/
+- Stone Floor Jarrah — /products/stone-floor-jarrah/
+- Stone Floor Jazz White — /products/stone-floor-jazz-white/
+- Stone Floor Marvel Grey — /products/stone-floor-marvel-grey/
+- Stone Floor Mink Grey — /products/stone-floor-mink-grey/
+- Stone Floor Natural — /products/stone-floor-natural/
+- Stone Floor Nero Black — /products/stone-floor-nero-black/
+- Stone Floor Oak Beige — /products/stone-floor-oak-beige/
+- Stone Floor Platinum Stone Grey — /products/stone-floor-platinum-stone-grey/
+- Stone Floor Snow White — /products/stone-floor-snow-white/
+- Stone Floor Spotted Gum — /products/stone-floor-spotted-gum/
+- Stone Floor Stone Oak — /products/stone-floor-stone-oak/
+- Stone Floor Storm Grey — /products/stone-floor-storm-grey/
+- Stone Floor White Wash — /products/stone-floor-white-wash/
+- Storm Askada Grey Wash — /products/storm-askada-grey-wash/
+- Storm Coastal Blackbutt — /products/storm-coastal-blackbutt/
+- Storm Loft Oak — /products/storm-loft-oak/
+- Storm Modern Ice Grey — /products/storm-modern-ice-grey/
+- Storm New England Blackbutt — /products/storm-new-england-blackbutt/
+- Storm NSW Spotted Gum — /products/storm-nsw-spotted-gum/
+- Storm Oxford Oak — /products/storm-oxford-oak/
+- Storm Royal White Oak — /products/storm-royal-white-oak/
+- Storm Spotted Gum — /products/storm-spotted-gum/
+- Storm Vienna Oak — /products/storm-vienna-oak/
+- Storm Vintage Cambridge Oak — /products/storm-vintage-cambridge-oak/
+- Storm Vintage Evian Oak — /products/storm-vintage-evian-oak/
+- Infinite Aged Teak — /products/infinite-aged-teak/
+- Infinite Antique Brass — /products/infinite-antique-brass/
+- Infinite Barrnyard Grey — /products/infinite-barrnyard-grey/
+- Infinite Blackbutt Matt — /products/infinite-blackbutt-matt/
+- Infinite Blackbutt Semi Gloss — /products/infinite-blackbutt-semi-gloss/
+- Infinite Brush Box — /products/infinite-brush-box/
+- Infinite Cypress Pine — /products/infinite-cypress-pine/
+- Infinite Iron Grey — /products/infinite-iron-grey/
+- Infinite Jarrah — /products/infinite-jarrah/
+- Infinite Le Sands — /products/infinite-le-sands/
+- Infinite Moonlight — /products/infinite-moonlight/
+- Infinite Seashell — /products/infinite-seashell/
+- Infinite Silky Silver — /products/infinite-silky-silver/
+- Infinite Spotted Gum Matt — /products/infinite-spotted-gum-matt/
+- Infinite Spotted Gum Semi Gloss — /products/infinite-spotted-gum-semi-gloss/
+- Infinite White Oak — /products/infinite-white-oak/
+- Kronoswiss Aquastop Arosa — /products/kronoswiss-aquastop-arosa/
+- Kronoswiss Aquastop Beach — /products/kronoswiss-aquastop-beach/
+- Kronoswiss Aquastop Blackbutt — /products/kronoswiss-aquastop-blackbutt/
+- Kronoswiss Aquastop Blackbutt 8mm — /products/kronoswiss-aquastop-blackbutt-8mm/
+- Kronoswiss Aquastop Helsinki — /products/kronoswiss-aquastop-helsinki/
+- Kronoswiss Aquastop Interlaken — /products/kronoswiss-aquastop-interlaken/
+- Kronoswiss Aquastop Leysin — /products/kronoswiss-aquastop-leysin/
+- Kronoswiss Aquastop Moon — /products/kronoswiss-aquastop-moon/
+- Kronoswiss Aquastop Natural Oak Brown — /products/kronoswiss-aquastop-natural-oak-brown/
+- Kronoswiss Aquastop Natural Oak Brown 8mm — /products/kronoswiss-aquastop-natural-oak-brown-8mm/
+- Kronoswiss Aquastop Queens — /products/kronoswiss-aquastop-queens/

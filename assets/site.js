@@ -48,10 +48,17 @@ document.addEventListener("DOMContentLoaded", function () {
   var topic = params.get("topic");
   var product = params.get("product");
   var category = params.get("category");
+  var range = params.get("range");
+  var brand = params.get("brand");
+  var productSlug = params.get("productSlug");
   var select = document.querySelector("#enquiryType");
   var sourcePage = document.querySelector("#sourcePage");
   var productField = document.querySelector("#product");
   var categoryField = document.querySelector("#category");
+  var rangeField = document.querySelector("#rangeField");
+  var brandField = document.querySelector("#brandField");
+  var productSlugField = document.querySelector("#productSlug");
+  var selectedEnquiry = document.querySelector("[data-selected-enquiry]");
   var message = document.querySelector("#message");
 
   if (select && enquiry) {
@@ -70,10 +77,35 @@ document.addEventListener("DOMContentLoaded", function () {
     categoryField.value = category;
   }
 
-  if (message && (topic || product || category)) {
+  if (rangeField && range) {
+    rangeField.value = range;
+  }
+
+  if (brandField && brand) {
+    brandField.value = brand;
+  }
+
+  if (productSlugField && productSlug) {
+    productSlugField.value = productSlug;
+  }
+
+  if (selectedEnquiry && (product || range || category || enquiry)) {
+    selectedEnquiry.hidden = false;
+    var selectedParts = [];
+    if (product) selectedParts.push("Product: " + product);
+    if (range) selectedParts.push("Range: " + range);
+    if (category) selectedParts.push("Category: " + category);
+    if (enquiry) selectedParts.push("Enquiry: " + enquiry);
+    selectedEnquiry.innerHTML = "<strong>Selected enquiry</strong><p>" + selectedParts.join("<br>") + "</p>";
+  }
+
+  if (message && (topic || product || range || category || brand)) {
     var parts = [];
     if (topic) parts.push("Topic: " + topic);
     if (product) parts.push("Product: " + product);
+    if (productSlug) parts.push("Product slug: " + productSlug);
+    if (brand) parts.push("Brand: " + brand);
+    if (range) parts.push("Range: " + range);
     if (category) parts.push("Category: " + category);
     message.value = parts.join("\n") + "\n\n";
   }
@@ -103,6 +135,83 @@ document.addEventListener("DOMContentLoaded", function () {
       actions.push('<a class="button-secondary" href="mailto:' + contact.email + '?subject=Oz%20Timber%20Floor%20enquiry">Email ' + contact.email + "</a>");
     }
     target.innerHTML = actions.join("");
+  });
+
+  var bambooMatchers = [
+    "/bamboo-flooring-sydney/",
+    "/ranges/bamboo/",
+    "/ranges/bt-bamboo/",
+    "/ranges/stonewood/",
+    "/ranges/stonewood-bamboo/",
+    "/ranges/verdura/",
+    "/ranges/verdura-bamboo/",
+    "/products/stonewood-",
+    "/products/verdura-"
+  ];
+
+  function isBambooTarget(value) {
+    if (!value) return false;
+    var lower = value.toLowerCase();
+    return bambooMatchers.some(function (match) {
+      return lower.indexOf(match) !== -1;
+    });
+  }
+
+  function pruneBambooNode(node) {
+    if (!node) return;
+    var block = node.closest(".category-card, .product-card, .card, article, li, a");
+    if (block && block.parentNode) {
+      block.parentNode.removeChild(block);
+      return;
+    }
+    if (node.parentNode) {
+      node.parentNode.removeChild(node);
+    }
+  }
+
+  document.querySelectorAll('a[href*="bamboo"], a[href*="stonewood"], a[href*="verdura"]').forEach(function (link) {
+    if (isBambooTarget(link.getAttribute("href")) || /bamboo/i.test(link.textContent || "")) {
+      pruneBambooNode(link);
+    }
+  });
+
+  document.querySelectorAll(".pill").forEach(function (pill) {
+    if (/bamboo/i.test(pill.textContent || "")) {
+      pruneBambooNode(pill);
+    }
+  });
+
+  document.querySelectorAll("img[alt]").forEach(function (img) {
+    if (/bamboo/i.test(img.getAttribute("alt") || "")) {
+      pruneBambooNode(img);
+    }
+  });
+
+  document.querySelectorAll(".site-footer").forEach(function (footer) {
+    var sections = footer.querySelectorAll(".footer-grid > div");
+    if (sections.length < 4) return;
+
+    var enquiryLinks = sections[3].querySelector(".footer-links");
+    if (!enquiryLinks) return;
+
+    var wanted = [
+      { href: "/projects/", label: "Projects" },
+      { href: "/guides/", label: "Guides" },
+      { href: "/contact/", label: "Contact" },
+      { href: "/privacy/", label: "Privacy notice" }
+    ];
+
+    var existing = new Set(Array.from(enquiryLinks.querySelectorAll("a")).map(function (link) {
+      return link.getAttribute("href");
+    }));
+
+    wanted.forEach(function (item) {
+      if (existing.has(item.href)) return;
+      var link = document.createElement("a");
+      link.href = item.href;
+      link.textContent = item.label;
+      enquiryLinks.appendChild(link);
+    });
   });
 
   document.querySelectorAll('a[href^="tel:"]').forEach(function (link) {
