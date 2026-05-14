@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://oztimberfloor.com.au/sitemap.xml
+Sitemap: https://oztimberfloor.com.au/sitemap-keyword-targets.xml
