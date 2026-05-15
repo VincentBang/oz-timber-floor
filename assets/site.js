@@ -44,70 +44,185 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   var params = new URLSearchParams(window.location.search);
-  var enquiry = params.get("enquiry");
-  var topic = params.get("topic");
-  var product = params.get("product");
-  var category = params.get("category");
-  var range = params.get("range");
-  var brand = params.get("brand");
-  var productSlug = params.get("productSlug");
+  var enquiry = normalizeEnquiry(params.get("enquiry"));
+  var product = params.get("product") || "";
+  var category = normalizeCategory(params.get("category") || "", product, params.get("range") || "", params.get("brand") || "", params.get("productSlug") || "");
+  var range = params.get("range") || "";
+  var brand = params.get("brand") || "";
+  var productSlug = params.get("productSlug") || params.get("product_slug") || "";
   var select = document.querySelector("#enquiryType");
-  var sourcePage = document.querySelector("#sourcePage");
   var productField = document.querySelector("#product");
-  var categoryField = document.querySelector("#category");
-  var rangeField = document.querySelector("#rangeField");
-  var brandField = document.querySelector("#brandField");
-  var productSlugField = document.querySelector("#productSlug");
   var selectedEnquiry = document.querySelector("[data-selected-enquiry]");
   var message = document.querySelector("#message");
 
-  if (select && enquiry) {
-    select.value = enquiry;
+  function normalizeEnquiry(value) {
+    var map = {
+      "builder-commercial": "commercial",
+      "office-commercial": "commercial",
+      "commercial": "commercial",
+      "floor-levelling": "service",
+      "floor-removal": "service",
+      "sanding-polishing": "service",
+      "service": "service",
+      "supply-install": "supply-install",
+      "supply-only": "supply-only",
+      "stock": "stock",
+      "product": "product"
+    };
+    return map[value] || value || "stock";
   }
 
-  if (sourcePage) {
-    sourcePage.value = params.get("source") || window.location.pathname;
+  function normalizeCategory(value, productName, rangeName, brandName, slug) {
+    var text = [value, productName, rangeName, brandName, slug].join(" ").toLowerCase();
+    if (text.indexOf("kronoswiss aquastop") !== -1) return "Laminate";
+    if (/engineered/.test(text)) return "Engineered timber";
+    if (/solid|hardwood/.test(text)) return "Solid timber";
+    if (/laminate/.test(text)) return "Laminate";
+    if (/vinyl/.test(text)) return "Vinyl";
+    return value || "";
+  }
+
+  function humanEnquiry(value) {
+    var labels = {
+      "stock": "Check stock availability",
+      "supply-only": "Request supply price",
+      "supply-install": "Request supply + install quote",
+      "product": "Ask about this product",
+      "commercial": "Builder or commercial enquiry",
+      "service": "Service or floor preparation enquiry"
+    };
+    return labels[value] || "Flooring enquiry";
+  }
+
+  function setHidden(id, value) {
+    var field = document.getElementById(id);
+    if (field) field.value = value || "";
+  }
+
+  function fillTrackingFields() {
+    setHidden("sourcePage", params.get("source") || window.location.pathname);
+    setHidden("productSlug", productSlug);
+    setHidden("brandField", brand);
+    setHidden("rangeField", range);
+    setHidden("category", category);
+    setHidden("currentPageUrl", window.location.href);
+    setHidden("referrerField", document.referrer || "");
+    [
+      ["utmSource", "utm_source"],
+      ["utmMedium", "utm_medium"],
+      ["utmCampaign", "utm_campaign"],
+      ["utmTerm", "utm_term"],
+      ["utmContent", "utm_content"],
+      ["gclidField", "gclid"],
+      ["fbclidField", "fbclid"]
+    ].forEach(function (pair) {
+      setHidden(pair[0], params.get(pair[1]) || "");
+    });
+  }
+
+  function updateSelectedCard() {
+    if (!selectedEnquiry) return;
+    if (!(product || range || category)) {
+      selectedEnquiry.hidden = true;
+      selectedEnquiry.innerHTML = "";
+      return;
+    }
+
+    selectedEnquiry.hidden = false;
+    selectedEnquiry.innerHTML = [
+      "<div>",
+      "<p class=\"selected-kicker\">You are enquiring about</p>",
+      product ? "<h3>" + escapeHtml(product) + "</h3>" : "",
+      range ? "<p><strong>Range:</strong> " + escapeHtml(range) + "</p>" : "",
+      category ? "<p><strong>Category:</strong> " + escapeHtml(category) + "</p>" : "",
+      "<p><strong>Enquiry:</strong> " + escapeHtml(humanEnquiry(select ? select.value : enquiry)) + "</p>",
+      "</div>",
+      "<div class=\"selected-actions\"><button type=\"button\" class=\"button-inline\" data-change-enquiry>Change enquiry type</button><button type=\"button\" class=\"button-inline ghost-inline\" data-clear-product>Clear selected product</button></div>"
+    ].join("");
+
+    var change = selectedEnquiry.querySelector("[data-change-enquiry]");
+    var clear = selectedEnquiry.querySelector("[data-clear-product]");
+    if (change && select) {
+      change.addEventListener("click", function () {
+        select.focus();
+      });
+    }
+    if (clear) {
+      clear.addEventListener("click", function () {
+        product = "";
+        range = "";
+        category = "";
+        brand = "";
+        productSlug = "";
+        if (productField) productField.value = "";
+        fillTrackingFields();
+        updateSelectedCard();
+      });
+    }
+  }
+
+  function escapeHtml(value) {
+    return String(value || "")
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
+  }
+
+  function setVisibleFields() {
+    var value = select ? select.value : enquiry;
+    var visible = {
+      product: true,
+      suburb: true,
+      area: true,
+      timing: true,
+      message: true,
+      property_type: value === "supply-install",
+      current_flooring: value === "supply-install" || value === "service",
+      company_project: value === "commercial",
+      access_constraints: value === "commercial"
+    };
+
+    if (value === "service") {
+      visible.product = false;
+    }
+
+    document.querySelectorAll("[data-field]").forEach(function (field) {
+      var key = field.getAttribute("data-field");
+      field.hidden = !visible[key];
+    });
+
+    var suburbLabel = document.querySelector('[data-field="suburb"] label');
+    if (suburbLabel) {
+      suburbLabel.textContent = value === "supply-only" ? "Delivery suburb" : value === "commercial" || value === "service" ? "Site suburb" : "Project suburb";
+    }
+    var areaLabel = document.querySelector('[data-field="area"] label');
+    if (areaLabel) {
+      areaLabel.textContent = value === "stock" ? "Approximate m² / boxes needed" : "Approximate area";
+    }
+    var timingLabel = document.querySelector('[data-field="timing"] label');
+    if (timingLabel) {
+      timingLabel.textContent = value === "commercial" ? "Timing / staging" : "Preferred timing";
+    }
+    updateSelectedCard();
+  }
+
+  if (select) {
+    select.value = enquiry;
+    if (!select.value) select.value = "stock";
+    select.addEventListener("change", setVisibleFields);
   }
 
   if (productField && product) {
     productField.value = product;
   }
 
-  if (categoryField && category) {
-    categoryField.value = category;
-  }
+  fillTrackingFields();
+  updateSelectedCard();
+  setVisibleFields();
 
-  if (rangeField && range) {
-    rangeField.value = range;
-  }
-
-  if (brandField && brand) {
-    brandField.value = brand;
-  }
-
-  if (productSlugField && productSlug) {
-    productSlugField.value = productSlug;
-  }
-
-  if (selectedEnquiry && (product || range || category || enquiry)) {
-    selectedEnquiry.hidden = false;
-    var selectedParts = [];
-    if (product) selectedParts.push("Product: " + product);
-    if (range) selectedParts.push("Range: " + range);
-    if (category) selectedParts.push("Category: " + category);
-    if (enquiry) selectedParts.push("Enquiry: " + enquiry);
-    selectedEnquiry.innerHTML = "<strong>Selected enquiry</strong><p>" + selectedParts.join("<br>") + "</p>";
-  }
-
-  if (message && (topic || product || range || category || brand)) {
-    var parts = [];
-    if (topic) parts.push("Topic: " + topic);
-    if (product) parts.push("Product: " + product);
-    if (productSlug) parts.push("Product slug: " + productSlug);
-    if (brand) parts.push("Brand: " + brand);
-    if (range) parts.push("Range: " + range);
-    if (category) parts.push("Category: " + category);
-    message.value = parts.join("\n") + "\n\n";
+  if (message && product && !message.value) {
+    message.value = "I'm enquiring about " + product + ". Please confirm " + (select && select.value === "stock" ? "stock availability and supply options." : "the best supply or installation options.");
   }
 
   function contactBlock() {
@@ -193,7 +308,10 @@ document.addEventListener("DOMContentLoaded", function () {
         enquiry_type: formData.get("enquiry_type") || "",
         source_page: formData.get("source_page") || window.location.pathname,
         product: formData.get("product") || "",
-        product_category: formData.get("category") || "",
+        product_slug: formData.get("product_slug") || "",
+        brand: formData.get("brand") || "",
+        range: formData.get("range") || "",
+        category: formData.get("category") || "",
         suburb: formData.get("suburb") || ""
       });
     });
