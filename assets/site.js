@@ -137,56 +137,6 @@ document.addEventListener("DOMContentLoaded", function () {
     target.innerHTML = actions.join("");
   });
 
-  var bambooMatchers = [
-    "/bamboo-flooring-sydney/",
-    "/ranges/bamboo/",
-    "/ranges/bt-bamboo/",
-    "/ranges/stonewood/",
-    "/ranges/stonewood-bamboo/",
-    "/ranges/verdura/",
-    "/ranges/verdura-bamboo/",
-    "/products/stonewood-",
-    "/products/verdura-"
-  ];
-
-  function isBambooTarget(value) {
-    if (!value) return false;
-    var lower = value.toLowerCase();
-    return bambooMatchers.some(function (match) {
-      return lower.indexOf(match) !== -1;
-    });
-  }
-
-  function pruneBambooNode(node) {
-    if (!node) return;
-    var block = node.closest(".category-card, .product-card, .card, article, li, a");
-    if (block && block.parentNode) {
-      block.parentNode.removeChild(block);
-      return;
-    }
-    if (node.parentNode) {
-      node.parentNode.removeChild(node);
-    }
-  }
-
-  document.querySelectorAll('a[href*="bamboo"], a[href*="stonewood"], a[href*="verdura"]').forEach(function (link) {
-    if (isBambooTarget(link.getAttribute("href")) || /bamboo/i.test(link.textContent || "")) {
-      pruneBambooNode(link);
-    }
-  });
-
-  document.querySelectorAll(".pill").forEach(function (pill) {
-    if (/bamboo/i.test(pill.textContent || "")) {
-      pruneBambooNode(pill);
-    }
-  });
-
-  document.querySelectorAll("img[alt]").forEach(function (img) {
-    if (/bamboo/i.test(img.getAttribute("alt") || "")) {
-      pruneBambooNode(img);
-    }
-  });
-
   document.querySelectorAll(".site-footer").forEach(function (footer) {
     var sections = footer.querySelectorAll(".footer-grid > div");
     if (sections.length < 4) return;

@@ -936,3 +936,59 @@ h3 { font-size: 1.25rem; }
     font-weight: 800;
   }
 }
+
+/* Mobile catalogue polish */
+@media (max-width: 680px) {
+  .shell { width: min(var(--max), calc(100% - 28px)); }
+  .nav { min-height: 68px; }
+  .site-header.is-open .nav-links,
+  .site-header.is-open .header-actions {
+    left: 14px;
+    right: 14px;
+  }
+  .site-header.is-open .nav-links {
+    top: 72px;
+    padding: 16px 18px 128px;
+  }
+  .site-header.is-open .header-actions {
+    top: 318px;
+    padding: 12px 14px 14px;
+  }
+  .hero { padding: 28px 0 34px; }
+  .hero-grid { gap: 28px; }
+  h1 { max-width: 12ch; font-size: 2.35rem; }
+  h2 { max-width: 13ch; font-size: 2rem; }
+  .lead { font-size: 1rem; }
+  .button-row { gap: 10px; margin-top: 22px; }
+  .button,
+  .button-secondary,
+  .button-light {
+    width: 100%;
+    min-height: 52px;
+    padding: 13px 16px;
+  }
+  .hero-media,
+  .hero-media img { min-height: 290px; }
+  .section { padding: 44px 0; }
+  .section-head { gap: 14px; margin-bottom: 20px; }
+  .card,
+  .category-card,
+  .contact-panel { padding: 18px; }
+  .category-card { min-height: 0; }
+  .grid-2,
+  .grid-3,
+  .grid-4 { gap: 12px; }
+  .product-card img,
+  .product-card.compact img,
+  .range-colour-card img,
+  .catalogue-card img { aspect-ratio: 16 / 10; }
+  .product-body { padding: 14px; gap: 8px; }
+  .product-body h3 { font-size: 1.05rem; }
+  .product-body p { margin: 0; }
+  .product-meta { gap: 6px; }
+  .pill { min-height: 24px; padding: 4px 7px; font-size: 0.7rem; }
+  .product-actions a { min-height: 40px; padding: 9px 10px; }
+  .catalogue-products .grid-3 > .product-card:nth-child(n+13) { display: none; }
+  .range-summary-card:nth-child(n+13) { display: none; }
+  .cta { padding: 22px; }
+}
