@@ -24,9 +24,9 @@ The Oz Timber Floor product catalogue is catalogue/enquiry only. The site must n
 
 Product CTAs should lead to enquiries such as supply price requests, stock checks, supply + install enquiries and product questions.
 
-## Supplier Data Rules
+## Product Source Data Rules
 
-Supplier and brand names may appear on public catalogue pages only as verified customer-facing catalogue labels.
+Supplier and distributor names must not appear in public customer-facing website copy, page titles, meta descriptions, catalogue cards, range pages, product pages, navigation, footer copy, image alt text or visible enquiry wording unless Vincent explicitly approves a specific exception.
 
 Supplier data must be checked against source pages before product details are imported or corrected. Do not guess product information, invent specifications, or silently change unusual supplier spellings without source confidence.
 
@@ -47,3 +47,4 @@ Do not use generic, wrong-category or mismatched colour images to fill gaps. Use
 Do not remove existing redirects or SEO-preserved pages.
 
 When slugs are corrected, keep old URLs working with redirects unless Vincent approves a different migration plan.
+Oz Timber Floor product catalogue is enquiry-based only. No checkout, instant pricing or internal pricing exposure is allowed.
