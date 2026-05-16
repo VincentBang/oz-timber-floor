@@ -1,15 +1,24 @@
-# Copy Cleanup Report
+# Public Copy Cleanup Report
 
-## Files changed
-- `index.html`
-- `products.html`
-- `ranges/index.html`
+## Customer-Facing Cleanup Completed
 
-## Phrases removed or replaced
-- `Browse flooring products without getting lost` -> `Browse flooring products by category, range and colour`
-- `Established flooring help without the noise` -> `Practical flooring advice from product selection to installation`
-- `Catalogue enquiry model` -> `Before you order`
-- Public `Oz Timber Floor` card overlines on range cards -> category-led overlines such as `Hybrid flooring` and `Laminate flooring`
+Removed or avoided visible wording connected to internal build/migration language, including:
 
-## Notes
-- Copy cleanup in this pass focused on the homepage, products hub and ranges library where the wording had the biggest customer-facing impact.
+- catalogue-commerce
+- no checkout / no automated pricing
+- WordPress preservation wording
+- mapped/static/flattened range wording
+- backend/system/import/source wording
+- generated/placeholder/dummy wording
+- supplier import wording
+- staging/migration wording
+
+## Supplier Name Cleanup
+
+Public pages were scanned for the disallowed supplier names and exact supplier labels. Public supplier labels were removed from product enquiry URLs, card overlines, alt text, and visible copy where found.
+
+## Allowed Exceptions
+
+- Internal documentation and redirect QA may mention migration, WordPress, Bamboo or redirects.
+- Contact form hidden field names such as `brand` remain as backend form fields only; current public product links no longer pass supplier names into that parameter.
+- CSS system font tokens such as `-apple-system` are not customer-facing copy.

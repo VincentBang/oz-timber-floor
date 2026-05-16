@@ -1,13 +1,13 @@
 {
   "updated": "2026-05-15T14:04:55.269Z",
-  "model": "oz-supplier-catalogue-v3",
+  "model": "oz-product-catalogue-v4",
   "checkout": false,
   "policy": {
-    "summary": "Oz Timber Floor catalogue/enquiry only. No checkout, no instant pricing, no internal pricing exposure and no Operon quote, floorplan, quote review, pricing or backend logic.",
-    "publicSupplierNaming": "Supplier and brand names may be shown on public catalogue pages where verified against source pages. Keep internal pricing, backend fields and source-only notes out of customer-facing copy.",
-    "supplierNameVisibility": "verified-public-brand-and-supplier-labels",
+    "summary": "Oz Timber Floor product catalogue is enquiry only. Do not add checkout, instant pricing, internal pricing exposure or Operon features.",
+    "publicSupplierNaming": "Public catalogue pages must be category-led and range-led. Do not show third-party supplier or distributor names unless Vincent explicitly approves a specific exception.",
+    "supplierNameVisibility": "hidden-from-public-site",
     "publicSupplierNamingRule": "Do not show third-party supplier names anywhere on the public Oz Timber Floor site, including customer copy, product data, metadata, schema, public asset paths, enquiry parameters, filters, image alt text, or public URLs. Supplier traceability belongs only in private non-deployed working records.",
-    "retiredCategoryRule":is not shown as an active public product category. LegacyURLs may redirect for migration only."
+    "retiredCategoryRule": "Retired product categories are not shown as active public product categories. Legacy URLs may redirect for migration only."
   },
   "ranges": [
     {
