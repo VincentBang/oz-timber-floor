@@ -2,20 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://oztimberfloor.com.au/</loc></url>
   <url><loc>https://oztimberfloor.com.au/about/</loc></url>
-  <url><loc>https://oztimberfloor.com.au/services/</loc></url>
-  <url><loc>https://oztimberfloor.com.au/products/</loc></url>
-  <url><loc>https://oztimberfloor.com.au/ranges/</loc></url>
-  <url><loc>https://oztimberfloor.com.au/contact/</loc></url>
-  <url><loc>https://oztimberfloor.com.au/engineered-timber-flooring-sydney/</loc></url>
-  <url><loc>https://oztimberfloor.com.au/floor-levelling-sydney/</loc></url>
-  <url><loc>https://oztimberfloor.com.au/commercial-flooring-sydney/</loc></url>
-  <url><loc>https://oztimberfloor.com.au/hybrid-flooring-sydney/</loc></url>
-  <url><loc>https://oztimberfloor.com.au/laminate-flooring-sydney/</loc></url>
-  <url><loc>https://oztimberfloor.com.au/solid-timber-flooring-sydney/</loc></url>
-  <url><loc>https://oztimberfloor.com.au/vinyl-flooring-sydney/</loc></url>
-  <url><loc>https://oztimberfloor.com.au/hardwood-timber-flooring-sydney/</loc></url>
   <url><loc>https://oztimberfloor.com.au/builder-flooring-contractor-sydney/</loc></url>
+  <url><loc>https://oztimberfloor.com.au/commercial-flooring-sydney/</loc></url>
+  <url><loc>https://oztimberfloor.com.au/contact/</loc></url>
+  <url><loc>https://oztimberfloor.com.au/engineered-timber-flooring-supplier-sydney/</loc></url>
+  <url><loc>https://oztimberfloor.com.au/engineered-timber-flooring-sydney/</loc></url>
   <url><loc>https://oztimberfloor.com.au/faqs/</loc></url>
+  <url><loc>https://oztimberfloor.com.au/floor-levelling-sydney/</loc></url>
   <url><loc>https://oztimberfloor.com.au/guides/</loc></url>
   <url><loc>https://oztimberfloor.com.au/guides/3-reasons-why-modern-homes-use-engineered-oak-flooring-in-sydney/</loc></url>
   <url><loc>https://oztimberfloor.com.au/guides/3-services-timber-floor-installers-in-sydney-can-do-for-you/</loc></url>
@@ -37,9 +30,14 @@
   <url><loc>https://oztimberfloor.com.au/guides/why-commercial-timber-flooring-is-the-right-choice-for-high-end-spaces/</loc></url>
   <url><loc>https://oztimberfloor.com.au/guides/why-hardwood-timber-flooring-is-a-good-investment/</loc></url>
   <url><loc>https://oztimberfloor.com.au/guides/your-guide-for-choosing-a-reliable-sydney-timber-flooring-provider/</loc></url>
+  <url><loc>https://oztimberfloor.com.au/hardwood-timber-flooring-sydney/</loc></url>
   <url><loc>https://oztimberfloor.com.au/hybrid-flooring-supplier-sydney/</loc></url>
+  <url><loc>https://oztimberfloor.com.au/hybrid-flooring-sydney/</loc></url>
+  <url><loc>https://oztimberfloor.com.au/laminate-flooring-supplier-sydney/</loc></url>
+  <url><loc>https://oztimberfloor.com.au/laminate-flooring-sydney/</loc></url>
   <url><loc>https://oztimberfloor.com.au/office-flooring-sydney/</loc></url>
   <url><loc>https://oztimberfloor.com.au/privacy/</loc></url>
+  <url><loc>https://oztimberfloor.com.au/products/</loc></url>
   <url><loc>https://oztimberfloor.com.au/products/12mm-laminate-aspen-oak/</loc></url>
   <url><loc>https://oztimberfloor.com.au/products/12mm-laminate-barnwood-oak/</loc></url>
   <url><loc>https://oztimberfloor.com.au/products/12mm-laminate-blackbutt/</loc></url>
@@ -1378,6 +1376,8 @@
   <url><loc>https://oztimberfloor.com.au/products/swish-aquastop-oak-seattle/</loc></url>
   <url><loc>https://oztimberfloor.com.au/products/swish-aquastop-oak-vermont/</loc></url>
   <url><loc>https://oztimberfloor.com.au/products/swish-aquastop-spotted-gum/</loc></url>
+  <url><loc>https://oztimberfloor.com.au/products/swish-blackbutt-neat/</loc></url>
+  <url><loc>https://oztimberfloor.com.au/products/swish-blackbutt-select/</loc></url>
   <url><loc>https://oztimberfloor.com.au/products/swish-blackbutt/</loc></url>
   <url><loc>https://oztimberfloor.com.au/products/swish-laminate-aqua-blackbutt-aqua/</loc></url>
   <url><loc>https://oztimberfloor.com.au/products/swish-laminate-aqua-fendi-oak/</loc></url>
@@ -1476,6 +1476,8 @@
   <url><loc>https://oztimberfloor.com.au/products/swish-oak-wideboard-paris-summer-oak/</loc></url>
   <url><loc>https://oztimberfloor.com.au/products/swish-oak-wideboard-urban-antique-oak/</loc></url>
   <url><loc>https://oztimberfloor.com.au/products/swish-oak-wideboard-urban-limewash-oak/</loc></url>
+  <url><loc>https://oztimberfloor.com.au/products/swish-spotted-gum-neat/</loc></url>
+  <url><loc>https://oztimberfloor.com.au/products/swish-spotted-gum-select/</loc></url>
   <url><loc>https://oztimberfloor.com.au/products/swish-spotted-gum/</loc></url>
   <url><loc>https://oztimberfloor.com.au/products/sydney-blue-gum-136mm/</loc></url>
   <url><loc>https://oztimberfloor.com.au/products/sydney-blue-gum-190mm/</loc></url>
@@ -1766,9 +1768,15 @@
   <url><loc>https://oztimberfloor.com.au/ranges/wooden-land-herringbone/</loc></url>
   <url><loc>https://oztimberfloor.com.au/ranges/xxl-8-0-hybrid/</loc></url>
   <url><loc>https://oztimberfloor.com.au/ranges/xxl-8mm-hybrid/</loc></url>
+  <url><loc>https://oztimberfloor.com.au/services/</loc></url>
+  <url><loc>https://oztimberfloor.com.au/solid-timber-flooring-supplier-sydney/</loc></url>
+  <url><loc>https://oztimberfloor.com.au/solid-timber-flooring-sydney/</loc></url>
+  <url><loc>https://oztimberfloor.com.au/terms/</loc></url>
   <url><loc>https://oztimberfloor.com.au/thank-you/</loc></url>
   <url><loc>https://oztimberfloor.com.au/timber-floor-removal-and-stripping-sydney/</loc></url>
   <url><loc>https://oztimberfloor.com.au/timber-floor-sanding-and-polishing-sydney/</loc></url>
   <url><loc>https://oztimberfloor.com.au/timber-flooring-installation-sydney/</loc></url>
   <url><loc>https://oztimberfloor.com.au/timber-flooring-supplier-sydney/</loc></url>
+  <url><loc>https://oztimberfloor.com.au/vinyl-flooring-supplier-sydney/</loc></url>
+  <url><loc>https://oztimberfloor.com.au/vinyl-flooring-sydney/</loc></url>
 </urlset>

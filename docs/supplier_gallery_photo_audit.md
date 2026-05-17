@@ -1,0 +1,340 @@
+# Supplier Gallery Photo Audit
+
+Date: 2026-05-17
+
+## Scope
+
+- Operon Flooring files were inspected only as a reference for gallery behaviour. No Operon files were modified.
+- This pass only used local Oz Timber Floor image assets already stored under `assets/products/`.
+- Images were matched only when they lived in the same product asset folder and had an exact same-colour filename prefix, such as `colour.webp`, `colour-gallery-2.webp`, `colour-room-01.webp`, `colour-closeup.webp`, or `colour-board.webp`.
+- No supplier image was hotlinked. No new product specs were invented.
+
+## Result
+
+- Products with exact local multi-image gallery matches: 382
+- Product pages now carrying matched multi-image gallery markup: 382
+- Ranges touched by local exact-image matches: 36
+- Unmatched local gallery files requiring manual source/name review: 4
+- Catalogue products now with multi-image galleries: 382
+- Catalogue products still single-image only: 330
+- Catalogue products still missing gallery data: 377
+
+## Updated Products By Range
+
+- Aquastop Laminate (Laminate): 1 products
+- Artisan Tile (Hybrid): 10 products
+- Aspire (Hybrid): 5 products
+- Avala (Hybrid): 10 products
+- Castel Nuovo (Engineered timber): 12 products
+- Cavallo Bianco (Engineered timber): 12 products
+- Classic Laminate (Laminate): 1 products
+- Easi Plank (Hybrid): 4 products
+- Elk Falls (Engineered timber): 1 products
+- Fiddleback (Engineered timber): 3 products
+- Hardwood Collection (Engineered timber): 158 products
+- Hydroplank WPC (Hybrid): 1 products
+- Iconic WPC (Hybrid): 1 products
+- Kronoswiss Aquastop (Laminate): 10 products
+- Lavanda Oak (Engineered timber): 12 products
+- Lifestyle Collection (Hybrid): 1 products
+- Lumiere Ultra HD (Hybrid): 12 products
+- Oakleaf (Laminate): 7 products
+- Oakleaf Laminate (Laminate): 2 products
+- Pantora Amor (Laminate): 12 products
+- Pantora Lifestyle (Laminate): 10 products
+- Prestige Oak (Engineered timber): 5 products
+- Prime Contemporary Plus (Laminate): 11 products
+- Prime Deluxe (Laminate): 8 products
+- Prime Legend (Laminate): 10 products
+- Prime Luxury (Laminate): 10 products
+- Project Oak (Engineered timber): 12 products
+- Pronto (Engineered timber): 1 products
+- Pronto Engineered Oak (Engineered timber): 1 products
+- Select Australian Timber (Engineered timber): 2 products
+- Storm Luxury (Hybrid): 12 products
+- Wide Plank Water Resistant Laminate (Laminate): 8 products
+- Wooden-Land Australian Species 136mm (Engineered timber): 7 products
+- Wooden-Land Australian Species 190mm (Engineered timber): 6 products
+- Wooden-Land Foreign Species (Engineered timber): 2 products
+- Wooden-Land Herringbone (Engineered timber): 2 products
+
+## Products Updated
+
+- artisan-tile-black-maquina: 3 images (Artisan Tile, Hybrid)
+- artisan-tile-casper-white: 3 images (Artisan Tile, Hybrid)
+- artisan-tile-dover-grey: 3 images (Artisan Tile, Hybrid)
+- artisan-tile-grigio: 3 images (Artisan Tile, Hybrid)
+- artisan-tile-jasper-grey: 3 images (Artisan Tile, Hybrid)
+- artisan-tile-madison: 3 images (Artisan Tile, Hybrid)
+- artisan-tile-monaco-brown: 3 images (Artisan Tile, Hybrid)
+- artisan-tile-pietra-grey: 3 images (Artisan Tile, Hybrid)
+- artisan-tile-valley-beige: 3 images (Artisan Tile, Hybrid)
+- artisan-tile-volcano: 3 images (Artisan Tile, Hybrid)
+- aspire-coastal-blackbutt: 4 images (Aspire, Hybrid)
+- aspire-crystal-lake: 4 images (Aspire, Hybrid)
+- aspire-new-england-blackbutt: 2 images (Aspire, Hybrid)
+- aspire-nsw-spotted-gum: 4 images (Aspire, Hybrid)
+- aspire-silver-moon: 4 images (Aspire, Hybrid)
+- avala-blackbutt: 3 images (Avala, Hybrid)
+- avala-coastal-beige: 3 images (Avala, Hybrid)
+- avala-jarrah: 3 images (Avala, Hybrid)
+- avala-moschino: 3 images (Avala, Hybrid)
+- avala-orchid-ash: 3 images (Avala, Hybrid)
+- avala-pebble-grey: 3 images (Avala, Hybrid)
+- avala-prague-oak: 3 images (Avala, Hybrid)
+- avala-spotted-gum: 3 images (Avala, Hybrid)
+- avala-stamford-oak: 3 images (Avala, Hybrid)
+- avala-tasmanian-oak: 3 images (Avala, Hybrid)
+- easi-plank-easi-plank-jarrah: 4 images (Easi Plank, Hybrid)
+- easi-plank-linen: 3 images (Easi Plank, Hybrid)
+- easi-plank-natural-blackbutt: 4 images (Easi Plank, Hybrid)
+- easi-plank-natural-spotted-gum: 3 images (Easi Plank, Hybrid)
+- hydroplank-wpc-blackbutt: 4 images (Hydroplank WPC, Hybrid)
+- iconic-wpc-onyx: 2 images (Iconic WPC, Hybrid)
+- kronswiss-aquastop-dublin: 3 images (Kronoswiss Aquastop, Laminate)
+- kronswiss-aquastop-lugano-oak: 4 images (Kronoswiss Aquastop, Laminate)
+- kronswiss-aquastop-manhattan-oak: 4 images (Kronoswiss Aquastop, Laminate)
+- kronswiss-aquastop-natural-oak-grey: 3 images (Kronoswiss Aquastop, Laminate)
+- lifestyle-collection-spotted-gum: 4 images (Lifestyle Collection, Hybrid)
+- lumiere-ultra-hd-bellevue-avenue: 3 images (Lumiere Ultra HD, Hybrid)
+- lumiere-ultra-hd-blackbutt: 3 images (Lumiere Ultra HD, Hybrid)
+- lumiere-ultra-hd-cayman-oak: 3 images (Lumiere Ultra HD, Hybrid)
+- lumiere-ultra-hd-highland-beige-oak: 3 images (Lumiere Ultra HD, Hybrid)
+- lumiere-ultra-hd-lake-view-oak: 3 images (Lumiere Ultra HD, Hybrid)
+- lumiere-ultra-hd-lovanna-oak: 3 images (Lumiere Ultra HD, Hybrid)
+- lumiere-ultra-hd-manor-ridge-oak: 3 images (Lumiere Ultra HD, Hybrid)
+- lumiere-ultra-hd-sherwood-oak: 3 images (Lumiere Ultra HD, Hybrid)
+- lumiere-ultra-hd-south-grove-oak: 3 images (Lumiere Ultra HD, Hybrid)
+- lumiere-ultra-hd-spotted-gum: 3 images (Lumiere Ultra HD, Hybrid)
+- lumiere-ultra-hd-weathered-grey-oak: 3 images (Lumiere Ultra HD, Hybrid)
+- lumiere-ultra-hd-winchester-oak: 3 images (Lumiere Ultra HD, Hybrid)
+- storm-luxury-askada-grey-wash: 3 images (Storm Luxury, Hybrid)
+- storm-luxury-coastal-blackbutt: 3 images (Storm Luxury, Hybrid)
+- storm-luxury-loft-oak: 3 images (Storm Luxury, Hybrid)
+- storm-luxury-modern-ice-grey: 3 images (Storm Luxury, Hybrid)
+- storm-luxury-new-england-blackbutt: 2 images (Storm Luxury, Hybrid)
+- storm-luxury-nsw-spotted-gum: 2 images (Storm Luxury, Hybrid)
+- storm-luxury-oxford-oak: 3 images (Storm Luxury, Hybrid)
+- storm-luxury-royal-white-oak: 3 images (Storm Luxury, Hybrid)
+- storm-luxury-spotted-gum: 2 images (Storm Luxury, Hybrid)
+- storm-luxury-vienna-oak: 3 images (Storm Luxury, Hybrid)
+- storm-luxury-vintage-cambridge-oak: 3 images (Storm Luxury, Hybrid)
+- storm-luxury-vintage-evian-oak: 3 images (Storm Luxury, Hybrid)
+- aquastop-laminate-zermatt: 4 images (Aquastop Laminate, Laminate)
+- kronoswiss-aquastop-beach: 4 images (Kronoswiss Aquastop, Laminate)
+- kronoswiss-aquastop-helsinki: 4 images (Kronoswiss Aquastop, Laminate)
+- kronoswiss-aquastop-natural-oak-brown: 4 images (Kronoswiss Aquastop, Laminate)
+- kronoswiss-aquastop-rock: 4 images (Kronoswiss Aquastop, Laminate)
+- kronoswiss-aquastop-snow: 4 images (Kronoswiss Aquastop, Laminate)
+- kronoswiss-aquastop-zermatt: 4 images (Kronoswiss Aquastop, Laminate)
+- oakleaf-aspen-oak: 4 images (Oakleaf, Laminate)
+- oakleaf-classic-oak: 3 images (Oakleaf, Laminate)
+- oakleaf-ivory: 4 images (Oakleaf, Laminate)
+- oakleaf-maritime: 4 images (Oakleaf, Laminate)
+- oakleaf-mystic-oak: 4 images (Oakleaf, Laminate)
+- oakleaf-nordic-oak: 4 images (Oakleaf, Laminate)
+- oakleaf-tawny-oak: 4 images (Oakleaf, Laminate)
+- oakleaf-laminate-aged-spotted-gum: 3 images (Oakleaf Laminate, Laminate)
+- oakleaf-laminate-classic-oak: 3 images (Oakleaf Laminate, Laminate)
+- pantora-amor-amalfi-oak: 3 images (Pantora Amor, Laminate)
+- pantora-amor-blackbutt: 3 images (Pantora Amor, Laminate)
+- pantora-amor-catalina-oak: 3 images (Pantora Amor, Laminate)
+- pantora-amor-coastal-breeze: 3 images (Pantora Amor, Laminate)
+- pantora-amor-crystal-white-oak: 3 images (Pantora Amor, Laminate)
+- pantora-amor-harmony-oak: 3 images (Pantora Amor, Laminate)
+- pantora-amor-ivory-sand-oak: 3 images (Pantora Amor, Laminate)
+- pantora-amor-moonstone-oak: 3 images (Pantora Amor, Laminate)
+- pantora-amor-silverstone-oak: 3 images (Pantora Amor, Laminate)
+- pantora-amor-smokey-brown: 3 images (Pantora Amor, Laminate)
+- pantora-amor-spotted-gum: 3 images (Pantora Amor, Laminate)
+- pantora-amor-urban-charcoal: 3 images (Pantora Amor, Laminate)
+- pantora-lifestyle-almond-oak: 3 images (Pantora Lifestyle, Laminate)
+- pantora-lifestyle-crown-heritage: 3 images (Pantora Lifestyle, Laminate)
+- pantora-lifestyle-glacial-grey: 3 images (Pantora Lifestyle, Laminate)
+- pantora-lifestyle-golden-honey: 3 images (Pantora Lifestyle, Laminate)
+- pantora-lifestyle-neutral-oak: 3 images (Pantora Lifestyle, Laminate)
+- pantora-lifestyle-raw-blackbutt: 3 images (Pantora Lifestyle, Laminate)
+- pantora-lifestyle-soft-pale: 3 images (Pantora Lifestyle, Laminate)
+- pantora-lifestyle-spotted-gum: 3 images (Pantora Lifestyle, Laminate)
+- pantora-lifestyle-tan-brown: 3 images (Pantora Lifestyle, Laminate)
+- pantora-lifestyle-white-cove: 3 images (Pantora Lifestyle, Laminate)
+- classic-spotted-gum: 4 images (Classic Laminate, Laminate)
+- prime-contemporary-plus-aspen-oak: 2 images (Prime Contemporary Plus, Laminate)
+- prime-contemporary-plus-french-beige-oak: 2 images (Prime Contemporary Plus, Laminate)
+- prime-contemporary-plus-hampton-white-oak: 2 images (Prime Contemporary Plus, Laminate)
+- prime-contemporary-plus-kensington-grey: 2 images (Prime Contemporary Plus, Laminate)
+- prime-contemporary-plus-lime-wash: 2 images (Prime Contemporary Plus, Laminate)
+- prime-contemporary-plus-misty-mountain-oak: 3 images (Prime Contemporary Plus, Laminate)
+- prime-contemporary-plus-new-england-blackbutt: 2 images (Prime Contemporary Plus, Laminate)
+- prime-contemporary-plus-odyssey-oak: 2 images (Prime Contemporary Plus, Laminate)
+- prime-contemporary-plus-queensland-spotted-gum: 2 images (Prime Contemporary Plus, Laminate)
+- prime-contemporary-plus-soft-cavalry-grey: 2 images (Prime Contemporary Plus, Laminate)
+- prime-contemporary-plus-verona-oak: 2 images (Prime Contemporary Plus, Laminate)
+- prime-deluxe-birch-wood: 2 images (Prime Deluxe, Laminate)
+- prime-deluxe-dark-wood: 2 images (Prime Deluxe, Laminate)
+- prime-deluxe-drift-wood: 2 images (Prime Deluxe, Laminate)
+- prime-deluxe-harvest-ridge-oak: 2 images (Prime Deluxe, Laminate)
+- prime-deluxe-limed-grey-oak: 2 images (Prime Deluxe, Laminate)
+- prime-deluxe-southern-brown-oak: 2 images (Prime Deluxe, Laminate)
+- prime-deluxe-stone-wash: 2 images (Prime Deluxe, Laminate)
+- prime-deluxe-white-wash: 2 images (Prime Deluxe, Laminate)
+- prime-legend-atlantic-oak: 3 images (Prime Legend, Laminate)
+- prime-legend-blackbutt: 3 images (Prime Legend, Laminate)
+- prime-legend-empire-oak: 3 images (Prime Legend, Laminate)
+- prime-legend-ghost-oak: 3 images (Prime Legend, Laminate)
+- prime-legend-hudson-grey: 3 images (Prime Legend, Laminate)
+- prime-legend-mainland-brown-oak: 3 images (Prime Legend, Laminate)
+- prime-legend-sandcastle-oak: 3 images (Prime Legend, Laminate)
+- prime-legend-southport-oak: 3 images (Prime Legend, Laminate)
+- prime-legend-spotted-gum: 3 images (Prime Legend, Laminate)
+- prime-legend-wheaton-oak: 3 images (Prime Legend, Laminate)
+- prime-luxury-grey-oak: 2 images (Prime Luxury, Laminate)
+- prime-luxury-latte-oak: 2 images (Prime Luxury, Laminate)
+- prime-luxury-lunar-oak: 2 images (Prime Luxury, Laminate)
+- prime-luxury-natural-oak: 2 images (Prime Luxury, Laminate)
+- prime-luxury-new-england-blackbutt: 2 images (Prime Luxury, Laminate)
+- prime-luxury-queensland-spotted-gum: 2 images (Prime Luxury, Laminate)
+- prime-luxury-smoke-oak: 2 images (Prime Luxury, Laminate)
+- prime-luxury-stone-oak: 2 images (Prime Luxury, Laminate)
+- prime-luxury-tobacco-oak: 2 images (Prime Luxury, Laminate)
+- prime-luxury-vanilla-oak: 2 images (Prime Luxury, Laminate)
+- wide-plank-water-resistant-laminate-parchment: 4 images (Wide Plank Water Resistant Laminate, Laminate)
+- wide-plank-water-resistant-laminate-wide-plank-ash-grey: 3 images (Wide Plank Water Resistant Laminate, Laminate)
+- wide-plank-water-resistant-laminate-wide-plank-copper-brown: 3 images (Wide Plank Water Resistant Laminate, Laminate)
+- wide-plank-water-resistant-laminate-wide-plank-dusk-grey: 3 images (Wide Plank Water Resistant Laminate, Laminate)
+- wide-plank-water-resistant-laminate-wide-plank-latte: 3 images (Wide Plank Water Resistant Laminate, Laminate)
+- wide-plank-water-resistant-laminate-wide-plank-matterhorn: 3 images (Wide Plank Water Resistant Laminate, Laminate)
+- wide-plank-water-resistant-laminate-wide-plank-parana: 4 images (Wide Plank Water Resistant Laminate, Laminate)
+- wide-plank-water-resistant-laminate-wide-plank-polar-ice: 3 images (Wide Plank Water Resistant Laminate, Laminate)
+- castel-nuovo-black-amber: 2 images (Castel Nuovo, Engineered timber)
+- castel-nuovo-boathouse: 2 images (Castel Nuovo, Engineered timber)
+- castel-nuovo-chateau: 2 images (Castel Nuovo, Engineered timber)
+- castel-nuovo-marrone-oak: 2 images (Castel Nuovo, Engineered timber)
+- castel-nuovo-monica-grey: 2 images (Castel Nuovo, Engineered timber)
+- castel-nuovo-panania-oak: 2 images (Castel Nuovo, Engineered timber)
+- castel-nuovo-pearl-white: 2 images (Castel Nuovo, Engineered timber)
+- castel-nuovo-prague-natural: 2 images (Castel Nuovo, Engineered timber)
+- castel-nuovo-rome-grey: 2 images (Castel Nuovo, Engineered timber)
+- castel-nuovo-soft-pale-oak: 2 images (Castel Nuovo, Engineered timber)
+- castel-nuovo-vintage-mocha: 2 images (Castel Nuovo, Engineered timber)
+- castel-nuovo-winston-hill: 2 images (Castel Nuovo, Engineered timber)
+- cavallo-bianco-amaretti-oak: 2 images (Cavallo Bianco, Engineered timber)
+- cavallo-bianco-boathouse: 2 images (Cavallo Bianco, Engineered timber)
+- cavallo-bianco-british-oak-natural: 2 images (Cavallo Bianco, Engineered timber)
+- cavallo-bianco-camden-oak: 2 images (Cavallo Bianco, Engineered timber)
+- cavallo-bianco-champagne: 2 images (Cavallo Bianco, Engineered timber)
+- cavallo-bianco-cromer-oak: 2 images (Cavallo Bianco, Engineered timber)
+- cavallo-bianco-limed-ash: 2 images (Cavallo Bianco, Engineered timber)
+- cavallo-bianco-monica-grey: 2 images (Cavallo Bianco, Engineered timber)
+- cavallo-bianco-oyster-bay: 2 images (Cavallo Bianco, Engineered timber)
+- cavallo-bianco-panania-oak: 2 images (Cavallo Bianco, Engineered timber)
+- cavallo-bianco-soft-pale-oak: 2 images (Cavallo Bianco, Engineered timber)
+- cavallo-bianco-truffle-oak: 2 images (Cavallo Bianco, Engineered timber)
+- elk-falls-hickory: 3 images (Elk Falls, Engineered timber)
+- lavanda-oak-amaretti-oak: 3 images (Lavanda Oak, Engineered timber)
+- lavanda-oak-boathouse: 3 images (Lavanda Oak, Engineered timber)
+- lavanda-oak-british-oak-natural: 3 images (Lavanda Oak, Engineered timber)
+- lavanda-oak-camden-oak: 3 images (Lavanda Oak, Engineered timber)
+- lavanda-oak-champagne: 3 images (Lavanda Oak, Engineered timber)
+- lavanda-oak-cromer-oak: 3 images (Lavanda Oak, Engineered timber)
+- lavanda-oak-limed-ash: 3 images (Lavanda Oak, Engineered timber)
+- lavanda-oak-monica-grey: 3 images (Lavanda Oak, Engineered timber)
+- lavanda-oak-oyster-bay: 3 images (Lavanda Oak, Engineered timber)
+- lavanda-oak-panania-oak: 3 images (Lavanda Oak, Engineered timber)
+- lavanda-oak-soft-pale-oak: 3 images (Lavanda Oak, Engineered timber)
+- lavanda-oak-truffle-oak: 3 images (Lavanda Oak, Engineered timber)
+- fiddleback-herringbone-blackbutt: 4 images (Fiddleback, Engineered timber)
+- fiddleback-herringbone-spotted-gum: 3 images (Fiddleback, Engineered timber)
+- fiddleback-rustic-spotted-gum: 4 images (Fiddleback, Engineered timber)
+- select-australian-timber-mb-blackbutt: 3 images (Select Australian Timber, Engineered timber)
+- select-australian-timber-mb-spotted-gum: 3 images (Select Australian Timber, Engineered timber)
+- prestige-oak-prestige-oak-cannes: 4 images (Prestige Oak, Engineered timber)
+- prestige-oak-prestige-oak-latte: 4 images (Prestige Oak, Engineered timber)
+- prestige-oak-prestige-oak-mink-grey: 4 images (Prestige Oak, Engineered timber)
+- prestige-oak-prestige-oak-parana: 4 images (Prestige Oak, Engineered timber)
+- prestige-oak-riesling: 4 images (Prestige Oak, Engineered timber)
+- project-oak-black-amber: 3 images (Project Oak, Engineered timber)
+- project-oak-charleston-oak: 2 images (Project Oak, Engineered timber)
+- project-oak-chateau: 3 images (Project Oak, Engineered timber)
+- project-oak-florence-oak: 2 images (Project Oak, Engineered timber)
+- project-oak-hamilton-oak: 2 images (Project Oak, Engineered timber)
+- project-oak-marrone-oak: 3 images (Project Oak, Engineered timber)
+- project-oak-pearl-white: 3 images (Project Oak, Engineered timber)
+- project-oak-prague-natural: 3 images (Project Oak, Engineered timber)
+- project-oak-rome-grey: 3 images (Project Oak, Engineered timber)
+- project-oak-vintage-mocha: 3 images (Project Oak, Engineered timber)
+- project-oak-whealdon-oak: 2 images (Project Oak, Engineered timber)
+- project-oak-winston-hill: 3 images (Project Oak, Engineered timber)
+- pronto-herringbone-misty-cove: 4 images (Pronto, Engineered timber)
+- pronto-engineered-oak-dark-rum: 3 images (Pronto Engineered Oak, Engineered timber)
+- wooden-land-australian-species-136mm-blackbutt-136mm: 3 images (Wooden-Land Australian Species 136mm, Engineered timber)
+- wooden-land-australian-species-136mm-brushbox-136mm: 3 images (Wooden-Land Australian Species 136mm, Engineered timber)
+- wooden-land-australian-species-136mm-grey-iron-bark-136mm: 3 images (Wooden-Land Australian Species 136mm, Engineered timber)
+- wooden-land-australian-species-136mm-jarrah-136mm: 3 images (Wooden-Land Australian Species 136mm, Engineered timber)
+- wooden-land-australian-species-136mm-spotted-gum-136mm: 3 images (Wooden-Land Australian Species 136mm, Engineered timber)
+- wooden-land-australian-species-136mm-sydney-blue-gum-136mm: 3 images (Wooden-Land Australian Species 136mm, Engineered timber)
+- wooden-land-australian-species-136mm-tasmanian-oak-136mm: 3 images (Wooden-Land Australian Species 136mm, Engineered timber)
+- wooden-land-australian-species-190mm-blackbutt-190mm: 3 images (Wooden-Land Australian Species 190mm, Engineered timber)
+- wooden-land-australian-species-190mm-brushbox-190mm: 3 images (Wooden-Land Australian Species 190mm, Engineered timber)
+- wooden-land-australian-species-190mm-grey-iron-bark-190mm: 3 images (Wooden-Land Australian Species 190mm, Engineered timber)
+- wooden-land-australian-species-190mm-jarrah-190mm: 3 images (Wooden-Land Australian Species 190mm, Engineered timber)
+- wooden-land-australian-species-190mm-spotted-gum-190mm: 3 images (Wooden-Land Australian Species 190mm, Engineered timber)
+- wooden-land-australian-species-190mm-sydney-blue-gum-190mm: 3 images (Wooden-Land Australian Species 190mm, Engineered timber)
+- wooden-land-foreign-species-pacific-blackbutt: 3 images (Wooden-Land Foreign Species, Engineered timber)
+- wooden-land-foreign-species-pacific-spotted-gum: 3 images (Wooden-Land Foreign Species, Engineered timber)
+- wooden-land-herringbone-blackbutt-herringbone: 2 images (Wooden-Land Herringbone, Engineered timber)
+- wooden-land-herringbone-spotted-gum-herringbone: 2 images (Wooden-Land Herringbone, Engineered timber)
+- hardwood-collection-abbey-grey: 3 images (Hardwood Collection, Engineered timber)
+- hardwood-collection-acacia: 3 images (Hardwood Collection, Engineered timber)
+- hardwood-collection-aged-blackbutt: 4 images (Hardwood Collection, Engineered timber)
+- hardwood-collection-aged-natural: 3 images (Hardwood Collection, Engineered timber)
+- hardwood-collection-aged-oak: 4 images (Hardwood Collection, Engineered timber)
+- hardwood-collection-alpine-snow: 3 images (Hardwood Collection, Engineered timber)
+- hardwood-collection-ancient-stone: 3 images (Hardwood Collection, Engineered timber)
+- hardwood-collection-arctic-fox: 3 images (Hardwood Collection, Engineered timber)
+- hardwood-collection-artisan-oak-beige: 3 images (Hardwood Collection, Engineered timber)
+- hardwood-collection-artisan-oak-natural: 3 images (Hardwood Collection, Engineered timber)
+- hardwood-collection-ashwood: 3 images (Hardwood Collection, Engineered timber)
+- hardwood-collection-aspen-oak: 4 images (Hardwood Collection, Engineered timber)
+- hardwood-collection-autumn-leaves: 3 images (Hardwood Collection, Engineered timber)
+- hardwood-collection-avola-natural: 4 images (Hardwood Collection, Engineered timber)
+- hardwood-collection-beach: 4 images (Hardwood Collection, Engineered timber)
+- hardwood-collection-bedrock: 4 images (Hardwood Collection, Engineered timber)
+- hardwood-collection-black-fox: 4 images (Hardwood Collection, Engineered timber)
+- hardwood-collection-bleached-driftwood: 4 images (Hardwood Collection, Engineered timber)
+- hardwood-collection-bluegrass: 3 images (Hardwood Collection, Engineered timber)
+- hardwood-collection-bondi: 3 images (Hardwood Collection, Engineered timber)
+- hardwood-collection-bondi-beach: 3 images (Hardwood Collection, Engineered timber)
+- hardwood-collection-bright: 3 images (Hardwood Collection, Engineered timber)
+- hardwood-collection-brown-sugar: 3 images (Hardwood Collection, Engineered timber)
+- hardwood-collection-brownstone: 3 images (Hardwood Collection, Engineered timber)
+- hardwood-collection-burnt-ash: 3 images (Hardwood Collection, Engineered timber)
+- hardwood-collection-carbon: 3 images (Hardwood Collection, Engineered timber)
+- hardwood-collection-castle-grey: 2 images (Hardwood Collection, Engineered timber)
+- hardwood-collection-chablis: 3 images (Hardwood Collection, Engineered timber)
+- hardwood-collection-chalkers-ridge: 3 images (Hardwood Collection, Engineered timber)
+- hardwood-collection-charm-grey: 3 images (Hardwood Collection, Engineered timber)
+- hardwood-collection-chesterfield: 3 images (Hardwood Collection, Engineered timber)
+- hardwood-collection-chevron-cannes: 2 images (Hardwood Collection, Engineered timber)
+- hardwood-collection-chevron-champagne: 4 images (Hardwood Collection, Engineered timber)
+- hardwood-collection-chevron-latte: 3 images (Hardwood Collection, Engineered timber)
+- hardwood-collection-chevron-riesling: 4 images (Hardwood Collection, Engineered timber)
+- hardwood-collection-chicory: 2 images (Hardwood Collection, Engineered timber)
+
+- ... 122 more products updated.
+
+## Unmatched Gallery Files
+
+These files look like additional colour photos, but they did not match an existing product primary image prefix exactly. They should be checked against the supplier site before use. Common reasons include old typo filenames, renamed colours, retired ranges or duplicate legacy imports.
+
+- assets/products/hybrid/artisan-tile/artisan-calcatta-gallery-2.webp
+- assets/products/hybrid/artisan-tile/artisan-calcatta-gallery-3.webp
+- assets/products/hybrid/artisan-tile/artisan-grema-marfil-gallery-2.webp
+- assets/products/hybrid/artisan-tile/artisan-grema-marfil-gallery-3.webp
+
+
+## Remaining Work
+
+- Crawl the supplier source pages range by range before importing any missing images that are not already local.
+- For products still using `image-coming-soon.svg`, do not substitute generic or similar-looking images.
+- Review typo pairs such as Calacatta/Calcatta and Crema Marfil/Grema Marfil against the official supplier spelling before renaming assets.
