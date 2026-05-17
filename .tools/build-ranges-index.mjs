@@ -13,14 +13,14 @@ const categoryOrder = [
 const manualRanges = {
   Vinyl: [
     {
-      name: 'Ornato Vinyl',
-      supplier: '',
+      name: 'Ornato Luxury',
+      supplier: 'Ornato',
       category: 'Vinyl',
       thickness: '',
-      colourCount: '',
+      colourCount: 16,
       url: '/ranges/ornato-vinyl/',
-      primaryImage: '/assets/images/categories/vinyl-flooring-thumbnail.webp',
-      description: 'A practical vinyl range pathway for residential, rental and light commercial enquiries.'
+      primaryImage: '/assets/products/vinyl/ornato-luxury/ornato-como.jpg',
+      description: 'Vinyl flooring range for customers checking colour availability, stock timing and supply-only or supply + install options.'
     }
   ]
 };

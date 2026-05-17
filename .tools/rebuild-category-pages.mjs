@@ -93,18 +93,18 @@ const RANGE_DESCRIPTION_OVERRIDES = {
 const RANGE_CHIP_OVERRIDES = {
   solid: ["Natural timber flooring", "24 colours"],
   swish: ["Engineered timber", "6 colours"],
-  "ornato-vinyl": ["Vinyl", "1 verified colour"],
+  "ornato-vinyl": ["Vinyl", "16 colours"],
   vinyl: ["Vinyl", "Colours to confirm"],
 };
 
 const RANGE_IMAGE_OVERRIDES = {
   "ornato-vinyl": {
-    src: "/assets/products/vinyl/ornato-como/ornato-como-swatch.webp",
+    src: "/assets/products/vinyl/ornato-luxury/ornato-como.jpg",
     alt: "Ornato Como vinyl flooring colour swatch",
   },
   vinyl: {
-    src: "/assets/products/vinyl/ornato-como/ornato-como-room.webp",
-    alt: "Vinyl flooring room sample for Sydney projects",
+    src: "/assets/products/vinyl/ornato-luxury/ornato-blackbutt.jpg",
+    alt: "Ornato Blackbutt vinyl flooring colour swatch",
   },
 };
 
@@ -127,6 +127,14 @@ const MANUAL_RANGE_CARDS = {
       href: "/ranges/raw-solid-timber/",
       pills: ["Solid timber", "2 colours"],
       description: "Raw solid timber range for customers comparing species direction, supply timing and installation or finishing planning.",
+    },
+  ],
+  "vinyl-flooring-sydney": [
+    {
+      name: "Ornato Luxury",
+      href: "/ranges/ornato-vinyl/",
+      pills: ["Vinyl", "16 colours"],
+      description: "Practical vinyl colour range for customers checking stock, lead time, alternatives and supply-only or supply + install options.",
     },
   ],
 };
@@ -164,7 +172,14 @@ const SELECTED_PRODUCT_CONFIG = {
     "grey-ironbark",
     "cumaru-brazilian-teak",
   ],
-  "vinyl-flooring-sydney": ["ornato-como"],
+  "vinyl-flooring-sydney": [
+    "ornato-blackbutt",
+    "ornato-como",
+    "ornato-florence",
+    "ornato-spotted-gum",
+    "ornato-tivoli",
+    "ornato-vittoria",
+  ],
 };
 
 const load = (filePath) => fs.readFileSync(filePath, "utf8");

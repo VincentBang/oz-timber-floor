@@ -48,7 +48,6 @@ These range pages avoid showing a placeholder-heavy colour grid. Review product 
 - /ranges/hydroplank-wpc/ needs colour/image data review before showing a full colour grid.
 - /ranges/kronoswiss-aquastop/ needs colour/image data review before showing a full colour grid.
 - /ranges/luxury-hybrid/ needs colour/image data review before showing a full colour grid.
-- /ranges/ornato/ needs colour/image data review before showing a full colour grid.
 - /ranges/ornato-hybrid/ needs colour/image data review before showing a full colour grid.
 - /ranges/stone-floor/ needs colour/image data review before showing a full colour grid.
 - /ranges/storm/ needs colour/image data review before showing a full colour grid.
