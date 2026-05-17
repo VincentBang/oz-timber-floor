@@ -1,117 +1,82 @@
-url,range_name,page_h1,category,ctas
-/ranges/artisan-hybrid-tile/,Artisan Tile,Artisan Tile flooring range,Hybrid,Supply price; Supply + install; Stock availability; Product question
-/ranges/artisan-oak/,Artisan Oak,Artisan Oak flooring range,Engineered,Supply price; Supply + install; Stock availability; Product question
-/ranges/aspire-classic-width/,Aspire Classic Width,Aspire Classic Width flooring range,Hybrid,Supply price; Supply + install; Stock availability; Product question
-/ranges/aspire-hybrid/,Aspire Hybrid,Aspire Hybrid flooring enquiries in Sydney,,Supply price; Supply + install; Stock availability; Product question
-/ranges/aspire-super-width/,Aspire Super Width,Aspire Super Width flooring range,Hybrid,Supply price; Supply + install; Stock availability; Product question
-/ranges/australian-raw-hardwood-timber/,Australian Raw Hardwood Timber,Australian Raw Hardwood Timber flooring range,Solid,Supply price; Supply + install; Stock availability; Product question
-/ranges/avala-hybrid-planks/,Avala,Avala flooring range,Hybrid,Supply price; Supply + install; Stock availability; Product question
-/ranges/bamboo/,Bamboo,Bamboo flooring range,Bamboo,Supply price; Supply + install; Stock availability; Product question
-/ranges/bass-aqua-wood-plus-12mm/,Aqua Wood Plus 12mm,Aqua Wood Plus 12mm flooring range,Laminate,Supply price; Supply + install; Stock availability; Product question
-/ranges/bass-botanica-engineered/,Botanica,Botanica flooring range,Engineered timber,Supply price; Supply + install; Stock availability; Product question
-/ranges/bass-coswick-hardwood/,Coswick Hardwood,Coswick Hardwood flooring range,Engineered timber,Supply price; Supply + install; Stock availability; Product question
-/ranges/bass-luxury-hybrid-7mm/,Luxury Hybrid 7mm,Luxury Hybrid 7mm flooring range,Hybrid,Supply price; Supply + install; Stock availability; Product question
-/ranges/bass-luxury-hybrid-8mm/,Luxury Hybrid 8mm,Luxury Hybrid 8mm flooring range,Hybrid,Supply price; Supply + install; Stock availability; Product question
-/ranges/bass-luxury-hybrid-9mm/,Luxury Hybrid 9mm,Luxury Hybrid 9mm flooring range,Hybrid,Supply price; Supply + install; Stock availability; Product question
-/ranges/bass-luxury-hybrid-plus-10mm/,Luxury Hybrid PLUS 10mm,Luxury Hybrid PLUS 10mm flooring range,Hybrid,Supply price; Supply + install; Stock availability; Product question
-/ranges/bass-oak-step-plus/,Oak Step PLUS,Oak Step PLUS flooring range,Laminate,Supply price; Supply + install; Stock availability; Product question
-/ranges/bass-oak-step/,Oak Step,Oak Step flooring range,Laminate,Supply price; Supply + install; Stock availability; Product question
-/ranges/belle-vie-herringbone/,Belle Vie,Belle Vie flooring range,Hybrid,Supply price; Supply + install; Stock availability; Product question
-/ranges/castel-nuovo-herringbone/,Castel Nuovo,Castel Nuovo flooring range,Engineered timber,Supply price; Supply + install; Stock availability; Product question
-/ranges/cavallo-bianco-chevron/,Cavallo Bianco,Cavallo Bianco flooring range,Engineered timber,Supply price; Supply + install; Stock availability; Product question
-/ranges/easi-plank/,Easi Plank,Easi Plank flooring range,Hybrid,Supply price; Supply + install; Stock availability; Product question
-/ranges/eco-elite-6mm-hybrid/,Elite 6.0 Hybrid,Elite 6.0 Hybrid flooring range,Hybrid,Supply price; Supply + install; Stock availability; Product question
-/ranges/eco-grande-7-5mm-hybrid/,Grande 7.5 Hybrid,Grande 7.5 Hybrid flooring range,Hybrid,Supply price; Supply + install; Stock availability; Product question
-/ranges/eco-grande-9mm-hybrid/,Grande 9.0 Hybrid,Grande 9.0 Hybrid flooring range,Hybrid,Supply price; Supply + install; Stock availability; Product question
-/ranges/eco-herringbone-7mm-hybrid/,Herringbone 7.0 Hybrid,Herringbone 7.0 Hybrid flooring range,Hybrid,Supply price; Supply + install; Stock availability; Product question
-/ranges/eco-urban-6-5mm-hybrid/,Urban 6.5 Hybrid,Urban 6.5 Hybrid flooring range,Hybrid,Supply price; Supply + install; Stock availability; Product question
-/ranges/eco-xxl-8mm-hybrid/,XXL 8.0 Hybrid,XXL 8.0 Hybrid flooring range,Hybrid,Supply price; Supply + install; Stock availability; Product question
-/ranges/engineered-timber/,Engineered Timber,Engineered Timber flooring range,Engineered,Supply price; Supply + install; Stock availability; Product question
-/ranges/etf-hybrid-spc-9mm/,ETF Hybrid SPC 9mm,ETF Hybrid SPC 9mm flooring range,Hybrid,Supply price; Supply + install; Stock availability; Product question
-/ranges/grand-oak-14-5mm/,Grand Oak 14 5mm,Grand Oak 14 5mm flooring range,Engineered,Supply price; Supply + install; Stock availability; Product question
-/ranges/grand-oak/,Grand Oak,Grand Oak flooring range,Engineered,Supply price; Supply + install; Stock availability; Product question
-/ranges/hrt-1-5m-laminate/,HRT 1.5m Laminate,HRT 1.5m Laminate flooring range,Laminate,Supply price; Supply + install; Stock availability; Product question
-/ranges/hrt-10mm-hybrid/,ETF 10mm Hybrid,ETF 10mm Hybrid flooring range,Hybrid,Supply price; Supply + install; Stock availability; Product question
-/ranges/hrt-14mm-oak-flooring/,HRT 14mm Oak Flooring,HRT 14mm Oak Flooring flooring range,Engineered timber,Supply price; Supply + install; Stock availability; Product question
-/ranges/hrt-15mm-oak-flooring/,HRT 15mm Oak Flooring,HRT 15mm Oak Flooring flooring range,Engineered timber,Supply price; Supply + install; Stock availability; Product question
-/ranges/hrt-6-5mm-hybrid/,ETF 6.5mm Hybrid,ETF 6.5mm Hybrid flooring range,Hybrid,Supply price; Supply + install; Stock availability; Product question
-/ranges/hrt-72hr-water-resistant-laminate/,HRT 72hr Water Resistant Laminate,HRT 72hr Water Resistant Laminate flooring range,Laminate,Supply price; Supply + install; Stock availability; Product question
-/ranges/hrt-9-5mm-hybrid/,ETF 9.5mm Hybrid,ETF 9.5mm Hybrid flooring range,Hybrid,Supply price; Supply + install; Stock availability; Product question
-/ranges/hrt-aquatuff-flooring/,AquaTuff Flooring,AquaTuff Flooring flooring range,Hybrid,Supply price; Supply + install; Stock availability; Product question
-/ranges/hrt-australian-engineered/,HRT Australian Engineered,HRT Australian Engineered flooring range,Engineered timber,Supply price; Supply + install; Stock availability; Product question
-/ranges/hrt-etf-12mm-water-resistant-laminate/,ETF 12mm Laminate,ETF 12mm Laminate flooring range,Laminate,Supply price; Supply + install; Stock availability; Product question
-/ranges/hrt-etf-7mm-waterproof-hybrid/,ETF 7.0mm Hybrid,ETF 7.0mm Hybrid flooring range,Hybrid,Supply price; Supply + install; Stock availability; Product question
-/ranges/hrt-etf-8mm-waterproof-hybrid/,ETF 8.0mm Hybrid,ETF 8.0mm Hybrid flooring range,Hybrid,Supply price; Supply + install; Stock availability; Product question
-/ranges/hrt-etf-9mm-waterproof-hybrid/,ETF 9.0mm Hybrid,ETF 9.0mm Hybrid flooring range,Hybrid,Supply price; Supply + install; Stock availability; Product question
-/ranges/hrt-hybrid-herringbone/,HRT Hybrid Herringbone,HRT Hybrid Herringbone flooring range,Hybrid,Supply price; Supply + install; Stock availability; Product question
-/ranges/hrt-oak-chevron/,HRT Oak Chevron,HRT Oak Chevron flooring range,Engineered timber,Supply price; Supply + install; Stock availability; Product question
-/ranges/hrt-oak-herringbone/,HRT Oak Herringbone,HRT Oak Herringbone flooring range,Engineered timber,Supply price; Supply + install; Stock availability; Product question
-/ranges/hrt-solid-timber/,HRT Solid Timber,HRT Solid Timber flooring range,Solid timber,Supply price; Supply + install; Stock availability; Product question
-/ranges/hybrid/,Hybrid,Hybrid flooring range,Hybrid,Supply price; Supply + install; Stock availability; Product question
-/ranges/hydroplank-wpc/,Hydroplank WPC,Hydroplank WPC flooring range,Hybrid,Supply price; Supply + install; Stock availability; Product question
-/ranges/infinite-laminate/,Infinite Laminate,Infinite Laminate flooring range,Laminate,Supply price; Supply + install; Stock availability; Product question
-/ranges/kronoswiss-aquastop-laminate-12mm/,Kronoswiss Aquastop Laminate 12mm,Kronoswiss Aquastop Laminate 12mm flooring range,Laminate,Supply price; Supply + install; Stock availability; Product question
-/ranges/kronoswiss-aquastop-laminate-14mm/,Kronoswiss Aquastop Laminate 14mm,Kronoswiss Aquastop Laminate 14mm flooring range,Laminate,Supply price; Supply + install; Stock availability; Product question
-/ranges/kronoswiss-aquastop-laminate-8mm/,Kronoswiss Aquastop Laminate 8mm,Kronoswiss Aquastop Laminate 8mm flooring range,Laminate,Supply price; Supply + install; Stock availability; Product question
-/ranges/kronoswiss-aquastop/,Kronoswiss Aquastop,Kronoswiss Aquastop flooring enquiries in Sydney,Laminate flooring range,Supply price; Supply + install; Stock availability; Product question
-/ranges/laminate/,Laminate,Laminate flooring range,Laminate,Supply price; Supply + install; Stock availability; Product question
-/ranges/lavanda-oak/,Lavanda Oak,Lavanda Oak flooring range,Engineered timber,Supply price; Supply + install; Stock availability; Product question
-/ranges/lumiere-ultra-hd-hybrid-plank/,Lumiere Ultra HD,Lumiere Ultra HD flooring range,Hybrid,Supply price; Supply + install; Stock availability; Product question
-/ranges/luxury-hybrid/,Luxury Hybrid,Luxury Hybrid flooring range,Hybrid,Supply price; Supply + install; Stock availability; Product question
-/ranges/oak-flooring-sydney/,Oak Flooring Sydney,Oak Flooring Sydney flooring enquiries in Sydney,Oak flooring range,Supply price; Supply + install; Stock availability; Product question
-/ranges/oakleaf-laminate/,Oakleaf Laminate,Oakleaf Laminate flooring range,Laminate,Supply price; Supply + install; Stock availability; Product question
-/ranges/ornato-hybrid/,Ornato Hybrid,Ornato Hybrid flooring range,Hybrid,Supply price; Supply + install; Stock availability; Product question
-/ranges/ornato-vinyl/,Ornato Vinyl,Ornato Vinyl flooring range,Vinyl,Supply price; Supply + install; Stock availability; Product question
-/ranges/pantora-amor-collection/,Pantora Amor,Pantora Amor flooring range,Laminate,Supply price; Supply + install; Stock availability; Product question
-/ranges/pantora-lifestyle-collection/,Pantora Lifestyle,Pantora Lifestyle flooring range,Laminate,Supply price; Supply + install; Stock availability; Product question
-/ranges/preference-classic-laminate/,Preference Classic Laminate,Preference Classic Laminate flooring range,Laminate,Supply price; Supply + install; Stock availability; Product question
-/ranges/preference-fiddleback/,Preference Fiddleback,Preference Fiddleback flooring range,Engineered,Supply price; Supply + install; Stock availability; Product question
-/ranges/preference-select-australian-timber/,Preference Select Australian Timber,Preference Select Australian Timber flooring range,Engineered,Supply price; Supply + install; Stock availability; Product question
-/ranges/prestige-oak-15mm/,Prestige Oak 15mm,Prestige Oak 15mm flooring range,Engineered,Supply price; Supply + install; Stock availability; Product question
-/ranges/prestige-oak-21mm/,Prestige Oak 21mm,Prestige Oak 21mm flooring range,Engineered,Supply price; Supply + install; Stock availability; Product question
-/ranges/prestige-oak/,Prestige Oak,Prestige Oak flooring enquiries in Sydney,Engineered oak range,Supply price; Supply + install; Stock availability; Product question
-/ranges/prime-contemporary-plus-edition/,Prime Contemporary Plus,Prime Contemporary Plus flooring range,Laminate,Supply price; Supply + install; Stock availability; Product question
-/ranges/prime-deluxe-edition/,Prime Deluxe,Prime Deluxe flooring range,Laminate,Supply price; Supply + install; Stock availability; Product question
-/ranges/prime-legend-collection/,Prime Legend,Prime Legend flooring range,Laminate,Supply price; Supply + install; Stock availability; Product question
-/ranges/prime-luxury-edition/,Prime Luxury,Prime Luxury flooring range,Laminate,Supply price; Supply + install; Stock availability; Product question
-/ranges/project-oak/,Project Oak,Project Oak flooring range,Engineered timber,Supply price; Supply + install; Stock availability; Product question
-/ranges/pronto-engineered-oak/,Pronto Engineered Oak,Pronto Engineered Oak flooring range,Engineered,Supply price; Supply + install; Stock availability; Product question
-/ranges/pronto/,Pronto,Pronto flooring enquiries in Sydney,Engineered oak range,Supply price; Supply + install; Stock availability; Product question
-/ranges/raw-timber/,Raw Timber,Raw Timber flooring enquiries in Sydney,Australian raw hardwood range,Supply price; Supply + install; Stock availability; Product question
-/ranges/reflections-laminate/,Reflections Laminate,Reflections Laminate flooring range,Laminate,Supply price; Supply + install; Stock availability; Product question
-/ranges/select-australian-timber/,Select Australian Timber,Select Australian Timber flooring enquiries in Sydney,Australian timber range,Supply price; Supply + install; Stock availability; Product question
-/ranges/solid-timber/,Solid Timber,Solid Timber flooring range,Solid,Supply price; Supply + install; Stock availability; Product question
-/ranges/stone-floor-marble/,Stone Floor Marble,Stone Floor Marble flooring range,Hybrid,Supply price; Supply + install; Stock availability; Product question
-/ranges/stone-floor-tile/,Stone Floor Tile,Stone Floor Tile flooring range,Hybrid,Supply price; Supply + install; Stock availability; Product question
-/ranges/stone-floor-timber/,Stone Floor Timber,Stone Floor Timber flooring range,Hybrid,Supply price; Supply + install; Stock availability; Product question
-/ranges/stonewood-bamboo/,Stonewood Bamboo,Stonewood Bamboo flooring range,Bamboo,Supply price; Supply + install; Stock availability; Product question
-/ranges/stonewood/,Stonewood,Stonewood flooring enquiries in Sydney,Bamboo flooring range,Supply price; Supply + install; Stock availability; Product question
-/ranges/storm-luxury-hybrid-planks/,Storm Luxury,Storm Luxury flooring range,Hybrid,Supply price; Supply + install; Stock availability; Product question
-/ranges/swish-aquastop-laminate/,Swish Aquastop Laminate,Swish Aquastop Laminate flooring range,Laminate,Supply price; Supply + install; Stock availability; Product question
-/ranges/swish-aquastop/,Swish Aquastop,Swish Aquastop flooring enquiries in Sydney,Laminate flooring range,Supply price; Supply + install; Stock availability; Product question
-/ranges/swish-laminate-aqua/,Swish Laminate Aqua,Swish Laminate Aqua flooring range,Laminate,Supply price; Supply + install; Stock availability; Product question
-/ranges/swish-laminate-classic/,Swish Laminate,Swish Laminate flooring range,Laminate,Supply price; Supply + install; Stock availability; Product question
-/ranges/swish-laminate/,Swish Laminate,Swish Laminate flooring range,Laminate,Supply price; Supply + install; Stock availability; Product question
-/ranges/swish-oak-contemporary/,Swish Oak Contemporary,Swish Oak Contemporary flooring range,Engineered timber,Supply price; Supply + install; Stock availability; Product question
-/ranges/swish-oak-natura-handcrafted/,Swish Oak Natura Handcrafted,Swish Oak Natura Handcrafted flooring range,Engineered timber,Supply price; Supply + install; Stock availability; Product question
-/ranges/swish-oak-natura-herringbone/,Swish Oak Natura Herringbone,Swish Oak Natura Herringbone flooring range,Engineered timber,Supply price; Supply + install; Stock availability; Product question
-/ranges/swish-oak-natura/,Swish Oak Natura,Swish Oak Natura flooring range,Engineered timber,Supply price; Supply + install; Stock availability; Product question
-/ranges/swish-oak-wideboard/,Swish Oak Wideboard,Swish Oak Wideboard flooring range,Engineered timber,Supply price; Supply + install; Stock availability; Product question
-/ranges/swish-oak/,Swish Oak,Swish Oak flooring range,Engineered,Supply price; Supply + install; Stock availability; Product question
-/ranges/topdeck-pre-finished-solid-timber/,Pre-Finished Solid Timber,Pre-Finished Solid Timber flooring range,Solid timber,Supply price; Supply + install; Stock availability; Product question
-/ranges/topdeck-raw-solid-timber/,Raw Solid Timber,Raw Solid Timber flooring range,Solid timber,Supply price; Supply + install; Stock availability; Product question
-/ranges/verdura-bamboo/,Verdura Bamboo,Verdura Bamboo flooring range,Bamboo,Supply price; Supply + install; Stock availability; Product question
-/ranges/verdura/,Verdura,Verdura flooring enquiries in Sydney,Bamboo flooring range,Supply price; Supply + install; Stock availability; Product question
-/ranges/villeroy-boch-aquastop-10mm/,Villeroy & Boch Aquastop 10mm,Villeroy & Boch Aquastop 10mm flooring range,Laminate,Supply price; Supply + install; Stock availability; Product question
-/ranges/villeroy-boch-aquastop-12mm/,Villeroy & Boch Aquastop 12mm,Villeroy & Boch Aquastop 12mm flooring range,Laminate,Supply price; Supply + install; Stock availability; Product question
-/ranges/villeroy-boch-aquastop-8mm/,Villeroy & Boch Aquastop 8mm,Villeroy & Boch Aquastop 8mm flooring range,Laminate,Supply price; Supply + install; Stock availability; Product question
-/ranges/villeroy-boch-aquastop/,Villeroy & Boch Aquastop,Villeroy & Boch Aquastop flooring enquiries in Sydney,Laminate flooring range,Supply price; Supply + install; Stock availability; Product question
-/ranges/villeroy-boch-contemporary-laminate/,Villeroy & Boch Contemporary,Villeroy & Boch Contemporary flooring range,Laminate,Supply price; Supply + install; Stock availability; Product question
-/ranges/villeroy-boch-cosmopolitan-laminate/,Villeroy & Boch Cosmopolitan,Villeroy & Boch Cosmopolitan flooring range,Laminate,Supply price; Supply + install; Stock availability; Product question
-/ranges/villeroy-boch-country-laminate/,Villeroy & Boch Country,Villeroy & Boch Country flooring range,Laminate,Supply price; Supply + install; Stock availability; Product question
-/ranges/villeroy-boch-heritage-laminate/,Villeroy & Boch Heritage,Villeroy & Boch Heritage flooring range,Laminate,Supply price; Supply + install; Stock availability; Product question
-/ranges/vinyl/,Vinyl,Vinyl flooring range,Vinyl,Supply price; Supply + install; Stock availability; Product question
-/ranges/wooden-land-australian-species-136mm/,Wooden-Land Australian Species 136mm,Wooden-Land Australian Species 136mm flooring range,Engineered timber,Supply price; Supply + install; Stock availability; Product question
-/ranges/wooden-land-australian-species-190mm/,Wooden-Land Australian Species 190mm,Wooden-Land Australian Species 190mm flooring range,Engineered timber,Supply price; Supply + install; Stock availability; Product question
-/ranges/wooden-land-foreign-species/,Wooden-Land Foreign Species,Wooden-Land Foreign Species flooring range,Engineered timber,Supply price; Supply + install; Stock availability; Product question
-/ranges/wooden-land-herringbone/,Wooden-Land Herringbone,Wooden-Land Herringbone flooring range,Engineered timber,Supply price; Supply + install; Stock availability; Product question
+url,range_name,category,supplier,product_count,thickness,board_size,pack_size_m2,installation_method,warranty_summary,source_url
+/ranges/artisan/,Artisan,Hybrid,Artisan,24,,,,Floating click system; confirm range-specific subfloor requirements,Supplier warranty varies by range and use. Confirm current residential/commercial warranty before ordering.,
+/ranges/artisan-tile/,Artisan Tile,Hybrid,,12,9mm,620 x 310 x 9mm,,Floating Floor (Licensed Click System),Confirm the current residential and commercial warranty for the exact hybrid collection before ordering.,
+/ranges/aspire/,Aspire,Hybrid,Aspire,14,,,,Floating click system; confirm range-specific subfloor requirements,Supplier warranty varies by range and use. Confirm current residential/commercial warranty before ordering.,
+/ranges/avala/,Avala,Hybrid,,10,6.5mm,1524 x 183 or 230 x 6.5mm,,Floating Floor (Licensed Click System),Confirm the current residential and commercial warranty for the exact hybrid collection before ordering.,
+/ranges/belle-vie/,Belle Vie,Hybrid,,12,7mm,625 x 125 x 7mm,,Floating Floor (Licensed Click System),Confirm the current residential and commercial warranty for the exact hybrid collection before ordering.,
+/ranges/easi-plank/,Easi Plank,Hybrid,,4,,,,Download Acoustic Test 7.5mm Easi-Plank Hybrid Plank Download Acoustic Test 8mm,Confirm the current solid timber warranty for the selected range before order.,
+/ranges/elite-6-0-hybrid/,Elite 6.0 Hybrid,Hybrid,,12,6.0mm,Length 1511mm x Width 229mm,,Floating click system. Final installation method depends on the product specification and site conditions.,Confirm the current supplier warranty for the selected range before ordering.,
+/ranges/etf-7-0mm-hybrid/,ETF 7.0mm Hybrid,Hybrid,,15,7.0mm,1500 mm x 228 mm,,Floating click-lock system,Confirm the current supplier warranty for the selected range before ordering.,
+/ranges/etf-8-0mm-hybrid/,ETF 8.0mm Hybrid,Hybrid,,12,8.0mm,1810 mm x 228 mm,,Floating click-lock system,Confirm the current supplier warranty for the selected range before ordering.,
+/ranges/etf-9-0mm-hybrid/,ETF 9.0mm Hybrid,Hybrid,,14,9.0mm,Refer to selected colour brochure,,Floating click-lock system,Confirm the current supplier warranty for the selected range before ordering.,
+/ranges/etf-hybrid-spc-9mm/,ETF Hybrid SPC 9mm,Hybrid,ETF Hybrid SPC,7,9mm,,,Floating click system; confirm range-specific subfloor requirements,Supplier warranty varies by range and use. Confirm current residential/commercial warranty before ordering.,
+/ranges/grande-7-5-hybrid/,Grande 7.5 Hybrid,Hybrid,,6,7.5mm,Length 1500mm x Width 230mm,,Floating click system. Final installation method depends on the product specification and site conditions.,Confirm the current supplier warranty for the selected range before ordering.,
+/ranges/grande-9-0-hybrid/,Grande 9.0 Hybrid,Hybrid,,10,9.0mm,1500 x 230 x 9.0mm,,Floating,Confirm the current supplier warranty for the selected range before ordering.,
+/ranges/herringbone-7-0-hybrid/,Herringbone 7.0 Hybrid,Hybrid,,6,7.0mm,Length 600mm x Width 150mm,,Floating click system. Final installation method depends on the product specification and site conditions.,Confirm the current supplier warranty for the selected range before ordering.,
+/ranges/hybrid/,Hybrid,Hybrid,Oz Timber Floor,42,,,,Floating click system; confirm range-specific subfloor requirements,Supplier warranty varies by range and use. Confirm current residential/commercial warranty before ordering.,
+/ranges/hydroplank-wpc/,Hydroplank WPC,Hybrid,Hydroplank,11,,,,Floating click system; confirm range-specific subfloor requirements,Supplier warranty varies by range and use. Confirm current residential/commercial warranty before ordering.,
+/ranges/iconic-wpc/,Iconic WPC,Hybrid,,1,,,,Download Acoustic Test Iconic Download Fire Test Download Floor Care Download Sp,Confirm the current solid timber warranty for the selected range before order.,
+/ranges/kronoswiss-aquastop/,Kronoswiss Aquastop,Hybrid,Kronoswiss,37,8mm,,,Floating click system; confirm range-specific subfloor requirements,Supplier warranty varies by range and use. Confirm current residential/commercial warranty before ordering.,
+/ranges/lifestyle-collection/,Lifestyle Collection,Hybrid,,1,,,,Download See more of our products Hybrid Flooring Urban Grey Hybrid Flooring Wil,Confirm the current solid timber warranty for the selected range before order.,
+/ranges/lumiere-ultra-hd/,Lumiere Ultra HD,Hybrid,,12,7mm,1524 x 230 x 7mm,,Floating Floor (Licensed Click System),Confirm the current residential and commercial warranty for the exact hybrid collection before ordering.,
+/ranges/luxury-hybrid/,Luxury Hybrid,Hybrid,Luxury Hybrid,16,,,,Floating click system; confirm range-specific subfloor requirements,Supplier warranty varies by range and use. Confirm current residential/commercial warranty before ordering.,
+/ranges/luxury-hybrid-7mm/,Luxury Hybrid 7mm,Hybrid,,6,7.0mm,1520mm x 230mm,,Floating click system. Final installation method depends on the product specification and site conditions.,Confirm the current supplier warranty for the selected range before ordering.,
+/ranges/luxury-hybrid-8mm/,Luxury Hybrid 8mm,Hybrid,,12,8.0mm,,,Floating floor format,Confirm the current supplier warranty for the selected range before ordering.,
+/ranges/luxury-hybrid-9mm/,Luxury Hybrid 9mm,Hybrid,,8,9.0mm,1800mm x 230mm,,Floating click system. Final installation method depends on the product specification and site conditions.,Confirm the current supplier warranty for the selected range before ordering.,
+/ranges/luxury-hybrid-plus-10mm/,Luxury Hybrid PLUS 10mm,Hybrid,,12,10.0mm,,,Floating floor format,Confirm the current supplier warranty for the selected range before ordering.,
+/ranges/ornato/,Ornato,Hybrid,Ornato,16,,,,Floating click system; confirm range-specific subfloor requirements,Supplier warranty varies by range and use. Confirm current residential/commercial warranty before ordering.,
+/ranges/ornato-hybrid/,Ornato Hybrid,Hybrid,Ornato,12,,,,Floating click system; confirm range-specific subfloor requirements,Supplier warranty varies by range and use. Confirm current residential/commercial warranty before ordering.,
+/ranges/stone-floor/,Stone Floor,Hybrid,Stone Floor,20,,,,Floating click system; confirm range-specific subfloor requirements,Supplier warranty varies by range and use. Confirm current residential/commercial warranty before ordering.,
+/ranges/storm/,Storm,Hybrid,Storm,12,,,,Floating click system; confirm range-specific subfloor requirements,Supplier warranty varies by range and use. Confirm current residential/commercial warranty before ordering.,
+/ranges/storm-luxury/,Storm Luxury,Hybrid,,12,7mm,1880 x 225 x 7mm,,Floating Floor (5G Click System),Confirm the current residential and commercial warranty for the exact hybrid collection before ordering.,
+/ranges/urban-6-5-hybrid/,Urban 6.5 Hybrid,Hybrid,,12,6.5mm,Length 1511mm x Width 229mm,,Floating click system. Final installation method depends on the product specification and site conditions.,Confirm the current supplier warranty for the selected range before ordering.,
+/ranges/xxl-8-0-hybrid/,XXL 8.0 Hybrid,Hybrid,,12,8.0mm,Length 1511mm x Width 229mm,,Floating click system. Final installation method depends on the product specification and site conditions.,Confirm the current supplier warranty for the selected range before ordering.,
+/ranges/aqua-wood-plus-12mm/,Aqua Wood Plus 12mm,Laminate,,24,12.0mm,,,Floating floor format,Confirm the current supplier warranty for the selected range before ordering.,
+/ranges/aquastop-laminate/,Aquastop Laminate,Laminate,,1,,,,Aquastop MR Laminate Download Warranty Download Floor Instruction Download Broch,Confirm the current solid timber warranty for the selected range before order.,
+/ranges/etf-12mm-laminate/,ETF 12mm Laminate,Laminate,,15,12.0mm,1215mm x 196mm,,Floating click-lock system,Confirm the current supplier warranty for the selected range before ordering.,
+/ranges/infinite/,Infinite,Laminate,Infinite,16,,,,Floating click system with suitable underlay,Supplier warranty varies by range and use. Confirm current residential/commercial warranty before ordering.,
+/ranges/oak-step/,Oak Step,Laminate,,10,,,,Floating floor format,Confirm the current supplier warranty for the selected range before ordering.,
+/ranges/oak-step-plus/,Oak Step PLUS,Laminate,,10,,,,Floating floor format,Confirm the current supplier warranty for the selected range before ordering.,
+/ranges/oakleaf/,Oakleaf,Laminate,Oakleaf,12,,,,Floating click system with suitable underlay,Supplier warranty varies by range and use. Confirm current residential/commercial warranty before ordering.,
+/ranges/oakleaf-laminate/,Oakleaf Laminate,Laminate,,2,"12mm, AC4, Plank Size: Length 2200mm, Pack Qty: 1.698m² Width: 193mm, Thickness:",,,Download Acoustic Test Download Floor Care Download Specification Data Sheet Dow,Confirm the current solid timber warranty for the selected range before order.,
+/ranges/pantora-amor/,Pantora Amor,Laminate,,12,12mm,1515 x 234 x 12mm,,5G Licensed Click System,"Confirm the current laminate warranty for the selected collection, room type and installation method before ordering.",
+/ranges/pantora-lifestyle/,Pantora Lifestyle,Laminate,,10,8mm,1500 x 196 x 8mm,,Licensed Click System,"Confirm the current laminate warranty for the selected collection, room type and installation method before ordering.",
+/ranges/classic-laminate/,Classic Laminate,Laminate,,9,,,,Floating click system; confirm range-specific subfloor requirements,Supplier warranty varies by range and use. Confirm current residential/commercial warranty before ordering.,
+/ranges/prime-contemporary-plus/,Prime Contemporary Plus,Laminate,,11,12.3mm,1215 x 195 x 12.3mm,,Floating Floor (Licensed Click System),"Confirm the current laminate warranty for the selected collection, room type and installation method before ordering.",
+/ranges/prime-deluxe/,Prime Deluxe,Laminate,,8,8.3mm,1215 x 196 x 8.3mm,,Floating Floor (Licensed Click System),"Confirm the current laminate warranty for the selected collection, room type and installation method before ordering.",
+/ranges/prime-legend/,Prime Legend,Laminate,,10,12.3mm,2200 x 239 x 12.3mm,,Floating Floor (Licensed Click System),"Confirm the current laminate warranty for the selected collection, room type and installation method before ordering.",
+/ranges/prime-luxury/,Prime Luxury,Laminate,,10,12.3mm,2280 x 192 x 12.3mm,,Floating Floor (Licensed Click System),"Confirm the current laminate warranty for the selected collection, room type and installation method before ordering.",
+/ranges/reflections/,Reflections,Laminate,Reflections,10,,,,Floating click system with suitable underlay,Supplier warranty varies by range and use. Confirm current residential/commercial warranty before ordering.,
+/ranges/swish-aquastop/,Swish Aquastop,Laminate,Swish,12,,,,Floating click system with suitable underlay,Supplier warranty varies by range and use. Confirm current residential/commercial warranty before ordering.,
+/ranges/swish-laminate/,Swish Laminate,Laminate,,12,Laminate,Length 1518mm x Width 236mm,,Floating click system. Final installation method depends on the product specification and site conditions.,Confirm the current supplier warranty for the selected range before ordering.,
+/ranges/swish-laminate-aqua/,Swish Laminate Aqua,Laminate,,16,Laminate,Length 2200mm x Width 196mm,,Floating click system. Final installation method depends on the product specification and site conditions.,Confirm the current supplier warranty for the selected range before ordering.,
+/ranges/villeroy-and-boch-aquastop/,Villeroy & Boch Aquastop,Laminate,Villeroy & Boch,21,,,,Floating click system with suitable underlay,Supplier warranty varies by range and use. Confirm current residential/commercial warranty before ordering.,
+/ranges/villeroy-and-boch-contemporary/,Villeroy & Boch Contemporary,Laminate,,4,Laminate,,,Floating click system. Final installation method depends on the product specification and site conditions.,Confirm the current supplier warranty for the selected range before ordering.,
+/ranges/villeroy-and-boch-cosmopolitan/,Villeroy & Boch Cosmopolitan,Laminate,,5,Laminate,,,Floating click system. Final installation method depends on the product specification and site conditions.,Confirm the current supplier warranty for the selected range before ordering.,
+/ranges/villeroy-and-boch-country/,Villeroy & Boch Country,Laminate,,3,Laminate,,,Floating click system. Final installation method depends on the product specification and site conditions.,Confirm the current supplier warranty for the selected range before ordering.,
+/ranges/villeroy-and-boch-heritage/,Villeroy & Boch Heritage,Laminate,,3,Laminate,,,Floating click system. Final installation method depends on the product specification and site conditions.,Confirm the current supplier warranty for the selected range before ordering.,
+/ranges/wide-plank-water-resistant-laminate/,Wide Plank Water Resistant Laminate,Laminate,,8,"2200mm length (nested shorts) Pack 2.112m2 /ctn. Finish Pre-finished, matte coat",,,"s. Pre-finished, Matte PU Lacquer. Surface is light wire brushed. Size & Length",Confirm the current solid timber warranty for the selected range before order.,
+/ranges/botanica/,Botanica,Engineered timber,,8,,,,Confirm suitable installation method before booking,Confirm the current supplier warranty for the selected range before ordering.,
+/ranges/castel-nuovo/,Castel Nuovo,Engineered timber,,12,14/3mm,600 x 120 x 3/14mm,,Tongue & Groove System,"Confirm the current engineered timber warranty, maintenance requirements and site conditions before ordering.",
+/ranges/cavallo-bianco/,Cavallo Bianco,Engineered timber,,12,14/3mm,780 x 125 x 3/14mm,,Tongue & Groove System,"Confirm the current engineered timber warranty, maintenance requirements and site conditions before ordering.",
+/ranges/elk-falls/,Elk Falls,Engineered timber,,1,,,,WR Laminate Download Warranty Download Brochure - Oakleaf HD PLUS Laminate Downl,Confirm the current solid timber warranty for the selected range before order.,
+/ranges/lavanda-oak/,Lavanda Oak,Engineered timber,,12,14/3mm,1900 x 190 x 3/14mm,,Tongue & Groove System,"Confirm the current engineered timber warranty, maintenance requirements and site conditions before ordering.",
+/ranges/fiddleback/,Fiddleback,Engineered timber,,9,,,,"Floating or direct-stick depending on product, substrate and specification",Supplier warranty varies by range and use. Confirm current residential/commercial warranty before ordering.,
+/ranges/select-australian-timber/,Select Australian Timber,Engineered timber,,6,,,,Download Warranty Download Brochure - Select Australian Timber Download See more,Confirm the current solid timber warranty for the selected range before order.,
+/ranges/prestige-oak/,Prestige Oak,Engineered timber,Prestige Oak,46,,,,"Floating or direct-stick depending on product, substrate and specification",Supplier warranty varies by range and use. Confirm current residential/commercial warranty before ordering.,
+/ranges/project-oak/,Project Oak,Engineered timber,,12,14/2mm,1900 x 190 x 2/14mm,,Tongue & Groove System,"Confirm the current engineered timber warranty, maintenance requirements and site conditions before ordering.",
+/ranges/pronto/,Pronto,Engineered timber,Pronto,13,,,,"Floating or direct-stick depending on product, substrate and specification",Supplier warranty varies by range and use. Confirm current residential/commercial warranty before ordering.,
+/ranges/pronto-engineered-oak/,Pronto Engineered Oak,Engineered timber,,1,,,,Instruction T&G Ranges Download Installation Instruction Parquetry Download Warr,Confirm the current solid timber warranty for the selected range before order.,
+/ranges/swish-oak/,Swish Oak,Engineered timber,Swish,24,,,,"Floating or direct-stick depending on product, substrate and specification",Supplier warranty varies by range and use. Confirm current residential/commercial warranty before ordering.,
+/ranges/swish-oak-contemporary/,Swish Oak Contemporary,Engineered timber,,6,Engineered oak,Length 1900mm x Width 190mm,,"Floating or direct-stick depending on the board construction, product specification and site conditions.",Confirm the current supplier warranty for the selected range before ordering.,
+/ranges/swish-oak-natura/,Swish Oak Natura,Engineered timber,,16,14/3mm,,,Glue down / Floating,Confirm the current supplier warranty for the selected range before ordering.,
+/ranges/swish-oak-natura-handcrafted/,Swish Oak Natura Handcrafted,Engineered timber,,3,Engineered oak,Length 1900mm x Width 190mm,,"Floating or direct-stick depending on the board construction, product specification and site conditions.",Confirm the current supplier warranty for the selected range before ordering.,
+/ranges/swish-oak-natura-herringbone/,Swish Oak Natura Herringbone,Engineered timber,,6,14/3mm,,,Glue Down,Confirm the current supplier warranty for the selected range before ordering.,
+/ranges/swish-oak-wideboard/,Swish Oak Wideboard,Engineered timber,,8,14/4mm,Length 2200mm x Width 220mm,,"Floating or direct-stick depending on the board construction, product specification and site conditions.",Confirm the current supplier warranty for the selected range before ordering.,
+/ranges/wooden-land-australian-species-136mm/,Wooden-Land Australian Species 136mm,Engineered timber,,7,14/3mm,,,5G Licensed Click System,"Confirm the current engineered timber warranty, maintenance requirements and site conditions before ordering.",
+/ranges/wooden-land-australian-species-190mm/,Wooden-Land Australian Species 190mm,Engineered timber,,6,14/3mm,,,5G Licensed Click System,"Confirm the current engineered timber warranty, maintenance requirements and site conditions before ordering.",
+/ranges/wooden-land-foreign-species/,Wooden-Land Foreign Species,Engineered timber,,2,14/3mm,,,Tongue & Groove System,"Confirm the current engineered timber warranty, maintenance requirements and site conditions before ordering.",
+/ranges/wooden-land-herringbone/,Wooden-Land Herringbone,Engineered timber,,2,14/3mm,600 x 120 x 3/14mm,,5G Licensed Click System,"Confirm the current engineered timber warranty, maintenance requirements and site conditions before ordering.",
+/ranges/hardwood-collection/,Hardwood Collection,Solid timber,,185,"12mm, AC4, Plank Size: Length 2200mm, Pack Qty: 1.698m² Width: 193mm, Thickness:",,2.155220.5.2,Instruction T&G Ranges Download Installation Instruction Click Download Warranty,Confirm the current solid timber warranty for the selected range before order.,
+/ranges/solid/,Solid,Solid timber,Australian timber flooring range,24,,,,"Direct fix, nail or glue system depending on board and subfloor",Supplier warranty varies by range and use. Confirm current residential/commercial warranty before ordering.,
+/ranges/swish/,Swish,Solid timber,Swish,2,,,,"Direct fix, nail or glue system depending on board and subfloor",Supplier warranty varies by range and use. Confirm current residential/commercial warranty before ordering.,
