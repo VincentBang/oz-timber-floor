@@ -2,6 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://oztimberfloor.com.au/</loc></url>
   <url><loc>https://oztimberfloor.com.au/about/</loc></url>
+  <url><loc>https://oztimberfloor.com.au/bamboo-flooring-sydney/</loc></url>
   <url><loc>https://oztimberfloor.com.au/builder-flooring-contractor-sydney/</loc></url>
   <url><loc>https://oztimberfloor.com.au/commercial-flooring-sydney/</loc></url>
   <url><loc>https://oztimberfloor.com.au/contact/</loc></url>
@@ -831,7 +832,6 @@
   <url><loc>https://oztimberfloor.com.au/products/infinite-white-oak/</loc></url>
   <url><loc>https://oztimberfloor.com.au/products/jarrah-136mm/</loc></url>
   <url><loc>https://oztimberfloor.com.au/products/jarrah-190mm/</loc></url>
-  <url><loc>https://oztimberfloor.com.au/products/jarrah/</loc></url>
   <url><loc>https://oztimberfloor.com.au/products/jatoba-brazilian-cherry/</loc></url>
   <url><loc>https://oztimberfloor.com.au/products/kempas-natural/</loc></url>
   <url><loc>https://oztimberfloor.com.au/products/kempas-red-stain/</loc></url>
@@ -1303,16 +1303,11 @@
   <url><loc>https://oztimberfloor.com.au/products/soft-pale-oak-1/</loc></url>
   <url><loc>https://oztimberfloor.com.au/products/soft-pale-oak/</loc></url>
   <url><loc>https://oztimberfloor.com.au/products/solid-raw-timber-american-white-oak/</loc></url>
-  <url><loc>https://oztimberfloor.com.au/products/solid-raw-timber-blackbutt/</loc></url>
-  <url><loc>https://oztimberfloor.com.au/products/solid-raw-timber-brush-box/</loc></url>
   <url><loc>https://oztimberfloor.com.au/products/solid-raw-timber-cypress-pine/</loc></url>
   <url><loc>https://oztimberfloor.com.au/products/solid-raw-timber-grey-box/</loc></url>
   <url><loc>https://oztimberfloor.com.au/products/solid-raw-timber-grey-ironbark/</loc></url>
   <url><loc>https://oztimberfloor.com.au/products/solid-raw-timber-nsw-spotted-gum/</loc></url>
   <url><loc>https://oztimberfloor.com.au/products/solid-raw-timber-red-ironbark/</loc></url>
-  <url><loc>https://oztimberfloor.com.au/products/solid-raw-timber-rose-gum/</loc></url>
-  <url><loc>https://oztimberfloor.com.au/products/solid-raw-timber-southern-beech/</loc></url>
-  <url><loc>https://oztimberfloor.com.au/products/solid-raw-timber-sydney-blue-gum/</loc></url>
   <url><loc>https://oztimberfloor.com.au/products/solid-raw-timber-tallowwood/</loc></url>
   <url><loc>https://oztimberfloor.com.au/products/solid-raw-timber-tasmanian-oak/</loc></url>
   <url><loc>https://oztimberfloor.com.au/products/solid-raw-timber-turpentine/</loc></url>
@@ -1481,10 +1476,8 @@
   <url><loc>https://oztimberfloor.com.au/products/swish-spotted-gum/</loc></url>
   <url><loc>https://oztimberfloor.com.au/products/sydney-blue-gum-136mm/</loc></url>
   <url><loc>https://oztimberfloor.com.au/products/sydney-blue-gum-190mm/</loc></url>
-  <url><loc>https://oztimberfloor.com.au/products/sydney-blue-gum/</loc></url>
   <url><loc>https://oztimberfloor.com.au/products/tan-brown/</loc></url>
   <url><loc>https://oztimberfloor.com.au/products/tasmanian-oak-136mm/</loc></url>
-  <url><loc>https://oztimberfloor.com.au/products/tasmanian-oak/</loc></url>
   <url><loc>https://oztimberfloor.com.au/products/truffle-oak/</loc></url>
   <url><loc>https://oztimberfloor.com.au/products/urban-6-5-hybrid-alpine-oak/</loc></url>
   <url><loc>https://oztimberfloor.com.au/products/urban-6-5-hybrid-black-forest-oak/</loc></url>
@@ -1612,16 +1605,8 @@
   <url><loc>https://oztimberfloor.com.au/products/xxl-8mm-spotted-gum-hybrid/</loc></url>
   <url><loc>https://oztimberfloor.com.au/products/xxl-8mm-walnut-brown/</loc></url>
   <url><loc>https://oztimberfloor.com.au/projects/</loc></url>
-  <url><loc>https://oztimberfloor.com.au/ranges/1-5m-laminate/</loc></url>
-  <url><loc>https://oztimberfloor.com.au/ranges/10mm-hybrid/</loc></url>
-  <url><loc>https://oztimberfloor.com.au/ranges/14mm-oak-flooring/</loc></url>
-  <url><loc>https://oztimberfloor.com.au/ranges/15mm-oak-flooring/</loc></url>
-  <url><loc>https://oztimberfloor.com.au/ranges/6-5mm-hybrid/</loc></url>
-  <url><loc>https://oztimberfloor.com.au/ranges/72hr-water-resistant-laminate/</loc></url>
-  <url><loc>https://oztimberfloor.com.au/ranges/9-5mm-hybrid/</loc></url>
   <url><loc>https://oztimberfloor.com.au/ranges/aqua-wood-plus-12mm/</loc></url>
   <url><loc>https://oztimberfloor.com.au/ranges/aquastop-laminate/</loc></url>
-  <url><loc>https://oztimberfloor.com.au/ranges/aquatuff-flooring/</loc></url>
   <url><loc>https://oztimberfloor.com.au/ranges/artisan-hybrid-tile/</loc></url>
   <url><loc>https://oztimberfloor.com.au/ranges/artisan-oak/</loc></url>
   <url><loc>https://oztimberfloor.com.au/ranges/artisan-tile/</loc></url>
@@ -1630,25 +1615,17 @@
   <url><loc>https://oztimberfloor.com.au/ranges/aspire-hybrid/</loc></url>
   <url><loc>https://oztimberfloor.com.au/ranges/aspire-super-width/</loc></url>
   <url><loc>https://oztimberfloor.com.au/ranges/aspire/</loc></url>
-  <url><loc>https://oztimberfloor.com.au/ranges/australian-engineered/</loc></url>
-  <url><loc>https://oztimberfloor.com.au/ranges/australian-raw-hardwood-timber/</loc></url>
   <url><loc>https://oztimberfloor.com.au/ranges/avala-hybrid-planks/</loc></url>
   <url><loc>https://oztimberfloor.com.au/ranges/avala/</loc></url>
-  <url><loc>https://oztimberfloor.com.au/ranges/belle-vie-herringbone/</loc></url>
   <url><loc>https://oztimberfloor.com.au/ranges/belle-vie/</loc></url>
-  <url><loc>https://oztimberfloor.com.au/ranges/botanica-engineered/</loc></url>
   <url><loc>https://oztimberfloor.com.au/ranges/botanica/</loc></url>
-  <url><loc>https://oztimberfloor.com.au/ranges/castel-nuovo-herringbone/</loc></url>
   <url><loc>https://oztimberfloor.com.au/ranges/castel-nuovo/</loc></url>
-  <url><loc>https://oztimberfloor.com.au/ranges/cavallo-bianco-chevron/</loc></url>
   <url><loc>https://oztimberfloor.com.au/ranges/cavallo-bianco/</loc></url>
   <url><loc>https://oztimberfloor.com.au/ranges/classic-laminate/</loc></url>
-  <url><loc>https://oztimberfloor.com.au/ranges/coswick-hardwood/</loc></url>
   <url><loc>https://oztimberfloor.com.au/ranges/easi-plank/</loc></url>
   <url><loc>https://oztimberfloor.com.au/ranges/elite-6-0-hybrid/</loc></url>
   <url><loc>https://oztimberfloor.com.au/ranges/elite-6mm-hybrid/</loc></url>
   <url><loc>https://oztimberfloor.com.au/ranges/elk-falls/</loc></url>
-  <url><loc>https://oztimberfloor.com.au/ranges/engineered-timber/</loc></url>
   <url><loc>https://oztimberfloor.com.au/ranges/etf-12mm-laminate/</loc></url>
   <url><loc>https://oztimberfloor.com.au/ranges/etf-12mm-water-resistant-laminate/</loc></url>
   <url><loc>https://oztimberfloor.com.au/ranges/etf-7-0mm-hybrid/</loc></url>
@@ -1659,8 +1636,6 @@
   <url><loc>https://oztimberfloor.com.au/ranges/etf-9mm-waterproof-hybrid/</loc></url>
   <url><loc>https://oztimberfloor.com.au/ranges/etf-hybrid-spc-9mm/</loc></url>
   <url><loc>https://oztimberfloor.com.au/ranges/fiddleback/</loc></url>
-  <url><loc>https://oztimberfloor.com.au/ranges/grand-oak-14-5mm/</loc></url>
-  <url><loc>https://oztimberfloor.com.au/ranges/grand-oak/</loc></url>
   <url><loc>https://oztimberfloor.com.au/ranges/grande-7-5-hybrid/</loc></url>
   <url><loc>https://oztimberfloor.com.au/ranges/grande-7-5mm-hybrid/</loc></url>
   <url><loc>https://oztimberfloor.com.au/ranges/grande-9-0-hybrid/</loc></url>
@@ -1668,29 +1643,19 @@
   <url><loc>https://oztimberfloor.com.au/ranges/hardwood-collection/</loc></url>
   <url><loc>https://oztimberfloor.com.au/ranges/herringbone-7-0-hybrid/</loc></url>
   <url><loc>https://oztimberfloor.com.au/ranges/herringbone-7mm-hybrid/</loc></url>
-  <url><loc>https://oztimberfloor.com.au/ranges/hybrid-herringbone/</loc></url>
-  <url><loc>https://oztimberfloor.com.au/ranges/hybrid/</loc></url>
   <url><loc>https://oztimberfloor.com.au/ranges/hydroplank-wpc/</loc></url>
   <url><loc>https://oztimberfloor.com.au/ranges/iconic-wpc/</loc></url>
   <url><loc>https://oztimberfloor.com.au/ranges/infinite-laminate/</loc></url>
   <url><loc>https://oztimberfloor.com.au/ranges/infinite/</loc></url>
-  <url><loc>https://oztimberfloor.com.au/ranges/kronoswiss-aquastop-laminate-12mm/</loc></url>
-  <url><loc>https://oztimberfloor.com.au/ranges/kronoswiss-aquastop-laminate-14mm/</loc></url>
-  <url><loc>https://oztimberfloor.com.au/ranges/kronoswiss-aquastop-laminate-8mm/</loc></url>
   <url><loc>https://oztimberfloor.com.au/ranges/kronoswiss-aquastop/</loc></url>
-  <url><loc>https://oztimberfloor.com.au/ranges/laminate/</loc></url>
   <url><loc>https://oztimberfloor.com.au/ranges/lavanda-oak/</loc></url>
   <url><loc>https://oztimberfloor.com.au/ranges/lifestyle-collection/</loc></url>
-  <url><loc>https://oztimberfloor.com.au/ranges/lumiere-ultra-hd-hybrid-plank/</loc></url>
   <url><loc>https://oztimberfloor.com.au/ranges/lumiere-ultra-hd/</loc></url>
   <url><loc>https://oztimberfloor.com.au/ranges/luxury-hybrid-7mm/</loc></url>
   <url><loc>https://oztimberfloor.com.au/ranges/luxury-hybrid-8mm/</loc></url>
   <url><loc>https://oztimberfloor.com.au/ranges/luxury-hybrid-9mm/</loc></url>
   <url><loc>https://oztimberfloor.com.au/ranges/luxury-hybrid-plus-10mm/</loc></url>
   <url><loc>https://oztimberfloor.com.au/ranges/luxury-hybrid/</loc></url>
-  <url><loc>https://oztimberfloor.com.au/ranges/oak-chevron/</loc></url>
-  <url><loc>https://oztimberfloor.com.au/ranges/oak-flooring-sydney/</loc></url>
-  <url><loc>https://oztimberfloor.com.au/ranges/oak-herringbone/</loc></url>
   <url><loc>https://oztimberfloor.com.au/ranges/oak-step-plus/</loc></url>
   <url><loc>https://oztimberfloor.com.au/ranges/oak-step/</loc></url>
   <url><loc>https://oztimberfloor.com.au/ranges/oakleaf-laminate/</loc></url>
@@ -1703,9 +1668,6 @@
   <url><loc>https://oztimberfloor.com.au/ranges/pantora-amor/</loc></url>
   <url><loc>https://oztimberfloor.com.au/ranges/pantora-lifestyle-collection/</loc></url>
   <url><loc>https://oztimberfloor.com.au/ranges/pantora-lifestyle/</loc></url>
-  <url><loc>https://oztimberfloor.com.au/ranges/pre-finished-solid-timber/</loc></url>
-  <url><loc>https://oztimberfloor.com.au/ranges/prestige-oak-15mm/</loc></url>
-  <url><loc>https://oztimberfloor.com.au/ranges/prestige-oak-21mm/</loc></url>
   <url><loc>https://oztimberfloor.com.au/ranges/prestige-oak/</loc></url>
   <url><loc>https://oztimberfloor.com.au/ranges/prime-contemporary-plus-edition/</loc></url>
   <url><loc>https://oztimberfloor.com.au/ranges/prime-contemporary-plus/</loc></url>
@@ -1719,15 +1681,10 @@
   <url><loc>https://oztimberfloor.com.au/ranges/pronto-engineered-oak/</loc></url>
   <url><loc>https://oztimberfloor.com.au/ranges/pronto/</loc></url>
   <url><loc>https://oztimberfloor.com.au/ranges/raw-solid-timber/</loc></url>
-  <url><loc>https://oztimberfloor.com.au/ranges/raw-timber/</loc></url>
   <url><loc>https://oztimberfloor.com.au/ranges/reflections-laminate/</loc></url>
   <url><loc>https://oztimberfloor.com.au/ranges/reflections/</loc></url>
   <url><loc>https://oztimberfloor.com.au/ranges/select-australian-timber/</loc></url>
-  <url><loc>https://oztimberfloor.com.au/ranges/solid-timber/</loc></url>
   <url><loc>https://oztimberfloor.com.au/ranges/solid/</loc></url>
-  <url><loc>https://oztimberfloor.com.au/ranges/stone-floor-marble/</loc></url>
-  <url><loc>https://oztimberfloor.com.au/ranges/stone-floor-tile/</loc></url>
-  <url><loc>https://oztimberfloor.com.au/ranges/stone-floor-timber/</loc></url>
   <url><loc>https://oztimberfloor.com.au/ranges/stone-floor/</loc></url>
   <url><loc>https://oztimberfloor.com.au/ranges/storm-luxury-hybrid-planks/</loc></url>
   <url><loc>https://oztimberfloor.com.au/ranges/storm-luxury/</loc></url>
@@ -1746,15 +1703,11 @@
   <url><loc>https://oztimberfloor.com.au/ranges/swish/</loc></url>
   <url><loc>https://oztimberfloor.com.au/ranges/urban-6-5-hybrid/</loc></url>
   <url><loc>https://oztimberfloor.com.au/ranges/urban-6-5mm-hybrid/</loc></url>
-  <url><loc>https://oztimberfloor.com.au/ranges/village-oak/</loc></url>
   <url><loc>https://oztimberfloor.com.au/ranges/villeroy-and-boch-aquastop/</loc></url>
   <url><loc>https://oztimberfloor.com.au/ranges/villeroy-and-boch-contemporary/</loc></url>
   <url><loc>https://oztimberfloor.com.au/ranges/villeroy-and-boch-cosmopolitan/</loc></url>
   <url><loc>https://oztimberfloor.com.au/ranges/villeroy-and-boch-country/</loc></url>
   <url><loc>https://oztimberfloor.com.au/ranges/villeroy-and-boch-heritage/</loc></url>
-  <url><loc>https://oztimberfloor.com.au/ranges/villeroy-boch-aquastop-10mm/</loc></url>
-  <url><loc>https://oztimberfloor.com.au/ranges/villeroy-boch-aquastop-12mm/</loc></url>
-  <url><loc>https://oztimberfloor.com.au/ranges/villeroy-boch-aquastop-8mm/</loc></url>
   <url><loc>https://oztimberfloor.com.au/ranges/villeroy-boch-aquastop/</loc></url>
   <url><loc>https://oztimberfloor.com.au/ranges/villeroy-boch-contemporary-laminate/</loc></url>
   <url><loc>https://oztimberfloor.com.au/ranges/villeroy-boch-cosmopolitan-laminate/</loc></url>
@@ -1781,4 +1734,21 @@
   <url><loc>https://oztimberfloor.com.au/vinyl-flooring-sydney/</loc></url>
   <url><loc>https://oztimberfloor.com.au/products/ornato-blackbutt/</loc></url>
   <url><loc>https://oztimberfloor.com.au/products/ornato-spotted-gum/</loc></url>
+  <url><loc>https://oztimberfloor.com.au/products/solid-raw-timber-qld-spotted-gum/</loc></url>
+  <url><loc>https://oztimberfloor.com.au/products/solid-raw-timber-wormy-chestnut/</loc></url>
+  <url><loc>https://oztimberfloor.com.au/products/solid-raw-timber-wa-karri/</loc></url>
+  <url><loc>https://oztimberfloor.com.au/products/solid-raw-timber-brownbarrel-southern-beech/</loc></url>
+  <url><loc>https://oztimberfloor.com.au/products/solid-raw-timber-snowy-river-gum/</loc></url>
+  <url><loc>https://oztimberfloor.com.au/products/solid-raw-timber-silvertop-stringybark/</loc></url>
+  <url><loc>https://oztimberfloor.com.au/products/solid-raw-timber-rose-gum-flooded-gum/</loc></url>
+  <url><loc>https://oztimberfloor.com.au/products/solid-raw-timber-forest-red-gum/</loc></url>
+  <url><loc>https://oztimberfloor.com.au/products/solid-raw-timber-kauri-pine/</loc></url>
+  <url><loc>https://oztimberfloor.com.au/products/solid-raw-timber-jarrah/</loc></url>
+  <url><loc>https://oztimberfloor.com.au/products/solid-raw-timber-grey-gum/</loc></url>
+  <url><loc>https://oztimberfloor.com.au/products/solid-raw-timber-brushbox/</loc></url>
+  <url><loc>https://oztimberfloor.com.au/products/solid-raw-timber-blue-gum/</loc></url>
+  <url><loc>https://oztimberfloor.com.au/products/solid-raw-timber-new-england-blackbutt/</loc></url>
+  <url><loc>https://oztimberfloor.com.au/products/solid-raw-timber-coastal-blackbutt/</loc></url>
+  <url><loc>https://oztimberfloor.com.au/products/solid-raw-timber-baltic-pine/</loc></url>
+  <url><loc>https://oztimberfloor.com.au/products/solid-raw-timber-australian-chestnut/</loc></url>
 </urlset>

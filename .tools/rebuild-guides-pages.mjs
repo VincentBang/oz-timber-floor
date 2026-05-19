@@ -34,26 +34,26 @@ const hubSections = {
       <p>Use these guide paths to narrow the question first, then move into the right product, service or enquiry page.</p>
     </div>
     <div class="grid-4">
-      <article class="category-card">
+      <a class="category-card link-card" href="#choosing-flooring">
         <strong>Choosing flooring</strong>
         <p>Compare hybrid, laminate, engineered timber, solid timber and vinyl before choosing a product.</p>
-        <a class="card-link" href="#choosing-flooring">View choosing guides</a>
-      </article>
-      <article class="category-card">
+        <span class="card-arrow" aria-hidden="true">→</span>
+      </a>
+      <a class="category-card link-card" href="#floor-preparation">
         <strong>Floor preparation</strong>
         <p>Understand levelling, subfloor checks, moisture, trims and preparation before installation.</p>
-        <a class="card-link" href="#floor-preparation">View preparation guides</a>
-      </article>
-      <article class="category-card">
+        <span class="card-arrow" aria-hidden="true">→</span>
+      </a>
+      <a class="category-card link-card" href="#installation-quotes">
         <strong>Installation and quotes</strong>
         <p>Learn what affects installation, quote scope, access, timing and site readiness.</p>
-        <a class="card-link" href="#installation-quotes">View quote and install guides</a>
-      </article>
-      <article class="category-card">
+        <span class="card-arrow" aria-hidden="true">→</span>
+      </a>
+      <a class="category-card link-card" href="#commercial-office">
         <strong>Commercial or apartment project</strong>
         <p>Review flooring choices where access, acoustic rules, staging or coordination matter.</p>
-        <a class="card-link" href="#commercial-office">View project guides</a>
-      </article>
+        <span class="card-arrow" aria-hidden="true">→</span>
+      </a>
     </div>
   </div>
 </section>`,
@@ -68,17 +68,20 @@ const hubSections = {
       <p>If you are comparing products, preparation or installation, these pages help you move from reading into the right enquiry path.</p>
     </div>
     <div class="grid-3">
-      <a class="category-card" href="/products/">
+      <a class="category-card link-card" href="/products/">
         <strong>Compare flooring types</strong>
         <p>Start with hybrid, laminate, engineered timber, solid timber or vinyl before narrowing down the range.</p>
+        <span class="card-arrow" aria-hidden="true">→</span>
       </a>
-      <a class="category-card" href="/floor-levelling-sydney/">
+      <a class="category-card link-card" href="/floor-levelling-sydney/">
         <strong>Plan floor preparation</strong>
         <p>Review levelling, removal and subfloor checks before installation or product ordering.</p>
+        <span class="card-arrow" aria-hidden="true">→</span>
       </a>
-      <a class="category-card" href="/contact/?enquiry=product&source=guides">
+      <a class="category-card link-card" href="/contact/?enquiry=product&source=guides">
         <strong>Request installation advice</strong>
         <p>Send your product question, floor condition and suburb when you want help choosing the next step.</p>
+        <span class="card-arrow" aria-hidden="true">→</span>
       </a>
     </div>
   </div>
@@ -100,11 +103,11 @@ const hubSections = {
           <p>Use these guides when you are still deciding between product categories or timber styles.</p>
         </div>
         <div class="grid-3">
-          <article class="card"><h3>Why a hardwood timber floor will never be out of style</h3><p>Understand why natural timber still shapes long-term flooring decisions.</p><a class="card-link" href="/guides/why-a-hardwood-timber-floor-will-never-be-out-of-style/">Read guide</a></article>
-          <article class="card"><h3>Signs engineered timber flooring is right for your property</h3><p>Use this when real timber character and product stability are both part of the brief.</p><a class="card-link" href="/guides/5-tell-tale-signs-engineered-timber-flooring-is-right-for-your-property/">Read guide</a></article>
-          <article class="card"><h3>Why modern homes use engineered oak flooring in Sydney</h3><p>See when engineered oak becomes the preferred finish in premium residential interiors.</p><a class="card-link" href="/guides/3-reasons-why-modern-homes-use-engineered-oak-flooring-in-sydney/">Read guide</a></article>
-          <article class="card"><h3>Solid timber flooring vs engineered flooring</h3><p>Compare long-term value, site fit and installation expectations before choosing one path.</p><a class="card-link" href="/guides/solid-timber-flooring-vs-engineered-flooring-which-one-is-right-for-you/">Read guide</a></article>
-          <article class="card"><h3>Guide to choosing vinyl timber flooring</h3><p>Review where vinyl timber-look flooring suits apartments, kitchens and practical spaces.</p><a class="card-link" href="/guides/guide-to-choosing-the-right-vinyl-timber-flooring/">Read guide</a></article>
+          <a class="card link-card" href="/guides/why-a-hardwood-timber-floor-will-never-be-out-of-style/"><h3>Why a hardwood timber floor will never be out of style</h3><p>Understand why natural timber still shapes long-term flooring decisions.</p><span class="card-arrow" aria-hidden="true">→</span></a>
+          <a class="card link-card" href="/guides/5-tell-tale-signs-engineered-timber-flooring-is-right-for-your-property/"><h3>Signs engineered timber flooring is right for your property</h3><p>Use this when real timber character and product stability are both part of the brief.</p><span class="card-arrow" aria-hidden="true">→</span></a>
+          <a class="card link-card" href="/guides/3-reasons-why-modern-homes-use-engineered-oak-flooring-in-sydney/"><h3>Why modern homes use engineered oak flooring in Sydney</h3><p>See when engineered oak becomes the preferred finish in premium residential interiors.</p><span class="card-arrow" aria-hidden="true">→</span></a>
+          <a class="card link-card" href="/guides/solid-timber-flooring-vs-engineered-flooring-which-one-is-right-for-you/"><h3>Solid timber flooring vs engineered flooring</h3><p>Compare long-term value, site fit and installation expectations before choosing one path.</p><span class="card-arrow" aria-hidden="true">→</span></a>
+          <a class="card link-card" href="/guides/guide-to-choosing-the-right-vinyl-timber-flooring/"><h3>Guide to choosing vinyl timber flooring</h3><p>Review where vinyl timber-look flooring suits apartments, kitchens and practical spaces.</p><span class="card-arrow" aria-hidden="true">→</span></a>
         </div>
         <p><a class="card-link" href="/products/">Browse flooring categories</a></p>
       </section>
@@ -114,9 +117,9 @@ const hubSections = {
           <p>Preparation guides help customers judge whether levelling, removal or restoration questions should be resolved first.</p>
         </div>
         <div class="grid-3">
-          <article class="card"><h3>Why floor levelling matters for timber flooring</h3><p>Learn why substrate condition can affect the final result before product ordering or installation.</p><a class="card-link" href="/guides/laying-the-foundations-right-why-floor-levelling-matters-for-your-timber-flooring/">Read guide</a></article>
-          <article class="card"><h3>When to restore, replace or extend solid timber floors</h3><p>Useful when the existing timber floor might still be worth saving.</p><a class="card-link" href="/guides/when-to-restore-replace-or-extend-existing-solid-timber-floors/">Read guide</a></article>
-          <article class="card"><h3>Why hiring a timber floor installer beats DIY</h3><p>Understand the risks that show up when floor preparation or installation details are missed.</p><a class="card-link" href="/guides/hire-over-diy/">Read guide</a></article>
+          <a class="card link-card" href="/guides/laying-the-foundations-right-why-floor-levelling-matters-for-your-timber-flooring/"><h3>Why floor levelling matters for timber flooring</h3><p>Learn why substrate condition can affect the final result before product ordering or installation.</p><span class="card-arrow" aria-hidden="true">→</span></a>
+          <a class="card link-card" href="/guides/when-to-restore-replace-or-extend-existing-solid-timber-floors/"><h3>When to restore, replace or extend solid timber floors</h3><p>Useful when the existing timber floor might still be worth saving.</p><span class="card-arrow" aria-hidden="true">→</span></a>
+          <a class="card link-card" href="/guides/hire-over-diy/"><h3>Why hiring a timber floor installer beats DIY</h3><p>Understand the risks that show up when floor preparation or installation details are missed.</p><span class="card-arrow" aria-hidden="true">→</span></a>
         </div>
         <p><a class="card-link" href="/floor-levelling-sydney/">View floor levelling Sydney</a></p>
       </section>
@@ -126,9 +129,9 @@ const hubSections = {
           <p>These guides help customers ask better questions about scope, access, timing and the people doing the work.</p>
         </div>
         <div class="grid-3">
-          <article class="card"><h3>Questions to ask your timber floor installer in Sydney</h3><p>Use this before comparing installers or accepting a quote.</p><a class="card-link" href="/guides/the-5-questions-to-ask-your-timber-floor-installer-in-sydney/">Read guide</a></article>
-          <article class="card"><h3>Choosing a reliable Sydney timber flooring provider</h3><p>Helpful when you want a clearer sense of who should manage the product and installation path.</p><a class="card-link" href="/guides/your-guide-for-choosing-a-reliable-sydney-timber-flooring-provider/">Read guide</a></article>
-          <article class="card"><h3>Services timber floor installers in Sydney can handle</h3><p>See how installation, preparation, sanding and removal can fit into one flooring project.</p><a class="card-link" href="/guides/3-services-timber-floor-installers-in-sydney-can-do-for-you/">Read guide</a></article>
+          <a class="card link-card" href="/guides/the-5-questions-to-ask-your-timber-floor-installer-in-sydney/"><h3>Questions to ask your timber floor installer in Sydney</h3><p>Use this before comparing installers or accepting a quote.</p><span class="card-arrow" aria-hidden="true">→</span></a>
+          <a class="card link-card" href="/guides/your-guide-for-choosing-a-reliable-sydney-timber-flooring-provider/"><h3>Choosing a reliable Sydney timber flooring provider</h3><p>Helpful when you want a clearer sense of who should manage the product and installation path.</p><span class="card-arrow" aria-hidden="true">→</span></a>
+          <a class="card link-card" href="/guides/3-services-timber-floor-installers-in-sydney-can-do-for-you/"><h3>Services timber floor installers in Sydney can handle</h3><p>See how installation, preparation, sanding and removal can fit into one flooring project.</p><span class="card-arrow" aria-hidden="true">→</span></a>
         </div>
         <p><a class="card-link" href="/timber-flooring-installation-sydney/">View timber flooring installation Sydney</a></p>
       </section>
@@ -138,11 +141,11 @@ const hubSections = {
           <p>These guides are useful when a project involves offices, managed sites, builders or staged work.</p>
         </div>
         <div class="grid-3">
-          <article class="card"><h3>Choosing office flooring for durability, design and performance</h3><p>Compare office flooring priorities before moving into product or installation decisions.</p><a class="card-link" href="/guides/choosing-office-flooring-durability-design-performance/">Read guide</a></article>
-          <article class="card"><h3>What to expect from commercial flooring installation</h3><p>Use this to understand staging, preparation and handover expectations on commercial work.</p><a class="card-link" href="/guides/professional-commercial-flooring-installation-what-to-expect/">Read guide</a></article>
-          <article class="card"><h3>Commercial timber flooring for high-traffic spaces</h3><p>Review how use, maintenance and presentation affect flooring decisions in busy sites.</p><a class="card-link" href="/guides/commercial-timber-flooring-high-traffic-spaces-sydney/">Read guide</a></article>
-          <article class="card"><h3>Why commercial timber flooring suits high-end spaces</h3><p>Explore where a more premium timber finish becomes part of the site brief.</p><a class="card-link" href="/guides/why-commercial-timber-flooring-is-the-right-choice-for-high-end-spaces/">Read guide</a></article>
-          <article class="card"><h3>What builders and designers need from a commercial timber flooring specialist</h3><p>Useful for fit-out teams and managed projects that need more than a simple product list.</p><a class="card-link" href="/guides/commercial-timber-flooring-specialist-sydney-builders-designers/">Read guide</a></article>
+          <a class="card link-card" href="/guides/choosing-office-flooring-durability-design-performance/"><h3>Choosing office flooring for durability, design and performance</h3><p>Compare office flooring priorities before moving into product or installation decisions.</p><span class="card-arrow" aria-hidden="true">→</span></a>
+          <a class="card link-card" href="/guides/professional-commercial-flooring-installation-what-to-expect/"><h3>What to expect from commercial flooring installation</h3><p>Use this to understand staging, preparation and handover expectations on commercial work.</p><span class="card-arrow" aria-hidden="true">→</span></a>
+          <a class="card link-card" href="/guides/commercial-timber-flooring-high-traffic-spaces-sydney/"><h3>Commercial timber flooring for high-traffic spaces</h3><p>Review how use, maintenance and presentation affect flooring decisions in busy sites.</p><span class="card-arrow" aria-hidden="true">→</span></a>
+          <a class="card link-card" href="/guides/why-commercial-timber-flooring-is-the-right-choice-for-high-end-spaces/"><h3>Why commercial timber flooring suits high-end spaces</h3><p>Explore where a more premium timber finish becomes part of the site brief.</p><span class="card-arrow" aria-hidden="true">→</span></a>
+          <a class="card link-card" href="/guides/commercial-timber-flooring-specialist-sydney-builders-designers/"><h3>What builders and designers need from a commercial timber flooring specialist</h3><p>Useful for fit-out teams and managed projects that need more than a simple product list.</p><span class="card-arrow" aria-hidden="true">→</span></a>
         </div>
         <p><a class="card-link" href="/commercial-flooring-sydney/">View commercial flooring Sydney</a></p>
       </section>
@@ -152,8 +155,8 @@ const hubSections = {
           <p>These guides help customers think about timber flooring beyond the first installation decision.</p>
         </div>
         <div class="grid-3">
-          <article class="card"><h3>When to restore, replace or extend solid timber floors</h3><p>Compare the practical triggers for restoration versus replacement.</p><a class="card-link" href="/guides/when-to-restore-replace-or-extend-existing-solid-timber-floors/">Read guide</a></article>
-          <article class="card"><h3>Why hardwood timber flooring is a long-term investment</h3><p>Explore why natural timber can still make sense when the brief is long-term value.</p><a class="card-link" href="/guides/why-hardwood-timber-flooring-is-a-good-investment/">Read guide</a></article>
+          <a class="card link-card" href="/guides/when-to-restore-replace-or-extend-existing-solid-timber-floors/"><h3>When to restore, replace or extend solid timber floors</h3><p>Compare the practical triggers for restoration versus replacement.</p><span class="card-arrow" aria-hidden="true">→</span></a>
+          <a class="card link-card" href="/guides/why-hardwood-timber-flooring-is-a-good-investment/"><h3>Why hardwood timber flooring is a long-term investment</h3><p>Explore why natural timber can still make sense when the brief is long-term value.</p><span class="card-arrow" aria-hidden="true">→</span></a>
         </div>
         <p><a class="card-link" href="/timber-floor-sanding-and-polishing-sydney/">View sanding and polishing Sydney</a></p>
       </section>
@@ -209,9 +212,9 @@ const hubSections = {
       <p>These are the pages readers most often need once the research stage turns into a product or service decision.</p>
     </div>
     <div class="grid-3">
-      <article class="card"><h3>Hybrid flooring for apartments</h3><p>Start here if apartment access, acoustics or practical product choice are the main concerns.</p><a class="card-link" href="/hybrid-flooring-sydney/">View hybrid flooring</a></article>
-      <article class="card"><h3>Floor levelling before installation</h3><p>Review levelling and subfloor preparation before ordering or installing a new floor.</p><a class="card-link" href="/floor-levelling-sydney/">View floor levelling</a></article>
-      <article class="card"><h3>Commercial and office flooring</h3><p>Use these pages when access, staging or business operations matter as much as the flooring choice.</p><a class="card-link" href="/commercial-flooring-sydney/">View commercial flooring</a></article>
+      <a class="card link-card" href="/hybrid-flooring-sydney/"><h3>Hybrid flooring for apartments</h3><p>Start here if apartment access, acoustics or practical product choice are the main concerns.</p><span class="card-arrow" aria-hidden="true">→</span></a>
+      <a class="card link-card" href="/floor-levelling-sydney/"><h3>Floor levelling before installation</h3><p>Review levelling and subfloor preparation before ordering or installing a new floor.</p><span class="card-arrow" aria-hidden="true">→</span></a>
+      <a class="card link-card" href="/commercial-flooring-sydney/"><h3>Commercial and office flooring</h3><p>Use these pages when access, staging or business operations matter as much as the flooring choice.</p><span class="card-arrow" aria-hidden="true">→</span></a>
     </div>
   </div>
 </section>`,
@@ -240,6 +243,9 @@ const hubMain = `<main>${hubSections.hero}${hubSections.quickDecision}${hubSecti
 
 replaceMain(path.join(root, "guides/index.html"), hubMain);
 replaceMain(path.join(root, "guides.html"), hubMain);
+
+console.log("Rebuilt guides hub only. Individual guide articles are managed separately.");
+process.exit(0);
 
 const articlePages = {
   "guides/laying-the-foundations-right-why-floor-levelling-matters-for-your-timber-flooring/index.html": {
@@ -431,7 +437,7 @@ function rebuildArticle(file, data) {
         ${data.related
           .map(
             ([title, text, href]) =>
-              `<article class="card"><h3>${title}</h3><p>${text}</p><a class="card-link" href="${href}">View page</a></article>`
+              `<a class="card link-card" href="${href}"><h3>${title}</h3><p>${text}</p><span class="card-arrow" aria-hidden="true">→</span></a>`
           )
           .join("")}
       </div>

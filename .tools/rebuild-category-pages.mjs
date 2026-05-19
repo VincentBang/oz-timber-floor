@@ -91,7 +91,7 @@ const RANGE_DESCRIPTION_OVERRIDES = {
 };
 
 const RANGE_CHIP_OVERRIDES = {
-  solid: ["Natural timber flooring", "24 colours"],
+  solid: ["Solid timber", "11 colours"],
   swish: ["Engineered timber", "6 colours"],
   "ornato-vinyl": ["Vinyl", "16 colours"],
   vinyl: ["Vinyl", "Colours to confirm"],
@@ -111,22 +111,16 @@ const RANGE_IMAGE_OVERRIDES = {
 const MANUAL_RANGE_CARDS = {
   "solid-timber-flooring-sydney": [
     {
-      name: "Solid",
+      name: "Topdeck Solid Timber",
       href: "/ranges/solid/",
-      pills: ["Natural timber flooring", "26 colours"],
-      description: "Natural timber range for customers comparing species direction, finishing pathway and long-term timber character.",
+      pills: ["Solid timber", "11 colours"],
+      description: "Topdeck solid timber range combining prefinished species options with verified raw Blackbutt and Spotted Gum choices.",
     },
     {
-      name: "Pre-Finished Solid Timber",
-      href: "/ranges/pre-finished-solid-timber/",
-      pills: ["Solid timber", "9 colours"],
-      description: "Pre-finished solid timber range for customers comparing species colour, stock timing and installation planning before order.",
-    },
-    {
-      name: "Raw Solid Timber",
+      name: "Raw Timber",
       href: "/ranges/raw-solid-timber/",
-      pills: ["Solid timber", "2 colours"],
-      description: "Raw solid timber range for customers comparing species direction, supply timing and installation or finishing planning.",
+      pills: ["Solid timber", "26 colours"],
+      description: "Raw timber range for customers comparing species direction, supply timing and installation or finishing planning.",
     },
   ],
   "vinyl-flooring-sydney": [
@@ -184,6 +178,7 @@ const SELECTED_PRODUCT_CONFIG = {
 
 const load = (filePath) => fs.readFileSync(filePath, "utf8");
 const save = (filePath, content) => fs.writeFileSync(filePath, content);
+const CATALOGUE = JSON.parse(load(path.join(ROOT, "data", "product-catalogue.json")));
 
 function getCurrentRangeCards(html) {
   const sectionMatch = html.match(/<section class="section" id="[^"]+-ranges">([\s\S]*?)<\/section>/);
@@ -197,6 +192,53 @@ function getCurrentRangeCards(html) {
       description: (body.match(/<h3>.*?<\/h3><p>(.*?)<\/p>/) || [])[1] || "",
     };
   });
+}
+
+function isLiveRange(range, category) {
+  return (
+    range &&
+    range.category === category &&
+    range.visibleInRangeLibrary !== false &&
+    range.publicCatalogueStatus !== "legacy-hidden"
+  );
+}
+
+function categoryChip(range) {
+  const slug = range.slug || "";
+  if (RANGE_CHIP_OVERRIDES[slug]) return RANGE_CHIP_OVERRIDES[slug];
+  const chips = [range.category];
+  if (range.thickness && !/confirm/i.test(String(range.thickness))) chips.push(String(range.thickness));
+  if (range.colourCount) chips.push(`${range.colourCount} colours`);
+  return chips.slice(0, 3);
+}
+
+function categoryDescription(range, categorySlug) {
+  const slug = range.slug || "";
+  if (RANGE_DESCRIPTION_OVERRIDES[slug]) return RANGE_DESCRIPTION_OVERRIDES[slug];
+  const category = range.category || CATEGORY_CONFIG[categorySlug].category;
+  if (category === "Hybrid") return `${range.name} is a hybrid range for customers comparing colour direction, stock and project fit before ordering.`;
+  if (category === "Laminate") return `${range.name} is a laminate range for customers comparing timber-look flooring for dry internal rooms and renovation planning.`;
+  if (category === "Engineered timber") return `${range.name} is an engineered timber range for customers comparing real timber visuals, stock availability and installation planning.`;
+  if (category === "Solid timber") return `${range.name} is a solid timber range for customers comparing species direction, supply timing and finishing pathway.`;
+  if (category === "Vinyl") return `${range.name} is a vinyl flooring range for customers checking colour availability, stock timing and supply-only or supply + install options.`;
+  return `${range.name} is available for catalogue enquiry and supplier confirmation.`;
+}
+
+function getCategoryRangeCardsFromData(slug) {
+  const config = CATEGORY_CONFIG[slug];
+  const ranges = CATALOGUE.ranges
+    .filter((range) => isLiveRange(range, config.category))
+    .filter((range) => range.url && range.slug)
+    .map((range) => ({
+      name: range.name,
+      href: range.url,
+      slug: range.slug,
+      pills: categoryChip(range),
+      description: categoryDescription(range, slug),
+    }));
+
+  if (config.showAll) return ranges;
+  return ranges.slice(0, 12);
 }
 
 function getBestRangeImage(rangeSlug) {
@@ -220,19 +262,19 @@ function getBestRangeImage(rangeSlug) {
 }
 
 function buildRangeCard(category, card) {
-  const slug = card.href.replace(/^\/ranges\/|\/$/g, "");
+  const slug = card.slug || card.href.replace(/^\/ranges\/|\/$/g, "");
   const image = getBestRangeImage(slug);
   const description = RANGE_DESCRIPTION_OVERRIDES[slug] || card.description;
   const pills = RANGE_CHIP_OVERRIDES[slug] || card.pills;
   const imageHtml = image
     ? `<img class="category-thumb" src="${image.src}" alt="${image.alt}" loading="lazy" decoding="async">`
     : `<div class="missing-image-state range-missing"><span>Colour image to confirm</span><small>Ask Oz Timber Floor for the current range swatch</small></div>`;
-  return `<article class="card range-summary-card">${imageHtml}<p class="catalogue-overline">${category}</p><h3>${card.name}</h3><p>${description}</p><p class="product-meta">${pills.map((pill) => `<span class="pill">${pill}</span>`).join("")}</p><a class="card-link" href="${card.href}">View range</a></article>`;
+  return `<a class="card range-summary-card link-card" href="${card.href}">${imageHtml}<p class="catalogue-overline">${category}</p><h3>${card.name}</h3><p>${description}</p><p class="product-meta">${pills.map((pill) => `<span class="pill">${pill}</span>`).join("")}</p><span class="card-arrow" aria-hidden="true">→</span></a>`;
 }
 
 function buildRangeSection(slug, html) {
   const config = CATEGORY_CONFIG[slug];
-  const sourceCards = MANUAL_RANGE_CARDS[slug] || getCurrentRangeCards(html);
+  const sourceCards = MANUAL_RANGE_CARDS[slug] || getCategoryRangeCardsFromData(slug) || getCurrentRangeCards(html);
   const cards = sourceCards.map((card) => buildRangeCard(config.category, card)).join("");
   const button = config.showAll
     ? ""

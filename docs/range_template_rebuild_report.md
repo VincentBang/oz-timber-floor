@@ -4,14 +4,21 @@ Updated: 2026-05-17
 
 ## Pages regenerated
 
-- 156 range pages were regenerated from `data/product-catalogue.json`.
+- 167 range pages were regenerated from `data/product-catalogue.json`.
 - 0 existing legacy range folders were also rebuilt into the clean range template using their existing product links where available.
-- 156 total range pages were written.
+- 167 total range pages were written.
 - Avala was used as the reference issue list and now follows the new range page structure.
 
 ## Duplicate range URL review
 
+- /ranges/10mm-hybrid/ duplicates /ranges/etf-10mm-hybrid/ for range name "ETF 10mm Hybrid". Review redirect/canonical decision.
+- /ranges/14mm-oak-flooring/ duplicates /ranges/etf-14mm-oak-flooring/ for range name "ETF 14mm Oak Flooring". Review redirect/canonical decision.
+- /ranges/15mm-oak-flooring/ duplicates /ranges/etf-15mm-oak-flooring/ for range name "ETF 15mm Oak Flooring". Review redirect/canonical decision.
+- /ranges/6-5mm-hybrid/ duplicates /ranges/etf-6-5mm-hybrid/ for range name "ETF 6.5mm Hybrid". Review redirect/canonical decision.
+- /ranges/72hr-water-resistant-laminate/ duplicates /ranges/etf-72hrs-water-resistant-laminate/ for range name "ETF 72hrs Water Resistant Laminate". Review redirect/canonical decision.
+- /ranges/9-5mm-hybrid/ duplicates /ranges/etf-9-5mm-hybrid/ for range name "ETF 9.5mm Hybrid". Review redirect/canonical decision.
 - /ranges/artisan-hybrid-tile/ duplicates /ranges/artisan-tile/ for range name "Artisan Tile". Review redirect/canonical decision.
+- /ranges/australian-engineered/ duplicates /ranges/etf-australian-engineered/ for range name "ETF Australian Engineered". Review redirect/canonical decision.
 - /ranges/avala-hybrid-planks/ duplicates /ranges/avala/ for range name "Avala". Review redirect/canonical decision.
 - /ranges/belle-vie-herringbone/ duplicates /ranges/belle-vie/ for range name "Belle Vie". Review redirect/canonical decision.
 - /ranges/botanica-engineered/ duplicates /ranges/botanica/ for range name "Botanica". Review redirect/canonical decision.
@@ -25,7 +32,10 @@ Updated: 2026-05-17
 - /ranges/grande-7-5mm-hybrid/ duplicates /ranges/grande-7-5-hybrid/ for range name "Grande 7.5 Hybrid". Review redirect/canonical decision.
 - /ranges/grande-9mm-hybrid/ duplicates /ranges/grande-9-0-hybrid/ for range name "Grande 9.0 Hybrid". Review redirect/canonical decision.
 - /ranges/herringbone-7mm-hybrid/ duplicates /ranges/herringbone-7-0-hybrid/ for range name "Herringbone 7.0 Hybrid". Review redirect/canonical decision.
+- /ranges/hybrid-herringbone/ duplicates /ranges/etf-hybrid-herringbone/ for range name "ETF Hybrid Herringbone". Review redirect/canonical decision.
 - /ranges/lumiere-ultra-hd-hybrid-plank/ duplicates /ranges/lumiere-ultra-hd/ for range name "Lumiere Ultra HD". Review redirect/canonical decision.
+- /ranges/oak-chevron/ duplicates /ranges/etf-oak-chevron/ for range name "ETF Oak Chevron". Review redirect/canonical decision.
+- /ranges/oak-herringbone/ duplicates /ranges/etf-oak-herringbone/ for range name "ETF Oak Herringbone". Review redirect/canonical decision.
 - /ranges/pantora-amor-collection/ duplicates /ranges/pantora-amor/ for range name "Pantora Amor". Review redirect/canonical decision.
 - /ranges/pantora-lifestyle-collection/ duplicates /ranges/pantora-lifestyle/ for range name "Pantora Lifestyle". Review redirect/canonical decision.
 - /ranges/prime-contemporary-plus-edition/ duplicates /ranges/prime-contemporary-plus/ for range name "Prime Contemporary Plus". Review redirect/canonical decision.
@@ -41,24 +51,6 @@ Updated: 2026-05-17
 
 These range pages avoid showing a placeholder-heavy colour grid. Review product links and exact colour images before exposing a full colour grid.
 
-- /ranges/artisan/ needs colour/image data review before showing a full colour grid.
-- /ranges/aspire/ needs colour/image data review before showing a full colour grid.
-- /ranges/etf-hybrid-spc-9mm/ needs colour/image data review before showing a full colour grid.
-- /ranges/hybrid/ needs colour/image data review before showing a full colour grid.
-- /ranges/hydroplank-wpc/ needs colour/image data review before showing a full colour grid.
-- /ranges/kronoswiss-aquastop/ needs colour/image data review before showing a full colour grid.
-- /ranges/luxury-hybrid/ needs colour/image data review before showing a full colour grid.
-- /ranges/ornato-hybrid/ needs colour/image data review before showing a full colour grid.
-- /ranges/stone-floor/ needs colour/image data review before showing a full colour grid.
-- /ranges/storm/ needs colour/image data review before showing a full colour grid.
-- /ranges/infinite/ needs colour/image data review before showing a full colour grid.
-- /ranges/reflections/ needs colour/image data review before showing a full colour grid.
-- /ranges/swish-aquastop/ needs colour/image data review before showing a full colour grid.
-- /ranges/villeroy-and-boch-aquastop/ needs colour/image data review before showing a full colour grid.
-- /ranges/prestige-oak/ needs colour/image data review before showing a full colour grid.
-- /ranges/pronto/ needs colour/image data review before showing a full colour grid.
-- /ranges/swish-oak/ needs colour/image data review before showing a full colour grid.
-- /ranges/solid/ needs colour/image data review before showing a full colour grid.
 - /ranges/1-5m-laminate/ needs colour/image data review before showing a full colour grid.
 - /ranges/10mm-hybrid/ needs colour/image data review before showing a full colour grid.
 - /ranges/14mm-oak-flooring/ needs colour/image data review before showing a full colour grid.
@@ -66,9 +58,10 @@ These range pages avoid showing a placeholder-heavy colour grid. Review product 
 - /ranges/6-5mm-hybrid/ needs colour/image data review before showing a full colour grid.
 - /ranges/72hr-water-resistant-laminate/ needs colour/image data review before showing a full colour grid.
 - /ranges/9-5mm-hybrid/ needs colour/image data review before showing a full colour grid.
-- /ranges/aquatuff-flooring/ needs colour/image data review before showing a full colour grid.
+- /ranges/artisan/ needs colour/image data review before showing a full colour grid.
 - /ranges/artisan-hybrid-tile/ needs colour/image data review before showing a full colour grid.
 - /ranges/artisan-oak/ needs colour/image data review before showing a full colour grid.
+- /ranges/aspire/ needs colour/image data review before showing a full colour grid.
 - /ranges/aspire-classic-width/ needs colour/image data review before showing a full colour grid.
 - /ranges/aspire-hybrid/ needs colour/image data review before showing a full colour grid.
 - /ranges/aspire-super-width/ needs colour/image data review before showing a full colour grid.
@@ -86,41 +79,53 @@ These range pages avoid showing a placeholder-heavy colour grid. Review product 
 - /ranges/etf-7mm-waterproof-hybrid/ needs colour/image data review before showing a full colour grid.
 - /ranges/etf-8mm-waterproof-hybrid/ needs colour/image data review before showing a full colour grid.
 - /ranges/etf-9mm-waterproof-hybrid/ needs colour/image data review before showing a full colour grid.
+- /ranges/etf-hybrid-spc-9mm/ needs colour/image data review before showing a full colour grid.
 - /ranges/grand-oak/ needs colour/image data review before showing a full colour grid.
 - /ranges/grand-oak-14-5mm/ needs colour/image data review before showing a full colour grid.
 - /ranges/grande-7-5mm-hybrid/ needs colour/image data review before showing a full colour grid.
 - /ranges/grande-9mm-hybrid/ needs colour/image data review before showing a full colour grid.
 - /ranges/herringbone-7mm-hybrid/ needs colour/image data review before showing a full colour grid.
+- /ranges/hybrid/ needs colour/image data review before showing a full colour grid.
 - /ranges/hybrid-herringbone/ needs colour/image data review before showing a full colour grid.
+- /ranges/hydroplank-wpc/ needs colour/image data review before showing a full colour grid.
+- /ranges/infinite/ needs colour/image data review before showing a full colour grid.
 - /ranges/infinite-laminate/ needs colour/image data review before showing a full colour grid.
+- /ranges/kronoswiss-aquastop/ needs colour/image data review before showing a full colour grid.
 - /ranges/kronoswiss-aquastop-laminate-12mm/ needs colour/image data review before showing a full colour grid.
 - /ranges/kronoswiss-aquastop-laminate-14mm/ needs colour/image data review before showing a full colour grid.
 - /ranges/kronoswiss-aquastop-laminate-8mm/ needs colour/image data review before showing a full colour grid.
 - /ranges/laminate/ needs colour/image data review before showing a full colour grid.
 - /ranges/lumiere-ultra-hd-hybrid-plank/ needs colour/image data review before showing a full colour grid.
+- /ranges/luxury-hybrid/ needs colour/image data review before showing a full colour grid.
 - /ranges/oak-chevron/ needs colour/image data review before showing a full colour grid.
 - /ranges/oak-flooring-sydney/ needs colour/image data review before showing a full colour grid.
 - /ranges/oak-herringbone/ needs colour/image data review before showing a full colour grid.
 - /ranges/oakstep-laminate/ needs colour/image data review before showing a full colour grid.
+- /ranges/ornato-hybrid/ needs colour/image data review before showing a full colour grid.
 - /ranges/pantora-amor-collection/ needs colour/image data review before showing a full colour grid.
 - /ranges/pantora-lifestyle-collection/ needs colour/image data review before showing a full colour grid.
+- /ranges/prestige-oak/ needs colour/image data review before showing a full colour grid.
 - /ranges/prestige-oak-15mm/ needs colour/image data review before showing a full colour grid.
 - /ranges/prestige-oak-21mm/ needs colour/image data review before showing a full colour grid.
 - /ranges/prime-contemporary-plus-edition/ needs colour/image data review before showing a full colour grid.
 - /ranges/prime-deluxe-edition/ needs colour/image data review before showing a full colour grid.
 - /ranges/prime-legend-collection/ needs colour/image data review before showing a full colour grid.
 - /ranges/prime-luxury-edition/ needs colour/image data review before showing a full colour grid.
+- /ranges/pronto/ needs colour/image data review before showing a full colour grid.
 - /ranges/raw-timber/ needs colour/image data review before showing a full colour grid.
+- /ranges/reflections/ needs colour/image data review before showing a full colour grid.
 - /ranges/reflections-laminate/ needs colour/image data review before showing a full colour grid.
-- /ranges/solid-timber/ needs colour/image data review before showing a full colour grid.
+- /ranges/stone-floor/ needs colour/image data review before showing a full colour grid.
 - /ranges/stone-floor-marble/ needs colour/image data review before showing a full colour grid.
-- /ranges/stone-floor-tile/ needs colour/image data review before showing a full colour grid.
-- /ranges/stone-floor-timber/ needs colour/image data review before showing a full colour grid.
+- /ranges/storm/ needs colour/image data review before showing a full colour grid.
 - /ranges/storm-luxury-hybrid-planks/ needs colour/image data review before showing a full colour grid.
+- /ranges/swish-aquastop/ needs colour/image data review before showing a full colour grid.
 - /ranges/swish-aquastop-laminate/ needs colour/image data review before showing a full colour grid.
 - /ranges/swish-laminate-classic/ needs colour/image data review before showing a full colour grid.
+- /ranges/swish-oak/ needs colour/image data review before showing a full colour grid.
 - /ranges/urban-6-5mm-hybrid/ needs colour/image data review before showing a full colour grid.
 - /ranges/village-oak/ needs colour/image data review before showing a full colour grid.
+- /ranges/villeroy-and-boch-aquastop/ needs colour/image data review before showing a full colour grid.
 - /ranges/villeroy-boch-aquastop/ needs colour/image data review before showing a full colour grid.
 - /ranges/villeroy-boch-aquastop-10mm/ needs colour/image data review before showing a full colour grid.
 - /ranges/villeroy-boch-aquastop-12mm/ needs colour/image data review before showing a full colour grid.

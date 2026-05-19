@@ -116,6 +116,119 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  function initRangeFilters() {
+    if (window.OZ_RANGE_FILTERS_READY) return;
+    var form = document.querySelector("[data-range-filter-form]");
+    var input = document.querySelector("#rangeSearch");
+    var clear = document.querySelector("[data-range-clear]");
+    var status = document.querySelector("[data-range-filter-status]");
+    var empty = document.querySelector("[data-range-empty]");
+    var cards = Array.from(document.querySelectorAll("[data-range-card]"));
+    var categoryButtons = Array.from(document.querySelectorAll("[data-range-category]"));
+    if (!input || !cards.length) return;
+
+    var activeCategory = "all";
+    var total = cards.length;
+    window.OZ_RANGE_FILTERS_READY = true;
+
+    function matchesText(card, value) {
+      if (!value) return true;
+      var text = [
+        card.getAttribute("data-search") || "",
+        card.textContent || ""
+      ].join(" ").toLowerCase();
+      return text.indexOf(value) !== -1;
+    }
+
+    function matchesCategory(card) {
+      if (activeCategory === "all") return true;
+      return (card.getAttribute("data-category") || "") === activeCategory;
+    }
+
+    function updateSections() {
+      document.querySelectorAll("#hybrid, #laminate, #engineered-timber, #solid-timber, #vinyl").forEach(function (section) {
+        var visibleCards = section.querySelectorAll("[data-range-card]:not([hidden])");
+        section.hidden = visibleCards.length === 0;
+      });
+    }
+
+    function categoryLabel() {
+      if (activeCategory === "all") return "all categories";
+      return activeCategory.toLowerCase();
+    }
+
+    function applyFilters() {
+      var value = input.value.trim().toLowerCase();
+      var count = 0;
+      cards.forEach(function (card) {
+        var visible = matchesText(card, value) && matchesCategory(card);
+        card.hidden = !visible;
+        if (visible) count += 1;
+      });
+
+      categoryButtons.forEach(function (button) {
+        var selected = button.getAttribute("data-range-category") === activeCategory;
+        button.classList.toggle("is-active", selected);
+        button.setAttribute("aria-pressed", String(selected));
+      });
+
+      if (clear) clear.hidden = !(value || activeCategory !== "all");
+      if (empty) empty.hidden = count !== 0;
+      if (status) {
+        status.textContent = value || activeCategory !== "all"
+          ? "Showing " + count + " of " + total + " ranges in " + categoryLabel() + "."
+          : "Showing all " + total + " ranges.";
+      }
+      updateSections();
+    }
+
+    function visibleCards() {
+      return cards.filter(function (card) {
+        return !card.hidden;
+      });
+    }
+
+    function scrollToResults() {
+      var first = visibleCards()[0];
+      var target = first ? first.closest("section") : empty;
+      if (target && typeof target.scrollIntoView === "function") {
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+
+    if (form) {
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        applyFilters();
+        scrollToResults();
+      });
+    }
+
+    input.addEventListener("input", applyFilters);
+
+    if (clear) {
+      clear.addEventListener("click", function () {
+        input.value = "";
+        activeCategory = "all";
+        applyFilters();
+        input.focus();
+      });
+    }
+
+    categoryButtons.forEach(function (button) {
+      button.addEventListener("click", function (event) {
+        event.preventDefault();
+        activeCategory = button.getAttribute("data-range-category") || "all";
+        applyFilters();
+        scrollToResults();
+      });
+    });
+
+    applyFilters();
+  }
+
+  initRangeFilters();
+
   var enquiry = normalizeEnquiry(params.get("enquiry"));
   var product = params.get("product") || "";
   var range = params.get("range") || "";

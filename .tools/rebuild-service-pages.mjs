@@ -760,12 +760,16 @@ function cardGrid(cards, className = "grid-4", mapper) {
   return `<div class="${className}">${cards.map(mapper).join("")}</div>`;
 }
 
+function linkCard({ className = "card", href, title, text, kicker = "", extra = "" }) {
+  return `<a class="${className} link-card" href="${href}">${kicker ? `<span class="insight-label">${kicker}</span>` : ""}<h3>${title}</h3><p>${text}</p>${extra}<span class="card-arrow" aria-hidden="true">→</span></a>`;
+}
+
 function buildMain(data) {
   const decisionCards = cardGrid(
     data.decisionCards,
     "grid-4",
     (card) =>
-      `<article class="category-card"><strong>${card.title}</strong><p>${card.text}</p><a class="card-link" href="${card.href}">${card.label}</a></article>`
+      `<a class="category-card link-card" href="${card.href}"><strong>${card.title}</strong><p>${card.text}</p><span class="card-arrow" aria-hidden="true">→</span></a>`
   );
 
   const whatCards = cardGrid(
@@ -804,14 +808,14 @@ function buildMain(data) {
     data.relatedCards,
     data.relatedCards.length > 4 ? "grid-3" : "grid-4",
     ([title, text, href]) =>
-      `<article class="card"><h3>${title}</h3><p>${text}</p><a class="card-link" href="${href}">${href.includes("/contact") ? "Contact Oz Timber Floor" : `View ${title.toLowerCase()}`}</a></article>`
+      linkCard({ href, title, text })
   );
 
   const proofCards = cardGrid(
     data.proofCards,
     "grid-2",
     ([title, text, href, label]) =>
-      `<article class="card"><h3>${title}</h3><p>${text}</p><a class="card-link" href="${href}">${label}</a></article>`
+      linkCard({ href, title, text, kicker: label === "Request similar quote" ? "Quote" : "Example" })
   );
 
   const faqItems = `<div class="faq-list">${data.faqs
