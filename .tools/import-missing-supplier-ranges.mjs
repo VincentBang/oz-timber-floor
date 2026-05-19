@@ -133,6 +133,15 @@ function parseWooRangeProducts(html) {
   return items;
 }
 
+async function fetchPagedWooRangeProducts(urls, userAgent = "Mozilla/5.0") {
+  const all = [];
+  for (const url of urls) {
+    const html = await fetchText(url, userAgent);
+    all.push(...parseWooRangeProducts(html));
+  }
+  return uniqueBy(all, (item) => `${item.name.toLowerCase()}|${item.href}`);
+}
+
 function parsePreferenceUltimo(html) {
   const urls = [...new Set([...html.matchAll(/https:\/\/preferencefloors\.com\.au\/wp-content\/uploads\/[^"' )]+/g)].map((match) => match[0]))];
   const colourMap = [
@@ -495,7 +504,14 @@ const rangeDefinitions = [
     thickness: "12.3mm",
     installationMethod: "Floating click installation",
     assetDir: "assets/products/laminate/etf-aquatuff-flooring",
-    fetcher: async () => parseWooRangeProducts(await fetchText("https://hrttimberflooring.com.au/product-category/12-3mm-etf-aquatuff-carbon-core-waterproof-hybrid-flooring/", "Mozilla/5.0")),
+    fetcher: async () =>
+      fetchPagedWooRangeProducts(
+        [
+          "https://hrttimberflooring.com.au/product-category/12-3mm-etf-aquatuff-carbon-core-waterproof-hybrid-flooring/",
+          "https://hrttimberflooring.com.au/product-category/12-3mm-etf-aquatuff-carbon-core-waterproof-hybrid-flooring/page/2/",
+        ],
+        "Mozilla/5.0",
+      ),
     sourceTag: "HRT Timber Flooring Aquatuff range import",
   },
   {

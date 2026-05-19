@@ -1,6 +1,10 @@
 [build]
   publish = "."
 
+# Migration redirects are intentionally maintained in `/_redirects`
+# for this static Netlify publish. Keep the large 301 map there so
+# deploy behavior stays predictable across preview and production.
+
 [[headers]]
   for = "/*"
   [headers.values]
