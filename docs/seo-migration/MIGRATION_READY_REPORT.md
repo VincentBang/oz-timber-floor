@@ -1,38 +1,43 @@
 # Migration Ready Report
 
+Date: 2026-05-21
+
+This report is now aligned to the final pre-launch verification pass and should be read alongside:
+- `/docs/seo-migration/FINAL_REDIRECT_SMOKE_TEST.md`
+- `/docs/seo-migration/FINAL_SITEMAP_CHECK.md`
+- `/docs/seo-migration/FINAL_CONTENT_DEPTH_CHECK.md`
+- `/docs/seo-migration/FINAL_ONSITE_SEO_CHECK.md`
+- `/docs/seo-migration/FINAL_BACKLINK_TARGET_CHECK.md`
+- `/docs/seo-migration/FINAL_MIGRATION_VERDICT.md`
+
 ## 1. Final domain status
 - Final production domain in canonicals, Open Graph URLs, schema URLs, robots and sitemap files is `https://oztimberfloor.com.au/`.
-- Repo scan of live Oz production files found no production canonicals or sitemap references pointing at `operonflooring.com.au`, `operonflooring.netlify.app` or `oztimberfloor.netlify.app`.
+- No live production SEO-critical metadata should point at `operonflooring.com.au`, `oztimberfloor.netlify.app` or `localhost`.
 
 ## 2. Canonical status
-- Checked HTML files: `1967`
-- Missing canonical tags: `0`
-- Wrong canonical domain/path format: `0`
-- Accidental `noindex` files found in the site output: `1` (`/404.html`, acceptable)
+- Sampled key pages on staging use production-domain canonicals.
+- No major canonical-domain contamination was found.
 
 ## 3. Sitemap status
 - `robots.txt` references:
   - `https://oztimberfloor.com.au/sitemap.xml`
   - `https://oztimberfloor.com.au/sitemap-keyword-targets.xml`
-- Main sitemap URL count: `1751`
-- Keyword-target sitemap URL count: `15`
-- Legacy WordPress paths like `/product-category/` and `/product/` are not present in the main sitemap.
+- Current staging sitemap URL count: `1730`
+- No Netlify preview URLs found in the sitemap.
+- No Operon URLs found in the sitemap.
 
 ## 4. Redirect matrix status
-- File: `/docs/seo-migration/REDIRECT_MATRIX.csv`
-- Matrix rows: `1725`
-- Required columns now include `redirect_status` and the brief’s `priority` field naming.
-- Search Console source exports are restored and already represented in the matrix.
+- Redirect mapping documentation exists and remains strong:
+  - `/docs/seo-migration/REDIRECT_MATRIX.csv`
+- Blog migration mapping exists:
+  - `/docs/seo-migration/BLOG_MIGRATION_MATRIX.csv`
 
 ## 5. Number of redirects implemented
-- Active redirect rules in `/_redirects`: `1748`
-- Active `301` redirects: `1719`
-- Missing redirect targets: `0`
-- Redirect chains after cleanup: `0`
-- Redirect loops after cleanup: `0`
+- The repo redirect layer is substantial and migration-aware.
+- However, current staging has not yet proved the freshest repo-side redirect fixes live.
 
 ## 6. Missing pages created or restored
-The following high-intent destination pages are present and crawlable in the repo:
+The key high-intent destination pages required for migration are present:
 - `/solid-timber-flooring-sydney/`
 - `/vinyl-flooring-sydney/`
 - `/bamboo-flooring-sydney/`
@@ -43,89 +48,64 @@ The following high-intent destination pages are present and crawlable in the rep
 - `/commercial-flooring-sydney/`
 - `/office-flooring-sydney/`
 
-Priority range destinations confirmed present:
-- Kronoswiss Aquastop
-- Villeroy & Boch Aquastop
-- Infinite
-- Reflections
-- Swish Laminate
-- Oakleaf Laminate
-- Ornato Vinyl
-- Artisan Oak
-- Grand Oak
-- Prestige Oak
-- Swish Oak Natura
-- Hydroplank WPC
-- Ornato Hybrid
-- Stone Floor Timber
-- Stone Floor Tile
-- Aspire
-- Storm Luxury
-- ETF 9.0mm Hybrid
-- Luxury Hybrid
-- Easi Plank
-- Topdeck Solid Timber (`/ranges/solid/`)
-- Australian Raw Hardwood Timber (`/ranges/raw-solid-timber/`)
-
 ## 7. Blog migration status
-- File: `/docs/seo-migration/BLOG_MIGRATION_MATRIX.csv`
-- Mapped blog rows: `20`
-- `/blogs/` now routes to `/guides`
-- Checked live staging examples now resolve correctly to guide destinations.
+- Old blog structure is mapped into `/guides/`
+- Sample old blog redirects resolve to matching guide destinations
+- Guide depth is broadly adequate
 
 ## 8. High-priority old URLs mapped
-- Service, category, range and blog targets requested in the brief are represented in the redirect matrix.
-- Migration-critical examples were re-checked live on staging and passed.
+- Service, category, range and blog targets requested in the migration brief are represented in the redirect layer.
 
 ## 9. Unresolved old URLs
-- The restored exports still do not provide target-paired backlink rows, so old external-link prioritisation remains partly inferred.
-- Some long-tail alias range slugs still exist in the content layer and should be rationalised later, but they no longer block migration safety.
+Current staging still fails on these old product URLs:
+- `/product/eco-eco-swish-laminate-new-england-blackbutt/`
+- `/product/eco-eco-swish-laminate-nutmeg/`
+- `/product/eco-eco-swish-oak-contemporary-elegant-milano-oak/`
+
+Repo-side fixes are in place, but they are not yet verified live on staging.
 
 ## 10. Backlink targets protected
-- File: `/docs/seo-migration/BACKLINK_TARGET_REDIRECTS.md`
-- Priority service, category and range legacy URLs now resolve to the closest relevant live pages instead of broad homepage fallbacks.
+- Backlink target protection is broadly good at the mapping layer.
+- Remaining limitation: Search Console exports do not pair every backlink with exact old targets.
 
 ## 11. Sitemap URL count
-- Main sitemap: `1751`
-- Keyword-target sitemap: `15`
+- Main sitemap on current staging: `1730`
 
 ## 12. Internal link restoration
-Core hub flow is in place:
-- homepage -> services, categories, projects, contact
-- products -> categories, ranges, contact paths
-- category pages -> ranges and supporting contact/service paths
-- range pages -> category, colour pages, contact CTAs
-- guides -> money-page and service/category supporting links
-- footer -> broader category/service/contact coverage
+Core hub flow is in place across:
+- homepage
+- products
+- category pages
+- range pages
+- guides
+- projects
+- contact/footer pathways
 
 ## 13. QA results
 - Final domain audit: pass
 - Canonical audit: pass
 - Sitemap hygiene audit: pass
-- Redirect target existence audit: pass
-- Redirect chain/loop audit: pass
-- Live staging migration-critical redirect spot-check: pass
-- Important service/category/range destination existence: pass
-- Title/meta/H1 presence on important hubs checked: pass
+- Redirect smoke test on current staging: not yet clean enough
+- Content depth sampling: pass
+- Onsite SEO sampling: pass with one guide metadata/content issue still awaiting deploy
 
 ## 14. Remaining risks
-- Target-paired backlink export data is still unavailable.
-- The catalogue still has some long-tail alias content that deserves later normalisation for cleanliness.
-- Final launch should still include a production smoke test after deploy.
+- Current staging still shows extra redirect hops on several important old URLs.
+- Current staging still shows 3 old product URLs returning `404`.
+- One migrated guide still has empty meta/lead fields on staging, even though the repo fix is done.
 
 ## 15. Manual decisions still useful
-- Decide whether to keep the bamboo enquiry page live long-term or later replace it with a dedicated availability/alternatives policy page.
-- Decide whether secondary supplier-style helper URLs like `*-supplier-sydney/` remain in the main sitemap or are moved into a stricter canonical strategy later.
+- Decide whether the bamboo destination should remain a live enquiry page long-term or later become a more explicit availability/alternatives landing page.
 
 ## 16. Final verdict
-## MIGRATION READY
+## NOT READY
 
-The migration is now safe on the criteria in this brief:
-- final domain references are clean
-- sitemaps are production-domain clean
-- P0/P1 redirects are implemented
-- high-intent destination pages exist
-- old blog redirects are handled
-- major service/category/range URLs are present
-- no canonical points to Operon or Netlify preview domains
-- QA checks passed for the audited migration-critical set
+Why:
+- the repo is close
+- the live deployed staging site still needs one fresh deploy and one clean re-test before production migration
+
+To move to `MIGRATION READY`:
+1. deploy the current repo changes to staging
+2. rerun `FINAL_REDIRECT_SMOKE_TEST.md`
+3. confirm the three old product URLs now resolve with `301 -> 200`
+4. confirm the sampled guide metadata fix is visible on staging
