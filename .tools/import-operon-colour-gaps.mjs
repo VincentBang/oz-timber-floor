@@ -16,15 +16,21 @@ const categoryUrls = {
 };
 
 const mappings = [
+  { operonRangeId: "hybrid-preference-aspire-rcb", ozRangeSlug: "aspire" },
+  { operonRangeId: "laminate-preference-preference-classic-laminate", ozRangeSlug: "classic-laminate" },
   { operonRangeId: "engineered-preference-de-marque-oak", ozRangeSlug: "de-marque-oak" },
+  { operonRangeId: "hybrid-preference-easi-plank-spc", ozRangeSlug: "easi-plank" },
   { operonRangeId: "hybrid-preference-iconic-wpc", ozRangeSlug: "iconic-wpc" },
   { operonRangeId: "laminate-preference-oakleaf-laminate", ozRangeSlug: "oakleaf-laminate" },
   { operonRangeId: "engineered-preference-elk-falls-hickory", ozRangeSlug: "elk-falls" },
+  { operonRangeId: "engineered-preference-fiddleback-australian-hardwood", ozRangeSlug: "fiddleback" },
+  { operonRangeId: "engineered-preference-hardwood-collection", ozRangeSlug: "hardwood-collection" },
   { operonRangeId: "engineered-preference-prestige-oak", ozRangeSlug: "prestige-oak" },
   { operonRangeId: "hybrid-preference-lifestyle-collection-epc", ozRangeSlug: "lifestyle-collection" },
   { operonRangeId: "laminate-preference-aspect", ozRangeSlug: "wide-plank-water-resistant-laminate" },
   { operonRangeId: "engineered-preference-pronto-engineered-oak-flooring", ozRangeSlug: "pronto" },
   { operonRangeId: "hybrid-preference-hydroplank-wpc", ozRangeSlug: "hydroplank-wpc" },
+  { operonRangeId: "engineered-preference-village-oak", ozRangeSlug: "village-oak" },
 ];
 
 const operonScriptUrls = [
@@ -48,6 +54,32 @@ function slugify(value = "") {
 
 function normaliseName(value = "") {
   return String(value).toLowerCase().replace(/&/g, " and ").replace(/[^a-z0-9]+/g, " ").trim().replace(/\s+/g, " ");
+}
+
+function normaliseColourForRange(range, value = "") {
+  let normalised = normaliseName(value);
+  switch (range.slug) {
+    case "classic-laminate":
+      normalised = normalised.replace(/^classic\s+/, "");
+      break;
+    case "aspire":
+      normalised = normalised.replace(/\bwarm spring\b/g, "warm springs");
+      break;
+    case "fiddleback":
+      normalised = normalised
+        .replace(/^fiddleback\s+/, "")
+        .replace(/\bsmooth 10 matte\b/g, "")
+        .replace(/\bbrushed matte\b/g, "")
+        .replace(/\bbrush matte\b/g, "")
+        .replace(/\bsmooth\b/g, "")
+        .replace(/\bsemi gloss\b/g, "")
+        .trim()
+        .replace(/\s+/g, " ");
+      break;
+    default:
+      break;
+  }
+  return normalised;
 }
 
 function htmlEscape(value = "") {
@@ -113,7 +145,7 @@ function categoryDescription(range, colour) {
 function determineAssetDir(range) {
   const sourceImage = range.primaryImage || range.thumbnailImage || range.heroImage || "";
   const posixDir = path.posix.dirname(sourceImage || "");
-  if (posixDir && posixDir !== "/" && posixDir !== ".") {
+  if (posixDir && posixDir !== "/" && posixDir !== "." && !posixDir.includes("coming-soon")) {
     return posixDir.replace(/^\//, "");
   }
   const fallbackCategory = slugify(range.category || "products");
@@ -211,15 +243,24 @@ for (const mapping of mappings) {
   }
 
   const operonProducts = operon.getColoursByRange(mapping.operonRangeId) || [];
-  const existingProducts = (range.productSlugs || [])
-    .map((slug) => productsBySlug.get(slug))
-    .filter(Boolean);
-  const existingColourKeys = new Set(existingProducts.map((product) => normaliseName(product.colour || product.name)));
+  const existingProductSet = new Map();
+  for (const slug of range.productSlugs || []) {
+    const product = productsBySlug.get(slug);
+    if (product) existingProductSet.set(product.slug, product);
+  }
+  for (const product of productsBySlug.values()) {
+    if (product.rangeSlug === range.slug || product.parentRange === range.slug || product.range === range.name) {
+      existingProductSet.set(product.slug, product);
+    }
+  }
+  const existingProducts = [...existingProductSet.values()];
+  const existingColourKeys = new Set(existingProducts.map((product) => normaliseColourForRange(range, product.colour || product.name)));
   const assetDir = determineAssetDir(range);
+  let firstImportedAsset = "";
 
   for (const item of operonProducts) {
     const colour = item.colour || item.name || "";
-    const colourKey = normaliseName(colour);
+    const colourKey = normaliseColourForRange(range, colour);
     if (!colourKey || existingColourKeys.has(colourKey)) continue;
 
     const imageUrl = item.imageUrl || item.image || "";
@@ -236,6 +277,7 @@ for (const mapping of mappings) {
     if (!fs.existsSync(localPath)) {
       await downloadFile(imageUrl, localPath);
     }
+    if (!firstImportedAsset) firstImportedAsset = localAsset;
 
     const record = {
       id: slug,
@@ -297,6 +339,11 @@ for (const mapping of mappings) {
 
   const refreshedProducts = (range.productSlugs || []).map((slug) => productsBySlug.get(slug)).filter(Boolean);
   range.colourCount = refreshedProducts.length;
+  if ((!range.primaryImage || range.primaryImage.includes("coming-soon")) && firstImportedAsset) {
+    range.primaryImage = firstImportedAsset;
+    range.thumbnailImage = firstImportedAsset;
+    range.heroImage = firstImportedAsset;
+  }
   for (const product of refreshedProducts) {
     writeProductPage(product, range, refreshedProducts);
   }
