@@ -1,0 +1,29 @@
+{
+  "summary": {
+    "sitemapUrlCount": 1973,
+    "badDomain": 0,
+    "oldOrBadUrlsInSitemap": 0,
+    "sitemapRedirectedUrls": 0,
+    "missingLocalFiles": 0,
+    "canonicalMismatch": 0,
+    "noindex": 0,
+    "badMetaDomain": 0,
+    "jsonLdParseErrors": 0,
+    "noTitle": 0,
+    "noMetaDescription": 0,
+    "noH1": 0,
+    "robotsIssues": []
+  },
+  "badDomain": [],
+  "oldInSitemap": [],
+  "redirected": [],
+  "missing": [],
+  "canonicalMismatch": [],
+  "noindex": [],
+  "badMetaDomain": [],
+  "jsonErrors": [],
+  "noTitle": [],
+  "noMetaDesc": [],
+  "noH1": [],
+  "robots": "User-agent: *\nAllow: /\n\nSitemap: https://oztimberfloor.com.au/sitemap.xml\nSitemap: https://oztimberfloor.com.au/sitemap-keyword-targets.xml\n"
+}

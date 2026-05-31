@@ -1,0 +1,347 @@
+{
+  "summary": {
+    "guideCount": 21,
+    "thinGuides": 0,
+    "guidesWithoutMoneyLinks": 0,
+    "duplicatedKeyTakeaways": 0,
+    "topRangeChecks": 13,
+    "topRangesMissing": 0,
+    "topRangesWithPlaceholders": 0
+  },
+  "guideIssues": [
+    {
+      "file": "guides/3-reasons-why-modern-homes-use-engineered-oak-flooring-in-sydney/index.html",
+      "h1": "3 Reasons Why Modern Homes Use Engineered Oak Flooring In Sydney",
+      "textLength": 5657,
+      "moneyLinks": 35,
+      "keyTakeaways": 1,
+      "repeatedFragments": 0,
+      "issue": []
+    },
+    {
+      "file": "guides/3-services-timber-floor-installers-in-sydney-can-do-for-you/index.html",
+      "h1": "3 Services Timber Floor Installers In Sydney Can Do For You",
+      "textLength": 5227,
+      "moneyLinks": 33,
+      "keyTakeaways": 1,
+      "repeatedFragments": 0,
+      "issue": []
+    },
+    {
+      "file": "guides/5-tell-tale-signs-engineered-timber-flooring-is-right-for-your-property/index.html",
+      "h1": "5 Tell-Tale Signs Engineered Timber Flooring is Right for Your Property",
+      "textLength": 9050,
+      "moneyLinks": 35,
+      "keyTakeaways": 1,
+      "repeatedFragments": 0,
+      "issue": []
+    },
+    {
+      "file": "guides/choosing-office-flooring-durability-design-performance/index.html",
+      "h1": "Choosing the Right Flooring for Office Spaces: Durability, Design and Performance",
+      "textLength": 7568,
+      "moneyLinks": 42,
+      "keyTakeaways": 1,
+      "repeatedFragments": 0,
+      "issue": []
+    },
+    {
+      "file": "guides/commercial-timber-flooring-high-traffic-spaces-sydney/index.html",
+      "h1": "Why Commercial Timber Flooring Is a Smart Investment for High-Traffic Spaces",
+      "textLength": 8033,
+      "moneyLinks": 42,
+      "keyTakeaways": 1,
+      "repeatedFragments": 0,
+      "issue": []
+    },
+    {
+      "file": "guides/commercial-timber-flooring-specialist-sydney-builders-designers/index.html",
+      "h1": "What Builders and Designers Look for in a Commercial Timber Flooring Specialist",
+      "textLength": 8382,
+      "moneyLinks": 41,
+      "keyTakeaways": 1,
+      "repeatedFragments": 0,
+      "issue": []
+    },
+    {
+      "file": "guides/common-questions-we-get-as-hybrid-floor-installers-in-sydney/index.html",
+      "h1": "Common Questions We Get As Hybrid Floor Installers In Sydney",
+      "textLength": 5833,
+      "moneyLinks": 35,
+      "keyTakeaways": 1,
+      "repeatedFragments": 0,
+      "issue": []
+    },
+    {
+      "file": "guides/guide-to-choosing-the-right-vinyl-timber-flooring/index.html",
+      "h1": "Vinyl Timber Flooring: A Practical Guide to Choosing a Style for Kitchens, Living Areas, and Apartments",
+      "textLength": 10316,
+      "moneyLinks": 35,
+      "keyTakeaways": 1,
+      "repeatedFragments": 0,
+      "issue": []
+    },
+    {
+      "file": "guides/hire-over-diy/index.html",
+      "h1": "Hire Over DIY: Why Hiring A Timber Floor Installer In Sydney Is A Smart Choice",
+      "textLength": 5240,
+      "moneyLinks": 33,
+      "keyTakeaways": 1,
+      "repeatedFragments": 0,
+      "issue": []
+    },
+    {
+      "file": "guides/how-hybrid-timber-flooring-performs-in-sydney-apartments/index.html",
+      "h1": "How Hybrid Timber Flooring Performs in Sydney Apartments: Acoustic Ratings, Strata Rules, and Installation Tips",
+      "textLength": 10823,
+      "moneyLinks": 34,
+      "keyTakeaways": 1,
+      "repeatedFragments": 0,
+      "issue": []
+    },
+    {
+      "file": "guides/index.html",
+      "h1": "Practical flooring guides for Sydney projects",
+      "textLength": 8675,
+      "moneyLinks": 69,
+      "keyTakeaways": 0,
+      "repeatedFragments": 0,
+      "issue": []
+    },
+    {
+      "file": "guides/laying-the-foundations-right-why-floor-levelling-matters-for-your-timber-flooring/index.html",
+      "h1": "Laying the Foundations Right: Why Floor Levelling Matters for Your Timber Flooring",
+      "textLength": 6041,
+      "moneyLinks": 35,
+      "keyTakeaways": 1,
+      "repeatedFragments": 0,
+      "issue": []
+    },
+    {
+      "file": "guides/local-supply-installation-and-custom-finish-options-for-commercial-timber-flooring/index.html",
+      "h1": "Commercial Timber Flooring Sydney: Local Supply, Installation, and Custom Finish Options",
+      "textLength": 10659,
+      "moneyLinks": 35,
+      "keyTakeaways": 1,
+      "repeatedFragments": 0,
+      "issue": []
+    },
+    {
+      "file": "guides/professional-commercial-flooring-installation-what-to-expect/index.html",
+      "h1": "What to Expect from a Professional Commercial Flooring Installation",
+      "textLength": 8672,
+      "moneyLinks": 43,
+      "keyTakeaways": 1,
+      "repeatedFragments": 0,
+      "issue": []
+    },
+    {
+      "file": "guides/solid-timber-flooring-vs-engineered-flooring-which-one-is-right-for-you/index.html",
+      "h1": "Solid Timber Flooring vs. Engineered Flooring: Which One is Right for You?",
+      "textLength": 6595,
+      "moneyLinks": 34,
+      "keyTakeaways": 1,
+      "repeatedFragments": 0,
+      "issue": []
+    },
+    {
+      "file": "guides/the-5-questions-to-ask-your-timber-floor-installer-in-sydney/index.html",
+      "h1": "The 5 Questions To Ask Your Timber Floor Installer In Sydney",
+      "textLength": 6018,
+      "moneyLinks": 34,
+      "keyTakeaways": 1,
+      "repeatedFragments": 0,
+      "issue": []
+    },
+    {
+      "file": "guides/when-to-restore-replace-or-extend-existing-solid-timber-floors/index.html",
+      "h1": "Sydney Renovations: When to Restore, Replace, or Extend Existing Solid Timber Floors",
+      "textLength": 10570,
+      "moneyLinks": 33,
+      "keyTakeaways": 1,
+      "repeatedFragments": 0,
+      "issue": []
+    },
+    {
+      "file": "guides/why-a-hardwood-timber-floor-will-never-be-out-of-style/index.html",
+      "h1": "Why A Hardwood Timber Floor Will Never Be Out Of Style",
+      "textLength": 5712,
+      "moneyLinks": 34,
+      "keyTakeaways": 1,
+      "repeatedFragments": 0,
+      "issue": []
+    },
+    {
+      "file": "guides/why-commercial-timber-flooring-is-the-right-choice-for-high-end-spaces/index.html",
+      "h1": "Commercial Timber Flooring: Why It's the Premium Choice for High-Traffic and High-End Spaces",
+      "textLength": 10289,
+      "moneyLinks": 35,
+      "keyTakeaways": 1,
+      "repeatedFragments": 0,
+      "issue": []
+    },
+    {
+      "file": "guides/why-hardwood-timber-flooring-is-a-good-investment/index.html",
+      "h1": "Busy Sydney Homes: Why Hardwood Timber Flooring Is a Long-Term Investment in Durability and Aesthetic Value",
+      "textLength": 10182,
+      "moneyLinks": 34,
+      "keyTakeaways": 1,
+      "repeatedFragments": 0,
+      "issue": []
+    },
+    {
+      "file": "guides/your-guide-for-choosing-a-reliable-sydney-timber-flooring-provider/index.html",
+      "h1": "Your Guide For Choosing A Reliable Sydney Timber Flooring Provider",
+      "textLength": 6300,
+      "moneyLinks": 33,
+      "keyTakeaways": 1,
+      "repeatedFragments": 0,
+      "issue": []
+    }
+  ],
+  "rangeChecks": [
+    {
+      "slug": "artisan-tile",
+      "file": "ranges/artisan-tile/index.html",
+      "exists": true,
+      "imgCount": 19,
+      "placeholder": false,
+      "riskyClaims": true,
+      "hasCautious": true,
+      "hasCanonical": true,
+      "hasMeta": true
+    },
+    {
+      "slug": "kronoswiss-aquastop",
+      "file": "ranges/kronoswiss-aquastop/index.html",
+      "exists": true,
+      "imgCount": 27,
+      "placeholder": false,
+      "riskyClaims": true,
+      "hasCautious": true,
+      "hasCanonical": true,
+      "hasMeta": true
+    },
+    {
+      "slug": "prestige-oak",
+      "file": "ranges/prestige-oak/index.html",
+      "exists": true,
+      "imgCount": 64,
+      "placeholder": false,
+      "riskyClaims": true,
+      "hasCautious": true,
+      "hasCanonical": true,
+      "hasMeta": true
+    },
+    {
+      "slug": "pronto",
+      "file": "ranges/pronto/index.html",
+      "exists": true,
+      "imgCount": 28,
+      "placeholder": false,
+      "riskyClaims": true,
+      "hasCautious": true,
+      "hasCanonical": true,
+      "hasMeta": true
+    },
+    {
+      "slug": "swish-oak-natura",
+      "file": "ranges/swish-oak-natura/index.html",
+      "exists": true,
+      "imgCount": 25,
+      "placeholder": false,
+      "riskyClaims": false,
+      "hasCautious": true,
+      "hasCanonical": true,
+      "hasMeta": true
+    },
+    {
+      "slug": "grand-oak",
+      "file": "ranges/grand-oak/index.html",
+      "exists": true,
+      "imgCount": 8,
+      "placeholder": false,
+      "riskyClaims": false,
+      "hasCautious": true,
+      "hasCanonical": true,
+      "hasMeta": true
+    },
+    {
+      "slug": "hydroplank-wpc",
+      "file": "ranges/hydroplank-wpc/index.html",
+      "exists": true,
+      "imgCount": 19,
+      "placeholder": false,
+      "riskyClaims": true,
+      "hasCautious": true,
+      "hasCanonical": true,
+      "hasMeta": true
+    },
+    {
+      "slug": "ornato-hybrid",
+      "file": "ranges/ornato-hybrid/index.html",
+      "exists": true,
+      "imgCount": 8,
+      "placeholder": false,
+      "riskyClaims": false,
+      "hasCautious": true,
+      "hasCanonical": true,
+      "hasMeta": true
+    },
+    {
+      "slug": "etf-9-0mm-hybrid",
+      "file": "ranges/etf-9-0mm-hybrid/index.html",
+      "exists": true,
+      "imgCount": 23,
+      "placeholder": false,
+      "riskyClaims": true,
+      "hasCautious": true,
+      "hasCanonical": true,
+      "hasMeta": true
+    },
+    {
+      "slug": "villeroy-and-boch-heritage",
+      "file": "ranges/villeroy-and-boch-heritage/index.html",
+      "exists": true,
+      "imgCount": 12,
+      "placeholder": false,
+      "riskyClaims": false,
+      "hasCautious": true,
+      "hasCanonical": true,
+      "hasMeta": true
+    },
+    {
+      "slug": "villeroy-and-boch-country",
+      "file": "ranges/villeroy-and-boch-country/index.html",
+      "exists": true,
+      "imgCount": 12,
+      "placeholder": false,
+      "riskyClaims": false,
+      "hasCautious": true,
+      "hasCanonical": true,
+      "hasMeta": true
+    },
+    {
+      "slug": "villeroy-and-boch-contemporary",
+      "file": "ranges/villeroy-and-boch-contemporary/index.html",
+      "exists": true,
+      "imgCount": 13,
+      "placeholder": false,
+      "riskyClaims": false,
+      "hasCautious": true,
+      "hasCanonical": true,
+      "hasMeta": true
+    },
+    {
+      "slug": "villeroy-and-boch-cosmopolitan",
+      "file": "ranges/villeroy-and-boch-cosmopolitan/index.html",
+      "exists": true,
+      "imgCount": 14,
+      "placeholder": false,
+      "riskyClaims": false,
+      "hasCautious": true,
+      "hasCanonical": true,
+      "hasMeta": true
+    }
+  ]
+}

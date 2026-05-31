@@ -1,0 +1,94 @@
+{
+  "summary": {
+    "htmlFiles": 2201,
+    "brokenLinks": 0,
+    "oldInternalLinks": 0,
+    "brokenImages": 0,
+    "placeholderImageRefs": 0,
+    "contactChecks": {
+      "hasForm": true,
+      "hasPhone": true,
+      "hasEmail": true,
+      "hasNameField": true,
+      "hasMessageField": true,
+      "hasEnquiryQuerySupport": true
+    },
+    "topPagesMissing": 0
+  },
+  "brokenLinks": [],
+  "oldInternalLinks": [],
+  "brokenImages": [],
+  "badImageText": [],
+  "topStatus": [
+    {
+      "path": "/",
+      "file": "index.html",
+      "exists": true
+    },
+    {
+      "path": "/products/",
+      "file": "products/index.html",
+      "exists": true
+    },
+    {
+      "path": "/services/",
+      "file": "services/index.html",
+      "exists": true
+    },
+    {
+      "path": "/contact/",
+      "file": "contact/index.html",
+      "exists": true
+    },
+    {
+      "path": "/hybrid-flooring-sydney/",
+      "file": "hybrid-flooring-sydney/index.html",
+      "exists": true
+    },
+    {
+      "path": "/laminate-flooring-sydney/",
+      "file": "laminate-flooring-sydney/index.html",
+      "exists": true
+    },
+    {
+      "path": "/engineered-timber-flooring-sydney/",
+      "file": "engineered-timber-flooring-sydney/index.html",
+      "exists": true
+    },
+    {
+      "path": "/solid-timber-flooring-sydney/",
+      "file": "solid-timber-flooring-sydney/index.html",
+      "exists": true
+    },
+    {
+      "path": "/vinyl-flooring-sydney/",
+      "file": "vinyl-flooring-sydney/index.html",
+      "exists": true
+    },
+    {
+      "path": "/floor-levelling-sydney/",
+      "file": "floor-levelling-sydney/index.html",
+      "exists": true
+    },
+    {
+      "path": "/timber-flooring-installation-sydney/",
+      "file": "timber-flooring-installation-sydney/index.html",
+      "exists": true
+    },
+    {
+      "path": "/commercial-flooring-sydney/",
+      "file": "commercial-flooring-sydney/index.html",
+      "exists": true
+    },
+    {
+      "path": "/office-flooring-sydney/",
+      "file": "office-flooring-sydney/index.html",
+      "exists": true
+    },
+    {
+      "path": "/builder-flooring-contractor-sydney/",
+      "file": "builder-flooring-contractor-sydney/index.html",
+      "exists": true
+    }
+  ]
+}
