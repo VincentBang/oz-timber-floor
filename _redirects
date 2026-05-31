@@ -6,28 +6,32 @@
 /products/topdeck-artisan-grema-marfil/ /products/artisan-tile-crema-marfil/ 301
 /product/topdeck-artisan-calcatta/ /products/artisan-tile-calacatta/ 301
 /product/topdeck-artisan-grema-marfil/ /products/artisan-tile-crema-marfil/ 301
-/hardwood-timber-flooring-sydney/ /hardwood-timber-flooring-sydney.html 200
-/about/ /about.html 200
-/builder-flooring-contractor-sydney/ /builder-flooring-contractor-sydney.html 200
-/commercial-flooring-sydney/ /commercial-flooring-sydney.html 200
-/contact/ /contact.html 200
-/engineered-timber-flooring-sydney/ /engineered-timber-flooring-sydney.html 200
-/faqs/ /faqs.html 200
-/floor-levelling-sydney/ /floor-levelling-sydney.html 200
-/guides/ /guides.html 200
-/bamboo-flooring-sydney/ /bamboo-flooring-sydney.html 200
-/hybrid-flooring-supplier-sydney/ /hybrid-flooring-supplier-sydney.html 200
-/hybrid-flooring-sydney/ /hybrid-flooring-sydney.html 200
-/laminate-flooring-sydney/ /laminate-flooring-sydney.html 200
-/office-flooring-sydney/ /office-flooring-sydney.html 200
-/projects/ /projects.html 200
-/services/ /services.html 200
-/solid-timber-flooring-sydney/ /solid-timber-flooring-sydney.html 200
-/timber-floor-removal-and-stripping-sydney/ /timber-floor-removal-and-stripping-sydney.html 200
-/timber-floor-sanding-and-polishing-sydney/ /timber-floor-sanding-and-polishing-sydney.html 200
-/timber-flooring-installation-sydney/ /timber-flooring-installation-sydney.html 200
-/timber-flooring-supplier-sydney/ /timber-flooring-supplier-sydney.html 200
-/vinyl-flooring-sydney/ /vinyl-flooring-sydney.html 200
+/hardwood-timber-flooring-sydney/ /hardwood-timber-flooring-sydney.html 200!
+/about/ /about.html 200!
+/builder-flooring-contractor-sydney/ /builder-flooring-contractor-sydney.html 200!
+/commercial-flooring-sydney/ /commercial-flooring-sydney.html 200!
+/contact/ /contact.html 200!
+/engineered-timber-flooring-sydney/ /engineered-timber-flooring-sydney.html 200!
+/faqs/ /faqs.html 200!
+/floor-levelling-sydney/ /floor-levelling-sydney.html 200!
+/guides/ /guides.html 200!
+/bamboo-flooring-sydney/ /bamboo-flooring-sydney.html 200!
+/hybrid-flooring-supplier-sydney/ /hybrid-flooring-supplier-sydney.html 200!
+/hybrid-flooring-sydney/ /hybrid-flooring-sydney.html 200!
+/laminate-flooring-sydney/ /laminate-flooring-sydney.html 200!
+/office-flooring-sydney/ /office-flooring-sydney.html 200!
+/projects/ /projects.html 200!
+/services/ /services.html 200!
+/solid-timber-flooring-sydney/ /solid-timber-flooring-sydney.html 200!
+/timber-floor-removal-and-stripping-sydney/ /timber-floor-removal-and-stripping-sydney.html 200!
+/timber-floor-sanding-and-polishing-sydney/ /timber-floor-sanding-and-polishing-sydney.html 200!
+/timber-flooring-installation-sydney/ /timber-flooring-installation-sydney.html 200!
+/timber-flooring-supplier-sydney/ /timber-flooring-supplier-sydney.html 200!
+/vinyl-flooring-sydney/ /vinyl-flooring-sydney.html 200!
+/products/ /products.html 200!
+/privacy/ /privacy.html 200!
+/terms/ /terms.html 200!
+/thank-you/ /thank-you.html 200!
 /about-us/ /about/ 301
 /contact-us/ /contact 301
 /timber-floor-installation/ /timber-flooring-installation-sydney 301
@@ -569,7 +573,6 @@
 /product/etf-hybrid-spc-9mm-new-zealand-blackbutt/ /products/etf-hybrid-spc-9mm-new-zealand-blackbutt/ 301
 /product/etf-hybrid-spc-9mm-helena-oak/ /products/etf-hybrid-spc-9mm-helena-oak/ 301
 /product/stone-floor-charcoal-2/ /products/stone-floor-charcoal-2/ 301
-/* /404.html 404
 /privacy.html /privacy/ 301
 /thank-you.html /thank-you/ 301
 /products/eco-eco-elite-6mm-american-hickory/ /products/elite-6-0-hybrid-american-hickory/ 301
@@ -1693,10 +1696,10 @@
 /products/hardwood-collection-herringbone-san-remo-floors/ /products/hardwood-collection-herringbone-san-remo/ 301
 /products/hardwood-collection-herringbone-shore-break-floors/ /products/hardwood-collection-herringbone-shore-break/ 301
 
-/laminate-flooring-supplier-sydney/ /laminate-flooring-supplier-sydney.html 200
-/engineered-timber-flooring-supplier-sydney/ /engineered-timber-flooring-supplier-sydney.html 200
-/vinyl-flooring-supplier-sydney/ /vinyl-flooring-supplier-sydney.html 200
-/solid-timber-flooring-supplier-sydney/ /solid-timber-flooring-supplier-sydney.html 200
+/laminate-flooring-supplier-sydney/ /laminate-flooring-supplier-sydney.html 200!
+/engineered-timber-flooring-supplier-sydney/ /engineered-timber-flooring-supplier-sydney.html 200!
+/vinyl-flooring-supplier-sydney/ /vinyl-flooring-supplier-sydney.html 200!
+/solid-timber-flooring-supplier-sydney/ /solid-timber-flooring-supplier-sydney.html 200!
 
 # Range canonical aliases
 /ranges/artisan/ /ranges/artisan-tile/ 301
@@ -1765,3 +1768,5 @@
 /ranges/pronto-engineered-oak/ /ranges/pronto/ 301
 /ranges/prestige-oak-15mm/ /ranges/prestige-oak/ 301
 /ranges/prestige-oak-21mm/ /ranges/prestige-oak/ 301
+
+/* /404.html 404
