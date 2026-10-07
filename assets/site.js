@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
   attributionKeys.forEach(function (key) { attributionValue(key); });
 
   function initAnalytics() {
+    if (!isAnalyticsProductionHost()) return;
     var measurementId = String(analytics.ga4MeasurementId || "").trim().toUpperCase();
     if (!/^G-[A-Z0-9]+$/.test(measurementId)) return;
     if (window.OZ_TIMBER_FLOOR_GA4_READY) return;
@@ -32,7 +33,15 @@ document.addEventListener("DOMContentLoaded", function () {
       window.dataLayer.push(arguments);
     };
     window.gtag("js", new Date());
-    window.gtag("config", measurementId);
+    // Query strings and fragments can contain enquiry details. Never send them.
+    var cleanReferrer = "";
+    try { cleanReferrer = new URL(document.referrer).origin; } catch (error) {}
+    window.gtag("config", measurementId, {
+      page_location: window.location.origin + window.location.pathname,
+      page_referrer: cleanReferrer,
+      allow_google_signals: false,
+      allow_ad_personalization_signals: false
+    });
 
     if (!document.querySelector('script[data-oz-ga4="true"]')) {
       var tag = document.createElement("script");
@@ -43,8 +52,12 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+  function isAnalyticsProductionHost() {
+    return window.location.origin === "https://oztimberfloor.com.au" || window.location.origin === "https://www.oztimberfloor.com.au";
+  }
+
   function trackEvent(name, payload) {
-    if (typeof window.gtag === "function") {
+    if (isAnalyticsProductionHost() && /^G-[A-Z0-9]+$/.test(String(analytics.ga4MeasurementId || "").trim().toUpperCase()) && typeof window.gtag === "function") {
       window.gtag("event", name, payload || {});
     }
   }
@@ -690,7 +703,8 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!select) return;
     select.value = normalizeEnquiry(nextValue);
     enquiry = select.value;
-    if (sourceValue) params.set("source", sourceValue);
+    // Keep the originating product/service when the customer changes enquiry type.
+    if (sourceValue && !params.get("source")) params.set("source", sourceValue);
     params.set("enquiry", enquiry);
     if (window.history && typeof window.history.replaceState === "function") {
       var nextUrl = window.location.pathname + "?" + params.toString() + (target || "");
@@ -713,6 +727,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (window.history && typeof window.history.replaceState === "function") {
         window.history.replaceState({}, "", window.location.pathname + "?" + params.toString());
       }
+      fillTrackingFields();
       setVisibleFields();
       trackEnquiryIntent(enquiry);
     });
@@ -727,7 +742,11 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   if (serviceTypeField && params.get("topic")) {
-    serviceTypeField.value = params.get("topic");
+    var serviceTopic = params.get("topic");
+    // Service CTAs use human-readable topics; select values are stable slugs.
+    var serviceSource = params.get("source") || "";
+    if (/levell|uneven floor/i.test(serviceTopic) || /floor-levelling/.test(serviceSource)) serviceTopic = "floor-levelling";
+    serviceTypeField.value = serviceTopic;
   }
 
   fillTrackingFields();
@@ -883,6 +902,7 @@ document.addEventListener("DOMContentLoaded", function () {
       event.preventDefault();
       var action = new URL(form.getAttribute("action"), window.location.href);
       if (action.origin !== window.location.origin) return;
+      fillTrackingFields();
       var body = new URLSearchParams(new window.FormData(form));
       var submitButton = form.querySelector('button[type="submit"]');
       var originalText = submitButton && submitButton.textContent;

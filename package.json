@@ -5,6 +5,7 @@
   "description": "Local launch-safety controls for the Oz Timber Floor static Netlify site.",
   "scripts": {
     "build": "node scripts/prepare-netlify-deploy.mjs && npm run catalogue:apply && npm run perf:images:apply && npm run release:package",
+    "catalogue:october:check": "node scripts/october-catalogue-repair.mjs",
     "catalogue:apply": "node scripts/migration-readiness.mjs --apply-catalogue-only",
     "catalogue:approve-release-decisions": "node scripts/apply-approved-release-decisions.mjs --apply && npm run catalogue:apply",
     "catalogue:fix-indexable-metadata": "node scripts/fix-indexable-catalogue-metadata.mjs --apply",

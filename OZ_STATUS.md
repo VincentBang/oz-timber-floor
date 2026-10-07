@@ -2,11 +2,31 @@
 
 ## Last Updated
 
-10 September 2026
+7 October 2026
 
 ## Current Branch
 
-`codex/oz-release-closeout`
+October candidate being promoted through `dev` to `main`; entry HEAD `2cdf99368af7d963ae0e4aabeaeaaae8c01486dd`.
+
+## Protected Netlify Promotion — 7 October 2026
+
+Owner explicitly authorised push to dev, merge to main and Netlify deployment after the local follow-up. This authorises publishing the protected replacement only, not WordPress/domain/DNS cutover. Verified project `fd68e39e-7863-4012-8a97-40bec59b23d9` (`oztimberfloor`, account `xuyendaibang`) has no custom domain or indexing-enable environment flag. Candidate package: 6,260 files, 583,795,346 bytes, SHA-256 `c9499c7b8e1aaf99cfd846c8365d1ed7929345baa84024063afc06f1b9740103`. Fresh package, bounded follow-up, supplier-spec and analytics checks pass; current source matches the completed browser evidence. Global noindex and disabled GA4 are retained. Migration blockers below remain unresolved. Private audit/analytics and detailed machine-local evidence are not included in this release commit. Final provider/HTTPS receipt will be appended separately under ignored `docs/release/` after publication; this entry does not claim deployment has completed.
+
+## October Follow-up — NOT READY (local only)
+
+Completed the later 7 October brief without commit, push, deployment, provider submissions or live settings changes. Exact supplier evidence now supports thickness on 21 Swish products and three ranges (45 source fields, 24 HTML pages), reducing the unchanged catalogue gate from 27 to 18 blockers. Fixed enquiry source/current-URL preservation, floor-levelling service selection, and disabled-configuration analytics suppression. Added four exact author-archive redirects and a byte-identical legacy image with one direct redirect. Existing product redirects, intentional holds, forms/backend, service owners and sitemap set were preserved.
+
+Current publication remains 775 canonical/sitemap URLs (771 plus four restored articles), with 1,400 physical noindex routes. Redirect entries are 1,938 (five new in this follow-up). Current browser QA passes 130 cells/75 priority measurements; 16 mocked enquiry cases and 12 new Swish captures pass. Preview and isolated production local HTTP fixtures each pass 2,198 checks. No real inbox delivery, GA4 receipt or future Netlify production-host behaviour is claimed.
+
+NOT READY: twelve Artisan Oak wrong-family redirects still need validated final owners, and eighteen Wide Plank records still need supplier dimensions. Named colour/size fallback gaps and owner-only GA4, delivery, backup/DNS and physical-device checks are documented in `docs/migration-october-2026-followup/REPORT.md` and `LAUNCH_CHECKLIST.md`. The broader private URL review covers 2,695 path strings and retains traffic-source caveats. Historical September seals and earlier October evidence remain unchanged; old exact-route/hash tests remain recorded failures, while a new entry-bound contract validates this scope. The current candidate is local only; the earlier draft below does not include this follow-up.
+
+## Earlier October Migration Repair — HOLD MIGRATION
+
+Implemented the independently safe repairs from the 7 October brief: seven article routes (three equivalent-guide redirects and four restored WordPress articles with guide-library links), product-specific Aquastop cards, derived Hardwood Collection count, invalid catalogue field cleanup, Google verification continuity, and production-only GA4 `G-EWSMKKM9N8` with preview suppression and PII-safe page URLs. No catalogue indexation holds or established canonical owners were changed. Publication/sitemap set is now 775 (771 plus four restored articles); 1,400 noindex routes remain unchanged.
+
+Current local crawl: 539 WordPress URLs, 17 direct 200, 521 permanent redirects, one deliberate 410, zero 404s/chains/loops. Twelve Artisan Oak redirects still point to the wrong hybrid family: product availability/final-owner evidence is unresolved, and the imported exact-product pages also have incorrect hybrid imagery. Cleaning invalid thickness values exposes 27 existing indexable product records that fail the unchanged data-quality gate. No bulk noindex, invented dimensions or unsupported discontinuation decision was used to hide these issues.
+
+Separate protected draft: `https://6ac5c97a1ac0d69d4e5449e2--oztimberfloor.netlify.app`. All 1,299 HTTPS route checks and desktop/mobile draft navigation pass. The published Netlify deploy remains `6aa2a1e553c3e900084434fc`; custom domain remains unset. No commit, push, merge, production publication, DNS change, live analytics event or provider form submission was performed. Current results and limitations: `docs/migration-october-2026/REPORT.md`. All earlier status entries below are historical.
 
 ## Owner Inbox Confirmation — 10 September 2026
 

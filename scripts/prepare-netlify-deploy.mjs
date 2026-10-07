@@ -16,8 +16,12 @@ const headersSource = path.join(
 );
 const headersDestination = path.join(root, "_headers");
 const contactConfigPath = path.join(root, "assets", "contact-config.js");
-const measurementId = String(process.env.OZ_GA4_MEASUREMENT_ID || "").trim();
+// Owner supplied the existing Oz property in the October migration brief.
+const measurementId = String(process.env.OZ_GA4_MEASUREMENT_ID || "G-EWSMKKM9N8").trim();
 const validMeasurementId = /^G-[A-Z0-9]+$/i.test(measurementId);
+if (measurementId.toUpperCase() !== 'G-EWSMKKM9N8') {
+  throw new Error('GA4 configuration differs from the owner-approved Oz property G-EWSMKKM9N8; resolve the property identity before building.');
+}
 
 if (!fs.existsSync(headersSource)) {
   throw new Error(`Missing deploy header template: ${headersSource}`);
@@ -48,5 +52,5 @@ const mode = publishIndexable
   : isProduction
     ? "protected production"
     : "non-production";
-const analytics = configuredId ? "configured from OZ_GA4_MEASUREMENT_ID" : "not configured";
+const analytics = configuredId ? "configured for owner-approved Oz property G-EWSMKKM9N8" : "not configured";
 process.stdout.write(`Prepared ${mode} Netlify headers; GA4 ${analytics}.\n`);

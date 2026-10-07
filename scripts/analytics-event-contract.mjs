@@ -8,7 +8,7 @@ const now = 1_800_000_000_000;
 
 // Execute the real page script with an inert DOM and in-memory sessionStorage.
 // No form submission, network request or analytics configuration is performed.
-function page({ pathname = "/contact/", search = "", storage = new Map(), at = now, collector = true, accepted = true } = {}) {
+function page({ pathname = "/contact/", search = "", storage = new Map(), at = now, collector = true, accepted = true, configured = true, origin = "https://oztimberfloor.com.au" } = {}) {
   const events = [];
   const listeners = new Map();
   const select = { value: "", addEventListener() {} };
@@ -29,10 +29,12 @@ function page({ pathname = "/contact/", search = "", storage = new Map(), at = n
     createElement(tag) { assert.equal(tag, "p", "No analytics script may be loaded"); return {setAttribute() {},focus() {}}; },
   };
   const window = {
-    OZ_TIMBER_FLOOR_CONTACT: { formName: "oz-flooring-enquiry", analytics: { ga4MeasurementId: null } },
-    location: { pathname, search, href: `http://localhost${pathname}${search}`, origin: "http://localhost", assign() {} },
+    OZ_TIMBER_FLOOR_CONTACT: { formName: "oz-flooring-enquiry", analytics: { ga4MeasurementId: configured ? "G-EWSMKKM9N8" : null } },
+    // The separate loader contract tests initialization. This collector is inert.
+    OZ_TIMBER_FLOOR_GA4_READY: true,
+    location: { pathname, search, href: `${origin}${pathname}${search}`, origin, assign() {} },
     FormData: class extends Array { constructor() { super(); } },
-    fetch: async () => ({ok: accepted, url: "http://localhost/thank-you/"}),
+    fetch: async () => ({ok: accepted, url: `${origin}/thank-you/`}),
     sessionStorage: {
       getItem(key) { return storage.get(key) ?? null; },
       setItem(key, value) { storage.set(key, String(value)); },
@@ -79,6 +81,9 @@ assert.deepEqual(thanks.events[0], ["event", "quote_submit", {
 assert.equal(thanks.storage.has(pendingKey), false, "Successful navigation must consume the marker");
 assert.equal(page({ pathname: "/thank-you/", storage: thanks.storage }).events.length, 0, "Reload must not duplicate success");
 assert.equal(page({ pathname: "/thank-you/" }).events.length, 0, "Direct thank-you visit must not report success");
+for (const origin of ['http://localhost', 'https://oztimberfloor.netlify.app', 'https://draft--oztimberfloor.netlify.app']) {
+  assert.equal(page({origin, pathname: '/thank-you/', storage: new Map([[pendingKey, JSON.stringify(marker)]])}).events.length, 0, 'Preview must suppress analytics even if a collector exists');
+}
 
 for (const invalid of [
   "not-json", "null", "[]", String(now),
@@ -112,6 +117,7 @@ const idle = page({ pathname: "/products/", storage: new Map([[pendingKey, JSON.
 assert.equal(idle.events.length, 0, "Only the thank-you route can report success");
 assert.equal(idle.storage.has(pendingKey), true);
 assert.equal(page({ pathname: "/thank-you/", storage: idle.storage, collector: false }).events.length, 0, "Unconfigured GA4 remains inactive");
+assert.equal(page({ pathname: "/thank-you/", configured: false, storage: new Map([[pendingKey, JSON.stringify(marker)]]) }).events.length, 0, "An existing collector cannot bypass a disabled production configuration");
 
 const failed = page({accepted:false});
 await failed.submit();

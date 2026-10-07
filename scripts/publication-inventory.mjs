@@ -44,7 +44,7 @@ function walkHtmlFiles(directory, ignoredDirectories, found = []) {
     const filePath = path.join(directory, entry.name);
     if (entry.isDirectory()) {
       if (!ignoredDirectories.has(entry.name)) walkHtmlFiles(filePath, ignoredDirectories, found);
-    } else if (entry.name.endsWith(".html")) {
+    } else if (entry.name.endsWith(".html") && entry.name !== 'googlea11728cf4d174049.html') {
       found.push(filePath);
     }
   }

@@ -4,8 +4,11 @@ import crypto from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { execFileSync } from "node:child_process";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+execFileSync(process.execPath, [path.join(root, 'scripts/october-catalogue-repair.mjs')], {cwd:root, stdio:'inherit'});
+execFileSync(process.execPath, [path.join(root, 'scripts/october-verified-specs.mjs')], {cwd:root, stdio:'inherit'});
 const publishRoot = path.join(root, "dist");
 const checkOnly = process.argv.includes("--check");
 const context = String(process.env.CONTEXT || "dev").trim().toLowerCase();
@@ -13,6 +16,10 @@ const indexingEnabled = /^true$/i.test(String(process.env.OZ_PRODUCTION_INDEXING
 const publishIndexable = context === "production" && indexingEnabled;
 
 const publicDirectories = Object.freeze([
+  "timber-flooring-installation-common-mistakes-and-solutions",
+  "timber-flooring-options-solid-vs-engineered-vs-hybrid",
+  "laminate-timber-flooring-explained-cost-durability-use-cases",
+  "vinyl-timber-flooring-sydney-cost-durability-and-best-use-cases",
   "floor-levelling",
   "hybrid",
   "laminate",
