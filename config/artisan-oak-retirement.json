@@ -1,0 +1,11 @@
+{
+  "approvedAt": "2026-10-07",
+  "authority": "Owner: artisan oak already discontinued so retire it",
+  "basis": "Owner-confirmed discontinuation; no equivalent replacement identified",
+  "httpStatus": 410,
+  "alternativeBrowseRoute": "/engineered-timber-flooring/",
+  "rangeRoute": "/ranges/artisan-oak/",
+  "colours": ["cotton-wood", "biarritz", "chanterelle", "chantilly", "naturalle", "oxford-grey", "provence", "woodlands", "natural-classic", "romandie", "montreux", "brittany-grey"],
+  "exclusions": ["Artisan Tile and its aliases", "Kronoswiss Aquastop Artisan Oak Natural and Beige", "Hardwood Collection Artisan Oak colour names"],
+  "scope": "Local migration candidate only; preserve records, existing noindex status, unrelated redirects and inherited uncommitted Artisan Tile repairs. No deployment or WordPress change."
+}

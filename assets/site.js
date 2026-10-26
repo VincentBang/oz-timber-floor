@@ -10,6 +10,95 @@ document.addEventListener("DOMContentLoaded", function () {
   var attributionKeys = ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "gclid", "fbclid"];
   var pendingQuoteKey = "oz-pending-quote-submit";
   var pendingQuoteMaxAge = 10 * 60 * 1000;
+  var analyticsConsentKey = "oz-analytics-consent-v1";
+
+  function analyticsMeasurementId() {
+    var measurementId = String(analytics.ga4MeasurementId || "").trim().toUpperCase();
+    return /^G-[A-Z0-9]+$/.test(measurementId) ? measurementId : "";
+  }
+
+  function analyticsIsAvailable() {
+    return isAnalyticsProductionHost() && Boolean(analyticsMeasurementId());
+  }
+
+  function analyticsConsent() {
+    try {
+      var value = window.localStorage.getItem(analyticsConsentKey);
+      return value === "accepted" || value === "rejected" ? value : "";
+    } catch (error) {
+      return "";
+    }
+  }
+
+  function hasAnalyticsConsent() {
+    return analyticsConsent() === "accepted";
+  }
+
+  function saveAnalyticsConsent(value) {
+    try { window.localStorage.setItem(analyticsConsentKey, value); } catch (error) {}
+  }
+
+  function updateGoogleConsent(value) {
+    if (typeof window.gtag !== "function") return;
+    window.gtag("consent", "update", {
+      analytics_storage: value === "accepted" ? "granted" : "denied",
+      ad_storage: "denied",
+      ad_user_data: "denied",
+      ad_personalization: "denied"
+    });
+  }
+
+  function closeAnalyticsConsentBanner() {
+    var banner = document.querySelector(".analytics-consent-banner");
+    if (banner) banner.remove();
+    document.body.classList.remove("has-analytics-consent-banner");
+  }
+
+  function setAnalyticsConsent(value) {
+    saveAnalyticsConsent(value);
+    var measurementId = analyticsMeasurementId();
+    if (value === "accepted") {
+      window["ga-disable-" + measurementId] = false;
+      updateGoogleConsent(value);
+      initAnalytics();
+    } else {
+      window["ga-disable-" + measurementId] = true;
+      updateGoogleConsent(value);
+      var tag = document.querySelector('script[data-oz-ga4="true"]');
+      if (tag) tag.remove();
+    }
+    closeAnalyticsConsentBanner();
+  }
+
+  function addAnalyticsSettingsLink() {
+    if (!analyticsIsAvailable() || document.querySelector(".analytics-consent-settings")) return;
+    var footer = document.querySelector(".footer-bottom");
+    if (!footer) return;
+    var button = document.createElement("button");
+    button.type = "button";
+    button.className = "analytics-consent-settings";
+    button.textContent = "Cookie settings";
+    button.addEventListener("click", function () { renderAnalyticsConsent(true); });
+    footer.appendChild(button);
+  }
+
+  function renderAnalyticsConsent(force) {
+    if (!analyticsIsAvailable()) return;
+    addAnalyticsSettingsLink();
+    if (analyticsConsent() && !force) return;
+    closeAnalyticsConsentBanner();
+
+    var banner = document.createElement("section");
+    banner.className = "analytics-consent-banner";
+    banner.setAttribute("role", "dialog");
+    banner.setAttribute("aria-label", "Analytics preferences");
+    banner.innerHTML = '<div class="analytics-consent-copy"><h2>Analytics preferences</h2><p>We use optional analytics to understand how people use this website. Essential website functions do not depend on this choice.</p><a href="/privacy/">Privacy Policy</a></div><div class="analytics-consent-actions"><button type="button" class="button-secondary" data-analytics-choice="rejected">Reject optional analytics</button><button type="button" class="button" data-analytics-choice="accepted">Accept analytics</button></div>';
+    banner.querySelectorAll("[data-analytics-choice]").forEach(function (button) {
+      button.addEventListener("click", function () { setAnalyticsConsent(button.getAttribute("data-analytics-choice")); });
+    });
+    document.body.appendChild(banner);
+    document.body.classList.add("has-analytics-consent-banner");
+  }
 
   function attributionValue(key) {
     var fromUrl = params.get(key);
@@ -23,15 +112,22 @@ document.addEventListener("DOMContentLoaded", function () {
   attributionKeys.forEach(function (key) { attributionValue(key); });
 
   function initAnalytics() {
-    if (!isAnalyticsProductionHost()) return;
-    var measurementId = String(analytics.ga4MeasurementId || "").trim().toUpperCase();
-    if (!/^G-[A-Z0-9]+$/.test(measurementId)) return;
+    if (!analyticsIsAvailable() || !hasAnalyticsConsent()) return;
+    var measurementId = analyticsMeasurementId();
     if (window.OZ_TIMBER_FLOOR_GA4_READY) return;
     window.OZ_TIMBER_FLOOR_GA4_READY = true;
+    window["ga-disable-" + measurementId] = false;
     window.dataLayer = window.dataLayer || [];
     window.gtag = window.gtag || function () {
       window.dataLayer.push(arguments);
     };
+    window.gtag("consent", "default", {
+      analytics_storage: "denied",
+      ad_storage: "denied",
+      ad_user_data: "denied",
+      ad_personalization: "denied"
+    });
+    updateGoogleConsent("accepted");
     window.gtag("js", new Date());
     // Query strings and fragments can contain enquiry details. Never send them.
     var cleanReferrer = "";
@@ -57,7 +153,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function trackEvent(name, payload) {
-    if (isAnalyticsProductionHost() && /^G-[A-Z0-9]+$/.test(String(analytics.ga4MeasurementId || "").trim().toUpperCase()) && typeof window.gtag === "function") {
+    if (analyticsIsAvailable() && hasAnalyticsConsent() && typeof window.gtag === "function") {
       window.gtag("event", name, payload || {});
     }
   }
@@ -150,6 +246,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   initAnalytics();
+  renderAnalyticsConsent(false);
 
   if (/^\/thank-you\/?$/.test(window.location.pathname)) {
     var pendingQuote = null;

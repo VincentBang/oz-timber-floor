@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import { normalizeCatalogueAmpersands } from '../scripts/catalogue-text.mjs';
 
 const root = process.cwd();
 const dataPath = path.join(root, 'data/product-catalogue.json');
@@ -14,7 +15,7 @@ const data = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
 let ranges = data.ranges || [];
 const products = data.products || [];
 
-const cleanEarly = (value) => String(value || '').trim();
+const cleanEarly = (value) => normalizeCatalogueAmpersands(value || '').trim();
 const productBySlug = new Map(products.map((product) => [product.slug, product]));
 const titleCaseFromSlug = (slug) =>
   String(slug || '')
@@ -131,7 +132,7 @@ const sharedHeader = firstHtml.match(/<header class="site-header">[\s\S]*?<\/hea
 const sharedFooter = firstHtml.match(/<footer class="site-footer">[\s\S]*?<\/footer>/)?.[0] || '';
 
 const escapeHtml = (value = '') =>
-  String(value)
+  normalizeCatalogueAmpersands(value)
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
@@ -139,7 +140,7 @@ const escapeHtml = (value = '') =>
 
 const escapeAttr = escapeHtml;
 const encode = (value = '') => encodeURIComponent(String(value));
-const clean = (value) => String(value || '').trim();
+const clean = (value) => normalizeCatalogueAmpersands(value || '').trim();
 const compact = (items) => items.filter((item) => clean(item));
 const fileExists = (src) => src && src.startsWith('/') && fs.existsSync(path.join(root, src.replace(/^\//, '')));
 const isPlaceholder = (src) => !src || /coming-soon|placeholder|dummy|fallback/i.test(src);

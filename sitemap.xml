@@ -181,6 +181,11 @@
     <priority>0.85</priority>
   </url>
   <url>
+    <loc>https://oztimberfloor.com.au/oak-flooring-sydney/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
     <loc>https://oztimberfloor.com.au/privacy/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.64</priority>
@@ -3325,29 +3330,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.64</priority>
   </url>
-
-  <url>
-    <loc>https://oztimberfloor.com.au/products/wide-plank-water-resistant-laminate-wide-plank-copper-brown/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.64</priority>
-  </url>
-  <url>
-    <loc>https://oztimberfloor.com.au/products/wide-plank-water-resistant-laminate-wide-plank-dusk-grey/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.64</priority>
-  </url>
-
-  <url>
-    <loc>https://oztimberfloor.com.au/products/wide-plank-water-resistant-laminate-wide-plank-matterhorn/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.64</priority>
-  </url>
-
-  <url>
-    <loc>https://oztimberfloor.com.au/products/wide-plank-water-resistant-laminate-wide-plank-polar-ice/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.64</priority>
-  </url>
   <url>
     <loc>https://oztimberfloor.com.au/products/wooden-land-australian-species-136mm-blackbutt-136mm/</loc>
     <changefreq>monthly</changefreq>
@@ -3956,4 +3938,5 @@
   <url><loc>https://oztimberfloor.com.au/timber-flooring-options-solid-vs-engineered-vs-hybrid/</loc></url>
   <url><loc>https://oztimberfloor.com.au/laminate-timber-flooring-explained-cost-durability-use-cases/</loc></url>
   <url><loc>https://oztimberfloor.com.au/vinyl-timber-flooring-sydney-cost-durability-and-best-use-cases/</loc></url>
+  <url><loc>https://oztimberfloor.com.au/ranges/stone-floor/</loc></url>
 </urlset>

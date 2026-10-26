@@ -4,6 +4,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { createPublicationInventory } from "./publication-inventory.mjs";
+import { artisanRetirementIssues } from "./approved-artisan-retirement-check.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const domain = "https://oztimberfloor.com.au";
@@ -318,6 +319,15 @@ if (!fs.existsSync(equityPath)) {
       continue;
     }
     const sourceRule = sourceRules[0] || null;
+    const retirementIssues = artisanRetirementIssues({source,rule:sourceRule,
+      approvalBytes:fs.readFileSync(path.join(root,'config/artisan-oak-retirement.json')),
+      range:rawCatalogue.ranges.find(r=>r.id==='artisan-oak'),
+      html:pageText('/ranges/artisan-oak/'),
+      sitemapRoutes:inventory.sitemapRoutes,publicationRoutes:inventory.publicationRoutes});
+    if(retirementIssues!==null){
+      for(const code of retirementIssues)blockers.push({code,source});
+      continue;
+    }
     const directTarget = sourceRule && sourceRule.status >= 300 && sourceRule.status < 400
       ? sourceRule.destination
       : source;

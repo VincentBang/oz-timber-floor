@@ -2,6 +2,9 @@
   publish = "dist"
   command = "npm run build"
 
+[functions]
+  directory = "netlify/functions"
+
 # `npm run build` selects a per-deploy `_headers` file before publishing.
 # Production receives the indexable header set only when the separately
 # approved `OZ_PRODUCTION_INDEXING_ENABLED=true` release flag is present.

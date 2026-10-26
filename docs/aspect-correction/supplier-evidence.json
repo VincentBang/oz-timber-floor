@@ -1,0 +1,182 @@
+[
+  {
+    "slug": "acacia",
+    "url": "https://preferencefloors.com.au/floor/acacia/",
+    "status": 200,
+    "retrievedAt": "2026-10-07T06:04:53.695Z",
+    "sha256": "85184e8a4bb9c26c78cf2721215cd14eabc003e939511a611e41fee8e4c68620",
+    "dimension": "2260 x 236 x 12mm",
+    "pack": "2.13m2 / 4pcs",
+    "brand": "Aspect"
+  },
+  {
+    "slug": "alpine-snow",
+    "url": "https://preferencefloors.com.au/floor/alpine-snow/",
+    "status": 200,
+    "retrievedAt": "2026-10-07T06:04:53.001Z",
+    "sha256": "ad0c8986048a96e907136be544c3ba1d5fff0fbd69ef99fc56c1623bc34c9657",
+    "dimension": "1518 x 236 x 12mm",
+    "pack": "1.79m2 / 5 pcs",
+    "brand": "Aspect"
+  },
+  {
+    "slug": "blackbutt-3",
+    "url": "https://preferencefloors.com.au/floor/blackbutt-3/",
+    "status": 200,
+    "retrievedAt": "2026-10-07T06:04:53.008Z",
+    "sha256": "816e6d9fd2884ab4edfb9f94545026ebeb0b934ded4931c4817607185be948a6",
+    "dimension": "2260 x 194 x 12mm",
+    "pack": "1.75m2 / 4pcs",
+    "brand": "Aspect"
+  },
+  {
+    "slug": "chablis",
+    "url": "https://preferencefloors.com.au/floor/chablis/",
+    "status": 200,
+    "retrievedAt": "2026-10-07T06:04:53.698Z",
+    "sha256": "9cc43a55049232e624137847ecea166af41108fdc4206f05a91cbbfc6a970b19",
+    "dimension": "1518 x 236 x 12mm",
+    "pack": "1.79m2 / 5pcs",
+    "brand": "Aspect"
+  },
+  {
+    "slug": "hazelnut",
+    "url": "https://preferencefloors.com.au/floor/hazelnut/",
+    "status": 200,
+    "retrievedAt": "2026-10-07T06:04:54.412Z",
+    "sha256": "880142e4a8333753922503b1b8fdb4ad79f7ee367aba5e10ea6c1ae447e54e11",
+    "dimension": "2260 x 236 x 12mm",
+    "pack": "2.13m2 / 4pcs",
+    "brand": "Aspect"
+  },
+  {
+    "slug": "heron-grey",
+    "url": "https://preferencefloors.com.au/floor/heron-grey/",
+    "status": 200,
+    "retrievedAt": "2026-10-07T06:04:54.413Z",
+    "sha256": "43adba1a89dc5e945d697dae5445ca21846204eaadff633d130c941a961cc8bd",
+    "dimension": "1518 x 236 x 12mm",
+    "pack": "1.79m2 / 5pcs",
+    "brand": "Aspect"
+  },
+  {
+    "slug": "honeybee",
+    "url": "https://preferencefloors.com.au/floor/honeybee/",
+    "status": 200,
+    "retrievedAt": "2026-10-07T06:04:55.072Z",
+    "sha256": "742df786423d4b745f61c22e29e7b025d51adde7a949b3c141f560bb7ead96a8",
+    "dimension": "2260 x 236 x 12mm",
+    "pack": "2.13m2 / 4pcs",
+    "brand": "Aspect"
+  },
+  {
+    "slug": "moonstone",
+    "url": "https://preferencefloors.com.au/floor/moonstone/",
+    "status": 200,
+    "retrievedAt": "2026-10-07T06:04:55.074Z",
+    "sha256": "94ed00c6871ebbfe34109479f5f56518a574442fe08cd2319e53d9474ee4be91",
+    "dimension": "1518 x 236 x 12mm",
+    "pack": "1.79m2 / 5pcs",
+    "brand": "Aspect"
+  },
+  {
+    "slug": "sandalwood",
+    "url": "https://preferencefloors.com.au/floor/sandalwood/",
+    "status": 200,
+    "retrievedAt": "2026-10-07T06:04:55.556Z",
+    "sha256": "ea65efb7ef4c578779195a0c01b680fec413007dcd2eb3cac33af2457b7e9968",
+    "dimension": "1518 x 236 x 12mm",
+    "pack": "1.79m2 / 5pcs",
+    "brand": "Aspect"
+  },
+  {
+    "slug": "silverwood",
+    "url": "https://preferencefloors.com.au/floor/silverwood/",
+    "status": 200,
+    "retrievedAt": "2026-10-07T06:04:55.524Z",
+    "sha256": "062e05e870efe9d5242418bdc9fba9748e0d2e4c17772e0e18d25fb1b6408981",
+    "dimension": "2260 x 236 x 12mm",
+    "pack": "2.13m2 / 4pcs",
+    "brand": "Aspect"
+  },
+  {
+    "slug": "spotted-gum-2",
+    "url": "https://preferencefloors.com.au/floor/spotted-gum-2/",
+    "status": 200,
+    "retrievedAt": "2026-10-07T06:04:55.197Z",
+    "sha256": "acbaf327e7e7cc86c1dc56b6f988214d42e88dbaa26686177bf52c30c13fed11",
+    "dimension": "2260 x 194 x 12mm",
+    "pack": "1.75m2 / 4pcs",
+    "brand": "Aspect"
+  },
+  {
+    "slug": "stone-grey",
+    "url": "https://preferencefloors.com.au/floor/stone-grey/",
+    "status": 200,
+    "retrievedAt": "2026-10-07T06:04:56.287Z",
+    "sha256": "1e711987b810a6bf4b1a1df5af6ae83466c3536265008a16a11953e386e586bc",
+    "dimension": "1518 x 236 x 12mm",
+    "pack": "1.79m2 / 5 pcs",
+    "brand": "Aspect"
+  },
+  {
+    "slug": "surfside",
+    "url": "https://preferencefloors.com.au/floor/surfside/",
+    "status": 200,
+    "retrievedAt": "2026-10-07T06:04:56.456Z",
+    "sha256": "15c02c8c63a059bf6febd714ec74b845ed6584449a321893b7150b934fb66637",
+    "dimension": "2260 x 236 x 12mm",
+    "pack": "2.13m2 / 4pcs",
+    "brand": "Aspect"
+  },
+  {
+    "slug": "wattleseed",
+    "url": "https://preferencefloors.com.au/floor/wattleseed/",
+    "status": 200,
+    "retrievedAt": "2026-10-07T06:04:56.679Z",
+    "sha256": "775df15ee0ee9da9898bd79eca9b6402842000d8b9ebd8f9644f530956f0d7b6",
+    "dimension": "1518 x 26 x 12mm",
+    "pack": "1.79m2 / 5pcs",
+    "brand": "Aspect"
+  },
+  {
+    "slug": "wide-plank-copper-brown",
+    "url": "https://preferencefloors.com.au/floor/wide-plank-copper-brown/",
+    "status": 200,
+    "retrievedAt": "2026-10-07T06:04:56.725Z",
+    "sha256": "8a741be0d9cce9dc09cb63632a861aa47b19d04bc45a6424c44fde13945735e0",
+    "dimension": "240mm width, 15mm thickness, 2200mm length (nested shorts)",
+    "pack": "2.112m2 /ctn.",
+    "brand": "De Marque Oak"
+  },
+  {
+    "slug": "wide-plank-dusk-grey",
+    "url": "https://preferencefloors.com.au/floor/wide-plank-dusk-grey/",
+    "status": 200,
+    "retrievedAt": "2026-10-07T06:04:57.298Z",
+    "sha256": "958d83bda39e8f90e44f80edde557549a7fc9b6ba2d6a83dd0ba2541f3911d92",
+    "dimension": "240mm width, 15mm thickness, 2200mm length (nested shorts)",
+    "pack": "2.112m2 / ctn.",
+    "brand": "De Marque Oak"
+  },
+  {
+    "slug": "wide-plank-matterhorn",
+    "url": "https://preferencefloors.com.au/floor/wide-plank-matterhorn/",
+    "status": 200,
+    "retrievedAt": "2026-10-07T06:04:57.500Z",
+    "sha256": "7b5aaf8700ccb52d14e7459db4e14542ef59f165a89c12e940721f1a45be85c2",
+    "dimension": "240mm width, 15mm thickness, 2200mm length (nested shorts)",
+    "pack": "2.112m2 / ctn.",
+    "brand": "De Marque Oak"
+  },
+  {
+    "slug": "wide-plank-polar-ice",
+    "url": "https://preferencefloors.com.au/floor/wide-plank-polar-ice/",
+    "status": 200,
+    "retrievedAt": "2026-10-07T06:04:57.618Z",
+    "sha256": "f6e80bc8052848229bdb9de8667778adec0ddbd6e0cf9f1f1ec79b788f13638f",
+    "dimension": "240mm width, 15mm thickness, 2200mm length (nested shorts)",
+    "pack": "2.112m2 / ctn.",
+    "brand": "De Marque Oak"
+  }
+]

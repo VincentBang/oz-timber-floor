@@ -5,16 +5,25 @@ import vm from 'node:vm';
 import assert from 'node:assert/strict';
 import {execFileSync, spawnSync} from 'node:child_process';
 const site=fs.readFileSync('assets/site.js','utf8');
-const source=site.slice(site.indexOf('  function initAnalytics()'),site.indexOf('  function trackEvent('));
+const source=site.slice(site.indexOf('  function analyticsMeasurementId()'),site.indexOf('  function attributionValue('))+
+  site.slice(site.indexOf('  function initAnalytics()'),site.indexOf('  function normalizeEnquiry('));
 for(const origin of ['https://oztimberfloor.com.au','https://www.oztimberfloor.com.au','https://oztimberfloor.netlify.app','https://draft--oztimberfloor.netlify.app','http://localhost']) {
   const events=[],scripts=[];
-  const window={location:{origin,pathname:'/contact/',search:'?email=private@example.com',hash:'#private-name'},gtag:(...args)=>events.push(args)};
+  const window={location:{origin,pathname:'/contact/',search:'?email=private@example.com',hash:'#private-name'},localStorage:{getItem:()=> 'accepted'},gtag:(...args)=>events.push(args)};
   const document={referrer:'https://example.com/private-name?email=private@example.com',querySelector:()=>null,createElement:()=>({setAttribute(){}}),head:{appendChild:node=>scripts.push(node)}};
-  vm.runInNewContext(source+'\ninitAnalytics();initAnalytics();',{window,document,analytics:{ga4MeasurementId:'G-EWSMKKM9N8'},URL,Date});
+  vm.runInNewContext(source+'\ninitAnalytics();initAnalytics();',{window,document,analyticsConsentKey:'oz-analytics-consent-v1',analytics:{ga4MeasurementId:'G-EWSMKKM9N8'},URL,Date});
   const prod=['https://oztimberfloor.com.au','https://www.oztimberfloor.com.au'].includes(origin);
   assert.equal(scripts.length,prod?1:0);assert.equal(events.filter(e=>e[0]==='config').length,prod?1:0);
   assert.doesNotMatch(JSON.stringify(events),/private|email=/);
   if(prod){const config=events.find(e=>e[0]==='config');assert.equal(config[1],'G-EWSMKKM9N8');assert.equal(config[2].page_location,origin+'/contact/');}
+}
+{
+  const events=[],scripts=[];
+  const window={location:{origin:'https://oztimberfloor.com.au',pathname:'/contact/',search:'',hash:''},localStorage:{getItem:()=> 'rejected'},gtag:(...args)=>events.push(args)};
+  const document={referrer:'',querySelector:()=>null,createElement:()=>({setAttribute(){}}),head:{appendChild:node=>scripts.push(node)}};
+  vm.runInNewContext(source+'\ninitAnalytics();trackEvent("quote_submit",{});',{window,document,analyticsConsentKey:'oz-analytics-consent-v1',analytics:{ga4MeasurementId:'G-EWSMKKM9N8'},URL,Date});
+  assert.equal(scripts.length,0,'A rejected choice must not load GA4');
+  assert.equal(events.length,0,'A rejected choice must not send an event');
 }
 const fixture=fs.mkdtempSync(path.join(os.tmpdir(),'oz-analytics-build-'));
 for(const dir of ['scripts','assets','config/netlify-headers'])fs.mkdirSync(path.join(fixture,dir),{recursive:true});

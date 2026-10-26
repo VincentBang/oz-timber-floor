@@ -8,7 +8,7 @@ const now = 1_800_000_000_000;
 
 // Execute the real page script with an inert DOM and in-memory sessionStorage.
 // No form submission, network request or analytics configuration is performed.
-function page({ pathname = "/contact/", search = "", storage = new Map(), at = now, collector = true, accepted = true, configured = true, origin = "https://oztimberfloor.com.au" } = {}) {
+function page({ pathname = "/contact/", search = "", storage = new Map(), at = now, collector = true, accepted = true, analyticsConsent = "accepted", configured = true, origin = "https://oztimberfloor.com.au" } = {}) {
   const events = [];
   const listeners = new Map();
   const select = { value: "", addEventListener() {} };
@@ -39,6 +39,10 @@ function page({ pathname = "/contact/", search = "", storage = new Map(), at = n
       getItem(key) { return storage.get(key) ?? null; },
       setItem(key, value) { storage.set(key, String(value)); },
       removeItem(key) { storage.delete(key); },
+    },
+    localStorage: {
+      getItem(key) { return key === "oz-analytics-consent-v1" ? analyticsConsent : null; },
+      setItem() {},
     },
   };
   if (collector) window.gtag = (...args) => events.push(JSON.parse(JSON.stringify(args)));
@@ -118,6 +122,7 @@ assert.equal(idle.events.length, 0, "Only the thank-you route can report success
 assert.equal(idle.storage.has(pendingKey), true);
 assert.equal(page({ pathname: "/thank-you/", storage: idle.storage, collector: false }).events.length, 0, "Unconfigured GA4 remains inactive");
 assert.equal(page({ pathname: "/thank-you/", configured: false, storage: new Map([[pendingKey, JSON.stringify(marker)]]) }).events.length, 0, "An existing collector cannot bypass a disabled production configuration");
+assert.equal(page({ pathname: "/thank-you/", analyticsConsent: "rejected", storage: new Map([[pendingKey, JSON.stringify(marker)]]) }).events.length, 0, "A rejected analytics choice must suppress events");
 
 const failed = page({accepted:false});
 await failed.submit();

@@ -244,12 +244,12 @@
       "reason": "Approved 2026-08-04 controlled treatment for empty-or-placeholder-thickness, legacy-or-alias-range."
     },
     "/products/artisan-biarritz/": {
-      "classification": "needs-data",
+      "classification": "retired",
       "applyNoindex": true,
-      "replacementRoute": "/hybrid/",
-      "replacementBasis": "matching-flooring-category",
+      "replacementRoute": "",
+      "replacementBasis": "owner-confirmed-discontinued-no-replacement",
       "directRedirect": false,
-      "reason": "Approved 2026-08-04 controlled treatment for empty-or-placeholder-thickness, product-schema-missing-image."
+      "reason": "Owner approved Artisan Oak retirement on 2026-10-07. Return 410 with discontinued notice; no replacement-product claim."
     },
     "/products/artisan-black-maquina/": {
       "classification": "needs-data",
@@ -260,12 +260,12 @@
       "reason": "Approved 2026-08-04 controlled treatment for empty-or-placeholder-thickness, product-schema-missing-image."
     },
     "/products/artisan-brittany-grey/": {
-      "classification": "needs-data",
+      "classification": "retired",
       "applyNoindex": true,
-      "replacementRoute": "/hybrid/",
-      "replacementBasis": "matching-flooring-category",
+      "replacementRoute": "",
+      "replacementBasis": "owner-confirmed-discontinued-no-replacement",
       "directRedirect": false,
-      "reason": "Approved 2026-08-04 controlled treatment for empty-or-placeholder-thickness, product-schema-missing-image."
+      "reason": "Owner approved Artisan Oak retirement on 2026-10-07. Return 410 with discontinued notice; no replacement-product claim."
     },
     "/products/artisan-calacatta/": {
       "classification": "needs-data",
@@ -284,28 +284,28 @@
       "reason": "Approved 2026-08-04 controlled treatment for empty-or-placeholder-thickness, product-schema-missing-image."
     },
     "/products/artisan-chanterelle/": {
-      "classification": "needs-data",
+      "classification": "retired",
       "applyNoindex": true,
-      "replacementRoute": "/hybrid/",
-      "replacementBasis": "matching-flooring-category",
+      "replacementRoute": "",
+      "replacementBasis": "owner-confirmed-discontinued-no-replacement",
       "directRedirect": false,
-      "reason": "Approved 2026-08-04 controlled treatment for empty-or-placeholder-thickness, product-schema-missing-image."
+      "reason": "Owner approved Artisan Oak retirement on 2026-10-07. Return 410 with discontinued notice; no replacement-product claim."
     },
     "/products/artisan-chantilly/": {
-      "classification": "needs-data",
+      "classification": "retired",
       "applyNoindex": true,
-      "replacementRoute": "/hybrid/",
-      "replacementBasis": "matching-flooring-category",
+      "replacementRoute": "",
+      "replacementBasis": "owner-confirmed-discontinued-no-replacement",
       "directRedirect": false,
-      "reason": "Approved 2026-08-04 controlled treatment for empty-or-placeholder-thickness, product-schema-missing-image."
+      "reason": "Owner approved Artisan Oak retirement on 2026-10-07. Return 410 with discontinued notice; no replacement-product claim."
     },
     "/products/artisan-cotton-wood/": {
-      "classification": "needs-data",
+      "classification": "retired",
       "applyNoindex": true,
-      "replacementRoute": "/hybrid/",
-      "replacementBasis": "matching-flooring-category",
+      "replacementRoute": "",
+      "replacementBasis": "owner-confirmed-discontinued-no-replacement",
       "directRedirect": false,
-      "reason": "Approved 2026-08-04 controlled treatment for empty-or-placeholder-thickness, product-schema-missing-image."
+      "reason": "Owner approved Artisan Oak retirement on 2026-10-07. Return 410 with discontinued notice; no replacement-product claim."
     },
     "/products/artisan-crema-marfil/": {
       "classification": "needs-data",
@@ -356,36 +356,36 @@
       "reason": "Approved 2026-08-04 controlled treatment for empty-or-placeholder-thickness, product-schema-missing-image."
     },
     "/products/artisan-montreux/": {
-      "classification": "needs-data",
+      "classification": "retired",
       "applyNoindex": true,
-      "replacementRoute": "/hybrid/",
-      "replacementBasis": "matching-flooring-category",
+      "replacementRoute": "",
+      "replacementBasis": "owner-confirmed-discontinued-no-replacement",
       "directRedirect": false,
-      "reason": "Approved 2026-08-04 controlled treatment for empty-or-placeholder-thickness, product-schema-missing-image."
+      "reason": "Owner approved Artisan Oak retirement on 2026-10-07. Return 410 with discontinued notice; no replacement-product claim."
     },
     "/products/artisan-natural-classic/": {
-      "classification": "needs-data",
+      "classification": "retired",
       "applyNoindex": true,
-      "replacementRoute": "/hybrid/",
-      "replacementBasis": "matching-flooring-category",
+      "replacementRoute": "",
+      "replacementBasis": "owner-confirmed-discontinued-no-replacement",
       "directRedirect": false,
-      "reason": "Approved 2026-08-04 controlled treatment for empty-or-placeholder-thickness, product-schema-missing-image."
+      "reason": "Owner approved Artisan Oak retirement on 2026-10-07. Return 410 with discontinued notice; no replacement-product claim."
     },
     "/products/artisan-naturalle/": {
-      "classification": "needs-data",
+      "classification": "retired",
       "applyNoindex": true,
-      "replacementRoute": "/hybrid/",
-      "replacementBasis": "matching-flooring-category",
+      "replacementRoute": "",
+      "replacementBasis": "owner-confirmed-discontinued-no-replacement",
       "directRedirect": false,
-      "reason": "Approved 2026-08-04 controlled treatment for empty-or-placeholder-thickness, product-schema-missing-image."
+      "reason": "Owner approved Artisan Oak retirement on 2026-10-07. Return 410 with discontinued notice; no replacement-product claim."
     },
     "/products/artisan-oxford-grey/": {
-      "classification": "needs-data",
+      "classification": "retired",
       "applyNoindex": true,
-      "replacementRoute": "/hybrid/",
-      "replacementBasis": "matching-flooring-category",
+      "replacementRoute": "",
+      "replacementBasis": "owner-confirmed-discontinued-no-replacement",
       "directRedirect": false,
-      "reason": "Approved 2026-08-04 controlled treatment for empty-or-placeholder-thickness, product-schema-missing-image."
+      "reason": "Owner approved Artisan Oak retirement on 2026-10-07. Return 410 with discontinued notice; no replacement-product claim."
     },
     "/products/artisan-pietra-grey/": {
       "classification": "needs-data",
@@ -396,20 +396,20 @@
       "reason": "Approved 2026-08-04 controlled treatment for empty-or-placeholder-thickness, product-schema-missing-image."
     },
     "/products/artisan-provence/": {
-      "classification": "needs-data",
+      "classification": "retired",
       "applyNoindex": true,
-      "replacementRoute": "/hybrid/",
-      "replacementBasis": "matching-flooring-category",
+      "replacementRoute": "",
+      "replacementBasis": "owner-confirmed-discontinued-no-replacement",
       "directRedirect": false,
-      "reason": "Approved 2026-08-04 controlled treatment for empty-or-placeholder-thickness, product-schema-missing-image."
+      "reason": "Owner approved Artisan Oak retirement on 2026-10-07. Return 410 with discontinued notice; no replacement-product claim."
     },
     "/products/artisan-romandie/": {
-      "classification": "needs-data",
+      "classification": "retired",
       "applyNoindex": true,
-      "replacementRoute": "/hybrid/",
-      "replacementBasis": "matching-flooring-category",
+      "replacementRoute": "",
+      "replacementBasis": "owner-confirmed-discontinued-no-replacement",
       "directRedirect": false,
-      "reason": "Approved 2026-08-04 controlled treatment for empty-or-placeholder-thickness, product-schema-missing-image."
+      "reason": "Owner approved Artisan Oak retirement on 2026-10-07. Return 410 with discontinued notice; no replacement-product claim."
     },
     "/products/artisan-valley-beige/": {
       "classification": "needs-data",
@@ -428,12 +428,12 @@
       "reason": "Approved 2026-08-04 controlled treatment for empty-or-placeholder-thickness, product-schema-missing-image."
     },
     "/products/artisan-woodlands/": {
-      "classification": "needs-data",
+      "classification": "retired",
       "applyNoindex": true,
-      "replacementRoute": "/hybrid/",
-      "replacementBasis": "matching-flooring-category",
+      "replacementRoute": "",
+      "replacementBasis": "owner-confirmed-discontinued-no-replacement",
       "directRedirect": false,
-      "reason": "Approved 2026-08-04 controlled treatment for empty-or-placeholder-thickness, product-schema-missing-image."
+      "reason": "Owner approved Artisan Oak retirement on 2026-10-07. Return 410 with discontinued notice; no replacement-product claim."
     },
     "/products/aspire-barn-oak/": {
       "classification": "needs-data",
@@ -2129,7 +2129,7 @@
       "replacementRoute": "/ranges/etf-9-0mm-hybrid/",
       "replacementBasis": "indexable-parent-range",
       "directRedirect": false,
-      "reason": "Reviewed 2026-09-01: no verified indexable Helena product exists; keep noindex and send legacy traffic to the verified ETF 9.0mm range pending manual product data."
+      "reason": "Owner confirmed Helena Oak belongs to ETF 9mm Hybrid on 2026-10-08. Exact colour image and remaining specifications are unverified; do not substitute Alaskan Oak."
     },
     "/products/etf-hybrid-spc-9mm-new-zealand-blackbutt/": {
       "classification": "needs-data",
@@ -4249,7 +4249,7 @@
       "replacementRoute": "/ranges/kronoswiss-aquastop/",
       "replacementBasis": "indexable-parent-range",
       "directRedirect": true,
-      "reason": "Approved 2026-08-04 controlled treatment for empty-or-placeholder-thickness, legacy-or-alias-range, product-schema-missing-image."
+      "reason": "Owner confirmed this Kronoswiss Aquastop colour discontinued on 2026-10-08. Retain existing range redirect as alternatives, not an exact replacement."
     },
     "/products/kronoswiss-aquastop-leysin/": {
       "classification": "redirect-only",
@@ -4273,7 +4273,7 @@
       "replacementRoute": "/ranges/kronoswiss-aquastop/",
       "replacementBasis": "indexable-parent-range",
       "directRedirect": true,
-      "reason": "Approved 2026-08-04 controlled treatment for legacy-or-alias-range, product-schema-missing-image."
+      "reason": "Owner confirmed this Kronoswiss Aquastop colour discontinued on 2026-10-08. Retain existing range redirect as alternatives, not an exact replacement."
     },
     "/products/kronoswiss-aquastop-natural-oak-brown/": {
       "classification": "redirect-only",
@@ -4281,7 +4281,7 @@
       "replacementRoute": "/ranges/kronoswiss-aquastop/",
       "replacementBasis": "indexable-parent-range",
       "directRedirect": true,
-      "reason": "Approved 2026-08-04 controlled treatment for empty-or-placeholder-thickness, legacy-or-alias-range, product-schema-missing-image."
+      "reason": "Owner confirmed this Kronoswiss Aquastop colour discontinued on 2026-10-08. Retain existing range redirect as alternatives, not an exact replacement."
     },
     "/products/kronoswiss-aquastop-natural-oak-grey/": {
       "classification": "manual-review",
@@ -7126,26 +7126,26 @@
     "/products/stone-floor-antique/": {
       "classification": "needs-data",
       "applyNoindex": true,
-      "replacementRoute": "/hybrid/",
-      "replacementBasis": "matching-flooring-category",
+      "replacementRoute": "/ranges/stone-floor-timber/",
+      "replacementBasis": "supplier-confirmed-design-family",
       "directRedirect": false,
-      "reason": "Approved 2026-08-04 controlled treatment for empty-or-placeholder-thickness, product-schema-missing-image."
+      "reason": "Current supplier listing confirms this exact colour in the selected design family; held product indexation is unchanged."
     },
     "/products/stone-floor-bianco-white/": {
       "classification": "needs-data",
       "applyNoindex": true,
       "replacementRoute": "/ranges/stone-floor-tile/",
-      "replacementBasis": "indexable-parent-range",
+      "replacementBasis": "supplier-confirmed-design-family",
       "directRedirect": false,
-      "reason": "Approved 2026-08-04 controlled treatment for empty-or-placeholder-thickness, product-schema-missing-image."
+      "reason": "Current supplier listing confirms this exact colour in the selected design family; held product indexation is unchanged."
     },
     "/products/stone-floor-blackbutt/": {
       "classification": "needs-data",
       "applyNoindex": true,
-      "replacementRoute": "/ranges/stone-floor-tile/",
-      "replacementBasis": "indexable-parent-range",
+      "replacementRoute": "/ranges/stone-floor-timber/",
+      "replacementBasis": "supplier-confirmed-design-family",
       "directRedirect": false,
-      "reason": "Approved 2026-08-04 controlled treatment for empty-or-placeholder-thickness, product-schema-missing-image."
+      "reason": "Current supplier listing confirms this exact colour in the selected design family; held product indexation is unchanged."
     },
     "/products/stone-floor-charcoal-2/": {
       "classification": "needs-data",
@@ -7214,26 +7214,26 @@
     "/products/stone-floor-natural/": {
       "classification": "needs-data",
       "applyNoindex": true,
-      "replacementRoute": "/hybrid/",
-      "replacementBasis": "matching-flooring-category",
+      "replacementRoute": "/ranges/stone-floor-timber/",
+      "replacementBasis": "supplier-confirmed-design-family",
       "directRedirect": false,
-      "reason": "Approved 2026-08-04 controlled treatment for empty-or-placeholder-thickness, product-schema-missing-image."
+      "reason": "Current supplier listing confirms this exact colour in the selected design family; held product indexation is unchanged."
     },
     "/products/stone-floor-nero-black/": {
       "classification": "needs-data",
       "applyNoindex": true,
-      "replacementRoute": "/hybrid/",
-      "replacementBasis": "matching-flooring-category",
+      "replacementRoute": "/ranges/stone-floor-tile/",
+      "replacementBasis": "supplier-confirmed-design-family",
       "directRedirect": false,
-      "reason": "Approved 2026-08-04 controlled treatment for empty-or-placeholder-thickness, product-schema-missing-image."
+      "reason": "Current supplier listing confirms this exact colour in the selected design family; held product indexation is unchanged."
     },
     "/products/stone-floor-oak-beige/": {
       "classification": "needs-data",
       "applyNoindex": true,
-      "replacementRoute": "/ranges/stone-floor-tile/",
-      "replacementBasis": "indexable-parent-range",
+      "replacementRoute": "/ranges/stone-floor/",
+      "replacementBasis": "owner-confirmed-general-range",
       "directRedirect": false,
-      "reason": "Approved 2026-08-04 controlled treatment for empty-or-placeholder-thickness, product-schema-missing-image."
+      "reason": "Owner confirmed Oak Beige discontinued on 2026-10-08 after it was absent from the current StoneFloor supplier listing. Retain the existing general Stone Floor redirect as alternatives, not an exact replacement."
     },
     "/products/stone-floor-platinum-stone-grey/": {
       "classification": "needs-data",
@@ -7247,17 +7247,17 @@
       "classification": "needs-data",
       "applyNoindex": true,
       "replacementRoute": "/ranges/stone-floor-tile/",
-      "replacementBasis": "indexable-parent-range",
+      "replacementBasis": "supplier-confirmed-design-family",
       "directRedirect": false,
-      "reason": "Approved 2026-08-04 controlled treatment for empty-or-placeholder-thickness, product-schema-missing-image."
+      "reason": "Current supplier listing confirms this exact colour in the selected design family; held product indexation is unchanged."
     },
     "/products/stone-floor-spotted-gum/": {
       "classification": "needs-data",
       "applyNoindex": true,
-      "replacementRoute": "/hybrid/",
-      "replacementBasis": "matching-flooring-category",
+      "replacementRoute": "/ranges/stone-floor-timber/",
+      "replacementBasis": "supplier-confirmed-design-family",
       "directRedirect": false,
-      "reason": "Approved 2026-08-04 controlled treatment for empty-or-placeholder-thickness, product-schema-missing-image."
+      "reason": "Current supplier listing confirms this exact colour in the selected design family; held product indexation is unchanged."
     },
     "/products/stone-floor-stone-oak/": {
       "classification": "needs-data",
@@ -7270,10 +7270,10 @@
     "/products/stone-floor-storm-grey/": {
       "classification": "needs-data",
       "applyNoindex": true,
-      "replacementRoute": "/hybrid/",
-      "replacementBasis": "matching-flooring-category",
+      "replacementRoute": "/ranges/stone-floor-timber/",
+      "replacementBasis": "supplier-confirmed-design-family",
       "directRedirect": false,
-      "reason": "Approved 2026-08-04 controlled treatment for empty-or-placeholder-thickness, product-schema-missing-image."
+      "reason": "Current supplier listing confirms this exact colour in the selected design family; held product indexation is unchanged."
     },
     "/products/stone-floor-tile-bianco-white/": {
       "classification": "needs-data",
@@ -9140,12 +9140,12 @@
       "reason": "Approved 2026-08-04 controlled treatment for legacy-or-alias-range, missing-image, missing-product-name, range-alias."
     },
     "/ranges/artisan-oak/": {
-      "classification": "redirect-only",
+      "classification": "retired",
       "applyNoindex": true,
-      "replacementRoute": "/engineered-timber-flooring/",
-      "replacementBasis": "matching-flooring-category",
-      "directRedirect": true,
-      "reason": "Approved 2026-08-04 controlled treatment for legacy-or-alias-range, range-alias."
+      "replacementRoute": "",
+      "replacementBasis": "owner-confirmed-discontinued-no-replacement",
+      "directRedirect": false,
+      "reason": "Owner approved Artisan Oak retirement on 2026-10-07. Return 410 with discontinued notice; no replacement-product claim."
     },
     "/ranges/artisan/": {
       "classification": "redirect-only",
@@ -9620,12 +9620,12 @@
       "reason": "Approved 2026-08-04 controlled treatment for legacy-or-alias-range, range-alias."
     },
     "/ranges/stone-floor/": {
-      "classification": "redirect-only",
-      "applyNoindex": true,
-      "replacementRoute": "/hybrid/",
-      "replacementBasis": "matching-flooring-category",
-      "directRedirect": true,
-      "reason": "Approved 2026-08-04 controlled treatment for legacy-or-alias-range, range-alias."
+      "classification": "indexable",
+      "applyNoindex": false,
+      "replacementRoute": "",
+      "replacementBasis": "supplier-confirmed-general-range",
+      "directRedirect": false,
+      "reason": "Owner requested supplier-backed general Stone Floor routing on 2026-10-08. General collection contains both design families, not just tile."
     },
     "/ranges/storm-luxury-hybrid-planks/": {
       "classification": "redirect-only",
@@ -10810,6 +10810,38 @@
       "applyNoindex": true,
       "directRedirect": false,
       "reason": "Proposed OZ-MIG-004 exact reversible hold for unverified Hardwood Collection identity. Retain accessible page and self-canonical; no discontinuation or replacement asserted."
+    },
+    "/products/wide-plank-water-resistant-laminate-wide-plank-copper-brown/": {
+      "classification": "redirect-only",
+      "applyNoindex": true,
+      "replacementRoute": "/products/de-marque-oak-wide-plank-copper-brown/",
+      "replacementBasis": "exact-supplier-range-colour-product",
+      "directRedirect": true,
+      "reason": "Owner approved four De Marque duplicate-owner consolidations on 2026-10-07; not ASPECT. Exact existing equivalent product."
+    },
+    "/products/wide-plank-water-resistant-laminate-wide-plank-dusk-grey/": {
+      "classification": "redirect-only",
+      "applyNoindex": true,
+      "replacementRoute": "/products/de-marque-oak-wide-plank-dusk-grey/",
+      "replacementBasis": "exact-supplier-range-colour-product",
+      "directRedirect": true,
+      "reason": "Owner approved four De Marque duplicate-owner consolidations on 2026-10-07; not ASPECT. Exact existing equivalent product."
+    },
+    "/products/wide-plank-water-resistant-laminate-wide-plank-matterhorn/": {
+      "classification": "redirect-only",
+      "applyNoindex": true,
+      "replacementRoute": "/products/de-marque-oak-wide-plank-matterhorn/",
+      "replacementBasis": "exact-supplier-range-colour-product",
+      "directRedirect": true,
+      "reason": "Owner approved four De Marque duplicate-owner consolidations on 2026-10-07; not ASPECT. Exact existing equivalent product."
+    },
+    "/products/wide-plank-water-resistant-laminate-wide-plank-polar-ice/": {
+      "classification": "redirect-only",
+      "applyNoindex": true,
+      "replacementRoute": "/products/de-marque-oak-wide-plank-polar-ice/",
+      "replacementBasis": "exact-supplier-range-colour-product",
+      "directRedirect": true,
+      "reason": "Owner approved four De Marque duplicate-owner consolidations on 2026-10-07; not ASPECT. Exact existing equivalent product."
     }
   }
 }

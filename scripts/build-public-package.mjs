@@ -9,6 +9,10 @@ import { execFileSync } from "node:child_process";
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 execFileSync(process.execPath, [path.join(root, 'scripts/october-catalogue-repair.mjs')], {cwd:root, stdio:'inherit'});
 execFileSync(process.execPath, [path.join(root, 'scripts/october-verified-specs.mjs')], {cwd:root, stdio:'inherit'});
+execFileSync(process.execPath, [path.join(root, 'scripts/artisan-tile-migration.mjs')], {cwd:root, stdio:'inherit'});
+execFileSync(process.execPath, [path.join(root, 'scripts/artisan-oak-retirement.mjs')], {cwd:root, stdio:'inherit'});
+execFileSync(process.execPath, [path.join(root, 'scripts/aspect-correction.mjs')], {cwd:root, stdio:'inherit'});
+execFileSync(process.execPath, [path.join(root, 'scripts/demarque-consolidation.mjs')], {cwd:root, stdio:'inherit'});
 const publishRoot = path.join(root, "dist");
 const checkOnly = process.argv.includes("--check");
 const context = String(process.env.CONTEXT || "dev").trim().toLowerCase();
@@ -46,6 +50,7 @@ const publicDirectories = Object.freeze([
   "laminate-flooring-supplier-sydney",
   "laminate-flooring-sydney",
   "office-flooring-sydney",
+  "oak-flooring-sydney",
   "privacy",
   "product",
   "products",

@@ -2,6 +2,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import assert from 'node:assert/strict';
+import {syncCatalogueSummaries} from './catalogue-summary-sync.mjs';
 const root = process.cwd();
 const file = path.join(root, 'data/product-catalogue.json');
 const data = JSON.parse(fs.readFileSync(file, 'utf8'));
@@ -98,5 +99,6 @@ update('ranges/kronoswiss-aquastop/index.html', html => {
 });
 update('ranges/index.html', html => cleanRelatedRangeCopy(html.replace(/<a[^>]*id="range-hardwood-collection"[\s\S]*?<\/a>/, card => card.replace(/\d+ colours/g, `${published.length} colours`))));
 if (apply) fs.writeFileSync(file, JSON.stringify(data, null, 2) + '\n');
-console.log(JSON.stringify({mode: apply ? 'apply' : 'check', changes, htmlChanges}, null, 2));
-if (!apply && (changes.length || htmlChanges.length)) process.exitCode = 1;
+const summaries=syncCatalogueSummaries({root,data,apply});
+console.log(JSON.stringify({mode: apply ? 'apply' : 'check', changes, htmlChanges, summaries}, null, 2));
+if (!apply && (changes.length || htmlChanges.length || summaries.changes.length)) process.exitCode = 1;

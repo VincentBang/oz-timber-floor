@@ -1,12 +1,170 @@
 # Oz Timber Floor Status
 
+## 27 October 2026 — GitHub source synchronisation prepared on a review branch
+
+Prepared the latest deployed website source on `codex/live-site-sync-20261027`, including previously uncommitted approved migration/catalogue/form/analytics repairs, the eight range text fixes and monochrome theme. Selected website source and minimal public build/check inputs only; private release/audit data and screenshots remain local. Fresh staged-source export reproduces the reviewed 6,262-file protected package with a successful build and zero catalogue/image mutations. Text tests, analytics/enquiry contracts, field integrity, credential scan and staged diff checks pass. `main` remains unchanged because it automatically triggers a Netlify production build; this GitHub synchronisation does not redeploy production. Public source summary: `docs/GITHUB_SOURCE_SYNC_2026-10-27.md`; owner-local push evidence is retained separately.
+
+## 27 October 2026 — approved latest design and range repairs published
+
+Owner requested production deployment after the design review. Published the validated 6,262-file public-only package to the existing Netlify site as production deploy `6adfbb7059d75a50df80ebca`; provider confirms ready/published at `https://oztimberfloor.com.au/`. Includes the monochrome theme and eight Villeroy & Boch text repairs. Preserved existing production indexing, GA4 configuration, form function, redirects, sitemap, catalogue holds and all other content; no DNS, domains, email/provider settings or Git changes.
+
+Actual live verification passes all 773 sitemap pages, all 539 legacy outcomes and all eight repaired ranges; CSS/config/robots/verification bytes match the candidate, private files return 404 and www redirects to apex. Production browser QA passes 28 responsive cells and eleven interactions with no detected overflow, broken images, uncaught JS errors or text-contrast failures. No forms submitted or analytics events sent by QA. Previous production `6adf0bae91e46eca56e40052` remains the rollback reference. Existing broader SEO/evidence conflicts remain documented separately, not suppressed. Evidence: `docs/release/monochrome-production-2026-10-27/REPORT.md`.
+
+## 27 October 2026 — Modern Monochrome Luxury palette implemented for review
+
+Refined `assets/site.css` to one shared warm-white/stone/charcoal palette with restrained bronze detail, accessible dark-bronze text/focus and neutral form boundaries. Preserved layout tokens, typography, official logo, product photography and all page/SEO/form/catalogue contracts. Fresh comparison passes 773 publication/sitemap owners and sixteen protected files with zero differences; all 2,226 packaged HTML files remain byte-identical to the repaired candidate. Browser QA passes 28 before/after route-width pairs, eleven interactions and 5,545 measured text checks with no detected contrast failures or geometry changes. Eighty screenshots are retained.
+
+Isolated protected build and 6,262-file package validation pass all 539 legacy outcomes and link/asset/schema checks. Draft `6adfb9fe5186fcbcb0bd45ed` is at `https://6adfb9fe5186fcbcb0bd45ed--oztimberfloor.netlify.app/`; existing Netlify team protection returns 401 without login, so deployed-page HTTPS/render verification is not claimed. Production is unchanged. Existing older UI hashes and ten SEO-hardening routing/evidence conflicts remain explicitly reported, not suppressed or treated as theme regressions. No commit, push, merge, production publication, DNS, domain, analytics, email or form-backend changes. Full evidence and before/after images: `docs/release/monochrome-luxury-2026-10-27/REPORT.md`. Ready for owner visual review, not an unconditional production-release GO.
+
+## 27 October 2026 — eight Villeroy & Boch text defects repaired locally
+
+Corrected repeated ampersand encoding in all eight affected range HTML pages, their schema/enquiry links and twenty identity fields in the eight underlying catalogue records. Added a shared text normalizer with three passing regression tests and integrated it into the legacy catalogue cleanup parser/renderer; the broad cleanup tool was not run. Existing range classifications, noindex holds, canonicals, redirects, sitemap, forms and supplier/product facts are unchanged. Protected file hashes match entry state.
+
+Local verification passes 24 responsive cells and 24 prefill journeys at 320/390/768, with no clipped/corrupt text, broken images, overflow or JS errors. Isolated production-package validation passes 773 sitemap owners and all 539 legacy outcomes; the 6,262-file candidate differs only in the eight repaired public HTML files. Candidate: `/private/tmp/oz-range-text-fix.eHBVHR/dist`; report: `docs/release/range-text-repair-2026-10-27/REPORT.md`. No commit, push, deployment, provider setting or form submission occurred. Earlier audit findings describe the still-live pre-repair state until a deployment is requested.
+
+## 27 October 2026 — Search Console's 19 historical noindex examples reconciled
+
+Read all 19 examples from the owner's authenticated Search Console report (last updated 23 October, before the 26 October migration) and checked every URL live. Five legacy landing URLs now return one-hop 301s to indexable, self-canonical owners; twelve obsolete WordPress feed URLs correctly return 404; the retired Uncategorized archive returns the existing 410; the old search-placeholder query canonicalizes to the indexable homepage. Current home, robots.txt and 773-entry sitemap have no global indexing block. No accidental destination noindex defect was found, so no site/indexation/routing change was made. No Search Console validation or indexing request was sent. Full URL evidence: `docs/release/gsc-noindex-2026-10-27/LIVE_RESULTS.json`; disposition: `REPORT.md` in the same directory. Eight mobile Villeroy & Boch text defects identified in the separate responsive audit remain outstanding.
+
+## 27 October 2026 — whole-site live mobile responsive review
+
+Read-only browser audit completed all 2,225 packaged customer-page URLs, including all 773 current sitemap URLs, at 320, 390 and 768 pixels: 6,675 viewport checks. Zero detected document-wide horizontal overflow, broken visible images, JavaScript errors or navigation failures. Element-level review nevertheless confirmed clipped/corrupted breadcrumb, heading and description text on eight Villeroy & Boch range pages: repeated ampersand escaping extends text beyond the viewport while document overflow is hidden. Six initially pending-image cases passed a slower retest. All final pages had one H1 and initialized the shared JavaScript. Twenty-four effective behavioral checks passed across the three widths for menus, scroll locking/drawer scrolling, outside/Escape dismissal, range search/reset and items beyond 12, FAQ toggling, product prefill, required consent and unobstructed submit; no enquiry was submitted. Initial harness assumptions and corrected retests are preserved separately.
+
+Verdict: usable overall, repair the eight text defects. Minor observations: footer Cookie settings target is 23.33px high, first-visit analytics banner is tall at 320px, and product heroes can stack four full-width actions. Automated checks cover every enumerated page; human visual inspection covers representative templates and is not a physical-device or WCAG certification. Product-design audit guidance informed the screenshot-backed review. Report and exact page evidence: `docs/release/mobile-audit-2026-10-27/REPORT.md`. No site sources, deployment or provider settings changed.
+
+## 26 October 2026 — production DNS cutover complete and indexing enabled
+
+Owner changed only the public web records: apex resolves to Netlify (`75.2.60.5`) and `www` resolves by CNAME to `oztimberfloor.netlify.app`; the existing MX and mail records were preserved. Corrected production deployment `6adf0bae91e46eca56e40052` is published from the isolated validated package, serves the 773-route candidate, enables owner-approved GA4 measurement ID `G-EWSMKKM9N8`, and has working apex HTTPS plus a Netlify `www` → apex 301. The isolated production-package validator passed 773 sitemap owners and all 539 legacy outcomes (18 direct 200, 507 one-hop redirects, 14 deliberate 410).
+
+Fresh public checks confirm the apex and sitemap return 200 without `X-Robots-Tag`, the sitemap contains exactly 773 unique production canonicals, and `www` redirects to the apex. The earlier production deploy had accidentally retained the preview header because it was published from the repository context; republishing the same validated files from the isolated production directory removed it. No production form submission has been made in this cutover window. Search Console sitemap submission and the separately authorised production form/GA4 verification remain post-cutover actions.
+
+## 26 October 2026 — 773-route protected draft deployed and verified
+
+Owner authorised deployment of the exact validated candidate as a protected Netlify draft. Deploy `6adeedca520756e458515e7e` is ready at `https://6adeedca520756e458515e7e--oztimberfloor.netlify.app`, context `deploy-preview`, with no publication timestamp. Package identity remains 6,262 files / 583,628,138 bytes / SHA-256 `6fc94b830e55139ed9bbfd3da536fa8e7e9bbfcf22ba85f941cc512a278ad269`. Fresh HTTPS validation passed all 773 sitemap owners and 539 legacy routes (18 direct 200, 507 one-hop redirects, 14 deliberate 410), global noindex, disabled GA4, Google verification, real 404s and direct sitemap-index routing. No form was submitted. The primary deployment, WordPress, DNS, TLS, production indexing and analytics remain unchanged. Cutover remains HOLD for the owner/provider gates in `docs/release/cutover-readiness-2026-10-26/FINAL_READINESS.md`.
+
+## 26 October 2026 — local cutover candidate complete; cutover HOLD
+
+Completed the authorised local content/SEO continuity repairs and isolated cutover validation. Restored `/oak-flooring-sydney/` as a dedicated publication owner, expanded FAQs and installation content, and reconciled the publication/sitemap set at 773. Both protected and isolated-production packages pass all 539 legacy outcomes and 773 sitemap owners; changed-content browser checks pass 12 cells and the fully intercepted enquiry suite passes 17 cases. A 538-row URL decision ledger preserves three owner-confirmed retirements, Helena Oak's evidence-limited family fallback, 204 broad mappings and all 330 linked noindex quality holds. No bulk release occurred.
+
+Verdict is **local candidate complete; cutover HOLD**. Remaining gates are owner acceptance of the URL ledger, a complete Crazy Domains zone export, separately authorised Netlify custom-domain/TLS setup, restore-drill or explicit backup-risk acceptance, fresh Search Console baseline/post-launch checks, GA4 duplication and production receipt verification, one separately authorised product-prefilled production enquiry, and physical-device checks. No deploy, commit, push, merge, DNS/domain, WordPress, provider, production indexing/analytics, Search Console or real-enquiry action occurred. Evidence: `docs/release/cutover-readiness-2026-10-26/FINAL_READINESS.md`.
+
+## 26 October 2026 — Resend controlled delivery confirmed
+
+The controlled enquiry `OZ-RESEND-TEST-20261026T051700Z-1` is recorded in Netlify as a verified `oz-flooring-enquiry` submission (`6adee2527533d5057805af74`) at 4:17 PM, with the approved inbox field, `/contact/` source, Laminate category and consent retained. Resend shows `oztimberfloor.com.au` verified and ready to send. The owner confirmed receipt in `info@oztimberfloor.com.au`; this completes the controlled end-to-end delivery check for protected deploy `6adee19d57537cc923d89114`. The supplied screenshot is retained as provider-side submission evidence, rather than being represented as inbox-message evidence. No WordPress, DNS, domain, indexing or GA4 configuration changed.
+
+## 26 October 2026 — Resend enquiry notification deployed and controlled test sent
+
+Published protected Netlify deploy `6adee19d57537cc923d89114` at `https://oztimberfloor.netlify.app`; provider confirms one function, `resend-enquiry-notification`, is deployed. The site remains globally noindex and GA4 remains disabled. Owner authorised one controlled submission: `OZ-RESEND-TEST-20261026T051700Z-1`. Netlify stored it as submission `6adee2527533d5057805af74` with the intended supply-only, Laminate, source-page and consent fields; the browser-level POST received the thank-you page. The function runs only for verified submissions and has no PII logging, so mailbox receipt is the remaining independent delivery confirmation. No WordPress, DNS, domain, indexing or GA4 setting changed.
+
+## 26 October 2026 — Resend verified-enquiry notification (local only)
+
+Owner approved the narrow Oz-only Resend integration after the `oztimberfloor.com.au` Resend domain was shown verified. Added a Netlify form-event function that runs only after Netlify verifies an `oz-flooring-enquiry` submission, preserves the existing honeypot/spam gate, sends its internal notification from `Oz Timber Floor <info@oztimberfloor.com.au>` to the same approved inbox and uses the customer's address only as Reply-To. The notification has an idempotency key and does not log enquiry data. The Resend key remains provider-managed and is never stored in source. Local Resend, analytics and public-package checks pass. No deploy, form submission, Resend API request, provider setting, DNS, WordPress, indexing or GA4 action occurred.
+
+## 8 October 2026 — final migration preparation (local/read-only)
+
+Completed the authorised final preparation against the current candidate and the independent 8 October audit. The local migration gate passes with zero blocker/high/medium findings; the protected package contains 772 sitemap URLs. Produced the final readiness, cutover and rollback plans plus a 539-route review and 816-row legacy-image inventory in `docs/release/final-migration-2026-10-08/`. Four representative legacy source images remain live as JPEGs on WordPress, but no unproven image redirect was added. No commit, push, deployment, DNS/domain, WordPress, GA4, indexing or live enquiry action occurred. Final cutover remains conditional on the full Crazy Domains zone export, an image-priority/equivalence decision and explicit final domain-change approval.
+
+## 8 October 2026 — DNS and rollback pre-check (read-only)
+
+Prepared the cutover/rollback pre-check at `docs/release/CUTOVER_PRECHECK_2026-10-08.md`. Public DNS currently resolves the WordPress apex to `35.213.187.160`, uses Crazy Domains nameservers and has the three existing MailSpamProtection MX records. The verified Oz Netlify project still has no custom domain, while Forms remains enabled and the latest protected deploy remains current. No DNS, WordPress, Netlify domain, email, Google, indexing or analytics setting changed. A complete Crazy Domains zone export remains required before the separately authorised cutover.
+
+## 8 October 2026 — Latest protected Netlify publication
+
+Published the validated current package directly to the verified Oz Timber Floor Netlify project: deploy `6ac6de9bcdf718dd3f8db825`, https://oztimberfloor.netlify.app, package SHA-256 `297cdfdb157ec85930c55496b031599625ebbce7d8491af271b5f67e38607f9a`. Live HTTPS checks confirm the home page and contact page return 200 with `X-Robots-Tag: noindex, nofollow`; the 772-entry sitemap and consent-control code are present. GA4 remains unconfigured and no custom domain, WordPress, DNS, email-hosting, indexing or production analytics setting changed. This is a protected Netlify publication, not the final domain migration.
+
+## 8 October 2026 — GA4 consent control (local only)
+
+Added a first-party analytics choice for the eventual production domain. GA4 remains off until a visitor accepts optional analytics; rejecting it blocks the GA loader and subsequent events. The control links to the existing Privacy Policy and can be reopened from the footer as “Cookie settings”. It renders only when the canonical production host has an approved GA4 measurement ID, so local, draft and Netlify preview environments stay analytics-free and do not display the prompt. The existing event contract and production/preview analytics checks pass. No GA4 setting, analytics ID, Netlify deploy, production publication, domain or DNS setting changed.
+
+## 8 October 2026 — StoneFloor supplier reconciliation (local only)
+
+Supersedes the Oak Beige routing uncertainty below: general Stone Floor restored with supplier-listed timber and tile collections, and Oak Beige legacy URL now points there, not Tile & Marble. Matched 22 listed designs to existing records; corrected seven legacy product destinations and removed the general-range redirect to Hybrid. Source sitemap now 772 (one restored range). Product noindex holds retained. Targeted routing, catalogue, analytics, desktop/mobile browser and Oak Beige prefill checks pass; no submission. Old 771-route sealed evidence/package untouched and no full release GO claimed. See `docs/migration-october-2026-followup/STONEFLOOR_SUPPLIER_MATCH_2026-10-08.md`. No deployment or DNS changes.
+
+### Later owner correction — Oak Beige retired
+
+Oak Beige was absent from the current StoneFloor supplier listing and the owner instructed retirement. Its page now says discontinued and remains noindex; its legacy URL still redirects to general Stone Floor alternatives, not Tile & Marble. The general range no longer presents an Oak Beige enquiry. Catalogue, routing, analytics and diff checks pass; no deployment or DNS changes.
+
+## 8 October 2026 — owner colour corrections (local only)
+
+Natural Oak Brown and Interlaken marked discontinued; existing Aquastop alternative-range redirects retained. Helena Oak retained in ETF 9mm Hybrid with wrong Alaskan image removed. Oak Beige retained in Stone Floor with misleading tile copy/image removed; withdrawn retirement instruction not applied. Existing noindex holds, 771 sitemap entries and routing preserved. Oak Beige's tile/marble redirect relevance remains unresolved. Catalogue, analytics, targeted metadata/link/local-routing and diff checks pass. No fresh browser/full release validation or package rebuild; prior protected preview remains unchanged. Details: `docs/migration-october-2026-followup/OWNER_COLOUR_CORRECTIONS_2026-10-08.md`.
+
 ## Last Updated
 
-7 October 2026
+8 October 2026
+
+### GA4 diagnostic receipt and final enquiry confirmed — 8 October 2026
+
+Final preview enquiry token `OZ-RELEASE-TEST-20261007T222924Z-4` is now confirmed delivered to the owner's inbox and shown under Netlify Verified submissions with correct Beach/Aquastop/Laminate, supply-only, source, product slug and consent fields. Preserved pending results are superseded by `docs/release/october-final-preview-enquiry-test/DELIVERY_CONFIRMED.json`; no additional enquiry was sent.
+
+Owner-authorised isolated GA4 diagnostic PASS: actual DebugView in property `326951899`, stream `G-EWSMKKM9N8`, showed exactly one `quote_submit` labelled `OZ-GA4-TEST-20261008-2`; correct safe context inspected; refresh and direct thank-you access did not duplicate the success event. Unchanged local analytics contract passed. Test simulated accepted state without a form submission; it is not a live-domain production test. Initial diagnostic adapter failure preserved and corrected only in disposable test code. Both temporary diagnostic drafts were deleted after use; release preview/package and primary publication remain unchanged, release analytics remains disabled, and no GA4 property or key-event settings changed. Details: `docs/release/ga4-final-test-2026-10-08/REPORT.md` and `RESULT.json`. Production analytics/key-event configuration, consent/settings review and separate cutover approval remain pending.
+
+### Owner confirmations and final-preview enquiry — 8 October 2026
+
+Vincent confirmed backup/recovery checklist item 2 and physical-phone checklist item 6. Recorded as owner confirmations, not independent restore/device evidence. Newly authorised one additional controlled enquiry on final preview `6ac62bab5d09838900ed7085`: token `OZ-RELEASE-TEST-20261007T222924Z-4`, product Kronoswiss Aquastop Beach, supply-only enquiry. One Send enquiry click reached the thank-you page; refresh remained stable. Existing form detection and one email notification to `info@oztimberfloor.com.au` verified read-only. Actual provider record/classification, persisted fields and inbox delivery remain pending exact-token confirmation; no retry is authorised. See `docs/release/october-final-preview-enquiry-test/RESULT.json` and `ADDENDUM.md`. No website/provider settings, DNS, primary publication or analytics activation changed; earlier sealed evidence remains historical and unchanged.
 
 ## Current Branch
 
-October candidate being promoted through `dev` to `main`; entry HEAD `2cdf99368af7d963ae0e4aabeaeaaae8c01486dd`.
+`main` at `5fecd58f1cfce728047cf27c7659fd6fbee4e2d0`, with uncommitted Artisan Tile, Artisan Oak, ASPECT and De Marque corrections. The verified package has been published on the existing Netlify hostname; no commit, push, branch merge or WordPress/domain cutover.
+
+## Netlify-only publication completed — 7 October 2026
+
+### Later protected-preview verification addendum — 7 October 2026
+
+The new preview authority does not authorise another primary publication or business-domain cutover. Original approved package `bba6140043dd97023db9ad70d8b5ab19dfc1ba7cbc58339bc6e00d265e42c4c0` was uploaded unchanged to draft `6ac627edf40d435f58a83c6c`. Fresh HTTPS checks found four forced-rewrite targets serving older root HTML bodies. Synced only `hybrid.html`, `laminate.html`, `commercial-flooring.html` and `timber-floor-installation.html` with their already approved directory counterparts; protected routing, catalogue, sitemap, forms and analytics were not changed.
+
+The isolated replacement package is `182a515c276942cf64c091b87e11306d4fcc7da9103e667618d4d47555ab4b0c`, 6,260 files, with exactly four changed package hashes. Draft: https://6ac62bab5d09838900ed7085--oztimberfloor.netlify.app. Seven isolated validation commands passed, including 5,529 regression checks and current migration GO. Final browser checks pass 54 cells at 1440/390/320 and 15 prefill journeys, without submissions or analytics collection. The active public package matches the isolated replacement.
+
+Protected-preview verdict is conditional: Netlify-native redirects return `noindex` without `nofollow`; terminal responses retain `noindex, nofollow`. The strict all-response header requirement is not a pass. A native `/404/` to `/404` normalisation differs from the local fixture; an actually missing URL still returns 404. Detailed final HTTPS results, screenshots, preserved failed runs and the new manifest are in `docs/release/october-final-repairs-preview/REPORT.md` and `RELEASE_MANIFEST.json`.
+
+Primary published deploy remains `6ac5eaf69631bc9e67d50585`. Before/after WordPress and primary homepages are byte-identical; queried public DNS result sets and Netlify domain configuration are unchanged. No commit, push, merge, real enquiry, email, live GA4, primary publication or domain/DNS change. Historical SEO freeze failure and original sealed evidence remain untouched. Live migration remains HOLD for four mapping decisions, owner launch checks and separate cutover approval. Earlier “local only” statements below describe the earlier snapshot, not this later draft verification.
+
+### Fresh audit repairs — 7 October 2026, LOCAL ONLY
+
+The later audit brief authorises local implementation and testing only. Embedded Hardwood Collection cards now derive their count from the twelve published members, and every Kronoswiss Aquastop summary card uses the approved 8 / 12 / 14 mm range specification. Beach remains 14mm. Added narrow material comparisons on Hybrid/Laminate, commercial timber guidance and customer-facing installation copy. Added only `/sitemap_index.xml` → `/sitemap.xml` (301); all prior redirect bytes, retirements, holds, catalogue facts and sitemap membership are preserved.
+
+Fresh local gate GO with zero blocker/high/medium findings; 771 publication canonicals. All 539 legacy routes retain the audited 17 direct 200 / 508 one-hop 301-to-200 / 14 deliberate 410 outcomes. Existing Artisan Oak hardening assertion was updated to validate the exact approved retirement, with nine negative mutation checks; no blanket 410 exception. Historical SEO freeze remains FAIL against its 943-page baseline, which is not reset. Desktop/mobile and mocked enquiry evidence, current command results and 423-row mapping review are in `docs/migration-october-2026-final-repairs/REPORT.md`. No commit, push, deploy, live submission, DNS or live analytics change. The current Netlify deployment does not contain these new repairs.
+
+Delivery evidence clarification: Vincent supplied the matching Netlify CSV row and confirmed the test email arrived in the inbox, not spam. Product/range/category/source and consent matched the requested test. This is prior deployed-state evidence, not a new delivery test of this local package. Netlify internal classification is not a CSV field. Earlier pending-delivery statements below remain historical.
+
+Inbox update: Vincent confirmed receipt of the 7 October product-prefilled test email (`OZ-RELEASE-TEST-20261007T070514529Z-3`). Delivery is owner-confirmed; Netlify persisted-field and Verified/Spam verification remain pending exact-record evidence. No further test sent. See `docs/release/october-enquiry-test/OWNER_INBOX_CONFIRMATION.md`; the earlier pending-receipt entry below is historical.
+
+Latest delivery test: one owner-authorised product-prefilled synthetic enquiry submitted on 7 October using `info@oztimberfloor.com.au`, token `OZ-RELEASE-TEST-20261007T070514529Z-3`. Browser reached the thank-you page. Netlify persisted fields/spam state and inbox receipt remain unconfirmed; safety review blocked a newest-entry lookup that could expose unrelated customer data. No retry. Conservatively three total historical/current attempts used, zero remaining under the existing limit. Owner must provide matching inbox confirmation and exact test record/link or screenshot. Evidence: `docs/release/october-enquiry-test/`.
+
+Owner selected option 1: publish the latest Netlify version while leaving WordPress live. Promoted existing verified deploy `6ac5eaf69631bc9e67d50585` without rebuilding to `https://oztimberfloor.netlify.app/`. Provider confirms it is the published deploy; custom domain remains null. Package SHA-256 `a1667b2d7d1d217cce44faf8aed43d81c73ef393aff41b6840f4b371df5a14ee` is unchanged. Rollback deploy: `6ac5d55d2164040008cd8d5e`.
+
+Fresh checks on the published hostname pass 1,302 general HTTPS routes, 93 targeted cases, twenty desktop/mobile cells and twelve enquiry-prefill journeys. All 771 sitemap canonicals, De Marque redirects, Artisan Oak retirement, Artisan Tile destinations, noindex protection and disabled GA4 pass. No form submitted; no new inbox delivery claim. Domain/DNS, WordPress, forms configuration and analytics settings remain unchanged. Git changes remain uncommitted and have not been pushed. Publication receipt, fresh test evidence and manifest: `docs/release/october-netlify-publication/`. Earlier draft-only statements below are historical.
+
+## Protected draft verified — 7 October 2026
+
+Owner approved the next protected-preview step. Draft `6ac5eaf69631bc9e67d50585` is ready at `https://6ac5eaf69631bc9e67d50585--oztimberfloor.netlify.app/`, using the exact prebuilt public-only package SHA-256 `a1667b2d7d1d217cce44faf8aed43d81c73ef393aff41b6840f4b371df5a14ee` (6,260 files / 583,605,192 bytes). Provider confirms deploy-preview context and no publication timestamp. Published deploy remains `6ac5d55d2164040008cd8d5e`, custom domain remains null, and the existing `oz-flooring-enquiry` form is detected.
+
+Read-only HTTPS checks pass 1,302/1,302 general routes and 93/93 targeted cases, including 771 sitemap canonicals, four De Marque owner transitions, Artisan Oak 410 responses, Artisan Tile exact destinations, global noindex and public-package exclusions. Desktop/mobile browser checks pass twenty cells and twelve enquiry-prefill journeys; no script errors or horizontal overflow, required consent and visible submit verified. No form submitted or new inbox-delivery claim. GA4 remains disabled. Evidence and next owner checks: `docs/release/october-final-draft/VERIFICATION_ADDENDUM.md`. Earlier local-only statements below are historical.
+
+## Four De Marque duplicate owners consolidated — 7 October 2026, local only
+
+Owner's “fix it” approved the four previously listed exact Copper Brown, Dusk Grey, Matterhorn and Polar Ice consolidations. The wrongly named `wide-plank-water-resistant-laminate-*` pages now have forced permanent redirects to matching existing De Marque pages, including direct index-file paths. Eight incoming rules now name the final owner directly, preserving existing ordering, force behaviour and physical-file shadowing. Six pages' related-product references/enquiry parameters were corrected. Four complete records were moved to `productAliases`, not discarded; all other active catalogue records and existing noindex controls are unchanged. Four exact alias overrides added, four sitemap entries removed, fallback aliases carry owner canonicals and noindex with no Product schema. ASPECT remains fourteen colours.
+
+Fresh local migration gate: GO, zero blocker/high/medium findings; 771 publication canonicals and sitemap URLs, 1,971 redirect rules, 1,404 unique noindex routes, 362 physical redirect-only routes. Protected build, field integrity, twenty routing variants, preservation of 347 existing physical-shadow rule behaviours, ten desktop/mobile browser cells and eight enquiry-prefill journeys pass. Browser verification used a localhost HTTP fixture; no form submission. Netlify HTTPS behaviour is not yet verified for this candidate, and local GO does not authorise domain cutover. The pending-approval notes below are historical and superseded. Details: `docs/demarque-consolidation/REPORT.md`.
+
+## ASPECT supplier correction — 7 October 2026, local only
+
+Verified eighteen exact supplier product pages. Corrected fourteen ASPECT products to 12mm laminate, their per-product dimensions/pack coverage, range name, listings and enquiry prefill. Removed eight unrelated timber entries from the ASPECT range listing without deleting their records/pages or lifting existing holds. Corrected four misclassified products and their four existing De Marque counterparts to 15mm engineered timber, 2200 × 240mm with nested shorts and 2.112m² packs. Wattleseed's conflicting supplier width is deliberately unconfirmed.
+
+Protected build, catalogue field integrity and entry-bound regression pass: 22 records, 29 HTML pages, 2,091 link destinations and 374 image references. Browser evidence covers 46 desktop/mobile cells and six prefill journeys without submitting forms. Redirects, sitemap, robots/canonical ownership, noindex overrides and unrelated catalogue records remain unchanged. Publication/sitemap remains 775 and redirect entries 1,963. The migration gate is still NO-GO: eight affected URLs are four duplicate identity pairs, with four duplicate title and four duplicate description warnings. The fourteen ASPECT missing-thickness failures are resolved; the four De Marque old routes also have verified thickness, but require exact owner consolidation approval rather than a noindex workaround.
+
+Pending owner decision: redirect Copper Brown, Dusk Grey, Matterhorn and Polar Ice from their four `wide-plank-water-resistant-laminate-*` product URLs to the four matching existing `de-marque-oak-*` product URLs, excluding only the four duplicate sitemap entries. Not implemented or assumed approved. See `docs/aspect-correction/REPORT.md`. Earlier gate counts below are historical.
+
+## Artisan Oak retired — 7 October 2026, local only
+
+Owner explicitly confirmed discontinuation and instructed retirement. One range and twelve exact legacy Oak colours now have discontinued pages and forced 410 responses for legacy, physical and direct-file paths. Incorrect Hybrid destinations and the Oak-to-Tile catalogue alias are removed. Records remain archived as retired; no file/record deletion. Existing noindex controls retained. Artisan Tile fixes, Kronoswiss Artisan Oak colour names and all unrelated records/controls are unchanged.
+
+Protected build, field integrity, 123 scoped retirement checks and 26 desktop/mobile cells pass. Sitemap remains 775; physical noindex routes remain 1,400; redirect entries are 1,963. Migration gate remains NO-GO for eighteen existing Wide Plank blockers. No deployment, WordPress or DNS change; provider 410 behaviour awaits the next authorised preview. Details: `docs/artisan-oak-retirement/REPORT.md`. Earlier pending-Oak notes below are historical and superseded by this explicit retirement.
+
+## Artisan Tile supplier correction — 7 October 2026, local only
+
+Following protected promotion at `5fecd58f1cfce728047cf27c7659fd6fbee4e2d0`, the owner supplied Topdeck's current Artisan Tile range and requested migration fixes. Verified twelve Hybrid colours and product codes, 620 × 310 × 9mm dimensions and 1.5376m²/eight-piece packs. Updated twelve existing product records/pages, corrected Grigio/Madison timber-look wording, and narrowed ten generic Hybrid redirects to exact existing same-colour Artisan Tile pages. No deletion or Artisan Oak reclassification/retirement was performed. Source facts, protected-cohort dependencies and precise scope are documented in `docs/artisan-tile-migration/REPORT.md`.
+
+Protected build, field integrity, scoped alias/data/SEO regression and 26 desktop/mobile browser cells pass. Publication remains 775 sitemap URLs, 1,400 physical noindex routes and 1,938 redirect rules. The migration gate remains NO-GO with eighteen existing Wide Plank blockers; the separate twelve Artisan Oak mappings remain unresolved. These Tile changes are uncommitted and not deployed; WordPress, DNS, forms and live analytics are unchanged.
 
 ## Protected Netlify Promotion — 7 October 2026
 

@@ -1,0 +1,21 @@
+{
+  "verifiedAt": "2026-10-07",
+  "supplier": "Topdeck Flooring",
+  "rangeSource": "https://topdeckflooring.com.au/pages/hybrid-planks-topdeck-flooring-au#artisan-tile",
+  "ownerProvidedSource": "https://topdeckflooring.com.au/pages/our-range-timber-laminate-more-topdeck-flooring-au#hybrid-planks-artisan-tile",
+  "detailSources": ["https://topdeckflooring.com.au/products/artisan-grigio", "https://topdeckflooring.com.au/products/artisan-madison"],
+  "category": "Hybrid",
+  "dimensions": "620 x 310 x 9mm",
+  "packSizeM2": "1.5376",
+  "piecesPerPack": 8,
+  "format": "Plank (Tile Format)",
+  "installationMethod": "Floating Floor (Licensed Click System)",
+  "colours": {
+    "calacatta": "1201", "grigio": "1202", "monaco-brown": "1203",
+    "pietra-grey": "1204", "dover-grey": "1205", "black-maquina": "1206",
+    "crema-marfil": "1207", "jasper-grey": "1208", "valley-beige": "1209",
+    "volcano": "1210", "casper-white": "1211", "madison": "1212"
+  },
+  "correctGenericRedirects": ["grigio", "monaco-brown", "pietra-grey", "dover-grey", "black-maquina", "volcano", "madison", "casper-white", "jasper-grey", "valley-beige"],
+  "limits": "Current supplier listing confirms range identity and specifications, not Oz stock availability. Artisan Oak is a separate range; no Oak retirement, indexation or owner decision is implemented. Images, warranties, ratings and suitability are not changed."
+}

@@ -9,10 +9,10 @@ const out=path.resolve(process.env.OZ_FOLLOWUP_OUTPUT||'docs/migration-october-2
 const report={startedAt:new Date().toISOString(),mode:'fully intercepted browser; zero provider submissions, calls, email or GA4 requests',siteSha256:crypto.createHash('sha256').update(fs.readFileSync(publish+'/assets/site.js')).digest('hex'),tests:[],captures:[],failures:[]};
 const browser=await chromium.launch({headless:true,executablePath:'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'});
 const origin='https://oztimberfloor.com.au';
-async function fixture(width,host=origin,configured=true){
+async function fixture(width,host=origin,configured=true,analyticsChoice='accepted'){
  const ctx=await browser.newContext({viewport:{width,height:900}}),posts=[],outside=[];
  let mode='success',release;
- await ctx.addInitScript(()=>{window.__events=[];window.gtag=(...args)=>window.__events.push(args);});
+ await ctx.addInitScript(({choice})=>{window.__events=[];window.gtag=(...args)=>window.__events.push(args);if(choice)localStorage.setItem('oz-analytics-consent-v1',choice);},{choice:analyticsChoice});
  await ctx.route('**/*',async route=>{
   const req=route.request(),u=new URL(req.url());
   if(u.origin!==host){outside.push(u.origin);return route.abort();}
@@ -25,7 +25,12 @@ async function fixture(width,host=origin,configured=true){
   const rel=decodeURIComponent(u.pathname).slice(1),file=[rel||'index.html',rel.replace(/\/$/,'')+'/index.html'].find(f=>fs.existsSync(path.join(publish,f))&&fs.statSync(path.join(publish,f)).isFile());
   if(!file)return route.fulfill({status:404,body:'Missing fixture'});
   let body=fs.readFileSync(path.join(publish,file));
-  if(configured&&file==='assets/contact-config.js')body=Buffer.from(body.toString().replace('ga4MeasurementId: null','ga4MeasurementId: "G-EWSMKKM9N8"'));
+  if(file==='assets/contact-config.js'){
+   const source=body.toString();
+   body=Buffer.from(configured
+    ? source.replace(/ga4MeasurementId:\s*(?:null|["'][^"']*["'])/,'ga4MeasurementId: "G-EWSMKKM9N8"')
+    : source.replace(/ga4MeasurementId:\s*(?:null|["'][^"']*["'])/,'ga4MeasurementId: null'));
+  }
   const type={'.html':'text/html','.js':'text/javascript','.css':'text/css','.svg':'image/svg+xml','.webp':'image/webp','.jpg':'image/jpeg','.png':'image/png'}[path.extname(file)]||'application/octet-stream';
   return route.fulfill({status:200,contentType:type,body});
  });
@@ -115,6 +120,12 @@ for(const host of ['https://oztimberfloor.netlify.app','https://draft--oztimberf
  const f=await fixture(390,origin,false);await f.go('/contact/');await f.fill();await f.submit();await f.page.waitForURL('**/thank-you/');await f.ready();
  assert.equal((await f.events()).length,0,'Null production build configuration must suppress a pre-existing collector');
  report.tests.push({case:'disabled production environment suppresses existing collector',passed:true});await f.ctx.close();
+}
+{
+ const f=await fixture(390,origin,true,'rejected');await f.go('/contact/');await f.fill();await f.submit();await f.page.waitForURL('**/thank-you/');await f.ready();
+ assert.equal(f.posts.length,1,'Consent rejection must not block the enquiry submission');
+ assert.equal((await f.events()).filter(e=>e[0]==='event'&&e[1]==='quote_submit').length,0,'Rejected analytics consent must suppress quote_submit');
+ report.tests.push({case:'rejected analytics consent still submits form but suppresses analytics',passed:true});await f.ctx.close();
 }
 }catch(e){report.failures.push(e.stack);}finally{await browser.close();}
 report.success=!report.failures.length;report.endedAt=new Date().toISOString();fs.writeFileSync(path.join(out,'enquiry-regression.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));if(!report.success)process.exitCode=1;
