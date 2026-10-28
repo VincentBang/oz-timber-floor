@@ -2,6 +2,10 @@
 screenlog.0
 dist/
 .netlify/
+node_modules/
+docs/flooring-assistant/*.json
+docs/flooring-assistant/entry-site.*
+docs/flooring-assistant/evidence/
 
 # Private, machine-local migration and release evidence. These inputs must not
 # be published through the public Git repository or the Netlify site artifact.
@@ -12,3 +16,24 @@ docs/seo-migration/generated/catalogue-equity-manual-review-*.csv
 docs/migration-october-2026/current-migration-gate/
 docs/migration-october-2026-followup/private/
 docs/migration-october-2026-final-repairs/
+
+# Oz assistant secrets and machine-local GPT integration evidence.
+.env
+.env.*
+!.env.example
+docs/flooring-assistant/gpt-integration-2026-10-27/
+docs/flooring-assistant/gpt-hosted-2026-10-27/
+docs/flooring-assistant/gpt-luna-2026-10-27/
+docs/flooring-assistant/answer-quality-2026-10-27/
+docs/flooring-assistant/answer-quality-hosted-2026-10-27/
+docs/flooring-assistant/production-prep-2026-10-27/
+docs/flooring-assistant/production-approved-preflight-2026-10-27/
+docs/flooring-assistant/activation-2026-10-27/
+docs/flooring-assistant/mail-release-2026-10-28/
+docs/flooring-assistant/public-release-2026-10-28/
+
+# Private post-migration audit captures/provider metadata, never a public asset.
+docs/seo-growth/evidence/
+
+# Original portfolio evidence, QA captures and isolated build logs.
+docs/projects-redesign/evidence/

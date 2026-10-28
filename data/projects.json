@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "approval": {"date":"2026-10-28","basis":"Owner stated: these operon photos are my project that you can use","use":"Oz Timber Floor portfolio","scope":"Project photographs and documented visible details; no customer identity or unconfirmed suburb/specification"},
+  "projects": [
+    {"id":"herringbone-timber-stairs","title":"Herringbone timber & stairs","category":"Engineered timber","material":"Engineered timber","tags":["herringbone","engineered","stairs"],"location":"Sydney","description":"Herringbone flooring through a kitchen and living area, with a coordinated timber stair detail.","serviceUrl":"/engineered-timber-flooring/","publicApproved":true,"sourceFolder":"engineered-herringbone-timber-stair-sydney","photos":[
+      {"id":"kitchen-living","source":"finished-engineered-herringbone-timber-flooring-sydney-kitchen-living.jpg","alt":"Herringbone timber flooring around a kitchen island and adjoining living area","caption":"Herringbone kitchen and living area"},
+      {"id":"timber-stair","source":"finished-engineered-timber-stair-sydney.jpg","alt":"Timber stair treads and risers beside the adjoining timber floor","caption":"Coordinated timber stair detail"}
+    ]},
+    {"id":"wide-herringbone","title":"Wide-format herringbone","category":"Engineered timber","material":"Engineered timber","tags":["herringbone","engineered"],"location":"Sydney","description":"A wider herringbone format shown across kitchen and living spaces. The photographs show the scale and direction of the pattern.","serviceUrl":"/engineered-timber-flooring/","publicApproved":true,"sourceFolder":"wide-long-engineered-herringbone-flooring-sydney","photos":[
+      {"id":"kitchen","source":"finished-wide-long-engineered-herringbone-flooring-kitchen-sydney.jpg","alt":"Wide-format herringbone timber flooring in a kitchen","caption":"Wide herringbone kitchen"},
+      {"id":"living","source":"finished-wide-long-engineered-herringbone-flooring-living-room-sydney.jpg","alt":"Wide-format herringbone timber flooring across a living room","caption":"Herringbone through the living space"}
+    ]},
+    {"id":"chevron-timber","title":"Chevron engineered timber","category":"Engineered timber","material":"Engineered timber","tags":["chevron","engineered"],"location":"Sydney","description":"A chevron floor in a bright room, with a closer view of the continuous V-shaped pattern.","serviceUrl":"/engineered-timber-flooring/","publicApproved":true,"sourceFolder":"engineered-chevron-flooring-sydney","photos":[
+      {"id":"sunlit-room","source":"finished-engineered-chevron-flooring-sunlit-room-sydney.jpg","alt":"Chevron timber flooring in a sunlit room","caption":"Chevron in a sunlit room"},
+      {"id":"pattern-detail","source":"finished-engineered-chevron-flooring-oak-pattern-sydney.jpg","alt":"Close view of the angled boards in a chevron timber floor","caption":"Chevron pattern detail"}
+    ]},
+    {"id":"hybrid-preparation","title":"Hybrid after floor preparation","category":"Hybrid flooring","material":"Hybrid flooring","tags":["hybrid","preparation"],"location":"Sydney","description":"One documented project showing old flooring removal, subfloor preparation and the finished hybrid floor.","serviceUrl":"/hybrid/","publicApproved":true,"matchedSequence":true,"sourceFolder":"hybrid-floor-levelling-case-study","photos":[
+      {"id":"finished-living","source":"hybrid-flooring-after-levelling-open-plan-sydney.jpg","alt":"Finished timber-look hybrid flooring in an open-plan living area","caption":"Finished hybrid living area"},
+      {"id":"finished-bedroom","source":"hybrid-flooring-after-levelling-bedroom-sydney.jpg","alt":"Finished hybrid flooring in a bedroom","caption":"Finished hybrid bedroom"},
+      {"id":"removal","source":"before-floor-levelling-old-tile-removal-sydney.jpg","alt":"Old floor covering removed before subfloor preparation","caption":"Before: old flooring removal"},
+      {"id":"preparation","source":"before-floor-levelling-sydney-subfloor-preparation.jpg","alt":"Exposed subfloor during preparation before the new flooring","caption":"During: subfloor preparation"},
+      {"id":"levelled-living","source":"after-floor-levelling-sydney-living-area.jpg","alt":"Prepared levelled surface in the living area before flooring installation","caption":"During: prepared living-area base"}
+    ]},
+    {"id":"engineered-stair-area","title":"Engineered timber stair area","category":"Timber stairs","material":"Engineered timber","tags":["engineered","stairs"],"location":"Sydney","description":"Straight-plank timber through a stair area, showing the relationship between the landing, stair finish and adjoining floor.","serviceUrl":"/timber-floor-installation/","publicApproved":true,"sourceFolder":"engineered-straight-plank-direct-stick-sydney","photos":[
+      {"id":"stair-area","source":"finished-engineered-straight-plank-direct-stick-stair-sydney.jpg","alt":"Straight-plank timber flooring and stairs viewed along the stair area","caption":"Engineered timber stair area"}
+    ]},
+    {"id":"spotted-gum-stairs","title":"Spotted gum stair details","category":"Timber stairs","material":"Spotted gum, as recorded in the supplied project source","tags":["stairs"],"location":"Sydney","description":"Timber stair finishing with a rounded step detail. The photographs show the grain and relationship between adjoining stair surfaces.","serviceUrl":"/timber-floor-installation/","publicApproved":true,"sourceFolder":"engineered-spotted-gum-rounded-stair-sydney","photos":[
+      {"id":"rounded-step","source":"finished-spotted-gum-rounded-stair-step-sydney.jpg","alt":"Rounded timber stair step showing spotted gum grain","caption":"Rounded timber step"},
+      {"id":"timber-stairs","source":"finished-engineered-spotted-gum-timber-stair-sydney.jpg","alt":"Finished spotted gum timber stair treads","caption":"Spotted gum stair finish"}
+    ]},
+    {"id":"floor-levelling","title":"Floor levelling details","category":"Floor preparation","material":null,"tags":["preparation"],"location":"Sydney","description":"Prepared floor surfaces photographed before the final floor covering. These photographs are a separate project, not the before stage of the timber galleries.","serviceUrl":"/floor-levelling/","publicApproved":true,"sourceFolder":"finished-floor-levelling-sydney","photos":[
+      {"id":"prepared-room","source":"finished-floor-levelling-sydney-reflective-surface.jpg","alt":"Prepared floor-levelling surface across an interior room","caption":"Prepared floor surface"},
+      {"id":"sunlit-base","source":"finished-floor-levelling-sydney-sunlit-room.jpg","alt":"Levelled floor base in a sunlit room before the floor covering","caption":"Levelled room before flooring"},
+      {"id":"doorway","source":"finished-floor-levelling-sydney-doorway-detail.jpg","alt":"Prepared floor surface at a doorway","caption":"Preparation at a doorway"}
+    ]}
+  ]
+}

@@ -333,10 +333,10 @@
     },
     {
       "source": "/product/stone-floor-oak-beige/",
-      "target": "/ranges/stone-floor-tile/",
-      "semanticMatch": "exact-range",
+      "target": "/ranges/stone-floor/",
+      "semanticMatch": "retired",
       "decision": "redirect-range",
-      "note": "The exact product remains controlled/noindex; preserve its product-family intent through the verified indexable Stone Floor Tile range."
+      "note": "Superseded by owner-confirmed 2026-10-08 retirement and 2026-10-26 URL ledger: general Stone Floor offers alternatives, not an exact replacement. See docs/migration-october-2026-followup/STONEFLOOR_SUPPLIER_MATCH_2026-10-08.md. Exact page remains noindex."
     },
     {
       "source": "/product/storm-royal-white-oak/",
@@ -361,10 +361,10 @@
     },
     {
       "source": "/product/stone-floor-stone-oak/",
-      "target": "/ranges/stone-floor-tile/",
-      "semanticMatch": "exact-range",
+      "target": "/ranges/stone-floor/",
+      "semanticMatch": "retired",
       "decision": "redirect-range",
-      "note": "The exact product remains controlled/noindex; preserve its product-family intent through the verified indexable Stone Floor Tile range."
+      "note": "Owner retired this legacy colour from Oz Timber Floor's offer on 2026-10-28. Manufacturer discontinuation is not independently confirmed. General Stone Floor options are alternatives, not an exact replacement."
     },
     {
       "source": "/product/storm-new-england-blackbutt/",
@@ -396,10 +396,10 @@
     },
     {
       "source": "/product/stone-floor-blackbutt/",
-      "target": "/ranges/stone-floor-tile/",
+      "target": "/ranges/stone-floor-timber/",
       "semanticMatch": "exact-range",
       "decision": "redirect-range",
-      "note": "The exact product remains controlled/noindex; preserve its product-family intent through the verified indexable Stone Floor Tile range."
+      "note": "Superseded by the 2026-10-08 supplier reconciliation: exact Blackbutt colour is in the Timber Design family, not Tile. Family-qualified listed record is stone-floor-timber-blackbutt; exact product remains noindex."
     },
     {
       "source": "/product/swish-oak-raw-caramel/",
@@ -410,10 +410,10 @@
     },
     {
       "source": "/product/stone-floor-white-wash/",
-      "target": "/ranges/stone-floor-tile/",
-      "semanticMatch": "exact-range",
+      "target": "/ranges/stone-floor/",
+      "semanticMatch": "retired",
       "decision": "redirect-range",
-      "note": "The exact product remains controlled/noindex; preserve its product-family intent through the verified indexable Stone Floor Tile range."
+      "note": "Owner retired this legacy colour from Oz Timber Floor's offer on 2026-10-28. Manufacturer discontinuation is not independently confirmed. General Stone Floor options are alternatives, not an exact replacement."
     }
   ],
   "catalogueFallbacks": [
@@ -615,7 +615,7 @@
     },
     {
       "route": "/products/stone-floor-stone-oak/",
-      "target": "/ranges/stone-floor-tile/"
+      "target": "/ranges/stone-floor/"
     },
     {
       "route": "/products/storm-new-england-blackbutt/",
@@ -643,7 +643,7 @@
     },
     {
       "route": "/products/stone-floor-white-wash/",
-      "target": "/ranges/stone-floor-tile/"
+      "target": "/ranges/stone-floor/"
     }
   ],
   "candidatePolicy": "Prefer an exact indexable product; otherwise use its verified indexable catalogue parent range. Use a reviewed category only when no publishable exact product or range exists."

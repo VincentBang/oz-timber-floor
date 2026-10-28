@@ -5,6 +5,8 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { createPublicationInventory } from "./publication-inventory.mjs";
 import { artisanRetirementIssues } from "./approved-artisan-retirement-check.mjs";
+import {parseMigrationRules,indexLiteralRules,stoneFloorFamilyCandidates,supersededHistoricalTarget} from './migration-rule-evidence.mjs';
+import {approvedStonefloorSource,stonefloorRetirementIssues} from './approved-stonefloor-legacy-retirement.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const domain = "https://oztimberfloor.com.au";
@@ -17,6 +19,8 @@ const ownership = JSON.parse(fs.readFileSync(path.join(root, "data", "seo-keywor
 const catalogueQuality = JSON.parse(fs.readFileSync(path.join(generatedDir, "catalogue-quality-report.json"), "utf8"));
 const rawCatalogue = JSON.parse(fs.readFileSync(path.join(root, "data", "product-catalogue.json"), "utf8"));
 const inventory = createPublicationInventory({ root, domain });
+const stonefloorApprovalBytes=fs.readFileSync(path.join(root,'config/stonefloor-legacy-retirement-2026-10-28.json'));
+const controls=JSON.parse(fs.readFileSync(path.join(root,'data/catalogue-quality-overrides.json'),'utf8'));
 
 function normalizeRoute(value) {
   const url = new URL(String(value || ""), domain);
@@ -61,24 +65,11 @@ function parseCsv(text) {
 }
 
 function redirectRules() {
-  const rules = [];
-  fs.readFileSync(path.join(root, "_redirects"), "utf8").split(/\r?\n/).forEach((raw, index) => {
-    const line = raw.trim();
-    if (!line || line.startsWith("#")) return;
-    const [source, destination, statusText = "301"] = line.split(/\s+/);
-    const status = Number.parseInt(statusText, 10);
-    rules.push({ line: index + 1, source: normalizeRoute(source), destination: normalizeRoute(destination), status, statusText, raw });
-  });
-  return rules;
+  return parseMigrationRules(fs.readFileSync(path.join(root, "_redirects"), "utf8"),normalizeRoute);
 }
 
 const rules = redirectRules();
-const rulesBySource = new Map();
-for (const rule of rules) {
-  const items = rulesBySource.get(rule.source) || [];
-  items.push(rule);
-  rulesBySource.set(rule.source, items);
-}
+const rulesBySource = indexLiteralRules(rules);
 
 const publicationRoutes = new Set(inventory.publicationRoutes);
 const sitemapRoutes = new Set(inventory.sitemapRoutes);
@@ -208,6 +199,9 @@ function independentProductCandidate(sourceValue) {
   }
 
   const records = productsBySlug.get(slug) || [];
+  const familyCandidates=new Set(records.flatMap(record=>stoneFloorFamilyCandidates(record,rawCatalogue.products)).map(directIndexableRange).filter(Boolean));
+  if(familyCandidates.size>1)return {ambiguous:true,routes:[...familyCandidates].sort(),semanticMatch:'exact-range',basis:'ambiguous-supplier-qualified-colour'};
+  if(familyCandidates.size===1)return {route:[...familyCandidates][0],semanticMatch:'exact-range',basis:'dated-supplier-qualified-exact-colour'};
   const parentCandidates = new Set(records.flatMap((record) => exactRangeCandidates(record.rangeSlug)));
   if (parentCandidates.size > 1) {
     return { ambiguous: true, routes: [...parentCandidates].sort(), semanticMatch: "exact-range", basis: "ambiguous-catalogue-parent-ranges" };
@@ -284,6 +278,7 @@ const qualityFindings = [];
 const keywordFindings = [];
 const supplierOverlap = [];
 const independentCatalogueCandidates = [];
+const supersededHistoricalTargets = [];
 const seenEquitySources = new Set();
 
 for (const expected of expectations.reviewedRedirects) {
@@ -295,6 +290,7 @@ for (const expected of expectations.reviewedRedirects) {
     continue;
   }
   const rule = sourceRules[0];
+  if(rule.conditions.length)blockers.push({code:'reviewed-redirect-conditional-rule',source,conditions:rule.conditions});
   if (rule.status !== 301) blockers.push({ code: "reviewed-redirect-not-301", source, status: rule.statusText });
   if (rule.destination !== target) blockers.push({ code: "reviewed-redirect-target-changed", source, expected: target, actual: rule.destination });
   const targetRedirects = (rulesBySource.get(target) || []).filter((candidate) => candidate.status >= 300 && candidate.status < 400);
@@ -319,6 +315,7 @@ if (!fs.existsSync(equityPath)) {
       continue;
     }
     const sourceRule = sourceRules[0] || null;
+    if(sourceRule?.conditions.length)blockers.push({code:'gsc-source-conditional-rule',source,conditions:sourceRule.conditions});
     const retirementIssues = artisanRetirementIssues({source,rule:sourceRule,
       approvalBytes:fs.readFileSync(path.join(root,'config/artisan-oak-retirement.json')),
       range:rawCatalogue.ranges.find(r=>r.id==='artisan-oak'),
@@ -328,6 +325,9 @@ if (!fs.existsSync(equityPath)) {
       for(const code of retirementIssues)blockers.push({code,source});
       continue;
     }
+    const stonefloorId=source.match(/^\/product\/(stone-floor-(?:stone-oak|white-wash))\/$/)?.[1];
+    const stonefloorIssues=stonefloorRetirementIssues({source,rule:sourceRule,approvalBytes:stonefloorApprovalBytes,product:rawCatalogue.products.find(p=>p.id===stonefloorId),control:controls.pages[`/products/${stonefloorId}/`],html:stonefloorId?pageText(`/products/${stonefloorId}/`):'',sitemapRoutes:inventory.sitemapRoutes,publicationRoutes:inventory.publicationRoutes});
+    if(stonefloorIssues!==null)for(const code of stonefloorIssues)blockers.push({code,source});
     const directTarget = sourceRule && sourceRule.status >= 300 && sourceRule.status < 400
       ? sourceRule.destination
       : source;
@@ -340,7 +340,9 @@ if (!fs.existsSync(equityPath)) {
     }
     const csvTarget = normalizeRoute(row.current_redirect_target || row.old_path);
     if (csvTarget !== directTarget) {
-      blockers.push({ code: "gsc-equity-map-stale-target", source, csvTarget, actualTarget: directTarget });
+      const evidence={bytes:fs.readFileSync(equityPath),source,csvTarget,actualTarget:directTarget,approvalBytes:stonefloorApprovalBytes};
+      if(supersededHistoricalTarget(evidence))supersededHistoricalTargets.push({source,csvTarget,currentTarget:directTarget,basis:approvedStonefloorSource(source,stonefloorApprovalBytes)?'2026-10-28-owner-retirement-receipt; original historical CSV unchanged':source==='/oak-flooring-sydney/'?'2026-10-26-approved-oak-owner-restoration; original historical CSV unchanged':'2026-10-08-owner-supplier-decision; original historical CSV unchanged'});
+      else blockers.push({ code: "gsc-equity-map-stale-target", source, csvTarget, actualTarget: directTarget });
     }
 
     const independent = independentProductCandidate(source) || independentRangeCandidate(source);
@@ -449,7 +451,7 @@ const summary = {
   supplierPairsNeedingReview: supplierOverlap.filter((item) => item.status !== "differentiated").length,
   blockers: blockers.length,
 };
-const report = { generatedAt: new Date().toISOString(), summary, blockers, independentCatalogueCandidates, keywordFindings, supplierOverlap, qualityFindings };
+const report = { generatedAt: new Date().toISOString(), summary, blockers, supersededHistoricalTargets, independentCatalogueCandidates, keywordFindings, supplierOverlap, qualityFindings };
 fs.writeFileSync(path.join(generatedDir, "seo-migration-hardening-report.json"), `${JSON.stringify(report, null, 2)}\n`);
 fs.writeFileSync(path.join(generatedDir, "seo-migration-hardening-report.md"), [
   "# SEO migration hardening report",
@@ -470,7 +472,7 @@ fs.writeFileSync(path.join(generatedDir, "seo-migration-hardening-report.md"), [
 ].join("\n"));
 
 if (blockers.length) {
-  process.stderr.write(`SEO migration hardening FAIL: ${blockers.length} blocker(s). See docs/seo-migration/generated/seo-migration-hardening-report.json.\n`);
+  process.stderr.write(`SEO migration hardening FAIL: ${blockers.length} blocker(s). See ${path.join(generatedDir,'seo-migration-hardening-report.json')}.\n`);
   process.exitCode = 1;
 } else {
   process.stdout.write(`SEO migration hardening PASS: ${summary.reviewedRedirects} semantic redirects, ${summary.equityRows} GSC decisions and ${summary.keywordClusters} keyword owners verified; ${summary.indexableCatalogueQualityFindings} catalogue page(s) remain in controlled quality review.\n`);

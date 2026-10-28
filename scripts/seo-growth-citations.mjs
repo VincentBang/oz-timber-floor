@@ -1,0 +1,6 @@
+import fs from 'node:fs';import {ORIGIN,readUrl} from './seo-growth-health.mjs';
+const out='docs/seo-growth/evidence/2026-10-28',audit=JSON.parse(fs.readFileSync(out+'/AI_OFFLINE_FINAL.json')),paths=new Map();
+for(const r of audit.rows)for(const s of r.sources)paths.set(s.href,s.expectedStatus||200);
+for(const p of ['/product/stone-floor-oak-beige/','/product/stone-floor-blackbutt/','/product-category/bamboo/'])paths.set(p,null);
+const rows=[];for(const [route,expectedStatus]of paths){try{const r=await readUrl(ORIGIN+route);rows.push({route,expectedStatus,status:r.status,finalUrl:r.finalUrl,hops:r.hops,pass:expectedStatus===null?null:r.status===expectedStatus,error:r.error||null});}catch{rows.push({route,expectedStatus,pass:false,error:'network_or_timeout'});}}
+const result={at:new Date().toISOString(),mode:'public-get-only-transport-not-semantic-proof',rows,failures:rows.filter(r=>r.pass===false),providerWrites:0,paidCalls:0};fs.writeFileSync(out+'/CITATION_LINKS.json',JSON.stringify(result,null,2),{flag:'wx'});console.log(JSON.stringify({routes:rows.length,failures:result.failures,legacy:rows.filter(r=>r.expectedStatus===null)},null,2));if(result.failures.length)process.exitCode=1;

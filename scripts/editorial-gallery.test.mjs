@@ -1,0 +1,16 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {parse} from 'parse5';
+import {editorialHTML} from './editorial-gallery.mjs';
+const attr=(n,k)=>n.attrs?.find(a=>a.name===k)?.value;
+const all=(n,p)=>[...(p(n)?[n]:[]),...(n.childNodes||[]).flatMap(c=>all(c,p))];
+const text=n=>n.nodeName==='#text'?n.value:(n.childNodes||[]).map(text).join('');
+const read=f=>fs.readFileSync(f,'utf8');
+const files=['index.html','products/index.html','ranges/avala/index.html','products/avala-blackbutt/index.html','contact/index.html','projects/index.html','thank-you/index.html','privacy.html'];
+for(const file of files)test('presentation generation is idempotent: '+file,()=>assert.equal(editorialHTML(read(file),file),read(file)));
+test('product primary actions precede specifications in source DOM',()=>{const h=read('products/avala-blackbutt/index.html');assert.ok(h.indexOf('enquiry=stock')<h.indexOf('catalogue-specs'));assert.ok(h.indexOf('catalogue-gallery')<h.indexOf('<h1'));assert.match(h,/More enquiry options/);});
+test('all source catalogue cards stay server rendered and are not hidden',()=>{for(const file of ['products/index.html','ranges/index.html','ranges/avala/index.html']){const d=parse(read(file));const cards=all(d,n=>(attr(n,'class')||'').split(/\s/).some(c=>['product-card','range-summary-card'].includes(c)));assert.ok(cards.length>=10,file);assert.ok(cards.every(n=>attr(n,'hidden')===undefined));assert.ok(cards.every(n=>all(n,c=>c.tagName==='a'&&attr(c,'href')).length));}});
+test('real form contract and six enquiry paths retained',()=>{const d=parse(read('contact/index.html'));const f=all(d,n=>n.tagName==='form'&&attr(n,'name')==='oz-flooring-enquiry')[0];assert.ok(f);assert.equal(attr(f,'method'),'POST');assert.equal(attr(f,'action'),'/thank-you/');for(const name of ['form-name','company','source_page','product_slug','brand','range','category','current_page_url','referrer','utm_source','gclid','fbclid','consent'])assert.ok(all(f,n=>attr(n,'name')===name).length,name);const s=all(f,n=>attr(n,'name')==='enquiry_type')[0];assert.equal(all(s,n=>n.tagName==='option').length,6);});
+test('thank-you repair preserves three next-step cards and meaningful destinations',()=>{const d=parse(read('thank-you/index.html'));const links=all(d,n=>n.tagName==='a'&&(attr(n,'class')||'').includes('link-card'));assert.ok(links.every(n=>text(n).trim()));for(const href of ['/products/','projects/','guides/'].map(s=>s.startsWith('/')?s:'/'+s))assert.ok(links.some(n=>attr(n,'href')===href));for(const label of ['We review the enquiry','We confirm the pathway','We contact you directly'])assert.equal(all(d,n=>n.tagName==='h3'&&text(n)===label).length,1);});
+test('presentation has reduced motion and no product colour filters',()=>{const css=read('assets/editorial-gallery.css');assert.match(css,/prefers-reduced-motion:reduce/);assert.ok(Array.from(css.matchAll(/(?:filter|backdrop-filter)\s*:([^;}]+)/g)).every(m=>m[1].trim()==='none'));const js=read('assets/editorial-gallery.js');assert.match(js,/prior=n.inert/);assert.match(js,/pair\[0\]\.inert=pair\[1\]/);});

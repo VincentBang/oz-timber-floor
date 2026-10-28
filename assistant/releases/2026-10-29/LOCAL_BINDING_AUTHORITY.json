@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "scope": "LOCAL_PRODUCTION_BINDING_PREPARATION_ONLY",
+  "owner": "Vincent",
+  "date": "2026-10-29",
+  "request": "ok finish the exact production binding and reconcile the remaining release gates locally, keep the $30 monthly cap, do not push or deploy yet",
+  "reviewedPreviewCorpus": "b462e1a614377bad4b399c122897c6bdb08ef9c4c9e585890fa550f4e68c9f60",
+  "productionCorpusBeforePrivacyRestoration": "a2892628335806e9e8b833bde1a3b1f93660ddbdb54b8812c16467f98cff0916",
+  "productionCorpus": "366e4e10b1b656d1bbe9a9942739f1998d178ab663947ba0e4e1ec046294b692",
+  "publicationCanonicals": 773,
+  "facts": 6744,
+  "unchangedReviewedFacts": 6743,
+  "restoredPolicyFact": {"path": "/privacy/", "id": "0202058161f9b1a21db772c9", "basis": "Byte-identical existing approved live disclosure and its existing live corpus fact; no new legal wording"},
+  "monthlyUsd": 30,
+  "dailyUsd": 1,
+  "prepareProductionPayload": true,
+  "publicActivationAuthorized": false,
+  "providerWritesAuthorized": false,
+  "gitPushAuthorized": false,
+  "deploymentAuthorized": false,
+  "paidCallsAuthorized": false
+}

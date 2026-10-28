@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "promptVersion": "oz-fact-plan-1",
+  "reviewState": "candidate-owner-review-required",
+  "reviewedModelId": null,
+  "rateTable": null,
+  "paidActivationApproved": false,
+  "nonOfferings": ["Bamboo"],
+  "atomicStoreAdapter": null,
+  "publicFields": ["category", "range", "colour", "thickness", "boardSize", "packSizeM2"],
+  "synonyms": {"engineered wood": "engineered timber", "leveling": "levelling", "supply and install": "supply install", "sub floor": "subfloor"},
+  "retirements": [{"name":"Artisan Oak","path":"/ranges/artisan-oak/","expectedStatus":410}],
+  "uncertainLegacyNames": ["Interlaken", "Natural Oak Brown", "Stone Floor Oak Beige", "Helena Oak"],
+  "limits": {"messageChars":2000,"bodyBytes":12288,"historyTurns":6,"evidenceTokens":6000,"maxOutputTokens":800,"timeoutMs":15000,"sessionMinute":6,"sessionDay":30,"ipMinute":12,"ipDay":100,"sessionConcurrent":2,"globalConcurrent":4,"globalDayCalls":200,"globalMonthCalls":1000,"dayBudgetUsd":5,"monthBudgetUsd":25}
+}

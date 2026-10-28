@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "approvedAt": "2026-10-28",
+  "authority": "Owner-approved local implementation following the explicit two-colour retirement and general-collection redirect proposal",
+  "businessDecision": "Retire Stone Oak and White Wash from Oz Timber Floor's offer; manufacturer discontinuation is not independently confirmed",
+  "scope": "Two legacy redirects, matching controlled references, retirement records and existing noindex product notices; no deployment",
+  "alternativesTarget": "/ranges/stone-floor/",
+  "semanticMatch": "alternatives-not-exact-replacement",
+  "products": [
+    {"id":"stone-floor-stone-oak","legacySource":"/product/stone-floor-stone-oak/","heldRoute":"/products/stone-floor-stone-oak/","beforeTarget":"/ranges/stone-floor-tile/","afterTarget":"/ranges/stone-floor/","status":301,"force":false},
+    {"id":"stone-floor-white-wash","legacySource":"/product/stone-floor-white-wash/","heldRoute":"/products/stone-floor-white-wash/","beforeTarget":"/ranges/stone-floor-tile/","afterTarget":"/ranges/stone-floor/","status":301,"force":false}
+  ],
+  "preserve": {"heldPagesNoindexFollow":true,"sitemapExcluded":true,"supplierNamesHidden":true,"sitemapPublicationCount":773,"otherRedirectsUnchanged":true,"otherCatalogueRecordsUnchanged":true},
+  "supplierEvidence": {"reviewedAt":"2026-10-28","urls":["https://stonefloor.com.au/tile-and-marble-design/","https://stonefloor.com.au/timber-design/"],"finding":"Neither exact name was listed in the captured collections; absence alone was not used as retirement authority","whiteWashIsNotAssumedWashedOak":true},
+  "deploymentApproved": false
+}

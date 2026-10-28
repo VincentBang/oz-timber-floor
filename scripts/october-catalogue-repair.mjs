@@ -93,7 +93,8 @@ update('ranges/kronoswiss-aquastop/index.html', html => {
     const s = card.match(/href="\/products\/([^/]+)\//)?.[1];
     const p = products.get(s);
     if (!p) return card;
-    return card.replace(/(<p class="product-meta"><span class="pill">Laminate<\/span>)<span class="pill">[^<]*<\/span>/, `$1<span class="pill">${p.thickness || 'Confirm thickness'}</span>`);
+    const thicknessText = (p.thickness || 'Confirm thickness').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    return card.replace(/(<p class="product-meta"><span class="pill">Laminate<\/span>)<span class="pill">[^<]*<\/span>/, `$1<span class="pill">${thicknessText}</span>`);
   });
   return html.replace(/8 \/ 12 \/ 14 mm \(varies by colour\)/g, aqua.thickness).replace(/<span>8mm<\/span>/g, `<span>${aqua.thickness}</span>`).replace(/(<span>Thickness<\/span><strong>)8mm/, `$1${aqua.thickness}`);
 });

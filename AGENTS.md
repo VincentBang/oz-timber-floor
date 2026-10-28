@@ -36,6 +36,7 @@ Do not touch Operon files, folders, assets, data, deployment files, quote logic,
 - Do not run `git reset --hard`.
 - Do not run `git clean -fd` without first creating and reviewing a backup patch or stash.
 - Do not connect the production domain, change DNS, or deploy production unless Vincent explicitly asks.
+- Netlify credit policy (owner instruction, 28 October 2026): deploy only when Vincent explicitly requests a deployment. Batch approved work into one validated deployment where possible; do not create routine preview or production deployments, deploy on a schedule, or infer deployment authority from completed local work. The upgraded plan does not change this rule.
 
 ## Execution Loop
 

@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import {routing} from './october-route-fixture.mjs';
+import {editorialHTML} from './editorial-gallery.mjs';
 const e=JSON.parse(fs.readFileSync('config/artisan-oak-retirement.json'));
 const apply=process.argv.includes('--apply'),changes=[];
 const read=f=>fs.readFileSync(f,'utf8');
@@ -19,6 +20,7 @@ for(const route of routes){const c=controls[route];assert.ok(c,route);assert.equ
  .replace(/<meta\b[^>]*name="description"[^>]*>/,'<meta name="description" content="Artisan Oak has been discontinued. Browse current engineered timber flooring alternatives from Oz Timber Floor.">')
  .replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/g,'')
  .replace(/<main\b[^>]*>[\s\S]*?<\/main>/,`<main id="main-content"><section class="section"><div class="shell"><p class="eyebrow">Discontinued range</p><h1>${title}</h1><p>Artisan Oak has been discontinued and is no longer available to order.</p><p>Artisan Tile is a separate hybrid flooring range. It is not a replacement for Artisan Oak.</p><p>You can browse our current engineered timber options below. These are alternatives, not the same product.</p><div class="button-row"><a class="button" href="/engineered-timber-flooring/">Browse engineered timber</a><a class="button-secondary" href="/contact/">Contact us</a></div></div></section></main>`);
+ if(old.includes('data-editorial-version="1"'))html=editorialHTML(html,f);
  assert.ok(/noindex/.test(html));assert.ok(!/"@type"\s*:\s*"Product"/.test(html));update(f,html);
 }
 update('data/product-catalogue.json',JSON.stringify(d,null,2)+'\n');update('data/catalogue-quality-overrides.json',JSON.stringify(overrides,null,2)+'\n');

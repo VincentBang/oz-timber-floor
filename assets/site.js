@@ -417,7 +417,9 @@ document.addEventListener("DOMContentLoaded", function () {
     var call = document.createElement("a");
     call.className = "button-secondary mobile-nav-call";
     call.href = "tel:" + contact.phoneHref;
-    call.textContent = "Call " + contact.phoneDisplay;
+    call.textContent = "Call";
+    call.setAttribute("aria-label", "Call " + contact.phoneDisplay);
+    call.title = contact.phoneDisplay;
     call.setAttribute("data-mobile-call", "true");
     actions.appendChild(call);
   }
@@ -851,6 +853,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (message && product && !message.value) {
     message.value = "I am enquiring about " + product + ". Please confirm " + (select && select.value === "stock" ? "stock availability and lead time." : "the best supply or installation options.");
+    message.dataset.enquiryDefault = message.value;
+    message.addEventListener("input", function () { delete message.dataset.enquiryDefault; });
   }
 
   document.querySelectorAll("[data-set-enquiry]").forEach(function (link) {
@@ -982,6 +986,70 @@ document.addEventListener("DOMContentLoaded", function () {
       if (intent) trackEnquiryIntent(intent);
     });
   });
+
+  // Mobile UX tracking bridge: begin
+  // Late-created dock links reuse the existing consent gate and payloads.
+  document.addEventListener("oz:mobile-links-ready", function (event) {
+    var links = event.detail && event.detail.links;
+    if (!document.querySelector("body[data-mobile-page]") || !Array.isArray(links)) return;
+    links.forEach(function (link) {
+      if (!link || !link.closest(".mobile-context-dock") || link.getAttribute("data-mobile-tracking-ready") === "true") return;
+      link.setAttribute("data-mobile-tracking-ready", "true");
+      var href = link.getAttribute("href") || "";
+      if (href.indexOf("tel:") === 0) {
+        link.addEventListener("click", function () { trackEvent("phone_click", analyticsPayload({ event_category: "lead" })); });
+      } else {
+        var intent = "";
+        try {
+          var destination = new URL(href, window.location.origin);
+          if (destination.origin === window.location.origin && destination.pathname === "/contact/") intent = normalizeEnquiry(destination.searchParams.get("enquiry"));
+        } catch (error) {}
+        if (intent) link.addEventListener("click", function () { trackEnquiryIntent(intent); });
+      }
+    });
+  });
+  // Mobile UX tracking bridge: end
+
+  // Flooring assistant bridge: begin
+  // Only enums enter the existing consent/production-host gate. Never chat text.
+  document.addEventListener("oz:assistant-event", function (event) {
+    var detail = event.detail || {};
+    var names = ["assistant_open", "assistant_question_sent", "assistant_answer_shown", "assistant_source_click", "assistant_handoff", "assistant_fallback", "assistant_feedback"];
+    var reasons = ["open", "in_scope", "source", "supported", "confirmation", "unavailable", "review", "helpful", "not_helpful"];
+    if (names.indexOf(detail.name) < 0 || reasons.indexOf(detail.reason) < 0) return;
+    trackEvent(detail.name, { event_category: "assistant", assistant_reason: detail.reason });
+  });
+  function loadAssistantScript(source, callback) {
+    if (!document.head) return;
+    var script = document.createElement("script");
+    script.src = source;
+    if (callback) script.onload = callback;
+    document.head.appendChild(script);
+  }
+  // Keep even the small launcher/config requests out of the hero's load path.
+  function startAssistantAfterLoad() {
+    var start = function () {
+      loadAssistantScript("/assets/flooring-assistant-config.js", function () {
+        var assistant = window.OZ_FLOORING_ASSISTANT;
+        if (assistant && assistant.enabled) loadAssistantScript("/assets/flooring-assistant-loader.js");
+      });
+    };
+    if (window.requestIdleCallback) window.requestIdleCallback(start, { timeout: 2000 });
+    else window.setTimeout(start, 0);
+  }
+  if (document.head && typeof window.addEventListener === "function") {
+    if (document.readyState === "complete") startAssistantAfterLoad();
+    else window.addEventListener("load", startAssistantAfterLoad, { once: true });
+  }
+  if (window.location.pathname === "/contact/" && (window.location.hash || "").indexOf("#oz-assistant-draft") === 0) {
+    var assistantStyle = document.createElement("link");
+    assistantStyle.rel = "stylesheet";
+    assistantStyle.href = "/assets/flooring-assistant.css";
+    assistantStyle.setAttribute("data-assistant-style", "true");
+    document.head.appendChild(assistantStyle);
+    import("/assets/flooring-assistant-handoff.js").then(function (adapter) { adapter.receiveHandoff(); }).catch(function () {});
+  }
+  // Flooring assistant bridge: end
 
   document.querySelectorAll("[data-contact-form]").forEach(function (form) {
     form.addEventListener("focusin", function () {

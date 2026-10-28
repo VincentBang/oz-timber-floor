@@ -1,0 +1,83 @@
+{
+  "at": "2026-10-27T22:13:23.108Z",
+  "httpStatus": 200,
+  "body": {
+    "status": "PASS",
+    "providerRequests": 1,
+    "phase": "provider",
+    "httpStatus": 200,
+    "error_code": null,
+    "error_type": null,
+    "error_param": null,
+    "completed": true,
+    "model": "gpt-6-luna",
+    "cost": 0.0000886,
+    "usage": {
+      "input_tokens": 551,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 67,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 618
+    },
+    "selectedFactCount": 3,
+    "allFactIdsGrounded": true,
+    "syntheticAnswerFacts": [
+      {
+        "field": "faq",
+        "value": "What is engineered timber flooring? Engineered timber flooring uses a real timber veneer over a multi-layer core. It gives the look and feel of genuine timber flooring with construction chosen for stability, durability and easier installation across many Sydney homes, apartments and commercial interiors.",
+        "title": "Engineered timber flooring supply and installation in Sydney"
+      },
+      {
+        "field": "guidance",
+        "value": "Timber-look and selected tile-look hybrid flooring for homes, apartments, rentals and suitable light commercial spaces.",
+        "title": "Hybrid flooring supply and installation in Sydney"
+      },
+      {
+        "field": "guidance",
+        "value": "Engineered timber should be selected with the timber surface, board construction, installation method, subfloor condition and project setting in mind.",
+        "title": "Engineered timber flooring supply and installation in Sydney"
+      }
+    ]
+  },
+  "before": {
+    "control": {
+      "enabled": false,
+      "profileSha256": "21b425ddbb2cfc9511f4c3b6923264cefdb5551804691f0561c9e594219e80d5"
+    },
+    "hash": "d6350fd9cab5b7987e774c05b533d2c63b91d9ced6df4a14e4a89d5e0167f7eb",
+    "money": {
+      "bd:2026-10-27": 0.0216886,
+      "bm:2026-10": 0.0216886
+    },
+    "calls": {
+      "gd:2026-10-27": 9,
+      "gm:2026-10": 9
+    },
+    "activeReservations": 0
+  },
+  "after": {
+    "control": {
+      "enabled": false,
+      "profileSha256": "21b425ddbb2cfc9511f4c3b6923264cefdb5551804691f0561c9e594219e80d5"
+    },
+    "hash": "7fac9a6034e49ebdde424884d4d341519ddcd44de6353ae6380c9f76715a00d9",
+    "money": {
+      "bd:2026-10-27": 0.0217772,
+      "bm:2026-10": 0.0217772
+    },
+    "calls": {
+      "gd:2026-10-27": 10,
+      "gm:2026-10": 10
+    },
+    "activeReservations": 0
+  }
+}

@@ -1,0 +1,492 @@
+{
+  "schemaVersion": 1,
+  "generatedFrom": "data/projects.json and approved local originals",
+  "photos": [
+    {
+      "projectId": "herringbone-timber-stairs",
+      "photoId": "kitchen-living",
+      "width": 1118,
+      "height": 944,
+      "variants": [
+        {
+          "url": "/assets/images/projects/herringbone-timber-stairs/kitchen-living-480.webp",
+          "width": 480,
+          "height": 405,
+          "bytes": 15106,
+          "sha256": "7f7487027abece985f15731294db93065baf8214240fa0115e811992baa87caa"
+        },
+        {
+          "url": "/assets/images/projects/herringbone-timber-stairs/kitchen-living-960.webp",
+          "width": 960,
+          "height": 811,
+          "bytes": 54702,
+          "sha256": "09be2cb11e7ddfc04ecb5278eb7f0bf1f11c381b943f5e28a014dfe67b7749f7"
+        },
+        {
+          "url": "/assets/images/projects/herringbone-timber-stairs/kitchen-living-1118.webp",
+          "width": 1118,
+          "height": 944,
+          "bytes": 77474,
+          "sha256": "db877d2ac5857672330daaaa00a5302b231551265ae664acd7c339e5903fd8be"
+        }
+      ]
+    },
+    {
+      "projectId": "herringbone-timber-stairs",
+      "photoId": "timber-stair",
+      "width": 1125,
+      "height": 1500,
+      "variants": [
+        {
+          "url": "/assets/images/projects/herringbone-timber-stairs/timber-stair-480.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 19884,
+          "sha256": "1f696b1329fcb2fc7f9fc925d962bf00c49d765c9bf4a1f948340afba27fa791"
+        },
+        {
+          "url": "/assets/images/projects/herringbone-timber-stairs/timber-stair-960.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 60156,
+          "sha256": "0cb19ab4ba678df3c30eba9224550c936059730705c0ee0a376f3d59e72a836d"
+        },
+        {
+          "url": "/assets/images/projects/herringbone-timber-stairs/timber-stair-1125.webp",
+          "width": 1125,
+          "height": 1500,
+          "bytes": 83354,
+          "sha256": "7de45034827b49d5eab24b5883ef9ee2ec99049630557424b0e0a51c9ca212c8"
+        }
+      ]
+    },
+    {
+      "projectId": "wide-herringbone",
+      "photoId": "kitchen",
+      "width": 1500,
+      "height": 1125,
+      "variants": [
+        {
+          "url": "/assets/images/projects/wide-herringbone/kitchen-480.webp",
+          "width": 480,
+          "height": 360,
+          "bytes": 19338,
+          "sha256": "9a80da9829831bac8968c4183106471fcad37afe8583bfff6e62dbf1965d8255"
+        },
+        {
+          "url": "/assets/images/projects/wide-herringbone/kitchen-960.webp",
+          "width": 960,
+          "height": 720,
+          "bytes": 61894,
+          "sha256": "dc51d1fa8e06e8cf5c68e9009f29154fba654b7869fe086fdcc8b56f44a3d955"
+        },
+        {
+          "url": "/assets/images/projects/wide-herringbone/kitchen-1440.webp",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 117332,
+          "sha256": "ce676033685d5b31e7a1f9b94e7ce2a85bed3ece35895021aeea8c209ffbd5e3"
+        }
+      ]
+    },
+    {
+      "projectId": "wide-herringbone",
+      "photoId": "living",
+      "width": 1500,
+      "height": 1125,
+      "variants": [
+        {
+          "url": "/assets/images/projects/wide-herringbone/living-480.webp",
+          "width": 480,
+          "height": 360,
+          "bytes": 17920,
+          "sha256": "08c51f6c666efd1589270bd44417e99e9988e00989379009793e340ea18aa11b"
+        },
+        {
+          "url": "/assets/images/projects/wide-herringbone/living-960.webp",
+          "width": 960,
+          "height": 720,
+          "bytes": 56096,
+          "sha256": "05f00e6d338a1c90f4e259cb5c05015701af2df654a82fe9a7213fe0f128a828"
+        },
+        {
+          "url": "/assets/images/projects/wide-herringbone/living-1440.webp",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 104940,
+          "sha256": "aa3294249e3c051a1dc0fe1bdebd1cd6cd0ce49c23d6aa3f07b69a147e2b29ae"
+        }
+      ]
+    },
+    {
+      "projectId": "chevron-timber",
+      "photoId": "sunlit-room",
+      "width": 1125,
+      "height": 1500,
+      "variants": [
+        {
+          "url": "/assets/images/projects/chevron-timber/sunlit-room-480.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 39616,
+          "sha256": "50c18d1296f9844e042e7621a67477bceccce7fb04c620435a388ee5681b7e26"
+        },
+        {
+          "url": "/assets/images/projects/chevron-timber/sunlit-room-960.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 153220,
+          "sha256": "06d539ca9df58c81f0ed5bd1d7467d0aea35d8e1a9a6d77e03766f42aaa034fa"
+        },
+        {
+          "url": "/assets/images/projects/chevron-timber/sunlit-room-1125.webp",
+          "width": 1125,
+          "height": 1500,
+          "bytes": 213024,
+          "sha256": "7869add01f404c062cbc89dfdec69c7d06190e2b01c9cdb9d03a81e8215240d6"
+        }
+      ]
+    },
+    {
+      "projectId": "chevron-timber",
+      "photoId": "pattern-detail",
+      "width": 1125,
+      "height": 1500,
+      "variants": [
+        {
+          "url": "/assets/images/projects/chevron-timber/pattern-detail-480.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 53220,
+          "sha256": "36b0daf4e2fb1778961ae6d41bfff9582604a17acacbfdbf99f387659ba5a7c9"
+        },
+        {
+          "url": "/assets/images/projects/chevron-timber/pattern-detail-960.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 210128,
+          "sha256": "5186256b3d4f92e89e698a5531ba7a5e10c3c5856718204c3fa1f4603898dd9b"
+        },
+        {
+          "url": "/assets/images/projects/chevron-timber/pattern-detail-1125.webp",
+          "width": 1125,
+          "height": 1500,
+          "bytes": 297598,
+          "sha256": "7c5af9f25a5c7048dd571fbb4a5c6c19b4cf8e634affe86ef8a5fef92dbc851a"
+        }
+      ]
+    },
+    {
+      "projectId": "hybrid-preparation",
+      "photoId": "finished-living",
+      "width": 1125,
+      "height": 1500,
+      "variants": [
+        {
+          "url": "/assets/images/projects/hybrid-preparation/finished-living-480.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 28104,
+          "sha256": "71c25c1fff209fbcb477c46c8b35cfabb600651a5ada4af94bb5280d8e09fe47"
+        },
+        {
+          "url": "/assets/images/projects/hybrid-preparation/finished-living-960.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 85808,
+          "sha256": "14bd81bef0edfbc9b1f64db3cf05ab02a8eeb05d08d739a01de2e4c4292bbdef"
+        },
+        {
+          "url": "/assets/images/projects/hybrid-preparation/finished-living-1125.webp",
+          "width": 1125,
+          "height": 1500,
+          "bytes": 115796,
+          "sha256": "77c31d8c28f5266031e55e4f26dac5681a6444e2c0fe9fbcbf7d6e02e7a7cc64"
+        }
+      ]
+    },
+    {
+      "projectId": "hybrid-preparation",
+      "photoId": "finished-bedroom",
+      "width": 1125,
+      "height": 1500,
+      "variants": [
+        {
+          "url": "/assets/images/projects/hybrid-preparation/finished-bedroom-480.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 24660,
+          "sha256": "4b686fe8805dccff7bf2907e1c9a4a9a5ac503fd5c9d1a80efb86bc4194802f6"
+        },
+        {
+          "url": "/assets/images/projects/hybrid-preparation/finished-bedroom-960.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 71544,
+          "sha256": "e777050180a9a5224385a76549703698b3ce212a4be28137490427d7d1cb91ea"
+        },
+        {
+          "url": "/assets/images/projects/hybrid-preparation/finished-bedroom-1125.webp",
+          "width": 1125,
+          "height": 1500,
+          "bytes": 92424,
+          "sha256": "f94bddb4a44ce74a9f98019c89dae2c1e694fc9648d9113b8ea82f9ee735c7f1"
+        }
+      ]
+    },
+    {
+      "projectId": "hybrid-preparation",
+      "photoId": "removal",
+      "width": 1125,
+      "height": 1500,
+      "variants": [
+        {
+          "url": "/assets/images/projects/hybrid-preparation/removal-480.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 59588,
+          "sha256": "341eaeb5b2e09713a78420825cafc72f2719e44f33f6dbb4e832e7dc1202fe49"
+        },
+        {
+          "url": "/assets/images/projects/hybrid-preparation/removal-960.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 221224,
+          "sha256": "2a081c1c57eab66dda55802cf50fe2df6a3d2b8bc7fefd70b0ebcdd6206268c0"
+        },
+        {
+          "url": "/assets/images/projects/hybrid-preparation/removal-1125.webp",
+          "width": 1125,
+          "height": 1500,
+          "bytes": 306340,
+          "sha256": "ef20eacab3f9ef093cae56f330c92e72194ad01d29bf6615945440a140cac5a9"
+        }
+      ]
+    },
+    {
+      "projectId": "hybrid-preparation",
+      "photoId": "preparation",
+      "width": 1500,
+      "height": 1125,
+      "variants": [
+        {
+          "url": "/assets/images/projects/hybrid-preparation/preparation-480.webp",
+          "width": 480,
+          "height": 360,
+          "bytes": 23270,
+          "sha256": "5c627dde6899e64c28b8ef2d690e93b35c91c8cece53e8826130852c3be845cd"
+        },
+        {
+          "url": "/assets/images/projects/hybrid-preparation/preparation-960.webp",
+          "width": 960,
+          "height": 720,
+          "bytes": 97252,
+          "sha256": "cad05114f55f9ce7814a6d54fd94e7803edbc6ed4ee326a206273c47b8636bd2"
+        },
+        {
+          "url": "/assets/images/projects/hybrid-preparation/preparation-1440.webp",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 209128,
+          "sha256": "f8fdef89f08ac269a7d8cee8a52f2c9cf55024c2e2bce7e74ab9011b3dc51a86"
+        }
+      ]
+    },
+    {
+      "projectId": "hybrid-preparation",
+      "photoId": "levelled-living",
+      "width": 1125,
+      "height": 1500,
+      "variants": [
+        {
+          "url": "/assets/images/projects/hybrid-preparation/levelled-living-480.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 11332,
+          "sha256": "d58b2be529dd992d81121a6a07cb76cbf2eca6201ee5b8cf852071ba7240d214"
+        },
+        {
+          "url": "/assets/images/projects/hybrid-preparation/levelled-living-960.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 36340,
+          "sha256": "5fec8d912517d9adf4a67f8371555ab78d9538dd609a4211b795c78ff1fe7f67"
+        },
+        {
+          "url": "/assets/images/projects/hybrid-preparation/levelled-living-1125.webp",
+          "width": 1125,
+          "height": 1500,
+          "bytes": 49410,
+          "sha256": "94a79c76ddcc3aaa9df7e6aa6b23d180b8784f2a6b54e464fe0bd1d7f6d6d280"
+        }
+      ]
+    },
+    {
+      "projectId": "engineered-stair-area",
+      "photoId": "stair-area",
+      "width": 843,
+      "height": 1500,
+      "variants": [
+        {
+          "url": "/assets/images/projects/engineered-stair-area/stair-area-480.webp",
+          "width": 480,
+          "height": 854,
+          "bytes": 29192,
+          "sha256": "3567c159453a6332a3189378a3f79095096f8b800b8d4083ca08dd9284bdda52"
+        },
+        {
+          "url": "/assets/images/projects/engineered-stair-area/stair-area-843.webp",
+          "width": 843,
+          "height": 1500,
+          "bytes": 80478,
+          "sha256": "a5787ff7e0e17e9665246b320d58ce4f3533e1ae9c01d040f0c755356ceaf6fc"
+        }
+      ]
+    },
+    {
+      "projectId": "spotted-gum-stairs",
+      "photoId": "rounded-step",
+      "width": 1125,
+      "height": 1500,
+      "variants": [
+        {
+          "url": "/assets/images/projects/spotted-gum-stairs/rounded-step-480.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 24298,
+          "sha256": "d486e948f68db53e2882378fe3bd0d2021f677946c65b370f224399038dace5f"
+        },
+        {
+          "url": "/assets/images/projects/spotted-gum-stairs/rounded-step-960.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 67734,
+          "sha256": "120362e45f7bd84912b5cff1f987dfb6d07539aee03071f04782ec727698ccab"
+        },
+        {
+          "url": "/assets/images/projects/spotted-gum-stairs/rounded-step-1125.webp",
+          "width": 1125,
+          "height": 1500,
+          "bytes": 89132,
+          "sha256": "3bac686f4f3a6c98c4c6e44655e1ddce18d4a3d43da01718b2aaa4de756912ef"
+        }
+      ]
+    },
+    {
+      "projectId": "spotted-gum-stairs",
+      "photoId": "timber-stairs",
+      "width": 1125,
+      "height": 1500,
+      "variants": [
+        {
+          "url": "/assets/images/projects/spotted-gum-stairs/timber-stairs-480.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 28198,
+          "sha256": "1e8b65ea79745850e0a186a8acca28e1338e0f87a0453ed486d18c84d22f3b87"
+        },
+        {
+          "url": "/assets/images/projects/spotted-gum-stairs/timber-stairs-960.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 82068,
+          "sha256": "4fb02db8830fe74e43493d68975087715760aa0324ef5b836a4347d36f1c9752"
+        },
+        {
+          "url": "/assets/images/projects/spotted-gum-stairs/timber-stairs-1125.webp",
+          "width": 1125,
+          "height": 1500,
+          "bytes": 112190,
+          "sha256": "6edf933bc5ab74d652011e7b5b9f44f074ad3eb46a5381e7bf3bdb3482194850"
+        }
+      ]
+    },
+    {
+      "projectId": "floor-levelling",
+      "photoId": "prepared-room",
+      "width": 1500,
+      "height": 1125,
+      "variants": [
+        {
+          "url": "/assets/images/projects/floor-levelling/prepared-room-480.webp",
+          "width": 480,
+          "height": 360,
+          "bytes": 16382,
+          "sha256": "21363e1604f003e44d22b17f55f67ba42777adc17672dea88bb85f81bd89571f"
+        },
+        {
+          "url": "/assets/images/projects/floor-levelling/prepared-room-960.webp",
+          "width": 960,
+          "height": 720,
+          "bytes": 45394,
+          "sha256": "9001a05cca5673dfa5a11289d7ec028a501958699fc73ecd9c640b473bc47ed2"
+        },
+        {
+          "url": "/assets/images/projects/floor-levelling/prepared-room-1440.webp",
+          "width": 1440,
+          "height": 1080,
+          "bytes": 80072,
+          "sha256": "905e8ccf061261b4a508c556f4a65a2de68822de40ad1d27e6e085b57e43117e"
+        }
+      ]
+    },
+    {
+      "projectId": "floor-levelling",
+      "photoId": "sunlit-base",
+      "width": 1125,
+      "height": 1500,
+      "variants": [
+        {
+          "url": "/assets/images/projects/floor-levelling/sunlit-base-480.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 17914,
+          "sha256": "46b9be68981ab8f5658c781611441aadbecc85606a790344e8577331b96588f2"
+        },
+        {
+          "url": "/assets/images/projects/floor-levelling/sunlit-base-960.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 51480,
+          "sha256": "785da35f8d602306d227d40c223de454804c6a79915ee8fa32f4581d1e6c875e"
+        },
+        {
+          "url": "/assets/images/projects/floor-levelling/sunlit-base-1125.webp",
+          "width": 1125,
+          "height": 1500,
+          "bytes": 69070,
+          "sha256": "e7d02ede266a9d6f39627bedbb9504b5b4314563a3f3c4b90a2fc2682ceec02a"
+        }
+      ]
+    },
+    {
+      "projectId": "floor-levelling",
+      "photoId": "doorway",
+      "width": 1125,
+      "height": 1500,
+      "variants": [
+        {
+          "url": "/assets/images/projects/floor-levelling/doorway-480.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 17222,
+          "sha256": "2ab38f36ab38735b14dd4076e38cba81348ad6b848d8e781670cefb7a11338bb"
+        },
+        {
+          "url": "/assets/images/projects/floor-levelling/doorway-960.webp",
+          "width": 960,
+          "height": 1280,
+          "bytes": 47566,
+          "sha256": "77ea03e2b4b3e5b3ca685d0c4b90e1c7731a3155b2fb46d686b943cb270544b1"
+        },
+        {
+          "url": "/assets/images/projects/floor-levelling/doorway-1125.webp",
+          "width": 1125,
+          "height": 1500,
+          "bytes": 61936,
+          "sha256": "000bd9a43ee71efb39fc4c181d8df7c7e224c1bb898a27ceb66334944f398c90"
+        }
+      ]
+    }
+  ]
+}

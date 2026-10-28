@@ -3,6 +3,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import assert from 'node:assert/strict';
 import {execFileSync} from 'node:child_process';
+import {editorialHTML} from './editorial-gallery.mjs';
 const apply=process.argv.includes('--apply'),entry='/tmp/oz-demarque.p7Js7j';
 const colours=['copper-brown','dusk-grey','matterhorn','polar-ice'];
 const pairs=colours.map(c=>({colour:c,old:`/products/wide-plank-water-resistant-laminate-wide-plank-${c}/`,owner:`/products/de-marque-oak-wide-plank-${c}/`}));
@@ -22,6 +23,7 @@ for(const p of pairs){
  h=h.replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/g,'');
  h=h.replace(/<title>[^<]*<\/title>/,`<title>${target.name} — product page moved | Oz Timber Floor</title>`).replace(/(<meta name="description" content=")[^"]*(")/,`$1Find ${target.name} specifications and stock enquiries on its current product page.$2`);
  h=h.replace(/<main\b[^>]*>[\s\S]*?<\/main>/,`<main id="main-content"><section class="section"><div class="shell"><h1>${target.name}</h1><p>This product is part of the De Marque engineered oak range, not ASPECT laminate.</p><a class="button" href="${p.owner}">View product details and check stock</a></div></section></main>`);
+ if(read(f).includes('data-editorial-version="1"'))h=editorialHTML(h,f);
  update(f,h);
 }
 update('data/product-catalogue.json',JSON.stringify(data,null,2)+'\n');update('data/catalogue-quality-overrides.json',JSON.stringify(controls,null,2)+'\n');

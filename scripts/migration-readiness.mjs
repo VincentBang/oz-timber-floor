@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { releaseBuildContract } from "./release-build-contract.mjs";
 import {
   createPublicationInventory,
   intentionalNoindexUtilityRoutes,
@@ -980,7 +981,7 @@ function buildContract() {
   ].join(" && ");
   return {
     missingFiles: requiredFiles.filter((file) => !fs.existsSync(path.join(root, file))),
-    hasBuildScript: packageData.scripts?.build === "node scripts/prepare-netlify-deploy.mjs && npm run catalogue:apply && npm run perf:images:apply && npm run release:package",
+    hasBuildScript: releaseBuildContract(packageData).ok,
     hasReadinessScript: fullHardeningChain(migrationCheck, "node scripts/migration-readiness.mjs")
       && fullHardeningChain(localMigrationCheck, "node scripts/migration-readiness.mjs --allow-external"),
     publicPackagePublish: /publish\s*=\s*"dist"/.test(netlify),

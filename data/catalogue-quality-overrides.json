@@ -7262,10 +7262,10 @@
     "/products/stone-floor-stone-oak/": {
       "classification": "needs-data",
       "applyNoindex": true,
-      "replacementRoute": "/ranges/stone-floor-tile/",
-      "replacementBasis": "indexable-parent-range",
+      "replacementRoute": "/ranges/stone-floor/",
+      "replacementBasis": "owner-approved-retirement-alternatives",
       "directRedirect": false,
-      "reason": "Approved 2026-08-04 controlled treatment for empty-or-placeholder-thickness, product-schema-missing-image."
+      "reason": "Owner retired this legacy colour from Oz Timber Floor's offer on 2026-10-28. Manufacturer discontinuation is not independently confirmed. General Stone Floor options are alternatives, not an exact replacement."
     },
     "/products/stone-floor-storm-grey/": {
       "classification": "needs-data",
@@ -7454,10 +7454,10 @@
     "/products/stone-floor-white-wash/": {
       "classification": "needs-data",
       "applyNoindex": true,
-      "replacementRoute": "/ranges/stone-floor-tile/",
-      "replacementBasis": "indexable-parent-range",
+      "replacementRoute": "/ranges/stone-floor/",
+      "replacementBasis": "owner-approved-retirement-alternatives",
       "directRedirect": false,
-      "reason": "Approved 2026-08-04 controlled treatment for empty-or-placeholder-thickness, product-schema-missing-image."
+      "reason": "Owner retired this legacy colour from Oz Timber Floor's offer on 2026-10-28. Manufacturer discontinuation is not independently confirmed. General Stone Floor options are alternatives, not an exact replacement."
     },
     "/products/storm-askada-grey-wash/": {
       "classification": "needs-data",

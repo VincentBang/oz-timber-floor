@@ -19,5 +19,5 @@ window.OZ_TIMBER_FLOOR_CONTACT = {
   areaServed: "Sydney",
   logoUrl: "https://oztimberfloor.com.au/assets/brand/oz-timber-floor-logo.webp",
   formName: "oz-flooring-enquiry",
-  analytics: { ga4MeasurementId: null }
+  analytics: { ga4MeasurementId: "G-EWSMKKM9N8" }
 };

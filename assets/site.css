@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"); :root {
+:root {
   /* Modern Monochrome Luxury: one palette shared by every component layer. */
   --canvas: #F7F7F4;
   --surface: #FFFFFF;
@@ -2261,7 +2261,8 @@ body.mobile-nav-scroll-locked {
 }
 
 .mobile-nav-call {
-  display: none;
+  display: inline-flex;
+  white-space: nowrap;
 }
 
 .footer-contact {
@@ -2309,6 +2310,11 @@ body.mobile-nav-scroll-locked {
   .site-header.is-open .header-actions .mobile-nav-call {
     display: inline-flex;
     width: 100%;
+  }
+
+  .site-header.is-open .header-actions {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 10px;
   }
 }
 

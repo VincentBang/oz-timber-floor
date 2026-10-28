@@ -1,0 +1,9 @@
+import fs from 'node:fs';
+import {execFileSync} from 'node:child_process';
+const out='docs/flooring-assistant/evidence/performance';fs.mkdirSync(out,{recursive:true});const results=[];
+for(let run=1;run<=3;run++)for(const phase of ['before','after']){
+ const file=process.cwd()+'/'+out+'/'+phase+'-'+run+'.json';
+ execFileSync(process.execPath,[process.env.OZ_LIGHTHOUSE_CLI,'http://127.0.0.1:'+(phase==='before'?8841:8840)+'/','--chrome-flags=--headless --no-sandbox --disable-dev-shm-usage','--only-categories=performance,accessibility','--output=json','--output-path='+file,'--quiet','--blocked-url-patterns=https://fonts.googleapis.com/*,https://fonts.gstatic.com/*,https://www.googletagmanager.com/*','--screenEmulation.width=390','--screenEmulation.height=844','--screenEmulation.deviceScaleFactor=1'],{env:{...process.env,CHROME_PATH:'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'},timeout:150000,stdio:['ignore','ignore','pipe']});
+ const r=JSON.parse(fs.readFileSync(file)),row={phase,run,performance:r.categories.performance.score*100,accessibility:r.categories.accessibility.score*100,lcp:r.audits['largest-contentful-paint'].numericValue,cls:r.audits['cumulative-layout-shift'].numericValue,tbt:r.audits['total-blocking-time'].numericValue,version:r.lighthouseVersion};results.push(row);console.log(JSON.stringify(row));fs.writeFileSync(out+'/RESULTS.json',JSON.stringify(results,null,2));
+}
+const median=values=>[...values].sort((a,b)=>a-b)[1],summary=Object.fromEntries(['before','after'].map(phase=>[phase,Object.fromEntries(['performance','lcp','cls'].map(field=>[field,median(results.filter(r=>r.phase===phase).map(r=>r[field]))]))]));summary.lcpDeltaMs=summary.after.lcp-summary.before.lcp;summary.within100ms=summary.lcpDeltaMs<=100;summary.fieldData='NOT_AVAILABLE';fs.writeFileSync(out+'/SUMMARY.json',JSON.stringify(summary,null,2));console.log(JSON.stringify(summary));

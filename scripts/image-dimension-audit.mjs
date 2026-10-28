@@ -22,7 +22,7 @@ export const priorityRoutes = Object.freeze([
   { route: "/products/", primarySrc: "/assets/images/products/engineered/engineered-blackbutt-rustic.jpg" },
   { route: "/ranges/etf-9-0mm-hybrid/", primarySrc: "/assets/products/hybrid/etf-9-0mm-hybrid/alaskan-oak.jpg" },
   { route: "/products/etf-9-0mm-hybrid-driftwood/", primarySrc: "/assets/products/hybrid/etf-9-0mm-hybrid/driftwood.jpg" },
-  { route: "/projects/", primarySrc: "/assets/images/hero/office-project-gallery-1.webp" },
+  { route: "/projects/", primarySrc: "/assets/images/projects/herringbone-timber-stairs/kitchen-living-960.webp" },
   { route: "/about/", primarySrc: "/assets/images/hero/sydney-timber-flooring-contractor.jpg" },
   { route: "/contact/", primarySrc: "/assets/images/hero/sydney-timber-flooring-contractor.jpg" },
 ]);

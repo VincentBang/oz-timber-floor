@@ -6,6 +6,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { routing } from "./october-route-fixture.mjs";
 import { createPublicationInventory } from "./publication-inventory.mjs";
+import {approvedStonefloorSource,stonefloorRetirementIssues} from './approved-stonefloor-legacy-retirement.mjs';
 
 const sourceRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const fixtureRoot = path.resolve(process.env.OZ_FIXTURE_ROOT || path.join(sourceRoot, "dist"));
@@ -58,6 +59,10 @@ const auditByRoute = new Map(evidence.filter((row) => {
   try { return new URL(row.requested_url).hostname === "oztimberfloor.netlify.app"; } catch { return false; }
 }).map((row) => [normalizeRoute(row.requested_url), row]));
 const router = routing(fixtureRoot);
+const stonefloorApprovalBytes=fs.readFileSync(path.join(sourceRoot,'config/stonefloor-legacy-retirement-2026-10-28.json'));
+const catalogue=JSON.parse(fs.readFileSync(path.join(sourceRoot,'data/product-catalogue.json'),'utf8'));
+const overrides=JSON.parse(fs.readFileSync(path.join(sourceRoot,'data/catalogue-quality-overrides.json'),'utf8'));
+const sourceInventory=createPublicationInventory({root:sourceRoot,domain});
 const legacyResults = [];
 for (const route of legacyRoutes) {
   const result = router.resolve(route);
@@ -65,7 +70,13 @@ for (const route of legacyRoutes) {
   assert.ok(audit, `October 26 audit row missing for ${route}`);
   assert.equal(result.loop, false, `redirect loop: ${route}`);
   assert.ok(result.hops <= 1, `multi-hop redirect: ${route}`);
-  if (route === "/oak-flooring-sydney/") {
+  if (approvedStonefloorSource(route,stonefloorApprovalBytes)) {
+    const id=route.split('/').filter(Boolean).at(-1),held=`/products/${id}/`,rules=router.rules.filter(r=>r.from===route);
+    assert.equal(rules.length,1,`approved retirement literal rule count: ${route}`);
+    const issues=stonefloorRetirementIssues({source:route,rule:rules[0],approvalBytes:stonefloorApprovalBytes,product:catalogue.products.find(p=>p.id===id),control:overrides.pages[held],html:fs.readFileSync(path.join(fixtureRoot,held.slice(1),'index.html'),'utf8'),sitemapRoutes:sourceInventory.sitemapRoutes,publicationRoutes:sourceInventory.publicationRoutes});
+    assert.deepEqual(issues,[],`approved retirement contract drift: ${route}`);
+    assert.equal(result.status,200);assert.equal(result.hops,1);assert.equal(result.destination,'/ranges/stone-floor/');
+  } else if (route === "/oak-flooring-sydney/") {
     assert.equal(result.status, 200);
     assert.equal(result.hops, 0);
     assert.equal(result.destination, "/oak-flooring-sydney/");

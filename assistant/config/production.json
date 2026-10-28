@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "purpose": "public-production-launch",
+  "activationApproved": false,
+  "dataUseApproved": true,
+  "ownerApprovals": {"knowledge": true, "privacy": true, "spending": true, "launch": true},
+  "approvalReference": "Owner in Codex 2026-10-27 approved activation using existing OZ_ASSISTANT_OPENAI_API_KEY; US$30 monthly cap and prepared privacy disclosure approved. Activation remains gated by actual release proofs.",
+  "apiKeyVariable": "OZ_ASSISTANT_OPENAI_API_KEY",
+  "boundCorpusVersion": "db73162e756d3faacef0a1ad90db2fb33e1b64c9e1fc90d71c8d88130ae8e164",
+  "privacyDocumentSha256": null,
+  "candidateModelId": "gpt-6-luna",
+  "requestSettings": {"reasoningEffort": "none", "cacheMode": "explicit", "cacheTtl": "30m", "cacheBreakpoints": 0},
+  "rateTable": {"modelId": "gpt-6-luna", "inputUsdPerMillion": 0.1, "outputUsdPerMillion": 0.5, "cachedInputUsdPerMillion": 0.01, "cacheWrite30mUsdPerMillion": 0.125, "cacheWrite12hUsdPerMillion": 0.25, "verifiedAt": "2026-10-27", "source": "https://developers.openai.com/api/docs/pricing/"},
+  "modelAccess": {"status": "NOT_RUN", "reportSha256": null},
+  "budgetStoreName": "oz-assistant-production-budget-v1",
+  "budgetStoreRegion": "us-east-2",
+  "atomicStoreAdapter": "netlify-blobs-strong-cas-v1",
+  "budgetVerification": {"status": "NOT_RUN", "reportSha256": null, "storeName": "oz-assistant-production-budget-v1"},
+  "allowance": {"sessionMinute": 6, "sessionDay": 30, "ipMinute": 12, "ipDay": 100, "sessionConcurrent": 2, "globalConcurrent": 4, "globalDayCalls": 200, "globalMonthCalls": 1000, "dayBudgetUsd": 1, "monthBudgetUsd": 30}
+}

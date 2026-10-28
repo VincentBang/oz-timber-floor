@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "description": "Local launch-safety controls for the Oz Timber Floor static Netlify site.",
   "scripts": {
-    "build": "node scripts/prepare-netlify-deploy.mjs && npm run catalogue:apply && npm run perf:images:apply && npm run release:package",
+    "build": "node scripts/prepare-netlify-deploy.mjs && npm run catalogue:apply && npm run perf:images:apply && npm run release:package && npm run assistant:knowledge",
     "catalogue:october:check": "node scripts/october-catalogue-repair.mjs",
     "catalogue:apply": "node scripts/migration-readiness.mjs --apply-catalogue-only",
     "catalogue:approve-release-decisions": "node scripts/apply-approved-release-decisions.mjs --apply && npm run catalogue:apply",
@@ -38,6 +38,18 @@
     "ui:seo-freeze:check": "npm run ui:seo-freeze:after && npm run ui:seo-freeze:compare",
     "ui:lcp:check": "node scripts/ui-ux-lcp-check.mjs",
     "ui:qa": "node scripts/ui-ux-lcp-check.mjs && node scripts/ui-qa.mjs",
-    "ui:screenshots": "node scripts/ui-screenshots.mjs"
+    "ui:screenshots": "node scripts/ui-screenshots.mjs",
+    "assistant:knowledge": "node scripts/assistant-build-knowledge.mjs",
+    "assistant:check": "node scripts/assistant-check.mjs && node --test assistant/tests/*.test.mjs",
+    "assistant:eval": "node scripts/assistant-eval.mjs",
+    "assistant:preview": "node scripts/assistant-preview.mjs",
+    "assistant:package-check": "node scripts/assistant-package-check.mjs",
+    "assistant:build:isolated": "node scripts/assistant-isolated-build.mjs"
+  },
+  "devDependencies": {
+    "parse5": "8.0.0"
+  },
+  "dependencies": {
+    "@netlify/blobs": "11.1.6"
   }
 }

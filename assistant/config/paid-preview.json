@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "purpose": "protected-internal-evaluation-only",
+  "activationApproved": false,
+  "dataUseApproved": false,
+  "candidateModelId": "gpt-6-luna",
+  "requestSettings": {"reasoningEffort": "none", "cacheMode": "explicit", "cacheTtl": "30m", "cacheBreakpoints": 0},
+  "modelEvaluated": false,
+  "accountModelAvailable": false,
+  "boundCorpusVersion": "db73162e756d3faacef0a1ad90db2fb33e1b64c9e1fc90d71c8d88130ae8e164",
+  "budgetVerification": {"status": "NOT_RUN", "reportSha256": null},
+  "rateTable": {
+    "modelId": "gpt-6-luna",
+    "inputUsdPerMillion": 0.1,
+    "outputUsdPerMillion": 0.5,
+    "cachedInputUsdPerMillion": 0.01,
+    "cacheWrite30mUsdPerMillion": 0.125,
+    "cacheWrite12hUsdPerMillion": 0.25,
+    "verifiedAt": "2026-10-27",
+    "source": "https://developers.openai.com/api/docs/pricing/"
+  },
+  "budgetStoreName": "oz-assistant-paid-preview-budget-v1",
+  "budgetStoreRegion": "us-east-2",
+  "atomicStoreAdapter": "netlify-blobs-strong-cas-v1",
+  "allowance": {
+    "sessionMinute": 6,
+    "sessionDay": 30,
+    "ipMinute": 12,
+    "ipDay": 100,
+    "sessionConcurrent": 2,
+    "globalConcurrent": 4,
+    "globalDayCalls": 200,
+    "globalMonthCalls": 1000,
+    "dayBudgetUsd": 5,
+    "monthBudgetUsd": 25
+  },
+  "evaluation": {"maxCalls": 20, "maxUsd": 1},
+  "approvalReference": null
+}
