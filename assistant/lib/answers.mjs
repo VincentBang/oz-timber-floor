@@ -32,7 +32,7 @@ export function renderPlan(plan,retrieval,corpus){
    const labels={category:'Category',range:'Range',colour:'Colour',thickness:'Thickness',boardSize:'Board size',packSizeM2:'Pack size m²',finish:'Finish'};
    const details=group.filter(f=>f.field!=='identity').map(f=>(labels[f.field]||f.field)+': '+f.value).join('; ');
    segments.push({text:group[0].title+(details?' — '+details+'.':'')+' '+[...new Set(group.map(f=>f.qualifier).filter(Boolean))].join(' '),evidenceIds:group.map(f=>f.id)});
-  }else for(const f of group)segments.push({text:f.field==='guidance'||f.field==='faq'?(retrieval.comparisonOwners?.length?f.title+' — ':'')+f.value:f.title+' — '+f.field+': '+f.value,evidenceIds:[f.id]});
+  }else for(const f of group){const value=retrieval.comparisonOwners?.length&&f.question&&f.value.startsWith(f.question)?f.value.slice(f.question.length).trim():f.value;const label={'/engineered-timber-flooring/':'Engineered timber','/hybrid/':'Hybrid','/laminate/':'Laminate','/vinyl/':'Vinyl','/solid-timber/':'Solid timber'}[f.canonicalPath]||f.title;segments.push({text:f.field==='guidance'||f.field==='faq'?(retrieval.comparisonOwners?.length?label+' — ':'')+value:f.title+' — '+f.field+': '+value,evidenceIds:[f.id]});}
  }
  const labels={thickness:'thickness',colour:'colour',boardSize:'board dimensions',category:'category',finish:'finish'};
  for(const missing of (retrieval.missingFields||[]).slice(0,2))segments.push({text:`Verified information about ${labels[missing.field]||'these details'} is not available for ${missing.title}. Confirm with the team before choosing.`,evidenceIds:[]});
@@ -53,9 +53,19 @@ export function avoidRepeatedAnswer(answer,history,message){
  return {...answer,segments:fresh.length?fresh:[{text:'I do not have further verified detail on that point. You can review the linked source or prepare a question for the Oz Timber Floor team.',evidenceIds:[]}]};
 }
 export function policyAnswer(message,corpus,options={}){
+ if(/password|confidential|supplier (?:cost|price|name|list)|wholesale|operon|supabase|\bkeys?\b|system prompt|all.*(?:data|index)|ignore.*(?:previous|instructions)|reveal|<script|javascript:|https?:\/\//i.test(message))return fallback('private_request',corpus);
+ if(/asbestos|dangerous removal/i.test(message))return fallback('safety',corpus);
+ if(/what affects.*cost|cost factors|cost depend/i.test(message)){
+  const doc=corpus.documents.find(d=>d.canonicalPath==='/timber-floor-installation/');
+  const facts=doc?.facts.filter(f=>f.field==='guidance'&&/preparation|access|current floor/i.test(f.value)).slice(0,2).map(f=>({...f,entityId:doc.entityId,entityType:doc.entityType,canonicalPath:doc.canonicalPath,title:doc.title}))||[];
+  if(facts.length){const answer=renderPlan({status:'answered',factIds:facts.map(f=>f.id),reason:'supported'},{facts},corpus);answer.segments.push({text:'The team confirms the quote after reviewing your project details.',evidenceIds:[]});return answer;}
+ }
  if(/\bbamboo\b/i.test(message))return {status:'needs_confirmation',segments:[{text:'That material is not part of the current public catalogue. Ask the team about current alternatives.',evidenceIds:['business-current-offering']}],sources:[{id:'business-current-offering',title:'Contact Oz Timber Floor',href:'/contact/',expectedStatus:200}],entityIds:[],reason:'not_offered',corpusVersion:corpus.corpusVersion};
- if(/supplier|wholesale|operon|supabase|\bkeys?\b|system prompt|all.*(?:data|index)|ignore.*(?:previous|instructions)|reveal|<script|javascript:|https?:\/\//i.test(message))return fallback('private_request',corpus);
- if(/asbestos|bathroom|waterproof|scratch.proof|pet.proof|certif|strata|acoustic|fire|slip|underfloor|heating|adhesive|moisture|tolerances?|wet area|commercial.rat/i.test(message))return fallback('safety',corpus);
+ if(/confidential|supplier (?:cost|price|name|list)|wholesale|operon|supabase|\bkeys?\b|system prompt|all.*(?:data|index)|ignore.*(?:previous|instructions)|reveal|<script|javascript:|https?:\/\//i.test(message))return fallback('private_request',corpus);
+ if(/asbestos|dangerous removal/i.test(message))return fallback('safety',corpus);
+ if(/bathroom|scratch.proof|pet.proof|certif|acoustic|fire|slip|underfloor|heating|adhesive|moisture|tolerances?|wet area|commercial.rat/i.test(message))return {...fallback('safety',corpus),segments:[{text:'I cannot approve site-specific suitability or certify performance here. The team needs the exact product and project requirements before advising on the next steps.',evidenceIds:[]}]};
+ if(/waterproof/i.test(message))return {...fallback('safety',corpus),segments:[{text:'Waterproof claims need verification for the exact product. I cannot apply that claim to all hybrid flooring or approve an unseen installation. Which product are you considering?',evidenceIds:[]}]};
+ if(/strata/i.test(message))return {...fallback('safety',corpus),segments:[{text:'Ask your strata manager to confirm the requirements for your proposed flooring before choosing a product. The team can review your requirements; this chat cannot certify compliance.',evidenceIds:[]}]};
  const restricted=restrictedRangeAnswer(message,corpus,options);if(restricted)return restricted;
  const retired=retiredCatalogueMatch(corpus,message);
  if(retired)return {status:'needs_confirmation',segments:[{text:retired.name+' is no longer offered by Oz Timber Floor. The current Stone Floor collection contains alternatives, not an exact replacement. Ask the team to help choose an alternative.',evidenceIds:[]}],sources:[{id:'stone-floor-alternatives',title:'Current Stone Floor alternatives',href:retired.alternativesPath,expectedStatus:200}],entityIds:[],reason:retired.responseReason==='confirmation'?'confirmation':'retired',retirementStatus:'retired',corpusVersion:corpus.corpusVersion};
@@ -70,6 +80,6 @@ export function policyAnswer(message,corpus,options={}){
  if(/interlaken|natural oak brown|stone floor oak beige|helena oak/i.test(message))return fallback('confirmation',corpus);
  const recordedPack=recordedPackAnswer(message,corpus,options);if(recordedPack)return recordedPack;
  if(/\b(?:price|prices|cost|stock|warranty|lead time|urgent|urgently|book|booking|appointment|available|availability|box|boxes|pack|waste|calculate|refund|opening hours|open today)\b|\$/i.test(message))return fallback('confirmation',corpus);
- if(/[\u0400-\u04ff\u3040-\u9fff\u0600-\u06ff\u00c0-\u024f]/u.test(message))return fallback('language',corpus);
+ if(/[\u0400-\u04ff\u3040-\u9fff\u0600-\u06ff]/u.test(message))return fallback('language',corpus);
  return null;
 }

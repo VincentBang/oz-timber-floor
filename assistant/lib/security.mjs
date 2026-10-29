@@ -25,7 +25,8 @@ export async function readRequest(request) {
   const reader=request.body?.getReader();if(!reader)throw Error('request');let bytes=0,parts=[];
   try{for(;;){const {done,value}=await reader.read();if(done)break;bytes+=value.byteLength;if(bytes>12288){await reader.cancel();throw Error('too_large');}parts.push(Buffer.from(value));}}finally{reader.releaseLock();}
   let value;try{value=JSON.parse(Buffer.concat(parts).toString('utf8'));}catch{throw Error('request');}
-  if(!exactKeys(value,['op','message','history','pagePath','entityId','sessionToken','requestId','aiUseAcknowledged']))throw Error('request');
+  if(!exactKeys(value,['op','message','history','pagePath','entityId','sessionToken','requestId','aiUseAcknowledged','conversationToken']))throw Error('request');
+  if(value.conversationToken!==undefined&&(typeof value.conversationToken!=='string'||value.conversationToken.length>1800))throw Error('request');
   if(value.aiUseAcknowledged!==undefined&&typeof value.aiUseAcknowledged!=='boolean')throw Error('request');
   if(!['session','message'].includes(value.op)||typeof value.requestId!=='string'||!/^[A-Za-z0-9_-]{8,80}$/.test(value.requestId))throw Error('request');
   if(value.op==='session'){if(Object.keys(value).some(k=>!['op','requestId','aiUseAcknowledged'].includes(k)))throw Error('request');return value;}

@@ -27,7 +27,7 @@
 .flooring-assistant-panel[data-compact="true"] .assistant-log{min-height:32px}
 .flooring-assistant-panel[data-compact="true"] form{flex-shrink:0}
 .flooring-assistant-panel[data-compact="true"]:not([data-started="true"])>.assistant-intro{max-height:80px;min-height:48px}
-.flooring-assistant-panel[data-compact="true"]:not([data-started="true"]) textarea{min-height:46px;max-height:70px}
+.flooring-assistant-panel[data-compact="true"]:not([data-started="true"]):not([data-reflow="true"]) textarea{min-height:46px;max-height:70px}
 .flooring-assistant-panel [hidden]{display:none!important}
 .flooring-assistant-panel .assistant-ack{display:flex;align-items:flex-start;gap:10px;min-height:44px;cursor:pointer}
 .flooring-assistant-panel .assistant-ack input{display:inline-block;width:24px;height:24px;min-height:24px;padding:0;margin:3px 0;flex:0 0 24px;accent-color:#262827}
@@ -35,3 +35,44 @@
 .flooring-assistant-review label{display:block;margin:14px 0}
 @media(max-width:680px){.flooring-assistant-panel{inset:8px;width:calc(100vw - 16px);max-width:none;padding:14px;height:calc(100dvh - 16px);max-height:calc(100dvh - 16px);padding-bottom:calc(14px + env(safe-area-inset-bottom))}}
 @media(prefers-reduced-motion:reduce){.flooring-assistant-panel *{scroll-behavior:auto;transition:none}}
+/* Guide candidate: one scroll region, persistent human help, stable composer. */
+.flooring-assistant-panel{background:var(--canvas,#f5f3ee);color:#232620;border-radius:0;overflow:hidden}
+.flooring-assistant-panel h2{font:400 26px/1.1 Georgia,serif;letter-spacing:-.03em}
+.flooring-assistant-panel header p{font-size:13px;color:#60635c}
+.flooring-assistant-panel .assistant-log{display:block;min-height:0;flex:1 1 auto;overflow:auto}
+.flooring-assistant-panel .assistant-intro{max-height:none;overflow:visible;display:grid;gap:12px}
+.flooring-assistant-panel[data-started="true"] .assistant-intro{display:none}
+.flooring-assistant-panel .assistant-message{margin-bottom:12px;border-radius:0}
+.flooring-assistant-panel .assistant-persistent-links{flex-shrink:0;gap:4px}
+.flooring-assistant-panel .assistant-persistent-links a{font-size:12px;padding:6px;border:0;background:transparent;min-height:32px}
+.flooring-assistant-panel button,.flooring-assistant-panel textarea,.flooring-assistant-panel input,.flooring-assistant-panel select{border-radius:0}
+.flooring-assistant-panel[data-started="true"] .assistant-log,.flooring-assistant-panel[data-compact="true"] .assistant-log{min-height:0}
+.flooring-assistant-panel[data-compact="true"]>.assistant-controls{display:flex}
+.flooring-assistant-panel textarea{min-height:48px;max-height:90px}
+.flooring-assistant-panel .assistant-suggestions{margin:8px 0}
+.flooring-assistant-panel .assistant-sources{margin-top:8px;display:grid;gap:4px}
+.flooring-assistant-panel .assistant-sources a{min-height:32px;padding:2px 0;border:0;background:transparent;font-size:13px;font-weight:400;white-space:normal}
+.flooring-assistant-panel[data-started="true"] .assistant-ack{display:none}
+.flooring-assistant-panel .assistant-ack{font-size:14px;line-height:1.4}
+.flooring-assistant-panel .assistant-intro p{font-size:14px;line-height:1.5}
+.flooring-assistant-panel .assistant-intro a{padding:0;border:0;background:none;min-height:32px;font-size:14px}
+.flooring-assistant-panel .assistant-suggestions button{font-size:14px;padding:8px}
+.flooring-assistant-panel [data-enquiry-summary] label{display:block;margin:8px 0}
+.flooring-assistant-panel[data-reflow="true"][open]{display:block;overflow:auto}
+.flooring-assistant-panel[data-reflow="true"] header{position:static}
+.flooring-assistant-panel[data-reflow="true"] .assistant-log{overflow:visible;min-height:0}
+.flooring-assistant-panel[data-reflow="true"]>:not(header){margin-top:12px}
+.flooring-assistant-panel[data-reflow="true"] form{grid-template-columns:minmax(0,1fr)}
+.flooring-assistant-panel[data-reflow="true"] textarea{height:auto;min-height:4em;max-height:none}
+@media(max-height:560px) and (max-width:680px){
+ .flooring-assistant-panel[open]{gap:4px;padding:8px;padding-bottom:calc(8px + env(safe-area-inset-bottom))}
+ .flooring-assistant-panel header h2{font-size:22px}
+ .flooring-assistant-panel header p{font-size:11px}
+ .flooring-assistant-panel form{grid-template-columns:minmax(0,1fr) 70px;gap:4px;align-items:end}
+ .flooring-assistant-panel form>.assistant-ack{grid-column:1/-1;font-size:12px;min-height:32px}
+ .flooring-assistant-panel form>label:not(.assistant-ack){font-size:12px}
+ .flooring-assistant-panel textarea{min-height:46px;height:46px;max-height:60px}
+ .flooring-assistant-panel [data-status]{font-size:11px;line-height:1.25}
+ .flooring-assistant-panel .assistant-controls button{min-height:32px;padding:4px 8px;font-size:12px}
+ .flooring-assistant-panel .assistant-persistent-links a{min-height:32px;padding:2px;font-size:10px}
+}

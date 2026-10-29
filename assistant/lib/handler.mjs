@@ -1,11 +1,14 @@
 import {readRequest,verifyToken,issueToken,ipKey,redact,hash} from './security.mjs';
 import {buildIndex,retrieve} from './retrieval.mjs';
+import {guideQuestion} from './guide-context.mjs';
+import {verifyConversation,signConversation,resolveConversation} from './conversation-state.mjs';
+import {guideIntentAnswer} from './guide-intents.mjs';
 import {fallback,policyAnswer,renderPlan,avoidRepeatedAnswer} from './answers.mjs';
 import {catalogueEnquiryContext,enquiryIntent} from './catalogue-context.mjs';
 import {MockProvider,OpenAIResponsesProvider,PROMPT_VERSION} from './provider.mjs';
 import {MockAtomicStore,reservationCost} from './budget.mjs';
 import {AtomicBlobBudgetStore} from './atomic-budget.mjs';
-const safeReasons=new Set(['method','content_type','too_large','request','session','origin','context','feature_off','provider_unavailable','budget_store_unavailable','budget_exhausted','rate_limit','busy','duplicate','idempotency_conflict','invalid_plan','invalid_citation','irrelevant_entity','rates_unavailable','consent_required']);
+const safeReasons=new Set(['method','content_type','too_large','request','session','conversation','origin','context','feature_off','provider_unavailable','budget_store_unavailable','budget_exhausted','rate_limit','busy','duplicate','idempotency_conflict','invalid_plan','invalid_citation','irrelevant_entity','rates_unavailable','consent_required']);
 export function createHandler({corpus,policy,settings={},store,provider,paid={},now=()=>Date.now(),metadata=()=>{}}){
  const index=buildIndex(corpus),mockStore=store||new MockAtomicStore(),mockProvider=provider||new MockProvider();
  return async function handle(request,context={}){
@@ -35,13 +38,17 @@ export function createHandler({corpus,policy,settings={},store,provider,paid={},
    }
    const session=verifyToken(input.sessionToken,settings.signingSecret,now());
    if(!corpus.documents.some(d=>d.canonicalPath===input.pagePath))return respond(fallback('invalid_context',corpus));
-   const message=redact(input.message),bodyHash=hash({message,pagePath:input.pagePath,entityId:input.entityId});
+   const previous=verifyConversation(input.conversationToken,{secret:settings.signingSecret,session,corpus,now:now()});
+   const urlQuestion=guideQuestion(redact(input.message),[],corpus);
+   const resolved=resolveConversation(urlQuestion.question,previous,corpus),message=redact(resolved.question),bodyHash=hash({message,pagePath:input.pagePath,entityId:input.entityId,conversationToken:input.conversationToken||''});
    reservation=session.id+':'+requestId;
    let metered=false,usage={input_tokens:0,output_tokens:0},cost=0,usedModel=false;
    const reserveDeterministic=async()=>{await activeStore.reserve({key:reservation,bodyHash,session:session.id,ip,limits:policy.limits,now:now()});metered=true;};
-   // Client history is validated for bounds, but never promoted into evidence or
-   // forwarded as assistant/system instructions. Pronouns require clarification.
+   // Client history may suppress repetitions only. Signed, session/corpus-bound
+   // state supplies identities for follow-ups, never prior assistant claims.
    let result=policyAnswer(message,corpus,{pagePath:input.pagePath});
+   if(resolved.ambiguous&&(!result||result.reason==='confirmation'))result=fallback('ambiguous_reference',corpus);
+   if(!result)result=guideIntentAnswer(message,resolved.state,corpus);
    const evidence=result?null:retrieve(index,message,{pagePath:input.pagePath,entityId:input.entityId});
    if(!result){
     if(evidence.status!=='answered')result=fallback(evidence.reason,corpus);
@@ -59,18 +66,20 @@ export function createHandler({corpus,policy,settings={},store,provider,paid={},
    }
    // A confirmation response may still identify one exact current product.
    // Never silently choose the first product from a comparison or private query.
-   const handoffAllowed=result.retirementStatus!=='retired'&&!['private_request','not_offered','retired','language','invalid_context'].includes(result.reason);
+   const handoffAllowed=result.retirementStatus!=='retired'&&!['private_request','not_offered','retired','language','invalid_context','safety'].includes(result.reason);
+   if(!handoffAllowed||result.status==='clarify')resolved.state={entityIds:[],owners:[],intent:'supply-install',preference:null};
    const enquiryContext=handoffAllowed?catalogueEnquiryContext(corpus,message,input.pagePath):null;
    if(enquiryContext)result.enquiryContext=enquiryContext;
-   result.enquiryIntent=result.retirementStatus==='retired'||result.reason==='retired'?'product':enquiryIntent(message,!!(enquiryContext||result.enquiryContext));
+   if(enquiryContext&&handoffAllowed&&result.status!=='clarify'){resolved.state.entityIds=[enquiryContext.entityId];resolved.state.owners=[];}
+   result.enquiryIntent=result.retirementStatus==='retired'||result.reason==='retired'?'product':resolved.state.intent;
    if(!metered)await reserveDeterministic();
    if(!usedModel)await activeStore.settle(reservation,0);
    metadata({requestId,status:result.status,reason:result.reason||'supported',corpusVersion:corpus.corpusVersion,promptVersion:PROMPT_VERSION,modelVersion:usedModel?paid.model:'deterministic',evidenceCount:evidence?.facts.length||0,latencyMs:now()-start,inputTokens:usage.input_tokens,outputTokens:usage.output_tokens,cachedTokens:usage.input_tokens_details?.cached_tokens,cacheWriteTokens:usage.input_tokens_details?.cache_write_tokens||0,reasoningTokens:usage.output_tokens_details?.reasoning_tokens,estimatedCostUsd:cost});
-   return respond({...result,mode:paidMode?settings.mode:'mock',reason:result.reason||'supported'});
+   return respond({...result,conversationToken:signConversation(resolved.state,{secret:settings.signingSecret,session,corpus}),mode:paidMode?settings.mode:'mock',reason:result.reason||'supported'});
   }catch(error){
    // Unknown failures retain a conservative reservation; never log exception text.
    const reason=safeReasons.has(error.message)?error.message:'provider_unavailable';
-   const status=reason==='too_large'?413:reason==='origin'?403:reason==='method'?405:['rate_limit','busy','duplicate','idempotency_conflict'].includes(reason)?429:['request','session','content_type','context','consent_required'].includes(reason)?400:503;
+   const status=reason==='too_large'?413:reason==='origin'?403:reason==='method'?405:['rate_limit','busy','duplicate','idempotency_conflict'].includes(reason)?429:['request','session','conversation','content_type','context','consent_required'].includes(reason)?400:503;
    const diagnosticCode=['provider_input_limit','provider_incomplete','provider_usage','provider_invalid','provider_refusal'].includes(error.message)?error.message:null;
    metadata({requestId,status:'unavailable',reason,diagnosticCode,latencyMs:now()-start});return respond(fallback(reason,corpus),status);
   }

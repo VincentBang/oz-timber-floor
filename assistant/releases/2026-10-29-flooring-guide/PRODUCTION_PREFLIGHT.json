@@ -1,0 +1,120 @@
+{
+  "at": "2026-10-29T06:10:32.622Z",
+  "facts": 6744,
+  "factsUnchanged": true,
+  "retirementsUnchanged": true,
+  "sourceManifestVerified": true,
+  "criticalMeteringCodeUnchanged": true,
+  "profileHash": "cc3daf43a787f8489b7be437f5186e10905efbcf46bcae2398cef0164e0edb44",
+  "corpusVersion": "0627c3489978e806f4ee0a2aff08732a2ef28fbc9d77ebc928ca4179c0f03730",
+  "publicFiles": 6331,
+  "changedPublicFiles": [
+    "assets/flooring-assistant-handoff.js",
+    "assets/flooring-assistant.css",
+    "assets/flooring-assistant.js",
+    "assets/flooring-guide-context.js",
+    "assets/flooring-guide-request.js"
+  ],
+  "allHtmlRoutingFormsSeoAnalyticsPrivacyAndEnquiryArchiveByteIdentical": true,
+  "paidCallsThisRun": 0,
+  "publicContract": {
+    "htmlPages": 2226,
+    "files": 6331,
+    "publicationCanonicals": 773,
+    "sitemapUrls": 773,
+    "uniqueInternalRoutes": 1438,
+    "uniqueLocalAssets": 2307,
+    "brokenLinks": 0,
+    "brokenAssets": 0,
+    "privateFilesExcluded": true,
+    "publicSecretsScanPassed": true,
+    "allHtmlByteIdenticalToCurrentRelease": true
+  },
+  "tests": [
+    {
+      "name": "unit",
+      "command": [
+        "node",
+        "--test",
+        "assistant/tests/answer-quality.test.mjs",
+        "assistant/tests/atomic-budget.test.mjs",
+        "assistant/tests/blob-transport.test.mjs",
+        "assistant/tests/catalogue-formats.test.mjs",
+        "assistant/tests/contracts.test.mjs",
+        "assistant/tests/deployment.test.mjs",
+        "assistant/tests/editorial-handoff.test.mjs",
+        "assistant/tests/editorial-release.test.mjs",
+        "assistant/tests/existing-key-check.test.mjs",
+        "assistant/tests/flooring-guide-v2.test.mjs",
+        "assistant/tests/four-supplier-refresh.test.mjs",
+        "assistant/tests/guide-state-errors.test.mjs",
+        "assistant/tests/handoff.test.mjs",
+        "assistant/tests/knowledge-review.test.mjs",
+        "assistant/tests/launcher-layout.test.mjs",
+        "assistant/tests/legacy-retirement.test.mjs",
+        "assistant/tests/local-sprint.test.mjs",
+        "assistant/tests/luna.test.mjs",
+        "assistant/tests/paid-preview.test.mjs",
+        "assistant/tests/post-migration-safety.test.mjs",
+        "assistant/tests/production-preflight.test.mjs",
+        "assistant/tests/production.test.mjs",
+        "assistant/tests/provider-diagnostics.test.mjs",
+        "assistant/tests/source.test.mjs",
+        "assistant/tests/spec-recovery.test.mjs",
+        "assistant/tests/supplier-refresh.test.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "references",
+      "command": [
+        "node",
+        "scripts/assistant-eval.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "usefulness",
+      "command": [
+        "node",
+        "scripts/guide-usefulness-eval.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "analytics",
+      "command": [
+        "node",
+        "scripts/analytics-event-contract.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "enquiry",
+      "command": [
+        "node",
+        "scripts/resend-enquiry-contract.mjs"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "exact-archive",
+      "command": [
+        "node",
+        "--test",
+        "/private/tmp/oz-guide-production-e5wz8j/bundled-production.test.mjs"
+      ],
+      "exit": 0
+    }
+  ],
+  "migrationFullChain": "PASS after existing private workbooks restored byte-identically; failed attempts retained outside Git",
+  "hostedSmoke": {
+    "responses": 5,
+    "maximumUsd": 0.25,
+    "recordedUsd": 0.000414101,
+    "trialClosed": true
+  },
+  "historicalBaseline": "Original ENTRY_STATE/September hash expectations unchanged; actual current release compared byte-for-byte and scoped tests run",
+  "providerWritesSoFar": 0,
+  "productionDeploymentsSoFar": 0
+}

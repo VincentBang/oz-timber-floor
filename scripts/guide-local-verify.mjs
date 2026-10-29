@@ -1,0 +1,17 @@
+import fs from 'node:fs';import path from 'node:path';import crypto from 'node:crypto';import assert from 'node:assert/strict';
+const base=process.env.OZ_GUIDE_BASELINE,root=process.cwd(),out='../evidence/followup';
+assert(base&&path.isAbsolute(base),'Set OZ_GUIDE_BASELINE to the captured baseline checkout');
+const hash=f=>crypto.createHash('sha256').update(fs.readFileSync(f)).digest('hex');
+const walk=(dir,prefix='')=>fs.readdirSync(dir,{withFileTypes:true}).flatMap(e=>['.git','node_modules','dist'].includes(e.name)?[]:e.isDirectory()?walk(path.join(dir,e.name),prefix+e.name+'/'):e.isFile()?[prefix+e.name]:[]);
+const html=walk(base).filter(f=>f.endsWith('.html'));for(const f of html)assert.equal(hash(base+'/'+f),hash(root+'/'+f),'Public HTML changed: '+f);
+assert.deepEqual(walk(root).filter(f=>f.endsWith('.html')).sort(),html.sort(),'HTML route set changed');
+const protectedFiles=['_redirects','netlify.toml','robots.txt','sitemap.xml','assets/site.js','contact.html','contact/index.html','privacy.html','privacy/index.html','netlify/functions/resend-enquiry-notification.mjs','assistant/config/policy.json','assistant/config/production.json','assistant/releases/2026-10-29/production-profile.json','assistant/releases/2026-10-29/LOCAL_BINDING_AUTHORITY.json'];
+for(const f of walk(base).filter(f=>f.startsWith('data/')))protectedFiles.push(f);
+for(const f of protectedFiles)assert.equal(hash(base+'/'+f),hash(root+'/'+f),'Protected input changed: '+f);
+const old=JSON.parse(fs.readFileSync(base+'/assistant/generated/corpus.json')),current=JSON.parse(fs.readFileSync(root+'/assistant/generated/corpus.json'));
+const facts=c=>c.documents.map(d=>({entityId:d.entityId,entityType:d.entityType,title:d.title,canonicalPath:d.canonicalPath,facts:d.facts}));assert.deepEqual(facts(current),facts(old),'Knowledge facts changed');assert.deepEqual(current.retirements,old.retirements);
+const profile=JSON.parse(fs.readFileSync(root+'/assistant/releases/2026-10-29/production-profile.json'));assert.equal(profile.allowance.monthBudgetUsd,30);assert.equal(profile.allowance.dayBudgetUsd,1);assert.notEqual(current.corpusVersion,profile.boundCorpusVersion);assert.match(fs.readFileSync('assets/flooring-assistant-config.js','utf8'),/enabled:\s*false/);
+for(const f of ['assistant/generated/corpus.json','assistant/lib/conversation-state.mjs','docs/flooring-assistant/PRIVATE_PROVENANCE.json','__guideqa/harness.js','__guideqa/axe.min.js'])assert(!fs.existsSync('dist/'+f),'Private/test artifact became public: '+f);
+const assistantAssets=walk(root+'/assets').filter(f=>f.startsWith('flooring-'));for(const f of assistantAssets)assert.equal(hash(root+'/assets/'+f),hash(root+'/dist/assets/'+f),'Public assistant asset is stale: '+f);
+const result={success:true,unchangedHtml:html.length,unchangedProtectedFiles:protectedFiles.length,factsUnchanged:current.documents.reduce((sum,d)=>sum+d.facts.length,0),retirementsUnchanged:true,corpusVersion:current.corpusVersion,productionProfileUnchanged:true,monthUsd:30,dayUsd:1,candidateNotApproved:true,uiDefaultOff:true,testAssetsExcluded:true,publicAssistantAssetsCurrent:assistantAssets.length};
+fs.mkdirSync(out,{recursive:true});fs.writeFileSync(out+'/PRESERVATION.json',JSON.stringify(result,null,2));console.log(JSON.stringify(result,null,2));

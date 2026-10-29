@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "purpose": "public-production-launch",
+  "activationApproved": true,
+  "dataUseApproved": true,
+  "ownerApprovals": {
+    "knowledge": true,
+    "privacy": true,
+    "spending": true,
+    "launch": true
+  },
+  "approvalReference": "Vincent explicitly approved GitHub publication and public activation of the updated Flooring Guide on 29 October 2026, retaining existing model/key, privacy and USD30/month USD1/day limits. Five actual protected-preview responses passed; exact runtime and corpus binding checked separately. See assistant/releases/2026-10-29-flooring-guide/RELEASE_AUTHORITY.json.",
+  "apiKeyVariable": "OZ_ASSISTANT_OPENAI_API_KEY",
+  "boundCorpusVersion": "0627c3489978e806f4ee0a2aff08732a2ef28fbc9d77ebc928ca4179c0f03730",
+  "privacyDocumentSha256": "441e3cd003a93cd3cf7a4a112539629c9e09058a7090e50b046f11321cae8be5",
+  "candidateModelId": "gpt-6-luna",
+  "requestSettings": {
+    "reasoningEffort": "none",
+    "cacheMode": "explicit",
+    "cacheTtl": "30m",
+    "cacheBreakpoints": 0
+  },
+  "rateTable": {
+    "modelId": "gpt-6-luna",
+    "inputUsdPerMillion": 0.1,
+    "outputUsdPerMillion": 0.5,
+    "cachedInputUsdPerMillion": 0.01,
+    "cacheWrite30mUsdPerMillion": 0.125,
+    "cacheWrite12hUsdPerMillion": 0.25,
+    "verifiedAt": "2026-10-29",
+    "source": "https://developers.openai.com/api/docs/pricing/"
+  },
+  "modelAccess": {
+    "status": "PRODUCTION_KEY_PASS",
+    "reportSha256": "6f3b4155fa455d0f73b3398f066eb0b7a6debe69b88c47ee30a0c14ae662fb25"
+  },
+  "budgetStoreName": "oz-assistant-production-budget-v1",
+  "budgetStoreRegion": "us-east-2",
+  "atomicStoreAdapter": "netlify-blobs-strong-cas-v1",
+  "budgetVerification": {
+    "status": "HOSTED_PASS",
+    "storeName": "oz-assistant-production-budget-v1",
+    "reportSha256": "9ab3674b37becb25d7b78cef407df5338b0a6e8b399143196dc0bb069d688dec"
+  },
+  "allowance": {
+    "sessionMinute": 6,
+    "sessionDay": 30,
+    "ipMinute": 12,
+    "ipDay": 100,
+    "sessionConcurrent": 2,
+    "globalConcurrent": 4,
+    "globalDayCalls": 200,
+    "globalMonthCalls": 1000,
+    "dayBudgetUsd": 1,
+    "monthBudgetUsd": 30
+  }
+}

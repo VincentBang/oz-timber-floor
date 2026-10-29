@@ -1,0 +1,16 @@
+{
+  "at": "2026-10-29T06:05:15.454Z",
+  "request": "ok can we push to github and make the updated Flooring Guide live now, keeping the $30 monthly cap?",
+  "sourceHead": "b160662aea8d1c34f5be35aae9c5cfd889f335ad",
+  "corpusVersion": "0627c3489978e806f4ee0a2aff08732a2ef28fbc9d77ebc928ca4179c0f03730",
+  "profileHash": "cc3daf43a787f8489b7be437f5186e10905efbcf46bcae2398cef0164e0edb44",
+  "monthlyUsd": 30,
+  "dailyUsd": 1,
+  "oneProductionDeployment": true,
+  "gitPushAuthorized": true,
+  "activationAuthorized": true,
+  "providerWrites": "Only guarded pause/rebind/enable of existing production profile fingerprint and strong control; never write/reset budget state",
+  "noNewPaidTestOrFormSubmission": true,
+  "hostedEvidenceSha256": "a01aa872569245b6ac738d1d629939ef75b4c6ffe19eb54cf7414565ebbd8e00",
+  "historicalProofScope": "Existing production-key/model and same unchanged native-store component proofs retained; fresh protected candidate tested separately"
+}

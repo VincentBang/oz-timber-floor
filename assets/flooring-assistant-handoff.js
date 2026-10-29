@@ -2,10 +2,11 @@ const prefix='oz-assistant-draft-v1:',ttl=15*60*1000;
 const intents=['stock','supply-only','supply-install','product','commercial','service'];
 export const fields=['suburb','area','timing','property_type','service_type','current_flooring','company_project','access_constraints','message'];
 const safePath=s=>typeof s==='string'&&/^\/(?!\/)[a-z0-9\-/]*$/.test(s);
+const plain=value=>value!==null&&typeof value==='object'&&!Array.isArray(value)&&Object.getPrototypeOf(value)===Object.prototype;
 function clean(value,max=500){return typeof value==='string'?value.replace(/[\u0000-\u001f]/g,' ').slice(0,max):'';}
 export function canFillDraftField(field){return !field.value.trim()||Boolean(field.dataset?.enquiryDefault&&field.value===field.dataset.enquiryDefault);}
 export function validateDraft(d,now=Date.now()){
- if(!d||d.version!==1||!Number.isFinite(d.createdAt)||d.createdAt>now||now-d.createdAt>ttl||!intents.includes(d.intent)||!safePath(d.context?.pagePath)||!d.values||Object.keys(d.values).some(k=>!fields.includes(k)))throw Error('draft_invalid');
+ if(!plain(d)||d.version!==1||!Number.isFinite(d.createdAt)||d.createdAt>now||now-d.createdAt>ttl||!intents.includes(d.intent)||!plain(d.context)||!safePath(d.context?.pagePath)||!plain(d.values)||Object.keys(d.values).some(k=>!fields.includes(k)))throw Error('draft_invalid');
  if(Object.keys(d).some(k=>!['version','createdAt','intent','context','values'].includes(k))||Object.keys(d.context).some(k=>!['entityId','pagePath','product','range','category','productSlug'].includes(k)))throw Error('draft_invalid');
  for(const [k,v]of Object.entries(d.values))if(typeof v!=='string'||v.length>500)throw Error('draft_invalid');
  for(const [k,v]of Object.entries(d.context))if(typeof v!=='string'||v.length>240||/[<>\u0000-\u001f]/.test(v))throw Error('draft_invalid');return d;
@@ -27,5 +28,6 @@ export function receiveHandoff(storage,now=Date.now()){
  const title=element('h2','Review your enquiry draft');title.id='assistant-draft-title';dialog.append(title,element('p','Review and edit these optional details. Existing form values will be kept. Nothing is sent until you use Send enquiry and accept the form consent.'));
  const controls=[];for(const field of fields){if(!draft.values[field])continue;const label=element('label',field.replaceAll('_',' ')),input=element('textarea');input.value=draft.values[field];input.maxLength=500;label.append(input);dialog.append(label);controls.push([field,input]);}
  const apply=element('button','Apply reviewed details'),cancel=element('button','Discard draft');apply.type=cancel.type='button';dialog.append(apply,cancel);document.body.append(dialog);
- apply.addEventListener('click',()=>{for(const [field,input]of controls){const target=form.elements.namedItem(field);if(!target||!canFillDraftField(target))continue;const value=clean(input.value);if(target.tagName==='SELECT'&&![...target.options].some(o=>o.value===value))continue;target.value=value;delete target.dataset.enquiryDefault;target.dispatchEvent(new Event('change',{bubbles:true}));}dialog.close();dialog.remove();});cancel.addEventListener('click',()=>{dialog.close();dialog.remove();});dialog.addEventListener('cancel',()=>dialog.remove());dialog.showModal();
+ const restoreFocus=()=>{const target=[...form.querySelectorAll('input[required],textarea[required]')].find(n=>n.type!=='checkbox'&&!n.value.trim())||form.elements.namedItem('message');target?.focus();};
+ apply.addEventListener('click',()=>{for(const [field,input]of controls){const target=form.elements.namedItem(field);if(!target||!canFillDraftField(target))continue;const value=clean(input.value);if(target.tagName==='SELECT'&&![...target.options].some(o=>o.value===value))continue;target.value=value;delete target.dataset.enquiryDefault;target.dispatchEvent(new Event('change',{bubbles:true}));}dialog.close();dialog.remove();restoreFocus();});cancel.addEventListener('click',()=>{dialog.close();dialog.remove();restoreFocus();});dialog.addEventListener('cancel',()=>{dialog.remove();restoreFocus();});dialog.showModal();
 }
