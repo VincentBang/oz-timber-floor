@@ -1,0 +1,38 @@
+{
+  "at": "2026-10-29T06:15:50.350Z",
+  "productionUrl": "https://oztimberfloor.com.au/",
+  "sourceCommit": "3cd3966e456be3e83c7de29691f227059f68561b",
+  "deployId": "6ae2e3a8f5b6fa989c6bec6a",
+  "profileHash": "cc3daf43a787f8489b7be437f5186e10905efbcf46bcae2398cef0164e0edb44",
+  "corpusVersion": "0627c3489978e806f4ee0a2aff08732a2ef28fbc9d77ebc928ca4179c0f03730",
+  "assistantSha256": "67083d472d33c993f4a06446efdb20147f98ff35d707fc2cef1ba3a472895cfc",
+  "enquirySha256": "2a9f2a80c5562de7e0bd705075a4ead65b75fa824ceab55c045228fe482c32e8",
+  "productionMonthlyUsd": 30,
+  "productionDailyUsd": 1,
+  "monthlySpendRetainedUsd": 0.0219619,
+  "manualLedgerReset": false,
+  "paidCallsThisRelease": 0,
+  "formSubmissions": 0,
+  "localUnitTests": 151,
+  "cleanArchiveTests": 8,
+  "referenceCases": 120,
+  "usefulness": {
+    "normal": 30,
+    "safety": 5
+  },
+  "productionMigrationFullChain": "PASS",
+  "liveStaticChecks": 14,
+  "liveHttpChecks": 19,
+  "sitemapUrls": 773,
+  "browserWidths": [
+    320,
+    390,
+    1440
+  ],
+  "detectedFormFields": 33,
+  "newDeployments": 1,
+  "rollbackDeployId": "6ae271f4ede5c578fde4aace",
+  "previousProfileHash": "bb5503a3eda50f769b128dd410ade3b9ca865a473597b8d60a339a228df6187e",
+  "historicalBaselinesUnchanged": true,
+  "physicalDevicesTested": false
+}
