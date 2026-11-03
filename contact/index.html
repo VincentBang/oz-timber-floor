@@ -13,9 +13,9 @@
   <meta property="og:url" content="https://oztimberfloor.com.au/contact/">
   <link rel="stylesheet" href="/assets/site.css">
   <script src="/assets/contact-config.js" defer=""></script>
-  <script src="/assets/site.js" defer=""></script>
+  <script src="/assets/enquiry-attachments.js" defer=""></script><script src="/assets/site.js" defer=""></script>
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"LocalBusiness","@id":"https://oztimberfloor.com.au/#business","name":"Oz Timber Floor","url":"https://oztimberfloor.com.au/","areaServed":{"@type":"City","name":"Sydney"},"description":"Sydney timber flooring supplier, installer, builder flooring contractor and floor preparation specialist."}]}</script>
-<link rel="stylesheet" href="/assets/mobile-ux.css"><script src="/assets/mobile-ux.js" defer=""></script><link rel="stylesheet" href="/assets/editorial-gallery.css"><script src="/assets/editorial-gallery.js" defer=""></script></head>
+<link rel="stylesheet" href="/assets/mobile-ux.css"><script src="/assets/mobile-ux.js" defer=""></script><link rel="stylesheet" href="/assets/editorial-gallery.css"><script src="/assets/editorial-gallery.js" defer=""></script><link rel="stylesheet" href="/assets/enquiry-attachments.css"></head>
 <body data-mobile-page="contact" data-editorial-version="1" class="editorial" data-editorial-family="contact"><a class="skip-link" href="#main-content">Skip to content</a>
   <header class="site-header">
     <div class="shell nav">
@@ -27,26 +27,26 @@
         <a href="/">Home</a>
         <div class="nav-item has-dropdown">
           <a class="nav-parent" href="/services/">Services</a>
-          <button class="nav-dropdown-toggle" type="button" aria-label="Toggle services menu" aria-expanded="false"></button>
-          <div class="nav-dropdown" role="menu">
-            <a href="/timber-floor-installation/" role="menuitem">Timber flooring installation</a>
-            <a href="/floor-levelling/" role="menuitem">Floor levelling</a>
-            <a href="/timber-floor-removal-and-stripping-sydney/" role="menuitem">Floor removal</a>
-            <a href="/timber-floor-sanding-and-polishing-sydney/" role="menuitem">Sanding and polishing</a>
-            <a href="/commercial-flooring/" role="menuitem">Commercial flooring</a>
-            <a href="/builder-flooring-contractor-sydney/" role="menuitem">Builder flooring contractor</a>
+          <button class="nav-dropdown-toggle" type="button" aria-label="Toggle services menu" aria-expanded="false" aria-controls="oz-nav-services"></button>
+          <div class="nav-dropdown" id="oz-nav-services">
+            <a href="/timber-floor-installation/">Timber flooring installation</a>
+            <a href="/floor-levelling/">Floor levelling</a>
+            <a href="/timber-floor-removal-and-stripping-sydney/">Floor removal</a>
+            <a href="/timber-floor-sanding-and-polishing-sydney/">Sanding and polishing</a>
+            <a href="/commercial-flooring/">Commercial flooring</a>
+            <a href="/builder-flooring-contractor-sydney/">Builder flooring contractor</a>
           </div>
         </div>
         <div class="nav-item has-dropdown">
           <a class="nav-parent" href="/products/">Products</a>
-          <button class="nav-dropdown-toggle" type="button" aria-label="Toggle products menu" aria-expanded="false"></button>
-          <div class="nav-dropdown" role="menu">
-            <a href="/hybrid/" role="menuitem">Hybrid flooring</a>
-            <a href="/laminate/" role="menuitem">Laminate flooring</a>
-            <a href="/engineered-timber-flooring/" role="menuitem">Engineered timber</a>
-            <a href="/solid-timber/" role="menuitem">Solid timber</a>
-            <a href="/vinyl/" role="menuitem">Vinyl flooring</a>
-            <a href="/ranges/" role="menuitem">All ranges</a>
+          <button class="nav-dropdown-toggle" type="button" aria-label="Toggle products menu" aria-expanded="false" aria-controls="oz-nav-products"></button>
+          <div class="nav-dropdown" id="oz-nav-products">
+            <a href="/hybrid/">Hybrid flooring</a>
+            <a href="/laminate/">Laminate flooring</a>
+            <a href="/engineered-timber-flooring/">Engineered timber</a>
+            <a href="/solid-timber/">Solid timber</a>
+            <a href="/vinyl/">Vinyl flooring</a>
+            <a href="/ranges/">All ranges</a>
           </div>
         </div>
         <a href="/projects/">Projects</a>
@@ -77,7 +77,7 @@
         <section class="contact-panel contact-form-panel">
           <h2>Send your flooring enquiry</h2>
           <p class="form-note">Choose the enquiry type first. The form will show the details that help us respond faster.</p>
-          <form class="contact-form" name="oz-flooring-enquiry" method="POST" action="/thank-you/" data-netlify="true" netlify-honeypot="company" data-contact-form="" data-form-handler="netlify">
+          <form enctype="multipart/form-data" class="contact-form" name="oz-flooring-enquiry" method="POST" action="/thank-you/" data-netlify="true" netlify-honeypot="company" data-contact-form="" data-form-handler="netlify">
             <input type="hidden" name="form-name" value="oz-flooring-enquiry">
             <input type="hidden" name="approved_inbox" value="info@oztimberfloor.com.au">
             <input type="hidden" name="form_handler" value="Netlify Forms">
@@ -188,7 +188,13 @@
               <textarea id="message" name="message" placeholder="Tell us about the current floor, product you are considering, supply-only or installed work, timing, stairs, access or site conditions."></textarea>
             </div>
 
-            <details class="mobile-disclosure mobile-project-details form-span" hidden="" data-mobile-kind="optional"><summary data-mobile-control="">Add project details (optional)</summary><div class="mobile-disclosure-panel"></div></details><p class="form-note form-span">Your details are used to respond to your flooring enquiry. See our <a href="/privacy/">Privacy Policy</a>.</p>
+            <fieldset class="enquiry-uploads form-span" data-enquiry-uploads=""><legend>Floor plan and photos (optional)</legend>
+<p>Attach one floor plan and up to two flooring photos. Maximum 7 MB combined. Remove names, addresses and unnecessary personal details before uploading. If unsure, leave these blank and ask the team how to send files.</p>
+<div class="enquiry-upload"><label for="floor_plan">Floor plan</label><p id="floor_plan-help">PDF, JPG/JPEG, PNG or WebP. One optional file.</p><input type="file" id="floor_plan" name="floor_plan" accept=".pdf,.jpg,.jpeg,.png,.webp" aria-describedby="floor_plan-help floor_plan-status"><span id="floor_plan-status" data-upload-status="floor_plan" aria-live="polite">No file selected</span><div class="upload-actions"><button type="button" data-upload-for="floor_plan" data-upload-action="replace" aria-label="Replace floor plan" hidden="">Replace</button><button type="button" data-upload-for="floor_plan" data-upload-action="remove" aria-label="Remove floor plan" hidden="">Remove</button></div></div>
+<div class="enquiry-upload"><label for="flooring_photo_1">Flooring photo 1</label><p id="flooring_photo_1-help">JPG/JPEG, PNG or WebP. One optional file.</p><input type="file" id="flooring_photo_1" name="flooring_photo_1" accept=".jpg,.jpeg,.png,.webp" aria-describedby="flooring_photo_1-help flooring_photo_1-status"><span id="flooring_photo_1-status" data-upload-status="flooring_photo_1" aria-live="polite">No file selected</span><div class="upload-actions"><button type="button" data-upload-for="flooring_photo_1" data-upload-action="replace" aria-label="Replace flooring photo 1" hidden="">Replace</button><button type="button" data-upload-for="flooring_photo_1" data-upload-action="remove" aria-label="Remove flooring photo 1" hidden="">Remove</button></div></div>
+<div class="enquiry-upload"><label for="flooring_photo_2">Flooring photo 2</label><p id="flooring_photo_2-help">JPG/JPEG, PNG or WebP. One optional file.</p><input type="file" id="flooring_photo_2" name="flooring_photo_2" accept=".jpg,.jpeg,.png,.webp" aria-describedby="flooring_photo_2-help flooring_photo_2-status"><span id="flooring_photo_2-status" data-upload-status="flooring_photo_2" aria-live="polite">No file selected</span><div class="upload-actions"><button type="button" data-upload-for="flooring_photo_2" data-upload-action="replace" aria-label="Replace flooring photo 2" hidden="">Replace</button><button type="button" data-upload-for="flooring_photo_2" data-upload-action="remove" aria-label="Remove flooring photo 2" hidden="">Remove</button></div></div>
+<p data-upload-total="" aria-live="polite">No attachments selected. You can send the form without files.</p><p>Files are sent with this enquiry, not to the AI Flooring Guide. See our <a href="/privacy/">Privacy Policy</a>.</p></fieldset>
+<details class="mobile-disclosure mobile-project-details form-span" hidden="" data-mobile-kind="optional"><summary data-mobile-control="">Add project details (optional)</summary><div class="mobile-disclosure-panel"></div></details><p class="form-note form-span">Your details are used to respond to your flooring enquiry. See our <a href="/privacy/">Privacy Policy</a>.</p>
 
             <label class="field consent-field form-span">
               <span><input type="checkbox" name="consent" required=""> I agree for Oz Timber Floor to contact me about this flooring enquiry using the details provided.</span>
@@ -222,7 +228,7 @@
               <p>Stairs, lifts, parking, old flooring and floor condition all help qualify the enquiry.</p>
             </article>
           </div>
-          <p class="form-note">If you have photos or a floor plan, mention it in the message and we can request them after your enquiry.</p>
+          <p class="form-note">You can optionally attach a floor plan or photos in the form. If a file is too large, mention it in your message so we can discuss another way to send it.</p>
         </div></details></aside>
       </div>
     </section>

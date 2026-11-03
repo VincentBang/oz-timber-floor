@@ -1,0 +1,1612 @@
+{
+  "date": "2026-11-03",
+  "scope": "Explicit reviewed local range references; no product fact, URL, status or indexation changes.",
+  "changes": [
+    {
+      "collection": "ranges",
+      "id": "de-marque-oak",
+      "field": "products",
+      "beforeHash": "2b64a889df5a43e3f60117c6c51189223898bef18fc96b2dcfd4938cca149b92",
+      "after": [
+        "de-marque-oak-wide-plank-copper-brown",
+        "de-marque-oak-wide-plank-valley-oak",
+        "de-marque-oak-wide-plank-french-lace",
+        "de-marque-oak-wide-plank-dusk-grey",
+        "de-marque-oak-wide-plank-polar-ice",
+        "de-marque-oak-wide-plank-matterhorn",
+        "de-marque-oak-herringbone-raw",
+        "de-marque-oak-chevron-raw",
+        "de-marque-oak-chevron-parana",
+        "de-marque-oak-chevron-latte",
+        "de-marque-oak-chevron-storm",
+        "de-marque-oak-chevron-sauvignon",
+        "de-marque-oak-chevron-riesling",
+        "de-marque-oak-chevron-pure-natural",
+        "de-marque-oak-chevron-cognac",
+        "de-marque-oak-chevron-colonial-grey",
+        "de-marque-oak-chevron-chateau-grey",
+        "de-marque-oak-chevron-vintage",
+        "de-marque-oak-herringbone-storm",
+        "de-marque-oak-herringbone-pure-natural",
+        "de-marque-oak-herringbone-colonial-grey",
+        "de-marque-oak-herringbone-chateau-grey",
+        "de-marque-oak-herringbone-dark-brown",
+        "de-marque-oak-herringbone-vanilla",
+        "de-marque-oak-chevron-mink-grey",
+        "de-marque-oak-chevron-champagne",
+        "de-marque-oak-chevron-cannes",
+        "de-marque-oak-herringbone-vintage",
+        "de-marque-oak-herringbone-sauvignon",
+        "de-marque-oak-herringbone-riesling",
+        "de-marque-oak-herringbone-parana",
+        "de-marque-oak-herringbone-latte",
+        "de-marque-oak-chevron-dark-brown",
+        "de-marque-oak-herringbone-cognac",
+        "de-marque-oak-herringbone-ash-grey"
+      ]
+    },
+    {
+      "collection": "ranges",
+      "id": "elk-falls",
+      "field": "products",
+      "beforeHash": "226c1cb8055a5c8c0b2f80ec8b08d173839542aba12af794ad740b268549683a",
+      "after": [
+        "elk-falls-roasted-vanilla",
+        "elk-falls-barley-malt",
+        "elk-falls-honey-mash",
+        "elk-falls-bluegrass",
+        "elk-falls-whiskey-barrel",
+        "elk-falls-snowdrift",
+        "elk-falls-rustic-natural",
+        "elk-falls-rustic-eldorado",
+        "elk-falls-natural",
+        "elk-falls-moonshine",
+        "elk-falls-double-char",
+        "elk-falls-copper-still"
+      ]
+    },
+    {
+      "collection": "ranges",
+      "id": "fiddleback",
+      "field": "products",
+      "beforeHash": "a2745e011df5830988c61174e8cecab9a03522e85ec42194d89e13056f7abd3f",
+      "after": [
+        "fiddleback-rustic-spotted-gum",
+        "fiddleback-herringbone-spotted-gum",
+        "fiddleback-spotted-gum",
+        "fiddleback-rustic-blackbutt",
+        "fiddleback-herringbone-blackbutt",
+        "fiddleback-blackbutt"
+      ]
+    },
+    {
+      "collection": "ranges",
+      "id": "hydroplank-wpc",
+      "field": "products",
+      "beforeHash": "91eaf8d3bcbfa4f51ed4b72ffb33602609ecac02038e798b62d8019e9d6abda4",
+      "after": [
+        "hydroplank-wpc-marble-hill",
+        "hydroplank-wpc-hudson-oak",
+        "hydroplank-wpc-astoria",
+        "hydroplank-wpc-northern-blackbutt",
+        "hydroplank-wpc-staten-island",
+        "hydroplank-wpc-soho",
+        "hydroplank-wpc-queens",
+        "hydroplank-wpc-harlem",
+        "hydroplank-wpc-hamptons",
+        "hydroplank-wpc-coney-island",
+        "hydroplank-wpc-spotted-gum",
+        "hydroplank-wpc-blackbutt"
+      ]
+    },
+    {
+      "collection": "ranges",
+      "id": "kronoswiss-aquastop",
+      "field": "products",
+      "beforeHash": "adbf286438275220606cae8aa710ab63c351d10a2a07238da4e625e0a110185b",
+      "after": [
+        "kronoswiss-aquastop-strasbourg",
+        "kronoswiss-aquastop-quiet",
+        "kronoswiss-aquastop-elegant",
+        "kronoswiss-aquastop-oak-adaja",
+        "kronoswiss-aquastop-artisan-oak-natural",
+        "kronoswiss-aquastop-urban-oak-natural",
+        "kronoswiss-aquastop-bright",
+        "kronoswiss-aquastop-artisan-oak-beige",
+        "kronoswiss-aquastop-dune",
+        "kronoswiss-aquastop-snow",
+        "kronoswiss-aquastop-rock",
+        "kronoswiss-aquastop-moon",
+        "kronoswiss-aquastop-beach",
+        "kronoswiss-aquastop-spotted-gum",
+        "kronoswiss-aquastop-blackbutt",
+        "kronoswiss-aquastop-zermatt",
+        "kronoswiss-aquastop-natural-oak-grey",
+        "kronoswiss-aquastop-lugano-oak",
+        "kronoswiss-aquastop-helsinki",
+        "kronoswiss-aquastop-dublin"
+      ]
+    },
+    {
+      "collection": "ranges",
+      "id": "oakleaf-laminate",
+      "field": "products",
+      "beforeHash": "e6f531eb73dc96dae82385d4f9ecd2d7fb0beeec8147d2fafa540f2e7bc9ca03",
+      "after": [
+        "oakleaf-laminate-paperbark",
+        "oakleaf-laminate-oriental-pearl",
+        "oakleaf-laminate-chalkers-ridge",
+        "oakleaf-laminate-barley-husk",
+        "oakleaf-laminate-tawny-oak",
+        "oakleaf-laminate-spotted-gum",
+        "oakleaf-laminate-nordic-oak",
+        "oakleaf-laminate-mystic-oak",
+        "oakleaf-laminate-maritime",
+        "oakleaf-laminate-ivory",
+        "oakleaf-laminate-classic-oak",
+        "oakleaf-laminate-blackbutt",
+        "oakleaf-laminate-aspen-oak",
+        "oakleaf-laminate-aged-blackbutt"
+      ]
+    },
+    {
+      "collection": "ranges",
+      "id": "oakleaf",
+      "field": "products",
+      "beforeHash": "f631f0b806be1f7da2e3e1b1286c5cf8fb47f6520a773494d5786efbc3b23b52",
+      "after": [
+        "oakleaf-hd-plus-bellmore-oak",
+        "oakleaf-hd-plus-hampton-oak",
+        "oakleaf-hd-plus-windsor",
+        "oakleaf-hd-plus-sierra-oak",
+        "oakleaf-hd-plus-clove",
+        "oakleaf-hd-plus-arctic-fox",
+        "oakleaf-hd-plus-wolf-grey",
+        "oakleaf-hd-plus-natural",
+        "oakleaf-hd-plus-delta-sand",
+        "oakleaf-hd-plus-blackbutt",
+        "oakleaf-hd-plus-bedrock",
+        "oakleaf-hd-plus-alpine-mist"
+      ]
+    },
+    {
+      "collection": "ranges",
+      "id": "prestige-oak",
+      "field": "products",
+      "beforeHash": "4e9f8ad0428168bd4ed291cdb5614ff0d33f36e477878d4a19b8ab24be178a20",
+      "after": [
+        "prestige-oak-manor-grey",
+        "prestige-oak-smoked-white",
+        "prestige-oak-royal-grey",
+        "prestige-oak-rawhide",
+        "prestige-oak-ocean-mist",
+        "prestige-oak-iceberg",
+        "prestige-oak-gunmetal",
+        "prestige-oak-coco-husk",
+        "prestige-oak-cobblestone",
+        "prestige-oak-buck-natural",
+        "prestige-oak-brownstone",
+        "prestige-oak-bondi-beach",
+        "prestige-oak-abbey-grey",
+        "prestige-oak-pure-oak",
+        "prestige-oak-hb-dark-brown",
+        "prestige-oak-colonial-grey",
+        "prestige-oak-pure-natural",
+        "prestige-oak-chateau-grey",
+        "prestige-oak-grey-wash",
+        "prestige-oak-raw",
+        "prestige-oak-white-smoke",
+        "prestige-oak-washed-oak",
+        "prestige-oak-piccolo",
+        "prestige-oak-onyx",
+        "prestige-oak-forrest",
+        "prestige-oak-bondi",
+        "prestige-oak-tokay",
+        "prestige-oak-mink-grey",
+        "prestige-oak-merlot",
+        "prestige-oak-grigio",
+        "prestige-oak-grey-mist",
+        "prestige-oak-glacier",
+        "prestige-oak-french-brown",
+        "prestige-oak-crema",
+        "prestige-oak-chardonnay",
+        "prestige-oak-champagne",
+        "prestige-oak-cannes",
+        "prestige-oak-black-fox",
+        "prestige-oak-aged-oak",
+        "prestige-oak-white-sands",
+        "prestige-oak-vanilla",
+        "prestige-oak-tan",
+        "prestige-oak-straw",
+        "prestige-oak-storm",
+        "prestige-oak-sauvignon",
+        "prestige-oak-riesling",
+        "prestige-oak-parana",
+        "prestige-oak-marble",
+        "prestige-oak-limewash",
+        "prestige-oak-latte",
+        "prestige-oak-heritage-grey",
+        "prestige-oak-espresso",
+        "prestige-oak-ebony",
+        "prestige-oak-chocolate-brown",
+        "prestige-oak-avola-natural"
+      ]
+    },
+    {
+      "collection": "ranges",
+      "id": "easi-plank",
+      "field": "products",
+      "beforeHash": "4b752113a34d9afd719b92bae8658de31e6962b792e1dea25a7712d4c3f41022",
+      "after": [
+        "easi-plank-easi-plank-jarrah",
+        "easi-plank-linen",
+        "easi-plank-natural-blackbutt",
+        "easi-plank-natural-spotted-gum",
+        "easi-plank-antique",
+        "easi-plank-barnside",
+        "easi-plank-classic-spotted-gum",
+        "easi-plank-deep-brown",
+        "easi-plank-doeskin",
+        "easi-plank-grey-stone",
+        "easi-plank-herringbone-barnside",
+        "easi-plank-herringbone-classic-spotted-gum",
+        "easi-plank-herringbone-grey-stone",
+        "easi-plank-herringbone-natural-blackbutt",
+        "easi-plank-herringbone-oak-natural",
+        "easi-plank-herringbone-pewter",
+        "easi-plank-herringbone-porcelain",
+        "easi-plank-herringbone-red-stone",
+        "easi-plank-herringbone-wheat",
+        "easi-plank-maize",
+        "easi-plank-oak-natural",
+        "easi-plank-pewter",
+        "easi-plank-porcelain",
+        "easi-plank-red-stone",
+        "easi-plank-silver-grey",
+        "easi-plank-smoked-spotted-gum",
+        "easi-plank-urban-grey",
+        "easi-plank-washed-coral",
+        "easi-plank-wheat",
+        "easi-plank-willow"
+      ]
+    },
+    {
+      "collection": "ranges",
+      "id": "easi-plank",
+      "field": "productSlugs",
+      "beforeHash": "4b752113a34d9afd719b92bae8658de31e6962b792e1dea25a7712d4c3f41022",
+      "after": [
+        "easi-plank-easi-plank-jarrah",
+        "easi-plank-linen",
+        "easi-plank-natural-blackbutt",
+        "easi-plank-natural-spotted-gum",
+        "easi-plank-antique",
+        "easi-plank-barnside",
+        "easi-plank-classic-spotted-gum",
+        "easi-plank-deep-brown",
+        "easi-plank-doeskin",
+        "easi-plank-grey-stone",
+        "easi-plank-herringbone-barnside",
+        "easi-plank-herringbone-classic-spotted-gum",
+        "easi-plank-herringbone-grey-stone",
+        "easi-plank-herringbone-natural-blackbutt",
+        "easi-plank-herringbone-oak-natural",
+        "easi-plank-herringbone-pewter",
+        "easi-plank-herringbone-porcelain",
+        "easi-plank-herringbone-red-stone",
+        "easi-plank-herringbone-wheat",
+        "easi-plank-maize",
+        "easi-plank-oak-natural",
+        "easi-plank-pewter",
+        "easi-plank-porcelain",
+        "easi-plank-red-stone",
+        "easi-plank-silver-grey",
+        "easi-plank-smoked-spotted-gum",
+        "easi-plank-urban-grey",
+        "easi-plank-washed-coral",
+        "easi-plank-wheat",
+        "easi-plank-willow"
+      ]
+    },
+    {
+      "collection": "ranges",
+      "id": "pronto",
+      "field": "products",
+      "beforeHash": "bfeb239b52f93ff75a71eeff38167998ac45942601cf1bd57a1e4934418b439a",
+      "after": [
+        "pronto-engineered-oak-dark-rum",
+        "pronto-beacon-cove",
+        "pronto-chesterfield",
+        "pronto-coral-cay",
+        "pronto-crystal-moon",
+        "pronto-dark-rum",
+        "pronto-dockside",
+        "pronto-golden-sands",
+        "pronto-grey-pearl",
+        "pronto-harbourside",
+        "pronto-herringbone-beacon-cove",
+        "pronto-herringbone-chesterfield",
+        "pronto-herringbone-golden-sands",
+        "pronto-herringbone-misty-cove",
+        "pronto-herringbone-parchment",
+        "pronto-herringbone-pebble-reef",
+        "pronto-herringbone-san-remo",
+        "pronto-herringbone-seafoam",
+        "pronto-herringbone-shore-break",
+        "pronto-herringbone-washed-pebble",
+        "pronto-newport",
+        "pronto-parchment",
+        "pronto-pebble-reef",
+        "pronto-portofino",
+        "pronto-river-sand",
+        "pronto-san-remo",
+        "pronto-sandy-cape",
+        "pronto-seafoam",
+        "pronto-shore-break",
+        "pronto-washed-pebble",
+        "pronto-welsh-slate"
+      ]
+    },
+    {
+      "collection": "ranges",
+      "id": "pronto",
+      "field": "productSlugs",
+      "beforeHash": "bfeb239b52f93ff75a71eeff38167998ac45942601cf1bd57a1e4934418b439a",
+      "after": [
+        "pronto-engineered-oak-dark-rum",
+        "pronto-beacon-cove",
+        "pronto-chesterfield",
+        "pronto-coral-cay",
+        "pronto-crystal-moon",
+        "pronto-dark-rum",
+        "pronto-dockside",
+        "pronto-golden-sands",
+        "pronto-grey-pearl",
+        "pronto-harbourside",
+        "pronto-herringbone-beacon-cove",
+        "pronto-herringbone-chesterfield",
+        "pronto-herringbone-golden-sands",
+        "pronto-herringbone-misty-cove",
+        "pronto-herringbone-parchment",
+        "pronto-herringbone-pebble-reef",
+        "pronto-herringbone-san-remo",
+        "pronto-herringbone-seafoam",
+        "pronto-herringbone-shore-break",
+        "pronto-herringbone-washed-pebble",
+        "pronto-newport",
+        "pronto-parchment",
+        "pronto-pebble-reef",
+        "pronto-portofino",
+        "pronto-river-sand",
+        "pronto-san-remo",
+        "pronto-sandy-cape",
+        "pronto-seafoam",
+        "pronto-shore-break",
+        "pronto-washed-pebble",
+        "pronto-welsh-slate"
+      ]
+    }
+  ],
+  "retained": [
+    {
+      "reference": "de-marque-oak-cannes",
+      "id": "de-marque-oak-cannes",
+      "status": "legacy-hidden",
+      "url": "/products/de-marque-oak-cannes/"
+    },
+    {
+      "reference": "de-marque-oak-chateau-grey",
+      "id": "de-marque-oak-chateau-grey",
+      "status": "legacy-hidden",
+      "url": "/products/de-marque-oak-chateau-grey/"
+    },
+    {
+      "reference": "de-marque-oak-colonial-grey",
+      "id": "de-marque-oak-colonial-grey",
+      "status": "legacy-hidden",
+      "url": "/products/de-marque-oak-colonial-grey/"
+    },
+    {
+      "reference": "de-marque-oak-latte",
+      "id": "de-marque-oak-latte",
+      "status": "legacy-hidden",
+      "url": "/products/de-marque-oak-latte/"
+    },
+    {
+      "reference": "de-marque-oak-parana",
+      "id": "de-marque-oak-parana",
+      "status": "legacy-hidden",
+      "url": "/products/de-marque-oak-parana/"
+    },
+    {
+      "reference": "de-marque-oak-pure-natural",
+      "id": "de-marque-oak-pure-natural",
+      "status": "legacy-hidden",
+      "url": "/products/de-marque-oak-pure-natural/"
+    },
+    {
+      "reference": "de-marque-oak-riesling",
+      "id": "de-marque-oak-riesling",
+      "status": "legacy-hidden",
+      "url": "/products/de-marque-oak-riesling/"
+    },
+    {
+      "reference": "de-marque-oak-sauvignon",
+      "id": "de-marque-oak-sauvignon",
+      "status": "legacy-hidden",
+      "url": "/products/de-marque-oak-sauvignon/"
+    },
+    {
+      "reference": "de-marque-oak-valley-oak",
+      "id": "de-marque-oak-valley-oak",
+      "status": "legacy-hidden",
+      "url": "/products/de-marque-oak-valley-oak/"
+    },
+    {
+      "reference": "de-marque-oak-vintage",
+      "id": "de-marque-oak-vintage",
+      "status": "legacy-hidden",
+      "url": "/products/de-marque-oak-vintage/"
+    },
+    {
+      "reference": "/products/elk-falls-hickory/",
+      "id": "elk-falls-hickory",
+      "status": "legacy-hidden",
+      "url": "/products/elk-falls-hickory/"
+    },
+    {
+      "reference": "/products/fiddleback-herringbone-blackbutt/",
+      "id": "-fiddleback-herringbone-blackbutt",
+      "status": "legacy-hidden",
+      "url": "/products/fiddleback-herringbone-blackbutt/"
+    },
+    {
+      "reference": "/products/fiddleback-herringbone-spotted-gum/",
+      "id": "-fiddleback-herringbone-spotted-gum",
+      "status": "legacy-hidden",
+      "url": "/products/fiddleback-herringbone-spotted-gum/"
+    },
+    {
+      "reference": "/products/fiddleback-rustic-spotted-gum/",
+      "id": "-fiddleback-rustic-spotted-gum",
+      "status": "legacy-hidden",
+      "url": "/products/fiddleback-rustic-spotted-gum/"
+    },
+    {
+      "reference": "fiddleback-backbutt-smooth-10-matte",
+      "id": "-fiddleback-backbutt-smooth-10-matte",
+      "status": "legacy-hidden",
+      "url": "/products/fiddleback-backbutt-smooth-10-matte/"
+    },
+    {
+      "reference": "fiddleback-blackbutt-brushed-matte",
+      "id": "-fiddleback-blackbutt-brushed-matte",
+      "status": "legacy-hidden",
+      "url": "/products/fiddleback-blackbutt-brushed-matte/"
+    },
+    {
+      "reference": "fiddleback-blackbutt-semi-gloss",
+      "id": "-fiddleback-blackbutt-semi-gloss",
+      "status": "legacy-hidden",
+      "url": "/products/fiddleback-blackbutt-semi-gloss/"
+    },
+    {
+      "reference": "fiddleback-spotted-gum-brush-matte",
+      "id": "-fiddleback-spotted-gum-brush-matte",
+      "status": "legacy-hidden",
+      "url": "/products/fiddleback-spotted-gum-brush-matte/"
+    },
+    {
+      "reference": "fiddleback-spotted-gum-smooth-10-matte",
+      "id": "-fiddleback-spotted-gum-smooth-10-matte",
+      "status": "legacy-hidden",
+      "url": "/products/fiddleback-spotted-gum-smooth-10-matte/"
+    },
+    {
+      "reference": "fiddleback-spotted-gum-smooth-semi-gloss",
+      "id": "-fiddleback-spotted-gum-smooth-semi-gloss",
+      "status": "legacy-hidden",
+      "url": "/products/fiddleback-spotted-gum-smooth-semi-gloss/"
+    },
+    {
+      "reference": "/products/hydroplank-wpc-blackbutt/",
+      "id": "hydroplank-wpc-blackbutt",
+      "status": "legacy-hidden",
+      "url": "/products/hydroplank-wpc-blackbutt/"
+    },
+    {
+      "reference": "hydroplank-bronx",
+      "id": "hydroplank-bronx",
+      "status": "legacy-hidden",
+      "url": "/products/hydroplank-bronx/"
+    },
+    {
+      "reference": "hydroplank-brooklyn",
+      "id": "hydroplank-brooklyn",
+      "status": "legacy-hidden",
+      "url": "/products/hydroplank-brooklyn/"
+    },
+    {
+      "reference": "hydroplank-chelsea",
+      "id": "hydroplank-chelsea",
+      "status": "legacy-hidden",
+      "url": "/products/hydroplank-chelsea/"
+    },
+    {
+      "reference": "hydroplank-cooney-island",
+      "id": "hydroplank-cooney-island",
+      "status": "legacy-hidden",
+      "url": "/products/hydroplank-cooney-island/"
+    },
+    {
+      "reference": "hydroplank-hamptons",
+      "id": "hydroplank-hamptons",
+      "status": "legacy-hidden",
+      "url": "/products/hydroplank-hamptons/"
+    },
+    {
+      "reference": "hydroplank-harlem",
+      "id": "hydroplank-harlem",
+      "status": "legacy-hidden",
+      "url": "/products/hydroplank-harlem/"
+    },
+    {
+      "reference": "hydroplank-midtown",
+      "id": "hydroplank-midtown",
+      "status": "legacy-hidden",
+      "url": "/products/hydroplank-midtown/"
+    },
+    {
+      "reference": "hydroplank-queens",
+      "id": "hydroplank-queens",
+      "status": "legacy-hidden",
+      "url": "/products/hydroplank-queens/"
+    },
+    {
+      "reference": "hydroplank-soho",
+      "id": "hydroplank-soho",
+      "status": "legacy-hidden",
+      "url": "/products/hydroplank-soho/"
+    },
+    {
+      "reference": "hydroplank-straten-island",
+      "id": "hydroplank-straten-island",
+      "status": "legacy-hidden",
+      "url": "/products/hydroplank-straten-island/"
+    },
+    {
+      "reference": "kronswiss-aquastop-bourbon-oak",
+      "id": "kronswiss-aquastop-bourbon-oak",
+      "status": "legacy-hidden",
+      "url": "/products/kronswiss-aquastop-bourbon-oak/"
+    },
+    {
+      "reference": "kronswiss-aquastop-brooklyn-oak",
+      "id": "kronswiss-aquastop-brooklyn-oak",
+      "status": "legacy-hidden",
+      "url": "/products/kronswiss-aquastop-brooklyn-oak/"
+    },
+    {
+      "reference": "kronswiss-aquastop-dublin",
+      "id": "kronswiss-aquastop-dublin",
+      "status": "legacy-hidden",
+      "url": "/products/kronswiss-aquastop-dublin/"
+    },
+    {
+      "reference": "kronswiss-aquastop-limed-oak",
+      "id": "kronswiss-aquastop-limed-oak",
+      "status": "legacy-hidden",
+      "url": "/products/kronswiss-aquastop-limed-oak/"
+    },
+    {
+      "reference": "kronswiss-aquastop-lugano-oak",
+      "id": "kronswiss-aquastop-lugano-oak",
+      "status": "legacy-hidden",
+      "url": "/products/kronswiss-aquastop-lugano-oak/"
+    },
+    {
+      "reference": "kronswiss-aquastop-majestic-walnut",
+      "id": "kronswiss-aquastop-majestic-walnut",
+      "status": "legacy-hidden",
+      "url": "/products/kronswiss-aquastop-majestic-walnut/"
+    },
+    {
+      "reference": "kronswiss-aquastop-manhattan-oak",
+      "id": "kronswiss-aquastop-manhattan-oak",
+      "status": "legacy-hidden",
+      "url": "/products/kronswiss-aquastop-manhattan-oak/"
+    },
+    {
+      "reference": "kronswiss-aquastop-montreux",
+      "id": "kronswiss-aquastop-montreux",
+      "status": "legacy-hidden",
+      "url": "/products/kronswiss-aquastop-montreux/"
+    },
+    {
+      "reference": "kronswiss-aquastop-natural-oak-classic",
+      "id": "kronswiss-aquastop-natural-oak-classic",
+      "status": "legacy-hidden",
+      "url": "/products/kronswiss-aquastop-natural-oak-classic/"
+    },
+    {
+      "reference": "kronswiss-aquastop-natural-oak-grey",
+      "id": "kronswiss-aquastop-natural-oak-grey",
+      "status": "legacy-hidden",
+      "url": "/products/kronswiss-aquastop-natural-oak-grey/"
+    },
+    {
+      "reference": "kronswiss-aquastop-platinum",
+      "id": "kronswiss-aquastop-platinum",
+      "status": "legacy-hidden",
+      "url": "/products/kronswiss-aquastop-platinum/"
+    },
+    {
+      "reference": "kronswiss-aquastop-strassbourg",
+      "id": "kronswiss-aquastop-strassbourg",
+      "status": "legacy-hidden",
+      "url": "/products/kronswiss-aquastop-strassbourg/"
+    },
+    {
+      "reference": "kronoswiss-aquastop-arosa",
+      "id": "kronoswiss-aquastop-arosa",
+      "status": "legacy-hidden",
+      "url": "/products/kronoswiss-aquastop-arosa/"
+    },
+    {
+      "reference": "kronoswiss-aquastop-blackbutt-8mm",
+      "id": "kronoswiss-aquastop-blackbutt-8mm",
+      "status": "legacy-hidden",
+      "url": "/products/kronoswiss-aquastop-blackbutt-8mm/"
+    },
+    {
+      "reference": "kronoswiss-aquastop-interlaken",
+      "id": "kronoswiss-aquastop-interlaken",
+      "status": "retired",
+      "url": "/products/kronoswiss-aquastop-interlaken/"
+    },
+    {
+      "reference": "kronoswiss-aquastop-leysin",
+      "id": "kronoswiss-aquastop-leysin",
+      "status": "legacy-hidden",
+      "url": "/products/kronoswiss-aquastop-leysin/"
+    },
+    {
+      "reference": "kronoswiss-aquastop-natural-oak-brown",
+      "id": "kronoswiss-aquastop-natural-oak-brown",
+      "status": "retired",
+      "url": "/products/kronoswiss-aquastop-natural-oak-brown/"
+    },
+    {
+      "reference": "kronoswiss-aquastop-natural-oak-brown-8mm",
+      "id": "kronoswiss-aquastop-natural-oak-brown-8mm",
+      "status": "retired",
+      "url": "/products/kronoswiss-aquastop-natural-oak-brown-8mm/"
+    },
+    {
+      "reference": "kronoswiss-aquastop-queens",
+      "id": "kronoswiss-aquastop-queens",
+      "status": "legacy-hidden",
+      "url": "/products/kronoswiss-aquastop-queens/"
+    },
+    {
+      "reference": "kronoswiss-aquastop-rift",
+      "id": "kronoswiss-aquastop-rift",
+      "status": "legacy-hidden",
+      "url": "/products/kronoswiss-aquastop-rift/"
+    },
+    {
+      "reference": "kronoswiss-aquastop-sand",
+      "id": "kronoswiss-aquastop-sand",
+      "status": "legacy-hidden",
+      "url": "/products/kronoswiss-aquastop-sand/"
+    },
+    {
+      "reference": "kronoswiss-aquastop-spotted-gum-8mm",
+      "id": "kronoswiss-aquastop-spotted-gum-8mm",
+      "status": "legacy-hidden",
+      "url": "/products/kronoswiss-aquastop-spotted-gum-8mm/"
+    },
+    {
+      "reference": "kronoswiss-aquastop-sunset",
+      "id": "kronoswiss-aquastop-sunset",
+      "status": "legacy-hidden",
+      "url": "/products/kronoswiss-aquastop-sunset/"
+    },
+    {
+      "reference": "kronoswiss-aquastop-sunshine",
+      "id": "kronoswiss-aquastop-sunshine",
+      "status": "legacy-hidden",
+      "url": "/products/kronoswiss-aquastop-sunshine/"
+    },
+    {
+      "reference": "kronoswiss-aquastop-tan",
+      "id": "kronoswiss-aquastop-tan",
+      "status": "legacy-hidden",
+      "url": "/products/kronoswiss-aquastop-tan/"
+    },
+    {
+      "reference": "kronoswiss-aquastop-terra",
+      "id": "kronoswiss-aquastop-terra",
+      "status": "legacy-hidden",
+      "url": "/products/kronoswiss-aquastop-terra/"
+    },
+    {
+      "reference": "kronoswiss-aquastop-verbier",
+      "id": "kronoswiss-aquastop-verbier",
+      "status": "legacy-hidden",
+      "url": "/products/kronoswiss-aquastop-verbier/"
+    },
+    {
+      "reference": "kronoswiss-aquastop-volcano",
+      "id": "kronoswiss-aquastop-volcano",
+      "status": "legacy-hidden",
+      "url": "/products/kronoswiss-aquastop-volcano/"
+    },
+    {
+      "reference": "kronoswiss-aquastop-zermatt-8mm",
+      "id": "kronoswiss-aquastop-zermatt-8mm",
+      "status": "legacy-hidden",
+      "url": "/products/kronoswiss-aquastop-zermatt-8mm/"
+    },
+    {
+      "reference": "/products/oakleaf-laminate-aged-spotted-gum/",
+      "id": "oakleaf-laminate-aged-spotted-gum",
+      "status": "legacy-hidden",
+      "url": "/products/oakleaf-laminate-aged-spotted-gum/"
+    },
+    {
+      "reference": "/products/oakleaf-laminate-classic-oak/",
+      "id": "oakleaf-laminate-classic-oak",
+      "status": "legacy-hidden",
+      "url": "/products/oakleaf-laminate-classic-oak/"
+    },
+    {
+      "reference": "oakleaf-aspen-oak",
+      "id": "oakleaf-aspen-oak",
+      "status": "legacy-hidden",
+      "url": "/products/oakleaf-aspen-oak/"
+    },
+    {
+      "reference": "oakleaf-blackbutt",
+      "id": "oakleaf-blackbutt",
+      "status": "legacy-hidden",
+      "url": "/products/oakleaf-blackbutt/"
+    },
+    {
+      "reference": "oakleaf-classic-oak",
+      "id": "oakleaf-classic-oak",
+      "status": "legacy-hidden",
+      "url": "/products/oakleaf-classic-oak/"
+    },
+    {
+      "reference": "oakleaf-imperial",
+      "id": "oakleaf-imperial",
+      "status": "legacy-hidden",
+      "url": "/products/oakleaf-imperial/"
+    },
+    {
+      "reference": "oakleaf-ivory",
+      "id": "oakleaf-ivory",
+      "status": "legacy-hidden",
+      "url": "/products/oakleaf-ivory/"
+    },
+    {
+      "reference": "oakleaf-limesmoke-oak",
+      "id": "oakleaf-limesmoke-oak",
+      "status": "legacy-hidden",
+      "url": "/products/oakleaf-limesmoke-oak/"
+    },
+    {
+      "reference": "oakleaf-maritime",
+      "id": "oakleaf-maritime",
+      "status": "legacy-hidden",
+      "url": "/products/oakleaf-maritime/"
+    },
+    {
+      "reference": "oakleaf-mystic-oak",
+      "id": "oakleaf-mystic-oak",
+      "status": "legacy-hidden",
+      "url": "/products/oakleaf-mystic-oak/"
+    },
+    {
+      "reference": "oakleaf-nordic-oak",
+      "id": "oakleaf-nordic-oak",
+      "status": "legacy-hidden",
+      "url": "/products/oakleaf-nordic-oak/"
+    },
+    {
+      "reference": "oakleaf-seashell-oak",
+      "id": "oakleaf-seashell-oak",
+      "status": "legacy-hidden",
+      "url": "/products/oakleaf-seashell-oak/"
+    },
+    {
+      "reference": "oakleaf-spotted-gum",
+      "id": "oakleaf-spotted-gum",
+      "status": "legacy-hidden",
+      "url": "/products/oakleaf-spotted-gum/"
+    },
+    {
+      "reference": "oakleaf-tawny-oak",
+      "id": "oakleaf-tawny-oak",
+      "status": "legacy-hidden",
+      "url": "/products/oakleaf-tawny-oak/"
+    },
+    {
+      "reference": "/products/prestige-oak-prestige-oak-cannes/",
+      "id": "prestige-oak-prestige-oak-cannes",
+      "status": "legacy-hidden",
+      "url": "/products/prestige-oak-prestige-oak-cannes/"
+    },
+    {
+      "reference": "/products/prestige-oak-prestige-oak-latte/",
+      "id": "prestige-oak-prestige-oak-latte",
+      "status": "legacy-hidden",
+      "url": "/products/prestige-oak-prestige-oak-latte/"
+    },
+    {
+      "reference": "/products/prestige-oak-prestige-oak-mink-grey/",
+      "id": "prestige-oak-prestige-oak-mink-grey",
+      "status": "legacy-hidden",
+      "url": "/products/prestige-oak-prestige-oak-mink-grey/"
+    },
+    {
+      "reference": "/products/prestige-oak-prestige-oak-parana/",
+      "id": "prestige-oak-prestige-oak-parana",
+      "status": "legacy-hidden",
+      "url": "/products/prestige-oak-prestige-oak-parana/"
+    },
+    {
+      "reference": "/products/prestige-oak-riesling/",
+      "id": "prestige-oak-riesling",
+      "status": "legacy-hidden",
+      "url": "/products/prestige-oak-riesling/"
+    },
+    {
+      "reference": "prestige-oak-bleached-driftwood",
+      "id": "prestige-oak-bleached-driftwood",
+      "status": "legacy-hidden",
+      "url": "/products/prestige-oak-bleached-driftwood/"
+    },
+    {
+      "reference": "prestige-oak-castle-grey",
+      "id": "prestige-oak-castle-grey",
+      "status": "legacy-hidden",
+      "url": "/products/prestige-oak-castle-grey/"
+    },
+    {
+      "reference": "prestige-oak-chestnut",
+      "id": "prestige-oak-chestnut",
+      "status": "legacy-hidden",
+      "url": "/products/prestige-oak-chestnut/"
+    },
+    {
+      "reference": "prestige-oak-dark-brown",
+      "id": "prestige-oak-dark-brown",
+      "status": "legacy-hidden",
+      "url": "/products/prestige-oak-dark-brown/"
+    },
+    {
+      "reference": "prestige-oak-derby-brown",
+      "id": "prestige-oak-derby-brown",
+      "status": "legacy-hidden",
+      "url": "/products/prestige-oak-derby-brown/"
+    },
+    {
+      "reference": "prestige-oak-dover-grey",
+      "id": "prestige-oak-dover-grey",
+      "status": "legacy-hidden",
+      "url": "/products/prestige-oak-dover-grey/"
+    },
+    {
+      "reference": "prestige-oak-hex-grey",
+      "id": "prestige-oak-hex-grey",
+      "status": "legacy-hidden",
+      "url": "/products/prestige-oak-hex-grey/"
+    },
+    {
+      "reference": "prestige-oak-iron-grey",
+      "id": "prestige-oak-iron-grey",
+      "status": "legacy-hidden",
+      "url": "/products/prestige-oak-iron-grey/"
+    },
+    {
+      "reference": "prestige-oak-liquorice",
+      "id": "prestige-oak-liquorice",
+      "status": "legacy-hidden",
+      "url": "/products/prestige-oak-liquorice/"
+    },
+    {
+      "reference": "prestige-oak-moonlight",
+      "id": "prestige-oak-moonlight",
+      "status": "legacy-hidden",
+      "url": "/products/prestige-oak-moonlight/"
+    },
+    {
+      "reference": "prestige-oak-moscato",
+      "id": "prestige-oak-moscato",
+      "status": "legacy-hidden",
+      "url": "/products/prestige-oak-moscato/"
+    },
+    {
+      "reference": "prestige-oak-semillon",
+      "id": "prestige-oak-semillon",
+      "status": "legacy-hidden",
+      "url": "/products/prestige-oak-semillon/"
+    },
+    {
+      "reference": "prestige-oak-slate",
+      "id": "prestige-oak-slate",
+      "status": "legacy-hidden",
+      "url": "/products/prestige-oak-slate/"
+    },
+    {
+      "reference": "prestige-oak-white-wash",
+      "id": "prestige-oak-white-wash",
+      "status": "legacy-hidden",
+      "url": "/products/prestige-oak-white-wash/"
+    }
+  ],
+  "pages": [
+    {
+      "route": "/ranges/",
+      "file": "ranges/index.html",
+      "edits": [
+        {
+          "before": "</head>",
+          "after": "<style data-range-sprint-wrap=\"\">@media(max-width:760px){body.editorial .range-summary-card h3{overflow-wrap:anywhere}}</style></head>",
+          "kind": "mobile-name-wrap",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "route": "/ranges/aquatuff-flooring/",
+      "file": "ranges/aquatuff-flooring/index.html",
+      "edits": [
+        {
+          "before": "These HRT ranges stay close to the same category while giving a useful alternative to compare.",
+          "after": "These ranges stay close to the same category while giving a useful alternative to compare.",
+          "kind": "supplier-comparison-copy",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "route": "/ranges/de-marque-oak/",
+      "file": "ranges/de-marque-oak/index.html",
+      "edits": [
+        {
+          "before": "href=\"/contact/?enquiry=product-info&amp;range=De+Marque+Oak&amp;category=Engineered+timber&amp;source=%2Franges%2Fde-marque-oak%2F\"",
+          "after": "href=\"/contact/?enquiry=product&amp;range=De+Marque+Oak&amp;category=Engineered+timber&amp;source=%2Franges%2Fde-marque-oak%2F\"",
+          "kind": "unsupported-enquiry",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "route": "/ranges/elite-6-0-hybrid/",
+      "file": "ranges/elite-6-0-hybrid/index.html",
+      "edits": [
+        {
+          "before": "<a class=\"card range-summary-card link-card\" href=\"/ranges/aspire/\" data-catalogue-range-id=\"aspire\" data-catalogue-range=\"Aspire\" data-catalogue-category=\"Hybrid\"><img alt=\"Aspire hybrid colour swatch\" class=\"category-thumb\" decoding=\"async\" loading=\"lazy\" src=\"/assets/products/hybrid/floors/aspire/coastal-blackbutt/coastal-blackbutt-swatch.webp\" width=\"1400\" height=\"2100\"><p class=\"catalogue-overline\">Hybrid</p><h3>Aspire</h3><p>Hybrid range with timber-look colours for customers comparing a broader residential colour set.</p><p class=\"product-meta\"><span class=\"pill\">Hybrid</span><span class=\"pill\">14 colours</span></p><span aria-hidden=\"true\" class=\"card-arrow\">→</span></a>",
+          "after": "<a class=\"card range-summary-card link-card\" href=\"/ranges/aspire/\" data-catalogue-range-id=\"aspire\" data-catalogue-range=\"Aspire\" data-catalogue-category=\"Hybrid\"><img alt=\"Aspire hybrid colour swatch\" class=\"category-thumb\" decoding=\"async\" loading=\"lazy\" src=\"/assets/products/hybrid/floors/aspire/coastal-blackbutt/coastal-blackbutt-swatch.webp\" width=\"1400\" height=\"2100\"><p class=\"catalogue-overline\">Hybrid</p><h3>Aspire</h3><p>Hybrid range with timber-look colours for customers comparing a broader residential colour set.</p><p class=\"product-meta\"><span class=\"pill\">Hybrid</span><span class=\"pill\">20 colours</span></p><span aria-hidden=\"true\" class=\"card-arrow\">→</span></a>",
+          "kind": "range-count-badge",
+          "count": 1
+        },
+        {
+          "before": "<a class=\"card range-summary-card link-card\" href=\"/ranges/easi-plank/\" data-catalogue-range-id=\"easi-plank\" data-catalogue-range=\"Easi Plank\" data-catalogue-category=\"Hybrid\"><img alt=\"Easi Plank hybrid colour swatch\" class=\"category-thumb\" decoding=\"async\" loading=\"lazy\" src=\"/assets/products/hybrid/floors/hybrid/easi-plank-jarrah/easi-plank-jarrah-swatch.webp\" width=\"1400\" height=\"1400\"><p class=\"catalogue-overline\">Hybrid</p><h3>Easi Plank</h3><p>Straightforward timber-look hybrid plank range for customers comparing practical colour options.</p><p class=\"product-meta\"><span class=\"pill\">Hybrid</span><span class=\"pill\">4 colours</span></p><span aria-hidden=\"true\" class=\"card-arrow\">→</span></a>",
+          "after": "<a class=\"card range-summary-card link-card\" href=\"/ranges/easi-plank/\" data-catalogue-range-id=\"easi-plank\" data-catalogue-range=\"Easi Plank\" data-catalogue-category=\"Hybrid\"><img alt=\"Easi Plank hybrid colour swatch\" class=\"category-thumb\" decoding=\"async\" loading=\"lazy\" src=\"/assets/products/hybrid/floors/hybrid/easi-plank-jarrah/easi-plank-jarrah-swatch.webp\" width=\"1400\" height=\"1400\"><p class=\"catalogue-overline\">Hybrid</p><h3>Easi Plank</h3><p>Straightforward timber-look hybrid plank range for customers comparing practical colour options.</p><p class=\"product-meta\"><span class=\"pill\">Hybrid</span><span class=\"pill\">30 colours</span></p><span aria-hidden=\"true\" class=\"card-arrow\">→</span></a>",
+          "kind": "range-count-badge",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "route": "/ranges/etf-14mm-oak-flooring/",
+      "file": "ranges/etf-14mm-oak-flooring/index.html",
+      "edits": [
+        {
+          "before": "href=\"/contact/?enquiry=product-info&amp;range=ETF+14mm+Oak+Flooring&amp;category=Engineered+timber&amp;source=%2Franges%2Fetf-14mm-oak-flooring%2F\"",
+          "after": "href=\"/contact/?enquiry=product&amp;range=ETF+14mm+Oak+Flooring&amp;category=Engineered+timber&amp;source=%2Franges%2Fetf-14mm-oak-flooring%2F\"",
+          "kind": "unsupported-enquiry",
+          "count": 1
+        },
+        {
+          "before": "These HRT ranges stay close to the same category while giving a useful alternative to compare.",
+          "after": "These ranges stay close to the same category while giving a useful alternative to compare.",
+          "kind": "supplier-comparison-copy",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "route": "/ranges/etf-15mm-oak-flooring/",
+      "file": "ranges/etf-15mm-oak-flooring/index.html",
+      "edits": [
+        {
+          "before": "href=\"/contact/?enquiry=product-info&amp;range=ETF+15mm+Oak+Flooring&amp;category=Engineered+timber&amp;source=%2Franges%2Fetf-15mm-oak-flooring%2F\"",
+          "after": "href=\"/contact/?enquiry=product&amp;range=ETF+15mm+Oak+Flooring&amp;category=Engineered+timber&amp;source=%2Franges%2Fetf-15mm-oak-flooring%2F\"",
+          "kind": "unsupported-enquiry",
+          "count": 1
+        },
+        {
+          "before": "These HRT ranges stay close to the same category while giving a useful alternative to compare.",
+          "after": "These ranges stay close to the same category while giving a useful alternative to compare.",
+          "kind": "supplier-comparison-copy",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "route": "/ranges/etf-6-5mm-hybrid/",
+      "file": "ranges/etf-6-5mm-hybrid/index.html",
+      "edits": [
+        {
+          "before": "href=\"/contact/?enquiry=product-info&amp;range=ETF+6.5mm+Hybrid&amp;category=Hybrid&amp;source=%2Franges%2Fetf-6-5mm-hybrid%2F\"",
+          "after": "href=\"/contact/?enquiry=product&amp;range=ETF+6.5mm+Hybrid&amp;category=Hybrid&amp;source=%2Franges%2Fetf-6-5mm-hybrid%2F\"",
+          "kind": "unsupported-enquiry",
+          "count": 1
+        },
+        {
+          "before": "These HRT ranges stay close to the same category while giving a useful alternative to compare.",
+          "after": "These ranges stay close to the same category while giving a useful alternative to compare.",
+          "kind": "supplier-comparison-copy",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "route": "/ranges/etf-7-0mm-hybrid/",
+      "file": "ranges/etf-7-0mm-hybrid/index.html",
+      "edits": [
+        {
+          "before": "href=\"/contact/?enquiry=product-info&amp;range=ETF+7.0mm+Hybrid&amp;category=Hybrid&amp;source=%2Franges%2Fetf-7-0mm-hybrid%2F\"",
+          "after": "href=\"/contact/?enquiry=product&amp;range=ETF+7.0mm+Hybrid&amp;category=Hybrid&amp;source=%2Franges%2Fetf-7-0mm-hybrid%2F\"",
+          "kind": "unsupported-enquiry",
+          "count": 1
+        },
+        {
+          "before": "These HRT ranges stay close to the same category while giving a useful alternative to compare.",
+          "after": "These ranges stay close to the same category while giving a useful alternative to compare.",
+          "kind": "supplier-comparison-copy",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "route": "/ranges/etf-72hrs-water-resistant-laminate/",
+      "file": "ranges/etf-72hrs-water-resistant-laminate/index.html",
+      "edits": [
+        {
+          "before": "href=\"/contact/?enquiry=product-info&amp;range=ETF+72hrs+Water+Resistant+Laminate&amp;category=Laminate&amp;source=%2Franges%2Fetf-72hrs-water-resistant-laminate%2F\"",
+          "after": "href=\"/contact/?enquiry=product&amp;range=ETF+72hrs+Water+Resistant+Laminate&amp;category=Laminate&amp;source=%2Franges%2Fetf-72hrs-water-resistant-laminate%2F\"",
+          "kind": "unsupported-enquiry",
+          "count": 1
+        },
+        {
+          "before": "These HRT ranges stay close to the same category while giving a useful alternative to compare.",
+          "after": "These ranges stay close to the same category while giving a useful alternative to compare.",
+          "kind": "supplier-comparison-copy",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "route": "/ranges/etf-8-0mm-hybrid/",
+      "file": "ranges/etf-8-0mm-hybrid/index.html",
+      "edits": [
+        {
+          "before": "href=\"/contact/?enquiry=product-info&amp;range=ETF+8.0mm+Hybrid&amp;category=Hybrid&amp;source=%2Franges%2Fetf-8-0mm-hybrid%2F\"",
+          "after": "href=\"/contact/?enquiry=product&amp;range=ETF+8.0mm+Hybrid&amp;category=Hybrid&amp;source=%2Franges%2Fetf-8-0mm-hybrid%2F\"",
+          "kind": "unsupported-enquiry",
+          "count": 1
+        },
+        {
+          "before": "These HRT ranges stay close to the same category while giving a useful alternative to compare.",
+          "after": "These ranges stay close to the same category while giving a useful alternative to compare.",
+          "kind": "supplier-comparison-copy",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "route": "/ranges/etf-9-0mm-hybrid/",
+      "file": "ranges/etf-9-0mm-hybrid/index.html",
+      "edits": [
+        {
+          "before": "href=\"/contact/?enquiry=product-info&amp;range=ETF+9.0mm+Hybrid&amp;category=Hybrid&amp;source=%2Franges%2Fetf-9-0mm-hybrid%2F\"",
+          "after": "href=\"/contact/?enquiry=product&amp;range=ETF+9.0mm+Hybrid&amp;category=Hybrid&amp;source=%2Franges%2Fetf-9-0mm-hybrid%2F\"",
+          "kind": "unsupported-enquiry",
+          "count": 1
+        },
+        {
+          "before": "These HRT ranges stay close to the same category while giving a useful alternative to compare.",
+          "after": "These ranges stay close to the same category while giving a useful alternative to compare.",
+          "kind": "supplier-comparison-copy",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "route": "/ranges/etf-9-5mm-hybrid/",
+      "file": "ranges/etf-9-5mm-hybrid/index.html",
+      "edits": [
+        {
+          "before": "href=\"/contact/?enquiry=product-info&amp;range=ETF+9.5mm+Hybrid&amp;category=Hybrid&amp;source=%2Franges%2Fetf-9-5mm-hybrid%2F\"",
+          "after": "href=\"/contact/?enquiry=product&amp;range=ETF+9.5mm+Hybrid&amp;category=Hybrid&amp;source=%2Franges%2Fetf-9-5mm-hybrid%2F\"",
+          "kind": "unsupported-enquiry",
+          "count": 1
+        },
+        {
+          "before": "These HRT ranges stay close to the same category while giving a useful alternative to compare.",
+          "after": "These ranges stay close to the same category while giving a useful alternative to compare.",
+          "kind": "supplier-comparison-copy",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "route": "/ranges/etf-australian-engineered/",
+      "file": "ranges/etf-australian-engineered/index.html",
+      "edits": [
+        {
+          "before": "href=\"/contact/?enquiry=product-info&amp;range=ETF+Australian+Engineered&amp;category=Engineered+timber&amp;source=%2Franges%2Fetf-australian-engineered%2F\"",
+          "after": "href=\"/contact/?enquiry=product&amp;range=ETF+Australian+Engineered&amp;category=Engineered+timber&amp;source=%2Franges%2Fetf-australian-engineered%2F\"",
+          "kind": "unsupported-enquiry",
+          "count": 1
+        },
+        {
+          "before": "These HRT ranges stay close to the same category while giving a useful alternative to compare.",
+          "after": "These ranges stay close to the same category while giving a useful alternative to compare.",
+          "kind": "supplier-comparison-copy",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "route": "/ranges/etf-hybrid-herringbone/",
+      "file": "ranges/etf-hybrid-herringbone/index.html",
+      "edits": [
+        {
+          "before": "href=\"/contact/?enquiry=product-info&amp;range=ETF+Hybrid+Herringbone&amp;category=Hybrid&amp;source=%2Franges%2Fetf-hybrid-herringbone%2F\"",
+          "after": "href=\"/contact/?enquiry=product&amp;range=ETF+Hybrid+Herringbone&amp;category=Hybrid&amp;source=%2Franges%2Fetf-hybrid-herringbone%2F\"",
+          "kind": "unsupported-enquiry",
+          "count": 1
+        },
+        {
+          "before": "These HRT ranges stay close to the same category while giving a useful alternative to compare.",
+          "after": "These ranges stay close to the same category while giving a useful alternative to compare.",
+          "kind": "supplier-comparison-copy",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "route": "/ranges/etf-oak-chevron/",
+      "file": "ranges/etf-oak-chevron/index.html",
+      "edits": [
+        {
+          "before": "href=\"/contact/?enquiry=product-info&amp;range=ETF+Oak+Chevron&amp;category=Engineered+timber&amp;source=%2Franges%2Fetf-oak-chevron%2F\"",
+          "after": "href=\"/contact/?enquiry=product&amp;range=ETF+Oak+Chevron&amp;category=Engineered+timber&amp;source=%2Franges%2Fetf-oak-chevron%2F\"",
+          "kind": "unsupported-enquiry",
+          "count": 1
+        },
+        {
+          "before": "These HRT ranges stay close to the same category while giving a useful alternative to compare.",
+          "after": "These ranges stay close to the same category while giving a useful alternative to compare.",
+          "kind": "supplier-comparison-copy",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "route": "/ranges/etf-oak-herringbone/",
+      "file": "ranges/etf-oak-herringbone/index.html",
+      "edits": [
+        {
+          "before": "href=\"/contact/?enquiry=product-info&amp;range=ETF+Oak+Herringbone&amp;category=Engineered+timber&amp;source=%2Franges%2Fetf-oak-herringbone%2F\"",
+          "after": "href=\"/contact/?enquiry=product&amp;range=ETF+Oak+Herringbone&amp;category=Engineered+timber&amp;source=%2Franges%2Fetf-oak-herringbone%2F\"",
+          "kind": "unsupported-enquiry",
+          "count": 1
+        },
+        {
+          "before": "These HRT ranges stay close to the same category while giving a useful alternative to compare.",
+          "after": "These ranges stay close to the same category while giving a useful alternative to compare.",
+          "kind": "supplier-comparison-copy",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "route": "/ranges/grande-7-5-hybrid/",
+      "file": "ranges/grande-7-5-hybrid/index.html",
+      "edits": [
+        {
+          "before": "<a class=\"card range-summary-card link-card\" href=\"/ranges/aspire/\" data-catalogue-range-id=\"aspire\" data-catalogue-range=\"Aspire\" data-catalogue-category=\"Hybrid\"><img alt=\"Aspire hybrid colour swatch\" class=\"category-thumb\" decoding=\"async\" loading=\"lazy\" src=\"/assets/products/hybrid/floors/aspire/coastal-blackbutt/coastal-blackbutt-swatch.webp\" width=\"1400\" height=\"2100\"><p class=\"catalogue-overline\">Hybrid</p><h3>Aspire</h3><p>Hybrid range with timber-look colours for customers comparing a broader residential colour set.</p><p class=\"product-meta\"><span class=\"pill\">Hybrid</span><span class=\"pill\">14 colours</span></p><span aria-hidden=\"true\" class=\"card-arrow\">→</span></a>",
+          "after": "<a class=\"card range-summary-card link-card\" href=\"/ranges/aspire/\" data-catalogue-range-id=\"aspire\" data-catalogue-range=\"Aspire\" data-catalogue-category=\"Hybrid\"><img alt=\"Aspire hybrid colour swatch\" class=\"category-thumb\" decoding=\"async\" loading=\"lazy\" src=\"/assets/products/hybrid/floors/aspire/coastal-blackbutt/coastal-blackbutt-swatch.webp\" width=\"1400\" height=\"2100\"><p class=\"catalogue-overline\">Hybrid</p><h3>Aspire</h3><p>Hybrid range with timber-look colours for customers comparing a broader residential colour set.</p><p class=\"product-meta\"><span class=\"pill\">Hybrid</span><span class=\"pill\">20 colours</span></p><span aria-hidden=\"true\" class=\"card-arrow\">→</span></a>",
+          "kind": "range-count-badge",
+          "count": 1
+        },
+        {
+          "before": "<a class=\"card range-summary-card link-card\" href=\"/ranges/easi-plank/\" data-catalogue-range-id=\"easi-plank\" data-catalogue-range=\"Easi Plank\" data-catalogue-category=\"Hybrid\"><img alt=\"Easi Plank hybrid colour swatch\" class=\"category-thumb\" decoding=\"async\" loading=\"lazy\" src=\"/assets/products/hybrid/floors/hybrid/easi-plank-jarrah/easi-plank-jarrah-swatch.webp\" width=\"1400\" height=\"1400\"><p class=\"catalogue-overline\">Hybrid</p><h3>Easi Plank</h3><p>Straightforward timber-look hybrid plank range for customers comparing practical colour options.</p><p class=\"product-meta\"><span class=\"pill\">Hybrid</span><span class=\"pill\">4 colours</span></p><span aria-hidden=\"true\" class=\"card-arrow\">→</span></a>",
+          "after": "<a class=\"card range-summary-card link-card\" href=\"/ranges/easi-plank/\" data-catalogue-range-id=\"easi-plank\" data-catalogue-range=\"Easi Plank\" data-catalogue-category=\"Hybrid\"><img alt=\"Easi Plank hybrid colour swatch\" class=\"category-thumb\" decoding=\"async\" loading=\"lazy\" src=\"/assets/products/hybrid/floors/hybrid/easi-plank-jarrah/easi-plank-jarrah-swatch.webp\" width=\"1400\" height=\"1400\"><p class=\"catalogue-overline\">Hybrid</p><h3>Easi Plank</h3><p>Straightforward timber-look hybrid plank range for customers comparing practical colour options.</p><p class=\"product-meta\"><span class=\"pill\">Hybrid</span><span class=\"pill\">30 colours</span></p><span aria-hidden=\"true\" class=\"card-arrow\">→</span></a>",
+          "kind": "range-count-badge",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "route": "/ranges/grande-9-0-hybrid/",
+      "file": "ranges/grande-9-0-hybrid/index.html",
+      "edits": [
+        {
+          "before": "<a class=\"card range-summary-card link-card\" href=\"/ranges/aspire/\" data-catalogue-range-id=\"aspire\" data-catalogue-range=\"Aspire\" data-catalogue-category=\"Hybrid\"><img alt=\"Aspire hybrid colour swatch\" class=\"category-thumb\" decoding=\"async\" loading=\"lazy\" src=\"/assets/products/hybrid/floors/aspire/coastal-blackbutt/coastal-blackbutt-swatch.webp\" width=\"1400\" height=\"2100\"><p class=\"catalogue-overline\">Hybrid</p><h3>Aspire</h3><p>Hybrid range with timber-look colours for customers comparing a broader residential colour set.</p><p class=\"product-meta\"><span class=\"pill\">Hybrid</span><span class=\"pill\">14 colours</span></p><span aria-hidden=\"true\" class=\"card-arrow\">→</span></a>",
+          "after": "<a class=\"card range-summary-card link-card\" href=\"/ranges/aspire/\" data-catalogue-range-id=\"aspire\" data-catalogue-range=\"Aspire\" data-catalogue-category=\"Hybrid\"><img alt=\"Aspire hybrid colour swatch\" class=\"category-thumb\" decoding=\"async\" loading=\"lazy\" src=\"/assets/products/hybrid/floors/aspire/coastal-blackbutt/coastal-blackbutt-swatch.webp\" width=\"1400\" height=\"2100\"><p class=\"catalogue-overline\">Hybrid</p><h3>Aspire</h3><p>Hybrid range with timber-look colours for customers comparing a broader residential colour set.</p><p class=\"product-meta\"><span class=\"pill\">Hybrid</span><span class=\"pill\">20 colours</span></p><span aria-hidden=\"true\" class=\"card-arrow\">→</span></a>",
+          "kind": "range-count-badge",
+          "count": 1
+        },
+        {
+          "before": "<a class=\"card range-summary-card link-card\" href=\"/ranges/easi-plank/\" data-catalogue-range-id=\"easi-plank\" data-catalogue-range=\"Easi Plank\" data-catalogue-category=\"Hybrid\"><img alt=\"Easi Plank hybrid colour swatch\" class=\"category-thumb\" decoding=\"async\" loading=\"lazy\" src=\"/assets/products/hybrid/floors/hybrid/easi-plank-jarrah/easi-plank-jarrah-swatch.webp\" width=\"1400\" height=\"1400\"><p class=\"catalogue-overline\">Hybrid</p><h3>Easi Plank</h3><p>Straightforward timber-look hybrid plank range for customers comparing practical colour options.</p><p class=\"product-meta\"><span class=\"pill\">Hybrid</span><span class=\"pill\">4 colours</span></p><span aria-hidden=\"true\" class=\"card-arrow\">→</span></a>",
+          "after": "<a class=\"card range-summary-card link-card\" href=\"/ranges/easi-plank/\" data-catalogue-range-id=\"easi-plank\" data-catalogue-range=\"Easi Plank\" data-catalogue-category=\"Hybrid\"><img alt=\"Easi Plank hybrid colour swatch\" class=\"category-thumb\" decoding=\"async\" loading=\"lazy\" src=\"/assets/products/hybrid/floors/hybrid/easi-plank-jarrah/easi-plank-jarrah-swatch.webp\" width=\"1400\" height=\"1400\"><p class=\"catalogue-overline\">Hybrid</p><h3>Easi Plank</h3><p>Straightforward timber-look hybrid plank range for customers comparing practical colour options.</p><p class=\"product-meta\"><span class=\"pill\">Hybrid</span><span class=\"pill\">30 colours</span></p><span aria-hidden=\"true\" class=\"card-arrow\">→</span></a>",
+          "kind": "range-count-badge",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "route": "/ranges/herringbone-7-0-hybrid/",
+      "file": "ranges/herringbone-7-0-hybrid/index.html",
+      "edits": [
+        {
+          "before": "<a class=\"card range-summary-card link-card\" href=\"/ranges/aspire/\" data-catalogue-range-id=\"aspire\" data-catalogue-range=\"Aspire\" data-catalogue-category=\"Hybrid\"><img alt=\"Aspire hybrid colour swatch\" class=\"category-thumb\" decoding=\"async\" loading=\"lazy\" src=\"/assets/products/hybrid/floors/aspire/coastal-blackbutt/coastal-blackbutt-swatch.webp\" width=\"1400\" height=\"2100\"><p class=\"catalogue-overline\">Hybrid</p><h3>Aspire</h3><p>Hybrid range with timber-look colours for customers comparing a broader residential colour set.</p><p class=\"product-meta\"><span class=\"pill\">Hybrid</span><span class=\"pill\">14 colours</span></p><span aria-hidden=\"true\" class=\"card-arrow\">→</span></a>",
+          "after": "<a class=\"card range-summary-card link-card\" href=\"/ranges/aspire/\" data-catalogue-range-id=\"aspire\" data-catalogue-range=\"Aspire\" data-catalogue-category=\"Hybrid\"><img alt=\"Aspire hybrid colour swatch\" class=\"category-thumb\" decoding=\"async\" loading=\"lazy\" src=\"/assets/products/hybrid/floors/aspire/coastal-blackbutt/coastal-blackbutt-swatch.webp\" width=\"1400\" height=\"2100\"><p class=\"catalogue-overline\">Hybrid</p><h3>Aspire</h3><p>Hybrid range with timber-look colours for customers comparing a broader residential colour set.</p><p class=\"product-meta\"><span class=\"pill\">Hybrid</span><span class=\"pill\">20 colours</span></p><span aria-hidden=\"true\" class=\"card-arrow\">→</span></a>",
+          "kind": "range-count-badge",
+          "count": 1
+        },
+        {
+          "before": "<a class=\"card range-summary-card link-card\" href=\"/ranges/easi-plank/\" data-catalogue-range-id=\"easi-plank\" data-catalogue-range=\"Easi Plank\" data-catalogue-category=\"Hybrid\"><img alt=\"Easi Plank hybrid colour swatch\" class=\"category-thumb\" decoding=\"async\" loading=\"lazy\" src=\"/assets/products/hybrid/floors/hybrid/easi-plank-jarrah/easi-plank-jarrah-swatch.webp\" width=\"1400\" height=\"1400\"><p class=\"catalogue-overline\">Hybrid</p><h3>Easi Plank</h3><p>Straightforward timber-look hybrid plank range for customers comparing practical colour options.</p><p class=\"product-meta\"><span class=\"pill\">Hybrid</span><span class=\"pill\">4 colours</span></p><span aria-hidden=\"true\" class=\"card-arrow\">→</span></a>",
+          "after": "<a class=\"card range-summary-card link-card\" href=\"/ranges/easi-plank/\" data-catalogue-range-id=\"easi-plank\" data-catalogue-range=\"Easi Plank\" data-catalogue-category=\"Hybrid\"><img alt=\"Easi Plank hybrid colour swatch\" class=\"category-thumb\" decoding=\"async\" loading=\"lazy\" src=\"/assets/products/hybrid/floors/hybrid/easi-plank-jarrah/easi-plank-jarrah-swatch.webp\" width=\"1400\" height=\"1400\"><p class=\"catalogue-overline\">Hybrid</p><h3>Easi Plank</h3><p>Straightforward timber-look hybrid plank range for customers comparing practical colour options.</p><p class=\"product-meta\"><span class=\"pill\">Hybrid</span><span class=\"pill\">30 colours</span></p><span aria-hidden=\"true\" class=\"card-arrow\">→</span></a>",
+          "kind": "range-count-badge",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "route": "/ranges/kronoswiss-aquastop/",
+      "file": "ranges/kronoswiss-aquastop/index.html",
+      "edits": [
+        {
+          "before": "href=\"/contact/?enquiry=product-info&amp;range=Kronoswiss+Aquastop&amp;category=Laminate&amp;source=%2Franges%2Fkronoswiss-aquastop%2F\"",
+          "after": "href=\"/contact/?enquiry=product&amp;range=Kronoswiss+Aquastop&amp;category=Laminate&amp;source=%2Franges%2Fkronoswiss-aquastop%2F\"",
+          "kind": "unsupported-enquiry",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "route": "/ranges/lavanda-oak/",
+      "file": "ranges/lavanda-oak/index.html",
+      "edits": [
+        {
+          "before": "href=\"/contact/?enquiry=product-info&amp;range=Lavanda+Oak&amp;source=%2Franges%2Flavanda-oak%2F\"",
+          "after": "href=\"/contact/?enquiry=product&amp;range=Lavanda+Oak&amp;source=%2Franges%2Flavanda-oak%2F\"",
+          "kind": "unsupported-enquiry",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "route": "/ranges/oakleaf-laminate/",
+      "file": "ranges/oakleaf-laminate/index.html",
+      "edits": [
+        {
+          "before": "href=\"/contact/?enquiry=product-info&amp;range=Oakleaf+Laminate&amp;category=Laminate&amp;source=%2Franges%2Foakleaf-laminate%2F\"",
+          "after": "href=\"/contact/?enquiry=product&amp;range=Oakleaf+Laminate&amp;category=Laminate&amp;source=%2Franges%2Foakleaf-laminate%2F\"",
+          "kind": "unsupported-enquiry",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "route": "/ranges/oakleaf/",
+      "file": "ranges/oakleaf/index.html",
+      "edits": [
+        {
+          "before": "href=\"/contact/?enquiry=product-info&amp;range=Oakleaf+HD+PLUS&amp;category=Laminate&amp;source=%2Franges%2Foakleaf%2F\"",
+          "after": "href=\"/contact/?enquiry=product&amp;range=Oakleaf+HD+PLUS&amp;category=Laminate&amp;source=%2Franges%2Foakleaf%2F\"",
+          "kind": "unsupported-enquiry",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "route": "/ranges/pantora-amor/",
+      "file": "ranges/pantora-amor/index.html",
+      "edits": [
+        {
+          "before": "href=\"/contact/?enquiry=product-info&amp;range=Pantora+Amor&amp;source=%2Franges%2Fpantora-amor%2F\"",
+          "after": "href=\"/contact/?enquiry=product&amp;range=Pantora+Amor&amp;source=%2Franges%2Fpantora-amor%2F\"",
+          "kind": "unsupported-enquiry",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "route": "/ranges/pantora-lifestyle/",
+      "file": "ranges/pantora-lifestyle/index.html",
+      "edits": [
+        {
+          "before": "href=\"/contact/?enquiry=product-info&amp;range=Pantora+Lifestyle&amp;source=%2Franges%2Fpantora-lifestyle%2F\"",
+          "after": "href=\"/contact/?enquiry=product&amp;range=Pantora+Lifestyle&amp;source=%2Franges%2Fpantora-lifestyle%2F\"",
+          "kind": "unsupported-enquiry",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "route": "/ranges/prestige-oak/",
+      "file": "ranges/prestige-oak/index.html",
+      "edits": [
+        {
+          "before": "href=\"/contact/?enquiry=product-info&amp;range=Prestige+Oak&amp;category=Engineered+timber&amp;source=%2Franges%2Fprestige-oak%2F\"",
+          "after": "href=\"/contact/?enquiry=product&amp;range=Prestige+Oak&amp;category=Engineered+timber&amp;source=%2Franges%2Fprestige-oak%2F\"",
+          "kind": "unsupported-enquiry",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "route": "/ranges/prime-contemporary-plus/",
+      "file": "ranges/prime-contemporary-plus/index.html",
+      "edits": [
+        {
+          "before": "href=\"/contact/?enquiry=product-info&amp;range=Prime+Contemporary+Plus&amp;source=%2Franges%2Fprime-contemporary-plus%2F\"",
+          "after": "href=\"/contact/?enquiry=product&amp;range=Prime+Contemporary+Plus&amp;source=%2Franges%2Fprime-contemporary-plus%2F\"",
+          "kind": "unsupported-enquiry",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "route": "/ranges/prime-deluxe/",
+      "file": "ranges/prime-deluxe/index.html",
+      "edits": [
+        {
+          "before": "href=\"/contact/?enquiry=product-info&amp;range=Prime+Deluxe&amp;source=%2Franges%2Fprime-deluxe%2F\"",
+          "after": "href=\"/contact/?enquiry=product&amp;range=Prime+Deluxe&amp;source=%2Franges%2Fprime-deluxe%2F\"",
+          "kind": "unsupported-enquiry",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "route": "/ranges/prime-luxury/",
+      "file": "ranges/prime-luxury/index.html",
+      "edits": [
+        {
+          "before": "href=\"/contact/?enquiry=product-info&amp;range=Prime+Luxury&amp;source=%2Franges%2Fprime-luxury%2F\"",
+          "after": "href=\"/contact/?enquiry=product&amp;range=Prime+Luxury&amp;source=%2Franges%2Fprime-luxury%2F\"",
+          "kind": "unsupported-enquiry",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "route": "/ranges/project-oak/",
+      "file": "ranges/project-oak/index.html",
+      "edits": [
+        {
+          "before": "href=\"/contact/?enquiry=product-info&amp;range=Project+Oak&amp;source=%2Franges%2Fproject-oak%2F\"",
+          "after": "href=\"/contact/?enquiry=product&amp;range=Project+Oak&amp;source=%2Franges%2Fproject-oak%2F\"",
+          "kind": "unsupported-enquiry",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "route": "/ranges/pronto/",
+      "file": "ranges/pronto/index.html",
+      "edits": [
+        {
+          "before": "href=\"/contact/?enquiry=product-info&amp;range=Pronto&amp;category=Engineered+timber&amp;source=%2Franges%2Fpronto%2F\"",
+          "after": "href=\"/contact/?enquiry=product&amp;range=Pronto&amp;category=Engineered+timber&amp;source=%2Franges%2Fpronto%2F\"",
+          "kind": "unsupported-enquiry",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "route": "/ranges/stone-floor-tile/",
+      "file": "ranges/stone-floor-tile/index.html",
+      "edits": [
+        {
+          "before": "<a class=\"card range-summary-card link-card\" href=\"/ranges/aspire/\" data-catalogue-range-id=\"aspire\" data-catalogue-range=\"Aspire\" data-catalogue-category=\"Hybrid\"><img class=\"category-thumb\" src=\"/assets/products/hybrid/floors/aspire/coastal-blackbutt/coastal-blackbutt-swatch.webp\" alt=\"Aspire hybrid colour swatch\" loading=\"lazy\" decoding=\"async\" width=\"1400\" height=\"2100\"><p class=\"catalogue-overline\">Hybrid</p><h3>Aspire</h3><p>Hybrid range with timber-look colours for customers comparing a broader residential colour set.</p><p class=\"product-meta\"><span class=\"pill\">Hybrid</span><span class=\"pill\">14 colours</span></p><span class=\"card-arrow\" aria-hidden=\"true\">→</span></a>",
+          "after": "<a class=\"card range-summary-card link-card\" href=\"/ranges/aspire/\" data-catalogue-range-id=\"aspire\" data-catalogue-range=\"Aspire\" data-catalogue-category=\"Hybrid\"><img class=\"category-thumb\" src=\"/assets/products/hybrid/floors/aspire/coastal-blackbutt/coastal-blackbutt-swatch.webp\" alt=\"Aspire hybrid colour swatch\" loading=\"lazy\" decoding=\"async\" width=\"1400\" height=\"2100\"><p class=\"catalogue-overline\">Hybrid</p><h3>Aspire</h3><p>Hybrid range with timber-look colours for customers comparing a broader residential colour set.</p><p class=\"product-meta\"><span class=\"pill\">Hybrid</span><span class=\"pill\">20 colours</span></p><span class=\"card-arrow\" aria-hidden=\"true\">→</span></a>",
+          "kind": "range-count-badge",
+          "count": 1
+        },
+        {
+          "before": "<a class=\"card range-summary-card link-card\" href=\"/ranges/easi-plank/\" data-catalogue-range-id=\"easi-plank\" data-catalogue-range=\"Easi Plank\" data-catalogue-category=\"Hybrid\"><img class=\"category-thumb\" src=\"/assets/products/hybrid/floors/hybrid/easi-plank-jarrah/easi-plank-jarrah-swatch.webp\" alt=\"Easi Plank hybrid colour swatch\" loading=\"lazy\" decoding=\"async\" width=\"1400\" height=\"1400\"><p class=\"catalogue-overline\">Hybrid</p><h3>Easi Plank</h3><p>Straightforward timber-look hybrid plank range for customers comparing practical colour options.</p><p class=\"product-meta\"><span class=\"pill\">Hybrid</span><span class=\"pill\">4 colours</span></p><span class=\"card-arrow\" aria-hidden=\"true\">→</span></a>",
+          "after": "<a class=\"card range-summary-card link-card\" href=\"/ranges/easi-plank/\" data-catalogue-range-id=\"easi-plank\" data-catalogue-range=\"Easi Plank\" data-catalogue-category=\"Hybrid\"><img class=\"category-thumb\" src=\"/assets/products/hybrid/floors/hybrid/easi-plank-jarrah/easi-plank-jarrah-swatch.webp\" alt=\"Easi Plank hybrid colour swatch\" loading=\"lazy\" decoding=\"async\" width=\"1400\" height=\"1400\"><p class=\"catalogue-overline\">Hybrid</p><h3>Easi Plank</h3><p>Straightforward timber-look hybrid plank range for customers comparing practical colour options.</p><p class=\"product-meta\"><span class=\"pill\">Hybrid</span><span class=\"pill\">30 colours</span></p><span class=\"card-arrow\" aria-hidden=\"true\">→</span></a>",
+          "kind": "range-count-badge",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "route": "/ranges/stone-floor-timber/",
+      "file": "ranges/stone-floor-timber/index.html",
+      "edits": [
+        {
+          "before": "<a class=\"card range-summary-card link-card\" href=\"/ranges/aspire/\" data-catalogue-range-id=\"aspire\" data-catalogue-range=\"Aspire\" data-catalogue-category=\"Hybrid\"><img class=\"category-thumb\" src=\"/assets/products/hybrid/floors/aspire/coastal-blackbutt/coastal-blackbutt-swatch.webp\" alt=\"Aspire hybrid colour swatch\" loading=\"lazy\" decoding=\"async\" width=\"1400\" height=\"2100\"><p class=\"catalogue-overline\">Hybrid</p><h3>Aspire</h3><p>Hybrid range with timber-look colours for customers comparing a broader residential colour set.</p><p class=\"product-meta\"><span class=\"pill\">Hybrid</span><span class=\"pill\">14 colours</span></p><span class=\"card-arrow\" aria-hidden=\"true\">→</span></a>",
+          "after": "<a class=\"card range-summary-card link-card\" href=\"/ranges/aspire/\" data-catalogue-range-id=\"aspire\" data-catalogue-range=\"Aspire\" data-catalogue-category=\"Hybrid\"><img class=\"category-thumb\" src=\"/assets/products/hybrid/floors/aspire/coastal-blackbutt/coastal-blackbutt-swatch.webp\" alt=\"Aspire hybrid colour swatch\" loading=\"lazy\" decoding=\"async\" width=\"1400\" height=\"2100\"><p class=\"catalogue-overline\">Hybrid</p><h3>Aspire</h3><p>Hybrid range with timber-look colours for customers comparing a broader residential colour set.</p><p class=\"product-meta\"><span class=\"pill\">Hybrid</span><span class=\"pill\">20 colours</span></p><span class=\"card-arrow\" aria-hidden=\"true\">→</span></a>",
+          "kind": "range-count-badge",
+          "count": 1
+        },
+        {
+          "before": "<a class=\"card range-summary-card link-card\" href=\"/ranges/easi-plank/\" data-catalogue-range-id=\"easi-plank\" data-catalogue-range=\"Easi Plank\" data-catalogue-category=\"Hybrid\"><img class=\"category-thumb\" src=\"/assets/products/hybrid/floors/hybrid/easi-plank-jarrah/easi-plank-jarrah-swatch.webp\" alt=\"Easi Plank hybrid colour swatch\" loading=\"lazy\" decoding=\"async\" width=\"1400\" height=\"1400\"><p class=\"catalogue-overline\">Hybrid</p><h3>Easi Plank</h3><p>Straightforward timber-look hybrid plank range for customers comparing practical colour options.</p><p class=\"product-meta\"><span class=\"pill\">Hybrid</span><span class=\"pill\">4 colours</span></p><span class=\"card-arrow\" aria-hidden=\"true\">→</span></a>",
+          "after": "<a class=\"card range-summary-card link-card\" href=\"/ranges/easi-plank/\" data-catalogue-range-id=\"easi-plank\" data-catalogue-range=\"Easi Plank\" data-catalogue-category=\"Hybrid\"><img class=\"category-thumb\" src=\"/assets/products/hybrid/floors/hybrid/easi-plank-jarrah/easi-plank-jarrah-swatch.webp\" alt=\"Easi Plank hybrid colour swatch\" loading=\"lazy\" decoding=\"async\" width=\"1400\" height=\"1400\"><p class=\"catalogue-overline\">Hybrid</p><h3>Easi Plank</h3><p>Straightforward timber-look hybrid plank range for customers comparing practical colour options.</p><p class=\"product-meta\"><span class=\"pill\">Hybrid</span><span class=\"pill\">30 colours</span></p><span class=\"card-arrow\" aria-hidden=\"true\">→</span></a>",
+          "kind": "range-count-badge",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "route": "/ranges/swish-oak-contemporary/",
+      "file": "ranges/swish-oak-contemporary/index.html",
+      "edits": [
+        {
+          "before": "<a class=\"card range-summary-card link-card\" href=\"/ranges/de-marque-oak/\" data-catalogue-range-id=\"de-marque-oak\" data-catalogue-range=\"De Marque Oak\" data-catalogue-category=\"Engineered timber\"><img alt=\"De Marque Oak engineered timber colour swatch\" class=\"category-thumb\" decoding=\"async\" loading=\"lazy\" src=\"/assets/products/engineered/de-marque-oak/cannes.jpeg\" width=\"571\" height=\"492\"><p class=\"catalogue-overline\">Engineered timber</p><h3>De Marque Oak</h3><p>De Marque Oak is an engineered timber range for customers comparing real timber colour options, stock timing and installation planning.</p><p class=\"product-meta\"><span class=\"pill\">Engineered timber</span><span class=\"pill\">42 colours</span></p><span aria-hidden=\"true\" class=\"card-arrow\">→</span></a>",
+          "after": "<a class=\"card range-summary-card link-card\" href=\"/ranges/de-marque-oak/\" data-catalogue-range-id=\"de-marque-oak\" data-catalogue-range=\"De Marque Oak\" data-catalogue-category=\"Engineered timber\"><img alt=\"De Marque Oak engineered timber colour swatch\" class=\"category-thumb\" decoding=\"async\" loading=\"lazy\" src=\"/assets/products/engineered/de-marque-oak/cannes.jpeg\" width=\"571\" height=\"492\"><p class=\"catalogue-overline\">Engineered timber</p><h3>De Marque Oak</h3><p>De Marque Oak is an engineered timber range for customers comparing real timber colour options, stock timing and installation planning.</p><p class=\"product-meta\"><span class=\"pill\">Engineered timber</span><span class=\"pill\">35 colours</span></p><span aria-hidden=\"true\" class=\"card-arrow\">→</span></a>",
+          "kind": "range-count-badge",
+          "count": 1
+        },
+        {
+          "before": "<a class=\"card range-summary-card link-card\" href=\"/ranges/elk-falls/\" data-catalogue-range-id=\"elk-falls\" data-catalogue-range=\"Elk Falls Hickory\" data-catalogue-category=\"Engineered timber\"><img alt=\"Elk Falls engineered timber colour swatch\" class=\"category-thumb\" decoding=\"async\" loading=\"lazy\" src=\"/assets/products/engineered-timber/hardwood-collection/hickory/hickory-swatch.webp\" width=\"1400\" height=\"1400\"><p class=\"catalogue-overline\">Engineered timber</p><h3>Elk Falls</h3><p>Elk Falls is an engineered timber range for premium interiors needing real timber character with a stable board construction.</p><p class=\"product-meta\"><span class=\"pill\">Engineered timber</span><span class=\"pill\">11 colours</span></p><span aria-hidden=\"true\" class=\"card-arrow\">→</span></a>",
+          "after": "<a class=\"card range-summary-card link-card\" href=\"/ranges/elk-falls/\" data-catalogue-range-id=\"elk-falls\" data-catalogue-range=\"Elk Falls Hickory\" data-catalogue-category=\"Engineered timber\"><img alt=\"Elk Falls engineered timber colour swatch\" class=\"category-thumb\" decoding=\"async\" loading=\"lazy\" src=\"/assets/products/engineered-timber/hardwood-collection/hickory/hickory-swatch.webp\" width=\"1400\" height=\"1400\"><p class=\"catalogue-overline\">Engineered timber</p><h3>Elk Falls</h3><p>Elk Falls is an engineered timber range for premium interiors needing real timber character with a stable board construction.</p><p class=\"product-meta\"><span class=\"pill\">Engineered timber</span><span class=\"pill\">12 colours</span></p><span aria-hidden=\"true\" class=\"card-arrow\">→</span></a>",
+          "kind": "range-count-badge",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "route": "/ranges/swish-oak-natura-handcrafted/",
+      "file": "ranges/swish-oak-natura-handcrafted/index.html",
+      "edits": [
+        {
+          "before": "<a class=\"card range-summary-card link-card\" href=\"/ranges/de-marque-oak/\" data-catalogue-range-id=\"de-marque-oak\" data-catalogue-range=\"De Marque Oak\" data-catalogue-category=\"Engineered timber\"><img alt=\"De Marque Oak engineered timber colour swatch\" class=\"category-thumb\" decoding=\"async\" loading=\"lazy\" src=\"/assets/products/engineered/de-marque-oak/cannes.jpeg\" width=\"571\" height=\"492\"><p class=\"catalogue-overline\">Engineered timber</p><h3>De Marque Oak</h3><p>De Marque Oak is an engineered timber range for customers comparing real timber colour options, stock timing and installation planning.</p><p class=\"product-meta\"><span class=\"pill\">Engineered timber</span><span class=\"pill\">42 colours</span></p><span aria-hidden=\"true\" class=\"card-arrow\">→</span></a>",
+          "after": "<a class=\"card range-summary-card link-card\" href=\"/ranges/de-marque-oak/\" data-catalogue-range-id=\"de-marque-oak\" data-catalogue-range=\"De Marque Oak\" data-catalogue-category=\"Engineered timber\"><img alt=\"De Marque Oak engineered timber colour swatch\" class=\"category-thumb\" decoding=\"async\" loading=\"lazy\" src=\"/assets/products/engineered/de-marque-oak/cannes.jpeg\" width=\"571\" height=\"492\"><p class=\"catalogue-overline\">Engineered timber</p><h3>De Marque Oak</h3><p>De Marque Oak is an engineered timber range for customers comparing real timber colour options, stock timing and installation planning.</p><p class=\"product-meta\"><span class=\"pill\">Engineered timber</span><span class=\"pill\">35 colours</span></p><span aria-hidden=\"true\" class=\"card-arrow\">→</span></a>",
+          "kind": "range-count-badge",
+          "count": 1
+        },
+        {
+          "before": "<a class=\"card range-summary-card link-card\" href=\"/ranges/elk-falls/\" data-catalogue-range-id=\"elk-falls\" data-catalogue-range=\"Elk Falls Hickory\" data-catalogue-category=\"Engineered timber\"><img alt=\"Elk Falls engineered timber colour swatch\" class=\"category-thumb\" decoding=\"async\" loading=\"lazy\" src=\"/assets/products/engineered-timber/hardwood-collection/hickory/hickory-swatch.webp\" width=\"1400\" height=\"1400\"><p class=\"catalogue-overline\">Engineered timber</p><h3>Elk Falls</h3><p>Elk Falls is an engineered timber range for premium interiors needing real timber character with a stable board construction.</p><p class=\"product-meta\"><span class=\"pill\">Engineered timber</span><span class=\"pill\">11 colours</span></p><span aria-hidden=\"true\" class=\"card-arrow\">→</span></a>",
+          "after": "<a class=\"card range-summary-card link-card\" href=\"/ranges/elk-falls/\" data-catalogue-range-id=\"elk-falls\" data-catalogue-range=\"Elk Falls Hickory\" data-catalogue-category=\"Engineered timber\"><img alt=\"Elk Falls engineered timber colour swatch\" class=\"category-thumb\" decoding=\"async\" loading=\"lazy\" src=\"/assets/products/engineered-timber/hardwood-collection/hickory/hickory-swatch.webp\" width=\"1400\" height=\"1400\"><p class=\"catalogue-overline\">Engineered timber</p><h3>Elk Falls</h3><p>Elk Falls is an engineered timber range for premium interiors needing real timber character with a stable board construction.</p><p class=\"product-meta\"><span class=\"pill\">Engineered timber</span><span class=\"pill\">12 colours</span></p><span aria-hidden=\"true\" class=\"card-arrow\">→</span></a>",
+          "kind": "range-count-badge",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "route": "/ranges/swish-oak-natura-herringbone/",
+      "file": "ranges/swish-oak-natura-herringbone/index.html",
+      "edits": [
+        {
+          "before": "<a class=\"card range-summary-card link-card\" href=\"/ranges/de-marque-oak/\" data-catalogue-range-id=\"de-marque-oak\" data-catalogue-range=\"De Marque Oak\" data-catalogue-category=\"Engineered timber\"><img alt=\"De Marque Oak engineered timber colour swatch\" class=\"category-thumb\" decoding=\"async\" loading=\"lazy\" src=\"/assets/products/engineered/de-marque-oak/cannes.jpeg\" width=\"571\" height=\"492\"><p class=\"catalogue-overline\">Engineered timber</p><h3>De Marque Oak</h3><p>De Marque Oak is an engineered timber range for customers comparing real timber colour options, stock timing and installation planning.</p><p class=\"product-meta\"><span class=\"pill\">Engineered timber</span><span class=\"pill\">42 colours</span></p><span aria-hidden=\"true\" class=\"card-arrow\">→</span></a>",
+          "after": "<a class=\"card range-summary-card link-card\" href=\"/ranges/de-marque-oak/\" data-catalogue-range-id=\"de-marque-oak\" data-catalogue-range=\"De Marque Oak\" data-catalogue-category=\"Engineered timber\"><img alt=\"De Marque Oak engineered timber colour swatch\" class=\"category-thumb\" decoding=\"async\" loading=\"lazy\" src=\"/assets/products/engineered/de-marque-oak/cannes.jpeg\" width=\"571\" height=\"492\"><p class=\"catalogue-overline\">Engineered timber</p><h3>De Marque Oak</h3><p>De Marque Oak is an engineered timber range for customers comparing real timber colour options, stock timing and installation planning.</p><p class=\"product-meta\"><span class=\"pill\">Engineered timber</span><span class=\"pill\">35 colours</span></p><span aria-hidden=\"true\" class=\"card-arrow\">→</span></a>",
+          "kind": "range-count-badge",
+          "count": 1
+        },
+        {
+          "before": "<a class=\"card range-summary-card link-card\" href=\"/ranges/elk-falls/\" data-catalogue-range-id=\"elk-falls\" data-catalogue-range=\"Elk Falls Hickory\" data-catalogue-category=\"Engineered timber\"><img alt=\"Elk Falls engineered timber colour swatch\" class=\"category-thumb\" decoding=\"async\" loading=\"lazy\" src=\"/assets/products/engineered-timber/hardwood-collection/hickory/hickory-swatch.webp\" width=\"1400\" height=\"1400\"><p class=\"catalogue-overline\">Engineered timber</p><h3>Elk Falls</h3><p>Elk Falls is an engineered timber range for premium interiors needing real timber character with a stable board construction.</p><p class=\"product-meta\"><span class=\"pill\">Engineered timber</span><span class=\"pill\">11 colours</span></p><span aria-hidden=\"true\" class=\"card-arrow\">→</span></a>",
+          "after": "<a class=\"card range-summary-card link-card\" href=\"/ranges/elk-falls/\" data-catalogue-range-id=\"elk-falls\" data-catalogue-range=\"Elk Falls Hickory\" data-catalogue-category=\"Engineered timber\"><img alt=\"Elk Falls engineered timber colour swatch\" class=\"category-thumb\" decoding=\"async\" loading=\"lazy\" src=\"/assets/products/engineered-timber/hardwood-collection/hickory/hickory-swatch.webp\" width=\"1400\" height=\"1400\"><p class=\"catalogue-overline\">Engineered timber</p><h3>Elk Falls</h3><p>Elk Falls is an engineered timber range for premium interiors needing real timber character with a stable board construction.</p><p class=\"product-meta\"><span class=\"pill\">Engineered timber</span><span class=\"pill\">12 colours</span></p><span aria-hidden=\"true\" class=\"card-arrow\">→</span></a>",
+          "kind": "range-count-badge",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "route": "/ranges/swish-oak-natura/",
+      "file": "ranges/swish-oak-natura/index.html",
+      "edits": [
+        {
+          "before": "<a class=\"card range-summary-card link-card\" href=\"/ranges/de-marque-oak/\" data-catalogue-range-id=\"de-marque-oak\" data-catalogue-range=\"De Marque Oak\" data-catalogue-category=\"Engineered timber\"><img alt=\"De Marque Oak engineered timber colour swatch\" class=\"category-thumb\" decoding=\"async\" loading=\"lazy\" src=\"/assets/products/engineered/de-marque-oak/cannes.jpeg\" width=\"571\" height=\"492\"><p class=\"catalogue-overline\">Engineered timber</p><h3>De Marque Oak</h3><p>De Marque Oak is an engineered timber range for customers comparing real timber colour options, stock timing and installation planning.</p><p class=\"product-meta\"><span class=\"pill\">Engineered timber</span><span class=\"pill\">42 colours</span></p><span aria-hidden=\"true\" class=\"card-arrow\">→</span></a>",
+          "after": "<a class=\"card range-summary-card link-card\" href=\"/ranges/de-marque-oak/\" data-catalogue-range-id=\"de-marque-oak\" data-catalogue-range=\"De Marque Oak\" data-catalogue-category=\"Engineered timber\"><img alt=\"De Marque Oak engineered timber colour swatch\" class=\"category-thumb\" decoding=\"async\" loading=\"lazy\" src=\"/assets/products/engineered/de-marque-oak/cannes.jpeg\" width=\"571\" height=\"492\"><p class=\"catalogue-overline\">Engineered timber</p><h3>De Marque Oak</h3><p>De Marque Oak is an engineered timber range for customers comparing real timber colour options, stock timing and installation planning.</p><p class=\"product-meta\"><span class=\"pill\">Engineered timber</span><span class=\"pill\">35 colours</span></p><span aria-hidden=\"true\" class=\"card-arrow\">→</span></a>",
+          "kind": "range-count-badge",
+          "count": 1
+        },
+        {
+          "before": "<a class=\"card range-summary-card link-card\" href=\"/ranges/elk-falls/\" data-catalogue-range-id=\"elk-falls\" data-catalogue-range=\"Elk Falls Hickory\" data-catalogue-category=\"Engineered timber\"><img alt=\"Elk Falls engineered timber colour swatch\" class=\"category-thumb\" decoding=\"async\" loading=\"lazy\" src=\"/assets/products/engineered-timber/hardwood-collection/hickory/hickory-swatch.webp\" width=\"1400\" height=\"1400\"><p class=\"catalogue-overline\">Engineered timber</p><h3>Elk Falls</h3><p>Elk Falls is an engineered timber range for premium interiors needing real timber character with a stable board construction.</p><p class=\"product-meta\"><span class=\"pill\">Engineered timber</span><span class=\"pill\">11 colours</span></p><span aria-hidden=\"true\" class=\"card-arrow\">→</span></a>",
+          "after": "<a class=\"card range-summary-card link-card\" href=\"/ranges/elk-falls/\" data-catalogue-range-id=\"elk-falls\" data-catalogue-range=\"Elk Falls Hickory\" data-catalogue-category=\"Engineered timber\"><img alt=\"Elk Falls engineered timber colour swatch\" class=\"category-thumb\" decoding=\"async\" loading=\"lazy\" src=\"/assets/products/engineered-timber/hardwood-collection/hickory/hickory-swatch.webp\" width=\"1400\" height=\"1400\"><p class=\"catalogue-overline\">Engineered timber</p><h3>Elk Falls</h3><p>Elk Falls is an engineered timber range for premium interiors needing real timber character with a stable board construction.</p><p class=\"product-meta\"><span class=\"pill\">Engineered timber</span><span class=\"pill\">12 colours</span></p><span aria-hidden=\"true\" class=\"card-arrow\">→</span></a>",
+          "kind": "range-count-badge",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "route": "/ranges/swish-oak-wideboard/",
+      "file": "ranges/swish-oak-wideboard/index.html",
+      "edits": [
+        {
+          "before": "<a class=\"card range-summary-card link-card\" href=\"/ranges/de-marque-oak/\" data-catalogue-range-id=\"de-marque-oak\" data-catalogue-range=\"De Marque Oak\" data-catalogue-category=\"Engineered timber\"><img alt=\"De Marque Oak engineered timber colour swatch\" class=\"category-thumb\" decoding=\"async\" loading=\"lazy\" src=\"/assets/products/engineered/de-marque-oak/cannes.jpeg\" width=\"571\" height=\"492\"><p class=\"catalogue-overline\">Engineered timber</p><h3>De Marque Oak</h3><p>De Marque Oak is an engineered timber range for customers comparing real timber colour options, stock timing and installation planning.</p><p class=\"product-meta\"><span class=\"pill\">Engineered timber</span><span class=\"pill\">42 colours</span></p><span aria-hidden=\"true\" class=\"card-arrow\">→</span></a>",
+          "after": "<a class=\"card range-summary-card link-card\" href=\"/ranges/de-marque-oak/\" data-catalogue-range-id=\"de-marque-oak\" data-catalogue-range=\"De Marque Oak\" data-catalogue-category=\"Engineered timber\"><img alt=\"De Marque Oak engineered timber colour swatch\" class=\"category-thumb\" decoding=\"async\" loading=\"lazy\" src=\"/assets/products/engineered/de-marque-oak/cannes.jpeg\" width=\"571\" height=\"492\"><p class=\"catalogue-overline\">Engineered timber</p><h3>De Marque Oak</h3><p>De Marque Oak is an engineered timber range for customers comparing real timber colour options, stock timing and installation planning.</p><p class=\"product-meta\"><span class=\"pill\">Engineered timber</span><span class=\"pill\">35 colours</span></p><span aria-hidden=\"true\" class=\"card-arrow\">→</span></a>",
+          "kind": "range-count-badge",
+          "count": 1
+        },
+        {
+          "before": "<a class=\"card range-summary-card link-card\" href=\"/ranges/elk-falls/\" data-catalogue-range-id=\"elk-falls\" data-catalogue-range=\"Elk Falls Hickory\" data-catalogue-category=\"Engineered timber\"><img alt=\"Elk Falls engineered timber colour swatch\" class=\"category-thumb\" decoding=\"async\" loading=\"lazy\" src=\"/assets/products/engineered-timber/hardwood-collection/hickory/hickory-swatch.webp\" width=\"1400\" height=\"1400\"><p class=\"catalogue-overline\">Engineered timber</p><h3>Elk Falls</h3><p>Elk Falls is an engineered timber range for premium interiors needing real timber character with a stable board construction.</p><p class=\"product-meta\"><span class=\"pill\">Engineered timber</span><span class=\"pill\">11 colours</span></p><span aria-hidden=\"true\" class=\"card-arrow\">→</span></a>",
+          "after": "<a class=\"card range-summary-card link-card\" href=\"/ranges/elk-falls/\" data-catalogue-range-id=\"elk-falls\" data-catalogue-range=\"Elk Falls Hickory\" data-catalogue-category=\"Engineered timber\"><img alt=\"Elk Falls engineered timber colour swatch\" class=\"category-thumb\" decoding=\"async\" loading=\"lazy\" src=\"/assets/products/engineered-timber/hardwood-collection/hickory/hickory-swatch.webp\" width=\"1400\" height=\"1400\"><p class=\"catalogue-overline\">Engineered timber</p><h3>Elk Falls</h3><p>Elk Falls is an engineered timber range for premium interiors needing real timber character with a stable board construction.</p><p class=\"product-meta\"><span class=\"pill\">Engineered timber</span><span class=\"pill\">12 colours</span></p><span aria-hidden=\"true\" class=\"card-arrow\">→</span></a>",
+          "kind": "range-count-badge",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "route": "/ranges/swish/",
+      "file": "ranges/swish/index.html",
+      "edits": [
+        {
+          "before": "<a class=\"card range-summary-card link-card\" href=\"/ranges/de-marque-oak/\" data-catalogue-range-id=\"de-marque-oak\" data-catalogue-range=\"De Marque Oak\" data-catalogue-category=\"Engineered timber\"><img alt=\"De Marque Oak engineered timber colour swatch\" class=\"category-thumb\" decoding=\"async\" loading=\"lazy\" src=\"/assets/products/engineered/de-marque-oak/cannes.jpeg\" width=\"571\" height=\"492\"><p class=\"catalogue-overline\">Engineered timber</p><h3>De Marque Oak</h3><p>De Marque Oak is an engineered timber range for customers comparing real timber colour options, stock timing and installation planning.</p><p class=\"product-meta\"><span class=\"pill\">Engineered timber</span><span class=\"pill\">42 colours</span></p><span aria-hidden=\"true\" class=\"card-arrow\">→</span></a>",
+          "after": "<a class=\"card range-summary-card link-card\" href=\"/ranges/de-marque-oak/\" data-catalogue-range-id=\"de-marque-oak\" data-catalogue-range=\"De Marque Oak\" data-catalogue-category=\"Engineered timber\"><img alt=\"De Marque Oak engineered timber colour swatch\" class=\"category-thumb\" decoding=\"async\" loading=\"lazy\" src=\"/assets/products/engineered/de-marque-oak/cannes.jpeg\" width=\"571\" height=\"492\"><p class=\"catalogue-overline\">Engineered timber</p><h3>De Marque Oak</h3><p>De Marque Oak is an engineered timber range for customers comparing real timber colour options, stock timing and installation planning.</p><p class=\"product-meta\"><span class=\"pill\">Engineered timber</span><span class=\"pill\">35 colours</span></p><span aria-hidden=\"true\" class=\"card-arrow\">→</span></a>",
+          "kind": "range-count-badge",
+          "count": 1
+        },
+        {
+          "before": "<a class=\"card range-summary-card link-card\" href=\"/ranges/elk-falls/\" data-catalogue-range-id=\"elk-falls\" data-catalogue-range=\"Elk Falls Hickory\" data-catalogue-category=\"Engineered timber\"><img alt=\"Elk Falls engineered timber colour swatch\" class=\"category-thumb\" decoding=\"async\" loading=\"lazy\" src=\"/assets/products/engineered-timber/hardwood-collection/hickory/hickory-swatch.webp\" width=\"1400\" height=\"1400\"><p class=\"catalogue-overline\">Engineered timber</p><h3>Elk Falls</h3><p>Elk Falls is an engineered timber range for premium interiors needing real timber character with a stable board construction.</p><p class=\"product-meta\"><span class=\"pill\">Engineered timber</span><span class=\"pill\">11 colours</span></p><span aria-hidden=\"true\" class=\"card-arrow\">→</span></a>",
+          "after": "<a class=\"card range-summary-card link-card\" href=\"/ranges/elk-falls/\" data-catalogue-range-id=\"elk-falls\" data-catalogue-range=\"Elk Falls Hickory\" data-catalogue-category=\"Engineered timber\"><img alt=\"Elk Falls engineered timber colour swatch\" class=\"category-thumb\" decoding=\"async\" loading=\"lazy\" src=\"/assets/products/engineered-timber/hardwood-collection/hickory/hickory-swatch.webp\" width=\"1400\" height=\"1400\"><p class=\"catalogue-overline\">Engineered timber</p><h3>Elk Falls</h3><p>Elk Falls is an engineered timber range for premium interiors needing real timber character with a stable board construction.</p><p class=\"product-meta\"><span class=\"pill\">Engineered timber</span><span class=\"pill\">12 colours</span></p><span aria-hidden=\"true\" class=\"card-arrow\">→</span></a>",
+          "kind": "range-count-badge",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "route": "/ranges/urban-6-5-hybrid/",
+      "file": "ranges/urban-6-5-hybrid/index.html",
+      "edits": [
+        {
+          "before": "<a class=\"card range-summary-card link-card\" href=\"/ranges/aspire/\" data-catalogue-range-id=\"aspire\" data-catalogue-range=\"Aspire\" data-catalogue-category=\"Hybrid\"><img alt=\"Aspire hybrid colour swatch\" class=\"category-thumb\" decoding=\"async\" loading=\"lazy\" src=\"/assets/products/hybrid/floors/aspire/coastal-blackbutt/coastal-blackbutt-swatch.webp\" width=\"1400\" height=\"2100\"><p class=\"catalogue-overline\">Hybrid</p><h3>Aspire</h3><p>Hybrid range with timber-look colours for customers comparing a broader residential colour set.</p><p class=\"product-meta\"><span class=\"pill\">Hybrid</span><span class=\"pill\">14 colours</span></p><span aria-hidden=\"true\" class=\"card-arrow\">→</span></a>",
+          "after": "<a class=\"card range-summary-card link-card\" href=\"/ranges/aspire/\" data-catalogue-range-id=\"aspire\" data-catalogue-range=\"Aspire\" data-catalogue-category=\"Hybrid\"><img alt=\"Aspire hybrid colour swatch\" class=\"category-thumb\" decoding=\"async\" loading=\"lazy\" src=\"/assets/products/hybrid/floors/aspire/coastal-blackbutt/coastal-blackbutt-swatch.webp\" width=\"1400\" height=\"2100\"><p class=\"catalogue-overline\">Hybrid</p><h3>Aspire</h3><p>Hybrid range with timber-look colours for customers comparing a broader residential colour set.</p><p class=\"product-meta\"><span class=\"pill\">Hybrid</span><span class=\"pill\">20 colours</span></p><span aria-hidden=\"true\" class=\"card-arrow\">→</span></a>",
+          "kind": "range-count-badge",
+          "count": 1
+        },
+        {
+          "before": "<a class=\"card range-summary-card link-card\" href=\"/ranges/easi-plank/\" data-catalogue-range-id=\"easi-plank\" data-catalogue-range=\"Easi Plank\" data-catalogue-category=\"Hybrid\"><img alt=\"Easi Plank hybrid colour swatch\" class=\"category-thumb\" decoding=\"async\" loading=\"lazy\" src=\"/assets/products/hybrid/floors/hybrid/easi-plank-jarrah/easi-plank-jarrah-swatch.webp\" width=\"1400\" height=\"1400\"><p class=\"catalogue-overline\">Hybrid</p><h3>Easi Plank</h3><p>Straightforward timber-look hybrid plank range for customers comparing practical colour options.</p><p class=\"product-meta\"><span class=\"pill\">Hybrid</span><span class=\"pill\">4 colours</span></p><span aria-hidden=\"true\" class=\"card-arrow\">→</span></a>",
+          "after": "<a class=\"card range-summary-card link-card\" href=\"/ranges/easi-plank/\" data-catalogue-range-id=\"easi-plank\" data-catalogue-range=\"Easi Plank\" data-catalogue-category=\"Hybrid\"><img alt=\"Easi Plank hybrid colour swatch\" class=\"category-thumb\" decoding=\"async\" loading=\"lazy\" src=\"/assets/products/hybrid/floors/hybrid/easi-plank-jarrah/easi-plank-jarrah-swatch.webp\" width=\"1400\" height=\"1400\"><p class=\"catalogue-overline\">Hybrid</p><h3>Easi Plank</h3><p>Straightforward timber-look hybrid plank range for customers comparing practical colour options.</p><p class=\"product-meta\"><span class=\"pill\">Hybrid</span><span class=\"pill\">30 colours</span></p><span aria-hidden=\"true\" class=\"card-arrow\">→</span></a>",
+          "kind": "range-count-badge",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "route": "/ranges/wide-plank-water-resistant-laminate/",
+      "file": "ranges/wide-plank-water-resistant-laminate/index.html",
+      "edits": [
+        {
+          "before": "href=\"/contact/?enquiry=product-info&amp;range=ASPECT+Laminate&amp;category=Laminate&amp;source=%2Franges%2Fwide-plank-water-resistant-laminate%2F\"",
+          "after": "href=\"/contact/?enquiry=product&amp;range=ASPECT+Laminate&amp;category=Laminate&amp;source=%2Franges%2Fwide-plank-water-resistant-laminate%2F\"",
+          "kind": "unsupported-enquiry",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "route": "/ranges/xxl-8-0-hybrid/",
+      "file": "ranges/xxl-8-0-hybrid/index.html",
+      "edits": [
+        {
+          "before": "<a class=\"card range-summary-card link-card\" href=\"/ranges/aspire/\" data-catalogue-range-id=\"aspire\" data-catalogue-range=\"Aspire\" data-catalogue-category=\"Hybrid\"><img alt=\"Aspire hybrid colour swatch\" class=\"category-thumb\" decoding=\"async\" loading=\"lazy\" src=\"/assets/products/hybrid/floors/aspire/coastal-blackbutt/coastal-blackbutt-swatch.webp\" width=\"1400\" height=\"2100\"><p class=\"catalogue-overline\">Hybrid</p><h3>Aspire</h3><p>Hybrid range with timber-look colours for customers comparing a broader residential colour set.</p><p class=\"product-meta\"><span class=\"pill\">Hybrid</span><span class=\"pill\">14 colours</span></p><span aria-hidden=\"true\" class=\"card-arrow\">→</span></a>",
+          "after": "<a class=\"card range-summary-card link-card\" href=\"/ranges/aspire/\" data-catalogue-range-id=\"aspire\" data-catalogue-range=\"Aspire\" data-catalogue-category=\"Hybrid\"><img alt=\"Aspire hybrid colour swatch\" class=\"category-thumb\" decoding=\"async\" loading=\"lazy\" src=\"/assets/products/hybrid/floors/aspire/coastal-blackbutt/coastal-blackbutt-swatch.webp\" width=\"1400\" height=\"2100\"><p class=\"catalogue-overline\">Hybrid</p><h3>Aspire</h3><p>Hybrid range with timber-look colours for customers comparing a broader residential colour set.</p><p class=\"product-meta\"><span class=\"pill\">Hybrid</span><span class=\"pill\">20 colours</span></p><span aria-hidden=\"true\" class=\"card-arrow\">→</span></a>",
+          "kind": "range-count-badge",
+          "count": 1
+        },
+        {
+          "before": "<a class=\"card range-summary-card link-card\" href=\"/ranges/easi-plank/\" data-catalogue-range-id=\"easi-plank\" data-catalogue-range=\"Easi Plank\" data-catalogue-category=\"Hybrid\"><img alt=\"Easi Plank hybrid colour swatch\" class=\"category-thumb\" decoding=\"async\" loading=\"lazy\" src=\"/assets/products/hybrid/floors/hybrid/easi-plank-jarrah/easi-plank-jarrah-swatch.webp\" width=\"1400\" height=\"1400\"><p class=\"catalogue-overline\">Hybrid</p><h3>Easi Plank</h3><p>Straightforward timber-look hybrid plank range for customers comparing practical colour options.</p><p class=\"product-meta\"><span class=\"pill\">Hybrid</span><span class=\"pill\">4 colours</span></p><span aria-hidden=\"true\" class=\"card-arrow\">→</span></a>",
+          "after": "<a class=\"card range-summary-card link-card\" href=\"/ranges/easi-plank/\" data-catalogue-range-id=\"easi-plank\" data-catalogue-range=\"Easi Plank\" data-catalogue-category=\"Hybrid\"><img alt=\"Easi Plank hybrid colour swatch\" class=\"category-thumb\" decoding=\"async\" loading=\"lazy\" src=\"/assets/products/hybrid/floors/hybrid/easi-plank-jarrah/easi-plank-jarrah-swatch.webp\" width=\"1400\" height=\"1400\"><p class=\"catalogue-overline\">Hybrid</p><h3>Easi Plank</h3><p>Straightforward timber-look hybrid plank range for customers comparing practical colour options.</p><p class=\"product-meta\"><span class=\"pill\">Hybrid</span><span class=\"pill\">30 colours</span></p><span aria-hidden=\"true\" class=\"card-arrow\">→</span></a>",
+          "kind": "range-count-badge",
+          "count": 1
+        }
+      ]
+    }
+  ]
+}

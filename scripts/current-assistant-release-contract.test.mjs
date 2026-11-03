@@ -1,0 +1,6 @@
+import test from 'node:test';import assert from'node:assert/strict';import fs from'node:fs';import path from'node:path';
+import{checkCurrentAssistantRelease}from'./current-assistant-release-contract.mjs';
+const root=path.resolve(import.meta.dirname,'..'),prior=JSON.parse(fs.readFileSync(process.env.OZ_RELEASE_PRIOR_CORPUS)),reviewedManifestBytes=fs.readFileSync(process.env.OZ_RELEASE_REVIEW_MANIFEST);
+test('current release has complete exact reviewed source and fact dispositions without inheriting old approval',()=>{const r=checkCurrentAssistantRelease({root,previousCorpus:prior,reviewedManifestBytes});assert.equal(r.facts,6739);assert.equal(r.sourceDefaultOffPreserved,true);assert.equal(r.dispositions.length,26);if(process.env.OZ_RELEASE_CURRENT_REPORT)fs.writeFileSync(process.env.OZ_RELEASE_CURRENT_REPORT,JSON.stringify(r,null,2));});
+test('tampered reviewed receipt fails before current input or provider access',()=>assert.throws(()=>checkCurrentAssistantRelease({root,previousCorpus:prior,reviewedManifestBytes:Buffer.concat([reviewedManifestBytes,Buffer.from(' ')])})));
+test('unbound historical corpus cannot grant current-release eligibility',()=>{const changed=structuredClone(prior);changed.corpusVersion='unreviewed';assert.throws(()=>checkCurrentAssistantRelease({root,previousCorpus:changed,reviewedManifestBytes}));});

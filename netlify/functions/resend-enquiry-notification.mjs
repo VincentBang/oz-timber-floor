@@ -21,11 +21,27 @@ function email(value) {
 }
 
 function messageText(data) {
-  return visibleFields
-    .map(([key, label]) => [label, clean(data[key])])
+  var shortened = false;
+  const text = visibleFields
+    .map(([key, label]) => { const full = String(data[key] || "").replace(/[\r\n]+/g, " ").replace(/\s+/g, " ").trim(); const preview = full.slice(0, 2000).replace(/[\uD800-\uDBFF]$/, ""); if (preview.length < full.length) shortened = true; return [label, preview + (preview.length < full.length ? " [shortened preview]" : "")]; })
     .filter(([, value]) => value)
     .map(([label, value]) => `${label}: ${value}`)
     .join("\n");
+  // Netlify's hosted upload receipt/schema still needs independent validation.
+  // Report field presence only: never fetch, embed or forward supplied URLs,
+  // filenames or raw binary, and never claim files were verified from this flag.
+  const uploadFields = ["floor_plan", "flooring_photo_1", "flooring_photo_2"];
+  const supplied = uploadFields.some(key => {
+    const value = data[key];
+    if (typeof value === "string") return value.trim().length > 0;
+    // Netlify's accepted submission uses a file descriptor, not a URL string.
+    // Inspect only its shape; never fetch/forward its URL, name or contents.
+    return value && typeof value === "object" && !Array.isArray(value)
+      && value.type === "file" && typeof value.filename === "string"
+      && value.filename.trim().length > 0 && value.filename.length <= 512
+      && Number.isFinite(value.size) && value.size > 0 && value.size <= 7000000;
+  });
+  return text + (shortened ? "\n\nSome fields above are shortened previews. Sign in to the Oz Timber Floor Netlify dashboard, open Forms, select oz-flooring-enquiry and locate the matching submission for the complete details." : "") + (supplied ? "\n\nAttachment check: upload fields were supplied. Review the original Netlify Forms submission to confirm file receipt and open any attachments." : "");
 }
 
 function eventKey(event, data) {

@@ -1,0 +1,40 @@
+{
+  "at": "2026-11-03T09:31:23.814Z",
+  "request": "ok finish the final production checks, push the latest website, chatbot and enquiry uploads to GitHub, then deploy once to Netlify. Keep the $30 monthly cap.",
+  "sourceHead": "6110205f43a39ed80ee85f2fde46e3e9437a93e9",
+  "corpusVersion": "9ba163647b5dd90fd9d22536757d759029ce7ca2a7d3481baf14ed00993fa1aa",
+  "profileHash": "aea81d6c51b9760592830e453bd1dab94705a6034b563a0d7b6e08d64cc70579",
+  "monthlyUsd": 30,
+  "dailyUsd": 1,
+  "oneProductionDeployment": true,
+  "gitPushAuthorized": true,
+  "activationAuthorized": true,
+  "noNewPaidTestOrFormSubmission": true,
+  "hostedEvidenceSha256": "7494ab1103d27695b34329888bc4e63d93de40ed345099251c8cc4e236e36656",
+  "historicalModelAccessScope": "Unchanged production-context key/model; actual historical production proof retained (not relabelled as fresh). Fresh exact-corpus preview used protected preview-context key, two real responses. No new production paid response.",
+  "budgetProof": {
+    "reportSha256": "19c22fa4b8edd6f761a8f5b7864b4d32ef25191c60e5e78d8907e6a63378d784",
+    "scope": "Fresh native production store isolated-prefix component tests; real control/ledger read-only and unchanged",
+    "adapterFiles": [
+      {
+        "file": "assistant/lib/atomic-budget.mjs",
+        "sha256": "265004bf56242564675d47208440a59f4b12956c4cabae9148f8fb50594ded44"
+      },
+      {
+        "file": "assistant/lib/blob-transport.mjs",
+        "sha256": "b38ce33d61093c2af369c8896f89f4297499e380e913c4702b4df04404ca7fc6"
+      },
+      {
+        "file": "assistant/lib/production.mjs",
+        "sha256": "e92af25e3e9209160a17454808c391646dc1f281bb6899d34756438538976d15"
+      },
+      {
+        "file": "assistant/lib/runtime.mjs",
+        "sha256": "2a7d22b1d9c2307fea3182fa18d948e3691e31bf8cca8ead9806ceb7145076dd"
+      }
+    ]
+  },
+  "ownerReceipt": "Owner confirmed both synthetic enquiry emails and upload notification replay. No new enquiries permitted.",
+  "uploadsAccessLimitation": "Synthetic returned attachment URLs were downloadable without login. Do not claim private/authenticated storage.",
+  "providerWrites": "Only exact production fingerprint and CAS rebind of control-v1; preserve state-v1 and every other provider setting"
+}

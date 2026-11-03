@@ -5,7 +5,10 @@ export function recordedPackAnswer(message,corpus,{pagePath='/'}={}){
  const doc=corpus.documents.find(d=>d.entityId===context.entityId),formats=doc?.facts.find(f=>f.field==='formatSummary');
  if(formats){
   const choiceNeeded=/\bpack\s+(?:size|coverage)\b/i.test(message)&&formats.value.includes(' | ')&&!/\b(?:183|230)\s*mm\b|\bherringbone\b|\bstraight plank\b/i.test(message);
-  return {status:choiceNeeded?'needs_confirmation':'answered',reason:choiceNeeded?'confirmation':'recorded_format_alternatives',segments:[{text:`${doc.title} — ${choiceNeeded?'Please choose the width or pattern first. ':''}${formats.value} These are format specifications, not a quantity calculation or a stock guarantee.`,evidenceIds:[formats.id]}],sources:[{id:doc.documentId,title:doc.title,href:doc.canonicalPath,expectedStatus:200}],entityIds:[doc.entityId],corpusVersion:corpus.corpusVersion};
+  // Answer width questions directly with the corroborated board-size fact,
+  // then retain the complete format alternatives. Never derive/select a SKU.
+  const boards=doc.facts.filter(f=>f.field==='boardSize'),board=/\bwidths?\b/i.test(message)&&boards.length===1?boards[0]:null;
+  return {status:choiceNeeded?'needs_confirmation':'answered',reason:choiceNeeded?'confirmation':'recorded_format_alternatives',segments:[{text:`${doc.title} — ${choiceNeeded?'Please choose the width or pattern first. ':''}${board?'Recorded board size: '+board.value+'. ':''}${formats.value} These are format specifications, not a quantity calculation or a stock guarantee.`,evidenceIds:[...(board?[board.id]:[]),formats.id]}],sources:[{id:doc.documentId,title:doc.title,href:doc.canonicalPath,expectedStatus:200}],entityIds:[doc.entityId],corpusVersion:corpus.corpusVersion};
  }
  if(!/\bpack\s+(?:size|coverage)\b/i.test(message))return null;
  const pack=doc?.facts.find(f=>f.field==='packSizeM2'&&/^\d+(?:\.\d+)?$/.test(f.value));if(!pack)return null;

@@ -19,6 +19,7 @@ body.editorial .site-header{background:#fff;border-bottom:1px solid var(--line);
 body.editorial .nav{min-height:74px;gap:20px}body.editorial .brand{min-width:0;width:185px;flex-shrink:0}body.editorial .brand-logo{width:185px;height:auto;max-height:none;filter:none}
 body.editorial .nav-links{gap:24px;font-size:14px;font-weight:400}body.editorial .header-actions{gap:10px}body.editorial .header-actions a{min-height:44px;font-size:13px;padding:11px 17px;border-radius:0}
 body.editorial .nav-dropdown{background:var(--canvas);border:1px solid var(--line);border-radius:0;box-shadow:0 8px 18px #23262012}
+@media(min-width:981px){body.editorial .nav-dropdown{min-width:245px;width:max-content;max-width:calc(100vw - 32px)}body.editorial .site-header[data-nav-enhanced="true"] .nav-item:not(.is-expanded) .nav-dropdown{display:none}body.editorial .site-header[data-nav-enhanced="true"] .nav-item:not(.is-expanded) .nav-dropdown-toggle::after{transform:translateY(-2px) rotate(45deg)}}
 body.editorial .nav-dropdown a{min-height:44px;font-weight:400}body.editorial .nav-toggle{border:0;border-radius:0;background:transparent}
 body.editorial .section,body.editorial .portfolio-section{padding:64px 0}body.editorial .section.soft{background:transparent;border:0;border-top:1px solid var(--line)}
 body.editorial .hero{padding:42px 0}body.editorial .hero-grid{grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:7%;align-items:center}
@@ -43,6 +44,13 @@ body.editorial .spec-item span{font-size:12px;font-weight:400;letter-spacing:0;t
 body.editorial :is(.catalogue-note,.selected-product-summary){border-radius:0;box-shadow:none;background:transparent;border:0;border-left:2px solid var(--charcoal);padding:12px 18px}
 body.editorial details{border:0;border-top:1px solid var(--line);border-radius:0;background:transparent;box-shadow:none}body.editorial summary{cursor:pointer;min-height:44px;padding:14px 0;font-size:15px;font-weight:400;line-height:1.5}
 body.editorial .faq-item{border:0;border-top:1px solid var(--line)}body.editorial .faq-item summary{padding:18px 0;min-height:52px;font-weight:400}body.editorial .faq-answer{padding:0 0 20px}
+/* Show the whole keyboard outline without clipping it or covering question text. */
+body.editorial .faq-item:focus-within{overflow:visible}
+body.editorial .faq-item>summary:focus-visible{outline-offset:4px}
+/* Retain the original step label without adding a second decorative number. */
+body.editorial .process-step:has(>.insight-label)::before{content:none}
+/* Retain the existing legacy FAQ question spacing/weight after semantic repair. */
+body.editorial .faq-native-legacy summary{padding:20px;font-weight:800}
 body.editorial .cta{background:var(--stone);color:var(--charcoal);border:0;border-radius:0;box-shadow:none;padding:40px}body.editorial .cta p,body.editorial .cta h2{color:var(--charcoal)}
 body.editorial .site-footer{background:#e9e7df;color:var(--charcoal);padding-top:48px;border-top:1px solid var(--line)}body.editorial .site-footer p,body.editorial .site-footer a{color:var(--ink-muted);font-size:13px}
 body.editorial .footer-grid{grid-template-columns:1.5fr 1fr 1fr 1fr;gap:5%}body.editorial .footer-grid h3{font:600 12px/1.5 Arial;letter-spacing:.1em;text-transform:uppercase;margin-bottom:16px}
@@ -118,3 +126,9 @@ body.editorial :is(.flooring-assistant-panel,.flooring-assistant-review){border-
 body.editorial :is(.flooring-assistant-panel,.flooring-assistant-review) h2{font:400 26px/1.15 Georgia,serif;margin:0}
 body.editorial :is(.flooring-assistant-panel,.flooring-assistant-review) :is(button,input,textarea,select,a,.assistant-message){border-radius:0;box-shadow:none}
 body.editorial .flooring-assistant-panel header{background:var(--canvas)}
+/* Let long range-comparison names reflow inside narrow cards, without resizing type. */
+@media(max-width:760px){body.editorial[data-editorial-family="range"] .range-summary-card h3{overflow-wrap:anywhere;hyphens:auto}}
+/* Give the range facts strip its natural height instead of an aspect-ratio grid track. */
+body.editorial[data-editorial-family="range"] .hero-media:has(>img[src*="/assets/products/"]){display:block;aspect-ratio:auto}
+/* The ranges hub alone has the range-library section and this material disclosure. */
+body.editorial[data-editorial-family="discovery"]:has(main #range-library) .editorial-material-image .hero-media{display:block;aspect-ratio:auto}

@@ -426,6 +426,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
   initMobileHeaderCall();
 
+  function closeDesktopDropdowns(returnFocus) {
+    var activeItem = document.activeElement && document.activeElement.closest ? document.activeElement.closest('.nav-item') : null;
+    var control = activeItem && activeItem.querySelector('.nav-dropdown-toggle');
+    resetNavSubmenus();
+    if (returnFocus && control) control.focus({ preventScroll: true });
+  }
+  if (header) header.setAttribute('data-nav-enhanced', 'true');
+  document.querySelectorAll('.nav-item.has-dropdown').forEach(function (item) {
+    var button = item.querySelector('.nav-dropdown-toggle');
+    if (!button) return;
+    function openDesktop() { if (mobileNavQuery && mobileNavQuery.matches) return; closeDesktopDropdowns(false); item.classList.add('is-expanded'); button.setAttribute('aria-expanded','true'); }
+    item.addEventListener('mouseenter', openDesktop);
+    item.addEventListener('mouseleave', function () { if ((!mobileNavQuery || !mobileNavQuery.matches) && !item.contains(document.activeElement)) closeDesktopDropdowns(false); });
+    item.addEventListener('focusin', function (event) { if (event.target !== button) openDesktop(); });
+    item.addEventListener('focusout', function (event) { if ((!mobileNavQuery || !mobileNavQuery.matches) && !item.contains(event.relatedTarget)) closeDesktopDropdowns(false); });
+  });
+  document.addEventListener('keydown', function (event) { if (event.key === 'Escape' && (!mobileNavQuery || !mobileNavQuery.matches)) { closeDesktopDropdowns(true); } });
+  document.addEventListener('click', function (event) { if (header && !header.contains(event.target) && (!mobileNavQuery || !mobileNavQuery.matches)) closeDesktopDropdowns(false); });
+
   document.querySelectorAll(".nav-dropdown-toggle").forEach(function (button) {
     button.addEventListener("click", function () {
       var item = button.closest(".nav-item");
@@ -701,18 +720,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (clear) {
       clear.addEventListener("click", function () {
-        product = "";
-        range = "";
-        brand = "";
-        category = "";
-        productSlug = "";
-        if (productField) productField.value = "";
-        if (categoryInterestField) categoryInterestField.value = "";
-        fillTrackingFields();
-        updateSelectedCard();
+        invalidateProductIdentity("");
         if (productField) productField.focus();
       });
     }
+  }
+
+  function invalidateProductIdentity(nextProduct) {
+    if (message && message.dataset.enquiryDefault && message.value === message.dataset.enquiryDefault) message.value = "";
+    if (message) delete message.dataset.enquiryDefault;
+    product = nextProduct; range = ""; brand = ""; category = ""; productSlug = "";
+    ["product", "range", "brand", "category", "productSlug", "product_slug"].forEach(function (key) { params.delete(key); });
+    if (nextProduct) params.set("product", nextProduct);
+    if (productField) productField.value = nextProduct;
+    if (categoryInterestField) categoryInterestField.value = "";
+    if (window.history && typeof window.history.replaceState === "function") window.history.replaceState({}, "", window.location.pathname + (params.toString() ? "?" + params.toString() : "") + (window.location.hash || ""));
+    fillTrackingFields(); updateSelectedCard();
   }
 
   function fieldFor(key) {
@@ -834,6 +857,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (productField) {
     productField.value = product || range || "";
+    productField.addEventListener("input", function () { invalidateProductIdentity(productField.value); });
+    productField.addEventListener("change", function () { invalidateProductIdentity(productField.value); });
   }
 
   if (categoryInterestField && category) {
@@ -844,7 +869,13 @@ document.addEventListener("DOMContentLoaded", function () {
     var serviceTopic = params.get("topic");
     // Service CTAs use human-readable topics; select values are stable slugs.
     var serviceSource = params.get("source") || "";
-    if (/levell|uneven floor/i.test(serviceTopic) || /floor-levelling/.test(serviceSource)) serviceTopic = "floor-levelling";
+    var topicAndSource = serviceTopic + " " + serviceSource;
+    if (/levell|uneven floor/i.test(topicAndSource)) serviceTopic = "floor-levelling";
+    else if (/removal|stripping/i.test(topicAndSource)) serviceTopic = "floor-removal";
+    else if (/sanding|polishing/i.test(topicAndSource)) serviceTopic = "sanding-polishing";
+    else if (/installation|floor-install/i.test(topicAndSource)) serviceTopic = "installation";
+    else if (/preparation/i.test(topicAndSource)) serviceTopic = "preparation";
+    else serviceTopic = "";
     serviceTypeField.value = serviceTopic;
   }
 
@@ -974,6 +1005,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   document.querySelectorAll('a[href*="/contact/"]').forEach(function (link) {
+    if (link.hasAttribute("data-set-enquiry")) return; // Specific shortcut handler owns this intent.
     link.addEventListener("click", function () {
       var href = link.getAttribute("href") || "";
       var intent = "";
@@ -1052,6 +1084,8 @@ document.addEventListener("DOMContentLoaded", function () {
   // Flooring assistant bridge: end
 
   document.querySelectorAll("[data-contact-form]").forEach(function (form) {
+    var uploadTools = window.OZ_ENQUIRY_ATTACHMENTS;
+    if (uploadTools) uploadTools.initialise(form);
     form.addEventListener("focusin", function () {
       if (form.getAttribute("data-analytics-started") === "true") return;
       form.setAttribute("data-analytics-started", "true");
@@ -1061,6 +1095,7 @@ document.addEventListener("DOMContentLoaded", function () {
     form.addEventListener("submit", function (event) {
       if (submitting) { event.preventDefault(); return; }
       try { window.sessionStorage.removeItem(pendingQuoteKey); } catch (error) {}
+      if (form.checkValidity && !form.checkValidity()) { event.preventDefault(); form.reportValidity(); return; }
       // Keep the existing native POST as a fallback. A submit attempt alone is
       // never evidence that Netlify accepted an enquiry.
       if (!window.fetch || !window.FormData) return;
@@ -1068,20 +1103,42 @@ document.addEventListener("DOMContentLoaded", function () {
       var action = new URL(form.getAttribute("action"), window.location.href);
       if (action.origin !== window.location.origin) return;
       fillTrackingFields();
-      var body = new URLSearchParams(new window.FormData(form));
+      var body = new window.FormData(form);
       var submitButton = form.querySelector('button[type="submit"]');
       var originalText = submitButton && submitButton.textContent;
       var priorError = form.querySelector("[data-submit-error]");
       if (priorError) priorError.remove();
       submitting = true;
+      var uploads = form.querySelector('[data-enquiry-uploads]');
+      if (uploads) uploads.disabled = true;
       form.setAttribute("aria-busy", "true");
       if (submitButton) { submitButton.disabled = true; submitButton.textContent = "Sending enquiry…"; }
-      window.fetch(action.href, {
+      var preparation;
+      try {
+        if (uploadTools) preparation = uploadTools.prepare(form, body);
+        else {
+          // A missing enhancement script must not silently send unchecked files.
+          var selected = false;
+          if (body.forEach) body.forEach(function (value) { if (typeof value !== 'string' && value.size) selected = true; });
+          if (selected) throw new Error('File checks could not load. Remove attachments or reload the page before sending.');
+          ['floor_plan','flooring_photo_1','flooring_photo_2'].forEach(function(name) { if(body.delete)body.delete(name); });
+          preparation = body;
+        }
+      } catch (error) { preparation = Promise.reject(error); }
+      // A 45-second application deadline allows upload headroom. A lost response
+      // is acceptance-unknown; never automatically retry or claim non-receipt.
+      var deadlineTimer, controller = window.AbortController ? new window.AbortController() : null;
+      var transport = Promise.resolve(preparation).then(function (multipart) { return window.fetch(action.href, {
         method: "POST",
         credentials: "same-origin",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: body.toString()
-      }).then(function (response) {
+        ...(controller ? { signal: controller.signal } : {}),
+        body: multipart
+      }); });
+      var bounded = typeof window.setTimeout === "function" ? Promise.race([transport, new Promise(function (_, reject) {
+        deadlineTimer = window.setTimeout(function () { if (controller) controller.abort(); reject(new Error("Acceptance unknown after 45 seconds")); }, 45000);
+      })]) : transport;
+      bounded.then(function (response) {
+        if (deadlineTimer) window.clearTimeout(deadlineTimer);
         if (!response.ok || new URL(response.url).origin !== action.origin) throw new Error("Enquiry acceptance not confirmed");
         try {
           window.sessionStorage.setItem(pendingQuoteKey, JSON.stringify({
@@ -1091,9 +1148,11 @@ document.addEventListener("DOMContentLoaded", function () {
           }));
         } catch (error) {}
         window.location.assign(action.href);
-      }).catch(function () {
+      }).catch(function (error) {
+        if (deadlineTimer) window.clearTimeout(deadlineTimer);
         try { window.sessionStorage.removeItem(pendingQuoteKey); } catch (error) {}
         submitting = false;
+        if (uploads) uploads.disabled = false;
         form.removeAttribute("aria-busy");
         if (submitButton) { submitButton.disabled = false; submitButton.textContent = originalText; }
         var message = document.createElement("p");
@@ -1101,7 +1160,7 @@ document.addEventListener("DOMContentLoaded", function () {
         message.setAttribute("data-submit-error", "true");
         message.setAttribute("role", "alert");
         message.tabIndex = -1;
-        message.textContent = "We could not confirm your enquiry was received. Please contact us using the phone or email details on this page before resending.";
+        message.textContent = error && (error.field || /^File checks|^Your enquiry text/.test(error.message || '')) ? error.message : "We could not confirm your enquiry was received. Your details and selected files are kept in this tab. Please contact us using the phone or email details on this page before resending.";
         form.appendChild(message);
         message.focus();
       });

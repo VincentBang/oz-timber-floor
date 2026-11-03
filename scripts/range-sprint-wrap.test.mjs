@@ -1,0 +1,2 @@
+import fs from'node:fs';import test from'node:test';import assert from'node:assert/strict';
+test('long comparison names reflow only within the existing mobile range layout',()=>{const css=fs.readFileSync(new URL('../assets/editorial-gallery.css',import.meta.url),'utf8');assert(css.includes('@media(max-width:760px){body.editorial[data-editorial-family="range"] .range-summary-card h3{overflow-wrap:anywhere;hyphens:auto}}'));assert(!css.includes('.range-summary-card h3{font-size:'));});

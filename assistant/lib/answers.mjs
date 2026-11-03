@@ -7,7 +7,17 @@ import {recordedPackAnswer} from './recorded-pack.mjs';
 const routeSafe=path=>typeof path==='string'&&/^\/(?!\/)[a-z0-9\-/]*$/.test(path);
 export function renderPlan(plan,retrieval,corpus){
  if(!exactKeys(plan,['status','factIds','reason'])||!['answered','clarify'].includes(plan.status)||!['supported','insufficient'].includes(plan.reason)||!Array.isArray(plan.factIds)||plan.factIds.length>6||new Set(plan.factIds).size!==plan.factIds.length)throw Error('invalid_plan');
- if(plan.status==='clarify'||!plan.factIds.length)return {status:'clarify',segments:[{text:'Which named product, range or flooring question would you like help with?',evidenceIds:[]}],sources:[],entityIds:[]};
+ if(plan.status==='clarify'||!plan.factIds.length){
+  // A model's generic clarification cannot discard a complete, exact named
+  // specification lookup. Recover only one fact per requested safe attribute
+  // of one entity; use the normal citation/entity validator below, not prose.
+  const fields=retrieval.requestedFields||[],owner=retrieval.exactEntities?.length===1?retrieval.exactEntities[0]:null;
+  if(owner&&fields.length&&new Set(fields).size===fields.length&&fields.every(f=>['thickness','boardSize','colour','category','finish'].includes(f))&&retrieval.missingFields?.length===0){
+   const groups=fields.map(field=>retrieval.facts.filter(f=>f.entityId===owner&&f.field===field));
+   if(groups.every(group=>group.length===1))return renderPlan({status:'answered',reason:'supported',factIds:groups.map(group=>group[0].id)},retrieval,corpus);
+  }
+  return {status:'clarify',segments:[{text:'Which named product, range or flooring question would you like help with?',evidenceIds:[]}],sources:[],entityIds:[]};
+ }
  let facts=plan.factIds.map(id=>{const f=retrieval.facts.find(f=>f.id===id);if(!f||!routeSafe(f.canonicalPath)||!corpus.documents.some(d=>d.entityId===f.entityId&&d.canonicalPath===f.canonicalPath))throw Error('invalid_citation');return f;});
  if(facts.some(f=>['guidance','faq'].includes(f.field)&&knowledgeTextIssue(f.value)))throw Error('invalid_citation');
  if(retrieval.exactEntities?.length&&facts.some(f=>!retrieval.exactEntities.includes(f.entityId)))throw Error('irrelevant_entity');
@@ -63,8 +73,8 @@ export function policyAnswer(message,corpus,options={}){
  if(/\bbamboo\b/i.test(message))return {status:'needs_confirmation',segments:[{text:'That material is not part of the current public catalogue. Ask the team about current alternatives.',evidenceIds:['business-current-offering']}],sources:[{id:'business-current-offering',title:'Contact Oz Timber Floor',href:'/contact/',expectedStatus:200}],entityIds:[],reason:'not_offered',corpusVersion:corpus.corpusVersion};
  if(/confidential|supplier (?:cost|price|name|list)|wholesale|operon|supabase|\bkeys?\b|system prompt|all.*(?:data|index)|ignore.*(?:previous|instructions)|reveal|<script|javascript:|https?:\/\//i.test(message))return fallback('private_request',corpus);
  if(/asbestos|dangerous removal/i.test(message))return fallback('safety',corpus);
- if(/bathroom|scratch.proof|pet.proof|certif|acoustic|fire|slip|underfloor|heating|adhesive|moisture|tolerances?|wet area|commercial.rat/i.test(message))return {...fallback('safety',corpus),segments:[{text:'I cannot approve site-specific suitability or certify performance here. The team needs the exact product and project requirements before advising on the next steps.',evidenceIds:[]}]};
- if(/waterproof/i.test(message))return {...fallback('safety',corpus),segments:[{text:'Waterproof claims need verification for the exact product. I cannot apply that claim to all hybrid flooring or approve an unseen installation. Which product are you considering?',evidenceIds:[]}]};
+ if(/bathroom|scratch.proof|pet.proof|certif|acoustic|fire|slip|underfloor|heating|adhesive|moisture|tolerances?|wet area|commercial.rat/i.test(message))return {...fallback('safety',corpus),segments:[{text:'I cannot approve site-specific suitability or certify performance here. The team needs the exact product and project requirements before advising on the next steps. Ask about the relevant product documentation and whether a qualified site assessment is needed; this chat cannot issue a certificate.',evidenceIds:[]}]};
+ if(/waterproof/i.test(message))return {...fallback('safety',corpus),segments:[{text:'Waterproof claims need verification for the exact product. I cannot apply that claim to all hybrid flooring or approve an unseen installation. Product documentation and a qualified site assessment may be needed to check the proposed installation. Which product are you considering?',evidenceIds:[]}]};
  if(/strata/i.test(message))return {...fallback('safety',corpus),segments:[{text:'Ask your strata manager to confirm the requirements for your proposed flooring before choosing a product. The team can review your requirements; this chat cannot certify compliance.',evidenceIds:[]}]};
  const restricted=restrictedRangeAnswer(message,corpus,options);if(restricted)return restricted;
  const retired=retiredCatalogueMatch(corpus,message);

@@ -6,6 +6,10 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { execFileSync } from "node:child_process";
 import { applyEditorial } from './editorial-gallery.mjs';
+import { applyEnquiryAttachments } from './enquiry-attachments.mjs';
+import { applyReliabilityDisclosures } from './reliability-disclosures.mjs';
+import { applyProjectPhotoFilters } from './project-photo-filters.mjs';
+import { applyLegacyGuideImages } from './legacy-guide-images.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 execFileSync(process.execPath, [path.join(root, 'scripts/october-catalogue-repair.mjs')], {cwd:root, stdio:'inherit'});
@@ -15,7 +19,11 @@ execFileSync(process.execPath, [path.join(root, 'scripts/artisan-oak-retirement.
 execFileSync(process.execPath, [path.join(root, 'scripts/aspect-correction.mjs')], {cwd:root, stdio:'inherit'});
 execFileSync(process.execPath, [path.join(root, 'scripts/demarque-consolidation.mjs')], {cwd:root, stdio:'inherit'});
 const publishRoot = path.join(root, "dist");
+applyEnquiryAttachments();
 applyEditorial();
+applyReliabilityDisclosures();
+applyProjectPhotoFilters();
+applyLegacyGuideImages();
 const checkOnly = process.argv.includes("--check");
 const context = String(process.env.CONTEXT || "dev").trim().toLowerCase();
 const indexingEnabled = /^true$/i.test(String(process.env.OZ_PRODUCTION_INDEXING_ENABLED || "").trim());

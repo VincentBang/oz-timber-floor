@@ -77,12 +77,12 @@ export function retrieve(index,message,{pagePath='/',entityId}={}){
   if(scope.length){const groups=scope.map(([, ,owner])=>facts.filter(f=>f.canonicalPath===owner).slice(0,2));facts=[0,1].flatMap(i=>groups.map(g=>g[i]).filter(Boolean));}
  }
  // Prefer the requested attribute instead of unrelated identity/FAQ blocks.
- const requestedFields=[[/\b(?:thickness|thick)\b/,'thickness'],[/\b(?:colour|color)\b/,'colour'],[/\b(?:board size|plank size|dimensions|width|length)\b/,'boardSize'],[/\bfinish\b/,'finish'],[/\bcategory\b/,'category']].filter(([pattern])=>pattern.test(q)).map(([,field])=>field);
+ const requestedFields=[[/\b(?:thickness|thick)\b/,'thickness'],[/\b(?:colour|color)\b/,'colour'],[/\b(?:board sizes?|plank sizes?|dimensions?|width|length)\b/,'boardSize'],[/\bfinish\b/,'finish'],[/\bcategory\b/,'category']].filter(([pattern])=>pattern.test(q)).map(([,field])=>field);
  if(specific.length&&requestedFields.length)facts=facts.filter(f=>f.field==='identity'||requestedFields.includes(f.field));
  if(specific.length>1){const groups=specific.map(d=>facts.filter(f=>f.entityId===d.entityId));facts=Array.from({length:Math.max(...groups.map(g=>g.length))},(_,i)=>groups.map(g=>g[i]).filter(Boolean)).flat();}
  const bounded=[],seen=new Set();for(const f of facts){const key=normalise(f.question?f.value.slice(f.question.length):f.value),ownerKey=(scope.length||specific.length>1?f.canonicalPath+':':'')+key;if(seen.has(ownerKey))continue;if(Buffer.byteLength(JSON.stringify([...bounded,f]),'utf8')>6000)continue;seen.add(ownerKey);bounded.push(f);if(bounded.length>=(specific.length?32:scope.length?scope.length*2:8))break;}
  const missingFields=specific.flatMap(d=>requestedFields.filter(field=>!bounded.some(f=>f.entityId===d.entityId&&f.field===field)).map(field=>({title:d.title,field})));
- return {status:bounded.length?'answered':'clarify',reason:bounded.length?'evidence_found':'low_evidence',documents,facts:bounded,exactEntities:specific.map(d=>d.entityId),comparisonOwners:scope.map(([, ,owner])=>owner),missingFields,queryHash:hash(q)};
+ return {status:bounded.length?'answered':'clarify',reason:bounded.length?'evidence_found':'low_evidence',documents,facts:bounded,exactEntities:specific.map(d=>d.entityId),comparisonOwners:scope.map(([, ,owner])=>owner),requestedFields,missingFields,queryHash:hash(q)};
 }
 // Explicit extension point, not an enabled embedding provider.
 export class SemanticRetrievalAdapter { async search(){throw Error('semantic_provider_not_approved');} }

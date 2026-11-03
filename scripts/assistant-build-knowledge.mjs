@@ -30,6 +30,8 @@ const fieldLabels={category:['Category'],range:['Range'],colour:['Colour','Color
 const routes=[...read('sitemap.xml').matchAll(/<loc>([^<]+)<\/loc>/g)].map(m=>new URL(m[1]).pathname).sort();
 const groups=new Map();for(const record of catalogue.products){const route=record.url||record.slug;if(routes.includes(route)){if(!groups.has(route))groups.set(route,[]);groups.get(route).push(record);}}
 const sourceFiles=new Map([['sitemap.xml',hash(read('sitemap.xml'))],['_redirects',hash(read('_redirects'))],['data/product-catalogue.json',hash(read('data/product-catalogue.json'))],['data/catalogue-quality-overrides.json',hash(read('data/catalogue-quality-overrides.json'))],['data/seo-keyword-ownership.json',hash(read('data/seo-keyword-ownership.json'))],['assistant/config/policy.json',hash(read('assistant/config/policy.json'))]]);
+// Bind extraction exclusions as evidence too; never refresh just a page digest.
+sourceFiles.set('assistant/lib/source-policy.mjs',hash(read('assistant/lib/source-policy.mjs')));
 const preservedSpecSource='docs/migration-october-2026-followup/supplier/product-specifications.json';
 if(hash(read(preservedSpecSource))!=='e49283aadf30f55057043edc8203b4dc583f8e5a570f5cc46685aa0cbf21afa4')throw Error('Preserved specification evidence changed');
 sourceFiles.set(preservedSpecSource,hash(read(preservedSpecSource)));

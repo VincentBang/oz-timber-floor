@@ -1,0 +1,14 @@
+.enquiry-uploads{min-width:0;margin:4px 0 12px;padding:20px;border:1px solid #cecac1;background:#f5f3ee}
+.enquiry-uploads legend{font-weight:600;padding:0 8px;font-size:1.05rem}
+.enquiry-uploads p{font-size:.9rem;line-height:1.5;overflow-wrap:anywhere}
+.enquiry-upload{padding:16px 0;border-top:1px solid #d5d1c8}
+.enquiry-upload label{display:block;font-weight:600;margin-bottom:8px}
+.enquiry-upload input[type=file]{max-width:100%;min-width:0;width:100%;font:inherit;font-size:.9rem;padding:8px;background:#fff}
+.enquiry-upload input::file-selector-button{min-height:44px;margin-right:8px;border:1px solid #b9b5ab;padding:8px 12px;background:#fff;color:#222;font:inherit}
+.upload-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.upload-actions button{min-height:44px;padding:8px 12px;border:1px solid #b9b5ab;background:#fff;color:#222;font:inherit}
+.upload-actions button[hidden]{display:none}
+.enquiry-upload [data-upload-status]{display:block;margin:8px 0;overflow-wrap:anywhere;font-size:.875rem}
+.enquiry-uploads :focus-visible{outline:3px solid #242822;outline-offset:3px}
+.enquiry-uploads [data-upload-total]{margin-bottom:0;font-weight:600}
+@media(max-width:400px){.enquiry-uploads{padding:14px}.enquiry-upload input::file-selector-button{display:block;margin:0 0 8px}}

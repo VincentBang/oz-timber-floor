@@ -33,7 +33,7 @@ function page({ pathname = "/contact/", search = "", storage = new Map(), at = n
     // The separate loader contract tests initialization. This collector is inert.
     OZ_TIMBER_FLOOR_GA4_READY: true,
     location: { pathname, search, href: `${origin}${pathname}${search}`, origin, assign() {} },
-    FormData: class extends Array { constructor() { super(); } },
+    FormData: class extends FormData { constructor() { super(); } },
     fetch: async () => ({ok: accepted, url: `${origin}/thank-you/`}),
     sessionStorage: {
       getItem(key) { return storage.get(key) ?? null; },
@@ -49,7 +49,7 @@ function page({ pathname = "/contact/", search = "", storage = new Map(), at = n
   vm.runInNewContext(source, { document, window, URLSearchParams, URL, Date: class extends Date { static now() { return at; } } });
   assert.equal(typeof ready, "function");
   ready();
-  return { events, storage, select, submit: async () => { listeners.get("submit")({preventDefault() {}}); await Promise.resolve(); await Promise.resolve(); } };
+  return { events, storage, select, submit: async () => { listeners.get("submit")({preventDefault() {}}); await new Promise(resolve => setImmediate(resolve)); } };
 }
 
 const contact = page({ search: "?enquiry=stock&category=Engineered+timber&product=Private+product+notes&range=Private+range+notes&utm_source=private-campaign&gclid=private-id" });
