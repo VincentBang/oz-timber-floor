@@ -1,0 +1,73 @@
+{
+  "at": "2026-11-03T09:50:43.792Z",
+  "status": "RELEASED_AND_LIVE_SMOKE_VERIFIED",
+  "url": "https://oztimberfloor.com.au/",
+  "releaseCommit": "8730788666f1e6d5199bbc91b3a38d09f05b4cca",
+  "deployId": "6ae9ac0681e62577b8c282e9",
+  "deployments": 1,
+  "githubBranches": [
+    "dev",
+    "main"
+  ],
+  "profileSha256": "aea81d6c51b9760592830e453bd1dab94705a6034b563a0d7b6e08d64cc70579",
+  "corpusVersion": "9ba163647b5dd90fd9d22536757d759029ce7ca2a7d3481baf14ed00993fa1aa",
+  "publicationCanonicals": 773,
+  "sitemapUrls": 773,
+  "publicFiles": 6333,
+  "allProviderFileDigestsMatch": true,
+  "functions": [
+    {
+      "name": "flooring-assistant",
+      "sha256": "f3daa407ca104284b702fa6156aa32f2c697bcd2a8cc458539bcee54695c76d3",
+      "runtime": "nodejs24.x"
+    },
+    {
+      "name": "resend-enquiry-notification",
+      "sha256": "553a49f26fc7bb5fbf8c0961857f885e0636391c656a1392e5ba90dac260505e",
+      "runtime": "nodejs22.x"
+    }
+  ],
+  "limits": {
+    "monthlyUsd": 30,
+    "dailyUsd": 1,
+    "store": "oz-assistant-production-budget-v1",
+    "ledgerReset": false
+  },
+  "validation": {
+    "assistantTests": 154,
+    "websiteUploadRegressionTests": 217,
+    "currentSourceTests": 3,
+    "exactProductionBindingTests": 4,
+    "offlineAnswerCases": 120,
+    "migration": "GO, zero blockers",
+    "gscHardening": "PASS: 130 preserved GSC decisions, 60 reviewed redirects, 12 keyword owners",
+    "analytics": "PASS",
+    "notificationContract": "PASS",
+    "imageDimensions": "PASS",
+    "gitDiffCheck": "PASS",
+    "publicSmokeChecks": 25,
+    "productionSession": "PASS, current corpus, explicit consent, zero generation",
+    "mobileWidths": [
+      390,
+      320
+    ],
+    "browserConsoleErrors": 0
+  },
+  "paidCallsThisRelease": 0,
+  "newFormSubmissionsThisRelease": 0,
+  "notificationDeliveryScope": "Two earlier protected synthetic enquiries and one approved replay confirmed by owner; no production submission repeated",
+  "rollback": {
+    "deployId": "6ae2e3a8f5b6fa989c6bec6a",
+    "profileSha256": "cc3daf43a787f8489b7be437f5186e10905efbcf46bcae2398cef0164e0edb44",
+    "preserveLedger": true
+  },
+  "remainingEvidence": [
+    "28 exact product images",
+    "Swish specifications",
+    "Artisan Tile test reports",
+    "grouped supplier clarifications",
+    "whole-site/physical-device/screen-reader signoff remains separate"
+  ],
+  "uploadCaution": "Returned synthetic attachment links were accessible without login; no authenticated-file-access claim",
+  "historicalGateScope": "Dated single-change tests and historical SEO baselines preserved, not reset to this cumulative state; current exact-source/SEO/package gates run separately"
+}
