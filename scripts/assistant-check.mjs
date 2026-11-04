@@ -5,6 +5,7 @@ import zlib from 'node:zlib';
 import {hash} from '../assistant/lib/security.mjs';
 import {routing} from './october-route-fixture.mjs';
 import {reviewedOakBeigeRetirement,OAK_BEIGE_ROUTE} from '../assistant/lib/legacy-retirement.mjs';
+import {checkSourceHistory} from './assistant-source-history.mjs';
 const root=process.cwd(),corpus=JSON.parse(fs.readFileSync('assistant/generated/corpus.json')),manifest=JSON.parse(fs.readFileSync(fs.existsSync('assistant/generated/source-manifest.json')?'assistant/generated/source-manifest.json':'docs/flooring-assistant/SOURCE_MANIFEST.json')),router=routing(root);
 assert.equal(hash(corpus.documents),corpus.corpusVersion);
 assert.equal(corpus.candidateHash,manifest.candidateHash);
@@ -28,7 +29,7 @@ for(const d of corpus.documents)for(const f of d.facts.filter(f=>f.field==='form
 for(const d of corpus.documents){assert.equal(router.resolve(d.canonicalPath).status,200);assert.equal(router.resolve(d.canonicalPath).hops,0);assert.equal(d.expectedStatus,200);assert(d.facts.every(f=>fields.includes(f.field)));for(const f of d.facts)if(f.section)assert(fs.readFileSync(router.resolve(d.canonicalPath).file,'utf8').includes('id="'+f.section+'"'));}
 const raw=fs.readFileSync('assistant/generated/corpus.json','utf8');assert(!/supplierSourceUrl|supplierId|sourceTag|wholesale|supabase|operon|\.codex|\/Users\/|\.env|sk-[a-zA-Z0-9]{16}/i.test(raw));
 const entryFile='docs/flooring-assistant/ENTRY_STATE.json';
-if(fs.existsSync(entryFile)){const entry=JSON.parse(fs.readFileSync(entryFile));for(const [file,before]of Object.entries(entry.hashes)){if(['OZ_STATUS.md','.gitignore'].includes(file))continue;let bytes=fs.readFileSync(file);if(file==='assets/site.js')bytes=Buffer.from(bytes.toString().replace(/  \/\/ Flooring assistant bridge: begin[\s\S]*?  \/\/ Flooring assistant bridge: end\n\n/,''));assert.equal(hash(bytes),before,'Inherited source changed outside assistant bridge: '+file);}}
+if(fs.existsSync(entryFile))checkSourceHistory({entryBytes:fs.readFileSync(entryFile),successorBytes:fs.readFileSync('config/assistant-source-successor-20261104.json'),read:file=>fs.readFileSync(file)});
 const sizes={};for(const name of ['config','loader','handoff','']){const file='assets/flooring-assistant'+(name?'-'+name:'')+'.js';sizes[file]={bytes:fs.statSync(file).size,gzip:zlib.gzipSync(fs.readFileSync(file)).length};assert(!fs.readFileSync(file,'utf8').includes('innerHTML'));}
 sizes['assets/flooring-assistant.css']={bytes:fs.statSync('assets/flooring-assistant.css').size,gzip:zlib.gzipSync(fs.readFileSync('assets/flooring-assistant.css')).length};
 const incrementalInitialGzip=sizes['assets/flooring-assistant-config.js'].gzip+sizes['assets/flooring-assistant-loader.js'].gzip+zlib.gzipSync(fs.readFileSync('assets/site.js','utf8').match(/  \/\/ Flooring assistant bridge: begin[\s\S]*?  \/\/ Flooring assistant bridge: end/)[0]).length;assert(incrementalInitialGzip<30000);

@@ -3,7 +3,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import assert from 'node:assert/strict';
 import crypto from 'node:crypto';
-import {addFloorPlan,checkFloorPlan} from './floor-plan-package.mjs';
+import {addFloorPlan,checkFloorPlan,removeFloorPlanDiscovery} from './floor-plan-package.mjs';
 
 export const digest = bytes => crypto.createHash('sha256').update(bytes).digest('hex');
 export function inventory(root, prefix='') {
@@ -54,7 +54,7 @@ export function assembleProductionCandidate({root,source,output,functions,manife
   checkFloorPlan(output+'/public',true);
   const files=inventory(output+'/public');
   const delta=Object.keys(files).filter(f=>files[f]!==before[f]);
-  assert(delta.every(f=>f.startsWith('floor-plan/')||['contact/index.html','contact.html','guides/index.html','guides.html'].includes(f)));
+  assert(delta.every(f=>f.startsWith('floor-plan/')||['contact/index.html','contact.html','guides/index.html','guides.html'].includes(f)||f.endsWith('.html')&&digest(removeFloorPlanDiscovery(fs.readFileSync(output+'/public/'+f,'utf8')))===before[f]),'Only exact additive discovery fragments may change other published HTML');
   assert(Object.keys(before).every(f=>files[f]),'No published files may be removed');
   const page=fs.readFileSync(output+'/public/floor-plan/index.html','utf8');
   assert(/name="robots" content="noindex, nofollow"/.test(page));

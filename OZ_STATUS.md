@@ -1,5 +1,151 @@
 # Oz Timber Floor Status
 
+## 4 November 2026 — connected floorplan interaction redesign, local only
+
+Replaced the scrolling stack with a connected desktop workspace: active steps
+and contextual controls on the left, fitted drawing on the right, full review
+below. Two scale points reveal/focus the length entry; narrow screens get a
+compact scale-action sheet. Applying scale returns mobile focus to the drawing,
+not the room-name keyboard. Deliberate Review moves focus to the review heading.
+Live feedback moved into the controls so wrapping messages cannot shift the
+drawing between precision taps. Original mobile area tolerance was retained;
+the detected 21.60m² drift was repaired to approximately 19.94m² on the 20m² fixture.
+
+55 existing/core stages pass. Final 12 targeted connected-flow/mobile/keyboard/
+automated-a11y stages pass across Chromium/Firefox/WebKit at five widths. The
+new pointer second-dimension check now compares exact independently calculated
+mapped-point geometry, with a derived CSS-pixel quantisation bound, rather than
+incorrectly assuming rounded screen taps always land on integer plan pixels.
+Original full logs/failures are retained; no single fresh 58-stage pass is claimed.
+Prior source/evidence, supplier tests, chatbot, consent, enquiry and budget guards
+preserved. No push/deploy/paid calls/provider changes/real submissions. Physical
+phones, spoken screen readers and updated hosted tool remain unverified.
+Local preview: `http://127.0.0.1:8900/floor-plan/`.
+Report: `/Users/daibang/Downloads/OZ_FLOORPLAN_CONNECTED_UX_LOCAL_2026-11-04/REPORT.txt`.
+
+## 4 November 2026 — floorplan final local release checks pass
+
+Fixed supplier-history QA scope: compare committed and uncommitted HTML against
+the unchanged `98624d3e` evidence anchor instead of only the dirty worktree.
+Existing >26 HTML and >=27 card minimums and all content/image assertions remain;
+new tests keep committed repairs in scope and reject historical deletions.
+71 historical HTML pages and 235 cards covering all 27 reviewed identities pass.
+Deliberate title corruption and wrong card imagery are independently rejected.
+
+Fresh full maintained run passes all 55 stages: website 236/236, assistant 162/162,
+all three browser flows/recovery/a11y/mobile suites, offline evaluation, migration,
+analytics, enquiry contracts and default/production/preview exclusion builds.
+Source preservation reports zero drift; prior sealed evidence remains unchanged.
+An exact isolated package preserves all 6,574 live public files except the approved
+three tool files and reversible navigation/homepage additions. Live chatbot and
+notification ZIPs/profile are byte-identical, preserving USD30/month and USD1/day.
+Its local browser journey passes Chromium/Firefox/WebKit without submissions.
+No push, deploy, paid call, real submission or provider operation. Hosted updated
+tool, physical devices and spoken screen readers remain unverified, not local
+passes. Report: `/Users/daibang/Downloads/OZ_FLOORPLAN_FINAL_LOCAL_RELEASE_2026-11-04/REPORT.txt`.
+
+## 4 November 2026 — professional floorplan upgrade, local only
+
+Adapted guided workflow and summary patterns from the owner-authorised read-only
+Operon reference at `Documents/operon-platform/products/flooring`. No Operon file,
+runtime integration, analytics, provider or backend was changed/copied into Oz.
+Added Oz editorial hero/pathways, progress steps, zoom/pan/fit controls, persistent
+desktop summary, room clearing and context-preserving direct review links. The
+local-enabled package adds Floor Plan navigation/footer links and a homepage
+entry; hosted/default gates remain unchanged. Measurement/privacy/enquiry
+contracts and inherited supplier/assistant changes are preserved.
+
+Full maintained QA: 51/52 stages pass; the sole failing stage contains two
+supplier-history assertions also reproduced on the pre-upgrade source (234/236
+website tests). All three browser measurement/contact/recovery/a11y/mobile suites,
+162 assistant tests, offline evaluations and package-exclusion checks pass.
+Final incremental build, 23 focused unit tests and maintained professional
+journeys pass in Chromium/Firefox/WebKit at 1440/1024/768/390/320px with no console
+errors, external requests or submissions. Source preservation passed.
+No push/deploy/paid call/provider change. Production and USD30 cap unchanged.
+Local preview: `http://127.0.0.1:8899/floor-plan/`.
+Evidence/report: `/Users/daibang/Downloads/OZ_FLOORPLAN_PROFESSIONAL_LOCAL_2026-11-04/`.
+Historical JPEG attribution and physical-device/spoken screen-reader limitations
+remain unchanged; this is not hosted or production release signoff.
+
+## 4 November 2026 — approved updated chatbot production release
+
+Owner explicitly approved one production deployment, with no push, paid tests or
+real form submissions. Published deploy `6aeaec4b5c6fcaa9e5b04c16` with corpus
+`733295f767b7dbb2893a0d0d89ea978c3bd1b718c7c1956fe1868666518cc77c`
+and activated profile `a87c40db17e2cd4cccfe2e89907be89f459b5d3e28686d117579a016d2a368dd`.
+Only assistant function and exact production fingerprint/control binding changed;
+USD30/month and USD1/day retained. All public files and notification ZIP preserved.
+One create request only; provider omitted false draft flag, so uploads resumed
+the recorded production deploy rather than creating another. Budget state was
+never reset; ordinary zero-cost session bookkeeping prunes expired day records.
+No GitHub push or real form submission. Release package and verification:
+`/Users/daibang/Downloads/OZ_CHATBOT_PRODUCTION_RELEASE_2026-11-04/`.
+Local default configuration remains disabled by design; future builds must use
+the exact recorded production profile rather than silently rebuilding defaults.
+
+## 4 November 2026 — updated chatbot local production binding/preflight pass
+
+Prepared exact pending binding for corpus `733295f767b7dbb2893a0d0d89ea978c3bd1b718c7c1956fe1868666518cc77c`;
+pending profile fingerprint `5af9636acd86b1faa13b5c44271543b2c9964d84c119ee1e21d90d46dba95fe5`.
+165 regressions, 120 offline cases, source check, standalone ZIP import,
+pending-activation refusal, simulated-policy validation and stale/corpus negative
+checks pass. All 6,574 public files and notification ZIP match live exactly.
+Historical production proof bytes preserved and verified; new hosted evidence
+is bound without claiming fresh production-key equivalence. USD30/month and
+USD1/day unchanged. Local profile activation/launch remain false; final release
+approval, activation fingerprint and deployment remain separate. No push, deploy,
+paid calls, real submissions, provider writes or ledger reset this run.
+Report: `/Users/daibang/Downloads/OZ_KNOWLEDGE_PRODUCTION_BINDING_2026-11-04/REPORT.txt`.
+
+## 4 November 2026 — corrected protected knowledge preview verified
+
+Owner approved one additional corrected draft; deployed `6aeae7354705637da4e2f457`
+to the same protected knowledge preview. Hosted existing-key/model authentication
+and strong CAS checks pass. Three real Luna answers pass for agency key handling,
+Swish specifications and insurance approval limitations. Usage-based total is
+USD0.0002848 (ledger rounded USD0.000284801), within USD0.05. Three-call allowance
+is exhausted. Elk Falls and upload guidance also pass as zero-generation checks.
+Anonymous access remains 401/noindex. Production pointer, environment/control,
+USD30 monthly cap, floorplan and forms unchanged. No push or real submissions.
+Original failed-preview evidence preserved; dated addendum and exact receipts:
+`/Users/daibang/Downloads/OZ_KNOWLEDGE_PREVIEW_2026-11-04/VERIFICATION_R2.txt`.
+Production binding/preflight and public activation remain separate release gates.
+
+## 4 November 2026 — one protected knowledge preview; hosted test blocked
+
+Owner approved one protected preview and up to three GPT responses within USD0.05.
+Created only deploy `6aeae4764ca96c07e0740440` at
+`https://knowledge-733295f7-20261104--oztimberfloor.netlify.app`.
+Anonymous website/API access returns 401/noindex; existing team login succeeds.
+The verification function fails on import because the ZIP archived a local
+node_modules symlink instead of the Netlify Blobs dependency. This is a packaging
+fault, not evidence of an invalid OpenAI key. Zero authentication/model requests,
+zero paid responses and zero real form submissions occurred. No push.
+
+Repaired both function ZIPs locally with materialized dependencies. Both load
+independently outside the checkout and reject production context; replacement is
+NOT deployed. All 165 assistant tests, 120 offline answers, exact source checks
+and five preview mock cases pass; a fourth paid attempt is blocked in local tests.
+Production deploy `6aeacd565b1124aa60b776dd`, environment hash, activation control,
+USD30 monthly / USD1 daily caps, live floorplan and notification function remain
+unchanged. The one-deployment authority is exhausted. Additional preview update
+requires owner approval; the entire three-response / USD0.05 allowance remains.
+Evidence: `/Users/daibang/Downloads/OZ_KNOWLEDGE_PREVIEW_2026-11-04/REPORT.txt`.
+
+## 4 November 2026 — local assistant knowledge successor; not activated
+
+Fixed four targeted answer gaps with 11 new regression tests; 165 tests, 120
+offline evaluation cases, eight quality cases and four compiled mock responses
+pass. Source-history gate recognises exact approved successors without changing
+the historical baseline. No existing tests or old approval hashes changed.
+Candidate corpus `733295f767b7dbb2893a0d0d89ea978c3bd1b718c7c1956fe1868666518cc77c`.
+Disabled proposed profile and evidence prepared outside the publish directory;
+hosted verification and production activation remain pending separate authority.
+No push/deploy/paid calls/submissions/provider changes. Live floorplan, forms and
+USD30 monthly / USD1 daily limits unchanged. See
+`docs/flooring-assistant/KNOWLEDGE_SUCCESSOR_2026-11-04.md`.
+
 ## 4 November 2026 — Git-only checkpoint of deployed source
 
 Owner authorised synchronising the already deployed pages, supplier improvements
@@ -1141,6 +1287,20 @@ Reviewed 12 specification/preparation/FAQ sections, 24 section-width states at 3
 Reviewed six specification/preparation/FAQ sections, 12 section-width states at 390×844 and 1440×1000. Individually inspected 14 expanded crops and four closed FAQ viewports. All 48 accepted-capture keyboard open/close steps and 72 hidden/open/closed assertions pass, with zero measured horizontal overflow and no captured console warnings/errors. No website repair required. Known category/count/thickness/dimensions/installation display values reconcile to existing local records; Foreign Species unknown dimensions remain omitted. Herringbone 5G Licensed Click System wording is inherited and matches the local record but licensing was not independently verified or certified. All 12 visible FAQ answers match schema. Fresh 89 regression and 154 assistant tests plus analytics/Resend/section checks pass. 138 internal hrefs, eight fragments and 22 local image candidates have no missing targets. Only this candidate status entry changed; all website, catalogue, knowledge, SEO, form, approval and spending-control bytes unchanged. No build or knowledge regeneration. Original checkout and 21 sealed packets preserved. No commit, push, deployment, paid call, live enquiry or provider change. Other page sections, whole-site manual signoff, physical-device/screen-reader and hosted attachment checks remain incomplete. Next: reconcile the accumulated section coverage ledger and identify the exact remaining manual sections, without converting scoped acceptance into whole-page acceptance. Evidence: /Users/daibang/Downloads/OZ_RELIABILITY_CHECKPOINT_22_2026-10-30/REPORT.md.
 # 4 November 2026 — Floorplan integration preserved with current supplier repairs (local HOLD)
 
+## 4 November 2026 — Redesigned floorplan published after final production checks
+
+Owner-authorised single production deploy `6aeb12866f07c1c5c8cb3327` serves `https://oztimberfloor.com.au/floor-plan/`. Final 32 focused tests and nine Chromium/Firefox/WebKit exact-package stages pass. Corrected test dependency/context without changing historical corpus/hash/count expectations; the initial historical-contract failures are retained as evidence. All 6,574 provider file digests match the sealed candidate. Three floorplan files plus exact approved discovery fragments are the only baseline differences. Live JPG/PNG recovery, 20m² consent/review/Apply handoff, existing three enquiry upload fields and mobile390 scale-sheet behaviour pass. A session-only chatbot check returned production mode/current corpus without model generation. Both function archives, environment variables, approval profile, durable control, USD30/month and USD1/day are unchanged; no ledger reset. No push, paid call or real submission. Form delivery is not claimed as retested. Physical devices/spoken screen reader and historical JPEG attribution remain separate limitations. Rollback deployment: `6aeaec4b5c6fcaa9e5b04c16`. Report: `/Users/daibang/Downloads/OZ_FLOORPLAN_REDESIGN_LIVE_RELEASE_2026-11-04/REPORT.txt`.
+
+## 4 November 2026 — Redesigned floorplan protected preview verified
+
+Owner-authorised single protected deployment `6aeb0d21f5c47054fa22f3be` is ready at `https://floorplan-cefecfd8a8b4--oztimberfloor.netlify.app/floor-plan/`. A DNS upload interruption was resumed on the same deployment record, not a second deploy. Team protection returns anonymous HTTP401; no functions, AI, GA4 or real submissions. Hosted PNG/RGB JPG/two-page PDF, damaged/CMYK rejection and valid replacement, desktop 20m² consent/review/Apply handoff, mobile 390px tracing/handoff and 320px scale sheet pass. Production remains `6aeaec4b5c6fcaa9e5b04c16`; profile and USD30/month controls unchanged. Hidden source values were browser-redacted; source-bearing URLs and visible context were verified, with local tests remaining the evidence for exact hidden assignment. Physical devices/spoken screen reader and original JPEG attribution remain separate. No push or production activation. Evidence: `/Users/daibang/Downloads/OZ_FLOORPLAN_REDESIGNED_PROTECTED_PREVIEW_2026-11-04/REPORT.txt`.
+
+## 4 November 2026 — Redesigned floorplan final local release checks complete
+
+Fresh single-run validation passed all 58 maintained stages in isolated source, including Chromium, Firefox and WebKit, 236 website tests, 162 assistant tests and 120 offline answer cases. The exact sealed 6,574-file public candidate passed six additional professional/connected browser stages across all three engines. Source preservation checked 8,355 files with no drift. Default/production/deploy-preview build exclusions passed. Three source-history tests passed against the authoritative source with unchanged expectations; a supplemental invocation against build-mutated historical files was diagnosed as the wrong fixture context, not waived or rebaselined. No additional runtime repair was required. Historical evidence and approval hashes remain unchanged.
+
+Evidence: `/Users/daibang/Downloads/OZ_FLOORPLAN_REDESIGN_FINAL_CHECKS_2026-11-04/REPORT.txt`, including 147 screenshots and the exact command ledger. Production deploy `6aeaec4b5c6fcaa9e5b04c16`, assistant profile and USD30/month, USD1/day controls remained unchanged by read-only verification. This establishes local readiness only: the redesigned hosted tool, physical devices and spoken screen-reader behaviour were not tested in this pass; the original intermittent JPEG cause remains unattributed. No staging, commit, push, deployment, paid call, provider write or real enquiry submission.
+
 ## 4 November 2026 — Later combined audience/floorplan reconciliation addendum
 
 ### Later bounded JPEG recovery follow-up — local only
@@ -1164,3 +1324,18 @@ Added the existing Oz-owned floorplan modules and exact local-only packaging hoo
 Validated this combined source in isolated copies: default, deploy-preview, protected-production and indexable-production packages match the no-floorplan reference byte-for-byte. The enabled local package adds the floorplan assets and only the two Guides/two contact entries. Fresh local browser tests exercise the current contact form without any real submissions. The main checkout's four historical failures have a separate evidence-backed reconciliation; their historical files are preserved.
 
 Complete signoff remains HOLD: the prior intermittent JPEG pixel failure could not be reproduced or attributed, Firefox/WebKit binaries are unavailable, physical devices/screen-reader speech were not tested. The inherited October cutover FAQ-markup failure was also reconciled using exact visible question/answer/schema verification and negative tests; it now passes. No public activation is implied. Evidence and incremental patches: `/Users/daibang/.codex/visualizations/2026/07/29/019fae90-38ad-7d40-8548-22d86f1a9fc7/floorplan-sprint-20261104/index.html`; fresh full snapshots: `/private/tmp/oz-floorplan-sprint-JAyhjW/main-before` and `release-before`. No commit, push, deployment, paid calls, form submissions, DNS or provider changes.
+## 5 November 2026 — combined source approval reconciled; one release prepared
+
+Owner authorised reconciliation, exact-package checks, GitHub sync and one
+Netlify release. Preserved both inherited checkouts and all original approval
+records. Added an exact presentation successor after protected SEO/schema/form,
+href and content review; negative tamper checks still fail closed. Corrected
+old fixture targeting without removing expectations. Source-port packaging now
+retains the literal approved template, with accessible PDF-page placement and
+expanded keyboard-control reflow repairs. Fresh source and exact-package browser
+evidence is in the external combined-release-evidence-20261105 packet. The
+activated live chatbot and notification archives/profile are preserved; rebuilt
+source knowledge is not published. USD30/month and USD1/day unchanged. No paid
+calls, real submissions, DNS changes or provider-setting changes. See
+docs/floor-plan/COMBINED_RELEASE_2026-11-05.md and the external final report for
+actual push/deployment outcomes; this source note alone is not proof of release.

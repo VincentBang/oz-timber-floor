@@ -10,62 +10,478 @@
   <link rel="icon" href="/assets/brand/favicon-32.png" sizes="32x32" type="image/png">
   <title>Floor plan area tool | Oz Timber Floor</title>
   <meta name="description" content="Estimate floor area by setting a scale on your own plan and tracing the rooms you want to include in an Oz Timber Floor enquiry.">
-  <link rel="stylesheet" href="./tool.css">
-  <script type="module" src="./tool.mjs"></script>
-</head>
-<body>
-<a class="skip" href="#main">Skip to measurement tool</a>
-<header><div class="wrap"><a class="wordmark" href="/">Oz Timber Floor</a><a href="/contact/">Contact the team</a></div></header>
-<main id="main" class="wrap">
-  <section class="intro"><p class="eyebrow">Project planning</p><h1>Measure your floor plan</h1>
-    <p>Open a drawing, set its scale and trace the rooms you want to include. Your measurements give our team a starting point for a flooring enquiry.</p>
-    <p class="note">Your plan stays in this browser tab. Only an area estimate and room count can be shared with your enquiry. Check site measurements before ordering flooring.</p>
-  </section>
-  <noscript>Turn on JavaScript to use the measuring tool, or <a href="/contact/">send an enquiry with your approximate area</a>.</noscript>
-  <section class="card"><h2>1. Open a plan</h2><p>Choose a JPG, PNG or PDF with a clearly labelled distance. Check the displayed drawing against the original before tracing. Work on one page at a time. Files can be up to 20 MiB and PDFs up to 30 pages.</p>
-    <p id="tool-readiness" role="status">Preparing the measuring tool. If it does not become ready, <a href="/contact/">continue with an enquiry</a>.</p>
-    <div class="controls"><label>Plan file <input id="plan-file" type="file" disabled aria-describedby="tool-readiness" accept="image/jpeg,image/png,application/pdf,.jpg,.jpeg,.png,.pdf"></label>
-    <label id="page-controls" hidden>PDF page <select id="page-number"></select></label></div>
-  </section>
-  <div id="workspace" hidden>
-    <section class="card"><h2>2. Set the scale</h2>
-      <p>Mark the two ends of a known dimension on the drawing. Use a long, clearly labelled dimension on the same part of the sheet as your rooms. A photo taken at an angle or a detail drawn at a different scale can give a wrong area.</p>
-      <div class="controls"><label>Known distance <input id="known-distance" type="number" min="0.001" step="any" inputmode="decimal"></label>
-        <label>Unit <select id="distance-unit"><option value="m">Metres</option><option value="cm">Centimetres</option><option value="mm">Millimetres</option></select></label>
-        <button id="apply-scale" type="button">Set scale</button><button id="change-scale" type="button" hidden>Recalibrate</button></div>
-      <p id="scale-info"></p>
-      <div id="scale-check-controls" hidden><p>Check a second labelled dimension, ideally at right angles to the first. If the measured length disagrees with the drawing, check your scale or use a flat, undistorted plan.</p>
-        <button id="check-scale" type="button">Measure a second dimension</button>
-        <button id="stop-check" type="button" hidden>Return to room tracing</button>
-        <p id="check-result"></p>
+  <link rel="stylesheet" href="./operon-base.css"><link rel="stylesheet" href="./operon-page.css"><link rel="stylesheet" href="./port-inline-layout.css"><link rel="stylesheet" href="./port-accessibility.css">
+  <script type="module" src="./operon-runtime.mjs"></script>
+</head><body><a class="port-skip" href="#measurementTool">Skip to measurement tool</a><header class="site-header">
+    <div class="shell nav">
+      <a class="brand" href="/" aria-label="Oz Timber Floor home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>Oz Timber Floor</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="/">Home</a>
+        <a data-quote-return-link href="/contact/?enquiry=supply-install&amp;source=floor-plan">Quote</a>
+        <a href="/products/">Flooring Products</a>
+        <a href="/floor-plan/">Floor Plan</a>
+        <a href="/guides/">Guides</a>
+      </nav>
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="header-actions">
+        <a class="header-phone" href="/contact/" data-track-cta="header_contact_click">Contact</a>
+        <a class="button header-quote-button" data-quote-return-link href="/contact/?enquiry=supply-install&amp;source=floor-plan">Request Quote</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+    <section class="hero" id="floorplanHero">
+      <div class="shell hero-grid">
+        <article class="hero-card">
+          <span class="eyebrow">Floor Plan Measurement Assistant</span>
+          <div class="hero-content-row">
+            <div class="hero-copy-block">
+              <h1>Measure your flooring area from a floor plan.</h1>
+              <p>Upload a floor plan, trace the rooms and send a starting area into your quote.</p>
+              <div class="hero-actions oz-source-style-0">
+                <a class="button" href="#measurementTool">Start measuring</a>
+                <a class="button-secondary" data-quote-return-link href="/contact/?enquiry=supply-install&amp;source=floor-plan">Ask for plan review</a>
+              </div>
+              <p class="helper oz-source-style-1">Starting area only. Product and final scope are confirmed before booking.</p>
+            </div>
+
+            <aside class="hero-mini-panel" aria-label="Measurement summary">
+              <strong>Upload, scale, trace, review, quote</strong>
+              <ul class="hero-mini-steps">
+                <li><span>1</span> Upload the floor plan</li>
+                <li><span>2</span> Set scale from a known wall</li>
+                <li><span>3</span> Trace flooring rooms</li>
+                <li><span>4</span> Review selected area</li>
+                <li><span>5</span> Use area in quote</li>
+              </ul>
+            </aside>
+          </div>
+        </article>
       </div>
     </section>
-    <section class="card"><h2>3. Trace rooms</h2>
-      <p id="trace-help">Tap or click each corner in order. The tool closes the last edge for you. Rooms may share a wall.</p>
-      <div id="stage"><div id="raster"></div><svg id="overlay" role="img" aria-label="Floor plan with calibration marks and room outlines"></svg></div>
-      <details id="coords"><summary>Enter points using the keyboard</summary>
-        <p id="bounds"></p>
-        <div class="controls"><label>X position <input id="point-x" type="number" min="0" step="any" inputmode="decimal"></label>
-          <label>Y position <input id="point-y" type="number" min="0" step="any" inputmode="decimal"></label>
-          <button id="add-point" type="button">Add point</button></div>
-      </details>
-      <p id="point-count"></p>
-      <div class="controls"><label>Room name (optional) <input id="room-name" type="text" maxlength="48" autocomplete="off" placeholder="e.g. Living room"></label>
-        <button id="undo-point" type="button">Undo point</button>
-        <button id="clear-points" type="button">Clear points</button>
-        <button id="finish-room" type="button">Save room</button>
-        <button id="cancel-edit" type="button" hidden>Cancel edit</button></div>
+
+    <section class="section oz-source-style-2" id="floorplanEntrySection">
+      <div class="shell">
+        <article class="section-card">
+          <span class="eyebrow">Choose measurement path</span>
+          <h2 class="oz-source-style-3">Not sure your flooring area?</h2>
+          <p>Use the floor plan yourself if you want a measured starting area, or start a quote with area uncertainty if you would rather have the plan reviewed during follow-up.</p>
+          <div class="link-grid oz-source-style-4">
+            <a class="link-card" href="#measurementTool" data-track-cta="floorplan_self_measure_click">
+              <strong>I want to measure it myself</strong>
+              <span>Upload, set scale, trace rooms and send the measured area into the quote.</span>
+            </a>
+            <a class="link-card" data-quote-return-link href="/contact/?enquiry=supply-install&amp;source=floor-plan" data-track-cta="floorplan_review_request_click">
+              <strong>I want Oz Timber Floor to review the plan</strong>
+              <span>Start the quote with area uncertainty and note that a floor plan needs review.</span>
+            </a>
+            <a class="link-card" href="/guides/" data-track-cta="floorplan_measurement_guide_click">
+              <strong>Read the measurement guide</strong>
+              <span>Understand what to include before tracing or sending an area into the quote.</span>
+            </a>
+          </div>
+        </article>
+      </div>
     </section>
-    <section class="card"><h2>4. Review your estimate</h2><p>Tick the rooms to include. The total covers traced floor area before any allowance for cutting, waste or stairs.</p>
-      <ul id="room-list" aria-label="Traced rooms"></ul>
-      <p id="empty-rooms">Saved rooms will appear here.</p>
-      <div class="total"><span>Included floor area</span><strong><output id="area-output">0.00</output> m²</strong><span id="room-count">0 rooms</span></div>
-      <label class="consent"><input type="checkbox" id="share-consent"> I want to carry this estimated area and included room count to the enquiry form.</label>
-      <button class="primary" type="button" id="handoff">Continue to enquiry</button>
-      <p>Leaving or refreshing this page clears the drawing and measurements.</p>
+
+    <section id="floorplanGuideSection" class="oz-source-style-5">
+      <div class="shell">
+        <article class="section-card">
+          <span class="eyebrow">How To Use It</span>
+          <h2 class="oz-source-style-3">How the measurement tool works</h2>
+          <div class="step-grid">
+            <div class="step-card">
+              <strong>1. Upload floor plan</strong>
+              <span>Use a PDF, JPG or PNG.</span>
+            </div>
+            <div class="step-card">
+              <strong>2. Set scale</strong>
+              <span>Click two points on a known wall, then enter the real distance.</span>
+            </div>
+            <div class="step-card">
+              <strong>3. Trace room</strong>
+              <span>Trace the flooring rooms and close each shape near the start point.</span>
+            </div>
+            <div class="step-card">
+              <strong>4. Use area in quote</strong>
+              <span>Send measured area into the quote. Product and final scope are confirmed separately.</span>
+            </div>
+          </div>
+        </article>
+      </div>
     </section>
-  </div>
-  <p id="status" role="status" aria-live="polite" aria-atomic="true">Choose a plan to begin.</p>
-  <footer><a href="/contact/">Prefer to ask us directly? Contact Oz Timber Floor.</a></footer>
-</main>
-</body></html>
+
+    <section class="section oz-source-style-2" id="floorplanTrustSection">
+      <div class="shell">
+        <article class="section-card">
+          <span class="eyebrow">Scope clarity</span>
+          <h2 class="oz-source-style-3">Clear scope before the job is booked</h2>
+          <p>Floor plan area is one part of a flooring quote. Product, removal, disposal, trims and stairs are reviewed before final confirmation.</p>
+          <div class="trust-card-grid oz-source-style-4">
+            <article class="trust-card">
+              <h3>Area checked</h3>
+              <p>Use the plan to create a starting area, then keep final measurement open for review.</p>
+            </article>
+            <article class="trust-card">
+              <h3>Rooms included clearly</h3>
+              <p>Only trace rooms receiving flooring so the quote does not include the wrong spaces.</p>
+            </article>
+            <article class="trust-card">
+              <h3>Site scope still reviewed</h3>
+              <p>Removal, floor preparation, stairs and trims are confirmed separately.</p>
+            </article>
+            <article class="trust-card">
+              <h3>Quote handoff ready</h3>
+              <p>Measured area can be carried into the quote without changing product or pricing logic.</p>
+            </article>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="tool-section" id="measurementTool">
+      <div class="shell layout">
+        <article class="section-card workspace-card">
+          <div class="tool-header">
+            <span class="eyebrow">Measurement Tool</span>
+            <h2>Upload, set scale and trace rooms</h2>
+            <p>Trace Room Mode measures real flooring area from your plan. Product and installation scope are reviewed separately.</p>
+          </div>
+
+          <div class="status hidden oz-source-style-6" id="resumeMeasurementBanner">
+            <strong class="oz-source-style-7">Previous floor plan measurement found.</strong>
+            <span>Resume your measured rooms. For privacy, choose the same plan file again to reconnect its measured rooms.</span>
+            <div class="action-row oz-source-style-1">
+              <button class="button-secondary" id="resumeMeasurementButton" type="button">Resume measurement</button>
+              <button class="button-quiet" id="startNewMeasurementButton" type="button">Start new</button>
+            </div>
+          </div>
+
+          <div class="workspace-main">
+            <div class="tool-panel-shell">
+              <div class="tool-subsection">
+                <div class="tool-subsection-header">
+                    <h3 class="tool-subsection-title">1. Upload floor plan</h3>
+                    <p class="helper oz-source-style-8">Use a PDF, JPG or PNG. A plan with room walls and one known dimension gives the best result.</p>
+                </div>
+                <div class="field upload-field oz-source-style-9">
+                  <label for="planUpload">Choose plan file</label>
+                  <input id="planUpload" disabled type="file" accept="image/*,.pdf,application/pdf">
+                </div>
+                <div class="status" id="uploadStatus">Upload a PDF, JPG or PNG floor plan to start measuring.</div>
+                <div class="tool-button-row compact hidden" id="planFileActions">
+                  <button class="button-danger" id="clearPlanButton" type="button">Clear floor plan</button>
+                </div>
+              </div>
+
+              <div class="mode-row quick-room-hidden" aria-hidden="true">
+                <button class="mode-chip active" type="button" data-mode="trace">
+                  <strong>Trace Room Mode</strong>
+                  <span>Trace rooms receiving flooring.</span>
+                </button>
+                <button class="mode-chip" type="button" data-mode="quick">
+                  <strong>Quick Room Mode</strong>
+                  <span>Click inside a room and review the suggested outline.</span>
+                </button>
+              </div>
+
+              <div class="mode-panel active hidden" id="tracePanel">
+                <div class="tool-subsection">
+                  <div class="tool-subsection-header">
+                    <h3 class="tool-subsection-title">2. Set scale and trace</h3>
+                    <p class="helper oz-source-style-8">Use the longest labelled wall dimension available for best results.</p>
+                  </div>
+                  <div class="tool-button-row compact">
+                    <button class="button-secondary" id="setScaleButton" type="button">Step 1. Set scale</button>
+                    <button class="button-secondary" id="resetScaleButton" type="button">Reset scale</button>
+                    <button class="button-quiet" id="verifyScaleButton" type="button">Verify scale with another wall</button>
+                  </div>
+
+                  <div class="summary-box oz-source-style-10" id="scaleDetailsPanel">
+                    <strong>Scale status: <span id="scaleStatusLabel">Not set</span></strong>
+                    <div class="scale-detail-grid oz-source-style-11">
+                      <div><span>Known distance</span><strong id="scaleKnownDistance">-</strong></div>
+                      <div><span>Pixel distance</span><strong id="scalePixelDistance">-</strong></div>
+                      <div><span>Pixels per metre</span><strong id="scalePixelsPerMetre">-</strong></div>
+                      <div><span>Metres per pixel</span><strong id="scaleMetresPerPixel">-</strong></div>
+                    </div>
+                    <p class="helper oz-source-style-12" id="scaleQualityMessage">Set scale before tracing rooms.</p>
+                  </div>
+
+                  <div class="tool-button-row oz-source-style-13">
+                    <button class="button-secondary" id="startTraceButton" type="button">Step 2. Trace room</button>
+                    <button class="button-quiet" id="undoTracePointButton" type="button">Undo point</button>
+                    <button class="button-quiet" id="clearTraceButton" type="button">Clear trace</button>
+                    <button class="button-secondary" id="finishTraceButton" type="button">Finish room</button>
+                  </div>
+
+                  <div class="summary-box oz-source-style-10">
+                    <strong>Trace rooms</strong>
+                    <p class="helper oz-source-style-14">Click each corner of the flooring area. Close the room by clicking near the first point, or use Finish room.</p>
+                    <div class="trace-detail-grid">
+                      <div><span>Current points</span><strong id="tracePointCount">0</strong></div>
+                      <div><span>Shape status</span><strong id="traceShapeStatus">Open</strong></div>
+                    </div>
+                    <p class="trace-warning oz-source-style-12" id="traceValidationMessage"></p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mode-panel quick-room-hidden" id="quickPanel" aria-hidden="true">
+                <div class="tool-subsection">
+                  <div class="tool-subsection-header">
+                    <h3 class="tool-subsection-title">2. Quick Room Mode</h3>
+                    <p class="helper oz-source-style-8">Click inside a room and Oz Timber Floor will suggest the likely flooring area. Review the outline before adding it to your measured area.</p>
+                  </div>
+                  <div class="status">
+                    Suggested areas are a starting point only. Accepted totals use the reviewed outline; check its boundaries before sharing an area estimate.
+                  </div>
+                  <div class="action-row">
+                    <button class="button" id="suggestAllAreasButton" type="button">Suggest areas</button>
+                    <button class="button-secondary" id="prepareQuickModeButton" type="button">Prepare Quick Room Mode</button>
+                    <button class="button-secondary" id="quickModeInfoButton" type="button">Use Manual Trace</button>
+                  </div>
+                  <p class="helper oz-source-style-12">Review suggested areas before using them in your quote.</p>
+                </div>
+
+                <div class="quick-status-grid" aria-live="polite">
+                  <div class="quick-status-card">
+                    <strong>Uploaded plan</strong>
+                    <span id="quickImageLoadedLabel">No</span>
+                  </div>
+                  <div class="quick-status-card">
+                    <strong>Scale set</strong>
+                    <span id="quickScaleStatusLabel">No</span>
+                  </div>
+                  <div class="quick-status-card">
+                    <strong>Suggestion status</strong>
+                    <span id="quickDetectionStatusLabel">Not started</span>
+                  </div>
+                  <div class="quick-status-card">
+                    <strong>Saved quick rooms</strong>
+                    <span id="quickSuggestedCountLabel">0</span>
+                  </div>
+                  <div class="quick-status-card">
+                    <strong>Selected total area</strong>
+                    <span id="quickSelectedTotalLabel">0.00 m²</span>
+                  </div>
+                </div>
+
+                <div class="quick-suggestion-card hidden" id="quickSuggestionPanel" data-confidence="">
+                  <div>
+                    <strong id="quickSuggestionTitle">Suggested room</strong>
+                    <p class="helper oz-source-style-15" id="quickSuggestionCopy">Review the outline on the plan before adding it.</p>
+                  </div>
+                  <div class="quick-suggestion-meta">
+                    <span class="pill" id="quickSuggestionArea">0.00 m²</span>
+                    <span class="pill" id="quickSuggestionConfidence">Confidence</span>
+                  </div>
+                  <ul class="quick-reason-list" id="quickSuggestionReasons"></ul>
+                  <div class="action-row">
+                    <button class="button" id="acceptQuickRoomButton" type="button">Accept room</button>
+                    <button class="button-secondary" id="editQuickRoomButton" type="button">Edit manually</button>
+                    <button class="button-quiet" id="discardQuickRoomButton" type="button">Discard</button>
+                  </div>
+                </div>
+
+                <canvas id="quickPreviewCanvas" width="1200" height="860" class="hidden"></canvas>
+              </div>
+            </div>
+
+            <div class="workspace-stage">
+              <div class="status" id="traceStatus">
+                Upload a floor plan, set scale, then trace rooms receiving flooring.
+              </div>
+              <div class="status" id="canvasStatus">Upload a floor plan to begin.</div>
+              <div class="canvas-shell hidden" id="canvasShell">
+                <div class="canvas-stage">
+                  <canvas tabindex="0" aria-label="Floor plan drawing. Use the keyboard point controls below as an alternative to clicking." id="planCanvas" width="1200" height="860"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <aside class="summary-card workspace-summary">
+          <div class="summary-heading">
+            <span class="eyebrow">Selected Area</span>
+            <h3 class="oz-source-style-16">Selected flooring area</h3>
+            <p>Select only the rooms where flooring will be installed, then send the total back into your quote.</p>
+          </div>
+
+          <div class="summary-box">
+            <strong>Total selected flooring area</strong>
+            <div class="summary-total" id="selectedAreaTotal">0.00 m²</div>
+            <div id="roomsCountText">0 measured rooms</div>
+          </div>
+
+          <div class="metric-grid">
+            <div class="metric">
+              <strong id="scaleReadout">Not set</strong>
+              <span class="helper">Current scale</span>
+            </div>
+            <div class="metric">
+              <strong id="flooringCount">0</strong>
+              <span class="helper">Included rooms</span>
+            </div>
+            <div class="metric">
+              <strong id="excludedCount">0</strong>
+              <span class="helper">Excluded rooms</span>
+            </div>
+          </div>
+
+          <div class="summary-box">
+            <div class="oz-source-style-17">
+              <strong>Measurement confidence</strong>
+              <span class="pill warn" id="measurementConfidenceTag">Low</span>
+            </div>
+            <p class="helper oz-source-style-18" id="measurementConfidenceText">Upload a plan, set scale and trace rooms before using the area in quote.</p>
+            <div class="confidence-checklist oz-source-style-11" id="confidenceChecklist"></div>
+            <p class="helper oz-source-style-15" id="scaleWarningText"></p>
+          </div>
+
+          <details class="summary-box room-list-panel" open>
+            <summary>
+              <strong>Measured rooms</strong>
+              <span class="helper">Open room list</span>
+            </summary>
+            <div class="rooms-table" id="roomsTable"></div>
+          </details>
+
+          <div class="summary-box">
+            <strong>Review before quote</strong>
+            <p class="helper oz-source-style-18">Only include rooms where flooring will be installed.</p>
+            <p class="helper oz-source-style-19">Common areas to exclude:</p>
+            <ul class="helper oz-source-style-20">
+              <li>Bathrooms</li>
+              <li>Balconies</li>
+              <li>Garage</li>
+              <li>Outdoor areas</li>
+              <li>Voids</li>
+              <li>Rooms not receiving flooring</li>
+            </ul>
+          </div>
+
+          <div class="summary-box">
+            <strong>Ready to continue your quote?</strong>
+            <p class="helper oz-source-style-18">Send the selected floor area back to the quote form, then confirm product and final scope before submitting.</p>
+            <div class="summary-actions oz-source-style-21">
+              <button class="button" id="useAreaInQuoteButton" type="button">Use selected measured area in quote</button>
+              <button class="button-danger" id="clearRoomsButton" type="button">Clear rooms</button>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="floorplanFaq">
+      <div class="shell">
+        <article class="section-card">
+          <span class="eyebrow">Floor Plan Measurement FAQ</span>
+          <h2 class="oz-source-style-3">Before you use the measured area</h2>
+          <div class="rooms-table">
+            <details class="summary-box">
+              <summary><strong>Is this the final flooring measurement?</strong></summary>
+              <p class="helper oz-source-style-18">No. It gives a measured starting area from your floor plan. Final details can still be confirmed before installation.</p>
+            </details>
+            <details class="summary-box">
+              <summary><strong>What kind of floor plan works best?</strong></summary>
+              <p class="helper oz-source-style-18">A PDF, JPG or PNG with visible room walls and at least one known dimension.</p>
+            </details>
+            <details class="summary-box">
+              <summary><strong>Does this calculate the final quote?</strong></summary>
+              <p class="helper oz-source-style-18">No. It sends measured area into the quote. Product choice, main inclusions and final project details are reviewed separately.</p>
+            </details>
+            <details class="summary-box">
+              <summary><strong>Should I include every room?</strong></summary>
+              <p class="helper oz-source-style-18">Only trace rooms where flooring will be installed.</p>
+            </details>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="floorplanPlanningLinksTitle">
+      <div class="shell">
+        <article class="section-card">
+          <span class="eyebrow">Plan the full quote</span>
+          <h2 id="floorplanPlanningLinksTitle" class="oz-source-style-3">Use the measured area with the right project context</h2>
+          <p>A floor plan creates a starting area. Product suitability, apartment requirements and the written installation scope still need separate review.</p>
+          <div class="link-grid oz-source-style-4">
+            <a class="link-card" href="/engineered-timber-flooring/"><strong>Planning apartment flooring?</strong><span>Check access, building requirements, acoustic questions and removal scope.</span></a>
+            <a class="link-card" href="/products/"><strong>Choose a flooring direction</strong><span>Compare hybrid, laminate and engineered timber before quoting.</span></a>
+            <a class="link-card" href="/contact/?enquiry=service&amp;source=floor-plan-review"><strong>Need help reviewing your plan?</strong><span>Ask the Oz team which measurements and project details to confirm.</span></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer footer-contained">
+    <div class="container footer-grid">
+      <div class="footer-col footer-brand-block">
+        <a class="footer-logo" href="/" aria-label="Oz Timber Floor home">
+          <img src="/assets/brand/oz-timber-floor-logo.webp" alt="Oz Timber Floor Sydney logo" width="154" height="49">
+        </a>
+        <p class="footer-brand-copy">Flooring quotes and installation guidance for Sydney projects.</p>
+        <a class="footer-brand-cta" href="/contact/?enquiry=supply-install&amp;source=floor-plan">Start quote</a>
+      </div>
+      <div class="footer-col">
+        <h4>Products</h4>
+        <ul>
+          <li><a href="/hybrid/">Hybrid Flooring Sydney</a></li>
+          <li><a href="/laminate/">Laminate Flooring Sydney</a></li>
+          <li><a href="/engineered-timber-flooring/">Engineered Timber Flooring Sydney</a></li>
+          <li><a href="/products/">Flooring Products</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Quote &amp; Tools</h4>
+        <ul>
+          <li><a href="/contact/?enquiry=supply-install&amp;source=floor-plan">Start Quote</a></li>
+          <li><a href="/contact/?enquiry=service&amp;source=floor-plan-review">Plan Review</a></li>
+          <li><a href="/floor-plan/">Upload Floor Plan</a></li>
+          <li><a href="/guides/">Flooring Guides</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4><ul><li><a href="/timber-floor-installation/">Flooring installation</a></li><li><a href="/floor-levelling/">Floor levelling</a></li><li><a href="/commercial-flooring/">Commercial flooring</a></li><li><a href="/builder-flooring-contractor-sydney/">Builder flooring</a></li><li><a href="/timber-floor-sanding-and-polishing-sydney/">Sanding and polishing</a></li><li><a href="/timber-floor-removal-and-stripping-sydney/">Floor removal</a></li><li><a href="/contact/?enquiry=supply-only">Supply enquiries</a></li><li><a href="/contact/">Project enquiries</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/projects/">Recent Projects</a></li>
+          <li><a href="/contact/">Contact</a></li>
+          <li><a href="/privacy/">Privacy Policy</a></li>
+          <li><a href="/terms/">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Oz Timber Floor</p>
+    </div>
+  </footer>
+
+  <dialog class="overlay" id="scaleModal" aria-labelledby="scaleModalTitle">
+    <div class="modal">
+      <h3 id="scaleModalTitle">Enter real distance in metres</h3>
+      <p class="helper oz-source-style-11" id="scaleModalHelp">Example: 4.4</p>
+      <div class="field oz-source-style-3">
+        <label for="scaleDistanceInput">Known wall distance</label>
+        <input id="scaleDistanceInput" type="number" min="0" step="0.01" placeholder="4.4">
+      </div>
+      <div class="action-row">
+        <button class="button" id="saveScaleButton" type="button">Save scale</button>
+        <button class="button-secondary" id="cancelScaleButton" type="button">Cancel</button>
+      </div>
+    </div>
+  </dialog><noscript><p class="shell">Turn on JavaScript to measure your plan, or <a href="/contact/">send an enquiry without using the tool</a>.</p></noscript></body></html>

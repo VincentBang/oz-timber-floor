@@ -7,6 +7,45 @@ const format = value => value.toFixed(2);
 let file=null, plan=null, loading=false, loadController=null;
 let scale=null, scalePoints=[], draft=[], rooms=[], editing=null, nextId=1;
 let checking=false, checkPoints=[];
+let viewZoom=1, panMode=false, panStart=null;
+
+function updateView() {
+  const viewport=$('plan-viewport');
+  const fitWidth=plan?Math.min(viewport.clientWidth,viewport.clientHeight*plan.canvas.width/plan.canvas.height):viewport.clientWidth;
+  $('stage').style.width=Math.max(1,fitWidth*viewZoom)+'px';
+  $('zoom-level').textContent=Math.round(viewZoom*100)+'%';
+  $('zoom-out').disabled=loading || viewZoom<=1;
+  $('zoom-in').disabled=loading || viewZoom>=4;
+  $('pan-plan').setAttribute('aria-pressed',String(panMode));
+  $('plan-viewport').classList.toggle('pan-mode',panMode);
+}
+function focusNearby(element) {
+  element.focus({preventScroll:true});
+  const box=element.getBoundingClientRect();
+  if(box.top<0 || box.bottom>window.innerHeight)element.scrollIntoView({block:'nearest',behavior:'instant'});
+}
+function focusTracing() {
+  if(matchMedia('(max-width:999px)').matches) {
+    document.querySelector('.drawing-panel').scrollIntoView({block:'start',behavior:'instant'});
+    $('plan-viewport').focus({preventScroll:true});
+  } else focusNearby($('room-name'));
+}
+$('choose-scale-points').addEventListener('click',()=>{scalePoints=[];$('known-distance').value='';invalidateConsent();redraw();announce('Choose the two scale points again.');document.querySelector('.drawing-panel').scrollIntoView({block:'start',behavior:'instant'});$('plan-viewport').focus({preventScroll:true});});
+window.addEventListener('resize',updateView);
+$('mode-scale').addEventListener('click',()=>{if(scale)$('change-scale').click();else{panMode=false;updateView();announce('Set scale: choose two ends of a known dimension on the plan.');}});
+$('mode-trace').addEventListener('click',()=>{if(!scale||loading)return;if(checking)$('stop-check').click();panMode=false;updateView();focusTracing();});
+function showReview(){if(!plan)return;$('review-panel').scrollIntoView({block:'start',behavior:'instant'});const heading=$('review-panel').querySelector('h2');heading.tabIndex=-1;heading.focus({preventScroll:true});}
+$('review-estimate').addEventListener('click',showReview);
+$('review-shortcut').addEventListener('click',event=>{event.preventDefault();showReview();});
+$('back-to-plan').addEventListener('click',()=>{$('measurement-tool').scrollIntoView({block:'start',behavior:'instant'});focusNearby(scale?$('room-name'):$('mode-scale'));});
+for (const [id,change] of [['zoom-in',.25],['zoom-out',-.25]]) $(id).addEventListener('click',()=>{viewZoom=Math.max(1,Math.min(4,viewZoom+change));updateView();});
+$('fit-plan').addEventListener('click',()=>{viewZoom=1;panMode=false;updateView();$('plan-viewport').scrollTo(0,0);});
+$('pan-plan').addEventListener('click',()=>{panMode=!panMode;panStart=null;updateView();announce(panMode?'Pan view on. Drag the drawing to move it; no points will be added.':'Room and scale point selection resumed.');});
+$('plan-viewport').addEventListener('pointerdown',event=>{if(!panMode || !plan)return;panStart={id:event.pointerId,x:event.clientX,y:event.clientY,left:$('plan-viewport').scrollLeft,top:$('plan-viewport').scrollTop};$('plan-viewport').setPointerCapture(event.pointerId);});
+$('plan-viewport').addEventListener('pointermove',event=>{if(!panStart||panStart.id!==event.pointerId)return;$('plan-viewport').scrollTo(panStart.left+panStart.x-event.clientX,panStart.top+panStart.y-event.clientY);});
+for(const event of ['pointerup','pointercancel','lostpointercapture']) $('plan-viewport').addEventListener(event,()=>{panStart=null;});
+for(const link of document.querySelectorAll('[data-review-link]')) {const destination=new URL(contactDestination(location.search),location.href);destination.searchParams.delete('floorplan');link.href=destination.pathname+destination.search;}
+$('clear-rooms').addEventListener('click',()=>{if(loading||!rooms.length||!window.confirm('Clear all measured rooms? The loaded drawing and scale will be kept.'))return;rooms=[];draft=[];editing=null;nextId=1;$('room-name').value='';invalidateConsent();redraw();announce('Measured rooms cleared. Your scale is still set.');$('room-name').focus();});
 
 function announce(message, error=false) {
   $('status').classList.toggle('error',error);
@@ -104,8 +143,31 @@ function displayRooms() {
 }
 function redraw() {
   $('workspace').hidden=!plan;
+  // Changing a message must never move the drawing under the next tap.
+  // Keep the live status in the control column, not above the precision canvas.
+  if(plan && $('status').parentElement!==$('step-panel'))$('step-panel').prepend($('status'));
+  if(!plan && $('status').parentElement===$('step-panel'))$('upload-panel').insertAdjacentElement('afterend',$('status'));
+  $('review-panel').hidden=!plan;
+  document.body.classList.toggle('plan-loaded',!!plan);
+  document.body.classList.toggle('scale-is-set',!!scale);
+  document.body.classList.toggle('is-checking',checking);
+  $('scale-entry').hidden=!!scale || scalePoints.length!==2;
+  $('trace-panel').hidden=!scale || checking;
+  $('mode-scale').disabled=loading || !plan;
+  $('mode-trace').disabled=loading || !scale;
+  $('mode-scale').setAttribute('aria-pressed',String(!!plan&&!scale&&!checking));
+  $('mode-trace').setAttribute('aria-pressed',String(!!scale&&!checking));
+  $('review-estimate').disabled=loading || !totals().count || !!draft.length || editing!==null || checking;
+  $('review-shortcut').hidden=$('review-estimate').disabled;
   $('page-controls').hidden=!plan || plan.pageCount===1;
   $('page-number').disabled=loading;
+  const current=!plan?'open':!scale?'scale':rooms.length&&!draft.length&&editing===null&&!checking?'review':'trace';
+  for(const step of ['open','scale','trace','review']) {const node=$('step-'+step);if(step===current)node.setAttribute('aria-current','step');else node.removeAttribute('aria-current');}
+  $('summary-plan').textContent=plan?'Plan: page '+plan.pageNumber+' of '+plan.pageCount:'Plan: not loaded';
+  $('summary-scale').textContent=scale?'Scale: set — check a second dimension':'Scale: not set';
+  $('summary-readiness').textContent=!plan?'Next: open a plan to begin.':!scale?'Next: mark a known dimension and set its length.':draft.length||editing!==null?'Next: finish or cancel the current room.':checking?'Next: finish the scale check.':rooms.length?'Review included rooms before sharing your estimate.':'Next: trace your first room.';
+  $('clear-rooms').disabled=loading||!rooms.length||checking;
+  updateView();
   if (!plan) return;
   const available=!loading;
   $('known-distance').disabled=!available || !!scale;
@@ -133,6 +195,7 @@ function redraw() {
   $('empty-rooms').hidden=rooms.length>0;
   const {area,count}=totals();
   $('area-output').textContent=format(area); $('room-count').textContent=count+(count===1?' room':' rooms');
+  $('working-area').textContent=format(area); $('working-count').textContent=count+(count===1?' room':' rooms');
   const ready=available && count>0 && !draft.length && editing===null && !checking;
   $('share-consent').disabled=!ready;
   $('handoff').disabled=!ready || !$('share-consent').checked;
@@ -148,6 +211,7 @@ async function openPlan(nextFile, requestedPage) {
   loadController?.abort();
   const controller=new AbortController();
   loadController=controller; loading=true; invalidateConsent(); redraw(); announce('Opening the plan in your browser…');
+  let opened=false;
   try {
     const next=await loadPlan(nextFile,requestedPage,controller.signal);
     if (controller.signal.aborted || loadController!==controller) {
@@ -155,6 +219,8 @@ async function openPlan(nextFile, requestedPage) {
     }
     if (plan) { plan.canvas.width=0; plan.canvas.height=0; }
     file=nextFile; plan=next;
+    opened=true;
+    viewZoom=1;panMode=false;panStart=null;
     resetMeasurement();
     $('raster').replaceChildren(next.canvas);
     next.canvas.setAttribute('aria-hidden','true');
@@ -168,7 +234,7 @@ async function openPlan(nextFile, requestedPage) {
     const recovery = plan ? ' The previous plan is still displayed; its measurements have not been replaced.' : '';
     announce((error.message || 'This file could not be opened. Choose a JPG, PNG or PDF plan.') + recovery,true);
   } finally {
-    if (loadController===controller) { loading=false; loadController=null; redraw(); }
+    if (loadController===controller) { loading=false; loadController=null; redraw();if(opened){$('measurement-tool').scrollIntoView({block:'start',behavior:'instant'});$('mode-scale').focus({preventScroll:true});} }
   }
 }
 $('plan-file').addEventListener('change',event=>{
@@ -188,6 +254,7 @@ function addPoint(x,y) {
   if (scale && points.length===MAX_POINTS) { announce('A room can have at most '+MAX_POINTS+' corners.',true); return; }
   if (points.some(p=>Math.hypot(p.x-x,p.y-y)<0.001)) { announce('That point is already marked. Save the room to close its outline.',true); return; }
   points.push({x,y}); invalidateConsent(); redraw();
+  if(!scale&&!checking&&points.length===2)focusNearby($('known-distance'));
   if (checking) {
     if (points.length===1) { announce('Choose the other end of the second dimension.'); return; }
     const [a,b]=points;
@@ -202,6 +269,7 @@ $('add-point').addEventListener('click',()=>{
   if (heldFocus && $('add-point').disabled) (checking?$('stop-check'):$('known-distance')).focus();
 });
 $('overlay').addEventListener('click',event=>{
+  if(panMode)return;
   const box=$('overlay').getBoundingClientRect();
   if (plan && box.width && box.height) addPoint((event.clientX-box.left)/box.width*plan.canvas.width,(event.clientY-box.top)/box.height*plan.canvas.height);
 });
@@ -210,23 +278,24 @@ $('apply-scale').addEventListener('click',()=>{
   try { scale=metresPerPixel(scalePoints[0],scalePoints[1],$('known-distance').valueAsNumber,$('distance-unit').value); }
   catch (error) { announce(error.message,true); return; }
   redraw(); announce('Scale set. Trace your first room by marking its corners in order.');
-  $('room-name').focus();
+  focusTracing();
 });
 $('change-scale').addEventListener('click',()=>{
   if (loading || !scale) return;
   if ((rooms.length || draft.length || editing!==null) && !window.confirm('Recalibrating clears all measured rooms on this page. Continue?')) return;
   resetMeasurement(); redraw(); announce('Choose two new calibration points.');
-  $('coords').open=true; $('point-x').focus();
+  $('coords').open=false;document.querySelector('.drawing-panel').scrollIntoView({block:'start',behavior:'instant'});$('plan-viewport').focus({preventScroll:true});
 });
 $('check-scale').addEventListener('click',()=>{
   if (!scale || loading || draft.length || editing!==null) return;
   checking=true; checkPoints=[]; $('check-result').textContent=''; invalidateConsent(); redraw();
   announce('Mark the ends of a second labelled dimension.');
-  $('stop-check').focus();
+  if(matchMedia('(max-width:999px)').matches)document.querySelector('.drawing-panel').scrollIntoView({block:'start',behavior:'instant'});
+  focusNearby($('stop-check'));
 });
 $('stop-check').addEventListener('click',()=>{
   checking=false; checkPoints=[]; redraw(); announce('Room tracing resumed.');
-  $('check-scale').focus();
+  focusTracing();
 });
 $('undo-point').addEventListener('click',()=>{
   const heldFocus=document.activeElement===$('undo-point');
@@ -261,7 +330,7 @@ $('finish-room').addEventListener('click',()=>{
     if (original) rooms=rooms.map(item=>item.id===id?room:item); else rooms.push(room);
     draft=[]; editing=null; $('room-name').value=''; invalidateConsent(); redraw();
     announce(name+' saved at '+format(area)+' m². Trace another room or review your estimate.');
-    $('room-name').focus();
+    focusTracing();
   } catch (error) { announce(error.message,true); }
 });
 $('share-consent').addEventListener('change',redraw);

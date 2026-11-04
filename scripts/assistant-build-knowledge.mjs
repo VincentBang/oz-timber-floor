@@ -14,6 +14,7 @@ import {knowledgeTextIssue,visibleKnowledgeText} from '../assistant/lib/knowledg
 import {reviewedProjectEvidence,PROJECT_PHOTO_NOTICE} from '../assistant/lib/project-knowledge.mjs';
 import {ETF_RESTRICTED_ROUTE} from '../assistant/lib/restricted-range.mjs';
 import {reviewedOakBeigeRetirement,OAK_BEIGE_ROUTE} from '../assistant/lib/legacy-retirement.mjs';
+import {enquiryAttachmentFact} from '../assistant/lib/enquiry-help-evidence.mjs';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..'),report=process.env.OZ_ASSISTANT_EVIDENCE_DIR||root+'/docs/flooring-assistant',generated=root+'/assistant/generated';
 fs.mkdirSync(report,{recursive:true});fs.mkdirSync(generated,{recursive:true});
 const read=f=>fs.readFileSync(root+'/'+f,'utf8'),json=f=>JSON.parse(read(f));
@@ -136,6 +137,11 @@ for(const canonicalPath of routes){
 const context={window:{}};vm.runInNewContext(read('assets/contact-config.js'),context,{timeout:500});const contact=context.window.OZ_TIMBER_FLOOR_CONTACT;
 sourceFiles.set('assets/contact-config.js',hash(read('assets/contact-config.js')));
 const contactDoc=docs.find(d=>d.canonicalPath==='/contact/');
+sourceFiles.set('assistant/lib/enquiry-help-evidence.mjs',hash(read('assistant/lib/enquiry-help-evidence.mjs')));
+sourceFiles.set('assets/enquiry-attachments.js',hash(read('assets/enquiry-attachments.js')));
+if(!read('assets/enquiry-attachments.js').includes('var MAX_BYTES = 7000000;'))throw Error('Attachment limit changed: review help');
+const attachmentGuidance=enquiryAttachmentFact(read(router.resolve('/contact/').file));
+if(!contactDoc.facts.some(f=>f.field==='guidance'&&f.value===attachmentGuidance))throw Error('Public attachment help not extracted');
 for(const [field,value]of Object.entries({phone:contact.phoneDisplay,email:contact.email,showroom:contact.showroom})){if(typeof value==='string'&&read('contact.html').includes(value))fact(contactDoc,field,value,'','');else throw Error('Business contact mismatch: '+field);}
 const physical=new Map(inventory.records.map(r=>[r.file,r]));
 const ownerFiles=new Set(routes.map(route=>router.resolve(route).file));

@@ -66,6 +66,11 @@ function add(parent,html,before=null){const nodes=[...parseFragment(html).childN
 function section(n){while(n&&n.tagName!=='section')n=n.parentNode;return n;}
 function cl(n,c){if(!has(n,c))set(n,'class',((attr(n,'class')||'')+' '+c).trim());}
 export function editorialHTML(html,file=''){
+ if(html.includes('data-architecture-version="1"')){
+  const canonical=html.match(/<link\b[^>]*rel="canonical"[^>]*href="([^"]+)"/)?.[1];
+  const repair=canonical==='https://oztimberfloor.com.au/'?HOME_COMPACT_THUMBNAILS:canonical==='https://oztimberfloor.com.au/products/avala-blackbutt/'?AVALA_RELATED_GRID:null;
+  return repair&&!html.includes(repair)?html.replace('</head>',repair+'</head>'):html;
+ }
  if(!html.includes('site-header'))return html;
  // parse5 relocates whitespace after </html> into <body>. Preserve that suffix
  // separately so repeated builds do not grow text nodes or alter source hashes.

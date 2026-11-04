@@ -2,6 +2,11 @@ import {hash} from './security.mjs';
 import {knowledgeTextIssue} from './knowledge-quality.mjs';
 export const normalise=s=>String(s).toLowerCase().normalize('NFKC').replace(/engineered wood/g,'engineered timber').replace(/leveling/g,'levelling').replace(/supply and install/g,'supply install').replace(/[^\p{L}\p{N}.]+/gu,' ').trim();
 export const tokens=s=>normalise(s).split(/\s+/).filter(t=>t.length>1&&!['the','what','which','about','does','with','from','have','your','please','tell','this','that','flooring','floor','how','do','is','are','me','you','of','for','in','on','and','or','to','can','vs','compare','between','difference','differences'].includes(t));
+// Reviewed short range names identify an existing owner, never a substitute SKU.
+export function catalogueNames(doc){
+ const aliases={'/ranges/swish/':['Swish','Swish Native Hardwood'],'/ranges/elk-falls/':['Elk Falls']};
+ return [doc.title,...(doc.entityType==='range'&&!doc.navigationOnly?(aliases[doc.canonicalPath]||[]).filter(n=>(' '+normalise(doc.title)+' ').includes(' '+normalise(n)+' ')):[])];
+}
 export function unqualifiedColour(doc,message){
  const range=doc?.facts.find(f=>f.field==='range')?.value;
  return doc?.entityType==='product'&&tokens(doc.title).length<=2&&!!range&&!(' '+normalise(message)+' ').includes(' '+normalise(range)+' ');
@@ -20,7 +25,7 @@ export function buildIndex(corpus){
 export function retrieve(index,message,{pagePath='/',entityId}={}){
  const q=normalise(message),qt=tokens(q),context=index.corpus.documents.find(d=>d.canonicalPath===pagePath);
  if(entityId&&context?.entityId!==entityId)return {status:'clarify',reason:'invalid_context',documents:[],facts:[]};
- const exact=index.corpus.documents.filter(d=>['product','range'].includes(d.entityType)&&(d.entityType!=='product'||tokens(d.title).length>=2)&&(' '+q+' ').includes(' '+normalise(d.title)+' ')).sort((a,b)=>b.title.length-a.title.length);
+ const exact=index.corpus.documents.filter(d=>['product','range'].includes(d.entityType)&&(d.entityType!=='product'||tokens(d.title).length>=2)&&catalogueNames(d).some(n=>(' '+q+' ').includes(' '+normalise(n)+' '))).sort((a,b)=>b.title.length-a.title.length);
  // Whole identity match takes precedence over a containing range name.
  let selected=exact.filter(d=>!exact.some(o=>o!==d&&normalise(o.title).length>normalise(d.title).length&&normalise(o.title).includes(normalise(d.title))));
  if(selected.some(d=>d.entityType==='product'))selected=selected.filter(d=>d.entityType==='product');
@@ -46,6 +51,8 @@ export function retrieve(index,message,{pagePath='/',entityId}={}){
    [/installation|access.*planning/,['/timber-floor-installation/']],
    [/removal|stripping/,['/timber-floor-removal-and-stripping-sydney/']],
    [/sanding|polishing/,['/timber-floor-sanding-and-polishing-sydney/']],
+   [/insurance/,['/insurance-flooring-repairs/']],
+   [/property manager|real estate|tenanc|tenant|agency/,['/property-manager-flooring/']],
    [/builder/,['/builder-flooring-contractor-sydney/']],
    [/commercial/,['/commercial-flooring/']],[/office/,['/office-flooring/']],
    [/renovation|sequence/,['/faqs/']]

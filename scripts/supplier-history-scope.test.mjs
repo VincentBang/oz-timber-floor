@@ -1,0 +1,4 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import {supplierHistoryHTML,SUPPLIER_HISTORY_BASELINE} from './supplier-history-scope.mjs';
+test('committed supplier repairs remain in scope even when the worktree is clean',()=>{const calls=[];const run=(cmd,args)=>{calls.push(args);assert.equal(cmd,'git');assert(args.includes(SUPPLIER_HISTORY_BASELINE),'must not silently fall back to uncommitted diff');return args.includes('--diff-filter=D')?'':'products/example/index.html\nranges/example/index.html\n';};assert.deepEqual(supplierHistoryHTML('/fixture',run),['products/example/index.html','ranges/example/index.html']);assert.equal(calls.length,2);assert(calls.every(a=>a.at(-1)==='*.html'));});
+test('historical deletions fail rather than silently reducing coverage',()=>{assert.throws(()=>supplierHistoryHTML('/fixture',(_cmd,args)=>args.includes('--diff-filter=D')?'products/missing/index.html\n':''),/Historical HTML deletion/);});

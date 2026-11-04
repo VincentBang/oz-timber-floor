@@ -4,6 +4,8 @@
   "version": "1.0.0",
   "description": "Local launch-safety controls for the Oz Timber Floor static Netlify site.",
   "scripts": {
+    "design:architectural:apply": "node scripts/architectural-design.mjs",
+    "design:search:test": "node --test scripts/architectural-search.test.mjs",
     "build": "node scripts/prepare-netlify-deploy.mjs && npm run catalogue:apply && npm run perf:images:apply && npm run release:package && npm run assistant:knowledge",
     "catalogue:october:check": "node scripts/october-catalogue-repair.mjs",
     "catalogue:apply": "node scripts/migration-readiness.mjs --apply-catalogue-only",

@@ -1,8 +1,8 @@
-import {normalise,unqualifiedColour} from './retrieval.mjs';
+import {normalise,unqualifiedColour,catalogueNames} from './retrieval.mjs';
 const contains=(query,name)=>(' '+normalise(query)+' ').includes(' '+normalise(name)+' ');
 // Names select reviewed documents, never new facts or instructions from history.
 export function namedCatalogueEntities(corpus,message){
- const matches=(corpus.documents||[]).filter(d=>['product','range'].includes(d.entityType)&&normalise(d.title).length>=4&&contains(message,d.title));
+ const matches=(corpus.documents||[]).filter(d=>['product','range'].includes(d.entityType)&&normalise(d.title).length>=4&&catalogueNames(d).some(n=>contains(message,n)));
  return matches.filter(d=>!matches.some(other=>other!==d&&(contains(other.title,d.title)&&other.title.length>d.title.length||d.entityType==='range'&&other.entityType==='product'&&normalise(other.facts.find(f=>f.field==='range')?.value||'')===normalise(d.title)&&contains(message,d.title+' '+other.title))));
 }
 export function catalogueEnquiryContext(corpus,message,pagePath){

@@ -50,6 +50,9 @@ try{
  });
  await scenario('keyboard-only tab sequence and 200 percent text zoom at 320px',async p=>{
   await open(p);await p.evaluate(()=>document.documentElement.style.fontSize='200%');
+  assert.equal(await p.locator('#scale-entry').isHidden(),true,'Distance entry stays out of the way until two scale points are selected');
+  await point(p,40,40);await point(p,240,40);
+  assert.equal(await p.locator('#scale-entry').isVisible(),true,'Two points reveal the actionable distance entry');
   fs.writeFileSync(out+'/zoom-diagnostic.json',JSON.stringify(await p.evaluate(()=>[...document.querySelectorAll('body *')].filter(e=>e.getBoundingClientRect().right>innerWidth+1).map(e=>({tag:e.tagName,id:e.id,width:e.getBoundingClientRect().width,right:e.getBoundingClientRect().right,text:e.textContent.slice(0,50)}))),null,2));
   await capture(p,{path:out+'/checks/zoom-320.png',fullPage:true});
   assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true,'No horizontal page overflow at text zoom');

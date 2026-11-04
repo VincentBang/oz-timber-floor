@@ -12,6 +12,7 @@ import { applyProjectPhotoFilters } from './project-photo-filters.mjs';
 import { applyLegacyGuideImages } from './legacy-guide-images.mjs';
 import { applyRefresh as applySupplierGapRefresh } from './supplier-gap-refresh.mjs';
 import {localFloorPlanEnabled,addFloorPlan,checkFloorPlan} from './floor-plan-package.mjs';
+import {applyArchitectural} from './architectural-design.mjs';
 const floorPlanEnabled = localFloorPlanEnabled(process.env);
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
@@ -29,12 +30,14 @@ applyReliabilityDisclosures();
 applyProjectPhotoFilters();
 applyLegacyGuideImages();
 applySupplierGapRefresh(root,{apply:true});
+applyArchitectural();
 const checkOnly = process.argv.includes("--check");
 const context = String(process.env.CONTEXT || "dev").trim().toLowerCase();
 const indexingEnabled = /^true$/i.test(String(process.env.OZ_PRODUCTION_INDEXING_ENABLED || "").trim());
 const publishIndexable = context === "production" && indexingEnabled;
 
 const publicDirectories = Object.freeze([
+  "search",
   "property-manager-flooring",
   "insurance-flooring-repairs",
   "timber-flooring-installation-common-mistakes-and-solutions",

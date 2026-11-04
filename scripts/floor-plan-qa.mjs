@@ -6,6 +6,7 @@ import {spawn,execFileSync} from 'node:child_process';
 import {createRequire} from 'node:module';
 import {fileURLToPath} from 'node:url';
 import {fixtures} from './floor-plan-qa/fixtures.mjs';
+import {removeFloorPlanDiscovery} from './floor-plan-package.mjs';
 
 const require=createRequire(import.meta.url),source=path.resolve(fileURLToPath(new URL('../',import.meta.url)));
 const args=process.argv.slice(2),outIndex=args.indexOf('--out');
@@ -47,7 +48,7 @@ try{
   ...(process.env.PLAYWRIGHT_BROWSERS_PATH&&{PLAYWRIGHT_BROWSERS_PATH:process.env.PLAYWRIGHT_BROWSERS_PATH})};
  const offline={NODE_OPTIONS:'--import='+isolated+'/scripts/floor-plan-qa/no-network.mjs',OZ_MIGRATION_GENERATED_DIR:out+'/migration',CONTEXT:'local',OZ_FLOORPLAN_ENABLED:'true'};
  async function run(label,command,extra={},cwd=isolated){const file=out+'/'+label+'.log',fd=fs.openSync(file,'wx'),start=Date.now();const child=spawn(command[0],command.slice(1),{cwd,env:{...env,GIT_WORK_TREE:cwd,...extra},stdio:['ignore',fd,fd]});let code;const timer=setTimeout(()=>child.kill('SIGTERM'),300000);try{code=await new Promise((r,j)=>{child.once('error',j);child.once('exit',r);});}finally{clearTimeout(timer);fs.closeSync(fd);}result.commands.push({label,command,cwd,code,ms:Date.now()-start,log:file});save();return code;}
- await run('unit',['node','--test','scripts/floor-plan-geometry.test.mjs','scripts/floor-plan-handoff.test.mjs'],offline);
+ await run('unit',['node','--test','scripts/floor-plan-geometry.test.mjs','scripts/floor-plan-handoff.test.mjs','scripts/floor-plan-discovery.test.mjs','scripts/supplier-history-scope.test.mjs'],offline);
  if(await run('local-build',['npm','run','build'],offline))throw Error('Local build failed; browser checks not run');
  if(await run('package-check',['npm','run','release:package:check'],offline))throw Error('Public package check failed');
  await run('audience-unit',['node','--test','scripts/audience-publication-contract.test.mjs','scripts/audience-service-pages.test.mjs','scripts/audience-discovery-contract.test.mjs','scripts/historical-scope-reconciliation.test.mjs','scripts/stonefloor-legacy-retirement.test.mjs'],offline);
@@ -60,7 +61,7 @@ try{
   Object.assign(process.env,{OZ_QA_ROOT:isolated,OZ_QA_OUTPUT:engineOut,OZ_PLAYWRIGHT_PATH:playwrightPath,OZ_AXE_PATH:axePath});
   const {serve}=await import(modulePath+'?engine='+engine);const server=await serve();
   try{for(const file of ['tool','contact','extended','journey','audience'])await run(engine+'-'+file,['node','scripts/floor-plan-qa/'+file+'.mjs'],{...browserEnv,OZ_LOCAL_ORIGIN:server.origin});}finally{await server.close();}
-  for(const file of ['a11y','mobile','orientation','lifecycle','jpeg-recovery','startup'])await run(engine+'-'+file,['node','scripts/floor-plan-qa/'+file+'.mjs'],browserEnv);
+  for(const file of ['a11y','mobile','orientation','lifecycle','jpeg-recovery','startup','professional','connected'])await run(engine+'-'+file,['node','scripts/floor-plan-qa/'+file+'.mjs'],browserEnv);
  }
  for(const script of ['analytics:contract:check','resend:enquiry:check','catalogue:field-integrity:check','migration:check:local','cutover:oct26:check','cutover:oct26:package-check','assistant:eval'])await run(script.replaceAll(':','-'),['npm','run',script],offline);
  await run('assistant-unit',['node','--test',...fs.readdirSync(isolated+'/assistant/tests').filter(f=>f.endsWith('.test.mjs')).map(f=>'assistant/tests/'+f)],offline);
@@ -82,7 +83,9 @@ try{
  }
  const localDelta=Object.keys(localFiles).filter(p=>reference?.[p]!==localFiles[p]);
  result.localPackage={count:Object.keys(localFiles).length,differences:localDelta};
- if(localDelta.some(p=>!p.startsWith('floor-plan/')&&!['contact/index.html','contact.html','guides/index.html','guides.html'].includes(p)))result.packageFailure=true;
+ // New discovery entries are allowed only if removing those exact fragments
+ // restores the no-feature package byte-for-byte. No blanket HTML exception.
+ if(localDelta.some(p=>!p.startsWith('floor-plan/')&&!['contact/index.html','contact.html','guides/index.html','guides.html'].includes(p)&&(!p.endsWith('.html')||sha(removeFloorPlanDiscovery(fs.readFileSync(isolated+'/dist/'+p,'utf8')))!==reference?.[p])))result.packageFailure=true;
  fs.writeFileSync(out+'/local-package-files.json',JSON.stringify(localFiles));
  result.status=result.commands.some(r=>r.code!==0)||result.packageFailure?'CHECKS_FAILED':'LOCAL_CHECKS_PASSED_RELEASE_HOLD';
 }catch(error){result.status=before?'CHECKS_FAILED':'DEPENDENCY_OR_SETUP_BLOCKED';result.error=error.stack;process.exitCode=1;}

@@ -4,6 +4,7 @@ import {projectAnswer} from './project-knowledge.mjs';
 import {knowledgeTextIssue} from './knowledge-quality.mjs';
 import {restrictedRangeAnswer} from './restricted-range.mjs';
 import {recordedPackAnswer} from './recorded-pack.mjs';
+import {securityMessage,uploadHelp} from './public-enquiry-help.mjs';
 const routeSafe=path=>typeof path==='string'&&/^\/(?!\/)[a-z0-9\-/]*$/.test(path);
 export function renderPlan(plan,retrieval,corpus){
  if(!exactKeys(plan,['status','factIds','reason'])||!['answered','clarify'].includes(plan.status)||!['supported','insufficient'].includes(plan.reason)||!Array.isArray(plan.factIds)||plan.factIds.length>6||new Set(plan.factIds).size!==plan.factIds.length)throw Error('invalid_plan');
@@ -63,7 +64,8 @@ export function avoidRepeatedAnswer(answer,history,message){
  return {...answer,segments:fresh.length?fresh:[{text:'I do not have further verified detail on that point. You can review the linked source or prepare a question for the Oz Timber Floor team.',evidenceIds:[]}]};
 }
 export function policyAnswer(message,corpus,options={}){
- if(/password|confidential|supplier (?:cost|price|name|list)|wholesale|operon|supabase|\bkeys?\b|system prompt|all.*(?:data|index)|ignore.*(?:previous|instructions)|reveal|<script|javascript:|https?:\/\//i.test(message))return fallback('private_request',corpus);
+ const securityText=securityMessage(message);
+ if(/password|confidential|supplier (?:cost|price|name|list)|wholesale|operon|supabase|\bkeys?\b|system prompt|all.*(?:data|index)|ignore.*(?:previous|instructions)|reveal|<script|javascript:|https?:\/\//i.test(securityText))return fallback('private_request',corpus);
  if(/asbestos|dangerous removal/i.test(message))return fallback('safety',corpus);
  if(/what affects.*cost|cost factors|cost depend/i.test(message)){
   const doc=corpus.documents.find(d=>d.canonicalPath==='/timber-floor-installation/');
@@ -71,7 +73,7 @@ export function policyAnswer(message,corpus,options={}){
   if(facts.length){const answer=renderPlan({status:'answered',factIds:facts.map(f=>f.id),reason:'supported'},{facts},corpus);answer.segments.push({text:'The team confirms the quote after reviewing your project details.',evidenceIds:[]});return answer;}
  }
  if(/\bbamboo\b/i.test(message))return {status:'needs_confirmation',segments:[{text:'That material is not part of the current public catalogue. Ask the team about current alternatives.',evidenceIds:['business-current-offering']}],sources:[{id:'business-current-offering',title:'Contact Oz Timber Floor',href:'/contact/',expectedStatus:200}],entityIds:[],reason:'not_offered',corpusVersion:corpus.corpusVersion};
- if(/confidential|supplier (?:cost|price|name|list)|wholesale|operon|supabase|\bkeys?\b|system prompt|all.*(?:data|index)|ignore.*(?:previous|instructions)|reveal|<script|javascript:|https?:\/\//i.test(message))return fallback('private_request',corpus);
+ if(/confidential|supplier (?:cost|price|name|list)|wholesale|operon|supabase|\bkeys?\b|system prompt|all.*(?:data|index)|ignore.*(?:previous|instructions)|reveal|<script|javascript:|https?:\/\//i.test(securityText))return fallback('private_request',corpus);
  if(/asbestos|dangerous removal/i.test(message))return fallback('safety',corpus);
  if(/bathroom|scratch.proof|pet.proof|certif|acoustic|fire|slip|underfloor|heating|adhesive|moisture|tolerances?|wet area|commercial.rat/i.test(message))return {...fallback('safety',corpus),segments:[{text:'I cannot approve site-specific suitability or certify performance here. The team needs the exact product and project requirements before advising on the next steps. Ask about the relevant product documentation and whether a qualified site assessment is needed; this chat cannot issue a certificate.',evidenceIds:[]}]};
  if(/waterproof/i.test(message))return {...fallback('safety',corpus),segments:[{text:'Waterproof claims need verification for the exact product. I cannot apply that claim to all hybrid flooring or approve an unseen installation. Product documentation and a qualified site assessment may be needed to check the proposed installation. Which product are you considering?',evidenceIds:[]}]};
@@ -89,7 +91,8 @@ export function policyAnswer(message,corpus,options={}){
  if(/project.*(?:example|completed|job|client)|(?:your|completed|client).*project|completed jobs?|client jobs?|testimonials?/i.test(message))return projectAnswer(corpus);
  if(/interlaken|natural oak brown|stone floor oak beige|helena oak/i.test(message))return fallback('confirmation',corpus);
  const recordedPack=recordedPackAnswer(message,corpus,options);if(recordedPack)return recordedPack;
- if(/\b(?:price|prices|cost|stock|warranty|lead time|urgent|urgently|book|booking|appointment|available|availability|box|boxes|pack|waste|calculate|refund|opening hours|open today)\b|\$/i.test(message))return fallback('confirmation',corpus);
+ if(/\b(?:price|prices|cost|stock|warranty|lead time|urgent|urgently|book|booking|appointment|available|availability|box|boxes|pack|packs|waste|calculate|refund|opening hours|open today)\b|\$/i.test(message))return fallback('confirmation',corpus);
+ const upload=uploadHelp(message,corpus);if(upload)return upload;
  if(/[\u0400-\u04ff\u3040-\u9fff\u0600-\u06ff]/u.test(message))return fallback('language',corpus);
  return null;
 }

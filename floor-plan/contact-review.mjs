@@ -13,7 +13,7 @@ export function reviewSummary() {
   heading.textContent = 'Use your floor plan estimate';
   const description = document.createElement('p');
   const amount = summary.totalAreaM2 + ' m²';
-  description.textContent = amount + ' traced across ' + summary.includedRoomCount +
+  description.textContent = amount + (summary.method === 'reviewed_suggestion' ? ' reviewed across ' : ' traced across ') + summary.includedRoomCount +
     (summary.includedRoomCount === 1 ? ' included room.' : ' included rooms.') +
     ' This is a planning estimate. The team will confirm the site measurements.';
   const note = document.createElement('p');

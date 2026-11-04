@@ -1,4 +1,5 @@
 import {preAudienceHTML} from './audience-discovery-contract.mjs';
+import {supplierHistoryHTML} from './supplier-history-scope.mjs';
 import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import os from 'node:os';import path from 'node:path';import {execFileSync} from 'node:child_process';import {parse} from 'parse5';
 import manifest from '../data/supplier-gap-refresh-20261103.json' with {type:'json'};
 import catalogue from '../data/product-catalogue.json' with {type:'json'};
@@ -27,7 +28,7 @@ function november3Product(original) {
  return image?{...original,...imageFields(image)}:original;
 }
 function expectedContract(html,file) {
- const c=contract(html);
+ const c=contract(architecturalHTML(html,file));
  if(oakleafIDs.some(id=>file==='products/'+id+'/index.html')) {
   const descriptions=c.meta.filter(attrs=>attrs.some(a=>(a.name==='name'&&a.value==='description')||(a.name==='property'&&a.value==='og:description')));
   assert.equal(descriptions.length,2,file);
@@ -92,19 +93,19 @@ test('original supplier bytes, embedded object identity, captions and exact prod
  for(const e of manifest.images){assert.equal(digest(fs.readFileSync(root+e.localFile)),e.sha256);const proof=e.evidence;if(['labelled-historical-supplier-brochure','exact-supplier-media-and-labelled-brochure'].includes(proof.kind)){const source=pdfs.find(d=>d.sha256===proof.sourceSha256);assert.equal(source.source,proof.sourceUrl);assert.equal(digest(fs.readFileSync(evidenceDirectory+'/raw/'+source.sha256+'.pdf')),source.sha256);const page=source.pages[proof.pdfPage-1],image=page.images.find(i=>i.objectId===proof.pdfObjectId);assert.equal(image.sha256,proof.embeddedSha256);assert.equal(digest(fs.readFileSync(image.file)),image.sha256);assert(fs.readFileSync(page.textFile,'utf8').includes(proof.caption));assert(page.imageLayout.some(l=>l.objectId===proof.pdfObjectId));}else{const detail=captures.records.find(r=>r.url===proof.sourceUrl);assert.equal(detail.sha256,proof.sourceSha256);assert.equal(digest(fs.readFileSync(detail.file)),detail.sha256);assert.equal(detail.title,proof.supplierTitle);assert.equal(detail.fields.Brand,proof.supplierBrand);assert(index.all__floor.some(p=>p.title===e.colour&&p.brand===proof.supplierBrand&&p.permalink===detail.url&&p.image===proof.imageUrl));}}
 });
 test('all changed HTML retains exact title metadata H1 canonical schema destinations and form contracts except the three authorised descriptions and OG mirrors',()=>{
- const changed=execFileSync('git',['diff','--name-only','--','*.html'],{cwd:root,encoding:'utf8'}).trim().split('\n').filter(Boolean);assert(changed.length>26);for(const file of changed)assert.deepEqual(contract(fs.readFileSync(file,'utf8'),file),expectedContract(baseline(file),file),file);
+ const changed=supplierHistoryHTML(root);assert(changed.length>26);for(const file of changed)assert.deepEqual(contract(fs.readFileSync(file,'utf8'),file),expectedContract(baseline(file),file),file);
 });
 test('every repaired product has an exact local eager primary image with intrinsic dimensions',()=>{
  for(const e of effective.images){const html=fs.readFileSync(e.route.slice(1)+'index.html','utf8'),nodes=walk(parse(html)),g=nodes.find(n=>attr(n,'class')==='catalogue-gallery'),images=walk(g).filter(n=>n.tagName==='img');assert.equal(images.length,1,e.id);const img=images[0];assert.equal(attr(img,'src'),e.localFile);assert.equal(attr(img,'alt'),e.alt);assert.equal(Number(attr(img,'width')),e.width);assert.equal(Number(attr(img,'height')),e.height);assert.equal(attr(img,'loading'),'eager');assert.equal(attr(img,'fetchpriority'),'high');}
 });
 test('all repaired cards use the matching product reference rather than a shared range substitute',()=>{
- const files=execFileSync('git',['diff','--name-only','--','*.html'],{cwd:root,encoding:'utf8'}).trim().split('\n').filter(Boolean);let checked=0;const seen=new Set();for(const file of files){const nodes=walk(parse(fs.readFileSync(file,'utf8')));for(const card of nodes.filter(n=>n.tagName==='article'&&/product-card|catalogue-card/.test(attr(n,'class')))){const ns=walk(card),entry=effective.images.find(e=>ns.some(n=>n.tagName==='a'&&attr(n,'href')===e.route));if(!entry)continue;const imgs=ns.filter(n=>n.tagName==='img');assert.equal(imgs.length,1);for(const [key,value] of Object.entries({src:entry.localFile,width:String(entry.width),height:String(entry.height),alt:entry.alt}))assert.equal(attr(imgs[0],key),value,file+' '+entry.id+' '+key);checked++;seen.add(entry.id);}}assert(checked>=27);for(const id of nov4IDs)assert(seen.has(id),id);
+ const files=supplierHistoryHTML(root);let checked=0;const seen=new Set();for(const file of files){const nodes=walk(parse(fs.readFileSync(file,'utf8')));for(const card of nodes.filter(n=>n.tagName==='article'&&/product-card|catalogue-card/.test(attr(n,'class')))){const ns=walk(card),entry=effective.images.find(e=>ns.some(n=>n.tagName==='a'&&attr(n,'href')===e.route));if(!entry)continue;const imgs=ns.filter(n=>n.tagName==='img');assert.equal(imgs.length,1);for(const [key,value] of Object.entries({src:entry.localFile,width:String(entry.width),height:String(entry.height),alt:entry.alt}))assert.equal(attr(imgs[0],key),value,file+' '+entry.id+' '+key);checked++;seen.add(entry.id);}}assert(checked>=27);for(const id of nov4IDs)assert(seen.has(id),id);
 });
 test('range data is bound to complete exact Swish and Elk Falls documents, not a different Swish family',()=>{
  assert.deepEqual(manifest.ranges.map(r=>r.id),['swish','elk-falls']);for(const r of manifest.ranges){const file=evidenceDirectory+'/raw/'+r.sourceSha256+'.pdf';assert.equal(digest(fs.readFileSync(file)),r.sourceSha256);}assert.equal(manifest.ranges[0].fields.thickness,'14mm');assert.match(manifest.ranges[0].fields.boardSize,/136 or 189/);assert.equal(manifest.ranges[1].fields.packSizeM2,'2.155');assert.equal(catalogue.ranges.find(r=>r.id==='swish').category,'Engineered timber');
 });
 test('repair is idempotent and the normal package workflow invokes the bounded repair',()=>{
- const files=execFileSync('git',['diff','--name-only','--','*.html'],{cwd:root,encoding:'utf8'}).trim().split('\n').filter(Boolean);for(const file of files){const h=fs.readFileSync(file,'utf8');assert.equal(refreshHTML(h,effective).html,h,file);}assert.match(fs.readFileSync('scripts/build-public-package.mjs','utf8'),/applySupplierGapRefresh\(root,\{apply:true\}\)/);
+ const files=supplierHistoryHTML(root);for(const file of files){const h=fs.readFileSync(file,'utf8');assert.equal(refreshHTML(h,effective).html,h,file);}assert.match(fs.readFileSync('scripts/build-public-package.mjs','utf8'),/applySupplierGapRefresh\(root,\{apply:true\}\)/);
 });
 test('unknown routes remain untouched and later catalogue evidence cannot be silently overwritten',()=>{
  const html='<html><head><link rel="canonical" href="https://oztimberfloor.com.au/unknown/"></head><body><main><p>Unreviewed content</p></main></body></html>';assert.equal(refreshHTML(html,manifest).html,html);
@@ -119,3 +120,4 @@ test('full-resolution media must corroborate the labelled brochure identity and 
 test('rebuilt supplier knowledge cannot inherit the live production approval or change spending ceilings',()=>{
  const current=JSON.parse(fs.readFileSync('assistant/generated/corpus.json')),profile=JSON.parse(fs.readFileSync('assistant/releases/2026-11-03/production-profile.json')),policy=JSON.parse(fs.readFileSync('assistant/config/policy.json'));assert.equal(hash(profile),'aea81d6c51b9760592830e453bd1dab94705a6034b563a0d7b6e08d64cc70579');assert.notEqual(current.corpusVersion,profile.boundCorpusVersion);assert.throws(()=>approvedProductionPolicy(profile,policy,current,{OZ_ASSISTANT_PRODUCTION_CONFIG_HASH:hash(profile)}),/production_not_approved/);assert.equal(profile.allowance.monthBudgetUsd,30);assert.equal(profile.allowance.dayBudgetUsd,1);assert.equal(JSON.parse(fs.readFileSync('assistant/config/production.json')).activationApproved,false);
 });
+import {architecturalHTML} from './architectural-design.mjs';

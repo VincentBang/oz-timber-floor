@@ -86,8 +86,30 @@ recorded anew by subsequent runs; WebKit is not proof of physical Safari.
    assistant tests/evaluations. Offline answer evaluations do not call GPT.
 8. Default, production and deploy-preview builds. All must omit the tool and QA
    assets, including when the feature flag is true in hosted contexts. Their
-   output must match. Local differences are restricted to floorplan assets and
-   the two Guides/two Contact integration entries.
+   output must match. Local differences include floorplan assets, the two
+   Guides/two Contact entries, and exact additive navigation/footer/homepage
+   discovery fragments. Removing only those exact fragments must restore all
+   other HTML byte-for-byte; unrelated page edits remain a failure.
+
+## Professional workspace checks (4 November 2026)
+
+The maintained runner now includes `scripts/floor-plan-discovery.test.mjs` and
+`scripts/floor-plan-qa/professional.mjs`. The browser stage checks homepage and
+mobile-menu discovery, review-without-measurement context, 20 m² calibration and
+tracing, zoom/pan without geometry mutation, explicit consent, reviewed area
+application to the existing contact field, and no submissions or external calls.
+It covers 1440/1024/768/390/320px and 200% text enlargement per engine.
+The output is still an estimate—not automatic room detection or verified site
+measurement. Coordinate inputs do not establish independent blind tracing.
+
+`scripts/floor-plan-qa/connected.mjs` adds actual pointer-path checks for the
+connected workspace: two-point input reveal, input focus, replacement-point
+cleanup, invalid length recovery, exact second-dimension result from mapped
+coordinates, stable canvas position across taps, mobile drawing focus, and review
+below the workspace. It tests five widths per engine and the actual consent /
+reviewed area handoff. Pointer precision is checked against a bound derived from
+one CSS pixel at the current drawing size, not a larger arbitrary area tolerance.
+The existing mobile area checks retain their original tolerance unchanged.
 
 ## Safety and reporting
 
