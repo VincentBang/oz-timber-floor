@@ -3939,4 +3939,14 @@
   <url><loc>https://oztimberfloor.com.au/laminate-timber-flooring-explained-cost-durability-use-cases/</loc></url>
   <url><loc>https://oztimberfloor.com.au/vinyl-timber-flooring-sydney-cost-durability-and-best-use-cases/</loc></url>
   <url><loc>https://oztimberfloor.com.au/ranges/stone-floor/</loc></url>
+  <url>
+    <loc>https://oztimberfloor.com.au/property-manager-flooring/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://oztimberfloor.com.au/insurance-flooring-repairs/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
 </urlset>

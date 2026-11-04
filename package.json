@@ -44,7 +44,9 @@
     "assistant:eval": "node scripts/assistant-eval.mjs",
     "assistant:preview": "node scripts/assistant-preview.mjs",
     "assistant:package-check": "node scripts/assistant-package-check.mjs",
-    "assistant:build:isolated": "node scripts/assistant-isolated-build.mjs"
+    "assistant:build:isolated": "node scripts/assistant-isolated-build.mjs",
+    "audience:pages:apply": "node scripts/audience-service-pages.mjs",
+    "audience:pages:check": "node scripts/audience-service-pages.mjs --check"
   },
   "devDependencies": {
     "parse5": "8.0.0"

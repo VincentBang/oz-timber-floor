@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self'; img-src 'self' blob: data:; font-src 'self' blob: data:; worker-src 'self'; connect-src 'self'; object-src 'none'; frame-src 'none'; form-action 'none'; base-uri 'none'">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="canonical" href="https://oztimberfloor.com.au/floor-plan/">
+  <link rel="icon" href="/assets/brand/favicon-32.png" sizes="32x32" type="image/png">
+  <title>Floor plan area tool | Oz Timber Floor</title>
+  <meta name="description" content="Estimate floor area by setting a scale on your own plan and tracing the rooms you want to include in an Oz Timber Floor enquiry.">
+  <link rel="stylesheet" href="./tool.css">
+  <script type="module" src="./tool.mjs"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to measurement tool</a>
+<header><div class="wrap"><a class="wordmark" href="/">Oz Timber Floor</a><a href="/contact/">Contact the team</a></div></header>
+<main id="main" class="wrap">
+  <section class="intro"><p class="eyebrow">Project planning</p><h1>Measure your floor plan</h1>
+    <p>Open a drawing, set its scale and trace the rooms you want to include. Your measurements give our team a starting point for a flooring enquiry.</p>
+    <p class="note">Your plan stays in this browser tab. Only an area estimate and room count can be shared with your enquiry. Check site measurements before ordering flooring.</p>
+  </section>
+  <noscript>Turn on JavaScript to use the measuring tool, or <a href="/contact/">send an enquiry with your approximate area</a>.</noscript>
+  <section class="card"><h2>1. Open a plan</h2><p>Choose a JPG, PNG or PDF with a clearly labelled distance. Check the displayed drawing against the original before tracing. Work on one page at a time. Files can be up to 20 MiB and PDFs up to 30 pages.</p>
+    <p id="tool-readiness" role="status">Preparing the measuring tool. If it does not become ready, <a href="/contact/">continue with an enquiry</a>.</p>
+    <div class="controls"><label>Plan file <input id="plan-file" type="file" disabled aria-describedby="tool-readiness" accept="image/jpeg,image/png,application/pdf,.jpg,.jpeg,.png,.pdf"></label>
+    <label id="page-controls" hidden>PDF page <select id="page-number"></select></label></div>
+  </section>
+  <div id="workspace" hidden>
+    <section class="card"><h2>2. Set the scale</h2>
+      <p>Mark the two ends of a known dimension on the drawing. Use a long, clearly labelled dimension on the same part of the sheet as your rooms. A photo taken at an angle or a detail drawn at a different scale can give a wrong area.</p>
+      <div class="controls"><label>Known distance <input id="known-distance" type="number" min="0.001" step="any" inputmode="decimal"></label>
+        <label>Unit <select id="distance-unit"><option value="m">Metres</option><option value="cm">Centimetres</option><option value="mm">Millimetres</option></select></label>
+        <button id="apply-scale" type="button">Set scale</button><button id="change-scale" type="button" hidden>Recalibrate</button></div>
+      <p id="scale-info"></p>
+      <div id="scale-check-controls" hidden><p>Check a second labelled dimension, ideally at right angles to the first. If the measured length disagrees with the drawing, check your scale or use a flat, undistorted plan.</p>
+        <button id="check-scale" type="button">Measure a second dimension</button>
+        <button id="stop-check" type="button" hidden>Return to room tracing</button>
+        <p id="check-result"></p>
+      </div>
+    </section>
+    <section class="card"><h2>3. Trace rooms</h2>
+      <p id="trace-help">Tap or click each corner in order. The tool closes the last edge for you. Rooms may share a wall.</p>
+      <div id="stage"><div id="raster"></div><svg id="overlay" role="img" aria-label="Floor plan with calibration marks and room outlines"></svg></div>
+      <details id="coords"><summary>Enter points using the keyboard</summary>
+        <p id="bounds"></p>
+        <div class="controls"><label>X position <input id="point-x" type="number" min="0" step="any" inputmode="decimal"></label>
+          <label>Y position <input id="point-y" type="number" min="0" step="any" inputmode="decimal"></label>
+          <button id="add-point" type="button">Add point</button></div>
+      </details>
+      <p id="point-count"></p>
+      <div class="controls"><label>Room name (optional) <input id="room-name" type="text" maxlength="48" autocomplete="off" placeholder="e.g. Living room"></label>
+        <button id="undo-point" type="button">Undo point</button>
+        <button id="clear-points" type="button">Clear points</button>
+        <button id="finish-room" type="button">Save room</button>
+        <button id="cancel-edit" type="button" hidden>Cancel edit</button></div>
+    </section>
+    <section class="card"><h2>4. Review your estimate</h2><p>Tick the rooms to include. The total covers traced floor area before any allowance for cutting, waste or stairs.</p>
+      <ul id="room-list" aria-label="Traced rooms"></ul>
+      <p id="empty-rooms">Saved rooms will appear here.</p>
+      <div class="total"><span>Included floor area</span><strong><output id="area-output">0.00</output> m²</strong><span id="room-count">0 rooms</span></div>
+      <label class="consent"><input type="checkbox" id="share-consent"> I want to carry this estimated area and included room count to the enquiry form.</label>
+      <button class="primary" type="button" id="handoff">Continue to enquiry</button>
+      <p>Leaving or refreshing this page clears the drawing and measurements.</p>
+    </section>
+  </div>
+  <p id="status" role="status" aria-live="polite" aria-atomic="true">Choose a plan to begin.</p>
+  <footer><a href="/contact/">Prefer to ask us directly? Contact Oz Timber Floor.</a></footer>
+</main>
+</body></html>

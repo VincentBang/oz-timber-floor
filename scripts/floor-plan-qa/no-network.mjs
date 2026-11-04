@@ -1,0 +1,2 @@
+import http from'node:http';import https from'node:https';import net from'node:net';import tls from'node:tls';import{syncBuiltinESMExports}from'node:module';
+const denied=()=>{throw Error('Network access forbidden in local-only QA');};globalThis.fetch=denied;http.request=denied;http.get=denied;https.request=denied;https.get=denied;net.connect=denied;net.createConnection=denied;tls.connect=denied;syncBuiltinESMExports();

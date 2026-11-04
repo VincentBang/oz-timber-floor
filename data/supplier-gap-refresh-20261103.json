@@ -1,0 +1,915 @@
+{
+  "schemaVersion": 1,
+  "reviewDate": "2026-11-03",
+  "localOnly": true,
+  "images": [
+    {
+      "id": "aspire-barn-oak",
+      "route": "/products/aspire-barn-oak/",
+      "rangeSlug": "aspire",
+      "colour": "Barn Oak",
+      "localFile": "/assets/products/supplier-reviewed-20261103/aspire-barn-oak.webp",
+      "width": 1000,
+      "height": 1000,
+      "sha256": "2b5289068ef4b1e70d458e413d0f3131d71fe66f56bd6dcd1d3a1773b4ec3c14",
+      "alt": "Aspire Barn Oak flooring colour reference",
+      "resolutionNote": "",
+      "before": {
+        "primaryImage": "/assets/images/categories/hybrid-flooring-thumbnail.webp",
+        "imageGallery": [
+          "/assets/images/categories/hybrid-flooring-thumbnail.webp"
+        ],
+        "galleryStatus": "range-image",
+        "altText": "Aspire Aspire Barn Oak hybrid flooring colour swatch"
+      },
+      "evidence": {
+        "kind": "exact-supplier-media-and-labelled-brochure",
+        "sourceUrl": "https://preferencefloors.com.au/wp-content/uploads/2022/02/Current-Aspire-Brochure-Updated-Cover-06-2019-Preference-Floors.pdf",
+        "sourceSha256": "2eab7d1072dac39d48968c9f4ec400fe179b3e7d234313b0353a41aafc662988",
+        "pdfPage": 5,
+        "pdfObjectId": 55,
+        "embeddedSha256": "4da1d09dca74b5ece355ffc59141e4557569419d4f9f5a9c8a401d55ea2ee4ee",
+        "caption": "Barn Oak",
+        "format": "Hybrid colour reference",
+        "availabilityConfirmed": false,
+        "mediaIndexUrl": "https://preferencefloors.com.au/wp-json/wp/v2/media?per_page=100&search=Barn%20Oak",
+        "mediaIndexSha256": "e6e1bc034fe9a6b036671f43c5cd38d12ac203cfcea06b1c8067a03de0eb0623",
+        "mediaId": 916,
+        "mediaTitle": "Barn Oak – Contemporary Decors [Aspire]",
+        "imageUrl": "https://preferencefloors.com.au/wp-content/uploads/2022/01/Barn-Oak-Contemporary-Decors-Aspire.jpg",
+        "imageSourceSha256": "2e2ea8458cd2a6b1552b2f4dbe35cc2822d1c503a26ed08967b3bc6dd69574b0"
+      }
+    },
+    {
+      "id": "aspire-buckskin",
+      "route": "/products/aspire-buckskin/",
+      "rangeSlug": "aspire",
+      "colour": "Buckskin",
+      "localFile": "/assets/products/supplier-reviewed-20261103/aspire-buckskin.webp",
+      "width": 1000,
+      "height": 1000,
+      "sha256": "eccd6048f2d155577ee1d5cea05cfad7e711fc929b3875ac2e5f6988fd870791",
+      "alt": "Aspire Buckskin flooring colour reference",
+      "resolutionNote": "",
+      "before": {
+        "primaryImage": "/assets/images/categories/hybrid-flooring-thumbnail.webp",
+        "imageGallery": [
+          "/assets/images/categories/hybrid-flooring-thumbnail.webp"
+        ],
+        "galleryStatus": "range-image",
+        "altText": "Aspire Aspire Buckskin hybrid flooring colour swatch"
+      },
+      "evidence": {
+        "kind": "exact-supplier-media-and-labelled-brochure",
+        "sourceUrl": "https://preferencefloors.com.au/wp-content/uploads/2022/02/Current-Aspire-Brochure-Updated-Cover-06-2019-Preference-Floors.pdf",
+        "sourceSha256": "2eab7d1072dac39d48968c9f4ec400fe179b3e7d234313b0353a41aafc662988",
+        "pdfPage": 5,
+        "pdfObjectId": 75,
+        "embeddedSha256": "145397669c9dd56751cee11f4cd122eb864f60ad6c9c078f962a89eeb31449d1",
+        "caption": "Buckskin",
+        "format": "Hybrid colour reference",
+        "availabilityConfirmed": false,
+        "mediaIndexUrl": "https://preferencefloors.com.au/wp-json/wp/v2/media?per_page=100&search=Buckskin",
+        "mediaIndexSha256": "f21a4c096fb15c37ffad4e2ee9af457aa419ed2a8677de45b5b0dfa289e85885",
+        "mediaId": 919,
+        "mediaTitle": "Buckskin – Contemporary Decors [Aspire]",
+        "imageUrl": "https://preferencefloors.com.au/wp-content/uploads/2022/01/Buckskin-Contemporary-Decors-Aspire.jpg",
+        "imageSourceSha256": "ec49b6e5d24865cfc099d80a64cbc799ccc7223c30293b70e1b6ecc0d034053f"
+      }
+    },
+    {
+      "id": "aspire-pale-gorge",
+      "route": "/products/aspire-pale-gorge/",
+      "rangeSlug": "aspire",
+      "colour": "Pale Gorge",
+      "localFile": "/assets/products/supplier-reviewed-20261103/aspire-pale-gorge.webp",
+      "width": 1000,
+      "height": 1000,
+      "sha256": "6ec9dd110838248576befb2c2fb86c703daafff21617ac9b562f1503b22c5315",
+      "alt": "Aspire Pale Gorge flooring colour reference",
+      "resolutionNote": "",
+      "before": {
+        "primaryImage": "/assets/images/categories/hybrid-flooring-thumbnail.webp",
+        "imageGallery": [
+          "/assets/images/categories/hybrid-flooring-thumbnail.webp"
+        ],
+        "galleryStatus": "range-image",
+        "altText": "Aspire Aspire Pale Gorge hybrid flooring colour swatch"
+      },
+      "evidence": {
+        "kind": "exact-supplier-media-and-labelled-brochure",
+        "sourceUrl": "https://preferencefloors.com.au/wp-content/uploads/2022/02/Current-Aspire-Brochure-Updated-Cover-06-2019-Preference-Floors.pdf",
+        "sourceSha256": "2eab7d1072dac39d48968c9f4ec400fe179b3e7d234313b0353a41aafc662988",
+        "pdfPage": 5,
+        "pdfObjectId": 67,
+        "embeddedSha256": "7565441eea9c373221f2737270bc6f8abb9c1a054fa910c39cd6dfdea0dd0652",
+        "caption": "Pale Gorge",
+        "format": "Hybrid colour reference",
+        "availabilityConfirmed": false,
+        "mediaIndexUrl": "https://preferencefloors.com.au/wp-json/wp/v2/media?per_page=100&search=Pale%20Gorge",
+        "mediaIndexSha256": "4a320dac3f2e3cc888464f56a64c282ef9c86f21fa832653e3fb95ebed0314fc",
+        "mediaId": 924,
+        "mediaTitle": "Pale Gorge – Contemporary Decors [Aspire]",
+        "imageUrl": "https://preferencefloors.com.au/wp-content/uploads/2022/01/Pale-Gorge-Contemporary-Decors-Aspire.jpg",
+        "imageSourceSha256": "22a3cdbb5a0854b24f15dd90053ff6e44bde6a97834935cee9918935a821ac09"
+      }
+    },
+    {
+      "id": "aspire-tempest",
+      "route": "/products/aspire-tempest/",
+      "rangeSlug": "aspire",
+      "colour": "Tempest",
+      "localFile": "/assets/products/supplier-reviewed-20261103/aspire-tempest.webp",
+      "width": 1000,
+      "height": 1000,
+      "sha256": "b68920945094cdac5e87234eb6be22c285ec18c1cb96503927c98d11659eb352",
+      "alt": "Aspire Tempest flooring colour reference",
+      "resolutionNote": "",
+      "before": {
+        "primaryImage": "/assets/images/categories/hybrid-flooring-thumbnail.webp",
+        "imageGallery": [
+          "/assets/images/categories/hybrid-flooring-thumbnail.webp"
+        ],
+        "galleryStatus": "range-image",
+        "altText": "Aspire Aspire Tempest hybrid flooring colour swatch"
+      },
+      "evidence": {
+        "kind": "exact-supplier-media-and-labelled-brochure",
+        "sourceUrl": "https://preferencefloors.com.au/wp-content/uploads/2022/02/Current-Aspire-Brochure-Updated-Cover-06-2019-Preference-Floors.pdf",
+        "sourceSha256": "2eab7d1072dac39d48968c9f4ec400fe179b3e7d234313b0353a41aafc662988",
+        "pdfPage": 5,
+        "pdfObjectId": 77,
+        "embeddedSha256": "60992a1086d303bf6b5335779e02c931e59255373657eb304ad16179173a617d",
+        "caption": "Tempest",
+        "format": "Hybrid colour reference",
+        "availabilityConfirmed": false,
+        "mediaIndexUrl": "https://preferencefloors.com.au/wp-json/wp/v2/media?per_page=100&search=Tempest",
+        "mediaIndexSha256": "13753523829c4f33940c67e42a0cc9de192e0eb98696a3fd12f1b6dc2e80bd20",
+        "mediaId": 928,
+        "mediaTitle": "Tempest – Contemporary Decors [Aspire]",
+        "imageUrl": "https://preferencefloors.com.au/wp-content/uploads/2022/01/Tempest-Contemporary-Decors-Aspire.jpg",
+        "imageSourceSha256": "6942396246701859f029de76159827a955ebc087ba560dc5ba75591ad67e7f65"
+      }
+    },
+    {
+      "id": "aspire-tumbleweed",
+      "route": "/products/aspire-tumbleweed/",
+      "rangeSlug": "aspire",
+      "colour": "Tumbleweed",
+      "localFile": "/assets/products/supplier-reviewed-20261103/aspire-tumbleweed.webp",
+      "width": 1000,
+      "height": 1000,
+      "sha256": "c55be9db5e5c14c8e6d5e86763cb9a99afc2599b9ab66a5226ac91628d23a1c2",
+      "alt": "Aspire Tumbleweed flooring colour reference",
+      "resolutionNote": "",
+      "before": {
+        "primaryImage": "/assets/images/categories/hybrid-flooring-thumbnail.webp",
+        "imageGallery": [
+          "/assets/images/categories/hybrid-flooring-thumbnail.webp"
+        ],
+        "galleryStatus": "range-image",
+        "altText": "Aspire Aspire Tumbleweed hybrid flooring colour swatch"
+      },
+      "evidence": {
+        "kind": "exact-supplier-media-and-labelled-brochure",
+        "sourceUrl": "https://preferencefloors.com.au/wp-content/uploads/2022/02/Current-Aspire-Brochure-Updated-Cover-06-2019-Preference-Floors.pdf",
+        "sourceSha256": "2eab7d1072dac39d48968c9f4ec400fe179b3e7d234313b0353a41aafc662988",
+        "pdfPage": 5,
+        "pdfObjectId": 73,
+        "embeddedSha256": "c9ba572a54c503db4d60f148167766f9178eeb9e5955bb86832f594b82e713e9",
+        "caption": "Tumbleweed",
+        "format": "Hybrid colour reference",
+        "availabilityConfirmed": false,
+        "mediaIndexUrl": "https://preferencefloors.com.au/wp-json/wp/v2/media?per_page=100&search=Tumbleweed",
+        "mediaIndexSha256": "2f13ca49fe16863d633adc6a926fb419fbb97c2ba6e148bc043d7996e1394b31",
+        "mediaId": 930,
+        "mediaTitle": "Tumbleweed – Contemporary Decors [Aspire]",
+        "imageUrl": "https://preferencefloors.com.au/wp-content/uploads/2022/01/Tumbleweed-Contemporary-Decors-Aspire.jpg",
+        "imageSourceSha256": "8b9ae045785832216efed604b1240091de53e16268db1587d59b8176a4444d86"
+      }
+    },
+    {
+      "id": "aspire-twilight-mist",
+      "route": "/products/aspire-twilight-mist/",
+      "rangeSlug": "aspire",
+      "colour": "Twilight Mist",
+      "localFile": "/assets/products/supplier-reviewed-20261103/aspire-twilight-mist.webp",
+      "width": 132,
+      "height": 220,
+      "sha256": "17fe4791b93598df992b83aff7740708c72690332bce2919799b710ca5822fdb",
+      "alt": "Aspire Twilight Mist flooring colour reference",
+      "resolutionNote": "Supplier brochure image is low resolution; original high-resolution image still desirable.",
+      "before": {
+        "primaryImage": "/assets/images/categories/hybrid-flooring-thumbnail.webp",
+        "imageGallery": [
+          "/assets/images/categories/hybrid-flooring-thumbnail.webp"
+        ],
+        "galleryStatus": "range-image",
+        "altText": "Aspire Aspire Twilight Mist hybrid flooring colour swatch"
+      },
+      "evidence": {
+        "kind": "labelled-historical-supplier-brochure",
+        "sourceUrl": "https://preferencefloors.com.au/wp-content/uploads/2022/02/Current-Aspire-Brochure-Updated-Cover-06-2019-Preference-Floors.pdf",
+        "sourceSha256": "2eab7d1072dac39d48968c9f4ec400fe179b3e7d234313b0353a41aafc662988",
+        "pdfPage": 5,
+        "pdfObjectId": 65,
+        "embeddedSha256": "ec90730f89238d729cd989f00eee1adf8e62e779fa59517546cf60d654b001cb",
+        "caption": "Twilight Mist",
+        "format": "Hybrid colour reference",
+        "availabilityConfirmed": false
+      }
+    },
+    {
+      "id": "pronto-chesterfield",
+      "route": "/products/pronto-chesterfield/",
+      "rangeSlug": "pronto",
+      "colour": "Chesterfield",
+      "localFile": "/assets/products/supplier-reviewed-20261103/pronto-chesterfield.webp",
+      "width": 478,
+      "height": 482,
+      "sha256": "8ae2dd032e2fc3cbbc27058fed8302a4e382d21ff79c072d7005043108a7c93a",
+      "alt": "Pronto Chesterfield flooring colour reference",
+      "resolutionNote": "",
+      "before": {
+        "primaryImage": "/assets/products/engineered-timber/floors/pronto/herringbone-misty-cove/herringbone-misty-cove-swatch.webp",
+        "imageGallery": [
+          "/assets/products/engineered-timber/floors/pronto/herringbone-misty-cove/herringbone-misty-cove-swatch.webp"
+        ],
+        "galleryStatus": "range-image",
+        "altText": "Pronto Pronto Chesterfield engineered timber flooring colour swatch"
+      },
+      "evidence": {
+        "kind": "labelled-historical-supplier-brochure",
+        "sourceUrl": "https://preferencefloors.com.au/wp-content/uploads/2022/02/Current-Pronto-Plank-_-Parquetry-Brochure-Dec-2021.pdf",
+        "sourceSha256": "af783ae9df8fd45045e6fd731b702269819acaeb1e64298ffeb7088c5d7277d2",
+        "pdfPage": 3,
+        "pdfObjectId": 248,
+        "embeddedSha256": "f00ab49dd8005f2be4925c4b97f7cfd1e6ca2fb0c94fd97384c6ee34eb7f1848",
+        "caption": "Chesterfield",
+        "format": "Wide plank",
+        "availabilityConfirmed": false
+      }
+    },
+    {
+      "id": "pronto-dockside",
+      "route": "/products/pronto-dockside/",
+      "rangeSlug": "pronto",
+      "colour": "Dockside",
+      "localFile": "/assets/products/supplier-reviewed-20261103/pronto-dockside.webp",
+      "width": 477,
+      "height": 482,
+      "sha256": "8da05a891add3d09e768b40e11ef53d7865139f03219d5d17dddcb4e42c89ad6",
+      "alt": "Pronto Dockside flooring colour reference",
+      "resolutionNote": "",
+      "before": {
+        "primaryImage": "/assets/products/engineered-timber/floors/pronto/herringbone-misty-cove/herringbone-misty-cove-swatch.webp",
+        "imageGallery": [
+          "/assets/products/engineered-timber/floors/pronto/herringbone-misty-cove/herringbone-misty-cove-swatch.webp"
+        ],
+        "galleryStatus": "range-image",
+        "altText": "Pronto Pronto Dockside engineered timber flooring colour swatch"
+      },
+      "evidence": {
+        "kind": "labelled-historical-supplier-brochure",
+        "sourceUrl": "https://preferencefloors.com.au/wp-content/uploads/2022/02/Current-Pronto-Plank-_-Parquetry-Brochure-Dec-2021.pdf",
+        "sourceSha256": "af783ae9df8fd45045e6fd731b702269819acaeb1e64298ffeb7088c5d7277d2",
+        "pdfPage": 3,
+        "pdfObjectId": 257,
+        "embeddedSha256": "ea4d93f82b922ca1480f4f1e6152319d1d4d0d1b781dfd7e3d03c7579593c18e",
+        "caption": "Dockside",
+        "format": "Wide plank",
+        "availabilityConfirmed": false
+      }
+    },
+    {
+      "id": "pronto-parchment",
+      "route": "/products/pronto-parchment/",
+      "rangeSlug": "pronto",
+      "colour": "Parchment",
+      "localFile": "/assets/products/supplier-reviewed-20261103/pronto-parchment.webp",
+      "width": 480,
+      "height": 481,
+      "sha256": "eed7981a89385d74cfe7b90945e51b0f1173270b8e523a49fbc9a0d004514a88",
+      "alt": "Pronto Parchment flooring colour reference",
+      "resolutionNote": "",
+      "before": {
+        "primaryImage": "/assets/products/engineered-timber/floors/pronto/herringbone-misty-cove/herringbone-misty-cove-swatch.webp",
+        "imageGallery": [
+          "/assets/products/engineered-timber/floors/pronto/herringbone-misty-cove/herringbone-misty-cove-swatch.webp"
+        ],
+        "galleryStatus": "range-image",
+        "altText": "Pronto Pronto Parchment engineered timber flooring colour swatch"
+      },
+      "evidence": {
+        "kind": "labelled-historical-supplier-brochure",
+        "sourceUrl": "https://preferencefloors.com.au/wp-content/uploads/2022/02/Current-Pronto-Plank-_-Parquetry-Brochure-Dec-2021.pdf",
+        "sourceSha256": "af783ae9df8fd45045e6fd731b702269819acaeb1e64298ffeb7088c5d7277d2",
+        "pdfPage": 3,
+        "pdfObjectId": 249,
+        "embeddedSha256": "0befc38a6852fa157b6375c3496a588640e1243c837e27390acf9e4d1a1c2efa",
+        "caption": "Parchment",
+        "format": "Wide plank",
+        "availabilityConfirmed": false
+      }
+    },
+    {
+      "id": "pronto-river-sand",
+      "route": "/products/pronto-river-sand/",
+      "rangeSlug": "pronto",
+      "colour": "River Sand",
+      "localFile": "/assets/products/supplier-reviewed-20261103/pronto-river-sand.webp",
+      "width": 478,
+      "height": 482,
+      "sha256": "924fbe60c2559ff1efb0ee2d78d671bb21cb69f8558d7273704e89a72bb17550",
+      "alt": "Pronto River Sand flooring colour reference",
+      "resolutionNote": "",
+      "before": {
+        "primaryImage": "/assets/products/engineered-timber/floors/pronto/herringbone-misty-cove/herringbone-misty-cove-swatch.webp",
+        "imageGallery": [
+          "/assets/products/engineered-timber/floors/pronto/herringbone-misty-cove/herringbone-misty-cove-swatch.webp"
+        ],
+        "galleryStatus": "range-image",
+        "altText": "Pronto Pronto River Sand engineered timber flooring colour swatch"
+      },
+      "evidence": {
+        "kind": "labelled-historical-supplier-brochure",
+        "sourceUrl": "https://preferencefloors.com.au/wp-content/uploads/2022/02/Current-Pronto-Plank-_-Parquetry-Brochure-Dec-2021.pdf",
+        "sourceSha256": "af783ae9df8fd45045e6fd731b702269819acaeb1e64298ffeb7088c5d7277d2",
+        "pdfPage": 3,
+        "pdfObjectId": 258,
+        "embeddedSha256": "f289881db768c6011c7ad02639ba0d2872972af0025f23ea64c3719c013276eb",
+        "caption": "River Sand",
+        "format": "Wide plank",
+        "availabilityConfirmed": false
+      }
+    },
+    {
+      "id": "pronto-seafoam",
+      "route": "/products/pronto-seafoam/",
+      "rangeSlug": "pronto",
+      "colour": "Seafoam",
+      "localFile": "/assets/products/supplier-reviewed-20261103/pronto-seafoam.webp",
+      "width": 482,
+      "height": 481,
+      "sha256": "969ba2f469ebabf4b5a918f566718f60271754030d597a9384ea6a221845b308",
+      "alt": "Pronto Seafoam flooring colour reference",
+      "resolutionNote": "",
+      "before": {
+        "primaryImage": "/assets/products/engineered-timber/floors/pronto/herringbone-misty-cove/herringbone-misty-cove-swatch.webp",
+        "imageGallery": [
+          "/assets/products/engineered-timber/floors/pronto/herringbone-misty-cove/herringbone-misty-cove-swatch.webp"
+        ],
+        "galleryStatus": "range-image",
+        "altText": "Pronto Pronto Seafoam engineered timber flooring colour swatch"
+      },
+      "evidence": {
+        "kind": "labelled-historical-supplier-brochure",
+        "sourceUrl": "https://preferencefloors.com.au/wp-content/uploads/2022/02/Current-Pronto-Plank-_-Parquetry-Brochure-Dec-2021.pdf",
+        "sourceSha256": "af783ae9df8fd45045e6fd731b702269819acaeb1e64298ffeb7088c5d7277d2",
+        "pdfPage": 3,
+        "pdfObjectId": 256,
+        "embeddedSha256": "c25ffc0a3545b2e1e9eb249b826d5cb5d39650706af4375ccf8ba4256ff1038a",
+        "caption": "Seafoam",
+        "format": "Wide plank",
+        "availabilityConfirmed": false
+      }
+    },
+    {
+      "id": "pronto-washed-pebble",
+      "route": "/products/pronto-washed-pebble/",
+      "rangeSlug": "pronto",
+      "colour": "Washed Pebble",
+      "localFile": "/assets/products/supplier-reviewed-20261103/pronto-washed-pebble.webp",
+      "width": 481,
+      "height": 482,
+      "sha256": "14b5c3f6554c6f635639cb33657d48c12c368c3caee0d8d551e567591c78795f",
+      "alt": "Pronto Washed Pebble flooring colour reference",
+      "resolutionNote": "",
+      "before": {
+        "primaryImage": "/assets/products/engineered-timber/floors/pronto/herringbone-misty-cove/herringbone-misty-cove-swatch.webp",
+        "imageGallery": [
+          "/assets/products/engineered-timber/floors/pronto/herringbone-misty-cove/herringbone-misty-cove-swatch.webp"
+        ],
+        "galleryStatus": "range-image",
+        "altText": "Pronto Pronto Washed Pebble engineered timber flooring colour swatch"
+      },
+      "evidence": {
+        "kind": "labelled-historical-supplier-brochure",
+        "sourceUrl": "https://preferencefloors.com.au/wp-content/uploads/2022/02/Current-Pronto-Plank-_-Parquetry-Brochure-Dec-2021.pdf",
+        "sourceSha256": "af783ae9df8fd45045e6fd731b702269819acaeb1e64298ffeb7088c5d7277d2",
+        "pdfPage": 3,
+        "pdfObjectId": 253,
+        "embeddedSha256": "bbfc3f9a24cf431354aee6de36abd0ded3aa6895bf566471524960c7d14f4922",
+        "caption": "Washed Pebble",
+        "format": "Wide plank",
+        "availabilityConfirmed": false
+      }
+    },
+    {
+      "id": "pronto-welsh-slate",
+      "route": "/products/pronto-welsh-slate/",
+      "rangeSlug": "pronto",
+      "colour": "Welsh Slate",
+      "localFile": "/assets/products/supplier-reviewed-20261103/pronto-welsh-slate.webp",
+      "width": 481,
+      "height": 482,
+      "sha256": "e69017f3ce8c20781b8fff94165bcc85b2462f9b9927032bee716fa78dfe90b6",
+      "alt": "Pronto Welsh Slate flooring colour reference",
+      "resolutionNote": "",
+      "before": {
+        "primaryImage": "/assets/products/engineered-timber/floors/pronto/herringbone-misty-cove/herringbone-misty-cove-swatch.webp",
+        "imageGallery": [
+          "/assets/products/engineered-timber/floors/pronto/herringbone-misty-cove/herringbone-misty-cove-swatch.webp"
+        ],
+        "galleryStatus": "range-image",
+        "altText": "Pronto Pronto Welsh Slate engineered timber flooring colour swatch"
+      },
+      "evidence": {
+        "kind": "labelled-historical-supplier-brochure",
+        "sourceUrl": "https://preferencefloors.com.au/wp-content/uploads/2022/02/Current-Pronto-Plank-_-Parquetry-Brochure-Dec-2021.pdf",
+        "sourceSha256": "af783ae9df8fd45045e6fd731b702269819acaeb1e64298ffeb7088c5d7277d2",
+        "pdfPage": 3,
+        "pdfObjectId": 254,
+        "embeddedSha256": "323f1a7bd02188cd51322271927f28ad1af764e3099df5ecbf0605fed7a26b77",
+        "caption": "Welsh Slate",
+        "format": "Wide plank",
+        "availabilityConfirmed": false
+      }
+    },
+    {
+      "id": "pronto-herringbone-chesterfield",
+      "route": "/products/pronto-herringbone-chesterfield/",
+      "rangeSlug": "pronto",
+      "colour": "Herringbone Chesterfield",
+      "localFile": "/assets/products/supplier-reviewed-20261103/pronto-herringbone-chesterfield.webp",
+      "width": 481,
+      "height": 481,
+      "sha256": "c24a4d5b97c3b853c8d5e124eac56adb747fd7381a4f88f8dfaa6b5850642bb8",
+      "alt": "Pronto Herringbone Chesterfield flooring colour reference",
+      "resolutionNote": "",
+      "before": {
+        "primaryImage": "/assets/products/engineered-timber/floors/pronto/herringbone-misty-cove/herringbone-misty-cove-swatch.webp",
+        "imageGallery": [
+          "/assets/products/engineered-timber/floors/pronto/herringbone-misty-cove/herringbone-misty-cove-swatch.webp"
+        ],
+        "galleryStatus": "range-image",
+        "altText": "Pronto Pronto Herringbone Chesterfield engineered timber flooring colour swatch"
+      },
+      "evidence": {
+        "kind": "labelled-historical-supplier-brochure",
+        "sourceUrl": "https://preferencefloors.com.au/wp-content/uploads/2022/02/Current-Pronto-Plank-_-Parquetry-Brochure-Dec-2021.pdf",
+        "sourceSha256": "af783ae9df8fd45045e6fd731b702269819acaeb1e64298ffeb7088c5d7277d2",
+        "pdfPage": 3,
+        "pdfObjectId": 259,
+        "embeddedSha256": "c8a686080b84e841c9980422309f77c17ede7dd47071ef7c31f382cd78179e09",
+        "caption": "Chesterfield",
+        "format": "Herringbone",
+        "availabilityConfirmed": false
+      }
+    },
+    {
+      "id": "pronto-herringbone-parchment",
+      "route": "/products/pronto-herringbone-parchment/",
+      "rangeSlug": "pronto",
+      "colour": "Herringbone Parchment",
+      "localFile": "/assets/products/supplier-reviewed-20261103/pronto-herringbone-parchment.webp",
+      "width": 481,
+      "height": 481,
+      "sha256": "84bb398e43072d9b024bc7fabe4ccc178487a695ac82d4e324dda97154c0634a",
+      "alt": "Pronto Herringbone Parchment flooring colour reference",
+      "resolutionNote": "",
+      "before": {
+        "primaryImage": "/assets/products/engineered-timber/floors/pronto/herringbone-misty-cove/herringbone-misty-cove-swatch.webp",
+        "imageGallery": [
+          "/assets/products/engineered-timber/floors/pronto/herringbone-misty-cove/herringbone-misty-cove-swatch.webp"
+        ],
+        "galleryStatus": "range-image",
+        "altText": "Pronto Pronto Herringbone Parchment engineered timber flooring colour swatch"
+      },
+      "evidence": {
+        "kind": "labelled-historical-supplier-brochure",
+        "sourceUrl": "https://preferencefloors.com.au/wp-content/uploads/2022/02/Current-Pronto-Plank-_-Parquetry-Brochure-Dec-2021.pdf",
+        "sourceSha256": "af783ae9df8fd45045e6fd731b702269819acaeb1e64298ffeb7088c5d7277d2",
+        "pdfPage": 3,
+        "pdfObjectId": 260,
+        "embeddedSha256": "67166bceb0b5e3bedfdf8fd5df6337980a0a5205f1f8fbea86aef93eb82de386",
+        "caption": "Parchment",
+        "format": "Herringbone",
+        "availabilityConfirmed": false
+      }
+    },
+    {
+      "id": "pronto-herringbone-seafoam",
+      "route": "/products/pronto-herringbone-seafoam/",
+      "rangeSlug": "pronto",
+      "colour": "Herringbone Seafoam",
+      "localFile": "/assets/products/supplier-reviewed-20261103/pronto-herringbone-seafoam.webp",
+      "width": 481,
+      "height": 481,
+      "sha256": "0a05964ac36844bff0520ad27a9a47718b4adb259eb3b5b5539e40d3b469a66b",
+      "alt": "Pronto Herringbone Seafoam flooring colour reference",
+      "resolutionNote": "",
+      "before": {
+        "primaryImage": "/assets/products/engineered-timber/floors/pronto/herringbone-misty-cove/herringbone-misty-cove-swatch.webp",
+        "imageGallery": [
+          "/assets/products/engineered-timber/floors/pronto/herringbone-misty-cove/herringbone-misty-cove-swatch.webp"
+        ],
+        "galleryStatus": "range-image",
+        "altText": "Pronto Pronto Herringbone Seafoam engineered timber flooring colour swatch"
+      },
+      "evidence": {
+        "kind": "labelled-historical-supplier-brochure",
+        "sourceUrl": "https://preferencefloors.com.au/wp-content/uploads/2022/02/Current-Pronto-Plank-_-Parquetry-Brochure-Dec-2021.pdf",
+        "sourceSha256": "af783ae9df8fd45045e6fd731b702269819acaeb1e64298ffeb7088c5d7277d2",
+        "pdfPage": 3,
+        "pdfObjectId": 250,
+        "embeddedSha256": "833b37284cdd0caf62139ad2567ff1f2c0e5c69af5a21997e169f3541d5cc649",
+        "caption": "Seafoam",
+        "format": "Herringbone",
+        "availabilityConfirmed": false
+      }
+    },
+    {
+      "id": "pronto-herringbone-washed-pebble",
+      "route": "/products/pronto-herringbone-washed-pebble/",
+      "rangeSlug": "pronto",
+      "colour": "Herringbone Washed Pebble",
+      "localFile": "/assets/products/supplier-reviewed-20261103/pronto-herringbone-washed-pebble.webp",
+      "width": 481,
+      "height": 481,
+      "sha256": "544154a80dcbc898fd59dd65e312910e74ddfcfcd00206ef9733e31c8e11f9bc",
+      "alt": "Pronto Herringbone Washed Pebble flooring colour reference",
+      "resolutionNote": "",
+      "before": {
+        "primaryImage": "/assets/products/engineered-timber/floors/pronto/herringbone-misty-cove/herringbone-misty-cove-swatch.webp",
+        "imageGallery": [
+          "/assets/products/engineered-timber/floors/pronto/herringbone-misty-cove/herringbone-misty-cove-swatch.webp"
+        ],
+        "galleryStatus": "range-image",
+        "altText": "Pronto Pronto Herringbone Washed Pebble engineered timber flooring colour swatch"
+      },
+      "evidence": {
+        "kind": "labelled-historical-supplier-brochure",
+        "sourceUrl": "https://preferencefloors.com.au/wp-content/uploads/2022/02/Current-Pronto-Plank-_-Parquetry-Brochure-Dec-2021.pdf",
+        "sourceSha256": "af783ae9df8fd45045e6fd731b702269819acaeb1e64298ffeb7088c5d7277d2",
+        "pdfPage": 3,
+        "pdfObjectId": 251,
+        "embeddedSha256": "f3e58942dbdc7de6100271154a9d6a3a64429986ac372b72fc72e0656de4bf24",
+        "caption": "Washed Pebble",
+        "format": "Herringbone",
+        "availabilityConfirmed": false
+      }
+    },
+    {
+      "id": "-select-blackbutt",
+      "route": "/products/select-blackbutt/",
+      "rangeSlug": "-select-australian-timber",
+      "colour": "Select Blackbutt",
+      "localFile": "/assets/products/supplier-reviewed-20261103/select-blackbutt.webp",
+      "width": 247,
+      "height": 248,
+      "sha256": "2b103387699bcde3188716ad5ab453330cd07b1b399e69e05cf4b0e0ab212055",
+      "alt": "Select Blackbutt flooring colour reference",
+      "resolutionNote": "Supplier brochure image is low resolution; original high-resolution image still desirable.",
+      "before": {
+        "primaryImage": "/assets/products/hybrid/elite-6mm/select-blackbutt.webp",
+        "imageGallery": [
+          "/assets/products/hybrid/elite-6mm/select-blackbutt.webp"
+        ],
+        "galleryStatus": "range-image",
+        "altText": "Select Australian Timber Select Blackbutt engineered timber flooring colour swatch"
+      },
+      "evidence": {
+        "kind": "labelled-historical-supplier-brochure",
+        "sourceUrl": "https://preferencefloors.com.au/wp-content/uploads/2022/02/Select-Australian-Timber-E-Brochure-Spring-2022.pdf",
+        "sourceSha256": "53dd132017a5ec51f5624152cf971953863136432d302515099dedef7b3635c3",
+        "pdfPage": 4,
+        "pdfObjectId": 30,
+        "embeddedSha256": "dd934a859f85d63110175e6a6197204f95f17679745c2a1e7f442ecd519deec0",
+        "caption": "Blackbutt",
+        "format": "Engineered timber colour reference",
+        "availabilityConfirmed": false
+      }
+    },
+    {
+      "id": "-select-spotted-gum",
+      "route": "/products/select-spotted-gum/",
+      "rangeSlug": "-select-australian-timber",
+      "colour": "Select Spotted Gum",
+      "localFile": "/assets/products/supplier-reviewed-20261103/select-spotted-gum.webp",
+      "width": 1000,
+      "height": 1000,
+      "sha256": "591d20c29d264f72ec5bb7fb4a15670bd35d1457d50ea37246cf07d1c42a20b0",
+      "alt": "Select Spotted Gum flooring colour reference",
+      "resolutionNote": "",
+      "before": {
+        "primaryImage": "/assets/products/hybrid/elite-6mm/select-spotted-gum.webp",
+        "imageGallery": [
+          "/assets/products/hybrid/elite-6mm/select-spotted-gum.webp"
+        ],
+        "galleryStatus": "range-image",
+        "altText": "Select Australian Timber Select Spotted Gum engineered timber flooring colour swatch"
+      },
+      "evidence": {
+        "kind": "exact-supplier-media-and-labelled-brochure",
+        "sourceUrl": "https://preferencefloors.com.au/wp-content/uploads/2022/02/Select-Australian-Timber-E-Brochure-Spring-2022.pdf",
+        "sourceSha256": "53dd132017a5ec51f5624152cf971953863136432d302515099dedef7b3635c3",
+        "pdfPage": 4,
+        "pdfObjectId": 23,
+        "embeddedSha256": "193baf6ecaa20e74b7acff5f8c9067bd67273ec5fdfac7b05b22230ef18acb70",
+        "caption": "Spotted Gum",
+        "format": "Engineered timber colour reference",
+        "availabilityConfirmed": false,
+        "mediaIndexUrl": "https://preferencefloors.com.au/wp-json/wp/v2/media?per_page=100&search=Spotted%20Gum",
+        "mediaIndexSha256": "4e7d57db37327703b42ec40a7c68e2bc362ed47f9fd33f9724ed47c2f1d35790",
+        "mediaId": 655,
+        "mediaTitle": "Spotted Gum [Preference Select]",
+        "imageUrl": "https://preferencefloors.com.au/wp-content/uploads/2022/01/Spotted-Gum-Preference-Select.jpg",
+        "imageSourceSha256": "bd8c1d0626920415b39b703391eee53ea088369d013406152f0b2ba373b6da5b"
+      }
+    },
+    {
+      "id": "-select-jarrah",
+      "route": "/products/select-jarrah/",
+      "rangeSlug": "-select-australian-timber",
+      "colour": "Select Jarrah",
+      "localFile": "/assets/products/supplier-reviewed-20261103/select-jarrah.webp",
+      "width": 1000,
+      "height": 1000,
+      "sha256": "d041a3ad0b2d99145da031b5eeff545f93a24b8930852c5e0bd9a70a66cd04e3",
+      "alt": "Select Jarrah flooring colour reference",
+      "resolutionNote": "",
+      "before": {
+        "primaryImage": "/assets/products/engineered-timber/hardwood-collection/mb-blackbutt/mb-blackbutt-swatch.webp",
+        "imageGallery": [
+          "/assets/products/engineered-timber/hardwood-collection/mb-blackbutt/mb-blackbutt-swatch.webp"
+        ],
+        "galleryStatus": "range-image",
+        "altText": "Select Australian Timber Select Jarrah engineered timber flooring colour swatch"
+      },
+      "evidence": {
+        "kind": "exact-supplier-media-and-labelled-brochure",
+        "sourceUrl": "https://preferencefloors.com.au/wp-content/uploads/2022/02/Select-Australian-Timber-E-Brochure-Spring-2022.pdf",
+        "sourceSha256": "53dd132017a5ec51f5624152cf971953863136432d302515099dedef7b3635c3",
+        "pdfPage": 4,
+        "pdfObjectId": 24,
+        "embeddedSha256": "09f790ba42631dc5f0b3a194c041ab27fa7fc9468b9ffa81b451a2b26f1652a8",
+        "caption": "Jarrah",
+        "format": "Engineered timber colour reference",
+        "availabilityConfirmed": false,
+        "mediaIndexUrl": "https://preferencefloors.com.au/wp-json/wp/v2/media?per_page=100&search=Jarrah",
+        "mediaIndexSha256": "8332312031a151c2f530eeb2fe89302b906a54f418b593b6bcb1d284ec0b5756",
+        "mediaId": 996,
+        "mediaTitle": "Jarrah [Preference Select]",
+        "imageUrl": "https://preferencefloors.com.au/wp-content/uploads/2022/01/Jarrah-Preference-Select-1.jpg",
+        "imageSourceSha256": "c7ac51cdd592b8ea6466256278533a70ca06bd5ecf09eb627431dbbd300817c8"
+      }
+    },
+    {
+      "id": "-select-sydney-blue-gum",
+      "route": "/products/select-sydney-blue-gum/",
+      "rangeSlug": "-select-australian-timber",
+      "colour": "Select Sydney Blue Gum",
+      "localFile": "/assets/products/supplier-reviewed-20261103/select-sydney-blue-gum.webp",
+      "width": 1000,
+      "height": 1000,
+      "sha256": "a761cb33565c3ba545ac877157f4f5f1b68cd0b24fb3d30ecbb4e308655ffd8a",
+      "alt": "Select Sydney Blue Gum flooring colour reference",
+      "resolutionNote": "",
+      "before": {
+        "primaryImage": "/assets/products/engineered-timber/hardwood-collection/mb-blackbutt/mb-blackbutt-swatch.webp",
+        "imageGallery": [
+          "/assets/products/engineered-timber/hardwood-collection/mb-blackbutt/mb-blackbutt-swatch.webp"
+        ],
+        "galleryStatus": "range-image",
+        "altText": "Select Australian Timber Select Sydney Blue Gum engineered timber flooring colour swatch"
+      },
+      "evidence": {
+        "kind": "exact-supplier-media-and-labelled-brochure",
+        "sourceUrl": "https://preferencefloors.com.au/wp-content/uploads/2022/02/Select-Australian-Timber-E-Brochure-Spring-2022.pdf",
+        "sourceSha256": "53dd132017a5ec51f5624152cf971953863136432d302515099dedef7b3635c3",
+        "pdfPage": 4,
+        "pdfObjectId": 29,
+        "embeddedSha256": "755c493c95ec5c46b885754f87fb8ee747aa2ff014af50e01ad5ecca1fd0097d",
+        "caption": "Sydney Blue Gum",
+        "format": "Engineered timber colour reference",
+        "availabilityConfirmed": false,
+        "mediaIndexUrl": "https://preferencefloors.com.au/wp-json/wp/v2/media?per_page=100&search=Sydney%20Blue%20Gum",
+        "mediaIndexSha256": "161b0c1bdc2d6d17ad755c015105de9ec0dd020bff09d601a5c4cc02968a0109",
+        "mediaId": 994,
+        "mediaTitle": "Sydney Blue Gum [Preference Select]",
+        "imageUrl": "https://preferencefloors.com.au/wp-content/uploads/2022/01/Sydney-Blue-Gum-Preference-Select.jpg",
+        "imageSourceSha256": "e358d0d1ac5e2d89a1d266da207dc24bec5b3516d85394a3730029e0fccf0e7f"
+      }
+    },
+    {
+      "id": "aspire-homstead",
+      "route": "/products/aspire-homstead/",
+      "rangeSlug": "aspire",
+      "colour": "Homestead",
+      "localFile": "/assets/products/supplier-reviewed-20261103/aspire-homstead.webp",
+      "width": 540,
+      "height": 540,
+      "sha256": "306668caf9e5eaec6f40cf5752974140a026cc6c9850d4a442c164912d4b109a",
+      "alt": "Aspire Homestead flooring colour reference",
+      "resolutionNote": "",
+      "before": {
+        "primaryImage": "/assets/images/categories/hybrid-flooring-thumbnail.webp",
+        "imageGallery": [
+          "/assets/images/categories/hybrid-flooring-thumbnail.webp"
+        ],
+        "galleryStatus": "range-image",
+        "altText": "Aspire Aspire Homestead hybrid flooring colour swatch"
+      },
+      "evidence": {
+        "kind": "exact-supplier-filter-and-product-detail",
+        "sourceUrl": "https://preferencefloors.com.au/floor/homestead/",
+        "sourceSha256": "e2eaafc7bc6258ff48f305e9f4be0a06ef7b45a6fd90828a444591307e3a39df",
+        "imageUrl": "https://preferencefloors.com.au/wp-content/uploads/2022/01/Homestead-Contemporary-Decors-Aspire-540x540.jpg",
+        "imageSourceSha256": "3f4f3420ead3becfd83c743d5e2e805fe6317cb03667221a01fae66e4d5c0847",
+        "filterSourceSha256": "1d33811ab9553fadb404791ecc331d1c04e43d4867a0921954e3aa2f574c1d5e",
+        "supplierTitle": "Homestead",
+        "supplierBrand": "Aspire RCB",
+        "availabilityConfirmed": false
+      }
+    },
+    {
+      "id": "aspire-qld-spotted-gum",
+      "route": "/products/aspire-qld-spotted-gum/",
+      "rangeSlug": "aspire",
+      "colour": "QLD Spotted Gum",
+      "localFile": "/assets/products/supplier-reviewed-20261103/aspire-qld-spotted-gum.webp",
+      "width": 540,
+      "height": 540,
+      "sha256": "28fda3b267cf0b66ee25a9977dc1b18990e9e2ae3517708603879d9130efb53e",
+      "alt": "Aspire QLD Spotted Gum flooring colour reference",
+      "resolutionNote": "",
+      "before": {
+        "primaryImage": "/assets/images/categories/hybrid-flooring-thumbnail.webp",
+        "imageGallery": [
+          "/assets/images/categories/hybrid-flooring-thumbnail.webp"
+        ],
+        "galleryStatus": "range-image",
+        "altText": "Aspire Aspire QLD Spotted Gum hybrid flooring colour swatch"
+      },
+      "evidence": {
+        "kind": "exact-supplier-filter-and-product-detail",
+        "sourceUrl": "https://preferencefloors.com.au/floor/qld-spotted-gum-hybrid-flooring/",
+        "sourceSha256": "6549db785695c167efe3a94004e39c683f8f07cf44235b5f6d71fe187dfd0a5a",
+        "imageUrl": "https://preferencefloors.com.au/wp-content/uploads/2022/01/QLD-Spotted-Gum-Australian-Timber-Aspire-540x540.jpg",
+        "imageSourceSha256": "cf94d828c16348d1a3884ea150d3f1f9a0bcaec3917c7ed9895168278eca3e9c",
+        "filterSourceSha256": "1d33811ab9553fadb404791ecc331d1c04e43d4867a0921954e3aa2f574c1d5e",
+        "supplierTitle": "QLD Spotted Gum",
+        "supplierBrand": "Aspire RCB",
+        "availabilityConfirmed": false
+      }
+    },
+    {
+      "id": "oakleaf-hd-plus-bellmore-oak",
+      "route": "/products/oakleaf-hd-plus-bellmore-oak/",
+      "rangeSlug": "oakleaf",
+      "colour": "Bellmore Oak",
+      "localFile": "/assets/products/supplier-reviewed-20261103/oakleaf-hd-plus-bellmore-oak.webp",
+      "width": 540,
+      "height": 542,
+      "sha256": "2c653e8766691463e42786a9fe90f1b5cf5e469e5e6829fac7b3dbe5115e147d",
+      "alt": "Oakleaf HD PLUS Bellmore Oak flooring colour reference",
+      "resolutionNote": "",
+      "before": {
+        "primaryImage": "/assets/products/laminate/preference-classic-laminate/classic-laminate-blackbutt-swatch.jpg",
+        "imageGallery": [
+          "/assets/products/laminate/preference-classic-laminate/classic-laminate-blackbutt-swatch.jpg"
+        ],
+        "galleryStatus": "supplier-image-missing",
+        "altText": "Oakleaf HD PLUS Bellmore Oak laminate colour swatch"
+      },
+      "evidence": {
+        "kind": "exact-supplier-filter-and-product-detail",
+        "sourceUrl": "https://preferencefloors.com.au/floor/bellmore-oak/",
+        "sourceSha256": "e08f6b74a35ed1cd2abb80b3cb4bc82d7acabd97d59befa3ca1c487bb7a29a39",
+        "imageUrl": "https://preferencefloors.com.au/wp-content/uploads/2026/04/LOH-Bellmore-Oak-540x542.jpg",
+        "imageSourceSha256": "e7445adc4b2609b772d164881975cc6d54b130bee60c7cc2ab1c6e154471d3ae",
+        "filterSourceSha256": "1d33811ab9553fadb404791ecc331d1c04e43d4867a0921954e3aa2f574c1d5e",
+        "supplierTitle": "Bellmore Oak",
+        "supplierBrand": "Oakleaf HD PLUS",
+        "availabilityConfirmed": false
+      }
+    },
+    {
+      "id": "oakleaf-hd-plus-hampton-oak",
+      "route": "/products/oakleaf-hd-plus-hampton-oak/",
+      "rangeSlug": "oakleaf",
+      "colour": "Hampton Oak",
+      "localFile": "/assets/products/supplier-reviewed-20261103/oakleaf-hd-plus-hampton-oak.webp",
+      "width": 540,
+      "height": 542,
+      "sha256": "111891d9c418af79022d495ab97c62523e60d5d97d96f47ad7ce5caef6ede069",
+      "alt": "Oakleaf HD PLUS Hampton Oak flooring colour reference",
+      "resolutionNote": "",
+      "before": {
+        "primaryImage": "/assets/products/laminate/preference-classic-laminate/classic-laminate-blackbutt-swatch.jpg",
+        "imageGallery": [
+          "/assets/products/laminate/preference-classic-laminate/classic-laminate-blackbutt-swatch.jpg"
+        ],
+        "galleryStatus": "supplier-image-missing",
+        "altText": "Oakleaf HD PLUS Hampton Oak laminate colour swatch"
+      },
+      "evidence": {
+        "kind": "exact-supplier-filter-and-product-detail",
+        "sourceUrl": "https://preferencefloors.com.au/floor/hampton-oak/",
+        "sourceSha256": "c4c67010f027e9bcb0c5017dd24361688c6706851c3da3d947b2555298e36940",
+        "imageUrl": "https://preferencefloors.com.au/wp-content/uploads/2026/04/Hampton-Oak-540x542.jpg",
+        "imageSourceSha256": "5645a7358e93bb609ee92a4bb1e6e288d2fe7a6b403e641cf5e0cfb867e69103",
+        "filterSourceSha256": "1d33811ab9553fadb404791ecc331d1c04e43d4867a0921954e3aa2f574c1d5e",
+        "supplierTitle": "Hampton Oak",
+        "supplierBrand": "Oakleaf HD PLUS",
+        "availabilityConfirmed": false
+      }
+    },
+    {
+      "id": "oakleaf-hd-plus-windsor",
+      "route": "/products/oakleaf-hd-plus-windsor/",
+      "rangeSlug": "oakleaf",
+      "colour": "Windsor",
+      "localFile": "/assets/products/supplier-reviewed-20261103/oakleaf-hd-plus-windsor.webp",
+      "width": 540,
+      "height": 542,
+      "sha256": "b83fd9dde5ac70c7a0e4d0b151ca07767aea5ff754d73267e4c39552c1fcea9b",
+      "alt": "Oakleaf HD PLUS Windsor flooring colour reference",
+      "resolutionNote": "",
+      "before": {
+        "primaryImage": "/assets/products/laminate/preference-classic-laminate/classic-laminate-blackbutt-swatch.jpg",
+        "imageGallery": [
+          "/assets/products/laminate/preference-classic-laminate/classic-laminate-blackbutt-swatch.jpg"
+        ],
+        "galleryStatus": "supplier-image-missing",
+        "altText": "Oakleaf HD PLUS Windsor laminate colour swatch"
+      },
+      "evidence": {
+        "kind": "exact-supplier-filter-and-product-detail",
+        "sourceUrl": "https://preferencefloors.com.au/floor/windsor/",
+        "sourceSha256": "9fdd650c283a6ef73660d0c3b6186ba1346ce2980e53fcdce37b38e2543c1588",
+        "imageUrl": "https://preferencefloors.com.au/wp-content/uploads/2026/04/Windsor-540x542.jpg",
+        "imageSourceSha256": "c3e3adf74c3c41deea16bb58c61869cd22dc7b321996b48e3ff69e879e87d6dd",
+        "filterSourceSha256": "1d33811ab9553fadb404791ecc331d1c04e43d4867a0921954e3aa2f574c1d5e",
+        "supplierTitle": "Windsor",
+        "supplierBrand": "Oakleaf HD PLUS",
+        "availabilityConfirmed": false
+      }
+    }
+  ],
+  "ranges": [
+    {
+      "id": "swish",
+      "sourceUrl": "https://ecoflooring.com.au/wp-content/uploads/2025/10/Swish-Native-Flooring-Brochure-web_Oct_25.pdf",
+      "sourceSha256": "61925ea4e48b64cd64478087b7680f10d8bc311a6313298dd8afe0cf8a6b617c",
+      "page": 2,
+      "before": {
+        "thickness": "To confirm",
+        "boardSize": "To confirm",
+        "installationMethod": "Installation method should be confirmed against the current product sheet, site conditions and project scope."
+      },
+      "fields": {
+        "thickness": "14mm",
+        "boardSize": "1900 x 136 or 189 x 14mm",
+        "installationMethod": "Tongue and groove; floating over underlay or glue down. Confirm product-specific subfloor and installation requirements."
+      }
+    },
+    {
+      "id": "elk-falls",
+      "sourceUrl": "https://preferencefloors.com.au/wp-content/uploads/2026/07/Current-Specification-14mm-Elk-Falls-Hickory.pdf",
+      "sourceSha256": "10d09c51190bef4e7d335d01bb659939eb7cb45dc243dbe78f0fc9cca96778ad",
+      "page": 1,
+      "before": {
+        "thickness": "",
+        "boardSize": "",
+        "packSizeM2": "",
+        "installationMethod": "Engineered timber installation method to confirm before ordering."
+      },
+      "fields": {
+        "thickness": "14mm",
+        "boardSize": "1900 x 189 x 14mm",
+        "packSizeM2": "2.155",
+        "installationMethod": "Floating click installation. Confirm product-specific subfloor and installation requirements."
+      }
+    }
+  ],
+  "remaining": [
+    {
+      "id": "aspire-warm-spring",
+      "reason": "Local singular Warm Spring differs from supplier Warm Springs. Exact alias/SKU confirmation required; candidate image captured but not applied."
+    },
+    {
+      "id": "pronto-portofino",
+      "reason": "Not found among the exact current listings or labelled Pronto historical brochure swatches reviewed. Need exact image/range/format and current status; absence is not discontinuation."
+    }
+  ],
+  "constraints": {
+    "changeUrls": false,
+    "changeIndexation": false,
+    "changeRetirements": false,
+    "changeStockClaims": false,
+    "changeRatings": false,
+    "changeApprovalHashes": false
+  }
+}

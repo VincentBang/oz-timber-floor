@@ -1,5 +1,184 @@
 # Oz Timber Floor Status
 
+## 4 November 2026 — Git-only checkpoint of deployed source
+
+Owner authorised synchronising the already deployed pages, supplier improvements
+and floorplan source to GitHub, with no deployment. Commit uses skip-CI/Netlify
+markers; local rebuilt assistant corpus/source-manifest remain uncommitted.
+Current production remains `6aeacd565b1124aa60b776dd`; live floorplan, chatbot,
+USD30 monthly and USD1 daily controls must remain unchanged. Source/release
+relationship and default-build warning: `docs/releases/2026-11-04-source-sync.md`.
+
+## 4 November 2026 — audience pages and supplier improvements released together
+
+Owner authorised one combined deployment, preserving live floorplan and chatbot.
+Published production deploy `6aeacd565b1124aa60b776dd`: property-manager-flooring
+and insurance-flooring-repairs pages, discovery links, reviewed supplier imagery
+and specifications, and three Oakleaf arrival-label removals. Stock status and
+unresolved product identities unchanged. Sitemap now 775 entries, two additions.
+All 6,574 provider file hashes match the sealed package. Live floorplan assets,
+contact/uploads and both existing server functions/profile remain unchanged.
+USD30 monthly and USD1 daily controls retained; no ledger writes or resets.
+No push, commit, paid calls or real submissions. One production deployment only.
+
+Nine local validation stages passed, including 58 scoped and 218 website tests.
+All three browser engines passed audience/handoff checks; 126 supplier desktop/
+mobile states passed with expanded galleries. Live Chromium audience and complete
+floorplan measurement/handoff checks passed without submitting a form. Existing
+JPEG/console/device/screen-reader risk acceptance is preserved, not resolved by
+this release. Rebuilt local assistant knowledge was not published or rebound.
+Rollback: `6aeac948432569013f2f5313` (includes the live floorplan).
+Report: `/Users/daibang/Downloads/OZ_PAGES_SUPPLIER_RELEASE_2026-11-04/REPORT.txt`.
+
+## 4 November 2026 — floorplan-only controlled production activation
+
+Owner explicitly accepted documented JPEG, console and unverified physical-device/
+spoken-screen-reader risks and authorised one exact-package production deployment.
+Published `6aeac948432569013f2f5313` at https://oztimberfloor.com.au/floor-plan/.
+All 6,543 provider file digests and both existing function archives/runtime versions
+match the prepared package. No push, staging, commit, paid calls or real submissions.
+Provider settings, live chatbot/profile, email functions, USD30/month and USD1/day
+controls remain unchanged; no ledger writes or reset. 773 sitemap URLs preserved.
+
+Fresh 21 unit tests, whitespace check, sealed artifact verification and six HTTPS
+checks pass. Live browser confirmed new-tab entry, JPG loading, 20m² measurement
+and explicit review/application into the Avala Blackbutt enquiry. Existing consent
+stays unchecked; three optional attachment fields and /thank-you/ action remain.
+No captured console errors. No real enquiry sent or paid assistant response asked.
+
+Risk acceptance is not a claim that historical JPEG/console causes were fixed or
+physical devices/spoken screen readers tested. Newer supplier/audience/knowledge
+work remains local. Rollback deploy: `6ae9ac0681e62577b8c282e9`.
+IMPORTANT: ordinary builds still exclude floorplan; future releases must preserve
+this active feature through the reviewed packaging workflow, not silently remove it.
+Evidence: `/Users/daibang/Downloads/OZ_FLOORPLAN_LIVE_RELEASE_2026-11-04/REPORT.txt`.
+
+## 4 November 2026 — preview console investigation; no reproduced site fault
+
+Fresh protected contact/new-tab checks produced no new errors. Captured Netlify
+HUD and iframe source contain no MutationObserver call. Reviewed active observer
+paths, then ran 12 isolated diagnostic cases across Chromium/Firefox/WebKit with
+production, preview, HUD-at-body-end and HUD-in-head variants. All application
+targets were Nodes; no uncaught application error. Each diagnostic correctly
+recorded a deliberately invalid observe(null) control and native TypeError.
+Original one-off error still has no source stack and is not claimed fixed.
+
+No demonstrated runtime fault justified a patch. Runtime, sealed production
+candidate, approval records, supplier changes and USD30 controls unchanged.
+Only this status addendum and new external evidence are recorded. No push,
+staging, commit, deploy, paid call, real submission or provider change.
+
+Release still needs evidence or explicit residual-risk acceptance for original
+JPEG uncertainty, physical-device/spoken-screen-reader gaps and the one-off
+unattributed console event, followed by separate exact-package release authority.
+No reproduced attribution or new-tab defect remains. Do not repeat equivalent
+successful tests indefinitely or call absent evidence a pass.
+Report: `/Users/daibang/Downloads/OZ_FLOORPLAN_CONSOLE_INVESTIGATION_2026-11-04/REPORT.txt`.
+
+## 4 November 2026 — floorplan-only production package prepared locally
+
+No staging, commit, push, deployment, paid calls or real submissions. Hosted
+native link activation now opens a new floorplan tab and retains the original
+enquiry. Hidden source attribution is browser-tool masked; six full local
+product/range journeys across Chromium/Firefox/WebKit assert exact source_page,
+product/range/category/slug preservation after area review/application.
+
+Prepared a floorplan-only candidate on the verified live deploy
+`6ae9ac0681e62577b8c282e9`: 6,543 public files, 210 new floorplan files plus four
+contact/Guides insertions, unchanged 773 live sitemap entries. The separate
+combined-local 775-page candidate and supplier improvements remain local and
+untouched. Both published function ZIPs, assistant corpus/profile, enquiry
+handler/uploads, analytics and USD30/month controls remain byte-identical.
+Default build gates still exclude floorplan; no public activation authorised.
+
+All 16 local validation stages pass: 21 unit tests, 79 browser journey/recovery
+cases, 23 mobile-emulation checks and 27 automated accessibility states. Exact
+package/delta verification passes. Original JPEG uncertainty and unverified
+physical-device/spoken-screen-reader behaviour remain. One unclassified hosted
+MutationObserver error was recorded; no recurrence on reload or local suites.
+Do not claim that error fixed or direct hosted hidden-field inspection passed.
+
+Report and exact package: `/Users/daibang/Downloads/OZ_FLOORPLAN_PRODUCTION_CANDIDATE_2026-11-04/REPORT.txt`.
+Public activation remains HOLD pending residual-risk decisions and separate
+release authority; production unchanged.
+
+## 4 November 2026 — one protected floorplan preview verified
+
+Owner-authorised draft `6aeabee5249a003285027b2f` is ready at
+https://floorplan-989ee5794bec--oztimberfloor.netlify.app/floor-plan/.
+Team-login protection is enabled; anonymous access returns 401. Production
+remains `6ae9ac0681e62577b8c282e9`. One successful deployment, no functions or
+edge functions, no Git staging/commit/push, paid calls or real submissions.
+The USD30 ceiling and provider settings are unchanged. An initial incompatible
+CLI option was rejected before any deployment; the corrected command created
+the single draft. Historical attempt evidence is retained.
+
+Isolated default deploy-preview build/package checks pass and still exclude
+floorplan even with its flag set. Separate exact-origin assembly adds only the
+floorplan and Guides/contact entry files to a globally noindex package. It
+disables enquiry submission, AI and analytics. Two new binding tests pass.
+Hosted PNG/JPG/PDF loading, PDF page change, damaged/CMYK JPEG rejection retaining
+the previous plan, valid-file recovery and explicit 20 m² enquiry review/apply
+pass. Avala Blackbutt context and three upload fields remain; consent is unchecked.
+Refresh does not reapply area. Captured console logs are empty.
+
+Not public activation approval: the historical intermittent JPEG cause remains
+unattributed; physical devices/spoken screen readers remain unverified. Native
+new-tab launch was not surfaced by browser tooling, so the observed handoff
+destination was opened explicitly; hidden source attribution was redacted.
+No real delivery test occurred. Source and historical approval records preserved.
+Report: `/Users/daibang/.codex/visualizations/2026/07/29/019fae90-38ad-7d40-8548-22d86f1a9fc7/floorplan-protected-preview-20261104/REPORT.txt`.
+
+## 4 November 2026 — maintained floorplan release-candidate suite; local HOLD
+
+Completed the independently safe local floorplan sprint in an isolated copy of this release worktree. Added the maintained command `node scripts/floor-plan-qa.mjs --out /absolute/new-empty-evidence-directory`, documented external QA dependencies, three-engine browser checks, deterministic JPEG lifecycle/startup cases, source preservation, and default/production/hosted-preview exclusion checks. Missing dependencies and unsafe evidence destinations fail explicitly. Tests, fixtures and QA dependencies remain outside public packages.
+
+Repaired a demonstrated initialization race: selecting a file before the tool module registered its listener could leave one selected file and no rendered plan. The chooser now remains disabled until initialization completes, with a direct enquiry fallback if loading fails. Added a local-only area-field link opening the tool in a new tab, retaining bounded catalogue/attribution context without moving typed personal details or existing selected uploads. Six actual product/range journeys preserve the original enquiry and require explicit area sharing and application; existing consent, upload fields, attribution and form contracts remain intact.
+
+Final stable run: all 45 command stages passed; 253 geometry/handoff/website tests, 154 assistant tests, 36 loader/keyboard browser tests and 120 offline answer cases. Browser coverage includes 94 tool/contact/recovery/context journeys, six startup-recovery cases, 27 automated accessibility states, 23 mobile-emulation checks, 192 independently referenced JPEG orientation cases and nine bounded lifecycle scenarios. No retries, weakened assertions or replacement approval hashes. Earlier failed/interrupted attempts are preserved separately. Default, production and hosted-preview packages each contain 6,362 files, byte-identical to the preserved no-floorplan reference; the local enabled package has 6,572 files. Its only additional differences are floorplan assets and the four Guides/Contact integration entries.
+
+HOLD remains: the historical intermittent solid-red JPEG result cannot be attributed without its failing encoded bytes and lifecycle evidence. This startup fix is not presented as its explanation. Physical-device, spoken-screen-reader and hosted activation behaviour remain unverified; coordinate entry is not proof of independently usable nonvisual tracing. The main checkout developed separate service/SEO changes during this sprint; it was not modified or merged here, and those changes require scope reconciliation before a future combined release. Supplier improvements, protected routing/indexation and historical evidence/approvals in this worktree are preserved.
+
+Report, screenshots, exact changed-file manifest, incremental diff, coverage ledger and candidate hashes: `/Users/daibang/.codex/visualizations/2026/07/29/019fae90-38ad-7d40-8548-22d86f1a9fc7/floorplan-release-candidate-20261104/index.html`. Maintained instructions: `docs/floor-plan/LOCAL_QA.md`. No stage, commit, push, deployment, hosted preview, provider change, paid API call, real enquiry submission or Operon access. Production and the USD30 monthly assistant cap are unchanged. This is not activation approval.
+
+## 4 November 2026 — local mobile/accessibility closeout; five focus repairs
+
+Completed the requested local-only emulation pass without connecting phones. Stopped the previous LAN phone-test server and independently confirmed connection refused. Reproduced five focus failures in Chrome, Firefox and WebKit: second calibration/check point, cancel edit, undo final point and clear points left focus hidden/disabled or on the body. Repaired only those transitions in the floorplan controller; added an executable browser regression with exact target, enabled/visible and focus-outline assertions. Initial failure evidence is retained. No design, HTML, SEO, catalogue, supplier, form, approval-hash or spending-control changes.
+
+Fresh results: 36 loader/keyboard browser tests (12 per engine); all 15 focused transition checks; 27 axe-core 4.12.1 states with no automated violations or incomplete checks; 23 mobile-emulation checks including touch tracing, portrait/landscape, reduced viewport height, 320px, 200% text sizing and Chromium-native emulated pinch/drag; 88 existing browser/error/handoff scenarios. Physical Safari/Android and spoken screen-reader use are not implied. Firefox/WebKit native pinch/drag are not covered by the Chromium-only protocol; taps and layout changes were exercised.
+
+JPEG investigation added 192 cases: every EXIF orientation, baseline/progressive encoding, independent Sharp corner-pixel references and concurrent decode/cleanup. All pass. The original intermittent solid-red JPEG pixel failure remains unattributed, not declared fixed. Existing synthetic failure-byte diagnostics remain intact. Fresh 252 website, 154 assistant and 120 offline-answer tests, package/migration/catalogue/analytics/notification/cutover checks pass. Default, production and hosted-preview output each remain 6,362 files, byte-identical to the preserved no-floorplan reference. Full floorplan release signoff remains HOLD; requested local emulation scope is complete.
+
+Evidence: `/Users/daibang/.codex/visualizations/2026/07/29/019fae90-38ad-7d40-8548-22d86f1a9fc7/floorplan-local-closeout-20261104/index.html`. Independent before snapshots: `/private/tmp/oz-floorplan-final-local-XsyLos/main-before` and `release-before`. No commit, stage, push, deploy, paid calls, real form submissions, provider changes or Operon access. Production unchanged.
+
+## 4 November 2026 — local phone test session and JPEG diagnostics (HOLD)
+
+Prepared a four-hour, access-link-protected LAN-only session from the already-tested local public package. It serves synthetic PNG/JPG/EXIF-rotated JPG/PDF samples and a phone checklist; non-GET requests, external connections/navigation, private source paths and real enquiries are blocked. No tunnel, hosted preview, provider change or production change. Actual LAN HTTP was exercised in Chrome, Firefox and WebKit: file opening, orientation, PDF page selection, invalid-file error, exact 20 m² area and Avala Blackbutt handoff pass. Local guards intentionally prevent submission and therefore are not production-delivery evidence. Physical iPhone/Android and VoiceOver/TalkBack results remain owner-pending.
+
+An additional 804 decode checks across 12 fresh browser sessions (three engines) did not reproduce the original intermittent JPEG failure. Independent Sharp decoding, native image decoding and post-animation-frame canvas pixels agree on checked fixtures. The original cause remains unresolved. Strengthened the test to retain failing synthetic encoded input bytes and full RGBA diagnostics after the unchanged PNG-then-JPEG sequence; added a negative test proving blank output is distinguished from a valid input. All 11 loader tests pass in each engine (33 passes), without weakening assertions or changing approval hashes. Runtime code, catalogue/supplier improvements, SEO, assistant controls, forms and build settings are unchanged in this pass.
+
+Evidence/session checklist: `/Users/daibang/.codex/visualizations/2026/07/29/019fae90-38ad-7d40-8548-22d86f1a9fc7/floorplan-device-session-20261104/index.html`. Fresh source snapshots: `/private/tmp/oz-floorplan-device-bQuGG5/main-before` and `release-before`. Local session expires at 17:31 Sydney time on 4 November 2026. No commit, stage, push, deploy, paid API call or real form submission. Full floorplan signoff remains HOLD; browser emulation is not physical-device or spoken screen-reader approval.
+
+## 4 November 2026 — floorplan cross-browser continuation (local HOLD)
+
+Installed optional Firefox/WebKit QA binaries only in a temporary folder. Found and repaired a reproducible Firefox camera-JPEG incompatibility: createImageBitmap rejected a valid EXIF-oriented image that the native Image decoder rendered correctly. The loader now uses that decoder for the same already-validated file if bitmap decoding rejects, while retaining cancellation, size/signature checks and resource cleanup. Added a strict fallback/orientation/pixel/cancellation regression; no approval hashes or existing assertions were weakened.
+
+Chrome 156.0.8078.80, Firefox 150.0.2 and WebKit 26.4 pass all 10 loader tests each and 88 combined functional/handoff scenarios. Nine additional accessibility-tree/layout states pass, but these do not verify screen-reader speech. WebKit screenshot capture itself injects a Playwright style blocked by the existing CSP; functional tests run separately and retain zero-error assertions. CSP is unchanged. Fresh website, assistant and offline-answer checks pass. Production and deploy-preview package comparisons remain byte-identical (6,362 files), excluding the tool even with its flag enabled. Supplier improvements and unrelated source are preserved.
+
+The original intermittent JPEG pixel failure did not recur in 24 fresh Chrome sessions/120 diagnostic samples; its cause remains unproven and is not declared fixed by the distinct Firefox repair. Full local signoff remains HOLD for that investigation and physical iPhone/Android plus spoken screen-reader checks. No commit, push, deployment, paid calls, real forms or provider changes. Evidence: `/Users/daibang/.codex/visualizations/2026/07/29/019fae90-38ad-7d40-8548-22d86f1a9fc7/floorplan-crossbrowser-20261104/index.html`. Fresh independent snapshots: `/private/tmp/oz-floorplan-crossbrowser-lB3OGF/main-before` and `release-before`.
+
+## 4 November 2026 — Preference colour images and Oakleaf wording (local only)
+
+Applied the verified supplier swatches to the existing Aspire Warm Spring, Aspire Twilight Mist and Select Blackbutt product galleries and matching range cards. These are colour image matches only, not SKU, construction or availability decisions. The dated manifest is `data/preference-swatches-20261104.json`; the 3 November images and evidence are preserved. Removed “ARRIVING SOON” from Bellmore Oak, Hampton Oak and Windsor descriptions, thickness fields and matching Oakleaf cards. Product URLs, titles, stock labels, redirects, sitemap, forms and all other product records are unchanged from the previous local candidate; Pronto Portofino's page and catalogue record are unchanged.
+
+Isolated build/package check passed. All 15 supplier and 3 Oakleaf checks, 217 site regressions, 154 assistant tests and 120 offline answer cases passed; analytics, notification, migration, SEO and image-dimension checks passed. Nine product/range routes at 390px and 1440px showed no broken loaded images, stale arrival wording or horizontal overflow. Fresh local source knowledge hash: `3846bbe49007eb7a34d3830475206315a89139d14571faeabc36b6a48843808d` (not production-bound). No commit, push, deploy, paid call or form submission. Production unchanged.
+
+## 3 November 2026 — Supplier image and technical evidence repairs local only
+
+Checked Preference Floors, Eco Flooring and Topdeck against the remaining published-range evidence holds. Recovered 26 exact colour references across Aspire, Oakleaf, Pronto and Select Australian Timber, preserving plank versus herringbone identity. Eight low-resolution brochure references were upgraded to exact supplier originals. Two recovered references remain low resolution (Aspire Twilight Mist and Select Blackbutt); Aspire Warm Spring versus Warm Springs and Pronto Portofino remain unresolved identities. Historical imagery does not establish current availability. Filled seven verified range specification values across Swish Native Hardwood and Elk Falls Hickory using their actual supplier sheets; no stock, retirement, rating, URL, indexation or protected SEO changes. Artisan Tile fire/slip reports were located, but the acoustic report tests 9.5mm rather than the current listed 9mm product, and the shared VOC report identifies LVT rather than Artisan Tile. Existing numerical claims remain an explicit supplier/owner decision, not newly certified.
+
+Final isolated offline build and package recheck pass, with 13 new supplier tests, 154 assistant tests, 217 scoped regressions and 120 offline answer cases passing. Analytics, Resend, migration readiness, preserved GSC, SEO hardening and image-dimension checks pass. Forty-two fresh desktop/mobile browser states at 1440/390px have one H1, no measured horizontal overflow or broken loaded images; representative screenshots and the image atlas were visually inspected. All 63 changed HTML files retain exact baseline title/meta/H1/canonical/schema/internal href/form contracts. No whole-site or physical-device signoff is implied. Rebuilt local knowledge contains 773 documents and 6742 facts, corpus b520bc047bcb3e903ed7da77ec73d7c33c75679bf939ee52cb4ff58d5fac5861; it is not bound to the existing production approval. Historical approvals, live configuration, monthly USD30 and daily USD1 controls remain unchanged. No commit, push, deploy, paid call, form submission or provider change. Report, exact questions, captures and validation logs: /Users/daibang/Downloads/OZ_SUPPLIER_GAPS_LOCAL_2026-11-03/REPORT.md.
+
 ## 3 November 2026 — Latest website, Flooring Guide and enquiry uploads released
 
 Published the reviewed release source commit `8730788666f1e6d5199bbc91b3a38d09f05b4cca` to GitHub dev and main with automatic Netlify builds suppressed. Exactly one production deployment, `6ae9ac0681e62577b8c282e9`, is ready and published at https://oztimberfloor.com.au/. A provider reply omitted its false draft flag and serialized variable metadata in a different order; resumed the same deployment, verified production context, unchanged variable update timestamps/context/scope metadata and canonical metadata equality, and did not create another deployment. All 6,333 provider file digests match the exact prepared package; three mixed-case image filenames are lowercased in Netlify's inventory with identical content hashes and no collisions. Actual two function archive hashes match the published functions: Node24 Flooring Guide and Node22 submission notification.
@@ -960,3 +1139,28 @@ Reviewed 12 specification/preparation/FAQ sections, 24 section-width states at 3
 ## 30 October 2026 — local reliability checkpoint twenty-two: Wooden-Land Foreign Species and Herringbone
 
 Reviewed six specification/preparation/FAQ sections, 12 section-width states at 390×844 and 1440×1000. Individually inspected 14 expanded crops and four closed FAQ viewports. All 48 accepted-capture keyboard open/close steps and 72 hidden/open/closed assertions pass, with zero measured horizontal overflow and no captured console warnings/errors. No website repair required. Known category/count/thickness/dimensions/installation display values reconcile to existing local records; Foreign Species unknown dimensions remain omitted. Herringbone 5G Licensed Click System wording is inherited and matches the local record but licensing was not independently verified or certified. All 12 visible FAQ answers match schema. Fresh 89 regression and 154 assistant tests plus analytics/Resend/section checks pass. 138 internal hrefs, eight fragments and 22 local image candidates have no missing targets. Only this candidate status entry changed; all website, catalogue, knowledge, SEO, form, approval and spending-control bytes unchanged. No build or knowledge regeneration. Original checkout and 21 sealed packets preserved. No commit, push, deployment, paid call, live enquiry or provider change. Other page sections, whole-site manual signoff, physical-device/screen-reader and hosted attachment checks remain incomplete. Next: reconcile the accumulated section coverage ledger and identify the exact remaining manual sections, without converting scoped acceptance into whole-page acceptance. Evidence: /Users/daibang/Downloads/OZ_RELIABILITY_CHECKPOINT_22_2026-10-30/REPORT.md.
+# 4 November 2026 — Floorplan integration preserved with current supplier repairs (local HOLD)
+
+## 4 November 2026 — Later combined audience/floorplan reconciliation addendum
+
+### Later bounded JPEG recovery follow-up — local only
+
+Investigated only remaining gaps, without repeating the passed orientation/concurrency/startup or whole-site suites. Demonstrated and repaired immediate canvas-allocation cleanup after context/draw failure, and made failed-replacement messaging explicitly identify the retained previous plan and measurements. CMYK print-colour JPEGs showed cross-decoder colour differences; the loader now rejects four-component print-colour JPEGs before decoding with RGB/sRGB JPG-or-PNG conversion guidance. Normal RGB and grayscale JPEGs remain supported. RGB re-export recovery was verified, without adding a colour filter, dependency, retries or relaxed pixel tolerances.
+
+Nine scoped checks per browser are covered across Chromium, Firefox and WebKit. Only failed/changed cases were rerun; the coverage ledger records which run establishes each result rather than claiming a fresh full-suite pass. Native/bitmap deadlines, late-result cleanup, failed-render recovery, PDF-to-rejected-JPEG-to-same-file recovery and no-submission boundaries passed. Independent synthetic encoded bytes and before/after failures are retained. The historical blank-JPEG failure is still unattributed; these repairs are not asserted to explain it. Physical devices and spoken screen readers remain unverified. No publication gate, approval, supplier data, SEO, enquiry backend, spending control or production file was changed. No commit, push, deployment, paid call or real submission.
+
+Evidence: `/Users/daibang/.codex/visualizations/2026/07/29/019fae90-38ad-7d40-8548-22d86f1a9fc7/jpeg-recovery-followup-20261104/index.html`. Isolated work and original runtime copies: `/private/tmp/oz-jpeg-gap-CEiCGX/`. The maintained gap suite is `scripts/floor-plan-qa/jpeg-recovery.mjs`; usage is documented in `docs/floor-plan/LOCAL_QA.md`.
+
+Reconciled the 31 main-checkout changes since the preceding floorplan snapshot into the newer release candidate. The property-manager and insurance pages use the current Editorial Gallery renderer; exactly eight existing discovery-page copies, two keyword owners and the additive 773-to-775 publication contract were merged. Main remains unchanged. Supplier repairs, enquiry uploads, redirects, catalogue facts and existing approval/spending records are preserved. Generated knowledge was rebuilt from the combined source, not rebound for production.
+
+All 49 maintained local QA stages pass: 43 audience/history/retirement tests, 236 website tests, 154 assistant tests, offline answer checks and Chromium/Firefox/WebKit floorplan and enquiry journeys. Eighteen added audience desktop/mobile states pass without submissions. Default, production and hosted-preview packages each contain 6,364 identical files and exclude the floorplan/QA assets; the enabled local package contains 6,574 files. The tested source did not drift. All 306 files in the preceding sealed floorplan packet remain byte-identical. Historical checks now recognise only exact published-release and reviewed supplier/discovery successors; negative cases still reject unrelated changes. Historical evidence and approval hashes were not replaced.
+
+Local reconciliation is complete; release remains HOLD for the unattributed original JPEG failure and unverified physical-device/spoken screen-reader behaviour. Browser engines are now available and were actually tested; the earlier availability note below is historical. The changed assistant corpus is local-only pending normal release review. Supplier evidence holds remain unchanged. No staging, commit, push, deployment, paid call, provider change or real submission. Production and the USD30 ceiling are unchanged.
+
+Report, exact incremental patches, hashes, screenshots and commands: `/Users/daibang/.codex/visualizations/2026/07/29/019fae90-38ad-7d40-8548-22d86f1a9fc7/floorplan-audience-reconciliation-20261104/index.html`. Independent snapshots and final run: `/private/tmp/oz-combined-reconcile-9lf7h2/` (`main-before`, `release-before`, `run-3`). This addendum does not replace earlier evidence or authorise activation.
+
+Added the existing Oz-owned floorplan modules and exact local-only packaging hook from the main checkout, including repaired keyboard focus, 320px/200% text-zoom layout and unobstructed desktop enquiry actions. The newer supplier swatches, Oakleaf wording, catalogue, assistant knowledge, enquiry uploads, SEO, redirects and all existing source changes remain unchanged. No source approval or spending-control hashes were changed. The USD30 monthly ceiling is untouched.
+
+Validated this combined source in isolated copies: default, deploy-preview, protected-production and indexable-production packages match the no-floorplan reference byte-for-byte. The enabled local package adds the floorplan assets and only the two Guides/two contact entries. Fresh local browser tests exercise the current contact form without any real submissions. The main checkout's four historical failures have a separate evidence-backed reconciliation; their historical files are preserved.
+
+Complete signoff remains HOLD: the prior intermittent JPEG pixel failure could not be reproduced or attributed, Firefox/WebKit binaries are unavailable, physical devices/screen-reader speech were not tested. The inherited October cutover FAQ-markup failure was also reconciled using exact visible question/answer/schema verification and negative tests; it now passes. No public activation is implied. Evidence and incremental patches: `/Users/daibang/.codex/visualizations/2026/07/29/019fae90-38ad-7d40-8548-22d86f1a9fc7/floorplan-sprint-20261104/index.html`; fresh full snapshots: `/private/tmp/oz-floorplan-sprint-JAyhjW/main-before` and `release-before`. No commit, push, deployment, paid calls, form submissions, DNS or provider changes.

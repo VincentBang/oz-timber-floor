@@ -2097,10 +2097,10 @@
       "brand": "Elk Falls Hickory",
       "category": "Engineered timber",
       "shortDescription": "Elk Falls is an engineered timber range for premium interiors needing real timber character with a stable board construction.",
-      "thickness": "",
-      "boardSize": "",
-      "packSizeM2": "",
-      "installationMethod": "Engineered timber installation method to confirm before ordering.",
+      "thickness": "14mm",
+      "boardSize": "1900 x 189 x 14mm",
+      "packSizeM2": "2.155",
+      "installationMethod": "Floating click installation. Confirm product-specific subfloor and installation requirements.",
       "colourCount": 12,
       "warrantySummary": "",
       "sourceUrl": "https://preferencefloors.com.au/brand/elk-falls-hickory/",
@@ -7857,10 +7857,10 @@
       "brand": "Swish",
       "category": "Engineered timber",
       "shortDescription": "Swish Native Hardwood is an engineered timber range for customers comparing real timber colour options, stock timing and installation planning.",
-      "thickness": "To confirm",
-      "boardSize": "To confirm",
+      "thickness": "14mm",
+      "boardSize": "1900 x 136 or 189 x 14mm",
       "packSizeM2": "",
-      "installationMethod": "Installation method should be confirmed against the current product sheet, site conditions and project scope.",
+      "installationMethod": "Tongue and groove; floating over underlay or glue down. Confirm product-specific subfloor and installation requirements.",
       "colourCount": 6,
       "warrantySummary": "",
       "sourceUrl": "https://ecoflooring.com.au/product-category/bamboo/swish-native-hardwood/",
@@ -40930,12 +40930,12 @@
       "cautionNotes": "Subfloor flatness, moisture and transition details should be checked before hybrid flooring is ordered or installed.",
       "stockStatusLabel": "Check stock availability",
       "imageGallery": [
-        "/assets/images/categories/hybrid-flooring-thumbnail.webp"
+        "/assets/products/supplier-reviewed-20261103/aspire-barn-oak.webp"
       ],
-      "primaryImage": "/assets/images/categories/hybrid-flooring-thumbnail.webp",
-      "altText": "Aspire Aspire Barn Oak hybrid flooring colour swatch",
+      "primaryImage": "/assets/products/supplier-reviewed-20261103/aspire-barn-oak.webp",
+      "altText": "Aspire Barn Oak flooring colour reference",
       "specSheetUrl": "",
-      "galleryStatus": "range-image",
+      "galleryStatus": "single-image",
       "sourceTag": "Legacy Oz import",
       "noCheckout": true,
       "legacyUrl": "/products/aspire-barn-oak/",
@@ -40987,12 +40987,12 @@
       "cautionNotes": "Subfloor flatness, moisture and transition details should be checked before hybrid flooring is ordered or installed.",
       "stockStatusLabel": "Check stock availability",
       "imageGallery": [
-        "/assets/images/categories/hybrid-flooring-thumbnail.webp"
+        "/assets/products/supplier-reviewed-20261103/aspire-buckskin.webp"
       ],
-      "primaryImage": "/assets/images/categories/hybrid-flooring-thumbnail.webp",
-      "altText": "Aspire Aspire Buckskin hybrid flooring colour swatch",
+      "primaryImage": "/assets/products/supplier-reviewed-20261103/aspire-buckskin.webp",
+      "altText": "Aspire Buckskin flooring colour reference",
       "specSheetUrl": "",
-      "galleryStatus": "range-image",
+      "galleryStatus": "single-image",
       "sourceTag": "Legacy Oz import",
       "noCheckout": true,
       "legacyUrl": "/products/aspire-buckskin/",
@@ -41262,12 +41262,12 @@
       "cautionNotes": "Subfloor flatness, moisture and transition details should be checked before hybrid flooring is ordered or installed.",
       "stockStatusLabel": "Check stock availability",
       "imageGallery": [
-        "/assets/images/categories/hybrid-flooring-thumbnail.webp"
+        "/assets/products/supplier-reviewed-20261103/aspire-homstead.webp"
       ],
-      "primaryImage": "/assets/images/categories/hybrid-flooring-thumbnail.webp",
-      "altText": "Aspire Aspire Homestead hybrid flooring colour swatch",
+      "primaryImage": "/assets/products/supplier-reviewed-20261103/aspire-homstead.webp",
+      "altText": "Aspire Homestead flooring colour reference",
       "specSheetUrl": "",
-      "galleryStatus": "range-image",
+      "galleryStatus": "single-image",
       "sourceTag": "Legacy Oz import",
       "noCheckout": true,
       "legacyUrl": "/products/aspire-homstead/",
@@ -41537,12 +41537,12 @@
       "cautionNotes": "Subfloor flatness, moisture and transition details should be checked before hybrid flooring is ordered or installed.",
       "stockStatusLabel": "Check stock availability",
       "imageGallery": [
-        "/assets/images/categories/hybrid-flooring-thumbnail.webp"
+        "/assets/products/supplier-reviewed-20261103/aspire-pale-gorge.webp"
       ],
-      "primaryImage": "/assets/images/categories/hybrid-flooring-thumbnail.webp",
-      "altText": "Aspire Aspire Pale Gorge hybrid flooring colour swatch",
+      "primaryImage": "/assets/products/supplier-reviewed-20261103/aspire-pale-gorge.webp",
+      "altText": "Aspire Pale Gorge flooring colour reference",
       "specSheetUrl": "",
-      "galleryStatus": "range-image",
+      "galleryStatus": "single-image",
       "sourceTag": "Legacy Oz import",
       "noCheckout": true,
       "legacyUrl": "/products/aspire-pale-gorge/",
@@ -41646,12 +41646,12 @@
       "cautionNotes": "Subfloor flatness, moisture and transition details should be checked before hybrid flooring is ordered or installed.",
       "stockStatusLabel": "Check stock availability",
       "imageGallery": [
-        "/assets/images/categories/hybrid-flooring-thumbnail.webp"
+        "/assets/products/supplier-reviewed-20261103/aspire-qld-spotted-gum.webp"
       ],
-      "primaryImage": "/assets/images/categories/hybrid-flooring-thumbnail.webp",
-      "altText": "Aspire Aspire QLD Spotted Gum hybrid flooring colour swatch",
+      "primaryImage": "/assets/products/supplier-reviewed-20261103/aspire-qld-spotted-gum.webp",
+      "altText": "Aspire QLD Spotted Gum flooring colour reference",
       "specSheetUrl": "",
-      "galleryStatus": "range-image",
+      "galleryStatus": "single-image",
       "sourceTag": "Legacy Oz import",
       "noCheckout": true,
       "legacyUrl": "/products/aspire-qld-spotted-gum/",
@@ -41812,12 +41812,12 @@
       "cautionNotes": "Subfloor flatness, moisture and transition details should be checked before hybrid flooring is ordered or installed.",
       "stockStatusLabel": "Check stock availability",
       "imageGallery": [
-        "/assets/images/categories/hybrid-flooring-thumbnail.webp"
+        "/assets/products/supplier-reviewed-20261103/aspire-tempest.webp"
       ],
-      "primaryImage": "/assets/images/categories/hybrid-flooring-thumbnail.webp",
-      "altText": "Aspire Aspire Tempest hybrid flooring colour swatch",
+      "primaryImage": "/assets/products/supplier-reviewed-20261103/aspire-tempest.webp",
+      "altText": "Aspire Tempest flooring colour reference",
       "specSheetUrl": "",
-      "galleryStatus": "range-image",
+      "galleryStatus": "single-image",
       "sourceTag": "Legacy Oz import",
       "noCheckout": true,
       "legacyUrl": "/products/aspire-tempest/",
@@ -41869,12 +41869,12 @@
       "cautionNotes": "Subfloor flatness, moisture and transition details should be checked before hybrid flooring is ordered or installed.",
       "stockStatusLabel": "Check stock availability",
       "imageGallery": [
-        "/assets/images/categories/hybrid-flooring-thumbnail.webp"
+        "/assets/products/supplier-reviewed-20261103/aspire-tumbleweed.webp"
       ],
-      "primaryImage": "/assets/images/categories/hybrid-flooring-thumbnail.webp",
-      "altText": "Aspire Aspire Tumbleweed hybrid flooring colour swatch",
+      "primaryImage": "/assets/products/supplier-reviewed-20261103/aspire-tumbleweed.webp",
+      "altText": "Aspire Tumbleweed flooring colour reference",
       "specSheetUrl": "",
-      "galleryStatus": "range-image",
+      "galleryStatus": "single-image",
       "sourceTag": "Legacy Oz import",
       "noCheckout": true,
       "legacyUrl": "/products/aspire-tumbleweed/",
@@ -41926,12 +41926,12 @@
       "cautionNotes": "Subfloor flatness, moisture and transition details should be checked before hybrid flooring is ordered or installed.",
       "stockStatusLabel": "Check stock availability",
       "imageGallery": [
-        "/assets/images/categories/hybrid-flooring-thumbnail.webp"
+        "/assets/products/supplier-reviewed-20261104/aspire-twilight-mist.webp"
       ],
-      "primaryImage": "/assets/images/categories/hybrid-flooring-thumbnail.webp",
-      "altText": "Aspire Aspire Twilight Mist hybrid flooring colour swatch",
+      "primaryImage": "/assets/products/supplier-reviewed-20261104/aspire-twilight-mist.webp",
+      "altText": "Aspire Twilight Mist flooring colour reference",
       "specSheetUrl": "",
-      "galleryStatus": "range-image",
+      "galleryStatus": "single-image",
       "sourceTag": "Legacy Oz import",
       "noCheckout": true,
       "legacyUrl": "/products/aspire-twilight-mist/",
@@ -41983,12 +41983,12 @@
       "cautionNotes": "Subfloor flatness, moisture and transition details should be checked before hybrid flooring is ordered or installed.",
       "stockStatusLabel": "Check stock availability",
       "imageGallery": [
-        "/assets/images/categories/hybrid-flooring-thumbnail.webp"
+        "/assets/products/supplier-reviewed-20261104/aspire-warm-spring.webp"
       ],
-      "primaryImage": "/assets/images/categories/hybrid-flooring-thumbnail.webp",
-      "altText": "Aspire Aspire Warm Spring hybrid flooring colour swatch",
+      "primaryImage": "/assets/products/supplier-reviewed-20261104/aspire-warm-spring.webp",
+      "altText": "Aspire Warm Springs flooring colour reference",
       "specSheetUrl": "",
-      "galleryStatus": "range-image",
+      "galleryStatus": "single-image",
       "sourceTag": "Legacy Oz import",
       "noCheckout": true,
       "legacyUrl": "/products/aspire-warm-spring/",
@@ -81399,12 +81399,12 @@
       "cautionNotes": "Batch variation, board construction, wear layer and subfloor preparation should be confirmed before order.",
       "stockStatusLabel": "Check stock availability",
       "imageGallery": [
-        "/assets/products/engineered-timber/floors/pronto/herringbone-misty-cove/herringbone-misty-cove-swatch.webp"
+        "/assets/products/supplier-reviewed-20261103/pronto-chesterfield.webp"
       ],
-      "primaryImage": "/assets/products/engineered-timber/floors/pronto/herringbone-misty-cove/herringbone-misty-cove-swatch.webp",
-      "altText": "Pronto Pronto Chesterfield engineered timber flooring colour swatch",
+      "primaryImage": "/assets/products/supplier-reviewed-20261103/pronto-chesterfield.webp",
+      "altText": "Pronto Chesterfield flooring colour reference",
       "specSheetUrl": "",
-      "galleryStatus": "range-image",
+      "galleryStatus": "single-image",
       "sourceTag": "Legacy Oz import",
       "noCheckout": true,
       "legacyUrl": "/products/pronto-chesterfield/",
@@ -81619,12 +81619,12 @@
       "cautionNotes": "Batch variation, board construction, wear layer and subfloor preparation should be confirmed before order.",
       "stockStatusLabel": "Check stock availability",
       "imageGallery": [
-        "/assets/products/engineered-timber/floors/pronto/herringbone-misty-cove/herringbone-misty-cove-swatch.webp"
+        "/assets/products/supplier-reviewed-20261103/pronto-dockside.webp"
       ],
-      "primaryImage": "/assets/products/engineered-timber/floors/pronto/herringbone-misty-cove/herringbone-misty-cove-swatch.webp",
-      "altText": "Pronto Pronto Dockside engineered timber flooring colour swatch",
+      "primaryImage": "/assets/products/supplier-reviewed-20261103/pronto-dockside.webp",
+      "altText": "Pronto Dockside flooring colour reference",
       "specSheetUrl": "",
-      "galleryStatus": "range-image",
+      "galleryStatus": "single-image",
       "sourceTag": "Legacy Oz import",
       "noCheckout": true,
       "legacyUrl": "/products/pronto-dockside/",
@@ -81891,12 +81891,12 @@
       "cautionNotes": "Batch variation, board construction, wear layer and subfloor preparation should be confirmed before order.",
       "stockStatusLabel": "Check stock availability",
       "imageGallery": [
-        "/assets/products/engineered-timber/floors/pronto/herringbone-misty-cove/herringbone-misty-cove-swatch.webp"
+        "/assets/products/supplier-reviewed-20261103/pronto-herringbone-chesterfield.webp"
       ],
-      "primaryImage": "/assets/products/engineered-timber/floors/pronto/herringbone-misty-cove/herringbone-misty-cove-swatch.webp",
-      "altText": "Pronto Pronto Herringbone Chesterfield engineered timber flooring colour swatch",
+      "primaryImage": "/assets/products/supplier-reviewed-20261103/pronto-herringbone-chesterfield.webp",
+      "altText": "Pronto Herringbone Chesterfield flooring colour reference",
       "specSheetUrl": "",
-      "galleryStatus": "range-image",
+      "galleryStatus": "single-image",
       "sourceTag": "Legacy Oz import",
       "noCheckout": true,
       "legacyUrl": "/products/pronto-herringbone-chesterfield/",
@@ -82059,12 +82059,12 @@
       "cautionNotes": "Batch variation, board construction, wear layer and subfloor preparation should be confirmed before order.",
       "stockStatusLabel": "Check stock availability",
       "imageGallery": [
-        "/assets/products/engineered-timber/floors/pronto/herringbone-misty-cove/herringbone-misty-cove-swatch.webp"
+        "/assets/products/supplier-reviewed-20261103/pronto-herringbone-parchment.webp"
       ],
-      "primaryImage": "/assets/products/engineered-timber/floors/pronto/herringbone-misty-cove/herringbone-misty-cove-swatch.webp",
-      "altText": "Pronto Pronto Herringbone Parchment engineered timber flooring colour swatch",
+      "primaryImage": "/assets/products/supplier-reviewed-20261103/pronto-herringbone-parchment.webp",
+      "altText": "Pronto Herringbone Parchment flooring colour reference",
       "specSheetUrl": "",
-      "galleryStatus": "range-image",
+      "galleryStatus": "single-image",
       "sourceTag": "Legacy Oz import",
       "noCheckout": true,
       "legacyUrl": "/products/pronto-herringbone-parchment/",
@@ -82221,12 +82221,12 @@
       "cautionNotes": "Batch variation, board construction, wear layer and subfloor preparation should be confirmed before order.",
       "stockStatusLabel": "Check stock availability",
       "imageGallery": [
-        "/assets/products/engineered-timber/floors/pronto/herringbone-misty-cove/herringbone-misty-cove-swatch.webp"
+        "/assets/products/supplier-reviewed-20261103/pronto-herringbone-seafoam.webp"
       ],
-      "primaryImage": "/assets/products/engineered-timber/floors/pronto/herringbone-misty-cove/herringbone-misty-cove-swatch.webp",
-      "altText": "Pronto Pronto Herringbone Seafoam engineered timber flooring colour swatch",
+      "primaryImage": "/assets/products/supplier-reviewed-20261103/pronto-herringbone-seafoam.webp",
+      "altText": "Pronto Herringbone Seafoam flooring colour reference",
       "specSheetUrl": "",
-      "galleryStatus": "range-image",
+      "galleryStatus": "single-image",
       "sourceTag": "Legacy Oz import",
       "noCheckout": true,
       "legacyUrl": "/products/pronto-herringbone-seafoam/",
@@ -82331,12 +82331,12 @@
       "cautionNotes": "Batch variation, board construction, wear layer and subfloor preparation should be confirmed before order.",
       "stockStatusLabel": "Check stock availability",
       "imageGallery": [
-        "/assets/products/engineered-timber/floors/pronto/herringbone-misty-cove/herringbone-misty-cove-swatch.webp"
+        "/assets/products/supplier-reviewed-20261103/pronto-herringbone-washed-pebble.webp"
       ],
-      "primaryImage": "/assets/products/engineered-timber/floors/pronto/herringbone-misty-cove/herringbone-misty-cove-swatch.webp",
-      "altText": "Pronto Pronto Herringbone Washed Pebble engineered timber flooring colour swatch",
+      "primaryImage": "/assets/products/supplier-reviewed-20261103/pronto-herringbone-washed-pebble.webp",
+      "altText": "Pronto Herringbone Washed Pebble flooring colour reference",
       "specSheetUrl": "",
-      "galleryStatus": "range-image",
+      "galleryStatus": "single-image",
       "sourceTag": "Legacy Oz import",
       "noCheckout": true,
       "legacyUrl": "/products/pronto-herringbone-washed-pebble/",
@@ -82442,12 +82442,12 @@
       "cautionNotes": "Batch variation, board construction, wear layer and subfloor preparation should be confirmed before order.",
       "stockStatusLabel": "Check stock availability",
       "imageGallery": [
-        "/assets/products/engineered-timber/floors/pronto/herringbone-misty-cove/herringbone-misty-cove-swatch.webp"
+        "/assets/products/supplier-reviewed-20261103/pronto-parchment.webp"
       ],
-      "primaryImage": "/assets/products/engineered-timber/floors/pronto/herringbone-misty-cove/herringbone-misty-cove-swatch.webp",
-      "altText": "Pronto Pronto Parchment engineered timber flooring colour swatch",
+      "primaryImage": "/assets/products/supplier-reviewed-20261103/pronto-parchment.webp",
+      "altText": "Pronto Parchment flooring colour reference",
       "specSheetUrl": "",
-      "galleryStatus": "range-image",
+      "galleryStatus": "single-image",
       "sourceTag": "Legacy Oz import",
       "noCheckout": true,
       "legacyUrl": "/products/pronto-parchment/",
@@ -82612,12 +82612,12 @@
       "cautionNotes": "Batch variation, board construction, wear layer and subfloor preparation should be confirmed before order.",
       "stockStatusLabel": "Check stock availability",
       "imageGallery": [
-        "/assets/products/engineered-timber/floors/pronto/herringbone-misty-cove/herringbone-misty-cove-swatch.webp"
+        "/assets/products/supplier-reviewed-20261103/pronto-river-sand.webp"
       ],
-      "primaryImage": "/assets/products/engineered-timber/floors/pronto/herringbone-misty-cove/herringbone-misty-cove-swatch.webp",
-      "altText": "Pronto Pronto River Sand engineered timber flooring colour swatch",
+      "primaryImage": "/assets/products/supplier-reviewed-20261103/pronto-river-sand.webp",
+      "altText": "Pronto River Sand flooring colour reference",
       "specSheetUrl": "",
-      "galleryStatus": "range-image",
+      "galleryStatus": "single-image",
       "sourceTag": "Legacy Oz import",
       "noCheckout": true,
       "legacyUrl": "/products/pronto-river-sand/",
@@ -82778,12 +82778,12 @@
       "cautionNotes": "Batch variation, board construction, wear layer and subfloor preparation should be confirmed before order.",
       "stockStatusLabel": "Check stock availability",
       "imageGallery": [
-        "/assets/products/engineered-timber/floors/pronto/herringbone-misty-cove/herringbone-misty-cove-swatch.webp"
+        "/assets/products/supplier-reviewed-20261103/pronto-seafoam.webp"
       ],
-      "primaryImage": "/assets/products/engineered-timber/floors/pronto/herringbone-misty-cove/herringbone-misty-cove-swatch.webp",
-      "altText": "Pronto Pronto Seafoam engineered timber flooring colour swatch",
+      "primaryImage": "/assets/products/supplier-reviewed-20261103/pronto-seafoam.webp",
+      "altText": "Pronto Seafoam flooring colour reference",
       "specSheetUrl": "",
-      "galleryStatus": "range-image",
+      "galleryStatus": "single-image",
       "sourceTag": "Legacy Oz import",
       "noCheckout": true,
       "legacyUrl": "/products/pronto-seafoam/",
@@ -82890,12 +82890,12 @@
       "cautionNotes": "Batch variation, board construction, wear layer and subfloor preparation should be confirmed before order.",
       "stockStatusLabel": "Check stock availability",
       "imageGallery": [
-        "/assets/products/engineered-timber/floors/pronto/herringbone-misty-cove/herringbone-misty-cove-swatch.webp"
+        "/assets/products/supplier-reviewed-20261103/pronto-washed-pebble.webp"
       ],
-      "primaryImage": "/assets/products/engineered-timber/floors/pronto/herringbone-misty-cove/herringbone-misty-cove-swatch.webp",
-      "altText": "Pronto Pronto Washed Pebble engineered timber flooring colour swatch",
+      "primaryImage": "/assets/products/supplier-reviewed-20261103/pronto-washed-pebble.webp",
+      "altText": "Pronto Washed Pebble flooring colour reference",
       "specSheetUrl": "",
-      "galleryStatus": "range-image",
+      "galleryStatus": "single-image",
       "sourceTag": "Legacy Oz import",
       "noCheckout": true,
       "legacyUrl": "/products/pronto-washed-pebble/",
@@ -82948,12 +82948,12 @@
       "cautionNotes": "Batch variation, board construction, wear layer and subfloor preparation should be confirmed before order.",
       "stockStatusLabel": "Check stock availability",
       "imageGallery": [
-        "/assets/products/engineered-timber/floors/pronto/herringbone-misty-cove/herringbone-misty-cove-swatch.webp"
+        "/assets/products/supplier-reviewed-20261103/pronto-welsh-slate.webp"
       ],
-      "primaryImage": "/assets/products/engineered-timber/floors/pronto/herringbone-misty-cove/herringbone-misty-cove-swatch.webp",
-      "altText": "Pronto Pronto Welsh Slate engineered timber flooring colour swatch",
+      "primaryImage": "/assets/products/supplier-reviewed-20261103/pronto-welsh-slate.webp",
+      "altText": "Pronto Welsh Slate flooring colour reference",
       "specSheetUrl": "",
-      "galleryStatus": "range-image",
+      "galleryStatus": "single-image",
       "sourceTag": "Legacy Oz import",
       "noCheckout": true,
       "legacyUrl": "/products/pronto-welsh-slate/",
@@ -83678,12 +83678,12 @@
       "cautionNotes": "Batch variation, board construction, wear layer and subfloor preparation should be confirmed before order.",
       "stockStatusLabel": "Check stock availability",
       "imageGallery": [
-        "/assets/products/hybrid/elite-6mm/select-blackbutt.webp"
+        "/assets/products/supplier-reviewed-20261104/select-blackbutt.webp"
       ],
-      "primaryImage": "/assets/products/hybrid/elite-6mm/select-blackbutt.webp",
-      "altText": "Select Australian Timber Select Blackbutt engineered timber flooring colour swatch",
+      "primaryImage": "/assets/products/supplier-reviewed-20261104/select-blackbutt.webp",
+      "altText": "Select Blackbutt flooring colour reference",
       "specSheetUrl": "",
-      "galleryStatus": "range-image",
+      "galleryStatus": "single-image",
       "sourceTag": "Legacy Oz import",
       "noCheckout": true,
       "legacyUrl": "/products/select-blackbutt/",
@@ -83736,12 +83736,12 @@
       "cautionNotes": "Batch variation, board construction, wear layer and subfloor preparation should be confirmed before order.",
       "stockStatusLabel": "Check stock availability",
       "imageGallery": [
-        "/assets/products/engineered-timber/hardwood-collection/mb-blackbutt/mb-blackbutt-swatch.webp"
+        "/assets/products/supplier-reviewed-20261103/select-jarrah.webp"
       ],
-      "primaryImage": "/assets/products/engineered-timber/hardwood-collection/mb-blackbutt/mb-blackbutt-swatch.webp",
-      "altText": "Select Australian Timber Select Jarrah engineered timber flooring colour swatch",
+      "primaryImage": "/assets/products/supplier-reviewed-20261103/select-jarrah.webp",
+      "altText": "Select Jarrah flooring colour reference",
       "specSheetUrl": "",
-      "galleryStatus": "range-image",
+      "galleryStatus": "single-image",
       "sourceTag": "Legacy Oz import",
       "noCheckout": true,
       "legacyUrl": "/products/select-jarrah/",
@@ -83794,12 +83794,12 @@
       "cautionNotes": "Batch variation, board construction, wear layer and subfloor preparation should be confirmed before order.",
       "stockStatusLabel": "Check stock availability",
       "imageGallery": [
-        "/assets/products/hybrid/elite-6mm/select-spotted-gum.webp"
+        "/assets/products/supplier-reviewed-20261103/select-spotted-gum.webp"
       ],
-      "primaryImage": "/assets/products/hybrid/elite-6mm/select-spotted-gum.webp",
-      "altText": "Select Australian Timber Select Spotted Gum engineered timber flooring colour swatch",
+      "primaryImage": "/assets/products/supplier-reviewed-20261103/select-spotted-gum.webp",
+      "altText": "Select Spotted Gum flooring colour reference",
       "specSheetUrl": "",
-      "galleryStatus": "range-image",
+      "galleryStatus": "single-image",
       "sourceTag": "Legacy Oz import",
       "noCheckout": true,
       "legacyUrl": "/products/select-spotted-gum/",
@@ -83852,12 +83852,12 @@
       "cautionNotes": "Batch variation, board construction, wear layer and subfloor preparation should be confirmed before order.",
       "stockStatusLabel": "Check stock availability",
       "imageGallery": [
-        "/assets/products/engineered-timber/hardwood-collection/mb-blackbutt/mb-blackbutt-swatch.webp"
+        "/assets/products/supplier-reviewed-20261103/select-sydney-blue-gum.webp"
       ],
-      "primaryImage": "/assets/products/engineered-timber/hardwood-collection/mb-blackbutt/mb-blackbutt-swatch.webp",
-      "altText": "Select Australian Timber Select Sydney Blue Gum engineered timber flooring colour swatch",
+      "primaryImage": "/assets/products/supplier-reviewed-20261103/select-sydney-blue-gum.webp",
+      "altText": "Select Sydney Blue Gum flooring colour reference",
       "specSheetUrl": "",
-      "galleryStatus": "range-image",
+      "galleryStatus": "single-image",
       "sourceTag": "Legacy Oz import",
       "noCheckout": true,
       "legacyUrl": "/products/select-sydney-blue-gum/",
@@ -94737,8 +94737,8 @@
       "rangeSlug": "oakleaf",
       "colour": "Bellmore Oak",
       "category": "Laminate",
-      "shortDescription": "Bellmore Oak 12mm ARRIVING SOON laminate flooring colour in the Oakleaf HD PLUS range for dry-room suitability, stock checks and installation planning.",
-      "thickness": "12mm ARRIVING SOON",
+      "shortDescription": "Bellmore Oak 12mm laminate flooring colour in the Oakleaf HD PLUS range for dry-room suitability, stock checks and installation planning.",
+      "thickness": "12mm",
       "boardSize": "2200 x 196 x 12mm",
       "plankSize": "",
       "installationMethod": "Floating click system with suitable underlay.",
@@ -94746,11 +94746,11 @@
       "cautionNotes": "Stock, colour variation, access and site conditions should be confirmed before order or installation.",
       "stockStatusLabel": "Check stock availability",
       "imageGallery": [
-        "/assets/products/laminate/preference-classic-laminate/classic-laminate-blackbutt-swatch.jpg"
+        "/assets/products/supplier-reviewed-20261103/oakleaf-hd-plus-bellmore-oak.webp"
       ],
-      "primaryImage": "/assets/products/laminate/preference-classic-laminate/classic-laminate-blackbutt-swatch.jpg",
-      "altText": "Oakleaf HD PLUS Bellmore Oak laminate colour swatch",
-      "galleryStatus": "supplier-image-missing",
+      "primaryImage": "/assets/products/supplier-reviewed-20261103/oakleaf-hd-plus-bellmore-oak.webp",
+      "altText": "Oakleaf HD PLUS Bellmore Oak flooring colour reference",
+      "galleryStatus": "single-image",
       "sourceTag": "Preference Floors direct supplier catalogue pass",
       "noCheckout": true,
       "legacyUrl": "/products/oakleaf-hd-plus-bellmore-oak/",
@@ -94775,8 +94775,8 @@
       "rangeSlug": "oakleaf",
       "colour": "Hampton Oak",
       "category": "Laminate",
-      "shortDescription": "Hampton Oak 12mm ARRIVING SOON laminate flooring colour in the Oakleaf HD PLUS range for dry-room suitability, stock checks and installation planning.",
-      "thickness": "12mm ARRIVING SOON",
+      "shortDescription": "Hampton Oak 12mm laminate flooring colour in the Oakleaf HD PLUS range for dry-room suitability, stock checks and installation planning.",
+      "thickness": "12mm",
       "boardSize": "2200 x 196 x 12mm",
       "plankSize": "",
       "installationMethod": "Floating click system with suitable underlay.",
@@ -94784,11 +94784,11 @@
       "cautionNotes": "Stock, colour variation, access and site conditions should be confirmed before order or installation.",
       "stockStatusLabel": "Check stock availability",
       "imageGallery": [
-        "/assets/products/laminate/preference-classic-laminate/classic-laminate-blackbutt-swatch.jpg"
+        "/assets/products/supplier-reviewed-20261103/oakleaf-hd-plus-hampton-oak.webp"
       ],
-      "primaryImage": "/assets/products/laminate/preference-classic-laminate/classic-laminate-blackbutt-swatch.jpg",
-      "altText": "Oakleaf HD PLUS Hampton Oak laminate colour swatch",
-      "galleryStatus": "supplier-image-missing",
+      "primaryImage": "/assets/products/supplier-reviewed-20261103/oakleaf-hd-plus-hampton-oak.webp",
+      "altText": "Oakleaf HD PLUS Hampton Oak flooring colour reference",
+      "galleryStatus": "single-image",
       "sourceTag": "Preference Floors direct supplier catalogue pass",
       "noCheckout": true,
       "legacyUrl": "/products/oakleaf-hd-plus-hampton-oak/",
@@ -94813,8 +94813,8 @@
       "rangeSlug": "oakleaf",
       "colour": "Windsor",
       "category": "Laminate",
-      "shortDescription": "Windsor 12mm ARRIVING SOON laminate flooring colour in the Oakleaf HD PLUS range for dry-room suitability, stock checks and installation planning.",
-      "thickness": "12mm ARRIVING SOON",
+      "shortDescription": "Windsor 12mm laminate flooring colour in the Oakleaf HD PLUS range for dry-room suitability, stock checks and installation planning.",
+      "thickness": "12mm",
       "boardSize": "2200 x 196 x 12mm",
       "plankSize": "",
       "installationMethod": "Floating click system with suitable underlay.",
@@ -94822,11 +94822,11 @@
       "cautionNotes": "Stock, colour variation, access and site conditions should be confirmed before order or installation.",
       "stockStatusLabel": "Check stock availability",
       "imageGallery": [
-        "/assets/products/laminate/preference-classic-laminate/classic-laminate-blackbutt-swatch.jpg"
+        "/assets/products/supplier-reviewed-20261103/oakleaf-hd-plus-windsor.webp"
       ],
-      "primaryImage": "/assets/products/laminate/preference-classic-laminate/classic-laminate-blackbutt-swatch.jpg",
-      "altText": "Oakleaf HD PLUS Windsor laminate colour swatch",
-      "galleryStatus": "supplier-image-missing",
+      "primaryImage": "/assets/products/supplier-reviewed-20261103/oakleaf-hd-plus-windsor.webp",
+      "altText": "Oakleaf HD PLUS Windsor flooring colour reference",
+      "galleryStatus": "single-image",
       "sourceTag": "Preference Floors direct supplier catalogue pass",
       "noCheckout": true,
       "legacyUrl": "/products/oakleaf-hd-plus-windsor/",

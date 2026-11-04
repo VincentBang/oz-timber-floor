@@ -7,6 +7,7 @@ import { fileURLToPath } from "node:url";
 import { routing } from "./october-route-fixture.mjs";
 import { createPublicationInventory } from "./publication-inventory.mjs";
 import {approvedStonefloorSource,stonefloorRetirementIssues} from './approved-stonefloor-legacy-retirement.mjs';
+import {assertAudiencePublication} from './audience-publication-contract.mjs';
 
 const sourceRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const fixtureRoot = path.resolve(process.env.OZ_FIXTURE_ROOT || path.join(sourceRoot, "dist"));
@@ -92,7 +93,8 @@ for (const route of legacyRoutes) {
 
 const sitemapText = fs.readFileSync(path.join(fixtureRoot, "sitemap.xml"), "utf8");
 const sitemapRoutes = [...sitemapText.matchAll(/<loc>(https:\/\/oztimberfloor\.com\.au[^<]*)<\/loc>/g)].map((match) => normalizeRoute(match[1]));
-assert.equal(sitemapRoutes.length, 773);
+const audiencePublication = assertAudiencePublication(sitemapText);
+assert.equal(sitemapRoutes.length, audiencePublication.total);
 assert.equal(new Set(sitemapRoutes).size, sitemapRoutes.length, "duplicate sitemap route");
 const titles = new Map();
 for (const route of sitemapRoutes) {
@@ -113,7 +115,7 @@ for (const route of sitemapRoutes) {
 
 const inventory = createPublicationInventory({ root: fixtureRoot, domain });
 assert.deepEqual(inventory.publicationRoutes, inventory.sitemapRoutes, "publication and sitemap sets differ");
-assert.equal(inventory.publicationRoutes.length, 773);
+assert.equal(inventory.publicationRoutes.length, audiencePublication.total);
 
 const linkTargets = new Set();
 const assetTargets = new Set();

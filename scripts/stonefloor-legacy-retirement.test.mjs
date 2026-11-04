@@ -4,6 +4,9 @@ import fs from 'node:fs';
 import crypto from 'node:crypto';
 import {stonefloorRetirementIssues,approvedStonefloorSource,STONEFLOOR_RETIRED_IDS} from './approved-stonefloor-legacy-retirement.mjs';
 import {createPublicationInventory} from './publication-inventory.mjs';
+import {replayCatalogue,assertSuccessor,assertReproducibleCorpus} from './historical-scope-reconciliation.mjs';
+import {reviewedCatalogue} from './combined-release-successors.mjs';
+import {assertAudiencePublication} from './audience-publication-contract.mjs';
 const root=new URL('../',import.meta.url).pathname;
 const read=f=>fs.readFileSync(root+f);
 const json=f=>JSON.parse(read(f));
@@ -20,15 +23,24 @@ for(const id of STONEFLOOR_RETIRED_IDS){
  }
  test(id+' keeps generic footer stock link',()=>assert.deepEqual(stonefloorRetirementIssues({...state,html:state.html+'<footer>Check stock</footer>'}),[]));
 }
-test('only two catalogue records and redirect lines changed',()=>{
+test('only approved retirements and exact sealed supplier successors changed the catalogue; redirects remain exact',()=>{
  const before=json(dir+'before/data/product-catalogue.json');
- assert.deepEqual(catalogue.products.filter(p=>!STONEFLOOR_RETIRED_IDS.includes(p.id)),before.products.filter(p=>!STONEFLOOR_RETIRED_IDS.includes(p.id)));
+ const projected=reviewedCatalogue(root);
+ assert.deepEqual(catalogue.products.filter(p=>!STONEFLOOR_RETIRED_IDS.includes(p.id)),projected.products.filter(p=>!STONEFLOOR_RETIRED_IDS.includes(p.id)));
+ assert.deepEqual(catalogue.ranges,projected.ranges);
  const old=read(dir+'before/_redirects').toString();
  const expected=STONEFLOOR_RETIRED_IDS.reduce((s,id)=>s.replace(`/product/${id}/ /ranges/stone-floor-tile/ 301`,`/product/${id}/ /ranges/stone-floor/ 301`),old);
  assert.equal(read('_redirects').toString(),expected);
 });
-test('protected files unchanged and publication count retained',()=>{
- for(const f of json(dir+'BASELINE.json').protectedFiles)assert.equal(crypto.createHash('sha256').update(read(f.file)).digest('hex'),f.sha256,f.file);
- assert.equal(inventory.sitemapRoutes.length,773);
+test('protected files retain exact reviewed successors and historical publication URLs',()=>{
+ for(const f of json(dir+'BASELINE.json').protectedFiles){
+  if(f.file==='assistant/generated/corpus.json'){
+   assert.equal(f.sha256,'b2e94a791e53c0b2b6ef616a685c55b0bf3f8b36c738911990ac8040b233bc03','Historical corpus baseline must remain sealed');
+   assertReproducibleCorpus(root,read(f.file));
+  }
+  else assertSuccessor(root,f.file,f.sha256);
+ }
+ const publication=assertAudiencePublication(read('sitemap.xml').toString());
+ assert.equal(inventory.sitemapRoutes.length,publication.total);
  assert.equal(approvedStonefloorSource('/product/stone-floor-washed-oak/',approvalBytes),false);
 });

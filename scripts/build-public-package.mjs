@@ -10,6 +10,9 @@ import { applyEnquiryAttachments } from './enquiry-attachments.mjs';
 import { applyReliabilityDisclosures } from './reliability-disclosures.mjs';
 import { applyProjectPhotoFilters } from './project-photo-filters.mjs';
 import { applyLegacyGuideImages } from './legacy-guide-images.mjs';
+import { applyRefresh as applySupplierGapRefresh } from './supplier-gap-refresh.mjs';
+import {localFloorPlanEnabled,addFloorPlan,checkFloorPlan} from './floor-plan-package.mjs';
+const floorPlanEnabled = localFloorPlanEnabled(process.env);
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 execFileSync(process.execPath, [path.join(root, 'scripts/october-catalogue-repair.mjs')], {cwd:root, stdio:'inherit'});
@@ -18,18 +21,22 @@ execFileSync(process.execPath, [path.join(root, 'scripts/artisan-tile-migration.
 execFileSync(process.execPath, [path.join(root, 'scripts/artisan-oak-retirement.mjs')], {cwd:root, stdio:'inherit'});
 execFileSync(process.execPath, [path.join(root, 'scripts/aspect-correction.mjs')], {cwd:root, stdio:'inherit'});
 execFileSync(process.execPath, [path.join(root, 'scripts/demarque-consolidation.mjs')], {cwd:root, stdio:'inherit'});
+execFileSync(process.execPath, [path.join(root, 'scripts/audience-service-pages.mjs'), ...(process.argv.includes('--check') ? ['--check'] : [])], {cwd:root, stdio:'inherit'});
 const publishRoot = path.join(root, "dist");
 applyEnquiryAttachments();
 applyEditorial();
 applyReliabilityDisclosures();
 applyProjectPhotoFilters();
 applyLegacyGuideImages();
+applySupplierGapRefresh(root,{apply:true});
 const checkOnly = process.argv.includes("--check");
 const context = String(process.env.CONTEXT || "dev").trim().toLowerCase();
 const indexingEnabled = /^true$/i.test(String(process.env.OZ_PRODUCTION_INDEXING_ENABLED || "").trim());
 const publishIndexable = context === "production" && indexingEnabled;
 
 const publicDirectories = Object.freeze([
+  "property-manager-flooring",
+  "insurance-flooring-repairs",
   "timber-flooring-installation-common-mistakes-and-solutions",
   "timber-flooring-options-solid-vs-engineered-vs-hybrid",
   "laminate-timber-flooring-explained-cost-durability-use-cases",
@@ -214,6 +221,7 @@ if (!checkOnly) {
   }
   for (const required of requiredRootFiles) copyFile(required);
   for (const directory of publicDirectories) copyDirectory(directory);
+  if (floorPlanEnabled) addFloorPlan(root, publishRoot);
 }
 
 if (!fs.existsSync(publishRoot) || !fs.statSync(publishRoot).isDirectory()) {
@@ -221,6 +229,7 @@ if (!fs.existsSync(publishRoot) || !fs.statSync(publishRoot).isDirectory()) {
 }
 
 const manifest = packageManifest();
+checkFloorPlan(publishRoot, floorPlanEnabled);
 verifyPublicPackage(manifest);
 process.stdout.write(
   `PUBLIC PACKAGE PASS mode=${publishIndexable ? "isolated-production-fixture" : "protected-preview"} files=${manifest.fileCount} bytes=${manifest.byteCount} manifestSha256=${manifest.manifestSha256} output=dist\n`,

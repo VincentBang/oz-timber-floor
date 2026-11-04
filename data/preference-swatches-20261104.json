@@ -1,0 +1,129 @@
+{
+  "schemaVersion": 1,
+  "reviewDate": "2026-11-04",
+  "scope": "Local colour illustrations only; no product name, SKU, construction, availability or retirement decision.",
+  "archiveIndex": "docs/migration-october-2026/source/product-sitemap.xml",
+  "evidenceRawDirectory": "docs/seo-growth/evidence/2026-11-04-preference-swatches/raw",
+  "images": [
+    {
+      "id": "aspire-warm-spring",
+      "route": "/products/aspire-warm-spring/",
+      "rangeSlug": "aspire",
+      "colour": "Warm Spring",
+      "localFile": "/assets/products/supplier-reviewed-20261104/aspire-warm-spring.webp",
+      "sha256": "73586be41cc5dd6d5e5d42f6a2c1fc78d779de443b208e2809b2cfefdf107128",
+      "width": 1000,
+      "height": 1000,
+      "alt": "Aspire Warm Springs flooring colour reference",
+      "before": {
+        "primaryImage": "/assets/images/categories/hybrid-flooring-thumbnail.webp",
+        "imageGallery": [
+          "/assets/images/categories/hybrid-flooring-thumbnail.webp"
+        ],
+        "galleryStatus": "range-image",
+        "altText": "Aspire Aspire Warm Spring hybrid flooring colour swatch"
+      },
+      "evidence": {
+        "kind": "confirmed-archive-supplier-colour",
+        "archivePage": "https://oztimberfloor.com.au/product/aspire-warm-spring/",
+        "archiveUrl": "https://oztimberfloor.com.au/wp-content/uploads/2020/05/Warm-Spring.jpg",
+        "archiveSha256": "d27c70c688e077007c37d911f4e98e71904726b6796cf895fc9c20c16787f795",
+        "archiveDimensions": [
+          585,
+          533
+        ],
+        "supplierPage": "https://preferencefloors.com.au/floor/warm-springs-hybrid-flooring/",
+        "supplierUrl": "https://preferencefloors.com.au/wp-content/uploads/2022/01/Warm-Springs-Contemporary-Decors-Aspire.jpg",
+        "supplierSha256": "332f9ea4a6be939817e1d9ed0a4495b821e2bd36d6130f4a0b10a790c3039ffe",
+        "supplierDimensions": [
+          1000,
+          1000
+        ],
+        "comparison": "matching-board-seams-and-grain",
+        "detail": "Current Aspire Warm Springs product image matches the Oz Warm Spring swatch across the distinctive boards, knots and seams. This resolves colour identity, not 6.5mm versus 8mm construction.",
+        "availabilityConfirmed": false,
+        "skuEquivalenceConfirmed": false
+      }
+    },
+    {
+      "id": "aspire-twilight-mist",
+      "route": "/products/aspire-twilight-mist/",
+      "rangeSlug": "aspire",
+      "colour": "Twilight Mist",
+      "localFile": "/assets/products/supplier-reviewed-20261104/aspire-twilight-mist.webp",
+      "sha256": "794cf4dd5edc866f00459d5c857a5cdb40c21111560283eb6d57d7b1a6322159",
+      "width": 585,
+      "height": 533,
+      "alt": "Aspire Twilight Mist flooring colour reference",
+      "before": {
+        "primaryImage": "/assets/products/supplier-reviewed-20261103/aspire-twilight-mist.webp",
+        "imageGallery": [
+          "/assets/products/supplier-reviewed-20261103/aspire-twilight-mist.webp"
+        ],
+        "galleryStatus": "single-image",
+        "altText": "Aspire Twilight Mist flooring colour reference"
+      },
+      "evidence": {
+        "kind": "confirmed-archive-supplier-colour",
+        "archivePage": "https://oztimberfloor.com.au/product/aspire-twilight-mist/",
+        "archiveUrl": "https://oztimberfloor.com.au/wp-content/uploads/2020/05/Twilight-Mist.jpg",
+        "archiveSha256": "01d356cc7057c7c21659dc7b00e9132dfabc9a7141a9e0b5db08e27edec71e10",
+        "archiveDimensions": [
+          585,
+          533
+        ],
+        "supplierPage": "https://preferencefloors.com.au/wp-json/wp/v2/media?per_page=100&search=Twilight%20Mist",
+        "supplierUrl": "https://preferencefloors.com.au/wp-content/uploads/2022/01/VA-Twilight-Mist_media-0.jpg",
+        "supplierSha256": "01d356cc7057c7c21659dc7b00e9132dfabc9a7141a9e0b5db08e27edec71e10",
+        "supplierDimensions": [
+          585,
+          533
+        ],
+        "comparison": "byte-identical",
+        "detail": "Exact archived Oz product image and supplier media original share a SHA-256. The historic Aspire brochure also labels the colour; the current Aspire brand filter need not list it.",
+        "availabilityConfirmed": false,
+        "skuEquivalenceConfirmed": false
+      }
+    },
+    {
+      "id": "-select-blackbutt",
+      "route": "/products/select-blackbutt/",
+      "rangeSlug": "-select-australian-timber",
+      "colour": "Select Blackbutt",
+      "localFile": "/assets/products/supplier-reviewed-20261104/select-blackbutt.webp",
+      "sha256": "b5959999fe664d65fe1a37d48cfe6190ff89389ccdc7db59d76b1bf6d53f9162",
+      "width": 1000,
+      "height": 1000,
+      "alt": "Select Blackbutt flooring colour reference",
+      "before": {
+        "primaryImage": "/assets/products/supplier-reviewed-20261103/select-blackbutt.webp",
+        "imageGallery": [
+          "/assets/products/supplier-reviewed-20261103/select-blackbutt.webp"
+        ],
+        "galleryStatus": "single-image",
+        "altText": "Select Blackbutt flooring colour reference"
+      },
+      "evidence": {
+        "kind": "confirmed-archive-supplier-colour",
+        "archivePage": "https://oztimberfloor.com.au/product/preference-select-blackbutt/",
+        "archiveUrl": "https://oztimberfloor.com.au/wp-content/uploads/2020/05/Blackbutt-4.jpg",
+        "archiveSha256": "cb00ca0e0fe4e57ed01034bb950c8ae45a867e92d61bafe3416fbfa5ead26fc2",
+        "archiveDimensions": [
+          400,
+          400
+        ],
+        "supplierPage": "https://preferencefloors.com.au/floor/blackbutt-select-australian-timber/",
+        "supplierUrl": "https://preferencefloors.com.au/wp-content/uploads/2022/01/Blackbutt-Preference-Select-2.jpg",
+        "supplierSha256": "fb694e8979b462e04a29864cf5c949f5b69bed8c2af18444cb765b482d36b9d1",
+        "supplierDimensions": [
+          1000,
+          1000
+        ],
+        "comparison": "matching-board-seams-and-grain",
+        "detail": "The larger supplier original matches both the Oz historic Select Blackbutt product image and the labelled Select Australian Timber brochure swatch. Its use on today's MB Blackbutt page does not equate the two SKUs.",
+        "availabilityConfirmed": false,
+        "skuEquivalenceConfirmed": false
+      }
+    }
+  ]
+}

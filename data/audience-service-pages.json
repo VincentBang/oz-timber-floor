@@ -1,0 +1,517 @@
+{
+  "schemaVersion": 1,
+  "reviewed": "2026-11-04",
+  "template": "builder-flooring-contractor-sydney.html",
+  "pages": [
+    {
+      "route": "/property-manager-flooring/",
+      "ctaUrl": "/contact/?enquiry=commercial&source=property-manager-flooring#contact-form-start",
+      "hero": {
+        "paragraphs": [
+          "From a damaged board to flooring replacement between tenancies, Oz Timber Floor helps property managers, real estate agents and landlords organise flooring work across Sydney.",
+          "We handle small floor repairs, removal and replacement, and sanding or recoating of suitable timber floors. Tenant appointments and agency key coordination can be arranged as part of the job.",
+          "Tell us about the property, the flooring issue and your preferred dates. We can discuss the next step and what is needed to prepare a quote."
+        ],
+        "eyebrow": "Rental properties & agency work",
+        "primary": "Request a Rental Property Quote",
+        "secondary": "Discuss Ongoing Agency Work",
+        "helper": "For a single property or ongoing agency enquiries. Please include the property suburb and whether it is occupied."
+      },
+      "sections": [
+        {
+          "heading": "The right scope for the property",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "A small damaged area, a worn timber finish and a floor ready for replacement need different approaches. We can discuss the practical options before the work is agreed."
+            },
+            {
+              "type": "card",
+              "heading": "Small floor repairs",
+              "paragraphs": [
+                "Ask about damaged boards or a localised flooring problem. Repair options depend on the flooring system, the condition of the surrounding area and access to suitable replacement material. An inspection may be needed before the scope can be confirmed."
+              ]
+            },
+            {
+              "type": "card",
+              "heading": "Removal and replacement",
+              "paragraphs": [
+                "For flooring that needs replacing, we can discuss the existing floor, removal, the replacement product and installation requirements. Tell us about adjoining rooms, stairs, furniture and other planned work so these can be considered in the quote."
+              ],
+              "link": {
+                "label": "Floor removal and stripping",
+                "href": "/timber-floor-removal-and-stripping-sydney/"
+              }
+            },
+            {
+              "type": "card",
+              "heading": "Sanding and recoating",
+              "paragraphs": [
+                "Suitable existing timber floors may be renewed through sanding or recoating. The appropriate work depends on the floor construction, its condition and the existing finish. We will discuss suitability before agreeing the work."
+              ],
+              "link": {
+                "label": "Timber floor sanding and polishing",
+                "href": "/timber-floor-sanding-and-polishing-sydney/"
+              }
+            }
+          ]
+        },
+        {
+          "heading": "Plan the work around the tenancy",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "For a vacant property, share the move-out date, intended handover date and any other trades already booked. For an occupied property, tell us who will coordinate tenant access and any restrictions on working hours."
+            },
+            {
+              "type": "paragraph",
+              "text": "We can arrange tenant appointments and agency key collection and return. Access arrangements and installation dates are agreed once the scope, materials and site requirements are understood."
+            },
+            {
+              "type": "paragraph",
+              "text": "If your dates change, contact us so the schedule can be reviewed. A requested completion date is confirmed during planning rather than assumed from the enquiry."
+            }
+          ]
+        },
+        {
+          "heading": "Give the owner a clear basis for approval",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Tell us whether you need a repair quote, replacement options or advice on renewing an existing timber floor. If the owner is considering more than one approach, include that in the enquiry."
+            },
+            {
+              "type": "paragraph",
+              "text": "Before approving the work, confirm the items relevant to the property:"
+            },
+            {
+              "type": "list",
+              "items": [
+                {
+                  "text": "The rooms and areas included."
+                },
+                {
+                  "text": "The repair or replacement work and selected flooring, where applicable."
+                },
+                {
+                  "text": "Removal, disposal and floor preparation where required."
+                },
+                {
+                  "text": "Trims, transitions and finishing details."
+                },
+                {
+                  "text": "Furniture, access and any work to be handled by others."
+                },
+                {
+                  "text": "Timing, exclusions and how any changes to the agreed scope will be handled."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "Where the condition beneath the existing floor is not yet known, that uncertainty needs to be addressed in planning rather than treated as a confirmed inclusion."
+            }
+          ]
+        },
+        {
+          "heading": "Flooring choices for rental properties",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Choose flooring around the property and the intended use. Budget, appearance, cleaning, repair options and the conditions of the specific product all matter."
+            },
+            {
+              "type": "paragraph",
+              "text": "Oz Timber Floor offers hybrid, laminate, vinyl and timber flooring options. Browse the categories as a starting point, then discuss a suitable selection for the rooms, existing subfloor and access arrangements. For apartments, share any building requirements before the product and installation method are agreed."
+            },
+            {
+              "type": "list",
+              "items": [
+                {
+                  "label": "Compare hybrid flooring",
+                  "href": "/hybrid/"
+                },
+                {
+                  "label": "Explore laminate flooring",
+                  "href": "/laminate/"
+                },
+                {
+                  "label": "View vinyl flooring",
+                  "href": "/vinyl/"
+                },
+                {
+                  "label": "Browse engineered timber flooring",
+                  "href": "/engineered-timber-flooring/"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "From enquiry to agreed work",
+          "blocks": [
+            {
+              "type": "step",
+              "heading": "Share the property details.",
+              "text": "Include the suburb, whether the property is occupied, the flooring issue and your preferred dates. If you have photographs, tell us and we can discuss how to provide them."
+            },
+            {
+              "type": "step",
+              "heading": "Confirm what is needed for a quote.",
+              "text": "We will discuss the available information and whether a site visit is needed to understand the flooring and access requirements."
+            },
+            {
+              "type": "step",
+              "heading": "Agree the scope and obtain approval.",
+              "text": "Confirm the work, product choices where relevant, inclusions and the person authorised to proceed."
+            },
+            {
+              "type": "step",
+              "heading": "Coordinate access and dates.",
+              "text": "Agree tenant arrangements or key collection, the working schedule and any coordination with other trades."
+            },
+            {
+              "type": "step",
+              "heading": "Complete the agreed flooring work.",
+              "text": "Keep the property contact informed of any issue that needs a decision before additional work proceeds."
+            }
+          ]
+        },
+        {
+          "heading": "One property or ongoing agency work",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "If you manage several properties, tell us where they are located and the flooring work you regularly need. We can discuss service coverage, how you prefer to request quotes and your access and invoicing requirements."
+            },
+            {
+              "type": "cta",
+              "label": "Discuss Ongoing Agency Work",
+              "helper": ""
+            }
+          ]
+        },
+        {
+          "heading": "Questions from property managers and landlords",
+          "blocks": [
+            {
+              "type": "faq",
+              "question": "Do you take on small floor repairs?",
+              "answer": "Yes. We undertake small floor repairs as well as larger replacement jobs. Describe the damage and the flooring type if you know it. We may need to inspect the area before confirming the work."
+            },
+            {
+              "type": "faq",
+              "question": "Can you repair a section instead of replacing the whole floor?",
+              "answer": "That may be possible. It depends on the flooring system, the condition of the surrounding floor and whether suitable replacement material is available. We can discuss the options before the scope is agreed."
+            },
+            {
+              "type": "faq",
+              "question": "Can you collect keys from our agency and coordinate with the tenant?",
+              "answer": "Yes, tenant appointments and agency key collection and return can be arranged. Tell us who should coordinate access. Please share detailed access instructions through the agreed contact process rather than in the initial website enquiry."
+            },
+            {
+              "type": "faq",
+              "question": "Can work be scheduled between tenancies?",
+              "answer": "We can plan around your requested vacancy period. Share the move-out and intended handover dates, together with any other booked trades. Dates are confirmed once the scope, materials and access requirements are understood."
+            },
+            {
+              "type": "faq",
+              "question": "What if matching boards are no longer available?",
+              "answer": "We will discuss the available options and any likely differences before the work is agreed. An exact match in colour, pattern, dimensions or finish cannot always be achieved."
+            },
+            {
+              "type": "faq",
+              "question": "What should I include in the first enquiry?",
+              "answer": "Start with your name and contact details, the agency or project name if applicable, the property suburb, whether it is occupied, the work required and your preferred dates. Measurements and existing flooring details are useful if available, but you do not need to know the exact product to ask about the job."
+            }
+          ]
+        },
+        {
+          "heading": "Tell us about your rental property",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Need a small repair, a timber floor refreshed or replacement flooring planned around a tenancy? Send the property details and we can discuss the appropriate next step."
+            },
+            {
+              "type": "cta",
+              "label": "Request a Rental Property Quote",
+              "helper": "Use the project details field to include the agency name, property suburb, flooring issue and preferred dates."
+            },
+            {
+              "type": "related",
+              "items": [
+                {
+                  "label": "Flooring installation",
+                  "href": "/timber-floor-installation/"
+                },
+                {
+                  "label": "Floor levelling and preparation",
+                  "href": "/floor-levelling/"
+                },
+                {
+                  "label": "Insurance-related flooring work",
+                  "href": "/insurance-flooring-repairs/"
+                },
+                {
+                  "label": "All flooring services",
+                  "href": "/services/"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "image": {
+        "src": "/assets/images/hero/sydney-timber-flooring-contractor.jpg",
+        "alt": "Timber flooring in a bright furnished living room",
+        "width": 1600,
+        "height": 1200
+      },
+      "h1": "Flooring for Sydney Property Managers and Rental Properties",
+      "hubCard": {
+        "heading": "Property managers & rentals",
+        "description": "Small repairs, replacement and timber recoating for rental properties, with tenant and agency key coordination.",
+        "linklabel": "Flooring for managed properties"
+      }
+    },
+    {
+      "route": "/insurance-flooring-repairs/",
+      "ctaUrl": "/contact/?enquiry=commercial&source=insurance-flooring-repairs#contact-form-start",
+      "hero": {
+        "paragraphs": [
+          "Oz Timber Floor carries out flooring work for insurance builders across Sydney. We also welcome enquiries from property owners and managers seeking a quote for an insurance-related flooring repair.",
+          "Our work includes small floor repairs, removal and replacement, and sanding or recoating of suitable timber floors. Share the flooring scope, property location and access requirements so we can discuss the job."
+        ],
+        "eyebrow": "Insurance builders & repair projects",
+        "primary": "Request a Flooring Scope Quote",
+        "secondary": "Discuss Builder Flooring Support",
+        "helper": "Builders, property managers and owners can use the project enquiry form. Include your role and the flooring work required in the project details."
+      },
+      "sections": [
+        {
+          "heading": "Flooring support for insurance builders",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Send the flooring portion of your scope of works, the property suburb and your requested quotation date. Existing product information, approximate quantities and the work sequence can help us understand the requirements."
+            },
+            {
+              "type": "paragraph",
+              "text": "We can discuss the flooring work alongside the access arrangements, material selection and other trades involved. Where the requested work or site information needs clarification, the scope should be confirmed before scheduling."
+            },
+            {
+              "type": "paragraph",
+              "text": "For ongoing subcontracting enquiries, tell us the areas you cover and the types of flooring work you need. We can discuss our suitability and the information required for your contractor onboarding process."
+            }
+          ]
+        },
+        {
+          "heading": "Flooring work we can undertake",
+          "blocks": [
+            {
+              "type": "card",
+              "heading": "Small repairs and partial replacement",
+              "paragraphs": [
+                "Ask about a localised damaged area or individual boards. The suitable approach depends on the flooring system, the condition of the surrounding area and the availability of appropriate replacement material."
+              ]
+            },
+            {
+              "type": "card",
+              "heading": "Removal and replacement flooring",
+              "paragraphs": [
+                "Where replacement is agreed, we can discuss removal of the existing flooring, the proposed replacement and the preparation and finishing items relevant to the job."
+              ],
+              "link": {
+                "label": "Floor removal and stripping",
+                "href": "/timber-floor-removal-and-stripping-sydney/"
+              }
+            },
+            {
+              "type": "card",
+              "heading": "Sanding and recoating suitable timber floors",
+              "paragraphs": [
+                "Sanding or recoating may be appropriate for an existing timber floor, depending on its construction, condition and finish. Suitability is considered before that work is included in the scope."
+              ],
+              "link": {
+                "label": "Timber floor sanding and polishing",
+                "href": "/timber-floor-sanding-and-polishing-sydney/"
+              }
+            },
+            {
+              "type": "card",
+              "heading": "Tenant and agency access coordination",
+              "paragraphs": [
+                "If the property is occupied or the keys are held by a managing agent, we can arrange tenant appointments and agency key coordination as part of the agreed job arrangements."
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Matching the existing floor",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Existing flooring details, packaging or a spare board can help identify the product. Let us know what information is available when you enquire."
+            },
+            {
+              "type": "paragraph",
+              "text": "Matching can be affected by product availability and differences in colour, pattern, dimensions, finish and ageing. We will discuss the available options before the work is agreed. An exact match cannot always be achieved."
+            },
+            {
+              "type": "paragraph",
+              "text": "If a proposed substitution or a wider replacement area changes the agreed scope, it needs to be confirmed with the party authorising the work before proceeding."
+            }
+          ]
+        },
+        {
+          "heading": "Plan the flooring stage of the repair",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Tell us about other work that needs to happen before or alongside the flooring. Access, the agreed site readiness, material availability and other trades can affect the sequence and dates."
+            },
+            {
+              "type": "paragraph",
+              "text": "If a leak or another cause of damage is still being addressed, include that in the brief so responsibilities and timing can be clarified with the builder or repair coordinator. Do not assume the flooring appointment also covers leak repairs, drying or specialist reporting."
+            }
+          ]
+        },
+        {
+          "heading": "Requesting a quote as a property owner or manager",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "You can contact Oz Timber Floor about an insurance-related flooring quote. Let us know whether an insurer, appointed builder or repair coordinator is already involved, and whether a flooring scope has been provided."
+            },
+            {
+              "type": "paragraph",
+              "text": "Our role is to discuss and quote the flooring work. A flooring quote does not confirm insurance coverage or approve a claim. Confirm the required authorisation with the insurer or appointed representative before arranging work."
+            }
+          ]
+        },
+        {
+          "heading": "How the flooring enquiry works",
+          "blocks": [
+            {
+              "type": "step",
+              "heading": "Send the brief.",
+              "text": "Include the property suburb, flooring issue or existing scope, your role and the requested quotation date. A job reference is useful if you already have one."
+            },
+            {
+              "type": "step",
+              "heading": "Clarify the flooring requirements.",
+              "text": "We will discuss the information available and whether a site visit is needed before the work can be quoted."
+            },
+            {
+              "type": "step",
+              "heading": "Confirm the quote and authorised scope.",
+              "text": "Agree the work to proceed, the selected material where applicable and who can approve changes."
+            },
+            {
+              "type": "step",
+              "heading": "Arrange access and the work sequence.",
+              "text": "Confirm the property contact, tenant or agency access arrangements and coordination with other trades."
+            },
+            {
+              "type": "step",
+              "heading": "Complete the agreed flooring work.",
+              "text": "Any proposed additional work or change in scope is discussed with the appropriate contact before proceeding."
+            }
+          ]
+        },
+        {
+          "heading": "Questions about insurance-related flooring work",
+          "blocks": [
+            {
+              "type": "faq",
+              "question": "Do you work for insurance builders?",
+              "answer": "Yes. We undertake flooring work for insurance builders. Send the flooring scope, property suburb and requested quotation date so we can discuss the project."
+            },
+            {
+              "type": "faq",
+              "question": "Can I request a quote before my claim is approved?",
+              "answer": "You can enquire about a flooring quote. Let us know the current stage and whether an insurer or builder has requested it. The quote does not confirm cover or authorise repairs; the required approval must be confirmed separately."
+            },
+            {
+              "type": "faq",
+              "question": "Can you replace only the damaged boards?",
+              "answer": "A partial repair or replacement may be possible. It depends on the flooring system, the affected area and whether suitable replacement material is available. We can discuss the practical options before agreeing the scope."
+            },
+            {
+              "type": "faq",
+              "question": "Can you match discontinued flooring?",
+              "answer": "We can discuss the options using the existing product information or available samples. A discontinued product may no longer be obtainable, and differences in appearance or dimensions can limit matching. We cannot promise an exact match."
+            },
+            {
+              "type": "faq",
+              "question": "Can you coordinate access with a tenant or property manager?",
+              "answer": "Yes. Tenant appointments and agency key coordination can be arranged. Tell us who should manage access and agree the details before attendance."
+            },
+            {
+              "type": "faq",
+              "question": "What happens if the work required changes?",
+              "answer": "Changes to the agreed work need to be discussed and authorised before additional work proceeds. Tell us who is responsible for scope decisions so queries reach the appropriate person."
+            },
+            {
+              "type": "faq",
+              "question": "What information should I send first?",
+              "answer": "Include your contact details and role, the property suburb, the flooring issue or scope, the requested quotation date and relevant access or scheduling requirements. Tell us if you have photographs or documents, and we can discuss how to provide them. There is no need to send a full insurance policy or unrelated personal information with the first enquiry."
+            }
+          ]
+        },
+        {
+          "heading": "Discuss your flooring repair scope",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Whether you are pricing a defined scope or establishing what flooring work is needed, send the property details and we can discuss the next step."
+            },
+            {
+              "type": "cta",
+              "label": "Request a Flooring Scope Quote",
+              "helper": ""
+            },
+            {
+              "type": "related",
+              "items": [
+                {
+                  "label": "Flooring support for builders",
+                  "href": "/builder-flooring-contractor-sydney/"
+                },
+                {
+                  "label": "Flooring installation",
+                  "href": "/timber-floor-installation/"
+                },
+                {
+                  "label": "Floor levelling and preparation",
+                  "href": "/floor-levelling/"
+                },
+                {
+                  "label": "Flooring for property managers",
+                  "href": "/property-manager-flooring/"
+                },
+                {
+                  "label": "All flooring services",
+                  "href": "/services/"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "image": {
+        "src": "/assets/images/hero/sydney-timber-flooring-contractor.jpg",
+        "alt": "Timber flooring in a bright furnished living room",
+        "width": 1600,
+        "height": 1200
+      },
+      "h1": "Flooring Repairs and Replacement for Insurance Projects",
+      "hubCard": {
+        "heading": "Insurance flooring repairs",
+        "description": "Flooring repairs, replacement and suitable timber recoating for insurance-related projects and insurance builders.",
+        "linklabel": "Discuss insurance flooring work"
+      }
+    }
+  ]
+}

@@ -4,6 +4,8 @@ import assert from "node:assert/strict";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { assertFaqSchema } from './faq-schema-contract.mjs';
+import { assertAudiencePublication } from './audience-publication-contract.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const read = (relative) => fs.readFileSync(path.join(root, relative), "utf8");
@@ -13,7 +15,9 @@ const wordCount = (html) => html.replace(/<script[\s\S]*?<\/script>/g, " ").repl
 const regexEscape = (value) => value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
 const sitemap = read("sitemap.xml");
-assert.equal(count(sitemap, /<loc>/g), 773, "sitemap must contain 773 canonical pages after restoring oak owner");
+// Preserve the historical 773 canonical URLs; the owner-approved audience
+// expansion permits exactly two additions without loosening unrelated checks.
+const publication = assertAudiencePublication(sitemap);
 assert.equal(count(sitemap, /https:\/\/oztimberfloor\.com\.au\/oak-flooring-sydney\//g), 1);
 
 const redirects = read("_redirects");
@@ -28,18 +32,18 @@ assert.match(oak, /<link rel="canonical" href="https:\/\/oztimberfloor\.com\.au\
 assert.match(oak, /<meta name="robots" content="index,follow">/);
 assert.equal(count(oak, /<h1[ >]/g), 1);
 assert.ok(wordCount(oak) >= 500, `oak page must be useful, found ${wordCount(oak)} words`);
-assert.equal(count(oak, /<article class="faq-item">/g), 4);
+assertFaqSchema(oak,4);
 assert.ok(schemas(oak).some((schema) => schema["@graph"]?.some((entry) => entry["@type"] === "FAQPage" && entry.mainEntity.length === 4)));
 assert.equal(read("oak-flooring-sydney.html"), oak);
 
 const faq = read("faqs/index.html");
-assert.equal(count(faq, /<div class="faq-item"/g), 15);
+assertFaqSchema(faq,15);
 assert.ok(schemas(faq).some((schema) => schema["@type"] === "FAQPage" && schema.mainEntity.length === 15));
 for (const phrase of ["maintained", "prepare the property", "damaged boards", "site assessment", "larger renovation"]) assert.match(faq.toLowerCase(), new RegExp(phrase));
 assert.equal(read("faqs.html"), faq);
 
 const installation = read("timber-floor-installation/index.html");
-assert.equal(count(installation, /<article class="faq-item">/g), 8);
+assertFaqSchema(installation,8);
 assert.match(installation, /Prepare the property and installation sequence/);
 assert.match(installation, /What happens after you enquire/);
 assert.ok(schemas(installation).some((schema) => schema["@graph"]?.some((entry) => entry["@type"] === "FAQPage" && entry.mainEntity.length === 8)));
@@ -75,4 +79,4 @@ assert.ok(fs.existsSync(path.join(root, "googlea11728cf4d174049.html")));
 assert.match(read("index.html"), /google-site-verification/i);
 assert.match(read("scripts/build-public-package.mjs"), /"oak-flooring-sydney"/);
 
-process.stdout.write("OCTOBER 26 CUTOVER CONTRACT PASS sitemap=773 oak-owner=restored faq=15 installation-faq=8 priorities=4 retirement=12\n");
+process.stdout.write(`OCTOBER 26 CUTOVER CONTRACT PASS sitemap=${publication.total} historical=${publication.historical} audience-additions=${publication.additions} oak-owner=restored faq=15 installation-faq=8 priorities=4 retirement=12\n`);
