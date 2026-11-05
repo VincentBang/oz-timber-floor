@@ -1,5 +1,17 @@
 # Oz Timber Floor Status
 
+## 6 November2026 — deployed chatbot recorded in Git, no redeployment
+
+Recorded the exact production chatbot overlay from deploy6aed0124f8a810d9098d6b1b
+under assistant/releases/2026-11-06. Corpus e15e64b2 and active profile7755e9f3
+retain US$30/month and US$1/day. Existing runtime/client source already matches
+the deployed version. Versioned knowledge/profile/contact overlays preserve the
+normal source-OFF workflow and do not publish unrelated local website repairs.
+The archive verifier is read-only; private provider evidence/vendor bundles are
+not committed. Floorplan, upload backend, credentials and live controls unchanged.
+This Git-only sync uses skip-ci/skip-Netlify commit markers, not another deploy.
+Both dirty working trees and their real indexes remain untouched.
+
 ## 4 November 2026 — connected floorplan interaction redesign, local only
 
 Replaced the scrolling stack with a connected desktop workspace: active steps

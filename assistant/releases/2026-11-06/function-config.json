@@ -1,0 +1,44 @@
+{
+  "bundler": "nft",
+  "invocationMode": "stream",
+  "buildData": {
+    "bootstrapVersion": "2.24.0",
+    "runtimeAPIVersion": 2
+  },
+  "name": "flooring-assistant",
+  "priority": 10,
+  "trafficRules": {
+    "action": {
+      "type": "rate_limit",
+      "config": {
+        "rateLimitConfig": {
+          "windowLimit": 12,
+          "windowSize": 60,
+          "algorithm": "sliding_window"
+        },
+        "aggregate": {
+          "keys": [
+            {
+              "type": "ip"
+            },
+            {
+              "type": "domain"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "runtimeVersion": "nodejs24.x",
+  "runtime": "js",
+  "routes": [
+    {
+      "pattern": "/api/flooring-assistant",
+      "literal": "/api/flooring-assistant",
+      "methods": [
+        "POST"
+      ]
+    }
+  ],
+  "sha256": "f5c36da566b473e09398614cddd7f82e2cc6eb96c5ae1f07555ada01e15361d4"
+}

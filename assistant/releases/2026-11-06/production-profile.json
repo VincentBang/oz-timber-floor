@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "purpose": "public-production-launch",
+  "activationApproved": true,
+  "dataUseApproved": true,
+  "ownerApprovals": {
+    "knowledge": true,
+    "privacy": true,
+    "spending": true,
+    "launch": true
+  },
+  "approvalReference": "Owner explicitly approved one verified rebuilt-chatbot production release on 6 November2026. Exact corpus and protected preview receipts bound in BINDING.json; USD30/month and USD1/day retained. No push, paid calls or real form submissions.",
+  "apiKeyVariable": "OZ_ASSISTANT_OPENAI_API_KEY",
+  "boundCorpusVersion": "e15e64b25fd01798e0430c8af886b7bdd37961d3607a061a0dba7941bd318358",
+  "privacyDocumentSha256": "e69c240c18642c0cd4e2b2318a3afb3921ccf4f1ac0665fb6e03093de2e7cb1d",
+  "candidateModelId": "gpt-6-luna",
+  "requestSettings": {
+    "reasoningEffort": "none",
+    "cacheMode": "explicit",
+    "cacheTtl": "30m",
+    "cacheBreakpoints": 0
+  },
+  "rateTable": {
+    "modelId": "gpt-6-luna",
+    "inputUsdPerMillion": 0.1,
+    "outputUsdPerMillion": 0.5,
+    "cachedInputUsdPerMillion": 0.01,
+    "cacheWrite30mUsdPerMillion": 0.125,
+    "cacheWrite12hUsdPerMillion": 0.25,
+    "verifiedAt": "2026-10-29",
+    "source": "https://developers.openai.com/api/docs/pricing/"
+  },
+  "modelAccess": {
+    "status": "PRODUCTION_KEY_PASS",
+    "reportSha256": "6f3b4155fa455d0f73b3398f066eb0b7a6debe69b88c47ee30a0c14ae662fb25"
+  },
+  "budgetStoreName": "oz-assistant-production-budget-v1",
+  "budgetStoreRegion": "us-east-2",
+  "atomicStoreAdapter": "netlify-blobs-strong-cas-v1",
+  "budgetVerification": {
+    "status": "HOSTED_PASS",
+    "storeName": "oz-assistant-production-budget-v1",
+    "reportSha256": "19c22fa4b8edd6f761a8f5b7864b4d32ef25191c60e5e78d8907e6a63378d784"
+  },
+  "allowance": {
+    "sessionMinute": 6,
+    "sessionDay": 30,
+    "ipMinute": 12,
+    "ipDay": 100,
+    "sessionConcurrent": 2,
+    "globalConcurrent": 4,
+    "globalDayCalls": 200,
+    "globalMonthCalls": 1000,
+    "dayBudgetUsd": 1,
+    "monthBudgetUsd": 30
+  },
+  "hostedCandidateVerification": {
+    "status": "PASS",
+    "corpusVersion": "e15e64b25fd01798e0430c8af886b7bdd37961d3607a061a0dba7941bd318358",
+    "deployId": "6aecf6c85ef955cc7701f854",
+    "manifestSha256": "bedaba404a8160bba810882989f2488f6a4f2a927c7ece02893411d81bf193fa"
+  }
+}
