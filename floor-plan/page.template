@@ -10,57 +10,38 @@
   <link rel="icon" href="/assets/brand/favicon-32.png" sizes="32x32" type="image/png">
   <title>Floor plan area tool | Oz Timber Floor</title>
   <meta name="description" content="Estimate floor area by setting a scale on your own plan and tracing the rooms you want to include in an Oz Timber Floor enquiry.">
-  <link rel="stylesheet" href="./operon-base.css"><link rel="stylesheet" href="./operon-page.css"><link rel="stylesheet" href="./port-inline-layout.css"><link rel="stylesheet" href="./port-accessibility.css">
+  <!-- OZ_SHARED_RESOURCES -->
+  <link rel="stylesheet" href="./site-tool.css">
   <script type="module" src="./operon-runtime.mjs"></script>
-</head><body><a class="port-skip" href="#measurementTool">Skip to measurement tool</a><header class="site-header">
-    <div class="shell nav">
-      <a class="brand" href="/" aria-label="Oz Timber Floor home">
-        <span class="brand-mark" aria-hidden="true"></span>
-        <span>Oz Timber Floor</span>
-      </a>
-      <nav class="nav-links" aria-label="Primary">
-        <a href="/">Home</a>
-        <a data-quote-return-link href="/contact/?enquiry=supply-install&amp;source=floor-plan">Quote</a>
-        <a href="/products/">Flooring Products</a>
-        <a href="/floor-plan/">Floor Plan</a>
-        <a href="/guides/">Guides</a>
-      </nav>
-      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <div class="header-actions">
-        <a class="header-phone" href="/contact/" data-track-cta="header_contact_click">Contact</a>
-        <a class="button header-quote-button" data-quote-return-link href="/contact/?enquiry=supply-install&amp;source=floor-plan">Request Quote</a>
-      </div>
-    </div>
-  </header>
+</head><body>
+  <!-- OZ_SHARED_HEADER -->
+  <div class="oz-floorplan-tool">
 
   <main id="main-content" tabindex="-1">
     <section class="hero" id="floorplanHero">
       <div class="shell hero-grid">
         <article class="hero-card">
-          <span class="eyebrow">Floor Plan Measurement Assistant</span>
+          <span class="eyebrow">Plan your flooring enquiry</span>
           <div class="hero-content-row">
             <div class="hero-copy-block">
               <h1>Measure your flooring area from a floor plan.</h1>
-              <p>Upload a floor plan, trace the rooms and send a starting area into your quote.</p>
+              <p>Open a floor plan, set its scale and trace the rooms. Share your reviewed area estimate with Oz Timber Floor when requesting supply or supply + installation.</p>
               <div class="hero-actions oz-source-style-0">
                 <a class="button" href="#measurementTool">Start measuring</a>
                 <a class="button-secondary" data-quote-return-link href="/contact/?enquiry=supply-install&amp;source=floor-plan">Ask for plan review</a>
               </div>
-              <p class="helper oz-source-style-1">Starting area only. Product and final scope are confirmed before booking.</p>
+              <p class="helper">Your plan opens in this browser. Sharing the estimate does not send the file, room names or outlines. To send the drawing itself, attach it in the enquiry form.</p>
+              <p class="helper oz-source-style-1">An estimate for planning—not an order quantity or a price. Product selection, wastage, floor preparation and installation scope need confirmation with our team.</p>
             </div>
 
             <aside class="hero-mini-panel" aria-label="Measurement summary">
-              <strong>Upload, scale, trace, review, quote</strong>
+              <strong>Open, scale, trace, review, enquire</strong>
               <ul class="hero-mini-steps">
-                <li><span>1</span> Upload the floor plan</li>
+                <li><span>1</span> Open your floor plan</li>
                 <li><span>2</span> Set scale from a known wall</li>
                 <li><span>3</span> Trace flooring rooms</li>
                 <li><span>4</span> Review selected area</li>
-                <li><span>5</span> Use area in quote</li>
+                <li><span>5</span> Use area in an enquiry</li>
               </ul>
             </aside>
           </div>
@@ -73,19 +54,19 @@
         <article class="section-card">
           <span class="eyebrow">Choose measurement path</span>
           <h2 class="oz-source-style-3">Not sure your flooring area?</h2>
-          <p>Use the floor plan yourself if you want a measured starting area, or start a quote with area uncertainty if you would rather have the plan reviewed during follow-up.</p>
+          <p>Measure an estimated area yourself, or send an enquiry and ask our team which plan and site details are needed. You can attach a drawing or photographs in the existing enquiry form.</p>
           <div class="link-grid oz-source-style-4">
             <a class="link-card" href="#measurementTool" data-track-cta="floorplan_self_measure_click">
               <strong>I want to measure it myself</strong>
-              <span>Upload, set scale, trace rooms and send the measured area into the quote.</span>
+              <span>Open your drawing, set a known distance and review the rooms before sharing an estimate.</span>
             </a>
             <a class="link-card" data-quote-return-link href="/contact/?enquiry=supply-install&amp;source=floor-plan" data-track-cta="floorplan_review_request_click">
               <strong>I want Oz Timber Floor to review the plan</strong>
-              <span>Start the quote with area uncertainty and note that a floor plan needs review.</span>
+              <span>Request supply pricing or supply + installation and explain which measurements still need review.</span>
             </a>
             <a class="link-card" href="/guides/" data-track-cta="floorplan_measurement_guide_click">
-              <strong>Read the measurement guide</strong>
-              <span>Understand what to include before tracing or sending an area into the quote.</span>
+              <strong>Read flooring planning guides</strong>
+              <span>Read about flooring choices, preparation and installation planning.</span>
             </a>
           </div>
         </article>
@@ -99,7 +80,7 @@
           <h2 class="oz-source-style-3">How the measurement tool works</h2>
           <div class="step-grid">
             <div class="step-card">
-              <strong>1. Upload floor plan</strong>
+              <strong>1. Open floor plan</strong>
               <span>Use a PDF, JPG or PNG.</span>
             </div>
             <div class="step-card">
@@ -111,8 +92,8 @@
               <span>Trace the flooring rooms and close each shape near the start point.</span>
             </div>
             <div class="step-card">
-              <strong>4. Use area in quote</strong>
-              <span>Send measured area into the quote. Product and final scope are confirmed separately.</span>
+              <strong>4. Use area in an enquiry</strong>
+              <span>Review the area, then choose whether to share the estimate in an enquiry. Nothing is submitted automatically.</span>
             </div>
           </div>
         </article>
@@ -123,8 +104,8 @@
       <div class="shell">
         <article class="section-card">
           <span class="eyebrow">Scope clarity</span>
-          <h2 class="oz-source-style-3">Clear scope before the job is booked</h2>
-          <p>Floor plan area is one part of a flooring quote. Product, removal, disposal, trims and stairs are reviewed before final confirmation.</p>
+          <h2 class="oz-source-style-3">Prepare a useful flooring enquiry</h2>
+          <p>A plan estimate helps us understand your project. Tell us the flooring range or colour, suburb, current floor and any access constraints. Our team confirms product details and the scope of supply, installation or preparation separately.</p>
           <div class="trust-card-grid oz-source-style-4">
             <article class="trust-card">
               <h3>Area checked</h3>
@@ -132,15 +113,15 @@
             </article>
             <article class="trust-card">
               <h3>Rooms included clearly</h3>
-              <p>Only trace rooms receiving flooring so the quote does not include the wrong spaces.</p>
+              <p>Only trace rooms receiving flooring so your estimate covers only the spaces you select.</p>
             </article>
             <article class="trust-card">
               <h3>Site scope still reviewed</h3>
               <p>Removal, floor preparation, stairs and trims are confirmed separately.</p>
             </article>
             <article class="trust-card">
-              <h3>Quote handoff ready</h3>
-              <p>Measured area can be carried into the quote without changing product or pricing logic.</p>
+              <h3>Ready for an enquiry</h3>
+              <p>Only your reviewed area estimate and included-room count are carried to the existing enquiry form after you choose to share them.</p>
             </article>
           </div>
         </article>
@@ -152,8 +133,8 @@
         <article class="section-card workspace-card">
           <div class="tool-header">
             <span class="eyebrow">Measurement Tool</span>
-            <h2>Upload, set scale and trace rooms</h2>
-            <p>Trace Room Mode measures real flooring area from your plan. Product and installation scope are reviewed separately.</p>
+            <h2>Open, set scale and trace rooms</h2>
+            <p>Trace the rooms receiving flooring to estimate their area. Confirm the scale and outline carefully; our team still needs to review the product and site requirements.</p>
           </div>
 
           <div class="status hidden oz-source-style-6" id="resumeMeasurementBanner">
@@ -169,7 +150,7 @@
             <div class="tool-panel-shell">
               <div class="tool-subsection">
                 <div class="tool-subsection-header">
-                    <h3 class="tool-subsection-title">1. Upload floor plan</h3>
+                    <h3 class="tool-subsection-title">1. Open floor plan</h3>
                     <p class="helper oz-source-style-8">Use a PDF, JPG or PNG. A plan with room walls and one known dimension gives the best result.</p>
                 </div>
                 <div class="field upload-field oz-source-style-9">
@@ -249,7 +230,7 @@
                     <button class="button-secondary" id="prepareQuickModeButton" type="button">Prepare Quick Room Mode</button>
                     <button class="button-secondary" id="quickModeInfoButton" type="button">Use Manual Trace</button>
                   </div>
-                  <p class="helper oz-source-style-12">Review suggested areas before using them in your quote.</p>
+                  <p class="helper oz-source-style-12">Review suggested outlines before using their estimated area in an enquiry.</p>
                 </div>
 
                 <div class="quick-status-grid" aria-live="polite">
@@ -314,7 +295,7 @@
           <div class="summary-heading">
             <span class="eyebrow">Selected Area</span>
             <h3 class="oz-source-style-16">Selected flooring area</h3>
-            <p>Select only the rooms where flooring will be installed, then send the total back into your quote.</p>
+            <p>Select only the rooms receiving flooring, then review the estimate before sharing it with the Oz enquiry form.</p>
           </div>
 
           <div class="summary-box">
@@ -343,7 +324,7 @@
               <strong>Measurement confidence</strong>
               <span class="pill warn" id="measurementConfidenceTag">Low</span>
             </div>
-            <p class="helper oz-source-style-18" id="measurementConfidenceText">Upload a plan, set scale and trace rooms before using the area in quote.</p>
+            <p class="helper oz-source-style-18" id="measurementConfidenceText">Upload a plan, set scale and trace rooms before using the estimate in an enquiry.</p>
             <div class="confidence-checklist oz-source-style-11" id="confidenceChecklist"></div>
             <p class="helper oz-source-style-15" id="scaleWarningText"></p>
           </div>
@@ -357,7 +338,7 @@
           </details>
 
           <div class="summary-box">
-            <strong>Review before quote</strong>
+            <strong>Review your flooring estimate</strong>
             <p class="helper oz-source-style-18">Only include rooms where flooring will be installed.</p>
             <p class="helper oz-source-style-19">Common areas to exclude:</p>
             <ul class="helper oz-source-style-20">
@@ -371,10 +352,10 @@
           </div>
 
           <div class="summary-box">
-            <strong>Ready to continue your quote?</strong>
-            <p class="helper oz-source-style-18">Send the selected floor area back to the quote form, then confirm product and final scope before submitting.</p>
+            <strong>Ready to prepare your enquiry?</strong>
+            <p class="helper oz-source-style-18">Choose whether to share your reviewed estimate with the Oz enquiry form. Review your details, attach files if needed and accept the form consent before sending.</p>
             <div class="summary-actions oz-source-style-21">
-              <button class="button" id="useAreaInQuoteButton" type="button">Use selected measured area in quote</button>
+              <button class="button" id="useAreaInQuoteButton" type="button">Use reviewed area in enquiry</button>
               <button class="button-danger" id="clearRoomsButton" type="button">Clear rooms</button>
             </div>
           </div>
@@ -398,7 +379,7 @@
             </details>
             <details class="summary-box">
               <summary><strong>Does this calculate the final quote?</strong></summary>
-              <p class="helper oz-source-style-18">No. It sends measured area into the quote. Product choice, main inclusions and final project details are reviewed separately.</p>
+              <p class="helper oz-source-style-18">No. This tool estimates area only; it does not calculate prices, wastage or an order quantity. Oz Timber Floor confirms product details and the project scope with you.</p>
             </details>
             <details class="summary-box">
               <summary><strong>Should I include every room?</strong></summary>
@@ -412,12 +393,12 @@
     <section class="section" aria-labelledby="floorplanPlanningLinksTitle">
       <div class="shell">
         <article class="section-card">
-          <span class="eyebrow">Plan the full quote</span>
+          <span class="eyebrow">Plan your flooring project</span>
           <h2 id="floorplanPlanningLinksTitle" class="oz-source-style-3">Use the measured area with the right project context</h2>
           <p>A floor plan creates a starting area. Product suitability, apartment requirements and the written installation scope still need separate review.</p>
           <div class="link-grid oz-source-style-4">
             <a class="link-card" href="/engineered-timber-flooring/"><strong>Planning apartment flooring?</strong><span>Check access, building requirements, acoustic questions and removal scope.</span></a>
-            <a class="link-card" href="/products/"><strong>Choose a flooring direction</strong><span>Compare hybrid, laminate and engineered timber before quoting.</span></a>
+            <a class="link-card" href="/products/"><strong>Choose a flooring direction</strong><span>Compare hybrid, laminate and engineered timber before sending an enquiry.</span></a>
             <a class="link-card" href="/contact/?enquiry=service&amp;source=floor-plan-review"><strong>Need help reviewing your plan?</strong><span>Ask the Oz team which measurements and project details to confirm.</span></a>
           </div>
         </article>
@@ -426,50 +407,6 @@
 
   </main>
 
-  <footer class="site-footer footer-contained">
-    <div class="container footer-grid">
-      <div class="footer-col footer-brand-block">
-        <a class="footer-logo" href="/" aria-label="Oz Timber Floor home">
-          <img src="/assets/brand/oz-timber-floor-logo.webp" alt="Oz Timber Floor Sydney logo" width="154" height="49">
-        </a>
-        <p class="footer-brand-copy">Flooring quotes and installation guidance for Sydney projects.</p>
-        <a class="footer-brand-cta" href="/contact/?enquiry=supply-install&amp;source=floor-plan">Start quote</a>
-      </div>
-      <div class="footer-col">
-        <h4>Products</h4>
-        <ul>
-          <li><a href="/hybrid/">Hybrid Flooring Sydney</a></li>
-          <li><a href="/laminate/">Laminate Flooring Sydney</a></li>
-          <li><a href="/engineered-timber-flooring/">Engineered Timber Flooring Sydney</a></li>
-          <li><a href="/products/">Flooring Products</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Quote &amp; Tools</h4>
-        <ul>
-          <li><a href="/contact/?enquiry=supply-install&amp;source=floor-plan">Start Quote</a></li>
-          <li><a href="/contact/?enquiry=service&amp;source=floor-plan-review">Plan Review</a></li>
-          <li><a href="/floor-plan/">Upload Floor Plan</a></li>
-          <li><a href="/guides/">Flooring Guides</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Services</h4><ul><li><a href="/timber-floor-installation/">Flooring installation</a></li><li><a href="/floor-levelling/">Floor levelling</a></li><li><a href="/commercial-flooring/">Commercial flooring</a></li><li><a href="/builder-flooring-contractor-sydney/">Builder flooring</a></li><li><a href="/timber-floor-sanding-and-polishing-sydney/">Sanding and polishing</a></li><li><a href="/timber-floor-removal-and-stripping-sydney/">Floor removal</a></li><li><a href="/contact/?enquiry=supply-only">Supply enquiries</a></li><li><a href="/contact/">Project enquiries</a></li></ul>
-      </div>
-      <div class="footer-col">
-        <h4>Company</h4>
-        <ul>
-          <li><a href="/projects/">Recent Projects</a></li>
-          <li><a href="/contact/">Contact</a></li>
-          <li><a href="/privacy/">Privacy Policy</a></li>
-          <li><a href="/terms/">Terms</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="container footer-bottom">
-      <p>&copy; 2026 Oz Timber Floor</p>
-    </div>
-  </footer>
 
   <dialog class="overlay" id="scaleModal" aria-labelledby="scaleModalTitle">
     <div class="modal">
@@ -484,4 +421,7 @@
         <button class="button-secondary" id="cancelScaleButton" type="button">Cancel</button>
       </div>
     </div>
-  </dialog><noscript><p class="shell">Turn on JavaScript to measure your plan, or <a href="/contact/">send an enquiry without using the tool</a>.</p></noscript></body></html>
+  </dialog><noscript><p class="shell">Turn on JavaScript to measure your plan, or <a href="/contact/">send an enquiry without using the tool</a>.</p></noscript>
+  </div>
+  <!-- OZ_SHARED_FOOTER -->
+</body></html>

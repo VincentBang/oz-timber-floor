@@ -1,0 +1,13 @@
+{
+  "scope": "LOCAL_PRODUCTION_BINDING_PREPARATION_ONLY",
+  "ownerRequest": "Prepare the exact production binding for the rebuilt chatbot knowledge and run local checks. Keep USD30 monthly and USD1 daily. No push, deploy or paid GPT calls.",
+  "corpusVersion": "a26ef1108a47eba7e29017b2b49b02ac5f3af3d8b85270b42b26ddb598f163e9",
+  "parentProfileHash": "a87c40db17e2cd4cccfe2e89907be89f459b5d3e28686d117579a016d2a368dd",
+  "monthlyUsd": 30,
+  "dailyUsd": 1,
+  "publicActivationAuthorized": false,
+  "providerWritesAuthorized": false,
+  "gitPushAuthorized": false,
+  "deploymentAuthorized": false,
+  "paidCallsAuthorized": false
+}

@@ -10,3 +10,12 @@ test('unsafe URLs and untrusted search text cannot produce an external destinati
 test('type filtering and deterministic ordering do not mutate the index',()=>{const before=JSON.stringify(records);assert(search(records,'blackbutt',{type:'Product'}).every(r=>r.type==='Product'));assert.deepEqual(search(records,'oak',{limit:5}),search(records,'oak').slice(0,5));assert.equal(JSON.stringify(records),before);});
 test('new presentation is idempotent and does not turn search into an indexable page',()=>{for(const f of ['index.html','contact.html','products/avala-blackbutt/index.html','search/index.html']){const html=fs.readFileSync(f,'utf8');assert.equal(architecturalHTML(html,f),html);}const page=fs.readFileSync('search/index.html','utf8');assert(page.includes('content="noindex,follow"'));assert(!fs.readFileSync('sitemap.xml','utf8').includes('/search/'));assert(!page.includes('name="oz-flooring-enquiry"'));});
 test('100 representative retrievals have a bounded local CPU budget',()=>{const start=performance.now();for(let i=0;i<100;i++)search(records,['blackbutt','oak','uneven floor','showroom'][i%4]);assert(performance.now()-start<3000);});
+test('homepage search band stays removed on current, stale and fresh renders while header search remains',()=>{
+ const current=fs.readFileSync('index.html','utf8');
+ assert(!current.includes('arch-home-search'));assert(!current.includes('What are you looking for?'));
+ assert(current.includes('id="oz-site-search"'));assert(current.includes('id="dialog-search"'));
+ const stale=current.replace('</main>','<section class="arch-home-search" aria-labelledby="home-search-heading"><h2 id="home-search-heading">What are you looking for?</h2></section></main>');
+ assert.equal(architecturalHTML(stale,'index.html'),current);
+ const raw='<!doctype html><html><head><link rel="canonical" href="https://oztimberfloor.com.au/"></head><body><header class="site-header"><a href="/">Oz Timber Floor</a></header><main><section class="hero"><h1>Flooring Sydney</h1></section><section id="home-pathways"><div class="shell"><h2>Choose flooring</h2></div></section></main></body></html>';
+ const fresh=architecturalHTML(raw,'index.html');assert(!fresh.includes('arch-home-search'));assert(fresh.includes('id="dialog-search"'));assert(fresh.includes('Choose flooring'));
+});

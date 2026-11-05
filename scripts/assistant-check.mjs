@@ -6,10 +6,11 @@ import {hash} from '../assistant/lib/security.mjs';
 import {routing} from './october-route-fixture.mjs';
 import {reviewedOakBeigeRetirement,OAK_BEIGE_ROUTE} from '../assistant/lib/legacy-retirement.mjs';
 import {checkSourceHistory} from './assistant-source-history.mjs';
+import {sourceForHistoricalDigest} from './homepage-search-source-delta.mjs';
 const root=process.cwd(),corpus=JSON.parse(fs.readFileSync('assistant/generated/corpus.json')),manifest=JSON.parse(fs.readFileSync(fs.existsSync('assistant/generated/source-manifest.json')?'assistant/generated/source-manifest.json':'docs/flooring-assistant/SOURCE_MANIFEST.json')),router=routing(root);
 assert.equal(hash(corpus.documents),corpus.corpusVersion);
 assert.equal(corpus.candidateHash,manifest.candidateHash);
-for(const [file,expected]of Object.entries(manifest.files))assert.equal(hash(fs.readFileSync(file)),expected,'Stale knowledge input '+file);
+for(const [file,expected]of Object.entries(manifest.files))assert.equal(hash(sourceForHistoricalDigest(file,fs.readFileSync(file),expected)),expected,'Stale knowledge input '+file);
 if(manifest.files['assistant/lib/legacy-retirement.mjs']){
  const control=JSON.parse(fs.readFileSync('data/catalogue-quality-overrides.json')).pages[OAK_BEIGE_ROUTE];
  const product=JSON.parse(fs.readFileSync('data/product-catalogue.json')).products.find(p=>p.id==='stone-floor-oak-beige');

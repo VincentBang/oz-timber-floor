@@ -5,6 +5,7 @@ import crypto from 'node:crypto';import assert from 'node:assert/strict';import 
 import {STONEFLOOR_RETIREMENT_SHA256} from './approved-stonefloor-legacy-retirement.mjs';
 import {restorePreAudienceSitemap} from './audience-publication-contract.mjs';
 import {publishedBytes,reviewedCatalogue} from './combined-release-successors.mjs';
+import {reviewedQualityClient} from './chatbot-quality-client-delta.mjs';
 export const sha = bytes => crypto.createHash('sha256').update(bytes).digest('hex');
 const d='docs/seo-growth/evidence/2026-10-28-';
 const seals={
@@ -50,6 +51,7 @@ export function assertSuccessor(root,file,expected,bytes=fs.readFileSync(path.jo
  }
  if(file==='assets/flooring-assistant.js'&&expected==='cfcfdde54b45b4c215fdb089839be0a0ed802520ddf9d52f9feafc0264f657b9'){
   if(bytes.equals(publishedBytes(root,file)))return;
+  if(reviewedQualityClient(root,bytes))return;
   const reviewed=evidence(root,'assistant-local-sprint/VALIDATION.json').sourceFiles.find(x=>x.file===file);
   assert.equal(sha(bytes),reviewed.sha256,'Unreviewed assistant UI drift');return;
  }

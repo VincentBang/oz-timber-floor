@@ -5,6 +5,7 @@ import {knowledgeTextIssue} from './knowledge-quality.mjs';
 import {restrictedRangeAnswer} from './restricted-range.mjs';
 import {recordedPackAnswer} from './recorded-pack.mjs';
 import {securityMessage,uploadHelp} from './public-enquiry-help.mjs';
+import {preferCompleteAnswers,repeatsReviewedAnswer} from './answer-overlap.mjs';
 const routeSafe=path=>typeof path==='string'&&/^\/(?!\/)[a-z0-9\-/]*$/.test(path);
 export function renderPlan(plan,retrieval,corpus){
  if(!exactKeys(plan,['status','factIds','reason'])||!['answered','clarify'].includes(plan.status)||!['supported','insufficient'].includes(plan.reason)||!Array.isArray(plan.factIds)||plan.factIds.length>6||new Set(plan.factIds).size!==plan.factIds.length)throw Error('invalid_plan');
@@ -27,6 +28,7 @@ export function renderPlan(plan,retrieval,corpus){
  // A model cannot restore an excluded block, repeat the same answer under a
  // different FAQ question, or overwhelm the widget with six long paragraphs.
  if(!facts.some(f=>['product','range'].includes(f.entityType))){
+  facts=preferCompleteAnswers(facts,{comparison:!!retrieval.comparisonOwners?.length});
   const kept=[];let chars=0;const key=f=>(f.question?f.value.slice(f.question.length):f.value).toLowerCase().replace(/[^\p{L}\p{N}]+/gu,' ').trim();
   const duplicate=(a,b)=>{if(retrieval.comparisonOwners?.length&&a.canonicalPath!==b.canonicalPath)return false;const x=key(a),y=key(b);if(x===y||x.includes(y)||y.includes(x))return true;const first=new Set(x.split(' ')),second=new Set(y.split(' '));return first.size>=8&&second.size>=8&&[...first].filter(t=>second.has(t)).length/new Set([...first,...second]).size>=0.85;};
   const asksForDetails=f=>f.field==='guidance'&&/\b(?:send|enquiry)\b/i.test(f.value)&&/photos/i.test(f.value)&&/dimensions|suburb|floor area/i.test(f.value);
@@ -59,7 +61,7 @@ export function avoidRepeatedAnswer(answer,history,message){
  if(answer.status!=='answered'||answer.entityIds?.length||/\b(?:again|repeat|recap|summarise|summarize)\b/i.test(message))return answer;
  const clean=s=>String(s).toLowerCase().replace(/[^\p{L}\p{N}]+/gu,' ').trim();
  const previous=(history||[]).filter(t=>t.role==='assistant').map(t=>clean(t.content));
- const fresh=answer.segments.filter(s=>!s.evidenceIds.length||!previous.some(text=>text.includes(clean(s.text))));
+ const fresh=answer.segments.filter(s=>!s.evidenceIds.length||!previous.some(text=>text.includes(clean(s.text)))&&!(history||[]).some(t=>t.role==='assistant'&&repeatsReviewedAnswer(s.text,t.content)));
  if(fresh.length===answer.segments.length)return answer;
  return {...answer,segments:fresh.length?fresh:[{text:'I do not have further verified detail on that point. You can review the linked source or prepare a question for the Oz Timber Floor team.',evidenceIds:[]}]};
 }

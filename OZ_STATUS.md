@@ -1339,3 +1339,134 @@ source knowledge is not published. USD30/month and USD1/day unchanged. No paid
 calls, real submissions, DNS changes or provider-setting changes. See
 docs/floor-plan/COMBINED_RELEASE_2026-11-05.md and the external final report for
 actual push/deployment outcomes; this source note alone is not proof of release.
+## 5 November 2026 — rebuilt chatbot exact binding prepared locally, inactive
+
+Prepared the exact a26ef110 corpus and inactive adb7ec34 profile outside the
+public package, under the owner's local-only authority. Reviewed three added
+homepage facts, unchanged product/range fact values and unchanged retirements;
+bound current source/privacy hashes without replacing historical approvals.
+USD30/month and USD1/day, the existing durable store, ledger, model and key
+variable remain unchanged. Local tests and cold/mock bundle checks use a
+network-denying preload; no provider setting, live counter, site source, form,
+floorplan or published archive is changed. The pending profile refuses public
+activation. Actual local results and artifact hashes are in
+`/Users/daibang/Downloads/OZ_CHATBOT_REBUILT_BINDING_LOCAL_2026-11-05_R2/`.
+See docs/flooring-assistant/REBUILT_BINDING_2026-11-05.md for reproducible commands
+and the remaining separately authorised hosted-test/release gates. No staging,
+commit, push, deployment, paid GPT call or real submission in this preparation.
+
+## 5 November 2026 — rebuilt chatbot protected preview verified
+
+Under separate owner authority, deployed one protected draft only:
+`6aeb9c5f5aa6429c17abcf04`, alias `rebuilt-a26ef110-20261105`.
+Three actual GPT-6 Luna responses used the exact a26ef110 corpus and passed
+grounding/citation review; token-based accounted cost USD0.0002843, below the
+USD0.05 total test ceiling. Existing key access and hosted strong-CAS checks
+passed. Two deterministic checks and the actual reviewed enquiry handoff also
+passed, without submitting the contact form. The three-response allowance is
+exhausted. Production deploy, environment, profile/control and durable budget
+ledger remain unchanged; USD30/month and USD1/day are preserved. No push.
+
+Non-blocking observations: agency-key answer repetition and generic exhausted-
+allowance recovery. Preview-only caveat: the submission safety overlay patched
+contact/index.html, but clean /contact/ serves the inherited contact.html
+variant, so do not claim all preview forms are disabled. No real submission was
+attempted and no second deployment was made. The pending production binding
+remains inactive; separate production approval and final activated-profile
+preflight are required. Full receipts and report:
+`/Users/daibang/Downloads/OZ_CHATBOT_REBUILT_PREVIEW_2026-11-05/REPORT.html`.
+
+## 5 November 2026 — complete local chatbot quality sprint
+
+Fixed reviewed answer overlap/repetition, exact excluded-name comparisons,
+signed attribute follow-ups and allowance-limit recovery. Added a preview-only
+form guard covering both contact HTML variants. Current local tests: 170
+assistant, 339 website/contracts, 120 gold, 24 holdout, 8 quality and 35
+usefulness/safety cases pass. Nine Guide browser checks and six source-port
+floorplan journeys across Chromium/Firefox/WebKit pass without real enquiries.
+The exact inactive archive passes six mock scenarios and refuses production;
+the fresh local migration gate returns GO with zero findings. This is NOT
+production activation approval or fresh GPT/hosted verification.
+
+Prepared 6,592 public files: only two chatbot scripts change; all 2,230 HTML
+files, 775 publication/sitemap routes, 221 floorplan files, uploads and the
+notification archive are preserved. Catalogue facts, supplier improvements,
+source defaults, original approvals and USD30/month plus USD1/day remain intact.
+The main checkout is untouched. Raw dated tests are not all current-compatible;
+baseline failures and the explicit test-scope list are reported, not hidden or
+counted as passes. The exact local UI successor has additive tamper-negative
+validation without replacing historical approvals. Production remains HOLD
+for exact updated-runtime release review, separately authorised hosted retest
+and activation. No commit/staging, push, deploy, paid call, provider change or
+real submission. Report and reproducible commands:
+docs/flooring-assistant/QUALITY_SPRINT_2026-11-05.html and
+`/Users/daibang/Downloads/OZ_CHATBOT_QUALITY_CANDIDATE_2026-11-05/REPORT.html`.
+
+## 5 November 2026 — footer white surround doubled locally
+
+Changed only the shared architectural footer-surround spacing: desktop/tablet
+28px to 56px; mobile 14px to 28px. Footer content, links, colours and inner
+padding are unchanged. Browser before/after checks at 1440, 768, 390 and 320px
+confirm exactly doubled spacing, unchanged links and no horizontal overflow;
+no console errors. Nine architectural/search tests and git diff --check pass.
+Evidence: work/footer-surround-20261105 in this Codex workspace. Existing work
+and sealed release packets are preserved; this new CSS change is not part of
+the preceding sealed chatbot candidate and must be included in any later
+explicitly approved combined package. No push, deployment or paid call.
+
+## 5 November 2026 — floorplan now uses the shared Oz shell and theme locally
+
+Replaced the independent outer port shell with build-time composition from the
+current Oz header/footer and shared stylesheets. Measurement layout is scoped,
+while colours, fonts and controls inherit the common theme. The enlarged white
+footer surround is included. Rewrote visible page/runtime guidance around Oz
+supply/supply + installation enquiries and reviewed area estimates; removed the
+old mobile-navigation import. Geometry, loaders, Quick Room, saved-data keys,
+explicit consent and enquiry context remain intact. Supporting planning links
+now follow the tool on mobile rather than appearing first.
+
+Final local verification: 19 combined stages pass (170 assistant, 345 current
+website/contracts tests plus evaluations/build/SEO/analytics/notification/local
+migration); six Chromium/Firefox/WebKit desktop/mobile measurement/handoff
+journeys pass; five viewport visual/automated-accessibility checks pass with no
+overflow, broken resources, external calls or page errors. Existing inherited
+work, catalogue, suppliers, forms, approvals and sealed evidence are preserved.
+No Operon access, staging, commit, push, deploy, paid call, provider change or
+real submission. Production remains unchanged by this task. Local preview:
+http://127.0.0.1:52479/floor-plan/ . Details and exact commands:
+docs/floor-plan/OZ_SHARED_SHELL_2026-11-05.html . A future authorised release
+must assemble this new page/theme rather than deploy a prior sealed package.
+
+## 5 November 2026 — removed standalone homepage search band locally
+
+Removed the owner-selected “A good place to start / What are you looking for?”
+section from the homepage and its presentation generator. Header/dialog search
+and the separate search page remain available. The generator also removes the
+old band from previously rendered homepage input so a rebuild cannot restore it.
+No release, provider, catalogue, form or analytics changes authorised or made.
+Verification: 12 search/header regression tests and git diff whitespace checks
+pass. Local Chrome checks at 1440, 390 and 320px confirm the band is absent,
+header search opens/closes, one H1, no horizontal overflow and no page errors.
+Byte comparison against the original homepage confirms only the selected
+section was removed; all remaining markup, metadata and schema are unchanged.
+Evidence: work/home-search-removal-20261105/RESULT.json in the current Codex
+workspace. Local homepage preview: http://127.0.0.1:52605/ . No deployment.
+
+## 5 November 2026 — shared-shell/homepage release authorised
+
+Owner authorised GitHub push and one production Netlify deployment. Exact
+public delta is six files: shared floorplan shell/theme/runtime wording, shared
+footer spacing and removal of the homepage search band. Existing chatbot
+clients, profile/corpus, both live function archives, uploads and every other
+public file are retained byte-for-byte. USD30/month and USD1/day remain intact;
+no key, control, budget ledger, provider setting, paid call or real enquiry write.
+Local-only chatbot quality/binding source is retained but not activated.
+
+The initial source checks correctly caught the homepage byte change. Exact
+replay against the immutable prior homepage reconciles only the authorised band
+removal; added tamper-negative tests reject any additional byte/content drift.
+Old approval/source manifests are unchanged. Initial failures remain preserved.
+Fresh local suite, package/link/SEO/forms checks and three-browser desktop/mobile
+measurement/handoff checks are recorded in the external release packet. Actual
+GitHub/deployment/live outcomes are recorded there after execution, not implied
+by this note. See docs/floor-plan/OZ_SHELL_RELEASE_2026-11-05.md.

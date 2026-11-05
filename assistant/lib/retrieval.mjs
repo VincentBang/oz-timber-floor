@@ -7,6 +7,14 @@ export function catalogueNames(doc){
  const aliases={'/ranges/swish/':['Swish','Swish Native Hardwood'],'/ranges/elk-falls/':['Elk Falls']};
  return [doc.title,...(doc.entityType==='range'&&!doc.navigationOnly?(aliases[doc.canonicalPath]||[]).filter(n=>(' '+normalise(doc.title)+' ').includes(' '+normalise(n)+' ')):[])];
 }
+// Remove only explicitly excluded, exact catalogue names from identity matching.
+// Other words (including safety qualifiers) remain unchanged for policy checks.
+export function positiveCatalogueText(corpus,message){
+ let q=normalise(message);
+ const names=[...new Set((corpus.documents||[]).filter(d=>['product','range'].includes(d.entityType)).flatMap(catalogueNames).map(normalise))].sort((a,b)=>b.length-a.length);
+ for(const name of names){const escaped=name.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');q=q.replace(new RegExp('\\b(?:not|exclude|excluding|without)\\s+'+escaped+'(?=\\s|$)','g'),' ');}
+ return q.replace(/\s+/g,' ').trim();
+}
 export function unqualifiedColour(doc,message){
  const range=doc?.facts.find(f=>f.field==='range')?.value;
  return doc?.entityType==='product'&&tokens(doc.title).length<=2&&!!range&&!(' '+normalise(message)+' ').includes(' '+normalise(range)+' ');
@@ -23,9 +31,9 @@ export function buildIndex(corpus){
  return {corpus,entries,df,average};
 }
 export function retrieve(index,message,{pagePath='/',entityId}={}){
- const q=normalise(message),qt=tokens(q),context=index.corpus.documents.find(d=>d.canonicalPath===pagePath);
+ const q=normalise(message),identityText=positiveCatalogueText(index.corpus,message),qt=tokens(q),context=index.corpus.documents.find(d=>d.canonicalPath===pagePath);
  if(entityId&&context?.entityId!==entityId)return {status:'clarify',reason:'invalid_context',documents:[],facts:[]};
- const exact=index.corpus.documents.filter(d=>['product','range'].includes(d.entityType)&&(d.entityType!=='product'||tokens(d.title).length>=2)&&catalogueNames(d).some(n=>(' '+q+' ').includes(' '+normalise(n)+' '))).sort((a,b)=>b.title.length-a.title.length);
+ const exact=index.corpus.documents.filter(d=>['product','range'].includes(d.entityType)&&(d.entityType!=='product'||tokens(d.title).length>=2)&&catalogueNames(d).some(n=>(' '+identityText+' ').includes(' '+normalise(n)+' '))).sort((a,b)=>b.title.length-a.title.length);
  // Whole identity match takes precedence over a containing range name.
  let selected=exact.filter(d=>!exact.some(o=>o!==d&&normalise(o.title).length>normalise(d.title).length&&normalise(o.title).includes(normalise(d.title))));
  if(selected.some(d=>d.entityType==='product'))selected=selected.filter(d=>d.entityType==='product');

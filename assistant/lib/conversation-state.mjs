@@ -28,14 +28,14 @@ export function resolveConversation(message,prior,corpus){
  const explicitOwners=owners.filter(([name])=>new RegExp('\\b'+name+'\\b','i').test(message));
  const pair=comparisonMaterials(message);
  if(named.length>2||pair.length>2)return {question:message,state:empty(),ambiguous:true};
- const follow=/\b(?:it|its|that one|this one|those|them|their)\b/i.test(message)||/^(?:and\s+)?(?:what about\s+)?(?:maintenance|cleaning|care|thickness|dimensions)\b/i.test(message)||/\b(?:easier|easy)\s+to\s+clean\b/i.test(message);
+ const follow=/\b(?:it|its|that one|this one|those|them|their)\b/i.test(message)||/^(?:and\s+)?(?:what about\s+)?(?:the\s+)?(?:maintenance|cleaning|care|thickness|dimensions|board size|plank size|width|length|finish|colou?r|pack size)\b/i.test(message)||/\b(?:easier|easy)\s+to\s+clean\b/i.test(message);
  let state=empty(),question=message;
  if(named.length&&named.length<=2)state.entityIds=named.map(d=>d.entityId);
  else if(pair.length===2)state.owners=pair.map(([, ,path])=>path);
  else if(explicitOwners.length===1)state.owners=explicitOwners.map(([,path])=>path);
  else if(follow){state={...prior,entityIds:[...prior.entityIds],owners:[...prior.owners]};
   if(state.entityIds.length===1)question=message+' '+current(corpus,state.entityIds[0]).title;
-  else if(state.entityIds.length===2&&/maintenance|cleaning|care|thickness|dimensions|compare|both/i.test(message))question='Compare '+state.entityIds.map(id=>current(corpus,id).title).join(' and ')+' '+message;
+  else if(state.entityIds.length===2&&/maintenance|cleaning|care|thickness|dimensions|board size|plank size|width|length|finish|colou?r|pack size|compare|both/i.test(message))question='Compare '+state.entityIds.map(id=>current(corpus,id).title).join(' and ')+' '+message;
   else if(state.owners.length&&/maintenance|cleaning|care|clean/i.test(message))question=(state.owners.length===2?'Compare ':'')+state.owners.map(path=>owners.find(([,p])=>p===path)[0]).join(' and ')+' '+message;
   else if(state.entityIds.length>1||state.owners.length>1)return {question:message,state:empty(),ambiguous:true};
  }

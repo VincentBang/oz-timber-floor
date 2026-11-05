@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import {renderFloorPlanPage,floorPlanThemeCSS,floorPlanSharedThemeCSS} from './floor-plan-site-shell.mjs';
 
 export function localFloorPlanEnabled(env) {
   return env.OZ_FLOORPLAN_ENABLED === 'true' && ['dev','local'].includes(env.CONTEXT)
@@ -22,9 +23,10 @@ export function addFloorPlan(root, output) {
   const feature = path.join(root,'floor-plan');
   const target = path.join(output,'floor-plan');
   fs.mkdirSync(target,{recursive:true});
-  // The explicitly approved source port owns its complete presentation.
-  // Never run the unrelated whole-site renderer over the Operon-derived UI.
-  fs.copyFileSync(path.join(feature,'page.template'),path.join(target,'index.html'));
+  // Keep measurement layout intact; draw chrome/theme from the current Oz shell.
+  fs.writeFileSync(path.join(target,'index.html'),renderFloorPlanPage(root));
+  fs.writeFileSync(path.join(target,'site-tool.css'),floorPlanThemeCSS(root));
+  fs.writeFileSync(path.join(target,'site-theme.css'),floorPlanSharedThemeCSS(root));
   for (const file of ['tool.css','tool.mjs','plan-loader.mjs','geometry.mjs','summary.mjs','context.mjs','contact-entry.js','contact-review.mjs','operon-runtime.mjs','operon-quick-room.js','operon-mobile-nav.js','operon-base.css','operon-page.css','port-inline-layout.css','port-accessibility.css','port-adapter.mjs']) {
     fs.copyFileSync(path.join(feature,file),path.join(target,file));
   }

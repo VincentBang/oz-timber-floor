@@ -1,5 +1,4 @@
 import './operon-quick-room.js';
-import './operon-mobile-nav.js';
 import {loadPlan} from './plan-loader.mjs';
 import {roomArea,roomsOverlap} from './geometry.mjs';
 import {saveAreaSummary} from './summary.mjs';
@@ -383,7 +382,7 @@ const FLOORPLAN_AREA_KEY = "oz-source-floorplan-area";
         {
           title: "Quote area",
           complete: selectedArea > 0 && includedRooms.length > 0,
-          text: selectedArea > 0 ? formatArea(selectedArea) + " selected for quote." : "No included flooring area yet."
+          text: selectedArea > 0 ? formatArea(selectedArea) + " selected for the enquiry." : "No included flooring area yet."
         }
       ];
       const completeCount = checklist.filter(function (item) {
@@ -1257,7 +1256,7 @@ const FLOORPLAN_AREA_KEY = "oz-source-floorplan-area";
       renderRoomsTable();
       setTraceStatus(options && options.edit
         ? "Quick room added. Drag a corner or edge handle to edit the outline manually."
-        : "Quick room added. Confirm the included rooms before sending the measured area into your quote.");
+        : "Quick room added. Confirm the included rooms before sending the measured area into your enquiry.");
       setCanvasStatus("Quick room added: " + formatArea(room.areaM2) + ".");
       setGlobalStatus("Quick room added: " + formatArea(room.areaM2));
       if (window.OzFloorplanTracking) {
@@ -1369,9 +1368,9 @@ const FLOORPLAN_AREA_KEY = "oz-source-floorplan-area";
       renderRoomsTable();
       renderQuickRoomStatus();
       setCanvasStatus(candidateRooms.length
-        ? "Suggested areas added. " + autoIncludedCount + " high-confidence area" + (autoIncludedCount === 1 ? " is" : "s are") + " included by default. Review, include, edit, merge or delete before using the area in quote."
+        ? "Suggested areas added. " + autoIncludedCount + " high-confidence area" + (autoIncludedCount === 1 ? " is" : "s are") + " included by default. Review, include, edit, merge or delete before using the estimate in an enquiry."
         : "No clear suggested areas were found. Use Manual Trace for this plan.", { forceVisible: !candidateRooms.length });
-      setTraceStatus({ next: true, text: "Review suggested areas before using them in your quote." });
+      setTraceStatus({ next: true, text: "Review suggested areas before using them in your enquiry." });
       if (window.OzFloorplanTracking) {
         window.OzFloorplanTracking.trackEvent("floorplan_suggest_all_completed", {
           measurement_mode: "suggest_all",
@@ -1421,7 +1420,7 @@ const FLOORPLAN_AREA_KEY = "oz-source-floorplan-area";
         includeInQuote: !!(anchor.includeInQuote || room.includeInQuote),
         confidence: "Medium",
         confidenceLabel: getConfidenceCustomerLabel("Medium"),
-        confidenceReasons: ["Merged from suggested areas. Review the outline before using it in your quote."],
+        confidenceReasons: ["Merged from suggested areas. Review the outline before using it in your enquiry."],
         editable: true,
         centroid: calculatePolygonCentroid(mergedPoints),
         createdAt: new Date().toISOString()
@@ -1479,7 +1478,7 @@ const FLOORPLAN_AREA_KEY = "oz-source-floorplan-area";
       context.fillText("Upload a floor plan to begin", 80, 120);
       context.font = "500 18px Inter, sans-serif";
       context.fillStyle = "rgba(102,112,133,0.92)";
-      context.fillText("Set scale, trace rooms, and send measured area into quote.", 80, 154);
+      context.fillText("Set scale, trace rooms, and send measured area into an enquiry.", 80, 154);
     }
 
     function drawImageFit(image) {
@@ -1802,7 +1801,7 @@ const FLOORPLAN_AREA_KEY = "oz-source-floorplan-area";
             <div class="room-side">
               <label class="room-toggle">
                 <input type="checkbox" data-room-field="include" ${room.includeInQuote ? "checked" : ""}>
-                <span>Include in quote</span>
+                <span>Include in estimate</span>
               </label>
               <button class="button-secondary" type="button" data-room-action="edit">Edit</button>
               ${isQuickRoom ? '<button class="button-secondary" type="button" data-room-action="merge">' + mergeActive + '</button>' : ""}
@@ -2178,7 +2177,7 @@ const FLOORPLAN_AREA_KEY = "oz-source-floorplan-area";
       renderRoomsTable();
       saveDraftState();
       setTraceStatus({ next: true, text: "Room added: " + formatArea(areaM2) + ". Press Step 2. Trace room for the next room." });
-      setCanvasStatus("Room added. Trace the next room or use the area in quote.");
+      setCanvasStatus("Room added. Trace the next room or use the estimate in an enquiry.");
       setGlobalStatus("Room added: " + formatArea(areaM2));
       if (window.OzFloorplanTracking) {
         window.OzFloorplanTracking.trackFloorplanRoomAdded(areaM2, roomType);
