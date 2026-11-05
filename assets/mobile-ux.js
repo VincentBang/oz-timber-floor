@@ -238,7 +238,7 @@
 
     // Extend actions only on the audited non-product pages; never duplicate the product bar.
     if (["home", "category", "range", "service"].indexOf(page) !== -1 && !main.querySelector(".mobile-sticky-cta")) {
-      var phone = document.querySelector('.site-footer a[href^="tel:"]');
+      var phone = document.querySelector('.site-footer a[href^="tel:"], .ozf a[href^="tel:"]');
       var quote = document.querySelector('.hero .button-row a[href*="/contact/"][href*="enquiry="]');
       if (phone && quote) {
         var dock = make("nav", "mobile-context-dock"); dock.setAttribute("aria-label", "Quick enquiry actions");
@@ -250,7 +250,7 @@
         function updateDock() {
           var typing = document.activeElement && document.activeElement.matches("input,select,textarea,[contenteditable=true]");
           var keyboard = window.visualViewport && window.visualViewport.height < document.documentElement.clientHeight - 120;
-          var suppressed = !media.matches || typing || keyboard || document.body.classList.contains("mobile-nav-open") || visible(document.querySelector(".analytics-consent-banner")) || visible(document.querySelector(".hero .button-row")) || visible(document.querySelector("[data-contact-form]")) || visible(document.querySelector(".site-footer"));
+          var suppressed = !media.matches || typing || keyboard || document.body.classList.contains("mobile-nav-open") || visible(document.querySelector(".analytics-consent-banner")) || visible(document.querySelector(".hero .button-row")) || visible(document.querySelector("[data-contact-form]")) || visible(document.querySelector(".site-footer, .ozf"));
           dock.hidden = Boolean(suppressed);
         }
         ["scroll", "resize"].forEach(function (event) { window.addEventListener(event, updateDock, { passive: true }); });

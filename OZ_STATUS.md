@@ -1470,3 +1470,271 @@ Fresh local suite, package/link/SEO/forms checks and three-browser desktop/mobil
 measurement/handoff checks are recorded in the external release packet. Actual
 GitHub/deployment/live outcomes are recorded there after execution, not implied
 by this note. See docs/floor-plan/OZ_SHELL_RELEASE_2026-11-05.md.
+
+## 5 November 2026 — header Flooring label renamed Products locally
+
+Changed only header links to /products/ from Flooring to Products in 2,195 HTML
+pages. Updated the shared presentation generator, including already-rendered
+inputs and new pages. Floorplan inherits this header from the shared Oz shell.
+Destinations, attributes, page headings, metadata, content and footer labels are
+unchanged. A repeatable bounded label-only migration and regression tests cover
+both existing pages and future builds. Historical source checks reconcile only
+this exact header-label reversal when the full old hash matches; all unrelated
+drift remains rejected and no approval hashes are replaced. Local only; no
+staging, commit, push, deployment, paid call or real enquiry authorised.
+Verification: 16 targeted header/search/history tests pass; current assistant
+source check passes with the original manifests intact. Chrome checks at
+1440/390/320px confirm Products in the primary and expanded navigation, unchanged
+/products/ destination, no overflow and no page errors. Evidence is held under
+work/header-products-20261105 in this Codex workspace. Local homepage preview:
+http://127.0.0.1:55796/ . The public site has not been updated by this task.
+
+## 5 November 2026 — balanced shared header grouping implemented locally
+
+Grouped branding, navigation and actions separately. Enabled floorplan packages
+show Products / Services / Projects / Floor Plan. Search is a quiet 44px icon
+target in the action group; Call and Request Quote remain adjacent, equal-sized
+128×48px buttons, with Menu last and no dividing rule. Navigation moves into
+Menu at 1200px and below; Call/Quote remain in Menu on narrow screens. The shared
+floorplan shell inherits the same grouping and styles. Default builds still
+exclude the floorplan and its entry links; no feature activation was broadened.
+
+Fixed a demonstrated WebKit Escape-focus issue by explicitly closing the native
+modal before restoring opener focus. Search/Menu remain labelled; menu state,
+Escape, focus restoration and full-link keyboard traversal were tested. The
+installed WebKit uses Option+Tab for link traversal; the retained diagnostic
+distinguishes that browser preference from a missing focus target.
+
+Local evidence: 19 cross-browser/viewport header states pass, 6 automated header
+accessibility states have no violations, and the 19-stage isolated combined
+suite passes (170 assistant / 356 website tests at that run). Exact-source proof
+checks all 2,195 changed HTML files and preserves every byte outside the header;
+new strict tamper cases reject altered added-link text/attributes. Old manifests
+and approvals remain unchanged. Initial raw-binding failure and browser findings
+are recorded separately from final results. No staging, commit, push, deployment,
+provider change, paid API call or real submission. Evidence/report and screenshots:
+work/header-grouping-20261105 in this Codex workspace. Local combined preview:
+http://127.0.0.1:56041/ . Production and USD30/month plus USD1/day are unchanged.
+
+## 5 November 2026 — menu Call and Email buttons locally verified
+
+Replaced only the menu contact-row visible number/address links with secondary
+Call and Email buttons. Exact tel:+61435496975 and
+mailto:info@oztimberfloor.com.au destinations remain, including accessible names
+and title details. Request Quote remains the primary filled action. Desktop
+uses three aligned actions; mobile places Call/Email beside each other beneath
+the quote action. Desktop header Call/Quote controls remain; removing them was
+a question, not an instruction. No conversion uplift is claimed without data.
+
+The shared generator and floorplan inherit this change. Exact reverse matching
+preserves historical approvals and rejects altered labels, names or destinations.
+23 targeted header, source, floorplan and attachment-boundary tests pass; fresh
+assistant source check passes. Browser checks pass for 16 homepage/floorplan
+states in Chromium/Firefox/WebKit, with desktop/mobile sizing, no overflow,
+unchanged destinations, keyboard order and Escape-focus restoration. Automated
+header accessibility checks at 1440/320px report no violations. No external
+contact actions, paid calls, real submissions, provider changes, staging,
+commit, push or deployment. Prior sealed evidence is preserved separately.
+Evidence: work/menu-contact-buttons-20261105 in this Codex workspace.
+Updated local preview: http://127.0.0.1:56966/ . Production unchanged.
+
+## 5 November 2026 — supplied footer redesign integrated locally
+
+Implemented the verified Oz_Timber_Floor_Codex_Footer_Package component as the
+shared footer, using components/footer-v2.template, assets/footer-v2.css/js and
+scripts/shared-footer.mjs. The architectural generator composes it on every
+build; all 2,195 existing source footers are updated, with no added/missing footer.
+The Oz floorplan shell inherits the same component/resources, without changing
+measurement, uploads, geometry, storage, consent or contextual enquiry return.
+
+Kept the supplied charcoal invitation, stone body, three navigation groups,
+legal row and 20px mobile gutters. Replaced the reference logo placeholder with
+the real logo and preserved both configured business phones. Active floorplan
+packages retain their planning link; default package feature exclusion remains.
+Footer contact values are read from the current contact-config.js, not copied
+over it. No global colour, heading, button or link styles were changed.
+
+Removed the homepage's duplicated closing quote/showroom sales block, retaining
+its preparation paragraph and supply-only/stock links in the existing enquiry
+section. Header/body content elsewhere, legal text, titles, descriptions, H1s,
+canonicals, JSON-LD, redirects, sitemap, catalogue and assistant settings are
+unchanged. Cookie settings and existing mobile-dock suppression now recognise
+the new footer. Real fixed-UI geometry provides bottom clearance for legal links.
+
+Final local verification: 19 isolated stages pass, including 170 assistant and
+364 current website tests; source/corpus guards, offline evaluations, SEO,
+catalogue, analytics, notifications, builds and local migration. 74 integrated
+browser records pass across required routes/widths, boundary widths, no-JS,
+keyboard/resizing, real-logo rendering and enquiry prefill. Six three-engine
+measurement/recovery/handoff journeys pass. Six automated footer accessibility
+states, 12 synthetic overlay-clearance cases and 14 console/touch-target cases
+pass. All 23 unique footer internal URLs return local HTTP200 with valid anchor
+targets. No new console/page errors, overflow or broken resources observed.
+
+Exact preservation proof covers all 2,195 source HTML changes; 775 publication
+owners and sitemap routes remain identical. Historical approval records are not
+replaced. The pinned additive footer transition accounts only for this exact
+UI change; the initial dated showroom-format support mismatch is preserved in
+the first test logs and reconciled against its exact original bound source,
+not by activating/rebinding knowledge. Local provider/default exclusion holds.
+
+Evidence, exact commands, changed-file manifest and screenshots:
+/Users/daibang/Documents/Codex/2026-11-04/what-do-you-need-from-me/work/footer-v2-20261105/REPORT.html
+Local review: http://127.0.0.1:58326/ . No staging, commit, push, hosted preview,
+deployment, DNS/provider change, paid API call or real enquiry. Production and
+USD30/month plus USD1/day remain unchanged. Physical devices and spoken screen
+readers are unverified; automated results are not full accessibility certification.
+
+## 5 November 2026 — focused floorplan layout repair (local only)
+
+Implemented in the existing Gallery White release worktree, preserving the
+main checkout, inherited footer/header, supplier improvements and approval
+records. Before screenshots confirmed boxed/repeated introductions, alternating
+full-width rules, mismatched mobile gutters and a workspace below 2,100px.
+
+Removed positional borders and CSS reading-order hacks at their source. A
+page-scoped layout source now supplies explicit spacing after the isolation
+reset: one 1080px container, 20px small-screen gutters, 48/32px section gaps and
+32/20px workspace padding. One concise workflow precedes the workspace;
+secondary native-disclosure guidance and contained FAQ rows follow it. Privacy
+and estimate limitations stay beside upload and sharing decisions. One outer
+workspace boundary replaces nested presentation cards; input, canvas, focus and
+validation boundaries remain. Controls use document scrolling rather than a
+fixed-height nested scrolling panel. An expanded keyboard panel disables canvas
+stickiness to keep the plan reachable. The shared shell remains unchanged.
+
+Local checks: 19 isolated regression/build stages passed (170 assistant and 368
+current website tests, plus source/corpus, offline evaluation, SEO, catalogue,
+analytics, notifications and migration checks). Dated historical gates remain
+preserved and explicitly excluded, not relabelled as passes. The final targeted
+26 floorplan/source/shell tests also pass. Six Chromium/Firefox/WebKit journeys
+pass JPG/PNG/PDF loading, invalid-file recovery, PDF pages, resume, explicit area
+sharing, context and the existing multipart upload form without submission.
+The 5m by 4m fixture remains exactly 20.00m² before/after and at all six requested
+widths. Desktop/mobile pointer checks independently reproduce area from captured
+coordinates and verify scale, undo, inclusion, renaming, edit selection and reset.
+Eight automated accessibility states report zero violations. Physical devices,
+spoken screen readers and the earlier unattributed JPEG risk are not cleared by
+these emulated checks. No engine, loader, enquiry backend or approval hash changed.
+
+Evidence, screenshots, incremental diff and exact commands:
+/Users/daibang/Documents/Codex/2026-11-04/what-do-you-need-from-me/work/floorplan-layout-20261105/REPORT.html
+Local review: http://127.0.0.1:52726/floor-plan/ . No staging, commit, push,
+deployment, paid calls or real submissions. Production remains unchanged,
+including USD30/month and USD1/day assistant limits. Local layout review is not
+production activation or whole-site accessibility approval.
+
+## 5 November 2026 — clearer floorplan navigation label (local only)
+
+Renamed the enabled floorplan navigation to “Floor Area Tool” in the shared
+header, menu and footer composition. The existing /floor-plan/ URL, page H1,
+metadata, measurement engine and enquiry flow are unchanged. Existing source
+HTML and historical approval records are not rewritten; the shared composers
+and enabled package generator own the label. Cleanup recognises both old and
+new labels and continues to remove excluded primary/footer discovery.
+
+36 focused header/floorplan/source tests pass, including exact historical
+binding tamper checks. Fourteen local browser states pass on home and tool at
+320, 390, 768, 1024, 1201, 1280 and 1440px, including expanded menus and no
+horizontal overflow or console errors. Public-copy preservation proves that
+all 2,196 changed HTML files differ only in this navigation label; all other
+files are identical. git diff --check passes. No staging, commit, push,
+deployment, paid calls, real submissions or production changes.
+
+Evidence: /Users/daibang/Documents/Codex/2026-11-04/what-do-you-need-from-me/work/floorplan-label-20261105/
+Local review: http://127.0.0.1:60706/floor-plan/
+
+## 5 November 2026 — compact footer contacts (local only)
+
+Owner confirmed there is no current showroom and requested footer-only
+removal while retaining the contact-page content. Removed the footer address,
+showroom-details link and secondary phone; retained 0435 496 975 and changed
+the email label to “Email us” with its original mailto destination. The footer
+planning link now says “Contact us” and goes to /contact/. Legal links and all
+other footer navigation remain. Shared component generation and floorplan
+shell composition both apply the same compact footer. No contact configuration,
+page-body address, metadata, schema, forms, chatbot or provider setting changed.
+
+42 focused footer/header/floorplan tests pass. Historical approval records
+remain byte-preserved; the new footer explicitly cannot inherit the old exact
+footer receipt. The former whole-render idempotence expectation now uses the
+current approved footer composition rather than treating the old source footer
+as the new output. Outside-footer bytes and both contact source pages are
+independently preserved. The isolated public copy differs only in footer
+markup across 2,196 HTML files. No broad source-HTML rewrite was performed.
+
+Evidence: /Users/daibang/Documents/Codex/2026-11-04/what-do-you-need-from-me/work/footer-contact-20261105/
+Local review: http://127.0.0.1:60958/ . No staging, commit, push, deployment,
+paid calls, real submissions or production changes. Contact-page showroom
+wording remains as explicitly requested; this task does not verify it as a
+currently operating showroom.
+
+## 5 November 2026 — contact action deduplication and footer call label
+
+Owner requested keeping both numbered call buttons and the email-address button
+on Contact, removing only the repeated Phone / Second phone / Email rows, and
+using “Call us” beside “Email us” in the footer. Implemented in shared footer
+composition and the contact-page build presentation adapter. Static contact
+buttons are present before JavaScript and the existing enhancer replaces rather
+than appends them, so no-JS contact access is preserved without duplicate links.
+The existing showroom/address paragraph is retained as requested. The URL,
+head/H1, enquiry form, consent, uploads, backend, analytics and contact-config
+values are untouched. Historical source and approval records are not rebound.
+
+45 focused contact/footer/header/floorplan/source tests pass. Ten browser states
+pass at 320/390/768/1024/1440 with JavaScript on and off: three correctly labelled
+contact actions and destinations, no repeated rows, preserved address, footer
+Call us/Email us, no horizontal overflow or page errors. No external/write
+requests occurred. git diff --check passes. This is local presentation QA, not
+hosted delivery or release approval; no staging, commit, push, deployment,
+paid calls, real submissions or provider changes occurred.
+
+Evidence: /Users/daibang/Documents/Codex/2026-11-04/what-do-you-need-from-me/work/contact-actions-20261105/
+Local review: http://127.0.0.1:61378/contact/#showroom
+
+## 5 November 2026 — matching footer contact typography (local only)
+
+“Call us” and “Email us” now share one footer-scoped typography rule: 23px,
+weight 500, matching colour/spacing and 44px minimum target height. Removed
+the competing mobile email font-size override. No wording, destinations,
+contact form or other page styles changed. Local preview/evidence:
+http://127.0.0.1:64478/ and
+/Users/daibang/Documents/Codex/2026-11-04/what-do-you-need-from-me/work/footer-equal-actions-20261105/ .
+No commit, push, deployment, paid calls or real submissions.
+
+## 5 November 2026 — combined UI release authorised
+
+Owner authorised pushing the latest reviewed changes to GitHub and one Netlify
+production deployment: floorplan presentation, Products/Services/Projects/Floor
+Area Tool grouping, menu actions, shared footer and compact contact actions.
+The older dirty main checkout is preserved. The Gallery White release worktree
+is the reviewed source; its HTML has now been regenerated from current shared
+components, rather than committing mismatched old footer/contact renderings.
+
+Initial checks correctly rejected stale generated HTML and later presentation
+against historical exact source. The pinned compact-UI receipt is additive to
+the original footer receipt, replays only the exact owner-approved footer and
+contact fragments, verifies full historical hashes through the existing guard,
+and adds tamper-negative checks. No original receipt, knowledge approval or
+activation hash is replaced. The regenerated pages pass the original affected
+header/search/supplier checks. Failed and interim runs are preserved externally.
+
+Fresh release verification: 19/19 isolated stages pass, including 170 assistant
+and 375 current website tests. Exact package checks cover 2,229 protected HTML
+contracts, 775 unchanged publication/sitemap owners, 2,213 internal paths and
+2,367 assets, with zero broken links/assets. 34 local website states and six
+Chromium/Firefox/WebKit desktop/mobile measurement/recovery/resume/consent/
+product-source handoffs pass. Earlier device/spoken-reader/JPEG evidence limits
+remain; this does not claim new certification or a delivered real enquiry.
+
+The exact package retains the published chatbot clients, production profile,
+corpus and both function archives byte-for-byte. The inactive chatbot quality
+candidate is not activated. USD30/month and USD1/day, keys, durable budget/control,
+Netlify form detection, existing multipart uploads, notifications, analytics and
+SEO/indexation configuration are preserved. No paid model call or real submission
+is authorised for this release. Push skip markers avoid a second automatic deploy.
+
+Release packet (including actual push/deploy/live receipts when completed):
+/Users/daibang/Documents/Codex/2026-11-04/what-do-you-need-from-me/work/oz-ui-production-20261105/
+This source note records preflight and authority, not a claim that deployment
+has already occurred. Rollback target before this release: 6aebe4164a1d65145f3c7618.

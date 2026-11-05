@@ -4,7 +4,6 @@
 :focus-visible{outline:3px solid #17313A;outline-offset:3px}
 dialog.overlay{border:0;padding:20px;width:100%;height:100%;max-width:none;max-height:none;margin:0}dialog.overlay::backdrop{background:transparent}
 .port-keyboard{margin-top:14px}.port-keyboard summary{cursor:pointer}.port-keyboard input{max-width:100%}
-body.floorplan-workspace-active .workspace-card:has(.port-keyboard[open]){height:auto}
 .port-keyboard input,.port-keyboard button{scroll-margin-block:100px}
 .port-consent{display:flex;gap:10px;font-size:.95rem;line-height:1.6;align-items:flex-start}.port-consent input{width:20px;height:20px;flex:none;margin-top:4px}
 .port-enquiry-fallback{display:block;text-decoration:underline;font-size:.9rem;line-height:1.5;margin-top:12px}

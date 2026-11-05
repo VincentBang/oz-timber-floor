@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function addAnalyticsSettingsLink() {
     if (!analyticsIsAvailable() || document.querySelector(".analytics-consent-settings")) return;
-    var footer = document.querySelector(".footer-bottom");
+    var footer = document.querySelector(".footer-bottom, .ozf__bottom");
     if (!footer) return;
     var button = document.createElement("button");
     button.type = "button";
@@ -484,7 +484,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var watchedElements = [
       productHero.querySelector(".button-row"),
       document.querySelector("main > .section:last-of-type .button-row"),
-      document.querySelector(".site-footer")
+      document.querySelector(".site-footer, .ozf")
     ].filter(Boolean);
     var visibility = new Map();
 

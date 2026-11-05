@@ -66,7 +66,7 @@
 
     .shell,
     .container {
-      width: min(var(--max-width), calc(100% - 32px));
+      width: min(var(--max-width), calc(100% - 40px));
       margin: 0 auto;
     }
 
@@ -228,19 +228,8 @@
       box-shadow: none;
     }
 
-    .hero {
-      padding: 56px 0 30px;
-    }
 
-    .hero > .shell {
-      width: min(var(--hero-width), calc(100% - 32px));
-    }
 
-    main > .section:nth-of-type(even) {
-      background: rgba(255, 255, 255, 0.52);
-      border-top: 1px solid rgba(232, 226, 216, 0.72);
-      border-bottom: 1px solid rgba(232, 226, 216, 0.72);
-    }
 
     .hero-grid,
     .layout,
@@ -304,10 +293,6 @@
       margin: 0;
       line-height: 1.6;
     }
-
-    .hero-card,
-    .section-card,
-    .summary-card,
     .mini-card {
       background: var(--surface);
       border: 1px solid var(--line);
@@ -315,11 +300,6 @@
       border-radius: var(--radius-xl);
     }
 
-    .hero-card,
-    .section-card,
-    .summary-card {
-      padding: 32px;
-    }
 
     .mini-card {
       padding: 18px;
@@ -372,8 +352,6 @@
       line-height: 1.7;
       font-size: 0.98rem;
     }
-
-    .hero-actions,
     .action-row,
     .pill-row {
       display: flex;
@@ -381,17 +359,7 @@
       gap: 12px;
     }
 
-    .hero-content-row {
-      display: grid;
-      grid-template-columns: minmax(0, 1.25fr) minmax(260px, 0.75fr);
-      gap: 20px;
-      align-items: start;
-      margin-top: 24px;
-    }
 
-    .hero-copy-block {
-      max-width: 760px;
-    }
 
     .hero-mini-panel {
       padding: 20px;
@@ -681,30 +649,7 @@
       line-height: 1.5;
     }
 
-    .canvas-shell {
-      margin-top: 0;
-      padding: 12px;
-      border-radius: 16px;
-      background: rgba(245, 241, 235, 0.64);
-      border: 1px solid var(--line);
-      width: 100%;
-      min-width: 0;
-    }
 
-    .canvas-stage {
-      position: relative;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      max-height: 860px;
-      border-radius: 16px;
-      background: #f8f9fb;
-      border: 1px solid var(--line);
-      width: 100%;
-      max-width: 100%;
-      min-width: 0;
-    }
 
     canvas {
       display: block;
@@ -720,11 +665,6 @@
       cursor: crosshair;
     }
 
-    .summary-card {
-      position: sticky;
-      top: 94px;
-      background: var(--surface);
-    }
 
     .summary-box {
       margin-top: 16px;
@@ -1143,63 +1083,14 @@
       flex-wrap: wrap;
     }
 
-    .tool-section,
-    .support-section {
-      padding: 0 0 60px;
-    }
 
-    #measurementTool {
-      scroll-margin-top: 92px;
-    }
 
-    .tool-header {
-      display: grid;
-      gap: 10px;
-      margin-bottom: 22px;
-    }
 
-    .workspace-card {
-      display: flex;
-      flex-direction: column;
-      min-height: 0;
-      min-width: 0;
-    }
 
-    .workspace-summary {
-      position: static;
-      margin-top: 18px;
-      max-height: none;
-      overflow: visible;
-      min-width: 0;
-    }
 
-    .workspace-main {
-      display: grid;
-      grid-template-columns: minmax(248px, 296px) minmax(0, 1fr);
-      gap: 16px;
-      align-items: start;
-      min-width: 0;
-      flex: 1;
-    }
 
-    .tool-panel-shell {
-      display: grid;
-      gap: 12px;
-      min-width: 0;
-      align-content: start;
-      scrollbar-gutter: stable;
-    }
 
-    .workspace-stage {
-      display: grid;
-      gap: 14px;
-      min-width: 0;
-      align-content: start;
-    }
 
-    .workspace-stage .status {
-      margin-top: 0;
-    }
 
     .summary-heading {
       display: grid;
@@ -1232,12 +1123,6 @@
       width: 100%;
     }
 
-    .canvas-shell {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      min-height: 0;
-    }
 
     .room-list-panel summary {
       display: flex;
@@ -1267,157 +1152,33 @@
         linear-gradient(180deg, #ffffff 0%, #f9fbfa 100%);
     }
 
-    body.floorplan-workspace-active #floorplanHero,
-    body.floorplan-workspace-active #floorplanGuideSection,
-    body.floorplan-workspace-active #floorplanSupportSection {
-      display: none;
-    }
 
-    body.floorplan-workspace-active .tool-section {
-      padding-top: 8px;
-      padding-bottom: 16px;
-    }
 
-    body.floorplan-workspace-active .workspace-card,
-    body.floorplan-workspace-active .workspace-summary {
-      padding: 14px;
-    }
 
-    body.floorplan-workspace-active .workspace-card {
-      height: clamp(659px, calc((100dvh - 205px) * 1.177), 847px);
-      min-height: 0;
-    }
 
-    body.floorplan-workspace-active .tool-header {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 10px;
-    }
 
-    body.floorplan-workspace-active .tool-header .eyebrow {
-      justify-self: start;
-      min-height: 30px;
-      padding: 7px 12px;
-    }
 
-    body.floorplan-workspace-active .tool-header h2 {
-      font-size: clamp(1.2rem, 1.55vw, 1.45rem);
-      letter-spacing: -0.02em;
-    }
 
-    body.floorplan-workspace-active .tool-header p {
-      display: none;
-    }
 
-    body.floorplan-workspace-active .tool-panel-shell {
-      position: sticky;
-      top: 82px;
-      max-height: calc(100dvh - 98px);
-      overflow: auto;
-      padding-right: 2px;
-    }
 
-    body.floorplan-workspace-active .tool-subsection {
-      gap: 10px;
-      padding: 11px;
-    }
 
-    body.floorplan-workspace-active .tool-subsection-header .helper,
-    body.floorplan-workspace-active .upload-field .helper {
-      display: none;
-    }
 
-    body.floorplan-workspace-active .field label {
-      margin-bottom: 6px;
-    }
 
-    body.floorplan-workspace-active .field input,
-    body.floorplan-workspace-active .field select {
-      min-height: 44px;
-      padding: 11px 12px;
-    }
 
-    body.floorplan-workspace-active .field {
-      margin-bottom: 8px;
-    }
 
-    body.floorplan-workspace-active .tool-panel-shell > .tool-subsection:first-child {
-      gap: 8px;
-    }
 
-    body.floorplan-workspace-active .tool-panel-shell > .tool-subsection:first-child .upload-flow,
-    body.floorplan-workspace-active .tool-panel-shell > .tool-subsection:first-child .upload-field {
-      display: none;
-    }
 
-    body.floorplan-workspace-active .tool-panel-shell > .tool-subsection:first-child .tool-subsection-title::after {
-      content: " loaded";
-      color: var(--success);
-      font-weight: 700;
-    }
 
-    body.floorplan-workspace-active .workspace-main {
-      align-items: stretch;
-      min-height: 0;
-    }
 
-    body.floorplan-workspace-active .workspace-stage {
-      grid-template-rows: auto auto minmax(0, 1fr);
-      align-content: stretch;
-      min-height: 0;
-    }
 
-    body.floorplan-workspace-active .canvas-shell {
-      min-height: 0;
-      height: 100%;
-    }
 
-    body.floorplan-workspace-active .room-label-row {
-      grid-template-columns: 1fr;
-      gap: 0;
-    }
 
-    body.floorplan-workspace-active .upload-flow-step strong {
-      font-size: 0.86rem;
-      margin-bottom: 2px;
-    }
 
-    body.floorplan-workspace-active .upload-flow-step span {
-      font-size: 0.76rem;
-    }
 
-    body.floorplan-workspace-active .tool-subsection .status {
-      padding: 9px 10px;
-      font-size: 0.88rem;
-      line-height: 1.45;
-    }
 
-    body.floorplan-workspace-active .tool-button-row .button,
-    body.floorplan-workspace-active .tool-button-row .button-secondary,
-    body.floorplan-workspace-active .tool-button-row .button-quiet,
-    body.floorplan-workspace-active .tool-button-row .button-danger {
-      min-height: 39px;
-      padding: 8px 9px;
-      font-size: 0.86rem;
-    }
 
-    body.floorplan-workspace-active .canvas-stage {
-      height: 100%;
-      min-height: 0;
-      max-height: none;
-    }
 
-    body.floorplan-workspace-active .canvas-stage canvas {
-      width: auto;
-      max-width: 100%;
-      height: auto;
-      max-height: 100%;
-    }
 
-    body.floorplan-workspace-active .workspace-summary .summary-heading p {
-      margin: 0;
-    }
 
     @media (max-width: 1120px) {
       .nav-links {
@@ -1464,50 +1225,14 @@
         border-radius: 22px;
       }
 
-      .hero-content-row {
-        grid-template-columns: 1fr;
-      }
 
-      .summary-card {
-        position: static;
-      }
 
-      .workspace-card,
-      .workspace-summary {
-        min-height: 0;
-        max-height: none;
-      }
 
-      .workspace-main {
-        grid-template-columns: 1fr;
-      }
 
-      body.floorplan-workspace-active .workspace-card {
-        height: auto;
-        min-height: 0;
-        overflow: visible;
-      }
 
-      body.floorplan-workspace-active .tool-panel-shell {
-        position: static;
-        max-height: none;
-        overflow: visible;
-        padding-right: 0;
-      }
 
-      body.floorplan-workspace-active .workspace-summary .summary-heading p {
-        display: none;
-      }
 
-      body.floorplan-workspace-active .workspace-stage {
-        grid-template-rows: auto auto auto;
-      }
 
-      body.floorplan-workspace-active .canvas-stage {
-        height: min(56dvh, 500px);
-        min-height: 420px;
-        max-height: 56dvh;
-      }
     }
 
     @media (max-width: 980px) {
@@ -1604,11 +1329,6 @@
         grid-template-columns: 1fr;
       }
 
-      .hero-card,
-      .section-card,
-      .summary-card {
-        padding: 22px;
-      }
 
       .tool-subsection {
         padding: 16px;
@@ -1659,49 +1379,8 @@
     }
 
     @media (max-width: 640px) {
-      main {
-        display: flex;
-        flex-direction: column;
-      }
 
-      #floorplanHero {
-        order: 1;
-      }
 
-      #measurementTool {
-        order: 2;
-      }
-
-      #floorplanEntrySection {
-        order: 3;
-      }
-
-      #floorplanGuideSection {
-        order: 4;
-      }
-
-      #floorplanTrustSection {
-        order: 5;
-      }
-
-      #floorplanFaq {
-        order: 6;
-      }
-
-      .shell {
-        width: min(var(--max-width), calc(100% - 20px));
-      }
-
-      .hero {
-        padding: 18px 0 10px;
-      }
-
-      .hero-card,
-      .section-card,
-      .summary-card {
-        padding: 18px;
-        border-radius: 18px;
-      }
 
       .tool-subsection {
         padding: 12px;
@@ -1716,33 +1395,14 @@
         display: none;
       }
 
-      .hero-actions {
-        margin-top: 16px !important;
-      }
 
       .hero-copy-block p {
         line-height: 1.45;
       }
 
-      #floorplanEntrySection {
-        padding-top: 0 !important;
-      }
 
-      #floorplanEntrySection .section-card,
-      #floorplanGuideSection .section-card,
-      #floorplanTrustSection .section-card {
-        box-shadow: none;
-      }
 
-      #floorplanGuideSection .step-grid,
-      #floorplanTrustSection .trust-card-grid {
-        display: none;
-      }
 
-      #floorplanGuideSection .section-card,
-      #floorplanTrustSection .section-card {
-        padding: 16px;
-      }
 
       #floorplanGuideSection h2,
       #floorplanTrustSection h2 {
@@ -1753,9 +1413,6 @@
         min-width: 0;
       }
 
-      .canvas-stage {
-        max-height: 62vh;
-      }
 
       .mode-row {
         grid-template-columns: 1fr;
@@ -1779,10 +1436,6 @@
         max-width: none;
       }
 
-      .workspace-main {
-        grid-template-columns: 1fr;
-        gap: 14px;
-      }
 
       .rooms-table {
         gap: 14px;
@@ -1848,64 +1501,20 @@
         min-height: 51px;
       }
 
-      body.floorplan-workspace-active .tool-section {
-        padding-top: 12px;
-        padding-bottom: 56px;
-      }
 
-      body.floorplan-workspace-active .workspace-card,
-      body.floorplan-workspace-active .workspace-summary {
-        padding: 14px;
-      }
 
-      body.floorplan-workspace-active .workspace-card {
-        height: auto;
-        overflow: visible;
-      }
 
-      body.floorplan-workspace-active .workspace-summary {
-        position: relative;
-        z-index: 0;
-        margin-top: 14px;
-        margin-bottom: 18px;
-      }
 
-      body.floorplan-workspace-active .summary-total {
-        font-size: clamp(2.1rem, 13vw, 2.8rem);
-      }
 
-      body.floorplan-workspace-active .metric-grid {
-        grid-template-columns: 1fr;
-        gap: 10px;
-      }
 
-      body.floorplan-workspace-active .metric,
-      body.floorplan-workspace-active .summary-box {
-        padding: 14px;
-      }
 
-      body.floorplan-workspace-active .canvas-stage {
-        min-height: 360px;
-        max-height: 56dvh;
-      }
 
-      body.floorplan-workspace-active .canvas-stage canvas {
-        width: auto;
-        max-width: 100%;
-        height: auto;
-        max-height: 100%;
-      }
     }
 
     @media (max-width: 420px) {
-      .tool-button-row,
-      .tool-button-row.compact,
-      body.floorplan-workspace-active .tool-button-row,
-      body.floorplan-workspace-active .tool-button-row.compact {
+    .tool-button-row,
+    .tool-button-row.compact {
         grid-template-columns: 1fr;
       }
 
-      body.floorplan-workspace-active .canvas-stage {
-        min-height: 330px;
-      }
     }

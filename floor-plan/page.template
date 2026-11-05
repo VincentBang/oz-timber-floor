@@ -26,105 +26,25 @@
             <div class="hero-copy-block">
               <h1>Measure your flooring area from a floor plan.</h1>
               <p>Open a floor plan, set its scale and trace the rooms. Share your reviewed area estimate with Oz Timber Floor when requesting supply or supply + installation.</p>
-              <div class="hero-actions oz-source-style-0">
-                <a class="button" href="#measurementTool">Start measuring</a>
-                <a class="button-secondary" data-quote-return-link href="/contact/?enquiry=supply-install&amp;source=floor-plan">Ask for plan review</a>
+              <div class="hero-actions">
+                <a class="button" href="#measurementTool" data-track-cta="floorplan_self_measure_click">Start measuring</a>
+                <a class="button-secondary" data-quote-return-link href="/contact/?enquiry=supply-install&amp;source=floor-plan" data-track-cta="floorplan_review_request_click">Ask us to review your plan</a>
               </div>
-              <p class="helper">Your plan opens in this browser. Sharing the estimate does not send the file, room names or outlines. To send the drawing itself, attach it in the enquiry form.</p>
-              <p class="helper oz-source-style-1">An estimate for planning—not an order quantity or a price. Product selection, wastage, floor preparation and installation scope need confirmation with our team.</p>
             </div>
 
-            <aside class="hero-mini-panel" aria-label="Measurement summary">
-              <strong>Open, scale, trace, review, enquire</strong>
-              <ul class="hero-mini-steps">
-                <li><span>1</span> Open your floor plan</li>
-                <li><span>2</span> Set scale from a known wall</li>
-                <li><span>3</span> Trace flooring rooms</li>
-                <li><span>4</span> Review selected area</li>
-                <li><span>5</span> Use area in an enquiry</li>
-              </ul>
-            </aside>
           </div>
         </article>
       </div>
     </section>
 
-    <section class="section oz-source-style-2" id="floorplanEntrySection">
+    <section id="floorplanGuideSection" aria-label="Measurement steps">
       <div class="shell">
-        <article class="section-card">
-          <span class="eyebrow">Choose measurement path</span>
-          <h2 class="oz-source-style-3">Not sure your flooring area?</h2>
-          <p>Measure an estimated area yourself, or send an enquiry and ask our team which plan and site details are needed. You can attach a drawing or photographs in the existing enquiry form.</p>
-          <div class="link-grid oz-source-style-4">
-            <a class="link-card" href="#measurementTool" data-track-cta="floorplan_self_measure_click">
-              <strong>I want to measure it myself</strong>
-              <span>Open your drawing, set a known distance and review the rooms before sharing an estimate.</span>
-            </a>
-            <a class="link-card" data-quote-return-link href="/contact/?enquiry=supply-install&amp;source=floor-plan" data-track-cta="floorplan_review_request_click">
-              <strong>I want Oz Timber Floor to review the plan</strong>
-              <span>Request supply pricing or supply + installation and explain which measurements still need review.</span>
-            </a>
-            <a class="link-card" href="/guides/" data-track-cta="floorplan_measurement_guide_click">
-              <strong>Read flooring planning guides</strong>
-              <span>Read about flooring choices, preparation and installation planning.</span>
-            </a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section id="floorplanGuideSection" class="oz-source-style-5">
-      <div class="shell">
-        <article class="section-card">
-          <span class="eyebrow">How To Use It</span>
-          <h2 class="oz-source-style-3">How the measurement tool works</h2>
-          <div class="step-grid">
-            <div class="step-card">
-              <strong>1. Open floor plan</strong>
-              <span>Use a PDF, JPG or PNG.</span>
-            </div>
-            <div class="step-card">
-              <strong>2. Set scale</strong>
-              <span>Click two points on a known wall, then enter the real distance.</span>
-            </div>
-            <div class="step-card">
-              <strong>3. Trace room</strong>
-              <span>Trace the flooring rooms and close each shape near the start point.</span>
-            </div>
-            <div class="step-card">
-              <strong>4. Use area in an enquiry</strong>
-              <span>Review the area, then choose whether to share the estimate in an enquiry. Nothing is submitted automatically.</span>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="section oz-source-style-2" id="floorplanTrustSection">
-      <div class="shell">
-        <article class="section-card">
-          <span class="eyebrow">Scope clarity</span>
-          <h2 class="oz-source-style-3">Prepare a useful flooring enquiry</h2>
-          <p>A plan estimate helps us understand your project. Tell us the flooring range or colour, suburb, current floor and any access constraints. Our team confirms product details and the scope of supply, installation or preparation separately.</p>
-          <div class="trust-card-grid oz-source-style-4">
-            <article class="trust-card">
-              <h3>Area checked</h3>
-              <p>Use the plan to create a starting area, then keep final measurement open for review.</p>
-            </article>
-            <article class="trust-card">
-              <h3>Rooms included clearly</h3>
-              <p>Only trace rooms receiving flooring so your estimate covers only the spaces you select.</p>
-            </article>
-            <article class="trust-card">
-              <h3>Site scope still reviewed</h3>
-              <p>Removal, floor preparation, stairs and trims are confirmed separately.</p>
-            </article>
-            <article class="trust-card">
-              <h3>Ready for an enquiry</h3>
-              <p>Only your reviewed area estimate and included-room count are carried to the existing enquiry form after you choose to share them.</p>
-            </article>
-          </div>
-        </article>
+        <ol class="workflow-steps">
+          <li><strong>1. Open plan</strong><span>Use a PDF, JPG or PNG.</span></li>
+          <li><strong>2. Set scale</strong><span>Select two points on a known wall and enter its length.</span></li>
+          <li><strong>3. Trace rooms</strong><span>Outline each room receiving flooring.</span></li>
+          <li><strong>4. Review &amp; enquire</strong><span>Check the area and choose whether to share it.</span></li>
+        </ol>
       </div>
     </section>
 
@@ -157,6 +77,7 @@
                   <label for="planUpload">Choose plan file</label>
                   <input id="planUpload" disabled type="file" accept="image/*,.pdf,application/pdf">
                 </div>
+                <p class="helper plan-privacy">Your plan opens in this browser. Sharing an estimate does not send the file, room names or outlines. To send the drawing itself, attach it separately in the enquiry form.</p>
                 <div class="status" id="uploadStatus">Upload a PDF, JPG or PNG floor plan to start measuring.</div>
                 <div class="tool-button-row compact hidden" id="planFileActions">
                   <button class="button-danger" id="clearPlanButton" type="button">Clear floor plan</button>
@@ -353,6 +274,7 @@
 
           <div class="summary-box">
             <strong>Ready to prepare your enquiry?</strong>
+            <p class="helper estimate-limits">An estimate for planning—not an order quantity or a price. Product selection, wastage, floor preparation and installation scope need confirmation with our team.</p>
             <p class="helper oz-source-style-18">Choose whether to share your reviewed estimate with the Oz enquiry form. Review your details, attach files if needed and accept the form consent before sending.</p>
             <div class="summary-actions oz-source-style-21">
               <button class="button" id="useAreaInQuoteButton" type="button">Use reviewed area in enquiry</button>
@@ -363,11 +285,37 @@
       </div>
     </section>
 
+    <section class="section floorplan-guidance" id="floorplanEntrySection">
+      <div class="shell">
+        <details class="measurement-help">
+          <summary><strong>How to measure your plan</strong></summary>
+          <div class="help-content">
+            <p>Choose a clear plan with visible room walls and a known dimension. Select two points on that wall, enter the real distance in metres, then save the scale.</p>
+            <p>Trace the rooms receiving flooring, close each outline and review the room list. Leave bathrooms, balconies, garages and other spaces not receiving flooring out of the selected area.</p>
+            <p>For another drawing or PDF page, check the scale again before tracing. Review the measurement confidence and selected total before sharing.</p>
+            <a href="/guides/" data-track-cta="floorplan_measurement_guide_click">Read flooring planning guides</a>
+          </div>
+        </details>
+        <article id="floorplanTrustSection" class="plan-guidance-copy">
+          <div><h2>Keep your plan and estimate separate</h2><p>Your drawing stays in this browser while you measure. Only a reviewed area estimate and included-room count are carried to the enquiry form after you choose to share them. Attach the plan separately if you want our team to see it.</p></div>
+          <div><h2>Prepare a useful flooring enquiry</h2><p>Tell us the flooring range or colour, suburb, existing floor and any access constraints. Our team confirms product details, final measurements, wastage, preparation and installation scope separately.</p></div>
+        </article>
+        <section aria-labelledby="floorplanPlanningLinksTitle" class="planning-links">
+          <h2 id="floorplanPlanningLinksTitle">Plan your next step</h2>
+          <div class="planning-link-list">
+            <a href="/engineered-timber-flooring/">Planning apartment flooring?</a>
+            <a href="/products/">Choose a flooring direction</a>
+            <a href="/contact/?enquiry=service&amp;source=floor-plan-review">Need help reviewing your plan?</a>
+          </div>
+        </section>
+      </div>
+    </section>
+
     <section class="section" id="floorplanFaq">
       <div class="shell">
-        <article class="section-card">
+        <article class="faq-content">
           <span class="eyebrow">Floor Plan Measurement FAQ</span>
-          <h2 class="oz-source-style-3">Before you use the measured area</h2>
+          <h2 class="section-heading">Before you use the measured area</h2>
           <div class="rooms-table">
             <details class="summary-box">
               <summary><strong>Is this the final flooring measurement?</strong></summary>
@@ -385,21 +333,6 @@
               <summary><strong>Should I include every room?</strong></summary>
               <p class="helper oz-source-style-18">Only trace rooms where flooring will be installed.</p>
             </details>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="section" aria-labelledby="floorplanPlanningLinksTitle">
-      <div class="shell">
-        <article class="section-card">
-          <span class="eyebrow">Plan your flooring project</span>
-          <h2 id="floorplanPlanningLinksTitle" class="oz-source-style-3">Use the measured area with the right project context</h2>
-          <p>A floor plan creates a starting area. Product suitability, apartment requirements and the written installation scope still need separate review.</p>
-          <div class="link-grid oz-source-style-4">
-            <a class="link-card" href="/engineered-timber-flooring/"><strong>Planning apartment flooring?</strong><span>Check access, building requirements, acoustic questions and removal scope.</span></a>
-            <a class="link-card" href="/products/"><strong>Choose a flooring direction</strong><span>Compare hybrid, laminate and engineered timber before sending an enquiry.</span></a>
-            <a class="link-card" href="/contact/?enquiry=service&amp;source=floor-plan-review"><strong>Need help reviewing your plan?</strong><span>Ask the Oz team which measurements and project details to confirm.</span></a>
           </div>
         </article>
       </div>

@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import {renderFloorPlanPage,floorPlanThemeCSS,floorPlanSharedThemeCSS} from './floor-plan-site-shell.mjs';
+import {groupedHeaderHTML} from './header-grouping.mjs';
 
 export function localFloorPlanEnabled(env) {
   return env.OZ_FLOORPLAN_ENABLED === 'true' && ['dev','local'].includes(env.CONTEXT)
@@ -9,12 +10,13 @@ export function localFloorPlanEnabled(env) {
 
 const guideLink = '<section class="section"><div class="shell"><h2>Measure a floor plan</h2><p>Open a plan on your device, trace the rooms and take your estimated floor area to an enquiry.</p><a href="/floor-plan/">Open the floor plan tool</a></div></section>';
 const contactAdapter = '<script defer src="/floor-plan/contact-entry.js"></script>';
-const floorPlanLink = '<a href="/floor-plan/">Floor Plan</a>';
+const floorPlanLink = '<a href="/floor-plan/">Floor Area Tool</a>';
 const homeEntry = '<section class="section" aria-labelledby="home-floorplan-title"><div class="shell"><p class="eyebrow">Plan your flooring</p><h2 id="home-floorplan-title">Have a floor plan? Start with your area.</h2><p>Open your drawing, set its scale and trace the rooms receiving flooring. Bring your estimate to an enquiry, or ask our team to review your plan.</p><div class="button-row"><a class="button" href="/floor-plan/">Measure my floor plan</a><a class="button-secondary" href="/contact/?enquiry=supply-install&amp;source=home-floorplan">Ask for plan review</a></div></div></section>';
-export function removeFloorPlanDiscovery(html) {return html.replaceAll(floorPlanLink+'<a href="/guides/">Guides</a>','<a href="/guides/">Guides</a>').replace(homeEntry,'');}
+export function removeFloorPlanDiscovery(html) {return html.replaceAll('<a href="/floor-plan/">Floor Plan</a>',floorPlanLink).replace(/(<nav\b[^>]*class="arch-primary"[^>]*>)([\s\S]*?)(<\/nav>)/,(whole,open,links,close)=>open+links.replace(/<a href="\/floor-plan\/"(?: aria-current="page")?>(?:Floor Plan|Floor Area Tool)<\/a>/g,'')+close).replaceAll(floorPlanLink+'<a href="/guides/">Guides</a>','<a href="/guides/">Guides</a>').replaceAll(floorPlanLink+'<a href="/guides/">Flooring guides</a>','<a href="/guides/">Flooring guides</a>').replace(homeEntry,'');}
 export function addFloorPlanDiscovery(output) {
   function visit(dir) {for(const entry of fs.readdirSync(dir,{withFileTypes:true})) {const file=path.join(dir,entry.name);if(entry.isDirectory()){if(entry.name!=='floor-plan')visit(file);continue;}if(!entry.name.endsWith('.html'))continue;let html=fs.readFileSync(file,'utf8');const before=html;
-    if(!html.includes(floorPlanLink))html=html.replaceAll('<a href="/guides/">Guides</a>',floorPlanLink+'<a href="/guides/">Guides</a>');
+    html=groupedHeaderHTML(html,{floorPlan:true}).replaceAll('<a href="/floor-plan/">Floor Plan</a>',floorPlanLink);
+    for(const label of ['Guides','Flooring guides']){const guide='<a href="/guides/">'+label+'</a>';html=html.replaceAll(floorPlanLink+guide,guide).replaceAll(guide,floorPlanLink+guide);}
     if(path.relative(output,file)==='index.html'&&!html.includes('id="home-floorplan-title"')) {if(html.split('</main>').length!==2)throw Error('Unexpected homepage main boundary');html=html.replace('</main>',homeEntry+'</main>');}
     if(html!==before)fs.writeFileSync(file,html);
   }}visit(output);

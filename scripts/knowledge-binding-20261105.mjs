@@ -33,7 +33,11 @@ export function reviewKnowledge({baseline,corpus,sourceManifest,read,parentProfi
  }
  assert.deepEqual(removed,[]);assert.equal(added.length,3);assert(added.every(a=>a.route==='/'));
  assert.deepEqual(added.map(a=>a.fact.value).sort(),[...ADDITIONS].sort());
- for(const value of ADDITIONS)assert(read('index.html').toString().includes(value),'Missing homepage support '+value);
+ // This is the dated candidate's bound source, not approval of a new corpus.
+ // The exact footer transition preserves the configured showroom address while
+ // moving it out of the duplicated main CTA and formatting it over two lines.
+ const boundHome=sourceForHistoricalDigest('index.html',read('index.html'),sourceManifest.files['index.html']);
+ for(const value of ADDITIONS)assert(boundHome.toString().includes(value),'Missing bound homepage support '+value);
  const projects=JSON.parse(read('data/projects.json'));assert(projects.projects.some(p=>p.publicApproved&&p.photos.some(x=>x.caption===ADDITIONS[1])),'Caption lacks approved project-photo evidence');
  assert.deepEqual(corpus.retirements,baseline.retirements);
  return{added,citationRemaps,removed,publicationPages:775,facts:6821,productRangeFactValuesUnchanged:true};

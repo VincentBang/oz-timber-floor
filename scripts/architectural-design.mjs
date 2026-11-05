@@ -2,6 +2,10 @@
 import fs from 'node:fs';import path from 'node:path';import {fileURLToPath} from 'node:url';
 import {parse,parseFragment,serialize} from 'parse5';
 import {createPublicationInventory} from './publication-inventory.mjs';
+import {productsHeaderLabel} from './header-products-label.mjs';
+import {groupedHeaderHTML} from './header-grouping.mjs';
+import {sharedFooterHTML} from './shared-footer.mjs';
+import {contactDetailsPresentation} from './contact-presentation.mjs';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const attr=(n,k)=>n?.attrs?.find(a=>a.name===k)?.value;
 const set=(n,k,v)=>{n.attrs??=[];const a=n.attrs.find(a=>a.name===k);if(a)a.value=v;else n.attrs.push({name:k,value:v});};
@@ -12,7 +16,7 @@ const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&
 function remove(n){if(n?.parentNode){const p=n.parentNode;p.childNodes.splice(p.childNodes.indexOf(n),1);n.parentNode=null;}}
 function move(n,p,before){remove(n);n.parentNode=p;const i=before?p.childNodes.indexOf(before):-1;p.childNodes.splice(i<0?p.childNodes.length:i,0,n);}
 function insert(p,html,before){const nodes=[...parseFragment(html).childNodes];for(const n of nodes)move(n,p,before);return nodes.find(n=>n.tagName)||nodes[0];}
-function replace(n,html){if(n.tagName==='header')html=withHeaderCall(html);const p=n.parentNode,nodes=[...parseFragment(html).childNodes];for(const x of nodes)move(x,p,n);remove(n);const first=nodes.find(n=>n.tagName);if(first?.tagName==='header')groupHeader(first);return first;}
+function replace(n,html){if(n.tagName==='header')html=productsHeaderLabel(withHeaderCall(html));const p=n.parentNode,nodes=[...parseFragment(html).childNodes];for(const x of nodes)move(x,p,n);remove(n);const first=nodes.find(n=>n.tagName);if(first?.tagName==='header')groupHeader(first);return first;}
 const headerCall='<a class="button-secondary mobile-nav-call" href="tel:+61435496975" aria-label="Call 0435 496 975" title="0435 496 975" data-mobile-call="true">Call</a>';
 function withHeaderCall(html){const called=html.includes('data-mobile-call="true"')?html:html.replace('<a class="button arch-header-quote"',headerCall+'<a class="button arch-header-quote"');return called.replace('<span aria-hidden="true">⌕</span>','<svg class="arch-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="m15.5 15.5 5 5"></path></svg>');}
 function groupHeader(header){if(one(header,n=>has(n,'arch-browse-group')))return;const primary=one(header,n=>has(n,'arch-primary')),search=one(header,n=>has(n,'arch-search-open'));if(!primary||!search)return;const group=insert(primary.parentNode,'<div class="arch-browse-group"></div>',primary);move(primary,group);move(search,group);}
@@ -21,8 +25,10 @@ const categories=[['Hybrid','/hybrid/'],['Engineered timber','/engineered-timber
 const services=[['Installation','/timber-floor-installation/'],['Floor levelling','/floor-levelling/'],['Floor removal','/timber-floor-removal-and-stripping-sydney/'],['Sanding and polishing','/timber-floor-sanding-and-polishing-sydney/'],['Commercial flooring','/commercial-flooring/'],['Builder contractor','/builder-flooring-contractor-sydney/']];
 function links(rows){return rows.filter(([,url])=>url!=='/floor-plan/').map(([label,url])=>`<a href="${esc(url)}">${esc(label)}</a>`).join('');}
 function menuHTML(extra=[]){return `<div class="arch-menu-grid"><nav aria-label="Explore Oz Timber Floor">${links([['Home','/'],['Flooring','/products/'],['Services','/services/'],['Projects','/projects/'],['Floor Plan','/floor-plan/'],['Guides','/guides/'],['About','/about/'],['Contact & showroom','/contact/']])}</nav><nav aria-label="Flooring categories"><h3>Flooring</h3>${links(categories)}</nav><nav aria-label="Flooring services"><h3>How we help</h3>${links(services)}</nav></div><div class="arch-menu-contact"><a class="button" href="/contact/?enquiry=supply-install&amp;source=header">Request Quote</a><a href="tel:+61435496975">0435 496 975</a><a href="mailto:info@oztimberfloor.com.au">info@oztimberfloor.com.au</a></div>${extra.length?`<nav class="arch-menu-extra" aria-label="More destinations">${links(extra)}</nav>`:''}`;}
-export function architecturalHTML(html,file=''){
+export function architecturalHTML(html,file=''){return sharedFooterHTML(contactDetailsPresentation(groupedHeaderHTML(architecturalPage(html,file))));}
+function architecturalPage(html,file=''){
  if(!html.includes('site-header'))return html;
+ html=productsHeaderLabel(html);
  // Owner removed the standalone homepage search band; keep header/dialog search.
  if(/<link\b[^>]*rel="canonical"[^>]*href="https:\/\/oztimberfloor\.com\.au\/"/.test(html))html=html.replace(/<section class="arch-home-search"[^>]*>[\s\S]*?<\/section>/g,'');
  if(html.includes('data-architecture-version="1"')){const updated=withHeaderCall(html.replaceAll('<a href="/floor-plan/">Floor Plan</a>','').replaceAll('/projects/#herringbone-timber-stairs','/projects/').replaceAll('/projects/#wide-herringbone','/projects/'));if(updated.includes('class="arch-browse-group"'))return updated;const suffix=updated.match(/<\/html>(\s*)$/i)?.[1]||'',dom=parse(suffix?updated.slice(0,-suffix.length):updated);const header=one(dom,n=>has(n,'arch-header'));if(header)groupHeader(header);return serialize(dom)+suffix;}

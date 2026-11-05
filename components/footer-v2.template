@@ -1,0 +1,76 @@
+<!-- Replace the old arch-footer-surround block; do not append a second footer. -->
+<footer class="ozf" data-oz-footer="v2" aria-label="Oz Timber Floor footer">
+  <div class="ozf__invite">
+    <div class="ozf__wrap ozf__invite-grid">
+      <div class="ozf__invite-copy">
+        <p class="ozf__eyebrow">YOUR NEXT PROJECT</p>
+        <h2>Find the right floor<br class="ozf__desktop-break"> for your space.</h2>
+        <p class="ozf__intro">Compare materials, check availability and plan your installation with our Sydney team.</p>
+      </div>
+      <div class="ozf__action">
+        <a class="ozf__quote" href="/contact/?enquiry=supply-install&amp;source=footer" data-footer-action="quote">Request Quote <span aria-hidden="true">↗</span></a>
+        <p>Tell us about your project.</p>
+      </div>
+    </div>
+  </div>
+  <div class="ozf__body">
+    <div class="ozf__wrap">
+      <div class="ozf__grid">
+        <div class="ozf__identity">
+          <a class="ozf__brand" href="/" aria-label="Oz Timber Floor home"><img class="ozf__logo" src="/assets/brand/oz-timber-floor-logo.webp" width="680" height="215" alt="Oz Timber Floor" loading="lazy"></a>
+          <p class="ozf__description">Flooring supply, installation and preparation for Sydney homes, builders and businesses.</p>
+          <address class="ozf__contact">
+            <a class="ozf__phone" href="tel:+61435496975" data-footer-action="call">Call us</a>
+            <a class="ozf__email" href="mailto:info@oztimberfloor.com.au" data-footer-action="email">Email us</a>
+          </address>
+        </div>
+<section class="ozf__group" data-footer-group>
+  <h3 class="ozf__group-title" data-footer-title>Flooring</h3>
+  <button type="button" class="ozf__toggle" data-footer-toggle aria-expanded="true" aria-controls="ozf-flooring-links" hidden>
+    <span>Flooring</span><span class="ozf__toggle-icon" aria-hidden="true">+</span>
+  </button>
+  <nav id="ozf-flooring-links" class="ozf__links" aria-label="Footer: Flooring" data-footer-panel>
+    <a href="/engineered-timber-flooring/">Engineered timber</a>
+    <a href="/hybrid/">Hybrid</a>
+    <a href="/laminate/">Laminate</a>
+    <a href="/solid-timber/">Solid timber</a>
+    <a href="/vinyl/">Vinyl</a>
+    <a href="/products/">All flooring</a>
+    <a href="/ranges/">All ranges</a>
+  </nav>
+</section>
+<section class="ozf__group" data-footer-group>
+  <h3 class="ozf__group-title" data-footer-title>Services</h3>
+  <button type="button" class="ozf__toggle" data-footer-toggle aria-expanded="true" aria-controls="ozf-services-links" hidden>
+    <span>Services</span><span class="ozf__toggle-icon" aria-hidden="true">+</span>
+  </button>
+  <nav id="ozf-services-links" class="ozf__links" aria-label="Footer: Services" data-footer-panel>
+    <a href="/timber-floor-installation/">Installation</a>
+    <a href="/floor-levelling/">Floor levelling</a>
+    <a href="/timber-floor-removal-and-stripping-sydney/">Floor removal</a>
+    <a href="/timber-floor-sanding-and-polishing-sydney/">Sanding &amp; polishing</a>
+    <a href="/commercial-flooring/">Commercial flooring</a>
+    <a href="/builder-flooring-contractor-sydney/">Builder flooring</a>
+  </nav>
+</section>
+<section class="ozf__group" data-footer-group>
+  <h3 class="ozf__group-title" data-footer-title>Plan your project</h3>
+  <button type="button" class="ozf__toggle" data-footer-toggle aria-expanded="true" aria-controls="ozf-planning-links" hidden>
+    <span>Plan your project</span><span class="ozf__toggle-icon" aria-hidden="true">+</span>
+  </button>
+  <nav id="ozf-planning-links" class="ozf__links" aria-label="Footer: Plan your project" data-footer-panel>
+    <a href="/projects/">Our projects</a>
+    <a href="/guides/">Flooring guides</a>
+    <a href="/contact/?enquiry=supply-only">Supply-only pricing</a>
+    <a href="/contact/?enquiry=stock">Check stock</a>
+    <a href="/contact/">Contact us</a>
+  </nav>
+</section>
+      </div>
+      <div class="ozf__bottom">
+        <p>© 2026 Oz Timber Floor</p>
+        <nav class="ozf__legal" aria-label="Legal"><a href="/privacy/">Privacy Policy</a><a href="/terms/">Terms</a></nav>
+      </div>
+    </div>
+  </div>
+</footer>
