@@ -6,12 +6,18 @@ import path from 'node:path';
 import assert from 'node:assert/strict';
 import { fileURLToPath } from 'node:url';
 import {editorialHTML} from './editorial-gallery.mjs';
+import {architecturalHTML} from './architectural-design.mjs';
+import {reliabilityHTML} from './reliability-disclosures.mjs';
+import {remediateHTML} from './audit-remediation.mjs';
+import {routing} from './october-route-fixture.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const config = JSON.parse(fs.readFileSync(path.join(root, 'data/audience-service-pages.json'), 'utf8'));
 const metadata = JSON.parse(fs.readFileSync(path.join(root, 'data/seo-landing-pages.json'), 'utf8'));
 const check = process.argv.includes('--check');
 const changed = [];
+const catalogue = JSON.parse(fs.readFileSync(path.join(root, 'data/product-catalogue.json'), 'utf8'));
+const router = routing(root);
 const origin = 'https://oztimberfloor.com.au';
 const esc = value => String(value).replaceAll('&', '&amp;').replaceAll('"', '&quot;').replaceAll('<', '&lt;').replaceAll('>', '&gt;');
 const link = item => `<a href="${esc(item.href)}">${esc(item.label)}</a>`;
@@ -30,6 +36,12 @@ const business = graphs.flatMap(g => g['@graph'] || []).find(n => n['@id'] === o
 assert(business && business['@type'] === 'LocalBusiness', 'Use the existing business identity');
 
 function save(relative, output) {
+  // Compare the actual composed build output. Comparing raw audience markup
+  // with a page already processed by downstream owners falsely reports drift.
+  output = editorialHTML(output, relative);
+  output = reliabilityHTML(output, catalogue, u => router.resolve(u).destination).html;
+  output = architecturalHTML(output, relative);
+  output = remediateHTML(remediateHTML(output, catalogue), catalogue);
   const file = path.join(root, relative);
   const previous = fs.existsSync(file) ? fs.readFileSync(file, 'utf8') : null;
   if (previous === output) return;

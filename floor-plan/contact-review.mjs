@@ -8,6 +8,7 @@ export function reviewSummary() {
   if (!summary || !area || !type) return;
 
   const card = document.createElement('section');
+  card.className = 'enquiry-area-review';
   card.setAttribute('aria-label', 'Floor plan estimate');
   const heading = document.createElement('h3');
   heading.textContent = 'Use your floor plan estimate';
@@ -21,6 +22,8 @@ export function reviewSummary() {
   const apply = document.createElement('button');
   const dismiss = document.createElement('button');
   apply.type = dismiss.type = 'button';
+  apply.className = 'button';
+  dismiss.className = 'button-secondary';
   dismiss.textContent = 'Dismiss';
   const hidden = () => area.disabled || Boolean(area.closest('[hidden]'));
   let reviewedValue;
@@ -57,7 +60,10 @@ export function reviewSummary() {
   type.addEventListener('change', sync);
   area.addEventListener('input', sync);
   window.addEventListener('pagehide', remove, {once: true});
-  card.append(heading, description, note, apply, document.createTextNode(' '), dismiss);
+  const actions = document.createElement('div');
+  actions.className = 'button-row';
+  actions.append(apply, dismiss);
+  card.append(heading, description, note, actions);
   form.before(card);
   sync();
 }

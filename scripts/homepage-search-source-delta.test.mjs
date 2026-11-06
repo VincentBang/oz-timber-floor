@@ -1,5 +1,5 @@
 import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import {execFileSync} from 'node:child_process';
-import {hash} from '../assistant/lib/security.mjs';import {sourceForHistoricalDigest} from './homepage-search-source-delta.mjs';
+import {hash} from '../assistant/lib/security.mjs';import {historicalSourceForDigest as sourceForHistoricalDigest} from './audit-source-history.mjs';
 test('only the exact owner-approved search band removal reconciles with immutable homepage source',()=>{
  const old=execFileSync('git',['show','67f71ea86ac0ddd63e38b1f992c474e0ffb9d679:index.html']),digest=hash(old),current=fs.readFileSync('index.html');
  assert.deepEqual(sourceForHistoricalDigest('index.html',current,digest),old);

@@ -13,6 +13,7 @@ import { applyLegacyGuideImages } from './legacy-guide-images.mjs';
 import { applyRefresh as applySupplierGapRefresh } from './supplier-gap-refresh.mjs';
 import {localFloorPlanEnabled,addFloorPlan,checkFloorPlan} from './floor-plan-package.mjs';
 import {applyArchitectural} from './architectural-design.mjs';
+import {applyAuditRemediation} from './audit-remediation.mjs';
 const floorPlanEnabled = localFloorPlanEnabled(process.env);
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
@@ -31,6 +32,7 @@ applyProjectPhotoFilters();
 applyLegacyGuideImages();
 applySupplierGapRefresh(root,{apply:true});
 applyArchitectural();
+applyAuditRemediation();
 const checkOnly = process.argv.includes("--check");
 const context = String(process.env.CONTEXT || "dev").trim().toLowerCase();
 const indexingEnabled = /^true$/i.test(String(process.env.OZ_PRODUCTION_INDEXING_ENABLED || "").trim());

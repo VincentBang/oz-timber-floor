@@ -1,4 +1,5 @@
 import {preAudienceHTML} from './audience-discovery-contract.mjs';
+import {sourceBeforeAudit} from './audit-source-history.mjs';
 import {supplierHistoryHTML} from './supplier-history-scope.mjs';
 import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import os from 'node:os';import path from 'node:path';import {execFileSync} from 'node:child_process';import {parse} from 'parse5';
 import manifest from '../data/supplier-gap-refresh-20261103.json' with {type:'json'};
@@ -36,7 +37,7 @@ function expectedContract(html,file) {
  }
  return c;
 }
-function contract(html,file){if(file)html=preAudienceHTML(html,file,root);const n=walk(parse(html));return{title:n.filter(x=>x.tagName==='title').map(text),h1:n.filter(x=>x.tagName==='h1').map(text),meta:n.filter(x=>x.tagName==='meta').map(x=>x.attrs),canonical:n.filter(x=>x.tagName==='link'&&attr(x,'rel')==='canonical').map(x=>x.attrs),schema:n.filter(x=>x.tagName==='script'&&attr(x,'type')==='application/ld+json').map(text),hrefs:n.filter(x=>x.tagName==='a').map(x=>attr(x,'href')),forms:n.filter(x=>['form','input','select','textarea','button'].includes(x.tagName)).map(x=>x.attrs)};}
+function contract(html,file){if(file)html=preAudienceHTML(sourceBeforeAudit(file,Buffer.from(html)).toString(),file,root);const n=walk(parse(html));return{title:n.filter(x=>x.tagName==='title').map(text),h1:n.filter(x=>x.tagName==='h1').map(text),meta:n.filter(x=>x.tagName==='meta').map(x=>x.attrs),canonical:n.filter(x=>x.tagName==='link'&&attr(x,'rel')==='canonical').map(x=>x.attrs),schema:n.filter(x=>x.tagName==='script'&&attr(x,'type')==='application/ld+json').map(text),hrefs:n.filter(x=>x.tagName==='a').map(x=>attr(x,'href')),forms:n.filter(x=>['form','input','select','textarea','button'].includes(x.tagName)).map(x=>x.attrs)};}
 test('26 exact image identities retain separate plank and herringbone references and hold both unresolved names',()=>{
  assert.equal(manifest.images.length,26);assert.equal(new Set(manifest.images.map(i=>i.id)).size,26);assert.equal(manifest.images.filter(i=>i.rangeSlug==='aspire').length,8);assert.equal(manifest.images.filter(i=>i.rangeSlug==='pronto').length,11);assert.equal(manifest.images.filter(i=>i.rangeSlug==='oakleaf').length,3);assert.equal(manifest.images.filter(i=>i.rangeSlug==='-select-australian-timber').length,4);
  for(const e of manifest.images)exactImageMatch(catalogue.products.find(p=>p.id===e.id),e);

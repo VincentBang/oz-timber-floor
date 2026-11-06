@@ -85,7 +85,13 @@ body.editorial .editorial-inspiration-photo .hero-media img{max-height:360px}bod
  body.editorial .shell{width:calc(100% - 48px)}body.editorial .nav{min-height:74px}body.editorial .brand,body.editorial .brand-logo{width:153px}body.editorial .section,body.editorial .portfolio-section{padding:40px 0}
  body.editorial h1{font-size:43px}body.editorial h2{font-size:36px}body.editorial h3{font-size:23px}body.editorial .lead{font-size:14px}body.editorial .eyebrow{font-size:10px}body.editorial .section-head{display:block;margin-bottom:24px}body.editorial .section-head>p{font-size:14px}
  body.editorial .hero-grid,body.editorial .product-hero-grid{display:flex;flex-direction:column;gap:24px}body.editorial .hero{padding:28px 0}body.editorial .hero-grid>div{width:100%}body.editorial .hero-media img{height:250px;min-height:0}body.editorial .hero-media{width:100%}
- body.editorial .grid-3,body.editorial .grid-4{grid-template-columns:1fr;gap:28px 14px}body.editorial .catalogue-products .grid-3,body.editorial .editorial-catalogue-grid{grid-template-columns:repeat(2,minmax(0,1fr))}body.editorial .product-body{padding:14px 0 0}body.editorial .product-card h3{font-size:23px}body.editorial .product-card img{aspect-ratio:3/4}body.editorial .product-actions{display:block}body.editorial .product-actions a{display:flex;min-height:44px;font-size:12px}
+ body.editorial .grid-3,body.editorial .grid-4{grid-template-columns:1fr;gap:28px 14px}body.editorial .catalogue-products .grid-3,body.editorial .editorial-catalogue-grid{grid-template-columns:minmax(0,1fr)}body.editorial .product-body{padding:14px 0 0}body.editorial .product-card h3{font-size:23px}body.editorial .product-card img{aspect-ratio:3/4}body.editorial .product-actions{display:block}body.editorial .product-actions a{display:flex;min-height:44px;font-size:14px}
+ body.editorial :is(.catalogue-products,.editorial-catalogue-grid) .product-card{display:grid;grid-template-columns:76px minmax(0,1fr);gap:16px;align-items:start}
+ body.editorial :is(.catalogue-products,.editorial-catalogue-grid) .product-card>img,body.editorial :is(.catalogue-products,.editorial-catalogue-grid) .product-card>a img{width:76px;height:96px;object-fit:cover;aspect-ratio:auto}
+ body.editorial :is(.catalogue-products,.editorial-catalogue-grid) .product-body{padding:0;min-width:0}
+ body.editorial[data-editorial-family="discovery"] a.range-summary-card:has(>img){display:grid;grid-template-columns:76px minmax(0,1fr);gap:8px 16px;align-content:start;padding:12px 0}
+ body.editorial[data-editorial-family="discovery"] a.range-summary-card>img{grid-column:1;grid-row:1 / span 5;width:76px;height:88px;object-fit:cover;aspect-ratio:auto}
+ body.editorial[data-editorial-family="discovery"] a.range-summary-card:has(>img)>:not(img){grid-column:2;margin:0;min-width:0}
  body.editorial .spec-grid{grid-template-columns:1fr}body.editorial .spec-item{gap:16px}body.editorial .catalogue-specs{padding-top:26px}body.editorial .mobile-facts{margin:0}
  body.editorial .mobile-disclosure{margin:0;background:transparent;border-radius:0;border:0;border-top:1px solid var(--line)}body.editorial .mobile-disclosure>summary{font:400 21px/1.3 Georgia;min-height:48px;padding:16px 0}body.editorial .mobile-disclosure-panel{padding:16px 0}
  body.editorial[data-editorial-family="home"] .hero-grid{width:100%;min-height:0;display:block}body.editorial[data-editorial-family="home"] .hero-grid>div:first-child{padding:28px 24px}body.editorial[data-editorial-family="home"] .hero .editorial-search-heading{font-size:14px;margin-bottom:16px}body.editorial .editorial-display{font-size:46px;line-height:1.03;margin-bottom:18px}body.editorial[data-editorial-family="home"] .hero .eyebrow{font-size:10px;margin-bottom:8px}
@@ -127,6 +133,9 @@ body.editorial :is(.flooring-assistant-panel,.flooring-assistant-review) h2{font
 body.editorial :is(.flooring-assistant-panel,.flooring-assistant-review) :is(button,input,textarea,select,a,.assistant-message){border-radius:0;box-shadow:none}
 body.editorial .flooring-assistant-panel header{background:var(--canvas)}
 /* Let long range-comparison names reflow inside narrow cards, without resizing type. */
+@media(max-width:760px){body.editorial :is(.range-summary-card,.product-card) h3{overflow-wrap:normal;word-break:normal;hyphens:none}}
+/* Last-resort wrapping for long, unbroken related-range names only. Category
+   rows retain the full-width, natural-word wrapping fix above. */
 @media(max-width:760px){body.editorial[data-editorial-family="range"] .range-summary-card h3{overflow-wrap:anywhere;hyphens:auto}}
 /* Give the range facts strip its natural height instead of an aspect-ratio grid track. */
 body.editorial[data-editorial-family="range"] .hero-media:has(>img[src*="/assets/products/"]){display:block;aspect-ratio:auto}

@@ -1084,6 +1084,15 @@ document.addEventListener("DOMContentLoaded", function () {
   // Flooring assistant bridge: end
 
   document.querySelectorAll("[data-contact-form]").forEach(function (form) {
+    // Native validation must reveal invalid optional fields inside disclosures.
+    // Opening a panel never recreates controls or drops selected files.
+    form.addEventListener("invalid", function (event) {
+      var parent = event.target.parentElement;
+      while (parent && parent !== form) {
+        if (parent.tagName === "DETAILS") parent.open = true;
+        parent = parent.parentElement;
+      }
+    }, true);
     var uploadTools = window.OZ_ENQUIRY_ATTACHMENTS;
     if (uploadTools) uploadTools.initialise(form);
     form.addEventListener("focusin", function () {

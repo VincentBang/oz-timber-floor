@@ -1,0 +1,15 @@
+{
+  "scope": "LOCAL_PRODUCTION_BINDING_PREPARATION_ONLY",
+  "ownerRequest": "Prepare the exact production approval binding for the rebuilt chatbot and run final local release checks. Keep USD30 monthly and USD1 daily. No push, deploy, paid calls or real submissions yet.",
+  "prepareProductionPayload": true,
+  "corpusVersion": "e15e64b25fd01798e0430c8af886b7bdd37961d3607a061a0dba7941bd318358",
+  "parentProfileHash": "a87c40db17e2cd4cccfe2e89907be89f459b5d3e28686d117579a016d2a368dd",
+  "monthlyUsd": 30,
+  "dailyUsd": 1,
+  "publicActivationAuthorized": false,
+  "providerWritesAuthorized": false,
+  "gitPushAuthorized": false,
+  "deploymentAuthorized": false,
+  "paidCallsAuthorized": false,
+  "realSubmissionsAuthorized": false
+}

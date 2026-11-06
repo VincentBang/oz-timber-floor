@@ -1,5 +1,5 @@
 import fs from 'node:fs';import test from 'node:test';import assert from 'node:assert/strict';import {parse} from 'parse5';import {groupedHeaderHTML} from './header-grouping.mjs';import {architecturalHTML} from './architectural-design.mjs';import {renderFloorPlanPage} from './floor-plan-site-shell.mjs';
-import {hash} from '../assistant/lib/security.mjs';import {sourceForHistoricalDigest} from './homepage-search-source-delta.mjs';import {execFileSync} from 'node:child_process';
+import {hash} from '../assistant/lib/security.mjs';import {historicalSourceForDigest as sourceForHistoricalDigest} from './audit-source-history.mjs';import {execFileSync} from 'node:child_process';
 import {removeFloorPlanDiscovery} from './floor-plan-package.mjs';
 import {menuContactButtons} from './header-grouping.mjs';
 import {sharedFooterHTML} from './shared-footer.mjs';

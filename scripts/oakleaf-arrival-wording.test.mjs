@@ -3,6 +3,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {execFileSync} from 'node:child_process';
 import test from 'node:test';
+import {sourceBeforeAudit} from './audit-source-history.mjs';
 
 const root = path.resolve(import.meta.dirname, '..');
 const targets = [
@@ -15,7 +16,7 @@ const baseline = file => execFileSync('git', ['show', '98624d3e:'+file], {cwd:ro
 const catalogue = JSON.parse(read('data/product-catalogue.json'));
 const before = JSON.parse(baseline('data/product-catalogue.json'));
 const withoutImageFields = ({primaryImage,imageGallery,galleryStatus,altText,...record}) => record;
-const protectedParts = html => html.match(/<title\b[^>]*>[\s\S]*?<\/title>|<h1\b[^>]*>[\s\S]*?<\/h1>|<link\b[^>]*rel="canonical"[^>]*>|<meta\b[^>]*name="robots"[^>]*>|<script\b[^>]*type="application\/ld\+json"[^>]*>[\s\S]*?<\/script>|\bhref="[^"]*"|<(?:form|input|select|button|textarea)\b[^>]*>/gi);
+const protectedParts = (html,file) => (file?sourceBeforeAudit(file,Buffer.from(html)).toString():html).match(/<title\b[^>]*>[\s\S]*?<\/title>|<h1\b[^>]*>[\s\S]*?<\/h1>|<link\b[^>]*rel="canonical"[^>]*>|<meta\b[^>]*name="robots"[^>]*>|<script\b[^>]*type="application\/ld\+json"[^>]*>[\s\S]*?<\/script>|\bhref="[^"]*"|<(?:form|input|select|button|textarea)\b[^>]*>/gi);
 const presentationBaseline = file => architecturalHTML(baseline(file),file);
 
 test('only the approved description and thickness fields change on the three Oakleaf product records, beside previously verified images', () => {
@@ -40,7 +41,7 @@ test('product summaries and both meta descriptions agree without the obsolete qu
     assert(html.includes('<p class="lead">'+record.shortDescription+'</p>'));
     assert(html.includes('<span>Thickness</span><strong>12mm</strong>'));
     assert(html.includes('<h1>'+colour+'</h1>'));
-    assert.deepEqual(protectedParts(html),protectedParts(presentationBaseline(file)));
+    assert.deepEqual(protectedParts(html,file),protectedParts(presentationBaseline(file)));
   }
 });
 
@@ -64,6 +65,6 @@ test('Oakleaf cards display the corrected thickness under the right colour, with
     assert.equal(summary(card), match ? summary(old[i]).replace('12mm ARRIVING SOON','12mm') : summary(old[i]));
   }
   assert.equal(fixed,3);
-  assert.deepEqual(protectedParts(read(file)),protectedParts(presentationBaseline(file)));
+  assert.deepEqual(protectedParts(read(file),file),protectedParts(presentationBaseline(file)));
 });
 import {architecturalHTML} from './architectural-design.mjs';

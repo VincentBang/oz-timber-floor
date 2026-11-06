@@ -12,25 +12,39 @@
    }else{isolated.forEach(function(pair){pair[0].inert=pair[1];});isolated=[];}
   });
   if(!['range','discovery'].includes(family))return;
-  // The existing range hub already owns search/category interactions; add sorting only.
-  var existing=document.querySelector('[data-range-filter-form]');
-  var cards=Array.from(document.querySelectorAll('main .range-summary-card, main .catalogue-products .product-card'));
-  if(!cards.length)return;
-  var originals=new Map();cards.forEach(function(c,i){originals.set(c,i);c.parentElement.classList.add('editorial-catalogue-grid');});
-  var form=document.createElement('form');form.className='editorial-filter';form.setAttribute('aria-label','Catalogue search and sorting');
-  form.innerHTML=(existing?'':'<label>Search ranges and colours<input type="search" name="catalogue_search" placeholder="Enter a range or colour"></label><label>Range<select name="catalogue_range"><option value="">All ranges</option></select></label>')+'<label>Sort by<select name="catalogue_sort"><option value="featured">Featured order</option><option value="az">Name A–Z</option><option value="za">Name Z–A</option></select></label>'+(existing?'':'<button type="reset">Clear filters</button><p class="editorial-filter-status" role="status" aria-live="polite"></p>');
-  var insertion=cards[0].closest('section').querySelector('.shell');insertion.insertBefore(form,insertion.firstChild);
-  var input=form.elements.catalogue_search,range=form.elements.catalogue_range,sort=form.elements.catalogue_sort,status=form.querySelector('[role="status"]');
-  function rangeName(c){return c.getAttribute('data-catalogue-range-id')||'';}
-  function searchText(value){return value.normalize('NFKD').toLocaleLowerCase().replace(/[^\p{L}\p{N}]+/gu,' ').trim();}
-  if(range){var names=new Map();cards.forEach(function(c){var id=rangeName(c),label=c.getAttribute('data-catalogue-range');if(id&&label)names.set(id,label);});Array.from(names).sort(function(a,b){return a[1].localeCompare(b[1]);}).forEach(function(pair){var option=document.createElement('option');option.value=pair[0];option.textContent=pair[1];range.appendChild(option);});if(range.options.length<3)range.parentElement.hidden=true;}
-  function apply(){var count=0,query=input?searchText(input.value):'';if(!existing)cards.forEach(function(c){var visible=(!query||searchText(c.textContent).includes(query))&&(!range.value||rangeName(c)===range.value);c.hidden=!visible;if(visible)count++;});
+  var allCards=Array.from(document.querySelectorAll('main .range-summary-card, main .catalogue-products .product-card'));
+  if(!allCards.length)return;
+  var originals=new Map();allCards.forEach(function(c,i){originals.set(c,i);c.parentElement.classList.add('editorial-catalogue-grid');});
+  function sortCards(cards,value){
    var groups=new Map();cards.forEach(function(c){if(!groups.has(c.parentElement))groups.set(c.parentElement,[]);groups.get(c.parentElement).push(c);});
-   groups.forEach(function(group,parent){group.sort(function(a,b){if(sort.value==='featured')return originals.get(a)-originals.get(b);var names=(a.querySelector('h3')?.textContent||a.textContent).localeCompare(b.querySelector('h3')?.textContent||b.textContent);return sort.value==='za'?-names:names;});group.forEach(function(c){parent.appendChild(c);});});
-   if(status)status.textContent=count?count+' of '+cards.length+' listed ranges and colours shown.':'No matching listed ranges or colours. Try another name or clear filters.';
+   groups.forEach(function(group,parent){group.sort(function(a,b){if(value==='featured')return originals.get(a)-originals.get(b);var names=(a.querySelector('h3')?.textContent||a.textContent).localeCompare(b.querySelector('h3')?.textContent||b.textContent);return value==='za'?-names:names;});group.forEach(function(c){parent.appendChild(c);});});
   }
-  var controls=document.createElement('details');controls.className='editorial-filter-disclosure';controls.open=window.matchMedia('(min-width:761px)').matches;var summary=document.createElement('summary');summary.textContent='Search & sort';controls.appendChild(summary);Array.from(form.children).filter(function(n){return n!==status;}).forEach(function(n){controls.appendChild(n);});form.insertBefore(controls,form.firstChild);
-  form.addEventListener('submit',function(e){e.preventDefault();apply();});form.addEventListener('input',apply);form.addEventListener('change',apply);form.addEventListener('reset',function(){requestAnimationFrame(apply);});apply();
+  function sortLabel(){var label=document.createElement('label');label.textContent='Sort by';var select=document.createElement('select');select.name='catalogue_sort';select.innerHTML='<option value="featured">Featured order</option><option value="az">Name A–Z</option><option value="za">Name Z–A</option>';label.appendChild(select);return label;}
+  // The range hub retains its own search/category/count controller. Sorting is
+  // inside that existing form, never a second filter scope or nested form.
+  var existing=document.querySelector('[data-range-filter-form]');
+  if(existing){var label=sortLabel(),sort=label.querySelector('select');existing.appendChild(label);var clear=document.querySelector('[data-range-clear]');sort.addEventListener('change',function(){sortCards(allCards,sort.value);if(clear&&sort.value!=='featured')clear.hidden=false;});if(clear){clear.addEventListener('click',function(){sort.value='featured';sortCards(allCards,'featured');});new MutationObserver(function(){if(sort.value!=='featured'&&clear.hidden)clear.hidden=false;}).observe(clear,{attributes:true,attributeFilter:['hidden']});}return;}
+  function searchText(value){return value.normalize('NFKD').toLocaleLowerCase().replace(/[^\p{L}\p{N}]+/gu,' ').trim();}
+  function rangeName(c){return c.getAttribute('data-catalogue-range-id')||'';}
+  var primary=family==='range'?(document.querySelector('main #colours')||document.querySelector('main section.catalogue-products')):null;
+  var sections=new Map();allCards.forEach(function(c){var section=c.closest('section');if(family==='range'&&section!==primary)return;if(!sections.has(section))sections.set(section,[]);sections.get(section).push(c);});
+  if(family==='range'){
+   var alternatives=allCards.filter(function(c){return c.closest('section')!==primary;}),nearby=new Map();alternatives.forEach(function(c){var section=c.closest('section');if(!nearby.has(section))nearby.set(section,[]);nearby.get(section).push(c);});
+   nearby.forEach(function(cards,section){var count=document.createElement('p');count.className='editorial-alternatives-count';count.textContent=cards.length+' nearby '+(cards.every(function(c){return c.matches('.range-summary-card');})?'ranges':'options')+' — separate from the colour results.';cards[0].parentElement.before(count);});
+  }
+  sections.forEach(function(cards,section){
+   var heading=section.querySelector('h2'),scope=heading?heading.textContent.trim():cards.every(function(c){return c.matches('.range-summary-card');})?'Ranges':'Colours';
+   var form=document.createElement('form');form.className='editorial-filter';form.setAttribute('aria-label',scope+' search and sorting');form.dataset.catalogueScope=scope;
+   var searchLabel=document.createElement('label');searchLabel.textContent='Search '+scope.toLocaleLowerCase();var input=document.createElement('input');input.type='search';input.name='catalogue_search';input.placeholder='Enter a range or colour';searchLabel.appendChild(input);
+   var more=document.createElement('details');more.className='editorial-filter-disclosure';var summary=document.createElement('summary');summary.textContent='Filter & sort';more.appendChild(summary);
+   var rangeLabel=document.createElement('label');rangeLabel.textContent='Range';var range=document.createElement('select');range.name='catalogue_range';range.innerHTML='<option value="">All ranges</option>';rangeLabel.appendChild(range);more.appendChild(rangeLabel);
+   var names=new Map();cards.forEach(function(c){var id=rangeName(c),name=c.getAttribute('data-catalogue-range');if(id&&name)names.set(id,name);});Array.from(names).sort(function(a,b){return a[1].localeCompare(b[1]);}).forEach(function(pair){var option=document.createElement('option');option.value=pair[0];option.textContent=pair[1];range.appendChild(option);});if(names.size<2)rangeLabel.hidden=true;
+   var order=sortLabel(),sort=order.querySelector('select');more.appendChild(order);var clear=document.createElement('button');clear.type='reset';clear.textContent='Clear filters';
+   var status=document.createElement('p');status.className='editorial-filter-status';status.setAttribute('role','status');status.setAttribute('aria-live','polite');form.append(searchLabel,more,clear,status);
+   var grid=cards[0].parentElement;grid.before(form);
+   function apply(){var count=0,query=searchText(input.value);cards.forEach(function(c){var visible=(!query||searchText(c.textContent).includes(query))&&(!range.value||rangeName(c)===range.value);c.hidden=!visible;if(visible)count++;});sortCards(cards,sort.value);status.textContent=count+' of '+cards.length+' '+scope.toLocaleLowerCase()+' shown.'+(count?'':' No matches. Try another name or clear filters.');summary.textContent='Filter & sort'+(range.value||sort.value!=='featured'?' (active)':'');}
+   form.addEventListener('submit',function(e){e.preventDefault();apply();});form.addEventListener('input',apply);form.addEventListener('change',apply);form.addEventListener('reset',function(){requestAnimationFrame(apply);});apply();
+  });
  }
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 })();

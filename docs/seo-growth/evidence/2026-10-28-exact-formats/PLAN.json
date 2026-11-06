@@ -1,0 +1,860 @@
+{
+  "at": "2026-10-28T09:23:56.549Z",
+  "scope": "Explicit format alternatives, not a selected SKU or stock guarantee; no retirement/indexation changes",
+  "rows": [
+    {
+      "id": "aqua-wood-plus-12mm-big-ben-p-and-h",
+      "route": "/products/aqua-wood-plus-12mm-big-ben-p-and-h/",
+      "source": "https://basstimber.com.au/index.php/menu/big-ben-ph/",
+      "sourceSha256": "8ffca470756f8244cbef9b102fec95a016737c3a6f1c03c5f78f9d3862a97d59",
+      "file": "docs/seo-growth/evidence/2026-10-28-exact-formats/raw/8ffca470756f8244cbef9b102fec95a016737c3a6f1c03c5f78f9d3862a97d59.html",
+      "title": "Big Ben P&H",
+      "after": {
+        "formatOptions": [
+          {
+            "format": "Plank",
+            "boardSize": "1830 x 196 x 12mm",
+            "packSizeM2": "2.152",
+            "piecesPerPack": 6
+          },
+          {
+            "format": "Herringbone",
+            "boardSize": "600 x 127 x 12mm",
+            "packSizeM2": "1.524",
+            "piecesPerPack": 20
+          }
+        ],
+        "formatSummary": "Plank: 1830 x 196 x 12mm; 2.152 m² per pack (6 pieces) | Herringbone: 600 x 127 x 12mm; 1.524 m² per pack (20 pieces). Confirm the chosen format and current stock before order.",
+        "boardSize": "Plank: 1830 x 196 x 12mm or Herringbone: 600 x 127 x 12mm"
+      }
+    },
+    {
+      "id": "aqua-wood-plus-12mm-black-sea-p-and-h",
+      "route": "/products/aqua-wood-plus-12mm-black-sea-p-and-h/",
+      "source": "https://basstimber.com.au/index.php/menu/black-sea-ph/",
+      "sourceSha256": "53722f6bb2336ee655a8f103ae82ad2a501aa6bdb7dd58a5caf86e7c25a7f51d",
+      "file": "docs/seo-growth/evidence/2026-10-28-exact-formats/raw/53722f6bb2336ee655a8f103ae82ad2a501aa6bdb7dd58a5caf86e7c25a7f51d.html",
+      "title": "Black Sea P&H",
+      "after": {
+        "formatOptions": [
+          {
+            "format": "Plank",
+            "boardSize": "1830 x 196 x 12mm",
+            "packSizeM2": "2.152",
+            "piecesPerPack": 6
+          },
+          {
+            "format": "Herringbone",
+            "boardSize": "600 x 127 x 12mm",
+            "packSizeM2": "1.524",
+            "piecesPerPack": 20
+          }
+        ],
+        "formatSummary": "Plank: 1830 x 196 x 12mm; 2.152 m² per pack (6 pieces) | Herringbone: 600 x 127 x 12mm; 1.524 m² per pack (20 pieces). Confirm the chosen format and current stock before order.",
+        "boardSize": "Plank: 1830 x 196 x 12mm or Herringbone: 600 x 127 x 12mm"
+      }
+    },
+    {
+      "id": "aqua-wood-plus-12mm-blackbutt-p-and-h",
+      "route": "/products/aqua-wood-plus-12mm-blackbutt-p-and-h/",
+      "source": "https://basstimber.com.au/index.php/menu/blackbutt-ph/",
+      "sourceSha256": "96b8c3c307f3a9fa90b7b9d7ebd886e786f422af3e78cefacd42fadec683be8a",
+      "file": "docs/seo-growth/evidence/2026-10-28-exact-formats/raw/96b8c3c307f3a9fa90b7b9d7ebd886e786f422af3e78cefacd42fadec683be8a.html",
+      "title": "Blackbutt P&H",
+      "after": {
+        "formatOptions": [
+          {
+            "format": "Plank",
+            "boardSize": "1830 x 196 x 12mm",
+            "packSizeM2": "2.152",
+            "piecesPerPack": 6
+          },
+          {
+            "format": "Herringbone",
+            "boardSize": "600 x 127 x 12mm",
+            "packSizeM2": "1.524",
+            "piecesPerPack": 20
+          }
+        ],
+        "formatSummary": "Plank: 1830 x 196 x 12mm; 2.152 m² per pack (6 pieces) | Herringbone: 600 x 127 x 12mm; 1.524 m² per pack (20 pieces). Confirm the chosen format and current stock before order.",
+        "boardSize": "Plank: 1830 x 196 x 12mm or Herringbone: 600 x 127 x 12mm"
+      }
+    },
+    {
+      "id": "aqua-wood-plus-12mm-blue-mountain-p-and-h",
+      "route": "/products/aqua-wood-plus-12mm-blue-mountain-p-and-h/",
+      "source": "https://basstimber.com.au/index.php/menu/blue-mountain-ph/",
+      "sourceSha256": "e3ada56b1a511870efa3aed945e0943535c3f6a04f963366818019fa647d2c18",
+      "file": "docs/seo-growth/evidence/2026-10-28-exact-formats/raw/e3ada56b1a511870efa3aed945e0943535c3f6a04f963366818019fa647d2c18.html",
+      "title": "Blue Mountain P&H",
+      "after": {
+        "formatOptions": [
+          {
+            "format": "Plank",
+            "boardSize": "1830 x 196 x 12mm",
+            "packSizeM2": "2.152",
+            "piecesPerPack": 6
+          },
+          {
+            "format": "Herringbone",
+            "boardSize": "600 x 127 x 12mm",
+            "packSizeM2": "1.524",
+            "piecesPerPack": 20
+          }
+        ],
+        "formatSummary": "Plank: 1830 x 196 x 12mm; 2.152 m² per pack (6 pieces) | Herringbone: 600 x 127 x 12mm; 1.524 m² per pack (20 pieces). Confirm the chosen format and current stock before order.",
+        "boardSize": "Plank: 1830 x 196 x 12mm or Herringbone: 600 x 127 x 12mm"
+      }
+    },
+    {
+      "id": "aqua-wood-plus-12mm-bondi-p-and-h",
+      "route": "/products/aqua-wood-plus-12mm-bondi-p-and-h/",
+      "source": "https://basstimber.com.au/index.php/menu/bondi-ph/",
+      "sourceSha256": "27d5f3dd755d53b9669957dce61ba092299c53d394b8bdb28c45d5eae0c0ec65",
+      "file": "docs/seo-growth/evidence/2026-10-28-exact-formats/raw/27d5f3dd755d53b9669957dce61ba092299c53d394b8bdb28c45d5eae0c0ec65.html",
+      "title": "Bondi P&H",
+      "after": {
+        "formatOptions": [
+          {
+            "format": "Plank",
+            "boardSize": "1830 x 196 x 12mm",
+            "packSizeM2": "2.152",
+            "piecesPerPack": 6
+          },
+          {
+            "format": "Herringbone",
+            "boardSize": "600 x 127 x 12mm",
+            "packSizeM2": "1.524",
+            "piecesPerPack": 20
+          }
+        ],
+        "formatSummary": "Plank: 1830 x 196 x 12mm; 2.152 m² per pack (6 pieces) | Herringbone: 600 x 127 x 12mm; 1.524 m² per pack (20 pieces). Confirm the chosen format and current stock before order.",
+        "boardSize": "Plank: 1830 x 196 x 12mm or Herringbone: 600 x 127 x 12mm"
+      }
+    },
+    {
+      "id": "aqua-wood-plus-12mm-brushbox-p-and-h",
+      "route": "/products/aqua-wood-plus-12mm-brushbox-p-and-h/",
+      "source": "https://basstimber.com.au/index.php/menu/brushbox-ph/",
+      "sourceSha256": "b15f7eca88002d0b53cccc16743e605337825c0e3bf86811fdbeb4f4d61f76de",
+      "file": "docs/seo-growth/evidence/2026-10-28-exact-formats/raw/b15f7eca88002d0b53cccc16743e605337825c0e3bf86811fdbeb4f4d61f76de.html",
+      "title": "Brushbox P&H",
+      "after": {
+        "formatOptions": [
+          {
+            "format": "Plank",
+            "boardSize": "1830 x 196 x 12mm",
+            "packSizeM2": "2.152",
+            "piecesPerPack": 6
+          },
+          {
+            "format": "Herringbone",
+            "boardSize": "600 x 127 x 12mm",
+            "packSizeM2": "1.524",
+            "piecesPerPack": 20
+          }
+        ],
+        "formatSummary": "Plank: 1830 x 196 x 12mm; 2.152 m² per pack (6 pieces) | Herringbone: 600 x 127 x 12mm; 1.524 m² per pack (20 pieces). Confirm the chosen format and current stock before order.",
+        "boardSize": "Plank: 1830 x 196 x 12mm or Herringbone: 600 x 127 x 12mm"
+      }
+    },
+    {
+      "id": "aqua-wood-plus-12mm-eiffel-tower",
+      "route": "/products/aqua-wood-plus-12mm-eiffel-tower/",
+      "source": "https://basstimber.com.au/index.php/menu/eiffel-tower/",
+      "sourceSha256": "3b9b98590e41e95d11fc978e04a56e3443ea98c1ac753c09744bfcdf6fbef6d3",
+      "file": "docs/seo-growth/evidence/2026-10-28-exact-formats/raw/3b9b98590e41e95d11fc978e04a56e3443ea98c1ac753c09744bfcdf6fbef6d3.html",
+      "title": "Eiffel Tower",
+      "after": {
+        "formatOptions": [
+          {
+            "format": "Plank",
+            "boardSize": "1830 x 196 x 12mm",
+            "packSizeM2": "2.152",
+            "piecesPerPack": 6
+          }
+        ],
+        "formatSummary": "Plank: 1830 x 196 x 12mm; 2.152 m² per pack (6 pieces). Confirm the chosen format and current stock before order.",
+        "boardSize": "Plank: 1830 x 196 x 12mm",
+        "packSizeM2": "2.152"
+      }
+    },
+    {
+      "id": "aqua-wood-plus-12mm-gold-coast",
+      "route": "/products/aqua-wood-plus-12mm-gold-coast/",
+      "source": "https://basstimber.com.au/index.php/menu/gold-coast/",
+      "sourceSha256": "30dfaa6c73bd27038095dc0813811b594a78228bec9eafbc8bb694e3599a8587",
+      "file": "docs/seo-growth/evidence/2026-10-28-exact-formats/raw/30dfaa6c73bd27038095dc0813811b594a78228bec9eafbc8bb694e3599a8587.html",
+      "title": "Gold Coast",
+      "after": {
+        "formatOptions": [
+          {
+            "format": "Plank",
+            "boardSize": "1830 x 196 x 12mm",
+            "packSizeM2": "2.152",
+            "piecesPerPack": 6
+          }
+        ],
+        "formatSummary": "Plank: 1830 x 196 x 12mm; 2.152 m² per pack (6 pieces). Confirm the chosen format and current stock before order.",
+        "boardSize": "Plank: 1830 x 196 x 12mm",
+        "packSizeM2": "2.152"
+      }
+    },
+    {
+      "id": "aqua-wood-plus-12mm-great-wall-p-and-h",
+      "route": "/products/aqua-wood-plus-12mm-great-wall-p-and-h/",
+      "source": "https://basstimber.com.au/index.php/menu/great-wall-ph-2/",
+      "sourceSha256": "16004687fc1dcee8b8df6ed0f06f487e0a4e132ecb0152110f85f88aa2482526",
+      "file": "docs/seo-growth/evidence/2026-10-28-exact-formats/raw/16004687fc1dcee8b8df6ed0f06f487e0a4e132ecb0152110f85f88aa2482526.html",
+      "title": "Great Wall P&H",
+      "after": {
+        "formatOptions": [
+          {
+            "format": "Plank",
+            "boardSize": "1830 x 196 x 12mm",
+            "packSizeM2": "2.152",
+            "piecesPerPack": 6
+          },
+          {
+            "format": "Herringbone",
+            "boardSize": "600 x 127 x 12mm",
+            "packSizeM2": "1.524",
+            "piecesPerPack": 20
+          }
+        ],
+        "formatSummary": "Plank: 1830 x 196 x 12mm; 2.152 m² per pack (6 pieces) | Herringbone: 600 x 127 x 12mm; 1.524 m² per pack (20 pieces). Confirm the chosen format and current stock before order.",
+        "boardSize": "Plank: 1830 x 196 x 12mm or Herringbone: 600 x 127 x 12mm"
+      }
+    },
+    {
+      "id": "aqua-wood-plus-12mm-habour-bridge-p-and-h",
+      "route": "/products/aqua-wood-plus-12mm-habour-bridge-p-and-h/",
+      "source": "https://basstimber.com.au/index.php/menu/habour-bridge-ph/",
+      "sourceSha256": "c52484919b8e8c3d3e0b0b0f0d6f72cd0710aa3466f96266ac3c2cbee6032cab",
+      "file": "docs/seo-growth/evidence/2026-10-28-exact-formats/raw/c52484919b8e8c3d3e0b0b0f0d6f72cd0710aa3466f96266ac3c2cbee6032cab.html",
+      "title": "Habour Bridge P&H",
+      "after": {
+        "formatOptions": [
+          {
+            "format": "Plank",
+            "boardSize": "1830 x 196 x 12mm",
+            "packSizeM2": "2.152",
+            "piecesPerPack": 6
+          },
+          {
+            "format": "Herringbone",
+            "boardSize": "600 x 127 x 12mm",
+            "packSizeM2": "1.524",
+            "piecesPerPack": 20
+          }
+        ],
+        "formatSummary": "Plank: 1830 x 196 x 12mm; 2.152 m² per pack (6 pieces) | Herringbone: 600 x 127 x 12mm; 1.524 m² per pack (20 pieces). Confirm the chosen format and current stock before order.",
+        "boardSize": "Plank: 1830 x 196 x 12mm or Herringbone: 600 x 127 x 12mm"
+      }
+    },
+    {
+      "id": "aqua-wood-plus-12mm-hawaii-p-and-h",
+      "route": "/products/aqua-wood-plus-12mm-hawaii-p-and-h/",
+      "source": "https://basstimber.com.au/index.php/menu/hawaii-ph/",
+      "sourceSha256": "ed7257d80651343dac0c00b858ee879e99ec351ef9abc5e5ae012c81748c60fa",
+      "file": "docs/seo-growth/evidence/2026-10-28-exact-formats/raw/ed7257d80651343dac0c00b858ee879e99ec351ef9abc5e5ae012c81748c60fa.html",
+      "title": "Hawaii P&H",
+      "after": {
+        "formatOptions": [
+          {
+            "format": "Plank",
+            "boardSize": "1830 x 196 x 12mm",
+            "packSizeM2": "2.152",
+            "piecesPerPack": 6
+          },
+          {
+            "format": "Herringbone",
+            "boardSize": "600 x 127 x 12mm",
+            "packSizeM2": "1.524",
+            "piecesPerPack": 20
+          }
+        ],
+        "formatSummary": "Plank: 1830 x 196 x 12mm; 2.152 m² per pack (6 pieces) | Herringbone: 600 x 127 x 12mm; 1.524 m² per pack (20 pieces). Confirm the chosen format and current stock before order.",
+        "boardSize": "Plank: 1830 x 196 x 12mm or Herringbone: 600 x 127 x 12mm"
+      }
+    },
+    {
+      "id": "aqua-wood-plus-12mm-hollywood-p-and-h",
+      "route": "/products/aqua-wood-plus-12mm-hollywood-p-and-h/",
+      "source": "https://basstimber.com.au/index.php/menu/hollywood-ph-2/",
+      "sourceSha256": "845873ec7bbe1adc03f3fc9a0da5675d91e0878ec567a3c18a6eb558f05c2fdd",
+      "file": "docs/seo-growth/evidence/2026-10-28-exact-formats/raw/845873ec7bbe1adc03f3fc9a0da5675d91e0878ec567a3c18a6eb558f05c2fdd.html",
+      "title": "Hollywood P&H",
+      "after": {
+        "formatOptions": [
+          {
+            "format": "Plank",
+            "boardSize": "1830 x 196 x 12mm",
+            "packSizeM2": "2.152",
+            "piecesPerPack": 6
+          },
+          {
+            "format": "Herringbone",
+            "boardSize": "600 x 127 x 12mm",
+            "packSizeM2": "1.524",
+            "piecesPerPack": 20
+          }
+        ],
+        "formatSummary": "Plank: 1830 x 196 x 12mm; 2.152 m² per pack (6 pieces) | Herringbone: 600 x 127 x 12mm; 1.524 m² per pack (20 pieces). Confirm the chosen format and current stock before order.",
+        "boardSize": "Plank: 1830 x 196 x 12mm or Herringbone: 600 x 127 x 12mm"
+      }
+    },
+    {
+      "id": "aqua-wood-plus-12mm-jarrah",
+      "route": "/products/aqua-wood-plus-12mm-jarrah/",
+      "source": "https://basstimber.com.au/index.php/menu/jarrah/",
+      "sourceSha256": "25b227cdaabc822060f2a4d9aa3d705450634c209e5955f08d9b0a87385fa5f9",
+      "file": "docs/seo-growth/evidence/2026-10-28-exact-formats/raw/25b227cdaabc822060f2a4d9aa3d705450634c209e5955f08d9b0a87385fa5f9.html",
+      "title": "Jarrah",
+      "after": {
+        "formatOptions": [
+          {
+            "format": "Plank",
+            "boardSize": "1830 x 196 x 12mm",
+            "packSizeM2": "2.152",
+            "piecesPerPack": 6
+          }
+        ],
+        "formatSummary": "Plank: 1830 x 196 x 12mm; 2.152 m² per pack (6 pieces). Confirm the chosen format and current stock before order.",
+        "boardSize": "Plank: 1830 x 196 x 12mm",
+        "packSizeM2": "2.152"
+      }
+    },
+    {
+      "id": "aqua-wood-plus-12mm-merlion",
+      "route": "/products/aqua-wood-plus-12mm-merlion/",
+      "source": "https://basstimber.com.au/index.php/menu/merlion/",
+      "sourceSha256": "39b21b7e73d377c49497e85928e3fc085c65060e4a2074c9329ad908eb53c358",
+      "file": "docs/seo-growth/evidence/2026-10-28-exact-formats/raw/39b21b7e73d377c49497e85928e3fc085c65060e4a2074c9329ad908eb53c358.html",
+      "title": "Merlion",
+      "after": {
+        "formatOptions": [
+          {
+            "format": "Plank",
+            "boardSize": "1830 x 196 x 12mm",
+            "packSizeM2": "2.152",
+            "piecesPerPack": 6
+          }
+        ],
+        "formatSummary": "Plank: 1830 x 196 x 12mm; 2.152 m² per pack (6 pieces). Confirm the chosen format and current stock before order.",
+        "boardSize": "Plank: 1830 x 196 x 12mm",
+        "packSizeM2": "2.152"
+      }
+    },
+    {
+      "id": "aqua-wood-plus-12mm-mount-fuji",
+      "route": "/products/aqua-wood-plus-12mm-mount-fuji/",
+      "source": "https://basstimber.com.au/index.php/menu/mount-fuji/",
+      "sourceSha256": "5db9540132ecbc4d35908cb1b9b0ba2185b3fa80629eb71078aa49cb9e820802",
+      "file": "docs/seo-growth/evidence/2026-10-28-exact-formats/raw/5db9540132ecbc4d35908cb1b9b0ba2185b3fa80629eb71078aa49cb9e820802.html",
+      "title": "Mount Fuji",
+      "after": {
+        "formatOptions": [
+          {
+            "format": "Plank",
+            "boardSize": "1830 x 196 x 12mm",
+            "packSizeM2": "2.152",
+            "piecesPerPack": 6
+          }
+        ],
+        "formatSummary": "Plank: 1830 x 196 x 12mm; 2.152 m² per pack (6 pieces). Confirm the chosen format and current stock before order.",
+        "boardSize": "Plank: 1830 x 196 x 12mm",
+        "packSizeM2": "2.152"
+      }
+    },
+    {
+      "id": "aqua-wood-plus-12mm-natural-oak-p-and-h",
+      "route": "/products/aqua-wood-plus-12mm-natural-oak-p-and-h/",
+      "source": "https://basstimber.com.au/index.php/menu/natural-oak-ph/",
+      "sourceSha256": "38db98c663dd815e01b9e94466a8211ef82ac1f53defd81d6dafc1b38bd21d61",
+      "file": "docs/seo-growth/evidence/2026-10-28-exact-formats/raw/38db98c663dd815e01b9e94466a8211ef82ac1f53defd81d6dafc1b38bd21d61.html",
+      "title": "Natural Oak P&H",
+      "after": {
+        "formatOptions": [
+          {
+            "format": "Plank",
+            "boardSize": "1830 x 196 x 12mm",
+            "packSizeM2": "2.152",
+            "piecesPerPack": 6
+          },
+          {
+            "format": "Herringbone",
+            "boardSize": "600 x 127 x 12mm",
+            "packSizeM2": "1.524",
+            "piecesPerPack": 20
+          }
+        ],
+        "formatSummary": "Plank: 1830 x 196 x 12mm; 2.152 m² per pack (6 pieces) | Herringbone: 600 x 127 x 12mm; 1.524 m² per pack (20 pieces). Confirm the chosen format and current stock before order.",
+        "boardSize": "Plank: 1830 x 196 x 12mm or Herringbone: 600 x 127 x 12mm"
+      }
+    },
+    {
+      "id": "aqua-wood-plus-12mm-opera-house-p-and-h",
+      "route": "/products/aqua-wood-plus-12mm-opera-house-p-and-h/",
+      "source": "https://basstimber.com.au/index.php/menu/opera-house-ph/",
+      "sourceSha256": "1b8f53824f5b46dc1eb22fca8b1414b1ee373a54d00f3c8112bb0d2810049032",
+      "file": "docs/seo-growth/evidence/2026-10-28-exact-formats/raw/1b8f53824f5b46dc1eb22fca8b1414b1ee373a54d00f3c8112bb0d2810049032.html",
+      "title": "Opera House P&H",
+      "after": {
+        "formatOptions": [
+          {
+            "format": "Plank",
+            "boardSize": "1830 x 196 x 12mm",
+            "packSizeM2": "2.152",
+            "piecesPerPack": 6
+          },
+          {
+            "format": "Herringbone",
+            "boardSize": "600 x 127 x 12mm",
+            "packSizeM2": "1.524",
+            "piecesPerPack": 20
+          }
+        ],
+        "formatSummary": "Plank: 1830 x 196 x 12mm; 2.152 m² per pack (6 pieces) | Herringbone: 600 x 127 x 12mm; 1.524 m² per pack (20 pieces). Confirm the chosen format and current stock before order.",
+        "boardSize": "Plank: 1830 x 196 x 12mm or Herringbone: 600 x 127 x 12mm"
+      }
+    },
+    {
+      "id": "aqua-wood-plus-12mm-pisa-p-and-h",
+      "route": "/products/aqua-wood-plus-12mm-pisa-p-and-h/",
+      "source": "https://basstimber.com.au/index.php/menu/pisa-ph/",
+      "sourceSha256": "4f65a5521a09e167361de50067bbacc95feeee83c754582e6333615df24189de",
+      "file": "docs/seo-growth/evidence/2026-10-28-exact-formats/raw/4f65a5521a09e167361de50067bbacc95feeee83c754582e6333615df24189de.html",
+      "title": "Pisa P&H",
+      "after": {
+        "formatOptions": [
+          {
+            "format": "Plank",
+            "boardSize": "1830 x 196 x 12mm",
+            "packSizeM2": "2.152",
+            "piecesPerPack": 6
+          },
+          {
+            "format": "Herringbone",
+            "boardSize": "600 x 127 x 12mm",
+            "packSizeM2": "1.524",
+            "piecesPerPack": 20
+          }
+        ],
+        "formatSummary": "Plank: 1830 x 196 x 12mm; 2.152 m² per pack (6 pieces) | Herringbone: 600 x 127 x 12mm; 1.524 m² per pack (20 pieces). Confirm the chosen format and current stock before order.",
+        "boardSize": "Plank: 1830 x 196 x 12mm or Herringbone: 600 x 127 x 12mm"
+      }
+    },
+    {
+      "id": "aqua-wood-plus-12mm-spotted-gum-p-and-h",
+      "route": "/products/aqua-wood-plus-12mm-spotted-gum-p-and-h/",
+      "source": "https://basstimber.com.au/index.php/menu/spotted-gum-ph/",
+      "sourceSha256": "93119923346bd66a1d361a0f6520a884b23fff98a4448a5096bfae4a96dcbf47",
+      "file": "docs/seo-growth/evidence/2026-10-28-exact-formats/raw/93119923346bd66a1d361a0f6520a884b23fff98a4448a5096bfae4a96dcbf47.html",
+      "title": "Spotted Gum P&H",
+      "after": {
+        "formatOptions": [
+          {
+            "format": "Plank",
+            "boardSize": "1830 x 196 x 12mm",
+            "packSizeM2": "2.152",
+            "piecesPerPack": 6
+          },
+          {
+            "format": "Herringbone",
+            "boardSize": "600 x 127 x 12mm",
+            "packSizeM2": "1.524",
+            "piecesPerPack": 20
+          }
+        ],
+        "formatSummary": "Plank: 1830 x 196 x 12mm; 2.152 m² per pack (6 pieces) | Herringbone: 600 x 127 x 12mm; 1.524 m² per pack (20 pieces). Confirm the chosen format and current stock before order.",
+        "boardSize": "Plank: 1830 x 196 x 12mm or Herringbone: 600 x 127 x 12mm"
+      }
+    },
+    {
+      "id": "aqua-wood-plus-12mm-tas-oak",
+      "route": "/products/aqua-wood-plus-12mm-tas-oak/",
+      "source": "https://basstimber.com.au/index.php/menu/tas-oak/",
+      "sourceSha256": "cae057e1f0f84504c304cfd3e1952eabf1c8e331348b9b33df5ee8dc6ed03493",
+      "file": "docs/seo-growth/evidence/2026-10-28-exact-formats/raw/cae057e1f0f84504c304cfd3e1952eabf1c8e331348b9b33df5ee8dc6ed03493.html",
+      "title": "Tas Oak",
+      "after": {
+        "formatOptions": [
+          {
+            "format": "Plank",
+            "boardSize": "1830 x 196 x 12mm",
+            "packSizeM2": "2.152",
+            "piecesPerPack": 6
+          }
+        ],
+        "formatSummary": "Plank: 1830 x 196 x 12mm; 2.152 m² per pack (6 pieces). Confirm the chosen format and current stock before order.",
+        "boardSize": "Plank: 1830 x 196 x 12mm",
+        "packSizeM2": "2.152"
+      }
+    },
+    {
+      "id": "aqua-wood-plus-12mm-victoria-p-and-h",
+      "route": "/products/aqua-wood-plus-12mm-victoria-p-and-h/",
+      "source": "https://basstimber.com.au/index.php/menu/victoria-ph/",
+      "sourceSha256": "cee71d89c4c091d21adb38920b41f1695b78abf8265fb017cd1cdf6a34dfbfab",
+      "file": "docs/seo-growth/evidence/2026-10-28-exact-formats/raw/cee71d89c4c091d21adb38920b41f1695b78abf8265fb017cd1cdf6a34dfbfab.html",
+      "title": "Victoria P&H",
+      "after": {
+        "formatOptions": [
+          {
+            "format": "Plank",
+            "boardSize": "1830 x 196 x 12mm",
+            "packSizeM2": "2.152",
+            "piecesPerPack": 6
+          },
+          {
+            "format": "Herringbone",
+            "boardSize": "600 x 127 x 12mm",
+            "packSizeM2": "1.524",
+            "piecesPerPack": 20
+          }
+        ],
+        "formatSummary": "Plank: 1830 x 196 x 12mm; 2.152 m² per pack (6 pieces) | Herringbone: 600 x 127 x 12mm; 1.524 m² per pack (20 pieces). Confirm the chosen format and current stock before order.",
+        "boardSize": "Plank: 1830 x 196 x 12mm or Herringbone: 600 x 127 x 12mm"
+      }
+    },
+    {
+      "id": "aqua-wood-plus-12mm-vienna-p-and-h",
+      "route": "/products/aqua-wood-plus-12mm-vienna-p-and-h/",
+      "source": "https://basstimber.com.au/index.php/menu/vienna-ph/",
+      "sourceSha256": "c4985cf8dc7a583d1cdf7e26f636a5a95d4bf608209e7f71abc6eda2e9c83a52",
+      "file": "docs/seo-growth/evidence/2026-10-28-exact-formats/raw/c4985cf8dc7a583d1cdf7e26f636a5a95d4bf608209e7f71abc6eda2e9c83a52.html",
+      "title": "Vienna P&H",
+      "after": {
+        "formatOptions": [
+          {
+            "format": "Plank",
+            "boardSize": "1830 x 196 x 12mm",
+            "packSizeM2": "2.152",
+            "piecesPerPack": 6
+          },
+          {
+            "format": "Herringbone",
+            "boardSize": "600 x 127 x 12mm",
+            "packSizeM2": "1.524",
+            "piecesPerPack": 20
+          }
+        ],
+        "formatSummary": "Plank: 1830 x 196 x 12mm; 2.152 m² per pack (6 pieces) | Herringbone: 600 x 127 x 12mm; 1.524 m² per pack (20 pieces). Confirm the chosen format and current stock before order.",
+        "boardSize": "Plank: 1830 x 196 x 12mm or Herringbone: 600 x 127 x 12mm"
+      }
+    },
+    {
+      "id": "aqua-wood-plus-12mm-wall-street-p-and-h",
+      "route": "/products/aqua-wood-plus-12mm-wall-street-p-and-h/",
+      "source": "https://basstimber.com.au/index.php/menu/wall-street-ph/",
+      "sourceSha256": "7a2e9c2e28e6a456268a7d1ae5480aa3d5cb78e6c70092f113355d1fdaf331a1",
+      "file": "docs/seo-growth/evidence/2026-10-28-exact-formats/raw/7a2e9c2e28e6a456268a7d1ae5480aa3d5cb78e6c70092f113355d1fdaf331a1.html",
+      "title": "Wall Street P&H",
+      "after": {
+        "formatOptions": [
+          {
+            "format": "Plank",
+            "boardSize": "1830 x 196 x 12mm",
+            "packSizeM2": "2.152",
+            "piecesPerPack": 6
+          },
+          {
+            "format": "Herringbone",
+            "boardSize": "600 x 127 x 12mm",
+            "packSizeM2": "1.524",
+            "piecesPerPack": 20
+          }
+        ],
+        "formatSummary": "Plank: 1830 x 196 x 12mm; 2.152 m² per pack (6 pieces) | Herringbone: 600 x 127 x 12mm; 1.524 m² per pack (20 pieces). Confirm the chosen format and current stock before order.",
+        "boardSize": "Plank: 1830 x 196 x 12mm or Herringbone: 600 x 127 x 12mm"
+      }
+    },
+    {
+      "id": "aqua-wood-plus-12mm-walnut-p-and-h",
+      "route": "/products/aqua-wood-plus-12mm-walnut-p-and-h/",
+      "source": "https://basstimber.com.au/index.php/menu/walnut-ph-2/",
+      "sourceSha256": "e8b4b6afc47c0d01b99b781439422e646828160e0a637bd3d450246ec31d9e2f",
+      "file": "docs/seo-growth/evidence/2026-10-28-exact-formats/raw/e8b4b6afc47c0d01b99b781439422e646828160e0a637bd3d450246ec31d9e2f.html",
+      "title": "Walnut P&H",
+      "after": {
+        "formatOptions": [
+          {
+            "format": "Plank",
+            "boardSize": "1830 x 196 x 12mm",
+            "packSizeM2": "2.152",
+            "piecesPerPack": 6
+          },
+          {
+            "format": "Herringbone",
+            "boardSize": "600 x 127 x 12mm",
+            "packSizeM2": "1.524",
+            "piecesPerPack": 20
+          }
+        ],
+        "formatSummary": "Plank: 1830 x 196 x 12mm; 2.152 m² per pack (6 pieces) | Herringbone: 600 x 127 x 12mm; 1.524 m² per pack (20 pieces). Confirm the chosen format and current stock before order.",
+        "boardSize": "Plank: 1830 x 196 x 12mm or Herringbone: 600 x 127 x 12mm"
+      }
+    },
+    {
+      "id": "avala-blackbutt",
+      "route": "/products/avala-blackbutt/",
+      "source": "https://topdeckflooring.com.au/products/avala-blackbutt",
+      "sourceSha256": "28c2beb8bd385bb325ddbb33a75e8ca32443e56d3bfdf02e65fb181b2e28d0fc",
+      "file": "docs/seo-growth/evidence/2026-10-28-exact-formats/raw/28c2beb8bd385bb325ddbb33a75e8ca32443e56d3bfdf02e65fb181b2e28d0fc.html",
+      "title": "Blackbutt (1608)",
+      "after": {
+        "formatOptions": [
+          {
+            "format": "183mm plank",
+            "boardSize": "1524 x 183 x 6.5mm",
+            "packSizeM2": "2.2311",
+            "piecesPerPack": 8
+          },
+          {
+            "format": "230mm plank",
+            "boardSize": "1524 x 230 x 6.5mm",
+            "packSizeM2": "2.10312",
+            "piecesPerPack": 6
+          }
+        ],
+        "formatSummary": "183mm plank: 1524 x 183 x 6.5mm; 2.2311 m² per pack (8 pieces) | 230mm plank: 1524 x 230 x 6.5mm; 2.10312 m² per pack (6 pieces). Confirm the chosen format and current stock before order.",
+        "productCode": "1608"
+      }
+    },
+    {
+      "id": "avala-coastal-beige",
+      "route": "/products/avala-coastal-beige/",
+      "source": "https://topdeckflooring.com.au/products/avala-coastal-beige",
+      "sourceSha256": "00362b6ae9e86f4143c540486f44cd5b6edf9ce7649d33e5ad359005a7ae10a1",
+      "file": "docs/seo-growth/evidence/2026-10-28-exact-formats/raw/00362b6ae9e86f4143c540486f44cd5b6edf9ce7649d33e5ad359005a7ae10a1.html",
+      "title": "Coastal Beige (1604)",
+      "after": {
+        "formatOptions": [
+          {
+            "format": "183mm plank",
+            "boardSize": "1524 x 183 x 6.5mm",
+            "packSizeM2": "2.2311",
+            "piecesPerPack": 8
+          },
+          {
+            "format": "230mm plank",
+            "boardSize": "1524 x 230 x 6.5mm",
+            "packSizeM2": "2.10312",
+            "piecesPerPack": 6
+          }
+        ],
+        "formatSummary": "183mm plank: 1524 x 183 x 6.5mm; 2.2311 m² per pack (8 pieces) | 230mm plank: 1524 x 230 x 6.5mm; 2.10312 m² per pack (6 pieces). Confirm the chosen format and current stock before order.",
+        "productCode": "1604"
+      }
+    },
+    {
+      "id": "avala-jarrah",
+      "route": "/products/avala-jarrah/",
+      "source": "https://topdeckflooring.com.au/products/avala-jarrah",
+      "sourceSha256": "f36ce11345dd43b1084d8dbe19220fbc7139ce453b466bb158aa1391d7d54c63",
+      "file": "docs/seo-growth/evidence/2026-10-28-exact-formats/raw/f36ce11345dd43b1084d8dbe19220fbc7139ce453b466bb158aa1391d7d54c63.html",
+      "title": "Jarrah (1609)",
+      "after": {
+        "formatOptions": [
+          {
+            "format": "183mm plank",
+            "boardSize": "1524 x 183 x 6.5mm",
+            "packSizeM2": "2.2311",
+            "piecesPerPack": 8
+          },
+          {
+            "format": "230mm plank",
+            "boardSize": "1524 x 230 x 6.5mm",
+            "packSizeM2": "2.10312",
+            "piecesPerPack": 6
+          }
+        ],
+        "formatSummary": "183mm plank: 1524 x 183 x 6.5mm; 2.2311 m² per pack (8 pieces) | 230mm plank: 1524 x 230 x 6.5mm; 2.10312 m² per pack (6 pieces). Confirm the chosen format and current stock before order.",
+        "productCode": "1609"
+      }
+    },
+    {
+      "id": "avala-moschino",
+      "route": "/products/avala-moschino/",
+      "source": "https://topdeckflooring.com.au/products/avala-moschino",
+      "sourceSha256": "55c6140db4539f770af910c592f124923dd022f0e6c60dfa7c05b74e8e531cba",
+      "file": "docs/seo-growth/evidence/2026-10-28-exact-formats/raw/55c6140db4539f770af910c592f124923dd022f0e6c60dfa7c05b74e8e531cba.html",
+      "title": "Moschino (1606)",
+      "after": {
+        "formatOptions": [
+          {
+            "format": "183mm plank",
+            "boardSize": "1524 x 183 x 6.5mm",
+            "packSizeM2": "2.2311",
+            "piecesPerPack": 8
+          },
+          {
+            "format": "230mm plank",
+            "boardSize": "1524 x 230 x 6.5mm",
+            "packSizeM2": "2.10312",
+            "piecesPerPack": 6
+          }
+        ],
+        "formatSummary": "183mm plank: 1524 x 183 x 6.5mm; 2.2311 m² per pack (8 pieces) | 230mm plank: 1524 x 230 x 6.5mm; 2.10312 m² per pack (6 pieces). Confirm the chosen format and current stock before order.",
+        "productCode": "1606"
+      }
+    },
+    {
+      "id": "avala-orchid-ash",
+      "route": "/products/avala-orchid-ash/",
+      "source": "https://topdeckflooring.com.au/products/avala-orchid-ash",
+      "sourceSha256": "0991b6cd4b9a8965c9fd7da357bdb036de0bc881389161f5e3a653e92453f204",
+      "file": "docs/seo-growth/evidence/2026-10-28-exact-formats/raw/0991b6cd4b9a8965c9fd7da357bdb036de0bc881389161f5e3a653e92453f204.html",
+      "title": "Orchid Ash (1602)",
+      "after": {
+        "formatOptions": [
+          {
+            "format": "183mm plank",
+            "boardSize": "1524 x 183 x 6.5mm",
+            "packSizeM2": "2.2311",
+            "piecesPerPack": 8
+          },
+          {
+            "format": "230mm plank",
+            "boardSize": "1524 x 230 x 6.5mm",
+            "packSizeM2": "2.10312",
+            "piecesPerPack": 6
+          }
+        ],
+        "formatSummary": "183mm plank: 1524 x 183 x 6.5mm; 2.2311 m² per pack (8 pieces) | 230mm plank: 1524 x 230 x 6.5mm; 2.10312 m² per pack (6 pieces). Confirm the chosen format and current stock before order.",
+        "productCode": "1602"
+      }
+    },
+    {
+      "id": "avala-pebble-grey",
+      "route": "/products/avala-pebble-grey/",
+      "source": "https://topdeckflooring.com.au/products/avala-pebble-grey",
+      "sourceSha256": "0517c679abef7b76227f22ea8f3e473e4bf8d2370cc57d8aaf1f1bb1e9fd710e",
+      "file": "docs/seo-growth/evidence/2026-10-28-exact-formats/raw/0517c679abef7b76227f22ea8f3e473e4bf8d2370cc57d8aaf1f1bb1e9fd710e.html",
+      "title": "Pebble Grey (1601)",
+      "after": {
+        "formatOptions": [
+          {
+            "format": "183mm plank",
+            "boardSize": "1524 x 183 x 6.5mm",
+            "packSizeM2": "2.2311",
+            "piecesPerPack": 8
+          },
+          {
+            "format": "230mm plank",
+            "boardSize": "1524 x 230 x 6.5mm",
+            "packSizeM2": "2.10312",
+            "piecesPerPack": 6
+          }
+        ],
+        "formatSummary": "183mm plank: 1524 x 183 x 6.5mm; 2.2311 m² per pack (8 pieces) | 230mm plank: 1524 x 230 x 6.5mm; 2.10312 m² per pack (6 pieces). Confirm the chosen format and current stock before order.",
+        "productCode": "1601"
+      }
+    },
+    {
+      "id": "avala-prague-oak",
+      "route": "/products/avala-prague-oak/",
+      "source": "https://topdeckflooring.com.au/products/avala-prague-oak",
+      "sourceSha256": "7e63f88dc1cf38acf50353adcf5058446e795969a4ddfc9ef9cff77a56446937",
+      "file": "docs/seo-growth/evidence/2026-10-28-exact-formats/raw/7e63f88dc1cf38acf50353adcf5058446e795969a4ddfc9ef9cff77a56446937.html",
+      "title": "Prague Oak (1605)",
+      "after": {
+        "formatOptions": [
+          {
+            "format": "183mm plank",
+            "boardSize": "1524 x 183 x 6.5mm",
+            "packSizeM2": "2.2311",
+            "piecesPerPack": 8
+          },
+          {
+            "format": "230mm plank",
+            "boardSize": "1524 x 230 x 6.5mm",
+            "packSizeM2": "2.10312",
+            "piecesPerPack": 6
+          }
+        ],
+        "formatSummary": "183mm plank: 1524 x 183 x 6.5mm; 2.2311 m² per pack (8 pieces) | 230mm plank: 1524 x 230 x 6.5mm; 2.10312 m² per pack (6 pieces). Confirm the chosen format and current stock before order.",
+        "productCode": "1605"
+      }
+    },
+    {
+      "id": "avala-spotted-gum",
+      "route": "/products/avala-spotted-gum/",
+      "source": "https://topdeckflooring.com.au/products/avala-spotted-gum",
+      "sourceSha256": "855a50a0d1a320008640639c695eee4ec7341b37a5fd7d2091268c90de58ddba",
+      "file": "docs/seo-growth/evidence/2026-10-28-exact-formats/raw/855a50a0d1a320008640639c695eee4ec7341b37a5fd7d2091268c90de58ddba.html",
+      "title": "Spotted Gum (1607)",
+      "after": {
+        "formatOptions": [
+          {
+            "format": "183mm plank",
+            "boardSize": "1524 x 183 x 6.5mm",
+            "packSizeM2": "2.2311",
+            "piecesPerPack": 8
+          },
+          {
+            "format": "230mm plank",
+            "boardSize": "1524 x 230 x 6.5mm",
+            "packSizeM2": "2.10312",
+            "piecesPerPack": 6
+          }
+        ],
+        "formatSummary": "183mm plank: 1524 x 183 x 6.5mm; 2.2311 m² per pack (8 pieces) | 230mm plank: 1524 x 230 x 6.5mm; 2.10312 m² per pack (6 pieces). Confirm the chosen format and current stock before order.",
+        "productCode": "1607"
+      }
+    },
+    {
+      "id": "avala-stamford-oak",
+      "route": "/products/avala-stamford-oak/",
+      "source": "https://topdeckflooring.com.au/products/avala-stamford-oak",
+      "sourceSha256": "984bc11d1133ead23235b701a10f85faf2fd212d98be057f3e428c69077f8a61",
+      "file": "docs/seo-growth/evidence/2026-10-28-exact-formats/raw/984bc11d1133ead23235b701a10f85faf2fd212d98be057f3e428c69077f8a61.html",
+      "title": "Stamford Oak (1603)",
+      "after": {
+        "formatOptions": [
+          {
+            "format": "183mm plank",
+            "boardSize": "1524 x 183 x 6.5mm",
+            "packSizeM2": "2.2311",
+            "piecesPerPack": 8
+          },
+          {
+            "format": "230mm plank",
+            "boardSize": "1524 x 230 x 6.5mm",
+            "packSizeM2": "2.10312",
+            "piecesPerPack": 6
+          }
+        ],
+        "formatSummary": "183mm plank: 1524 x 183 x 6.5mm; 2.2311 m² per pack (8 pieces) | 230mm plank: 1524 x 230 x 6.5mm; 2.10312 m² per pack (6 pieces). Confirm the chosen format and current stock before order.",
+        "productCode": "1603"
+      }
+    },
+    {
+      "id": "avala-tasmanian-oak",
+      "route": "/products/avala-tasmanian-oak/",
+      "source": "https://topdeckflooring.com.au/products/avala-tas-oak",
+      "sourceSha256": "72bbdacfbcf9988640bdab081af4764d67992d1ba7bfbb01f3ca3b28379f3cf7",
+      "file": "docs/seo-growth/evidence/2026-10-28-exact-formats/raw/72bbdacfbcf9988640bdab081af4764d67992d1ba7bfbb01f3ca3b28379f3cf7.html",
+      "title": "Tasmanian Oak (1610)",
+      "after": {
+        "formatOptions": [
+          {
+            "format": "183mm plank",
+            "boardSize": "1524 x 183 x 6.5mm",
+            "packSizeM2": "2.2311",
+            "piecesPerPack": 8
+          },
+          {
+            "format": "230mm plank",
+            "boardSize": "1524 x 230 x 6.5mm",
+            "packSizeM2": "2.10312",
+            "piecesPerPack": 6
+          }
+        ],
+        "formatSummary": "183mm plank: 1524 x 183 x 6.5mm; 2.2311 m² per pack (8 pieces) | 230mm plank: 1524 x 230 x 6.5mm; 2.10312 m² per pack (6 pieces). Confirm the chosen format and current stock before order.",
+        "productCode": "1610"
+      }
+    }
+  ]
+}

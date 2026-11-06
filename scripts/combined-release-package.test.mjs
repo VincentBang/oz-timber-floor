@@ -1,0 +1,12 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import test from 'node:test';
+import {execFileSync} from 'node:child_process';
+import {assertActiveProfile,assertProductionUI,prepareCombined} from './combined-release-package.mjs';
+const fromGit=f=>JSON.parse(execFileSync('git',['show','8926666286fdb26b859ee8ae9086716bdc243813:assistant/releases/2026-11-06/'+f],{maxBuffer:16*1024*1024}));
+const profile=fromGit('production-profile.json'),corpus=fromGit('corpus.json');
+test('the exact deployed profile/corpus retain all existing approvals and USD30/USD1 caps',()=>assert.doesNotThrow(()=>assertActiveProfile(profile,corpus)));
+test('neither a daily/monthly increase, new key/model/store nor inactive approval can reuse this release',()=>{for(const edit of[p=>p.allowance.dayBudgetUsd=2,p=>p.allowance.monthBudgetUsd=31,p=>p.apiKeyVariable='other',p=>p.candidateModelId='other',p=>p.budgetStoreName='new-state',p=>p.activationApproved=false]){const p=structuredClone(profile);edit(p);assert.throws(()=>assertActiveProfile(p,corpus));}});
+test('a new knowledge fact, removed route or changed retirement cannot inherit live approval',()=>{for(const edit of[c=>c.documents[0].facts[0].value='unsupported',c=>c.documents.pop(),c=>c.retirements.push({name:'unsupported'})]){const c=structuredClone(corpus);edit(c);assert.throws(()=>assertActiveProfile(profile,c));}});
+test('source-off, mock-only, missing approval and arbitrary code cannot become the production UI',()=>{for(const code of['window.OZ_FLOORING_ASSISTANT={enabled:false,mode:"off"};','window.OZ_FLOORING_ASSISTANT={enabled:true,mode:"mock",productionApproved:true};','window.OZ_FLOORING_ASSISTANT={enabled:true,mode:"production"};','process.exit(0);'])assert.throws(()=>assertProductionUI(code));assert.doesNotThrow(()=>assertProductionUI('window.OZ_FLOORING_ASSISTANT=Object.freeze({enabled:true,mode:"production",productionApproved:true});'));});
+test('assembly refuses input-tree output or reuse before touching any existing data',()=>{const root=process.cwd();for(const output of[root,root+'/unsafe-output'])assert.throws(()=>prepareCombined({buildRoot:root,liveRoot:root,sourceRoot:root,output}));assert.equal(fs.existsSync(root+'/unsafe-output'),false);});

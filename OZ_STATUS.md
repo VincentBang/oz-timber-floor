@@ -1,16 +1,445 @@
 # Oz Timber Floor Status
 
-## 6 November2026 — deployed chatbot recorded in Git, no redeployment
+## 7 November 2026 — combined production release authorised
 
-Recorded the exact production chatbot overlay from deploy6aed0124f8a810d9098d6b1b
-under assistant/releases/2026-11-06. Corpus e15e64b2 and active profile7755e9f3
-retain US$30/month and US$1/day. Existing runtime/client source already matches
-the deployed version. Versioned knowledge/profile/contact overlays preserve the
-normal source-OFF workflow and do not publish unrelated local website repairs.
-The archive verifier is read-only; private provider evidence/vendor bundles are
-not committed. Floorplan, upload backend, credentials and live controls unchanged.
-This Git-only sync uses skip-ci/skip-Netlify commit markers, not another deploy.
-Both dirty working trees and their real indexes remain untouched.
+Owner approved final checks, scoped GitHub sync and one exact prebuilt production deployment. Package e6fccfc1 contains 6,598 public files,775 sitemap owners and the unchanged live chatbot/enquiry function archives. Preserve floorplan, uploads, USD30/month,USD1/day and existing spending ledger. Source defaults remain OFF; ordinary Git builds are not this package. Skip-ci/skip-Netlify markers prevent automatic rebuilding. No paid calls, real submissions, DNS changes or unrelated dirty-tree staging. Final deploy receipt and verification remain in the dated external release evidence; this entry records intent, not a premature success claim.
+
+## 7 November 2026 — native stack identifies Codex preload, not an Oz script
+
+After the owner restarted Codex,the authorised cdp capability became available.
+Captured two native Runtime.exceptionThrown stacks on the existing protected
+combined preview6aed42e930f0721e27d4dae9. Both point to anonymous injected source
+with source-map browser-page-preload.js.map,line115,column63583,source SHA256
+81aa5f9c4fa787ccba4ffed034fb793cfa4391e76f96b3d3d8a18b4430301fb7.
+Both are Electron Isolated Context,isDefault=false,type=isolated;the stack also
+contains node:electron/js2c/sandbox_bundle. The failing expression is
+r.observe(t.documentElement,tS.LJ). A non-Node document root is passed during
+navigation;null is inferred,not directly inspected at a paused breakpoint.
+Current captured caller attribution is resolved. Earlier unstacked events are
+not retroactively rewritten or claimed identical. This is not a clean-console
+claim or a declaration that the installed Codex bug has been fixed.
+
+No website runtime patch is indicated by this captured caller. Added a private
+QA attribution helper,compact capture fixture and10 strict negative regressions;
+same-message website errors,changed/missing hashes,origins or world metadata
+remain unattributed and require investigation. The helper never suppresses errors,
+returns cleanConsole=false,and is not loaded by public pages. Existing tests,
+console assertions,approval hashes and release gates are unchanged. An unsent
+upstream bug report is prepared;no installed app or browser binary was modified.
+
+Fresh isolated results:415 website tests (405 existing +10 new),175 assistant;
+120 gold,24 holdout,8 quality,30 usefulness/5 safety;all package/source/catalogue/
+migration/analytics/notification groups pass. Fresh browser checks:15 website,
+4 PNG/PDF/40m² floorplan handoffs,10 sort states pass. Same historical exclusions
+remain explicit,not passes. Initial import failures are retained:a dangling
+temporary node_modules link was repaired only in the isolated copy by restoring
+the existing lockfile with npm ci --ignore-scripts;both package hashes unchanged.
+
+Existing sealed6,598-file combined packet and both function archives reverified;
+USD30/month andUSD1/day remain unchanged. Required unchecked consent,three file
+fields,disabled preview submit and production canonical verified in the hosted
+contact DOM. No chat question,paid call or real enquiry. Temporary CDP domains
+disabled and pause/async settings restored;no live-edit/listener left in the page.
+Owner's global full-CDP setting was not changed by the agent.
+
+Main checkout,inherited work and original evidence remain preserved. Only this
+status plus the three new private QA files change in the release worktree.
+No staging,commit,push,deployment,provider write,budget reset,live GA4,DNS/domain
+change or Operon access. This is completed source attribution and passing local
+release checks,not production activation authority. The actual preload fix
+belongs in Codex/browser tooling,not an Oz site workaround.
+
+Evidence/report:
+/Users/daibang/Documents/Codex/2026-11-04/what-do-you-need-from-me/work/console-cdp-20261107/
+
+## 6 November 2026 — hosted recurrence captured; source-stack access blocked
+
+Reused existing protected draft6aed42e930f0721e27d4dae9 without deployment.
+The in-app browser reproduced the same MutationObserver.observe TypeError at
+2026-11-06T03:55:53.739Z immediately after the homepage Request Quote navigation
+and accessibility read. Its documented log API returns message/time only for
+this event, with no source URL or stack, and has no debugger capability. Native
+Codex-app inspection is denied by the computer-use boundary; no bypass attempted.
+
+Opened the same existing protected preview in native Chrome through the existing
+team login. Enabled caught/uncaught exception pausing and persistent console logs;
+replayed contact/reload, Guide opening and contact link, then floorplan navigation.
+No matching exception or debugger pause occurred. Two actual console errors are
+separate owner-toolbar iframe CSP blocks at about:srcdoc:1 and:136; these do not
+attribute the TypeError or justify weakening the floorplan CSP. Original native
+debugger/log preferences restored and temporary Chrome tab closed. IAB retained.
+
+No source stack was captured, so no site-code fix is claimed. The difference
+between native and in-app runs narrows the environment but does not prove a
+tooling origin. The exact missing input is a debugger-enabled exception capture
+or diagnostic export from the affected in-app realm including URL/line/stack.
+Do not publish speculative null guards or suppress native errors to clear this.
+
+Fresh isolated final checks pass:405 website,175 assistant;120 gold,24 holdout,
+8 quality,30 usefulness/5 safety;production/package/source/catalogue/migration/
+analytics/notification gates and29 browser cases (15 website,4 floorplan,10 sort).
+Same historical exclusions retained,not counted as passes. QA uses a separate
+copied Git index. No runtime,test expectation,approval hash,SEO,form,knowledge,
+floorplan,upload or provider change. Exact combined packet remains sealed with
+USD30/month and USD1/day intact. No push/deploy/paid call/real enquiry.
+Verdict: HOLD — affected-realm source stack unavailable through current tools.
+Evidence:
+/Users/daibang/Documents/Codex/2026-11-04/what-do-you-need-from-me/work/console-hosted-stack-20261106/
+
+## 6 November 2026 — bounded local console investigation and final checks
+
+Investigated the recurring hosted MutationObserver.observe TypeError using the
+exact combined preview files, without publishing or changing runtime code.
+Eighteen new cases cover Chromium/Firefox/WebKit at 390/1440px, including real
+lazy-module and stylesheet requests held across document replacement, close/
+reopen, Escape and back navigation. All 360 application observe calls target
+Nodes; no uncaught exception or unhandled rejection was reproduced. Eighteen
+intentional invalid-target controls prove the diagnostics record native errors.
+Captured owner-HUD iframe CSP messages remain in raw logs, not hidden or treated
+as this TypeError. No evidence supports attributing the hosted event to the HUD.
+
+Fresh isolated-copy checks: 405 website and175 assistant tests;120 gold,24 holdout,
+8 quality and30 usefulness/5 safety cases pass. Source freshness, production
+context, package, catalogue, migration, analytics and notification contracts pass.
+Fresh browser checks:15 website,4 PNG/PDF/40m² enquiry handoffs and10 catalogue
+sort states pass. Same ten historical/browser-only unit exclusions remain
+explicit, not counted as passes. No assertion or approval hash was changed.
+Initial diagnostic selectors and local server path setup failed; raw results are
+preserved. Corrected harnesses use current DOM IDs and normalized local paths.
+
+Verdict: HOLD for an unconditional clean-console release claim. The exact hosted
+event remains unattributed; a stack from the actual failing hosted realm is
+needed to identify its caller. Do not patch guessed targets or suppress native
+errors. This is not a declaration of harmlessness or a fresh activation approval.
+The original sealed combined package and both function archives remain unchanged;
+USD30/month and USD1/day configuration and all approval records are preserved.
+No provider access/write, commit/staging/push, deploy, paid call, real enquiry or
+Operon access. Main checkout and inherited release work remain intact.
+
+Evidence/report:
+/Users/daibang/Documents/Codex/2026-11-04/what-do-you-need-from-me/work/console-local-20261106/
+
+## 6 November 2026 — one protected combined preview, production unchanged
+
+Owner authorised exactly one protected preview of the sealed combined package,
+with no push, paid call or real submission. Created draft 6aed42e930f0721e27d4dae9:
+https://combined-e6fccfc1-20261106--oztimberfloor.netlify.app/
+The existing Oz project and non-production team-login protection were reused.
+Only three missing blobs were uploaded (two assets and one preview function).
+No build, provider-setting/environment update, second deploy or production publish.
+
+The base production package e6fccfc1 remains sealed and unchanged. The preview
+has exactly six necessary public safety differences: global noindex headers,
+analytics off, mock UI, both guarded contact aliases and the guard asset. All
+6,599 remote file digests and the preview function digest match. Fourteen
+anonymous route checks return401/noindex. Existing detected upload fields remain
+unchanged; no form records were created or inspected.
+
+The team-authenticated exact-origin preview adapter uses the reviewed e15e64b2
+corpus in MOCK mode only, refuses production contexts and cannot use a model key
+or real budget store. Thirteen standalone local guard/bundle checks pass. Hosted
+catalogue filter/sort/reset, selected format handoff, attachment select/remove,
+contextual Guide answer/follow-up and reviewed25m² handoff pass. Hosted invalid
+plan recovery, two-page PDF, PNG, two-point scale dialog, room inclusion and
+explicit40m² enquiry review pass. Both form aliases stay submit-disabled with
+consent unchecked; 320/390/1440px checked states have no horizontal overflow.
+Source query context is correct; browser tooling masks the hidden source value,
+so its hosted value is not claimed independently read. No delivery/GPT claim.
+
+One transient MutationObserver.observe TypeError was recorded during navigation,
+without a source stack. Its signature matches the earlier documented console
+risk; that does not prove the same cause or harmlessness. Core flows passed,
+but this is VERIFIED WITH A RECORDED CONSOLE RISK, not a clean console signoff.
+No speculative patch or extra deployment was made. Raw logs are preserved.
+
+Final provider comparison confirms production remains6aed0124f8a810d9098d6b1b,
+with identical functions, active profile/control, settings and environment.
+An order-sensitive raw environment hash initially differed; three read-only
+reads show varying row order but one normalized digest exactly matching the
+independent sealed pre-deploy baseline. No old hash was replaced. Observed
+production money counters are unchanged; USD30/month and USD1/day remain intact.
+
+Evidence and report:
+/Users/daibang/Documents/Codex/2026-11-04/what-do-you-need-from-me/work/combined-protected-preview-20261106/
+Do not promote this mock/noindex/submission-disabled draft as production. A future
+authorised release must use the original sealed production package and both
+unchanged real function archives. No staging, commit, push, paid call, real
+submission, DNS change or production-budget/control write occurred.
+
+## 6 November 2026 — combined website release candidate prepared locally
+
+Prepared a separate 6,598-file public package combining the pending audit repairs
+with the exact existing live chatbot and Node22 enquiry-notification archives
+from deploy 6aed0124f8a810d9098d6b1b. No backend rebundle, new knowledge approval,
+key/model/store change or spending-state reset. Active profile 7755e9f3 and corpus
+e15e64b2 retain USD30/month and USD1/day. Source defaults remain OFF; ordinary
+production/preview floorplan-exclusion guards were not relaxed. The explicit
+combined overlay preserves the already released floorplan and upload integration.
+
+Refreshed the 775-record search index. Visual review demonstrated a collapsed
+expanded-sort control; repaired only its native-details layout and added a
+maintained browser regression. The old stylesheet reproduces failures, while
+both catalogue routes now pass at 320/360/390/768/1440px. No product fact, stock,
+retirement, URL, routing, indexation or supplier-evidence change was made.
+
+Final local regression: 405 scoped website and 175 assistant tests pass, plus
+120 gold,24 holdout,8 quality,30 usefulness/5 safety cases; source freshness,
+package, catalogue, migration, analytics and email contracts pass. The same ten
+historical/browser-only exclusions remain explicit and are not counted as passes.
+Exact-package checks preserve 775 canonical/sitemap owners, all enquiry field
+contracts, H1/canonical/robots/schema and routing bytes; only the reviewed twelve
+titles/eight descriptions change. All 12,035 internal destinations resolve.
+
+Fresh browser evidence: 15 website interactions,10 sort states,4 PNG/PDF/40m²
+floorplan handoffs,9 guide accessibility/error/handoff cases,10 exact-production-
+client/mock-upload/event cases and8 navigation/search/recovery states pass.
+The automatic 390px sweep rendered 2,197 documents without overflow, exceptions
+or failed resources. Its sole raw metadata alert is the byte-preserved Google
+verification file, which intentionally is not an SEO page. R2 changes only the
+scoped sort stylesheet after the sweep; expanded controls were retested directly.
+This is not every-section manual, physical-device or spoken-screen-reader signoff.
+
+Package preparation reuses the source-reconciled earlier production-shaped build
+with fresh independent package checks, rather than duplicating a full build on
+the nearly full disk. Native APFS clones preserve every original evidence packet.
+The main checkout is untouched; inherited release-worktree changes and approval
+records are retained. No commit/staging/push, hosted preview, deployment, paid
+call, provider change, real form submission or analytics transmission occurred.
+
+Evidence/report and exact local package:
+/Users/daibang/Documents/Codex/2026-11-04/what-do-you-need-from-me/work/combined-release-local-20261106/
+Verdict: LOCAL COMBINED RELEASE CANDIDATE READY FOR REVIEW, not publication approval.
+Hosted integration/delivery/GA4 ingestion are not newly verified. Existing supplier
+gaps and previously documented floorplan/device/accessibility risks remain separate;
+unknown facts stay unconfirmed rather than being invented to clear a gate.
+
+## 6 November 2026 — rebuilt chatbot live, one scoped production deployment
+
+Owner explicitly approved final checks and one live rebuilt-chatbot release,
+without push, paid calls or real submissions. Published and verified deploy
+6aed0124f8a810d9098d6b1b at https://oztimberfloor.com.au/. Active corpus remains
+e15e64b25fd01798e0430c8af886b7bdd37961d3607a061a0dba7941bd318358.
+New owner-authorised active profile hash:
+7755e9f34ddf7ae17c7912a3eabddd5971a9fbb650a1e32ef47dfcc0a5d21ba6.
+The production fingerprint and strong-CAS control match; state-v1 was not reset.
+All allowances remain unchanged, including US$30/month and US$1/day; existing
+model, key variable, credentials, store/region and adapter preserved. Only the
+production fingerprint environment entry was patched; unrelated environment
+and site/processing settings remain unchanged. No Git write or provider upgrade.
+
+Scoped release uses the verified LIVE website as its base, not the broader local
+audit package: 6,596 public files, 6,592 byte-identical. Changed only the two
+preview-verified chatbot client assets and one contact-copy paragraph in both
+aliases to match an already-reviewed corpus fact. All floorplan/vendor files,
+upload handling, analytics configuration, metadata/schema/links/form contracts,
+redirects/indexation/sitemap and the Node22 email archive are preserved. Unrelated
+website audit repairs remain local and are not silently published by this release.
+
+Fresh final checks pass:400 scoped website/binding tests,175 assistant tests,
+offline evaluations and source/catalogue/migration/analytics/notification checks;
+6 unpacked-function mock cases,5 active-profile/atomic-budget groups,9 actual-
+release browser scenarios and4 PNG/PDF/40m² floorplan journeys. Same10 explicitly
+listed historical/browser-only exclusions are not counted as passes. No old
+approval hash or original test was replaced. New active approval is separately
+bound to the existing sealed production preparation and actual protected preview.
+
+Live verification matches every public file and both function digests, returns
+the exact new corpus on a non-generating upload-help answer, confirms all three
+Netlify-detected upload fields and seven public routes including the775-URL
+sitemap. Live widget stock handoff transfers reviewed area25 and synthetic text,
+keeps consent required/unchecked and normal submit available; nothing submitted.
+Live floorplan UI opens normally; native upload control ready. No console errors
+in checked live tabs. Current paid money counters stay unchanged during these
+checks. No production GPT generation test was run, as explicitly prohibited.
+
+Release packet: /Users/daibang/Downloads/OZ_CHATBOT_PRODUCTION_RELEASE_2026-11-06_R2.
+R1 diagnostics/partial output remain preserved. Its first citation check guessed
+physical index files and omitted FAQ summaries; corrected evidence follows forced
+rewrites and complete FAQ text. A mistaken noindex assumption for the navigation-
+only ETF range was replaced by exact existing-byte preservation, not an SEO edit.
+Derived project-photo notice and conservative restricted-range identity require
+their existing narrow evidence contracts; no broader fact exception was added.
+
+Rollback is the retained prior deploy6aec4e13b417e9b397d1c865 plus its matching
+profile/control fingerprint, never the budget state snapshot. No rollback needed.
+Historical JPEG/device/screen-reader and supplier/business evidence limits remain
+separate and unchanged. Enquiry delivery was not re-submitted/retested: original
+backend bytes and current fields/contracts are verified instead. Production
+chatbot release complete; no push, paid calls or real enquiry submissions.
+
+## 6 November 2026 — exact rebuilt chatbot protected preview verified
+
+Owner authorised one protected preview and up to three GPT responses / US$0.05.
+Created exactly one draft, 6aecf6c85ef955cc7701f854, on the existing verified Oz
+Netlify project. Preview: https://rebuilt-e15e64b2-20261106--oztimberfloor.netlify.app/.
+The sealed e15e64b2 corpus and core logic are unchanged; an authenticated preview
+adapter supplies the exact-origin/site/context guards and isolated atomic quota.
+Production pending profile remains inactive; no old approval/hash was replaced.
+
+Hosted key/model authentication and real CAS checks pass with zero generations.
+Three real GPT-6 Luna responses pass: agency/tenant access, Swish specifications,
+insurance scope. All citations/fact IDs belong to the exact rebuilt corpus.
+Two free deterministic catalogue/upload guidance checks pass. Durable accounting:
+3 paid reservations, US$0.000284801, below the US$0.05 ceiling; not invoice
+reconciliation. The shared cap refuses additional model generation, retains the
+question, offers human help and does not retry or increase spending. A free Avala
+stock question then supports the reviewed contact handoff: selected product/range/
+category, area25, synthetic message and source URL preserved; required consent
+unchecked, all three upload fields retained, existing multipart/action retained,
+preview submit button disabled. Hidden field values are automation-redacted and
+not claimed independently inspected. No browser errors/warnings in checked tabs.
+
+Eight anonymous checks across branch/immutable URLs return401 with noindex.
+Preview analytics off; both contact variants guarded. Runtime/cap local tests and
+cold production rejection pass. Original sealed inactive packet verifies again.
+After checks, production deployment remains6aec4e13b417e9b397d1c865; production
+environment, operational settings and control fingerprint unchanged. App limits
+remain US$30 monthly / US$1 daily; no production ledger write/reset. Node22 email
+archive is byte-identical. No push, production publication or real submission.
+
+Packet/report: /Users/daibang/Downloads/OZ_CHATBOT_REBUILT_PREVIEW_2026-11-06.
+Preview test allowance is exhausted by design; it is not ongoing public AI use.
+Remaining: separate final production release/activation approval, then seal the
+active profile/archive and coordinate matching controls. This harness is not fresh
+execution of an activated production entry. Physical-device, spoken-screen-reader,
+supplier/business evidence and hosted attachment delivery remain separate holds.
+Non-blocking: insurance answer repeats its coverage caution in two grounded
+segments; editorial concision can be improved in a separate local change.
+
+## 6 November 2026 — exact rebuilt knowledge production binding prepared INACTIVE
+
+Owner authorised preparation and final local checks only. Prepared a new dated
+binding for corpus e15e64b25fd01798e0430c8af886b7bdd37961d3607a061a0dba7941bd318358,
+775 documents / 6,814 facts / 881 strict raw source inputs. Pending profile hash:
+60305357307fc3349d1801425feb34fd18aa43a0720023db14557e1afca7d8db.
+Activation, knowledge and launch flags remain false. All historical approvals,
+source defaults, runtime, model/key variable, budget store and existing allowance
+values are preserved: US$30 monthly and US$1 daily, state-v1/control-v1 unchanged.
+No real ledger access/reset. A new negative test exposed retirement metadata not
+covered by the document-only hash; the new preparer now validates the complete
+corpus payload as well. No old test or approval hash was weakened/replaced.
+
+Production-shaped build in a disposable copy reproduces the exact authoring
+corpus byte-for-byte. All 400 scoped website/binding tests, 175 assistant tests,
+offline gold/holdout/quality/usefulness evaluations, source, migration, catalogue,
+analytics, notification and public-package checks pass. The same ten explicitly
+recorded historical/browser-only exclusions are not counted as passes. Six mock
+scenarios pass in the actual unpacked function; its inactive production cold
+import refuses access even with environment launch switches. Official bundler
+runtime metadata matches the preserved Node24/bootstrap2.24.0 production function;
+the Node22 enquiry notification archive is byte-identical to the verified parent.
+
+Private packet: /Users/daibang/Downloads/OZ_CHATBOT_PRODUCTION_BINDING_2026-11-06_R3.
+Earlier incomplete R1/R2 preparer outputs remain preserved, not release artifacts.
+Evidence and fresh production-shaped public comparison are in the existing Codex
+workspace under work/production-binding-final-20261106. All 2,230 HTML files and
+enquiry/floorplan/client contracts match the previous local review package.
+Only the two intentional production header/analytics configuration files differ.
+Public output excludes private knowledge, dependencies and QA; it is not deployed.
+
+Remaining gates: separately authorised protected hosted verification of this exact
+candidate, then final owner activation approval and a newly sealed active profile.
+Historical model/store receipts are not fresh hosted proof. Never put the pending
+hash into live controls or deploy the inactive archive as an active assistant.
+Supplier/business, physical-device and spoken-screen-reader evidence holds remain
+separate. No commit, staging, push, deployment, provider changes, paid calls,
+real submissions or Operon access. Production unchanged.
+
+## 6 November 2026 — local website/chatbot check reconciliation
+
+Completed in the existing isolated gallery/floorplan release worktree; main
+checkout and inherited audit changes preserved. The scoped website run passes
+392/392 and the full assistant unit suite passes 175/175. Fresh offline gold,
+holdout, quality and usefulness evaluations, strict current-source freshness,
+build/package, catalogue, migration, analytics and notification contracts pass.
+The ten previously documented historical/browser-only exclusions remain explicit
+in TEST_SCOPE.json and are not counted as passes or whole-repository signoff.
+
+Detailed attachment guidance remains visible on all seven paired service pages;
+only its automatic AI extraction is quarantined. Existing approved generic upload
+help still requires the exact form/field/type/size contract. The original failing
+attachment guard is unchanged. Rebuilt authoring corpus e15e64b25fd01798e0430c8af886b7bdd37961d3607a061a0dba7941bd318358
+preserves all product/range facts, retirement decisions and 775 canonical owners.
+It is not production-approved or activated. Old approval receipts and hashes are
+unchanged. Historical assertions use bounded exact-byte replay, separately from
+strict current-source freshness; negative mutation cases remain enforced.
+
+Current public-review HTML has unchanged visible text, SEO, schema, links and
+enquiry contracts versus the prior R2 package across all 2,230 documents. Only
+14 attachment-boundary attributes and scoped related-range wrapping differ.
+Reports, commands, immutable prior failures, screenshots and manifests are in
+work/checks-reconciliation-20261106 beside the previous audit evidence packet.
+Production profile still has US$30 monthly / US$1 daily limits. No staging,
+commit, push, deployment, paid calls, provider changes or real submissions.
+Hosted GPT/attachment checks, physical-device/spoken-screen-reader evidence and
+unresolved supplier/business evidence remain separate release gates.
+
+## 6 November 2026 — audit cleanup and final local verification
+
+Owner approved deletion of five disposable audit test copies only. Removed those
+copies and the incomplete public folder, recovering approximately 6 GB. Verified
+all 8,426 original source-snapshot files and 6,596 public-baseline files against
+their recorded hashes; no baseline drift. Original logs, screenshots and approval
+records remain. Reused the existing isolated final-source folder for rebuilding.
+
+Fresh build, package check, 9 focused source tests, migration, analytics, enquiry,
+catalogue and offline assistant answer evaluations pass. Final-package browser
+checks pass 15/15 after correcting a test setup race: seed the area summary before
+navigating to the consuming floorplan=1 contact route, matching the real journey.
+No assertion was weakened or arbitrary delay introduced. Four PNG/two-page-PDF/
+40m² measurement-to-enquiry journeys pass. The fresh 390px sweep renders all 2,197
+non-redirect documents without overflow, browser exceptions or failed resources.
+Protected SEO fields, enquiry fields, data, redirects and 775 publication/sitemap
+owners remain unchanged. The package is for local review only, not activation.
+Final R2 also corrects search-page footer attribute serialization in its generator;
+the existing search idempotence/noindex check passes unchanged. All 19 combined
+search and focused audit tests pass. Prior packages and failing logs are retained.
+
+Verdict remains LOCAL CANDIDATE NEEDS FOLLOW-UP. The rebuilt assistant suite is
+169/170: its attachment-source-boundary test rejects the newly added public
+"7 MB combined" guidance in the candidate corpus. This is not described as just
+a historical hash failure. The separate source-history approval check also
+rejects changed HTML. Neither test nor old approval/hash was replaced or waived.
+Supplier specification gaps and the no-current-showroom conflict remain explicit.
+No staging, commit, push, hosted preview, deployment, provider change, paid call
+or real submission. USD30/month and USD1/day configurations unchanged.
+Report/evidence: `work/audit-remediation-20261105/` under the existing external
+`Documents/Codex/2026-11-04/what-do-you-need-from-me` evidence location.
+
+## 5 November 2026 — fifteen-finding audit remediation, local review candidate
+
+Implemented the two P1 repairs, catalogue count/search/sort scopes, readable
+mobile rows, approved format presentation and optional message handoff, optional
+upload disclosure, required labels, customer-facing contact/upload guidance,
+measurement controls, secondary service guidance, named card actions and the
+exact twelve-title/eight-description corrections. Supplier evidence retains
+“Habour Bridge” and its established route. The restricted HDF reference now
+uses the checked USDA-hosted primary publication; the accessible Spruce
+reference remains. No catalogue facts, stock status, routes, redirects,
+canonicals, indexing, schema, form fields/backend or analytics configuration
+were changed. Fixed the audience generator's composed-output check, not its
+assertions, so the public-package check can validate the actual pipeline.
+
+Local evidence: 9 focused source tests; 15 interaction cells at the four requested
+sizes; four image/PDF/40m² measurement-to-enquiry journeys; nine mocked assistant
+journeys; and an automatic 390px rendering sweep of 2,197 non-redirect documents
+(including the unchanged Google verification document). No overflow, browser
+exceptions or failed resource requests in that sweep. All 2,230 HTML documents
+were statically checked. The 775 canonical publication/sitemap routes, protected
+SEO fields, existing enquiry contracts and data/configuration bytes are preserved.
+
+Not a release signoff: historical source/approval-bound gates correctly reject
+the newly changed HTML; original approvals and hashes were not replaced. The
+754 overlapping missing specification rows remain supplier-evidence gaps, not
+newly invented facts. Showroom directions are blocked by the owner's confirmed
+absence of a current showroom; the retained contact address was not repurposed
+as an invitation to visit. Physical devices, spoken screen readers and actual
+form/attachment/email/GA4/AI-provider delivery were not tested in this sprint.
+
+No staging, commit, push, hosted preview, deployment, paid calls, real submissions
+or provider changes. Production and USD30/month / USD1/day limits unchanged.
+Full report, before/after evidence, exact commands, deltas and manifests:
+`/Users/daibang/Documents/Codex/2026-11-04/what-do-you-need-from-me/work/audit-remediation-20261105/`.
 
 ## 4 November 2026 — connected floorplan interaction redesign, local only
 

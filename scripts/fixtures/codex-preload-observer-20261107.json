@@ -1,0 +1,29 @@
+{
+  "expectedOrigin": "https://combined-e6fccfc1-20261106--oztimberfloor.netlify.app",
+  "exception": {
+    "text": "Uncaught TypeError: Failed to execute 'observe' on 'MutationObserver': parameter 1 is not of type 'Node'.",
+    "executionContextId": 12,
+    "scriptId": "31",
+    "lineNumber": 114,
+    "columnNumber": 63582,
+    "stackTrace": { "callFrames": [
+      { "functionName": "", "scriptId": "31", "url": "", "lineNumber": 114, "columnNumber": 63582 },
+      { "functionName": "onMicrotask", "scriptId": "30", "url": "node:electron/js2c/sandbox_bundle", "lineNumber": 1, "columnNumber": 114131 }
+    ] }
+  },
+  "script": {
+    "scriptId": "31", "url": "", "executionContextId": 12, "hasSourceURL": false,
+    "sourceMapURL": "browser-page-preload.js.map",
+    "hash": "81aa5f9c4fa787ccba4ffed034fb793cfa4391e76f96b3d3d8a18b4430301fb7",
+    "executionContextAuxData": { "frameId": "7C6DAE841C64A4EF914DFE9468CD07C4", "isDefault": false, "type": "isolated" }
+  },
+  "context": {
+    "id": 12, "name": "Electron Isolated Context",
+    "origin": "https://combined-e6fccfc1-20261106--oztimberfloor.netlify.app",
+    "auxData": { "frameId": "7C6DAE841C64A4EF914DFE9468CD07C4", "isDefault": false, "type": "isolated" }
+  },
+  "source": {
+    "sha256": "81aa5f9c4fa787ccba4ffed034fb793cfa4391e76f96b3d3d8a18b4430301fb7",
+    "observerExpression": "r.observe(t.documentElement,tS.LJ)"
+  }
+}
